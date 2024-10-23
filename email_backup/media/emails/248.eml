@@ -1,0 +1,73 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:11ec:b029:132:8d8c:9425 with SMTP id ik12csp1503783lkb;
+        Tue, 10 Aug 2021 03:21:46 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwRYOExjRxYEtGSy5rtnCfgO8HXSvUrXhy+S7NW/N6lOo0SIhbt8nKt/IVFgwJGUIe8p/qX
+X-Received: by 2002:adf:fb8f:: with SMTP id a15mr30469780wrr.92.1628590906260;
+        Tue, 10 Aug 2021 03:21:46 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1628590906; cv=none;
+        d=google.com; s=arc-20160816;
+        b=aNve5jxGDN8x56TnDOEzm+Cxl5KxUw8zpwRjhVFOnEsFAWvbD1D9x3er4DbJZ71nDP
+         FUiYTQ7JAYINQgTgRTDHE7TChhMdpitTaeg4uUnvQ2LLGwLhSdkWjQvjBeQ5DLYITySn
+         /JK8d27wjcCbYa2S2E4+pRa/4Gg/WgLBgGASX9W0vLriDVdV+hayvBRSlYc3GxhIj1Jp
+         Ur9zWk5Jnm2cfqYhBYQT0flxK4qrzAV/0iMpoMYteVpFd2GTEU1w9JswFFyun6+mJicU
+         pkhkruS7KqDSr/2s3v6XvBycCo83DXckyKAZWEyeZxgAREFCyMWSr5XwmqeYzPS79EeP
+         FDAw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:date:message-id:from:subject:to:dkim-signature
+         :dkim-signature;
+        bh=voMMBiTTzxhdy0PPukKHByIbk7Hsq3JpscUwQ2qiQjI=;
+        b=t/z3XmV0TpZWZdiD09o8t/rvzBjEPkU1Oc11zhip1ttOM1tfR6dTGCWMPjgRKrHFPj
+         Q/yhtNiZhpk3UgEi/E9ZdqjK6ZlZPvjz0mlGFqj6fc2NHX/EmiHX0oW7nDfHbQNLOEI0
+         zNQAkODt0hAaK9xWsoiZbJ1F9obdv8iPuXK7WnJd6BlfZsoUk376xl3ehjvbwpLxhc9C
+         2ZQEO4IZghGXEpPVAfVmgo5A3jN7H0FDfi4KWTvwVdll7R5G+w6mFPWpwBJ8Er/+992G
+         8veyjMKOTdeMcky5kTdsQGyr/xMXxsjig7PRb+g51KL9YlTwNhxrwlQjvqAqgD+56G7S
+         8lsg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@hd-torrents.org header.s=ow2v6kwkfp5iy6f3amsyei2xzb3mq27c header.b=DOelV61y;
+       dkim=pass header.i=@amazonses.com header.s=uku4taia5b5tsbglxyj6zym32efj7xqv header.b=Dt5bonCP;
+       spf=pass (google.com: domain of 0102017b2f9518d9-e11ecf89-c710-4073-b3ec-048adeb39e50-000000@eu-west-1.amazonses.com designates 54.240.7.24 as permitted sender) smtp.mailfrom=0102017b2f9518d9-e11ecf89-c710-4073-b3ec-048adeb39e50-000000@eu-west-1.amazonses.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hd-torrents.org
+Return-Path: <0102017b2f9518d9-e11ecf89-c710-4073-b3ec-048adeb39e50-000000@eu-west-1.amazonses.com>
+Received: from a7-24.smtp-out.eu-west-1.amazonses.com (a7-24.smtp-out.eu-west-1.amazonses.com. [54.240.7.24])
+        by mx.google.com with ESMTPS id p15si23567936wrg.23.2021.08.10.03.21.45
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Tue, 10 Aug 2021 03:21:46 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0102017b2f9518d9-e11ecf89-c710-4073-b3ec-048adeb39e50-000000@eu-west-1.amazonses.com designates 54.240.7.24 as permitted sender) client-ip=54.240.7.24;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hd-torrents.org header.s=ow2v6kwkfp5iy6f3amsyei2xzb3mq27c header.b=DOelV61y;
+       dkim=pass header.i=@amazonses.com header.s=uku4taia5b5tsbglxyj6zym32efj7xqv header.b=Dt5bonCP;
+       spf=pass (google.com: domain of 0102017b2f9518d9-e11ecf89-c710-4073-b3ec-048adeb39e50-000000@eu-west-1.amazonses.com designates 54.240.7.24 as permitted sender) smtp.mailfrom=0102017b2f9518d9-e11ecf89-c710-4073-b3ec-048adeb39e50-000000@eu-west-1.amazonses.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hd-torrents.org
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ow2v6kwkfp5iy6f3amsyei2xzb3mq27c; d=hd-torrents.org;
+	t=1628590905; h=To:Subject:From:Message-Id:Date;
+	bh=OMtXeWERKUtuLxeDdwrpUK8xUo67hoZfHD2JocznGgI=;
+	b=DOelV61yh/255dXwY3FBwt605xfOWtwcc9trNvesL4MSh20LEQWrgfDm3Ef38EtF
+	1xxxX5zCBg6ga7X+RvAuaNfzpbDwJG9OLmMUDy0FANBlqhgwBGPxhZLKXJVSF5MlXde
+	TVjPPXNq517KeqpdlrnqlB8pvGKqkG5ugRGwWC3c=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=uku4taia5b5tsbglxyj6zym32efj7xqv; d=amazonses.com; t=1628590905;
+	h=To:Subject:From:Message-Id:Date:Feedback-ID;
+	bh=OMtXeWERKUtuLxeDdwrpUK8xUo67hoZfHD2JocznGgI=;
+	b=Dt5bonCPzbKRVZkQLJxA3Qa6nkoaCWdeDcwdY7Y1vKyHmbCNpVcarPAiIchc/dQJ
+	L5Pl/ZLWCxeFoRTXaHonmqDgCzcCaEbMn6QcPqY5jEbQ4iCwDy1Qu3h0jgk6tN26J8Z
+	CmFW/0X1slCudGwZQKgwQtoGwx053KtctlZFdgoQ=
+To: mrcloud.med@gmail.com
+Subject: Your hd-torrents.org account...
+X-PHP-Originating-Script: 33:sanity.php
+From: hd-torrents.org <admin@hd-torrents.org>
+Message-ID: <0102017b2f9518d9-e11ecf89-c710-4073-b3ec-048adeb39e50-000000@eu-west-1.amazonses.com>
+Date: Tue, 10 Aug 2021 10:21:45 +0000
+Feedback-ID: 1.eu-west-1.ooxyLcLuvVgYDQC8goofdbDOqk+QXXAexeLQgZTjUL4=:AmazonSES
+X-SES-Outgoing: 2021.08.10-54.240.7.24
+
+Dear mrcloud,
+This is short reminder that you have to frequently visit our site to keep your account alive!(Last seen: 10 days ago)
+You can Re-Login now at https://hd-torrents.org
+
+or click the link below 
+https://hd-torrents.org/dounsubscribe.php?hash=024130c96bf50c3a11c45e0a63eeb93c5a88eeb5fb245bb5a2
+
+Regards,
+					HDT Team

@@ -1,0 +1,101 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:304:b029:c0:ca65:b0d6 with SMTP id gk4csp4897056lkb;
+        Tue, 2 Mar 2021 16:34:13 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJy/dzi0RmDAlTVfWxHuM9kTuA6nMrXqGRIE0xlatd5nmynDhpLd7nX+eQKUvebUSGjPYCwR
+X-Received: by 2002:a1c:a7d3:: with SMTP id q202mr6305437wme.93.1614731653036;
+        Tue, 02 Mar 2021 16:34:13 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1614731653; cv=none;
+        d=google.com; s=arc-20160816;
+        b=WJFjAC4sOA7Vib5qVXPGN0BuUGl9x57VY/KlIgHuSQ0vjrqppT26EHNRkRx2QMOnj3
+         H8iNzUJUycPeW64JKCCWy61n7OUP0rHwnMSqaIfyO0XjHRi7daADmeMnSPhUciypCYoP
+         futj/zHEZkzPnyYaEa8IlLm6SQEcqDVla+6KHsFH850Ims6D7Bfy30iW5MPE9+fE7Fqh
+         vk/06INRzaSEzWwXemBYGB8lqRHn6gIyPsSfOdveTkI6SHrYEpo8Kd1m5NrrhgxzcUYp
+         7omzRZnE7ntQLgyiRdl113SwblsWqM3HZRSWRRScInGF3Ye/8kJ/N7gmQPlUJELsiUdh
+         nc8w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:feedback-id:list-unsubscribe
+         :list-unsubscribe-post:date:subject:to:from:message-id
+         :dkim-signature:dkim-signature;
+        bh=U6UsNAMeN+y0FtovelLr7FFkQQxdNjWiJciMQWwO2jo=;
+        b=Hp+7E79eBRImXVo9zS0aqLkihtMGck54qwBRv8lkKm5ZVSLiugSmI10JBIHekm5tAR
+         kLyN0v6sHJbkBAQxmsHyp1ife5A/vIyU//ZARjnd9COGHEfu+ZTVri5vJPa4zB1xPsfa
+         mz4NDJpLPA4ZPv7izblcmbVSnrPGYzKLcOU3csFT1p9mwhGQjlhI4+Hd5V9Cgq24qXWs
+         JwcPwzdzi8VBwGfumVbly2PQqdvgi2mzDUpzXjKR1izc1Q4/1BJRvMXIvAMBuGmGY/cM
+         /Wd/YyoCGKJijV2NVjcNr+0WlfbidgOQDCzm7dA6TtBPCrb5QEDPAx8vYfVLpl39eMRM
+         fIyQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@animebytes.tv header.s=mailjet header.b=i4+PQwC8;
+       dkim=pass header.i=@bnc3.mailjet.com header.s=mailjet header.b=Q5QBYSBR;
+       spf=pass (google.com: domain of 58e1c199.caaaaynnomeaaaaaaaaaaahgqzgaaaaamr8aaaaaabcfagbgptme@bnc3.mailjet.com designates 87.253.233.174 as permitted sender) smtp.mailfrom=58e1c199.CAAAAYNnoMEAAAAAAAAAAAHGQZgAAAAAMR8AAAAAABcfAgBgPtmE@bnc3.mailjet.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=animebytes.tv
+Return-Path: <58e1c199.CAAAAYNnoMEAAAAAAAAAAAHGQZgAAAAAMR8AAAAAABcfAgBgPtmE@bnc3.mailjet.com>
+Received: from o174.p8.mailjet.com (o174.p8.mailjet.com. [87.253.233.174])
+        by mx.google.com with UTF8SMTPS id h5si3755771wmb.69.2021.03.02.16.34.12
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 02 Mar 2021 16:34:12 -0800 (PST)
+Received-SPF: pass (google.com: domain of 58e1c199.caaaaynnomeaaaaaaaaaaahgqzgaaaaamr8aaaaaabcfagbgptme@bnc3.mailjet.com designates 87.253.233.174 as permitted sender) client-ip=87.253.233.174;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@animebytes.tv header.s=mailjet header.b=i4+PQwC8;
+       dkim=pass header.i=@bnc3.mailjet.com header.s=mailjet header.b=Q5QBYSBR;
+       spf=pass (google.com: domain of 58e1c199.caaaaynnomeaaaaaaaaaaahgqzgaaaaamr8aaaaaabcfagbgptme@bnc3.mailjet.com designates 87.253.233.174 as permitted sender) smtp.mailfrom=58e1c199.CAAAAYNnoMEAAAAAAAAAAAHGQZgAAAAAMR8AAAAAABcfAgBgPtmE@bnc3.mailjet.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=animebytes.tv
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; q=dns/txt;
+  d=animebytes.tv; i=noreply@animebytes.tv; s=mailjet;
+  h=message-id:from:to:subject:date:list-unsubscribe-post:list-unsubscribe:
+  feedback-id:x-csa-complaints:x-mj-mid:x-report-abuse-to:mime-version:
+  content-type:content-transfer-encoding;
+  bh=U6UsNAMeN+y0FtovelLr7FFkQQxdNjWiJciMQWwO2jo=;
+  b=i4+PQwC8eeSnlaP5yDwM1EpCwKzDbYj1yoOW2w1YLxx0FdnaXvOhSgMBt
+ we/IrsDm8W8akqLgMwdCcipQuIwWIHjK17o+aPpy4qIoU/OJapDQpgaIqT4D
+ tYSF7PHUqZabbAYgNPcDtz349S79sK03YIekBAkbdtHiLewlP7tZYk=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; q=dns/txt;
+  d=bnc3.mailjet.com; s=mailjet;
+  h=message-id:from:to:subject:date:list-unsubscribe-post:list-unsubscribe:
+  feedback-id:x-csa-complaints:x-mj-mid:x-report-abuse-to:mime-version:
+  content-type:content-transfer-encoding;
+  bh=U6UsNAMeN+y0FtovelLr7FFkQQxdNjWiJciMQWwO2jo=;
+  b=Q5QBYSBRhRnpjbDYFuNOap0J/PBArtJEiuDny/qxBJB4oaYmoQ/7WecaY
+ edZ3SbkyPs5ujoT0q9wPmqEDE675TExiu490EPIoHSmVvnMLpkhSOEipkmvm
+ tQb17xV7q1he3hS8uGAZboxr7csqTCCCjCBWQVXS4YzEhPIn+NbGkQ=
+Return-Path:
+	<58e1c199.CAAAAYNnoMEAAAAAAAAAAAHGQZgAAAAAMR8AAAAAABcfAgBgPtmE@bnc3.mailjet.com>
+Message-Id: <58e1c199.CAAAAYNnoMEAAAAAAAAAAAHGQZgAAAAAMR8AAAAAABcfAgBgPtmE@mailjet.com>
+From: AnimeBytes <noreply@animebytes.tv>
+To: mrcloud.med@gmail.com
+Subject: You have been invited to AnimeBytes
+Date: Wed, 3 Mar 2021 00:34:12 +0000
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe:
+	<mailto:unsub-58e1c199.x7s67.x0v22mhx3t0jo@bnc3.mailjet.com>,
+	<https://x7s67.mjt.lu/unsub2?m=CAAAAYNnoMEAAAAAAAAAAAHGQZgAAAAAMR8AAAAAABcfAgBgPtmETGYSWJRzQ-ivSsUGyvLh-gAWuGA&b=58e1c199&e=c30856f0&x=R5KY3NXC2Ig4XjNERUfj7A4vuOv0I4oU1haEthYnNzk>
+Feedback-Id: 42.1515266.1488992:MJ
+X-CSA-Complaints: csa-complaints@eco.de
+X-MJ-Mid:
+	CAAAAYNnoMEAAAAAAAAAAAHGQZgAAAAAMR8AAAAAABcfAgBgPtmETGYSWJRzQ-ivSsUGyvLh-gAWuGA
+X-REPORT-ABUSE-TO: Message sent by Mailjet please report to
+	abuse@mailjet.com with a copy of the message
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+You have been invited to join AnimeBytes. If you were not expecting an invi=
+te, please ignore this email, and do not reply.
+
+Please note that selling invites, trading invites, and giving invites away =
+publicly (eg. on a forum) is strictly forbidden. If you have received your =
+invite as a result of any of these activities, do not bother signing up - y=
+ou will be banned and lose your chances of ever signing up legitimately.
+
+To confirm your invite, click on the following link:
+
+https://animebytes.tv/register/invite/IoDJMIDSNmMGQuEdWBRnkGKajQ5udPqo
+
+After you register, you will be able to use your account. Please take note =
+that if you do not use this invite in the next 3 days, it will expire. We u=
+rge you to read the RULES and the FAQ immediately after you join.
+
+And of course, hop on IRC to meet other members!
+
+Thank you,
+AnimeBytes Staff=

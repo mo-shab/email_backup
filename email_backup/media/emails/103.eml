@@ -1,0 +1,79 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:c566:0:b029:f1:e639:b0fa with SMTP id z6csp1438780lkp;
+        Sat, 1 May 2021 10:17:50 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwlFLmBZbPl5F3GDyYJDuyrTIekEtE7+ycAROGHfPM1/s9XTvEdALv6CmeVTbPdz1HeGyeW
+X-Received: by 2002:a5d:554a:: with SMTP id g10mr12774991wrw.174.1619889470848;
+        Sat, 01 May 2021 10:17:50 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1619889470; cv=none;
+        d=google.com; s=arc-20160816;
+        b=bLpjz8Y6YGGALjtBH5jd7djsj+5lN8IHQ65szu5SwZGaza7RyZFmwLIqxWw/VBR1QI
+         mdtWb+FsSWsEPWMjCI6Io43FOLL2yIH61enG3csjilyMNx8EhRuC3liLCZ9fFH3iruYX
+         UKt2Oa7+ASgkFoZSMwjvTkZFH13QXZSt/zfVK0DiJsPISGPuyFtvMXFVQIFMIg++HDRR
+         0uXg2iAvCCPTqKqRKhIx4iaggKmvPyDgWUnWFovUr+EA3/SUJy68gej8oLuGjEJn/rYU
+         ypusLysEDkjIsE4nE6kmYygBUQKOP0Uo068FE8n+Z2JSBR/A/f7GWMX3X0G0RwTld48L
+         LK/w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:from:subject:to:dkim-signature;
+        bh=OLP4RZTXR3DHEGWHsQxCZmwfHEzdpLyCaQEhhF7S6KQ=;
+        b=yDLDWztizS4LolD8a4Sj1f0q0guzFhrsONwpCTsmT+CyYVA1mJLhwVPHGHo/zOsxh+
+         gKlCvs+KZhpGQSeu/LEZC2Tv9efkq4wd166ZJJ+T6qi72SsdqJ6HmBeKmvqgBzDiVr7z
+         vWtye1s6IvN2GR6bvlBX78RaYRCE2bRaZUwfHWAvaLsy1Zkg99MKXLYyHt9dPr3sPXIr
+         /41FGfs9hAjM9rOgBfAQVMXwDbcdn8aUMXOoi2DHANeBT0PuKT/2VL600K4JZtc/GBEW
+         ksWtXOb4kN/Qr5abPYiOg35SM3XGS9fDKsHGI8ck/mpHyCfTfBq1eOi3Pfd//PyICjjV
+         HUAA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@hdmonkey.org header.s=default header.b=FSEuR29y;
+       spf=pass (google.com: domain of admin@hdmonkey.org designates 89.40.16.225 as permitted sender) smtp.mailfrom=admin@hdmonkey.org
+Return-Path: <admin@hdmonkey.org>
+Received: from hdmonkey.org (hdmonkey.org. [89.40.16.225])
+        by mx.google.com with ESMTPS id q3si7620863wmc.35.2021.05.01.10.17.50
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 01 May 2021 10:17:50 -0700 (PDT)
+Received-SPF: pass (google.com: domain of admin@hdmonkey.org designates 89.40.16.225 as permitted sender) client-ip=89.40.16.225;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hdmonkey.org header.s=default header.b=FSEuR29y;
+       spf=pass (google.com: domain of admin@hdmonkey.org designates 89.40.16.225 as permitted sender) smtp.mailfrom=admin@hdmonkey.org
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=hdmonkey.org; s=default; h=Date:Message-Id:From:Subject:To:Sender:Reply-To:
+	Cc:MIME-Version:Content-Type:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=OLP4RZTXR3DHEGWHsQxCZmwfHEzdpLyCaQEhhF7S6KQ=; b=FSEuR29yvzZk20dNEXPsgzZLG3
+	3+wqu+my7y1I8qGiPHhV9+ydhVagMRGe6iugjxNS9a+8cyupeqUf2R8LWMyBhp6QpnRiE+wreeRi/
+	Huh51UAmcYWxrTRcwvgtn0Fy9VHhuMf2NeG7CJf6tAHf6oJTMgdaMOX+AXZDVRbVuUa0AZnYBlVx4
+	IXtVtJM3FAyIfHHrj+98xYFLUiR1KNBe6+RECG3j2kOmg9ucDgH4OZjEuKjh1m/mH+UsmTOa5fTsP
+	SejPHswMTfWCVydWT6hvHIR+w3skeEY2U2/cggyu09tORExVz8L8qHRuAODHT3Mo/nNS8YvhBxEXq
+	lMwaDLkg==;
+Received: from hdmonkey by server.hdmonkey.org with local (Exim 4.94)
+	(envelope-from <admin@hdmonkey.org>)
+	id 1lctFW-0000hs-4D
+	for mrcloud.med@gmail.com; Sat, 01 May 2021 20:17:50 +0300
+To: mrcloud.med@gmail.com
+Subject: Your HDMonkey User Account
+X-PHP-Script: hdmonkey.org/account-signup.php for 105.157.66.46, 105.157.66.46
+X-PHP-Originating-Script: 1005:mail.php
+From: admin@hdmonkey.org
+Message-Id: <E1lctFW-0000hs-4D@server.hdmonkey.org>
+Date: Sat, 01 May 2021 20:17:50 +0300
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - server.hdmonkey.org
+X-AntiAbuse: Original Domain - gmail.com
+X-AntiAbuse: Originator/Caller UID/GID - [1005 995] / [47 12]
+X-AntiAbuse: Sender Address Domain - hdmonkey.org
+X-Get-Message-Sender-Via: server.hdmonkey.org: authenticated_id: hdmonkey/from_h
+X-Authenticated-Sender: server.hdmonkey.org: admin@hdmonkey.org
+X-Source: 
+X-Source-Args: php-fpm: pool hdmonkey_org                               
+X-Source-Dir: hdmonkey.org:/public_html
+
+Your account at HDMonkey has been : APPROVED. To confirm your user registration, you have to follow this link:
+
+	https://hdmonkey.org/account-confirm.php?id=5906&secret=0eaeca40154ffde6ed045d8f4ae9dcfe
+
+After you do this, you will be able to use your new account.
+
+	If you fail to do this, your account will be deleted within a few days.
+
+HDMonkey Admin

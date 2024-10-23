@@ -1,0 +1,1254 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:2894:b029:f7:3642:9e90 with SMTP id e20csp1745202lkc;
+        Mon, 17 May 2021 05:38:33 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxqjobka3TQRsGDwaTKq9V77qA3y6gQqwmqJbjkBsbMXJ5AgtAye4Ep9D8mBK1dtQHEyHq9
+X-Received: by 2002:a17:906:3644:: with SMTP id r4mr62368168ejb.140.1621255113344;
+        Mon, 17 May 2021 05:38:33 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1621255113; cv=none;
+        d=google.com; s=arc-20160816;
+        b=nZD95m8KCU7IClrZmJ2WJXR6hsNW6Uv6af+DbfQJiv/rRqX1bmJ1xMthqf7VXeWfW+
+         LKZhUpYNi9c5KCeXYKE7iT2dcps78Djw9yjB8Ys1ktudeXE9ALSYE0+mtmkA8+3O3ZM6
+         usbohOt5Md9U0Yhz9eWSXU2/YQPm0waD+FqPOKDC7jo/ki0ukj0/69Xyc4CfOLGfzMp5
+         Pq4JqHtwiWfA8eXcRRyPmrZnAvIuSXxZe19jpBN3YJb0/AZFUdSZr3uIXWKUfysuG3hx
+         BDaDdqbxL/7qOHxL9SJuvYXRz/H/YwxdIfabgD3FrrrjUt2Bw9C3bn8lSi/vUgRZJJaa
+         hoFQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=from:date:message-id:mime-version:to:subject;
+        bh=Ph8aKJSRe/Tv+woeXPSLKGmA22X1RzYEbv0fiZ8lFQA=;
+        b=iRMhFZ+khAL5KXubpHnnomeFIDqR/GwN4W+kPTNAV32rgZKfxsAMK5Q0Zw5hvMNzJb
+         p9e7NwvswZcuwk+YhRm/CK5p813dBawCRXnQzQdjfee4eKWN66H9GwxKQVC+98qpiKWp
+         3Ub/zwtXXcZleid6biex3ePUxe8sBy0GPEzhKsddkITmN8rmA2tCCADQgAOJKtGvl0cc
+         Wr/6sw9glKf2NfjJVBFwyIXG0spBPvOOccX5NeKc0JEynMvoH/IIZWDWmnLeYNkfF+Ym
+         8kxEF+AqrU4nKVFgh96tBqw4usD/lAQoq4AR54i2ni3vwVT1Zs/L34x+4H8nHWqPTV5R
+         qOAw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of noreply@avito.ma designates 18.203.180.56 as permitted sender) smtp.mailfrom=noreply@avito.ma;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=avito.ma
+Return-Path: <noreply@avito.ma>
+Received: from www.avito.ma (email.avito.ma. [18.203.180.56])
+        by mx.google.com with ESMTP id gt10si12504628ejc.392.2021.05.17.05.38.33
+        for <mrcloud.med@gmail.com>;
+        Mon, 17 May 2021 05:38:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@avito.ma designates 18.203.180.56 as permitted sender) client-ip=18.203.180.56;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of noreply@avito.ma designates 18.203.180.56 as permitted sender) smtp.mailfrom=noreply@avito.ma;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=avito.ma
+Received: from trans.avito.ma (trans-1 [10.0.100.7])
+	by www.avito.ma (Postfix) with ESMTP id 27779646C7
+	for <mrcloud.med@gmail.com>; Mon, 17 May 2021 13:38:32 +0100 (WEST)
+Received: by trans.avito.ma (Postfix, from userid 503)
+	id F13996372A; Mon, 17 May 2021 13:38:32 +0100 (WEST)
+Subject: Votre annonce "Canon 600D"  est en cours de validation
+To: "Shab tech" <mrcloud.med@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Message-Id: <20210517123832.F13996372A@trans.avito.ma>
+Date: Mon, 17 May 2021 13:38:32 +0100 (WEST)
+From: noreply@avito.ma
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <title>Votre annonce "Canon 600D"  est en cours de validation</title>
+    <!--[if !mso]><!-- -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+      #outlook a {
+        padding: 0;
+      }
+
+      .ReadMsgBody {
+        width: 100%;
+      }
+
+      .ExternalClass {
+        width: 100%;
+      }
+
+      .ExternalClass * {
+        line-height: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      table,
+      td {
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+      }
+
+      p {
+        display: block;
+        margin: 13px 0;
+      }
+    </style>
+    <!--[if !mso]><!-->
+    <style type="text/css">
+      @media only screen and (max-width: 480px) {
+        @-ms-viewport {
+          width: 320px;
+        }
+
+        @viewport {
+          width: 320px;
+        }
+      }
+    </style>
+    <!--<![endif]-->
+    <!--[if mso]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG />
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
+    <!--[if lte mso 11]>
+      <style type="text/css">
+        .outlook-group-fix {
+          width: 100% !important;
+        }
+      </style>
+    <![endif]-->
+    <!--[if !mso]><!-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Droid+Sans:300,400,500,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style type="text/css">
+      @import url(
+        https://fonts.googleapis.com/css?family=Droid+Sans:300,
+        400,
+        500,
+        700
+      );
+      @import url(
+        https://fonts.googleapis.com/css?family=Ubuntu:300,
+        400,
+        500,
+        700
+      );
+    </style>
+    <!--<![endif]-->
+    <style type="text/css">
+      @media only screen and (min-width: 480px) {
+        .mj-column-per-100 {
+          width: 100% !important;
+          max-width: 100%;
+        }
+
+        .mj-column-per-50 {
+          width: 50% !important;
+          max-width: 50%;
+        }
+      }
+    </style>
+    <style type="text/css">
+      @media only screen and (max-width: 480px) {
+        table.full-width-mobile {
+          width: 100% !important;
+        }
+
+        td.full-width-mobile {
+          width: auto !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="">
+      <!-- Header -->
+      <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:500px;" width="500"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+<div style="Margin:0px auto;max-width:500px;">
+  <table
+    align="center"
+    border="0"
+    cellpadding="0"
+    cellspacing="0"
+    role="presentation"
+    style="width:100%;"
+  >
+    <tbody>
+      <tr>
+        <td
+          style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;vertical-align:top;"
+        >
+          <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:500px;"
+            >
+          <![endif]-->
+          <div
+            class="mj-column-per-100 outlook-group-fix"
+            style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
+          >
+            <table
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              style="vertical-align:top;"
+              width="100%"
+            >
+              <tr>
+                <td
+                  align="center"
+                  style="font-size:0px;padding:10px;word-break:break-word;"
+                >
+                  <table
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    style="border-collapse:collapse;border-spacing:0px;"
+                  >
+                    <tbody>
+                      <tr>
+                        <td style="width:160px;">
+                          <a
+                            href="https://www.avito.ma?utm_source=crm&utm_campaign=transactional&utm_medium=receivedtransactional&utm_content=button"
+                            target="_blank"
+                          >
+                            <img
+                              alt="Avito.ma"
+                              height="auto"
+                              src="https://www.avito.ma/img/mail_logo.png"
+                              style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                              width="160"
+                            />
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+
+      <!-- Header End -->
+
+      <!-- Status -->
+      <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:500px;" width="500"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+      <div
+        style="background:#eaf0fa;background-color:#eaf0fa;Margin:0px auto;max-width:500px;"
+      >
+        <table
+          align="center"
+          border="0"
+          cellpadding="0"
+          cellspacing="0"
+          role="presentation"
+          style="background:#eaf0fa;background-color:#eaf0fa;width:100%;"
+        >
+          <tbody>
+            <tr>
+              <td
+                style="direction:ltr;font-size:0px;padding:25px;text-align:center;vertical-align:top;"
+              >
+                <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:450px;"
+            >
+          <![endif]-->
+                <div
+                  class="mj-column-per-100 outlook-group-fix"
+                  style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
+                >
+                  <table
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    style="vertical-align:top;"
+                    width="100%"
+                  >
+                    <tr>
+                      <td
+                        align="center"
+                        style="font-size:0px;padding:0px;word-break:break-word;"
+                      >
+                        <div
+                          style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:center;color:#1d72db;"
+                        >
+                          <h2 style="font-size: 28px; margin: 0 0 8px">
+                            Bonjour
+                            Shab tech
+                          </h2>
+                          <p
+                            style="font-size: 14px; line-height: 24px; margin: 0"
+                          >
+                            Votre annonce a bien été reçue.
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+      <!-- Status End -->
+
+      <!-- Message -->
+      <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:500px;" width="500"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+      <div style="Margin:0px auto;max-width:500px;">
+        <table
+          align="center"
+          border="0"
+          cellpadding="0"
+          cellspacing="0"
+          role="presentation"
+          style="width:100%;"
+        >
+          <tbody>
+            <tr>
+              <td
+                style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;vertical-align:top;"
+              >
+                <!--[if mso | IE]>
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    
+            <tr>
+          
+                <td
+                  class="" style="vertical-align:top;width:500px;"
+                >
+              <![endif]-->
+                <div
+                  class="mj-column-per-100 outlook-group-fix"
+                  style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
+                >
+                  <table
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    width="100%"
+                  >
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:top;padding:30px 0;">
+                          <table
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            role="presentation"
+                            style=""
+                            width="100%"
+                          >
+                            <tr>
+                              <td
+                                align="center"
+                                style="font-size:0px;padding:0;word-break:break-word;"
+                              >
+                                <table
+                                  border="0"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  role="presentation"
+                                  style="border-collapse:collapse;border-spacing:0px;"
+                                >
+                                  <tbody>
+                                    <tr>
+                                      <td style="width:300px;">
+                                        <img
+                                          alt="Votre annonce a bien été reçue."
+                                          height="auto"
+                                          src="https://www.avito.ma/img/mail_received.png"
+                                          style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                                          width="300"
+                                        />
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--[if mso | IE]>
+                </td>
+              
+                <td
+                  class="" style="vertical-align:top;width:500px;"
+                >
+              <![endif]-->
+                <div
+                  class="mj-column-per-100 outlook-group-fix"
+                  style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
+                >
+                  <table
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    width="100%"
+                  >
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:top;padding:0 20px;">
+                          <table
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            role="presentation"
+                            style=""
+                            width="100%"
+                          >
+                            <tr>
+                              <td
+                                align="center"
+                                style="font-size:0px;padding:0px;word-break:break-word;"
+                              >
+                                <div
+                                  style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:500;line-height:26px;text-align:center;color:#2d2d2d;"
+                                >
+                                  <p>
+                                    Nous allons la publier dès qu’elle sera validée par nos équipes dans un délai ne dépassant pas 60 minutes.
+                                  </p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td
+                                align="center"
+                                style="font-size:0px;padding:0px;word-break:break-word;"
+                              >
+                                <div
+                                  style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;font-weight:500;line-height:22px;text-align:center;color:#666666;"
+                                >
+                                  <p>
+                                    Cette vérification a pour objectif d’assurer la qualité du contenu de la plateforme Avito.ma.
+                                  </p>
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--[if mso | IE]>
+                </td>
+              
+                <td
+                  class="" style="vertical-align:top;width:500px;"
+                >
+              <![endif]-->
+                <div
+                  class="mj-column-per-100 outlook-group-fix"
+                  style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
+                >
+                  <table
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    style="vertical-align:top;"
+                    width="100%"
+                  >
+                    <tr>
+                      <td
+                        align="center"
+                        vertical-align="middle"
+                        style="font-size:0px;padding:10px 25px;word-break:break-word;"
+                      >
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          role="presentation"
+                          style="border-collapse:separate;line-height:100%;"
+                        >
+                          <tr>
+                            <td
+                              align="center"
+                              bgcolor="#1d72db"
+                              role="presentation"
+                              style="border:none;border-radius:3px;cursor:auto;mso-padding-alt:10px 25px;background:#1d72db;"
+                              valign="middle"
+                            >
+                              <a
+                                href="https://account.avito.ma/?utm_source=crm&utm_campaign=transactional&utm_medium=received&utm_content=button"
+                                style="display:inline-block;background:#1d72db;color:#ffffff;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:3px;"
+                                target="_blank"
+                              >
+                                Voir mes annonces
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <!--[if mso | IE]>
+                </td>
+              
+            </tr>
+          
+                      </table>
+                    <![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+      <!-- Message End -->
+
+      <!-- Footer -->
+      <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:500px;" width="500"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+<div
+  style="background:#f8f8f8;background-color:#f8f8f8;Margin:0px auto;max-width:500px;"
+>
+  <table
+    align="center"
+    border="0"
+    cellpadding="0"
+    cellspacing="0"
+    role="presentation"
+    style="background:#f8f8f8;background-color:#f8f8f8;width:100%;"
+  >
+    <tbody>
+      <tr>
+        <td
+          style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;vertical-align:top;"
+        >
+          <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                <![endif]-->
+          <!-- Social -->
+          <!--[if mso | IE]>
+            <tr>
+              <td
+                 class="" width="500px"
+              >
+          
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:500px;" width="500"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+          <div style="Margin:0px auto;max-width:500px;">
+            <table
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              style="width:100%;"
+            >
+              <tbody>
+                <tr>
+                  <td
+                    style="direction:ltr;font-size:0px;padding:0;text-align:center;vertical-align:top;"
+                  >
+                    <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:500px;"
+            >
+          <![endif]-->
+                    <div
+                      class="mj-column-per-100 outlook-group-fix"
+                      style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
+                    >
+                      <table
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        style="vertical-align:top;"
+                        width="100%"
+                      >
+                        <tr>
+                          <td
+                            align="center"
+                            style="font-size:0px;padding:0;word-break:break-word;"
+                          >
+                            <!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+      >
+        <tr>
+      
+              <td>
+            <![endif]-->
+                            <table
+                              align="center"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="float:none;display:inline-table;"
+                            >
+                              <tr>
+                                <td style="padding:8px;">
+                                  <table
+                                    border="0"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    role="presentation"
+                                    style="background:transparent;border-radius:3px;width:32px;"
+                                  >
+                                    <tr>
+                                      <td
+                                        style="font-size:0;height:32px;vertical-align:middle;width:32px;"
+                                      >
+                                        <a
+                                          href="https://www.facebook.com/Avito.ma"
+                                          target="_blank"
+                                        >
+                                          <img
+                                            height="32"
+                                            src="https://www.avito.ma/img/mail_social_facebook.png"
+                                            style="border-radius:3px;display:block;"
+                                            width="32"
+                                          />
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+
+                            <!--[if mso | IE]>
+              </td>
+            
+              <td>
+            <![endif]-->
+                            <table
+                              align="center"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="float:none;display:inline-table;"
+                            >
+                              <tr>
+                                <td style="padding:8px;">
+                                  <table
+                                    border="0"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    role="presentation"
+                                    style="background:transparent;border-radius:3px;width:32px;"
+                                  >
+                                    <tr>
+                                      <td
+                                        style="font-size:0;height:32px;vertical-align:middle;width:32px;"
+                                      >
+                                        <a
+                                          href="https://www.instagram.com/avito.ma"
+                                          target="_blank"
+                                        >
+                                          <img
+                                            height="32"
+                                            src="https://www.avito.ma/img/mail_social_instagram.png"
+                                            style="border-radius:3px;display:block;"
+                                            width="32"
+                                          />
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+
+                            <!--[if mso | IE]>
+              </td>
+            
+              <td>
+            <![endif]-->
+                            <table
+                              align="center"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="float:none;display:inline-table;"
+                            >
+                              <tr>
+                                <td style="padding:8px;">
+                                  <table
+                                    border="0"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    role="presentation"
+                                    style="background:transparent;border-radius:3px;width:32px;"
+                                  >
+                                    <tr>
+                                      <td
+                                        style="font-size:0;height:32px;vertical-align:middle;width:32px;"
+                                      >
+                                        <a
+                                          href="https://www.linkedin.com/company/avito-ma"
+                                          target="_blank"
+                                        >
+                                          <img
+                                            height="32"
+                                            src="https://www.avito.ma/img/mail_social_linkedin.png"
+                                            style="border-radius:3px;display:block;"
+                                            width="32"
+                                          />
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+
+                            <!--[if mso | IE]>
+              </td>
+            
+              <td>
+            <![endif]-->
+                            <table
+                              align="center"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="float:none;display:inline-table;"
+                            >
+                              <tr>
+                                <td style="padding:8px;">
+                                  <table
+                                    border="0"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    role="presentation"
+                                    style="background:transparent;border-radius:3px;width:32px;"
+                                  >
+                                    <tr>
+                                      <td
+                                        style="font-size:0;height:32px;vertical-align:middle;width:32px;"
+                                      >
+                                        <a
+                                          href="https://twitter.com/Avitoma"
+                                          target="_blank"
+                                        >
+                                          <img
+                                            height="32"
+                                            src="https://www.avito.ma/img/mail_social_twitter.png"
+                                            style="border-radius:3px;display:block;"
+                                            width="32"
+                                          />
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+
+                            <!--[if mso | IE]>
+              </td>
+            
+              <td>
+            <![endif]-->
+                            <table
+                              align="center"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="float:none;display:inline-table;"
+                            >
+                              <tr>
+                                <td style="padding:8px;">
+                                  <table
+                                    border="0"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    role="presentation"
+                                    style="background:transparent;border-radius:3px;width:32px;"
+                                  >
+                                    <tr>
+                                      <td
+                                        style="font-size:0;height:32px;vertical-align:middle;width:32px;"
+                                      >
+                                        <a
+                                          href="https://www.youtube.com/channel/UCtslQB0IQ98Hfd-V3rNhzjA"
+                                          target="_blank"
+                                        >
+                                          <img
+                                            height="32"
+                                            src="https://www.avito.ma/img/mail_social_youtube.png"
+                                            style="border-radius:3px;display:block;"
+                                            width="32"
+                                          />
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+
+                            <!--[if mso | IE]>
+              </td>
+            
+          </tr>
+        </table>
+      <![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      
+              </td>
+            </tr>
+          <![endif]-->
+          <!-- Social End -->
+          <!-- Information -->
+          <!--[if mso | IE]>
+            <tr>
+              <td
+                 class="" width="500px"
+              >
+          
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:500px;" width="500"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+          <div style="Margin:0px auto;max-width:500px;">
+            <table
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              style="width:100%;"
+            >
+              <tbody>
+                <tr>
+                  <td
+                    style="direction:ltr;font-size:0px;padding:0;text-align:center;vertical-align:top;"
+                  >
+                    <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:500px;"
+            >
+          <![endif]-->
+                    <div
+                      class="mj-column-per-100 outlook-group-fix"
+                      style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
+                    >
+                      <table
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        style="vertical-align:top;"
+                        width="100%"
+                      >
+                        <tr>
+                          <td
+                            align="center"
+                            style="font-size:0px;padding:15px 10px;word-break:break-word;"
+                          >
+                            <div
+                              style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:10px;line-height:1;text-align:center;color:#979797;"
+                            >
+                              <p>
+                                Avito.ma 1ère plateforme de vente et achat en ligne au Maroc
+                              </p>
+                              <p style="color: #1d72db">
+                                N.B: toute annonce publiée doit être conforme au <a style="color:#1d72db" href="https://www.avito.ma/règlement.htm">règlement</a> d'Avito.ma
+                              </p>
+                              <p>
+                                &copy; Avito. | Boulevard d'Anfa, Forum Bab Abdelaziz, 2ème étage N°22. Casablanca.
+                              </p>
+                              <p>
+                                <a style="color:#979797" href="https://www.avito.ma/sécurité/index.htm">
+                                  Achat sécurisé
+                                </a>
+                                |
+                                <a style="color:#979797" href="https://www.avito.ma/règlement.htm">
+                                  Règlement de publication
+                                </a>
+                              </p>
+                              <p>
+                                Si vous avez des questions contacter nous <a style="color:#979797" href="mailto:support@avito.ma">support@avito.ma</a>
+                              </p>
+                              <p>
+                                <a style="color:#979797" href="#">Se désinscrire</a> de notre email liste
+                              </p>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      
+              </td>
+            </tr>
+          <![endif]-->
+          <!-- Information End -->
+          <!-- Application -->
+          <!--[if mso | IE]>
+            <tr>
+              <td
+                 class="" width="500px"
+              >
+          
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:500px;" width="500"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+          <div style="Margin:0px auto;max-width:500px;">
+            <table
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              style="width:100%;"
+            >
+              <tbody>
+                <tr>
+                  <td
+                    style="direction:ltr;font-size:0px;padding:0 25%;text-align:center;vertical-align:top;"
+                  >
+                    <!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="width:450px;"
+            >
+          <![endif]-->
+                    <div
+                      class="mj-column-per-100 outlook-group-fix"
+                      style="font-size:0;line-height:0;text-align:left;display:inline-block;width:100%;direction:ltr;"
+                    >
+                      <!--[if mso | IE]>
+        <table  role="presentation" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+        
+              <td
+                 style="vertical-align:top;width:225px;"
+              >
+              <![endif]-->
+                      <div
+                        class="mj-column-per-50 outlook-group-fix"
+                        style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:50%;"
+                      >
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          role="presentation"
+                          width="100%"
+                        >
+                          <tbody>
+                            <tr>
+                              <td style="vertical-align:top;padding:0;">
+                                <table
+                                  border="0"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  role="presentation"
+                                  style=""
+                                  width="100%"
+                                >
+                                  <tr>
+                                    <td
+                                      align="right"
+                                      style="font-size:0px;padding:0 5px 0 5px;word-break:break-word;"
+                                    >
+                                      <table
+                                        border="0"
+                                        cellpadding="0"
+                                        cellspacing="0"
+                                        role="presentation"
+                                        style="border-collapse:collapse;border-spacing:0px;"
+                                      >
+                                        <tbody>
+                                          <tr>
+                                            <td style="width:220px;">
+                                              <a
+                                                href="https://play.google.com/store/apps/details?id=se.scmv.morocco"
+                                                target="_blank"
+                                              >
+                                                <img
+                                                  alt="Avito.ma"
+                                                  height="auto"
+                                                  src="https://www.avito.ma/img/mail_store_android.png"
+                                                  style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                                                  width="220"
+                                                />
+                                              </a>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]>
+              </td>
+              
+              <td
+                 style="vertical-align:top;width:225px;"
+              >
+              <![endif]-->
+                      <div
+                        class="mj-column-per-50 outlook-group-fix"
+                        style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:50%;"
+                      >
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          role="presentation"
+                          width="100%"
+                        >
+                          <tbody>
+                            <tr>
+                              <td style="vertical-align:top;padding:0;">
+                                <table
+                                  border="0"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  role="presentation"
+                                  style=""
+                                  width="100%"
+                                >
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="font-size:0px;padding:0 5px 0 5px;word-break:break-word;"
+                                    >
+                                      <table
+                                        border="0"
+                                        cellpadding="0"
+                                        cellspacing="0"
+                                        role="presentation"
+                                        style="border-collapse:collapse;border-spacing:0px;"
+                                      >
+                                        <tbody>
+                                          <tr>
+                                            <td style="width:220px;">
+                                              <a
+                                                href="https://itunes.apple.com/us/app/avito.ma/id740544172?l=fr&ls=1&mt=8"
+                                                target="_blank"
+                                              >
+                                                <img
+                                                  alt="Avito.ma"
+                                                  height="auto"
+                                                  src="https://www.avito.ma/img/mail_store_ios.png"
+                                                  style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                                                  width="220"
+                                                />
+                                              </a>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]>
+              </td>
+              
+          </tr>
+          </table>
+        <![endif]-->
+                    </div>
+                    <!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]-->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      
+              </td>
+            </tr>
+          <![endif]-->
+          <!-- Application End -->
+          <!--[if mso | IE]>
+                  </table>
+                <![endif]-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+
+      <!-- Footer End -->
+    </div>
+  </body>
+</html>

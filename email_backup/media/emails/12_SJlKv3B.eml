@@ -1,0 +1,649 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a9a:7ad1:0:b029:b6:48f8:3fed with SMTP id i17csp212643lkn;
+        Tue, 5 Jan 2021 12:55:29 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJwHBzljwWSA5t4CZnaP6LFK1SNJyOXJatVaqvBk/FGu28xp3OaX8ZRvRgKR8kH6GggS85y0
+X-Received: by 2002:a0c:f991:: with SMTP id t17mr1322892qvn.6.1609880129088;
+        Tue, 05 Jan 2021 12:55:29 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1609880129; cv=none;
+        d=google.com; s=arc-20160816;
+        b=iNC3ikp9pY7JsTNF4oyhw4G0drWs9I5KC4K3+vnwCPJIYSwieEZJ7vG0y4UcTr/6Ve
+         uP8fTwvnSQp7Xms8Wa8ngxvmGbikF5cYcI77tFWSgqmmN1UcYYgCaM7f83ytN63Kv56q
+         Xx/qnbzLBe7UWUC2UWMTRAdUuR4MLxKdP4Am7+emTPJF2AwbUz1huB7TdutvU/Y51IiT
+         nQ4mND0Wsc43RjCe3C91+dVS3BA+VdBbxnqaHbv0yXIgDCnV2VlzM7Oxk03zFln7k7a2
+         lvy5audVZu38+mDdwX5ZkG6wHXsWjQO1to2i7E/b3otPDnuNdfXp5kJzaaiXiHUnXsrk
+         yEGg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:date:bounces-to:mime-version:subject:message-id:to
+         :reply-to:from:dkim-signature:dkim-signature;
+        bh=J9I3VUL2BklQ5fsOMKnayGza4ObDMJ04QCwDbRw7q+U=;
+        b=C9K5vvZbnjDijatqEujx1HjRXZ0yj7tDCMrWe1new9zJimHUG8RQ6ptwJ5A4qFucK+
+         nlU4aJ3b4CoRaOuT4eUiC/nGXeIT3N5+O9C4axSTdsmzELtwIsPA17IXn/u4dEI86LF7
+         zbEaUL3i0Cn4OIvg8S3A8IMH7qB41b4Vq0Rj/gch/5GrsYLcRBe3VKvwz81lC1vE7/Zd
+         46t7NwtAU7uWofuUKNc95iZRk+xjzNcGGZxpQARPoloVEegjHCJ96+iQ4L+oOSgLzJgm
+         sH8NPHt++c5tIv4oBVwS1hBg/on0u8dH6vHyaYSMjYLKx7swQqPpb8ShaCwAiN9dULCy
+         t5hQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@amazon.com header.s=yg4mwqurec7fkhzutopddd3ytuaqrvuz header.b=NhXRTRu1;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=SQNuraDo;
+       spf=pass (google.com: domain of gc-orders+giftcertificates-emailecardgcs-a25ahbrrfksn3n@gc.email.amazon.com designates 54.240.13.120 as permitted sender) smtp.mailfrom=gc-orders+GiftCertificates-EmailEcardGCs-A25AHBRRFKSN3N@gc.email.amazon.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=amazon.com
+Return-Path: <gc-orders+GiftCertificates-EmailEcardGCs-A25AHBRRFKSN3N@gc.email.amazon.com>
+Received: from a13-120.smtp-out.amazonses.com (a13-120.smtp-out.amazonses.com. [54.240.13.120])
+        by mx.google.com with ESMTPS id b17si107452qka.28.2021.01.05.12.55.28
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Tue, 05 Jan 2021 12:55:29 -0800 (PST)
+Received-SPF: pass (google.com: domain of gc-orders+giftcertificates-emailecardgcs-a25ahbrrfksn3n@gc.email.amazon.com designates 54.240.13.120 as permitted sender) client-ip=54.240.13.120;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@amazon.com header.s=yg4mwqurec7fkhzutopddd3ytuaqrvuz header.b=NhXRTRu1;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=SQNuraDo;
+       spf=pass (google.com: domain of gc-orders+giftcertificates-emailecardgcs-a25ahbrrfksn3n@gc.email.amazon.com designates 54.240.13.120 as permitted sender) smtp.mailfrom=gc-orders+GiftCertificates-EmailEcardGCs-A25AHBRRFKSN3N@gc.email.amazon.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=amazon.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=yg4mwqurec7fkhzutopddd3ytuaqrvuz; d=amazon.com; t=1609880128;
+	i=@gc.email.amazon.com;
+	h=From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:Date;
+	bh=8aE9C3kHVpPKoWGCgDp5FjTOrLUUuyVjoVQRneHyY8g=;
+	b=NhXRTRu1BB6hKljubvXUimih+15P/zMSWUwk6Eif0Y/+4qJXit8qPjTJlyIgA5lO
+	8nSa4yhRWCQV9ClU3H1V7rE/0ePLCKT/9oLt52YyGTlCTfmw0i9FiYhieiqTIIqvg6w
+	R8J3NUvqIBOneQW6dZ9tfT04C4FqToGaIGNFMxtU=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1609880128;
+	h=From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:Date:Feedback-ID;
+	bh=8aE9C3kHVpPKoWGCgDp5FjTOrLUUuyVjoVQRneHyY8g=;
+	b=SQNuraDoq+wQs1T1WYnKlnj/Zg/y8HUuiJWp/3wudtTQFQOYY2AsYdNaIAWceV31
+	eENR3MsZWpc6rI2Df3Vkh6kTQ/oiEMx9jpo8YJFS9Fi7MlIVGddmj6771N3IzUT1wa9
+	tTy1AH+yUF50XyjpXTsy9SIOIWrKYudyXAVAHG1w=
+From: "Amazon.com Gift Cards" <gc-orders@gc.email.amazon.com>
+Reply-To: noreply@amazon.com
+To: mrcloud.med@gmail.com
+Message-ID: <01000176d4554ca0-5aae1d0f-fa4f-4433-bdae-d0d1b9c2d5f9-000000@email.amazonses.com>
+Subject: 	mrcloud Sent You a Gift Card for Google
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_33593277_1685523322.1609880128667"
+X-AMAZON-MAIL-RELAY-TYPE: notification
+Bounces-to: gc-orders+GiftCertificates-EmailEcardGCs-A25AHBRRFKSN3N@gc.email.amazon.com
+X-AMAZON-METADATA: CA=C1CIYUDQKGVNU8
+X-Original-MessageID: <urn.rtn.msg.2021010520552887d7a654721f4267be43cc488770p0na@1609880128667.rtn-svc-na-back-c52xl-ff7ad389.us-east-1.amazon.com>
+Date: Tue, 5 Jan 2021 20:55:28 +0000
+X-SES-Outgoing: 2021.01.05-54.240.13.120
+Feedback-ID: 1.us-east-1.ZHcGJK6s+x+i9lRHKog4RW3tECwWIf1xzTYCZyUaiec=:AmazonSES
+
+------=_Part_33593277_1685523322.1609880128667
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Great News! Something special for you from mrcloud: 
+
+$50.00 Google Gift card
+
+"Hope you enjoy this gift card!"
+
+Get your gift card: https://egift.activationspot.com/?tid=YK1PHH1DX97D1S1Z9HQR847P7C&gw=n&gs=n&gcm=n&eid=811N9WQH0FD7XBWSW4X6JK6QZC
+
+(You will be taken to activationspot.com, an Amazon partner, to get your gift card.)
+
+If you experience any issues using your gift card, you can reference your gift card by providing the following information to Customer Service:
+Amazon Serial Number: <span>1592009024454577</span>
+Order Number: 114-1188757-4688247
+
+This email message was sent from a notification only address that cannot accept incoming email. Please do not reply to this message.
+
+------=_Part_33593277_1685523322.1609880128667
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8;" />
+		<meta charset="utf-8" /> 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" /> 		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge;" /> 		<meta name="x-apple-disable-message-reformatting" /> 		<meta name="format-detection" content="telephone=no" /> 		<style>
+			@media screen and (max-width:480px) {
+				.desktop-footer {
+					display: none !important;
+					max-height: 0px !important;
+					overflow: hidden;
+				}
+				.mobile-footer {
+					display: initial !important;
+					max-height: initial !important;
+					overflow: initial !important;
+				}
+			}
+		</style>
+		
+
+
+
+<style>
+@media screen { 
+		@font-face {
+			font-family: 'Ember';
+			font-style: bold;
+			font-weight: 600;
+			src: local('Ember'), url(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_Bd._CB1515450239_.WOFF) format('woff');
+		 }
+		@font-face {
+			font-family: 'Ember';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Ember'), url(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_Rg._CB1515450239_.WOFF) format('woff');
+		}
+	
+		@font-face {
+			font-family: 'Ember';
+			font-style: light;
+			font-weight: 200;
+			src: local('Ember'), url(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_Lt._CB1515450239_.WOFF) format('woff');
+		}
+		@font-face {
+			font-family: 'Ember';
+			font-style: medium;
+			font-weight: 500;
+			src: local('Ember'), url(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_Md._CB1515450239_.WOFF) format('woff');
+		}
+	}
+	
+	html,
+	body {
+		margin: 0 auto !important;
+		padding: 0 !important;
+		height: 100% !important;
+		width: 100% !important;
+	}
+
+		* {
+		-ms-text-size-adjust: 100% !important;
+		-webkit-text-size-adjust: 100% !important;
+	}
+
+		div[style*="margin: 16px 0"] {
+		margin:0 !important;
+	}
+
+		table,
+	td {
+		mso-table-lspace: 0pt !important;
+		mso-table-rspace: 0pt !important;
+	}
+
+		table {
+		border-spacing: 0 !important;
+		border-collapse: collapse !important;
+		table-layout: fixed !important;
+		margin: 0 auto !important;
+	}
+	table table table {
+		table-layout: auto; 
+	}
+
+		img {
+		-ms-interpolation-mode:bicubic;
+	}
+
+	# What it does: A work-around for iOS meddling in triggered links.
+	.mobile-link--footer a,
+	a[x-apple-data-detectors] {
+		color: inherit !important;
+		text-decoration: none !important;
+		font-size: inherit !important;
+		font-family: inherit !important;
+		font-weight: inherit !important;
+		line-height: inherit !important;
+	}
+	
+	.no-style {
+		text-decoration: none ;
+		color: inherit ;
+		
+	}
+
+		.button-link {
+			text-decoration: none !important;
+	}
+
+</style>
+
+<style>
+
+		@media screen and (max-width: 600px) {
+
+		.email-container {
+			width: 100% !important;
+			margin: auto !important;
+		}
+
+		.text-container {
+			width: 95% !important;
+			margin: auto !important;
+		}
+		
+		 /*Set content to 100% width*/
+		*[class="centered-content"] {width:100% !important; height:auto !important;}
+	
+	}
+	
+	.no-style {
+		text-decoration: none ;
+		color: inherit ;
+		
+	}
+	@media screen and (max-width: 500px) {
+		.full-width-table {
+			width: 95% !important;
+			
+		}
+		.claim-code {
+			font-size: 11px !important;
+			
+		}
+		#footLogo {
+			width: 75px !important;
+			
+		}
+		#claimCodeBox {
+			width: 60% !important;
+			
+		}
+	}
+</style>	</head>
+	
+	<body width="100%" bgcolor="#fff" style="width:100%; min-width:100%!important; background-color:#fff; margin:0; padding:0;"><img width="1" height="1" src="https://www.amazon.com/gp/r.html?C=23J4QFP74FONO&M=urn:rtn:msg:2021010520552887d7a654721f4267be43cc488770p0na&R=S36WS10116H8&T=O&U=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FG%2F01%2Fnav%2Ftransp.gif&H=YPAJTXODJR2AQAYTJMEN2GEKYQUA&ref_=pe_906650_284786740_opens" />
+				<div style="display:none; font-size:1px; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden;">
+			
+		</div>
+		<center>
+	<table role="presentation" cellspacing="0" cellpadding="0" width="580px" style="margin:auto; width:580px; padding-bottom:0!important; border-collapse:separate;" class="email-container">
+				<tr>
+		<td height="3px" bgcolor="#f90" style="height:3px; background-color:#f90; font-size:3px; mso-line-height-rule:exactly; line-height:3px;">
+			&nbsp;
+		</td>
+	</tr>
+			<tr>
+		<td height="20px" style=" height:20px; font-size:20px; mso-line-height-rule:exactly; line-height:20px;">
+			&nbsp;
+		</td>
+	</tr>
+		<tr>
+		<td align="center" style="text-align:center;">
+			<img src="https://m.media-amazon.com/images/G/01/gc/notifications/logos/amazon_logo_135x42._CB1511301929_.png" alt="Amazon.com Logo" border="0" width="90">
+		</td>
+	</tr>
+		<tr>
+		<td height="18px" style=" height:18px; font-size:18px; mso-line-height-rule:exactly; line-height:18px;">
+			&nbsp;
+		</td>
+	</tr>
+			<tr>
+		<td height="1px" bgcolor="#ccc" style="height:1px; background-color:#ccc; font-size:1px; mso-line-height-rule:exactly; line-height:1px;">
+			&nbsp;
+		</td>
+	</tr>
+		<tr>
+			<td>
+								<table role="presentation" cellpadding="0" cellspacing="0" style="padding-bottom:0!important; border-collapse:separate;">
+					<tr>
+						<td width="50px" style="width:50px;"></td>
+						<td width="480px" style="width:480px;">
+														<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="padding-bottom:0!important; border-collapse:separate; width:100%;">
+											<tr>
+		<td height="20px" style=" height:20px; font-size:20px; mso-line-height-rule:exactly; line-height:20px;">
+			&nbsp;
+		</td>
+	</tr>
+		
+	
+	<tr>
+		<td align="center" style="text-align:center;">
+											<span style="font-family: Ember, Arial, Helvetica, sans-serif; font-size:19px;   color:#333; font-weight:bold;">Great News!</span>
+				<br />
+				<span style="font-family: Ember, Arial, Helvetica, sans-serif; font-size:19px;   color:#333;">mrcloud sent you a $50.00 gift card for <span style="display:inline-block;">Google</span></span>
+					</td>
+	</tr>
+	
+		<tr>
+		<td height="12px" style=" height:12px; font-size:12px; mso-line-height-rule:exactly; line-height:12px;">
+			&nbsp;
+		</td>
+	</tr>
+			<tr>
+		<td height="8px" style=" height:8px; font-size:8px; mso-line-height-rule:exactly; line-height:8px;">
+			&nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img src=https://images-na.ssl-images-amazon.com/images/I/31pQrwJSnwL.jpg width="100%" style="width:100%!important; min-width:100%!important;" />
+		</td>
+	</tr>
+		<tr>
+		<td height="8px" style=" height:8px; font-size:8px; mso-line-height-rule:exactly; line-height:8px;">
+			&nbsp;
+		</td>
+	</tr>
+		<tr>
+		<td height="12px" style=" height:12px; font-size:12px; mso-line-height-rule:exactly; line-height:12px;">
+			&nbsp;
+		</td>
+	</tr>
+				<tr>
+			<td align="left" style="text-align:left;">
+				<span style="font-family: Arial, Helvetica, sans-serif; font-size:19px; color:#333; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word;">"Hope you enjoy this gift card!"</span>
+			</td>
+		</tr>
+				<tr>
+		<td height="20px" style=" height:20px; font-size:20px; mso-line-height-rule:exactly; line-height:20px;">
+			&nbsp;
+		</td>
+	</tr>
+				<tr>
+		<td height="1px" bgcolor="#ccc" style="height:1px; background-color:#ccc; font-size:1px; mso-line-height-rule:exactly; line-height:1px;">
+			&nbsp;
+		</td>
+	</tr>
+		<tr>
+		<td height="5px" style=" height:5px; font-size:5px; mso-line-height-rule:exactly; line-height:5px;">
+			&nbsp;
+		</td>
+	</tr>
+		<tr>
+		<td>
+			<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%!important; min-width:100%!important; padding-bottom:0!important; border-collapse:separate;">
+				<tr>
+					<td align="left" valign="middle" style="text-align:left; vertical-align:middle;">
+						<span style="font-family: Ember, Arial, Helvetica, sans-serif; font-size:32px; line-height:29px;">$50.00</span>
+						<br />
+						<span style="font-family: Ember, Arial, Helvetica, sans-serif; color:#333; font-size:13px">Google Gift card</span>
+					</td>
+					<td align="right" valign="middle" width="70px" style="text-align:right; vertical-align:middle; width:70px;">
+						<img src="https://images-na.ssl-images-amazon.com/images/I/41bLIwjZywL.jpg" width="70" style="width:70px;">
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+		<tr>
+		<td height="5px" style=" height:5px; font-size:5px; mso-line-height-rule:exactly; line-height:5px;">
+			&nbsp;
+		</td>
+	</tr>
+			<tr>
+		<td height="1px" bgcolor="#ccc" style="height:1px; background-color:#ccc; font-size:1px; mso-line-height-rule:exactly; line-height:1px;">
+			&nbsp;
+		</td>
+	</tr>
+			<tr>
+		<td height="20px" style=" height:20px; font-size:20px; mso-line-height-rule:exactly; line-height:20px;">
+			&nbsp;
+		</td>
+	</tr>
+	
+				 
+				
+						
+			<tr>
+		<td align="center" style="text-align:center;">
+						<!--[if mso]>
+			<center>
+						<table><tr><td width="300" bgcolor="#f1c241" style="padding:15px; padding-top:0;">
+			<![endif]-->
+			<a href="https://www.amazon.com/gp/f.html?C=23J4QFP74FONO&M=urn:rtn:msg:2021010520552887d7a654721f4267be43cc488770p0na&R=150K9QFDJUFYB&T=C&U=https%3A%2F%2Fegift.activationspot.com%2F%3Ftid%3DYK1PHH1DX97D1S1Z9HQR847P7C%26gw%3Dn%26gs%3Dn%26gcm%3Dn%26eid%3D811N9WQH0FD7XBWSW4X6JK6QZC&H=7TNNO5WBEYB8XS5XPAECVUHEAUSA" style="text-decoration:none; color:#333;">
+				<div width="100%" bgcolor="#f1c241" align="center" style="display:inline-block; width:100%; max-width:300px; background-color:#f1c241; padding:15px; box-sizing:border-box; text-align:center; font-family: Ember, Arial, Helvetica, sans-serif; font-size:16px; color:#333; font-weight:bold;">Get your gift card</div>
+			</a>
+			<!--[if mso]>
+			</td></tr></table>
+			</center>
+			<![endif]-->
+		</td>
+	</tr>
+						<tr>
+		<td height="10px" style=" height:10px; font-size:10px; mso-line-height-rule:exactly; line-height:10px;">
+			&nbsp;
+		</td>
+	</tr>
+			<tr>
+				<td>
+					<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%!important; min-width:100%!important; padding-bottom:0!important; border-collapse:separate;">
+						<tr>
+							<td>&nbsp;</td>
+							<td width="300px" align="center" style="width:300px; text-align:center;">
+								<span style="font-family: Ember, Arial, Helvetica, sans-serif; font-size:13px;   color:#333;">You will be taken to activationspot.com, an Amazon partner, to get your gift card.</span>
+							</td>
+							<td>&nbsp;</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+				
+									<tr>
+		<td height="20px" style=" height:20px; font-size:20px; mso-line-height-rule:exactly; line-height:20px;">
+			&nbsp;
+		</td>
+	</tr>
+
+							</table>
+						</td>
+						<td width="50px" style="width:50px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+				<tr>
+		<td height="3px" bgcolor="#dedede" style="height:3px; background-color:#dedede; font-size:3px; mso-line-height-rule:exactly; line-height:3px;">
+			&nbsp;
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%; min-width:100%!important; padding-bottom:0!important; border-collapse:separate;">
+				<tr>
+					<td width="10px" style="width:10px;"></td>
+					<td>
+						<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%; min-width:100%!important; padding-bottom:0!important; border-collapse:separate;">
+								<tr>
+		<td height="15px" style=" height:15px; font-size:15px; mso-line-height-rule:exactly; line-height:15px;">
+			&nbsp;
+		</td>
+	</tr>
+							<tr>
+								<td>
+																		<div class="desktop-footer" width="100%" style="width:100%; min-width:100%!important;">
+										<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%; min-width:100%!important; padding-bottom:0!important; border-collapse:separate;">
+											<tr>
+												<td>
+													<img src="https://m.media-amazon.com/images/G/01/gc/notifications/logos/amazon_logo_135x42._CB1511301929_.png" alt="Amazon.com Logo" border="0" width="90">
+												</td>
+												<td width="27px" style="width:27px;">
+													<a href="https://www.amazon.com/gp/f.html?C=23J4QFP74FONO&M=urn:rtn:msg:2021010520552887d7a654721f4267be43cc488770p0na&R=QWJIEXN42DYR&T=C&U=https%3A%2F%2Fwww.facebook.com%2FAmazon%2F&H=BKFSG9DDWGALIPFO6WS28YAKU7EA">
+														<img src="https://m.media-amazon.com/images/G/01/gc/notifications/logos/facebook_icon.png" alt="Share via Facebook" width="27" height="27">
+													</a>
+												</td>
+												<td width="24px" style="width:24px;"></td>
+												<td width="27px" style="width:27px;">
+													<a href="https://www.amazon.com/gp/f.html?C=23J4QFP74FONO&M=urn:rtn:msg:2021010520552887d7a654721f4267be43cc488770p0na&R=2A6Q3Q6TJJ2XY&T=C&U=https%3A%2F%2Ftwitter.com%2Famazon%2F&H=1QTTGALAUEVSCQFUMLGKAGQFTVWA">
+														<img src="https://m.media-amazon.com/images/G/01/gc/notifications/logos/twitter_icon.png" alt="Tweet it" width="27" height="27">
+													</a>
+												</td>
+												<td width="24px" style="width:24px;"></td>
+												<td width="27px" style="width:27px;">
+													<a href="https://www.amazon.com/gp/f.html?C=23J4QFP74FONO&M=urn:rtn:msg:2021010520552887d7a654721f4267be43cc488770p0na&R=N0WPRG5EB8EN&T=C&U=https%3A%2F%2Fwww.instagram.com%2Famazon%2F&H=VWUJKAA9CPMWMTNE7KPCQWSA614A">
+														<img src="https://m.media-amazon.com/images/G/01/gc/notifications/logos/instagram_icon.png" alt="Post to Instagram" width="27" height="27">
+													</a>
+												</td>
+												<td width="24px" style="width:24px;">
+												</td>
+												<td width="27px" style="width:27px;">
+													<a href="https://www.amazon.com/gp/f.html?C=23J4QFP74FONO&M=urn:rtn:msg:2021010520552887d7a654721f4267be43cc488770p0na&R=362W2K4E9P3PE&T=C&U=https%3A%2F%2Fwww.pinterest.com%2Famazon%2F&H=0E59ARGFXIBT4CWYSX5URZ76CLYA">
+														<img src="https://m.media-amazon.com/images/G/01/gc/notifications/logos/pintrest_icon.png" alt="Pin it on Pintrest" width="27" height="27">
+													</a>
+												</td>
+											</tr>
+										</table>
+									</div>
+									
+																		<!--[if !mso]><!-->
+									<div class="mobile-footer" width="100%" style="display:none; max-height:0px !important; overflow:hidden; width:100%; min-width:100%!important;">
+										<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%; min-width:100%!important; padding-bottom:0!important; border-collapse:separate;">
+											<tr>
+												<td align="center" style="text-align:center;">
+													<img src="https://m.media-amazon.com/images/G/01/gc/notifications/logos/amazon_logo_135x42._CB1511301929_.png" alt="Amazon.com Logo" border="0" width="90">
+												</td>
+											</tr>
+												<tr>
+		<td height="15px" style=" height:15px; font-size:15px; mso-line-height-rule:exactly; line-height:15px;">
+			&nbsp;
+		</td>
+	</tr>
+											<tr>
+												<td>
+													<center>
+														<table role="presentation" cellpadding="0" cellspacing="0" style="padding-bottom:0!important; border-collapse:separate; margin:auto;">
+															<tr>
+																<td width="27px" style="width:27px;">
+																	<a href="https://www.amazon.com/gp/f.html?C=23J4QFP74FONO&M=urn:rtn:msg:2021010520552887d7a654721f4267be43cc488770p0na&R=10XOWAKCEBXHQ&T=C&U=https%3A%2F%2Fwww.facebook.com%2FAmazon%2F&H=ET1A9EAKEDE5RMP55CVBAHEUKXWA">
+																		<img src="https://m.media-amazon.com/images/G/01/gc/notifications/logos/facebook_icon.png" alt="Share via Facebook" width="27" height="27">
+																	</a>
+																</td>
+																<td width="24px" style="width:24px;"></td>
+																<td width="27px" style="width:27px;">
+																	<a href="https://www.amazon.com/gp/f.html?C=23J4QFP74FONO&M=urn:rtn:msg:2021010520552887d7a654721f4267be43cc488770p0na&R=25OKJJ62K1GWU&T=C&U=https%3A%2F%2Ftwitter.com%2Famazon%2F&H=TSO1Y7SIJSFYWKVRWWR9D4BWRZSA">
+																		<img src="https://m.media-amazon.com/images/G/01/gc/notifications/logos/twitter_icon.png" alt="Tweet it" width="27" height="27">
+																	</a>
+																</td>
+																<td width="24px" style="width:24px;"></td>
+																<td width="27px" style="width:27px;">
+																	<a href="https://www.amazon.com/gp/f.html?C=23J4QFP74FONO&M=urn:rtn:msg:2021010520552887d7a654721f4267be43cc488770p0na&R=3945MELP4TS2K&T=C&U=https%3A%2F%2Fwww.instagram.com%2Famazon%2F&H=B0LC7HNPYCAWJQOAAWDDC51LDDSA">
+																		<img src="https://m.media-amazon.com/images/G/01/gc/notifications/logos/instagram_icon.png" alt="Post to Instagram" width="27" height="27">
+																	</a>
+																</td>
+																<td width="24px" style="width:24px;">
+																</td>
+																<td width="27px" style="width:27px;">
+																	<a href="https://www.amazon.com/gp/f.html?C=23J4QFP74FONO&M=urn:rtn:msg:2021010520552887d7a654721f4267be43cc488770p0na&R=BHOWNTHSJDAX&T=C&U=https%3A%2F%2Fwww.pinterest.com%2Famazon%2F&H=Q6B3RTJS2EVD9KAPE4UPMIG8TJIA">
+																		<img src="https://m.media-amazon.com/images/G/01/gc/notifications/logos/pintrest_icon.png" alt="Pin it on Pintrest" width="27" height="27">
+																	</a>
+																</td>
+															</tr>
+														</table>
+													</center>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<!--<![endif]-->
+								</td>
+							</tr>
+								<tr>
+		<td height="15px" style=" height:15px; font-size:15px; mso-line-height-rule:exactly; line-height:15px;">
+			&nbsp;
+		</td>
+	</tr>
+									<tr>
+		<td>
+			<span style="font-family: Ember, Arial, Helvetica, sans-serif; font-size:13px;   color:#aaa;  font-weight:lighter;">This email message was sent from a notification only address that cannot accept incoming email. Please do not reply to this message.</span>
+		</td>
+	</tr>
+										
+				
+				
+			<tr>
+		<td height="8px" style=" height:8px; font-size:8px; mso-line-height-rule:exactly; line-height:8px;">
+			&nbsp;
+		</td>
+	</tr>
+						<tr>
+		<td>
+			<span style="font-family: Ember, Arial, Helvetica, sans-serif; font-size:13px;   color:#aaa;  font-weight:lighter;">Need help? Contact Amazon Customer Service at (888) 280-4331 or click <a href="https://www.amazon.com/gp/f.html?C=23J4QFP74FONO&M=urn:rtn:msg:2021010520552887d7a654721f4267be43cc488770p0na&R=1X47RPHZ2LXWN&T=C&U=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fhelp%2Fcustomer%2Fdisplay.html%2Fref%3Dpe_906650_284786740_gw_m_b_he%3Fie%3DUTF8%26nodeId%3D508510&H=GTOXJ3IPJ3XRZ4P7YE08ESFCJU4A&ref_=pe_906650_284786740_gw_m_b_he">here</a>.</span>
+		</td>
+	</tr>
+					<tr>
+		<td height="8px" style=" height:8px; font-size:8px; mso-line-height-rule:exactly; line-height:8px;">
+			&nbsp;
+		</td>
+	</tr>
+			<tr>
+		<td>
+			<span style="font-family: Ember, Arial, Helvetica, sans-serif; font-size:13px;   color:#aaa;  font-weight:lighter;">Amazon Serial Number: <span>1592009024454577</span></span>
+		</td>
+	</tr>
+			<tr>
+		<td>
+			<span style="font-family: Ember, Arial, Helvetica, sans-serif; font-size:13px;   color:#aaa;  font-weight:lighter;">Order Number: 114-1188757-4688247</span>
+		</td>
+	</tr>
+									<tr>
+		<td height="15px" style=" height:15px; font-size:15px; mso-line-height-rule:exactly; line-height:15px;">
+			&nbsp;
+		</td>
+	</tr>
+						</table>
+					<td width="10px" style="width:10px;"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</center>
+	<img width="1" height="1" src="https://www.amazon.com/gp/r.html?C=23J4QFP74FONO&M=urn:rtn:msg:2021010520552887d7a654721f4267be43cc488770p0na&R=3W32TCSRVBND6&T=E&U=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FG%2F01%2Fnav%2Ftransp.gif&H=RMQKJTGG3XM1WK5C1FFUKAVPQMKA&ref_=pe_906650_284786740_open" /></body>
+	
+	</html>
+
+------=_Part_33593277_1685523322.1609880128667--

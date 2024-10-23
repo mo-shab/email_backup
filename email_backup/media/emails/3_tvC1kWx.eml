@@ -1,0 +1,80 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a9a:7ad1:0:b029:b6:48f8:3fed with SMTP id i17csp2333586lkn;
+        Mon, 28 Dec 2020 18:17:51 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJzNhd8GE189Ss59h4k8Pa65Iy3+3URt9za8hg4ZYaQtQxoVgKNysiGdXaHrsH4MI2TSKm6/
+X-Received: by 2002:a5b:107:: with SMTP id 7mr71064705ybx.253.1609208271604;
+        Mon, 28 Dec 2020 18:17:51 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1609208271; cv=none;
+        d=google.com; s=arc-20160816;
+        b=OWzg66yafofv1mEsKZdlZxji5cRcAKFlaI4zx2e3Srw+quF/vZszaPpZ7D8z6PdQOT
+         aLdnWUt/iaDlmomgu9NmGvJlfV/Gm5HIe9jDg/z+UixKfwbuuvFH55Sy89PLOHkGljex
+         ctq3qaHWr2REa1VoCTfDJjweVWgHESshsk5NK0/m48LsbDcY5s1uQbCGi7PIDjVJvs/+
+         PzwA+yp7fDrO+TrD46f/X9OEr/KOpR0GB0BxJiHFJLF2x6UWzylTQoBpMjGqjcCrX9mR
+         jBHGHpM2etpAm5r1wGpIMIlrtGc2/gBClIuJYosBBzTNxyDjh+ngrqf7SjL7bH+AOORz
+         wz+g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:from:to:reply-to:message-id:sender:date
+         :content-transfer-encoding:dkim-signature:dkim-signature;
+        bh=+YqccC/bXbZAgnOe4WEZyNmv6yPmCnbKwt+Q61VH0eI=;
+        b=LbEc7AyeGATmnvWBXUdAL/f++FMn7QTMyicTqAnKqWrf84ykO9U6HfxRo4KigbKd97
+         OZZlhlCobdVl5+0q6p7nh4ZIqQC76LdUrUWXT3vwr1NCzMCInCeSw1eQOsgHd6m2XVcx
+         nfzvsc/nCfXbrwoTrqbCIJfrUhe6ER1le6vx3MLyt/ZcRwH6X3yYTsZ2QmGX5ZFtqmXf
+         fGIT1FuzKELzk0ACArVNyML76cCf/e5WkYPxRlgyOkX3rCnyeJiNNgkeu9o1lFrWWXev
+         KzpCGcjw9P+5jI+NQ7HAiVuNejxEE6vRhqfaGREMGVmUycaIc53ogkCLFITVUjjPNt1c
+         1o8Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@redacted.ch header.s=mx header.b=BahB5szu;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=tKRsGrkf;
+       spf=pass (google.com: domain of bounce+428aa3.9e4403-mrcloud.med=gmail.com@redacted.ch designates 69.72.42.1 as permitted sender) smtp.mailfrom="bounce+428aa3.9e4403-mrcloud.med=gmail.com@redacted.ch"
+Return-Path: <bounce+428aa3.9e4403-mrcloud.med=gmail.com@redacted.ch>
+Received: from m42-1.mailgun.net (m42-1.mailgun.net. [69.72.42.1])
+        by mx.google.com with UTF8SMTPS id p85si4642796ybg.431.2020.12.28.18.17.50
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 28 Dec 2020 18:17:51 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce+428aa3.9e4403-mrcloud.med=gmail.com@redacted.ch designates 69.72.42.1 as permitted sender) client-ip=69.72.42.1;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@redacted.ch header.s=mx header.b=BahB5szu;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=tKRsGrkf;
+       spf=pass (google.com: domain of bounce+428aa3.9e4403-mrcloud.med=gmail.com@redacted.ch designates 69.72.42.1 as permitted sender) smtp.mailfrom="bounce+428aa3.9e4403-mrcloud.med=gmail.com@redacted.ch"
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=redacted.ch; q=dns/txt; s=mx;
+ t=1609208271; h=Mime-Version: Content-Type: Subject: From: To:
+ Reply-To: Message-Id: Sender: Date: Content-Transfer-Encoding:
+ X-Feedback-Id; bh=+YqccC/bXbZAgnOe4WEZyNmv6yPmCnbKwt+Q61VH0eI=; b=BahB5szuAUTpaQFREAKOsjp+udo0DO4zrPLnNyZnH4c2HFkTcJAM2CgbHlyg5BEj7l6QbrfD
+ wxaEhlE8x0BVu5X1UbYzPWYYvwrYwJvcbhrI7uMMkcunv3+nSyRxG8m6hVdmgkt9FeksWpEq
+ ZfByPJo964+zgp1vpbyTGOIzMHA=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg;
+ t=1609208271; h=Mime-Version: Content-Type: Subject: From: To:
+ Reply-To: Message-Id: Sender: Date: Content-Transfer-Encoding:
+ X-Feedback-Id; bh=+YqccC/bXbZAgnOe4WEZyNmv6yPmCnbKwt+Q61VH0eI=; b=tKRsGrkf2JnrgiaUBInu4cRhGECzhSHaD5xQiV5wmtvPcG6p0CBdeJBB6Qrpfw2nIRhRJJ76
+ 9shN8hCLo8K+2UdXcLqDJQM4gze6oNMrPjKMymVwuhNudFBRCHyFwmJoc5N+DImK+mXKOK2y
+ Y1C8IWrp2OQewj5WMYcK8508zOU=
+X-Feedback-Id: 590cbc031f4b8b439fd14d2f:mailgun
+X-Mailgun-Sending-Ip: 69.72.42.1
+X-Mailgun-Sid: WyIzZDQ4MSIsICJtcmNsb3VkLm1lZEBnbWFpbC5jb20iLCAiOWU0NDAzIl0=
+Content-Transfer-Encoding: 7bit
+Received: by luna.mailgun.net with HTTP; Tue, 29 Dec 2020 02:17:49 +0000
+Date: Tue, 29 Dec 2020 02:17:49 +0000
+Sender: noreply@redacted.ch
+Message-Id: <20201229021749.1.C78FB2F175F95398@redacted.ch>
+Reply-To: noreply@redacted.ch
+To: mrcloud.med@gmail.com
+From: noreply@redacted.ch
+Subject: You have been invited to Redacted
+Content-Type: text/plain; charset="ascii"
+Mime-Version: 1.0
+
+The user Buggy has invited you to join Redacted and has specified this address (mrcloud.med@gmail.com) as your email address. If you do not know this person, please ignore this email, and do not reply.
+
+Please note that selling invites, trading invites, and giving invites away publicly (e.g. on a forum) is strictly forbidden. If you have received your invite as a result of any of these things, do not bother signing up - you will be banned and lose your chances of ever signing up legitimately.
+
+If you have previously had an account at Redacted, do not use this invite. Instead, please join #red-disabled on irc.scratch-network.net and ask for your account to be reactivated.
+
+To confirm your invite, click on the following link:
+
+https://redacted.ch/register.php?invite=64952fe00a3e989f825f2b79b59fcadd
+
+After you register, you will be able to use your account. Please take note that if you do not use this invite in the next 3 days, it will expire. We urge you to read the RULES and the wiki immediately after you join.
+
+Thank you,
+Redacted Staff

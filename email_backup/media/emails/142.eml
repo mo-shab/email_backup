@@ -1,0 +1,301 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:22e6:b029:f9:2098:e3d8 with SMTP id b6csp531761lkv;
+        Sat, 22 May 2021 09:33:00 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwFPgZH85Lhq2Z3T2LFlbQkqU6lNV3/7mNIY217apNfld8EEI5LV3WOXMCvN+/ccCv6GQ1C
+X-Received: by 2002:a05:6808:15a7:: with SMTP id t39mr160757oiw.1.1621701179693;
+        Sat, 22 May 2021 09:32:59 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1621701179; cv=none;
+        d=google.com; s=arc-20160816;
+        b=TX4zSlACRCNml/N6pmES5oHXUPcLNBkU9G+j7jEHyq12g9QOM8INEpwg8qN5wvzNas
+         ukbAiYujg6/HkC694ZTNnp0vBgOPiwZo7baDA2e+yorNIdNoQxTbaXT6kr11kwaZNDy+
+         H5nQ9isNWQbmudd2xTxJck4y6dr/5fQP/YgD3Nq6xab6CjZ12TMStNLwhaJbN2DnNszb
+         5PyJUJrBo1L2BYXzgpt69LFQGRNzh6kc7Cm6ZY+a8temp1jwo9ACrR/M3pJkYvzHijfU
+         Ps2WyrQ3SwVzmG4TKcH7aQ0IiqB+ei+M2efcLjptLJBTXj4jUXEAeqhqpDi1ZvKrY486
+         Mdag==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:from:to:reply-to:message-id:sender:date
+         :dkim-signature:dkim-signature;
+        bh=gd+QqBmEgQ+6QoTCrhMu2tNkYUiiGov+whueLds+zCw=;
+        b=PQm6d7MY7MuVyjOQR6OXgphZN/1Q6DErgSlG46w5TmyHfE6SbE9AxZwjy4AeMAVdKV
+         9U88qRAexOF94k9AqbposHfhQMhAMwQQ9qQAh4b9WBasMPZ0HgbANz0hAZO9uY7D234+
+         7+S7MWvOuc70VfEULLVOIDTWXS/7o8qGELKqHAvX6G+wjJVyB9t82+QLiqslg/kh/8mQ
+         vpukcCbhxTBOITDhPJL3m31jJ5AmSLiOdb+JKwZNWrvAFQ1ttpKst/WqvpZgf/vcIF5g
+         etUjDinYz1Z3Qm4MvJsg1mLt1aYS3br9SyZzBBNY2P9ceOxX0y0adGlZMoUQnLLKKKJc
+         3kdA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@iptvstack.com header.s=k1 header.b=wl3Eugv9;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=rOd46qfH;
+       spf=pass (google.com: domain of bounce+7313d1.51f68e-mrcloud.med=gmail.com@iptvstack.com designates 159.135.231.196 as permitted sender) smtp.mailfrom="bounce+7313d1.51f68e-mrcloud.med=gmail.com@iptvstack.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=iptvstack.com
+Return-Path: <bounce+7313d1.51f68e-mrcloud.med=gmail.com@iptvstack.com>
+Received: from m231-196.mailgun.net (m231-196.mailgun.net. [159.135.231.196])
+        by mx.google.com with UTF8SMTPS id j124si9294312oif.124.2021.05.22.09.32.54
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 22 May 2021 09:32:59 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+7313d1.51f68e-mrcloud.med=gmail.com@iptvstack.com designates 159.135.231.196 as permitted sender) client-ip=159.135.231.196;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@iptvstack.com header.s=k1 header.b=wl3Eugv9;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=rOd46qfH;
+       spf=pass (google.com: domain of bounce+7313d1.51f68e-mrcloud.med=gmail.com@iptvstack.com designates 159.135.231.196 as permitted sender) smtp.mailfrom="bounce+7313d1.51f68e-mrcloud.med=gmail.com@iptvstack.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=iptvstack.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=iptvstack.com; q=dns/txt;
+ s=k1; t=1621701179; h=Content-Type: Mime-Version: Subject: From: To:
+ Reply-To: Message-Id: Sender: Date: X-Feedback-Id;
+ bh=gd+QqBmEgQ+6QoTCrhMu2tNkYUiiGov+whueLds+zCw=; b=wl3Eugv9Ajf8tdpd83ydOyZm1JK7pMNzET6W/K7CqToGonSe9s/AU+17i8oG1L1HbML6dzUY
+ xoyWRQ6taUPMz3s1E/j6boSTZPT+lXN1y344KXeI5sd3Pxda+s6d1OZQ1qtjpQKW1VVwlVmo
+ l0lYx8BStrlLef9ChiYJwvk45OU=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg;
+ t=1621701179; h=Content-Type: Mime-Version: Subject: From: To:
+ Reply-To: Message-Id: Sender: Date: X-Feedback-Id;
+ bh=gd+QqBmEgQ+6QoTCrhMu2tNkYUiiGov+whueLds+zCw=; b=rOd46qfH0c9KNCW0UbK2cwkzmCbMSuFcgovdMlmAzt0aJ8JmfLa6AbpgYDZAzz6hths4ZP+y
+ ewGZcZfUKnZdGiJgSYh1/0M19CYYhVL1tGeJwfaVefp189KIxLDXd3/n5iK4NwjTDSCXEka3
+ 7MZSug9p5HkGu8DjSzACzjKdACY=
+X-Feedback-Id: 58fb075e1f4b8ba0a167f518:mailgun
+X-Mailgun-Sending-Ip: 159.135.231.196
+X-Mailgun-Sid: WyIzNmFjNSIsICJtcmNsb3VkLm1lZEBnbWFpbC5jb20iLCAiNTFmNjhlIl0=
+Received: by luna.mailgun.net with HTTP; Sat, 22 May 2021 16:32:41 +0000
+Date: Sat, 22 May 2021 16:32:41 +0000
+Sender: no-reply@iptvstack.com
+Message-Id: <20210522163241.1.09E1CAF8B9E1E33C@iptvstack.com>
+Reply-To: support@my.iptvstack.com
+To: mrcloud.med@gmail.com
+From: IPTV Stack <no-reply@iptvstack.com>
+Subject: IPTV Trial Request
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary="638e74868f49491b8d7f659e8191b246"
+
+--638e74868f49491b8d7f659e8191b246
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+Mime-Version: 1.0
+
+[https://my.iptvstack.com/hotlink-ok/brand_logos/iptvstack-logo.png] HelloY=
+our
+new IPTV Trial subscription has been created successfully and a private
+dashboard has been assigned to your Email address.
+
+ServicePriceQuantity1 Hour IPTV Subscription=E2=82=AC0.001Total:=E2=82=AC0.=
+00
+
+DASHBOARD INFO:
+Username:mrcloud.med@gmail.com
+Password:6CH9h7PBob7417
+
+Open Dashboard
+[https://my.iptvstack.com/verify-email/verify_6217011T08G63GE4q7qTpmAsD63GE=
+4q7qTpmT08G63GE4q7qTpm_1621701160/60a93228c2f6488dfd889282]=20
+Copyright =C2=A9 2021 , All rights reserved.
+Contact us at: support@my.iptvstack.com [support@my.iptvstack.com]
+--638e74868f49491b8d7f659e8191b246
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+Mime-Version: 1.0
+
+<!doctype html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head>
+  <title>page title</title>
+  <!--[if !mso]><!-- -->
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+  <!--<![endif]-->
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+<style type=3D"text/css">
+  #outlook a { padding: 0; }
+  .ReadMsgBody { width: 100%; }
+  .ExternalClass { width: 100%; }
+  .ExternalClass * { line-height:100%; }
+  body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%; }
+  table, td { border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rs=
+pace: 0pt; }
+  img { border: 0; height: auto; line-height: 100%; outline: none; text-dec=
+oration: none; -ms-interpolation-mode: bicubic; }
+  p { display: block; margin: 13px 0; }
+</style>
+<!--[if !mso]><!-->
+<style type=3D"text/css">
+  @media only screen and (max-width:480px) {
+    @-ms-viewport { width:320px; }
+    @viewport { width:320px; }
+  }
+</style>
+<!--<![endif]-->
+<!--[if mso]>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<!--[if lte mso 11]>
+<style type=3D"text/css">
+  .outlook-group-fix {
+    width:100% !important;
+  }
+</style>
+<![endif]-->
+
+<!--[if !mso]><!-->
+    <link href=3D"https://fonts.googleapis.com/css?family=3DRoboto:300,400,=
+500,700" rel=3D"stylesheet" type=3D"text/css">
+<link href=3D"https://fonts.googleapis.com/css?family=3DUbuntu:400,500,700"=
+ rel=3D"stylesheet" type=3D"text/css">
+    <style type=3D"text/css">
+
+        @import url(https://fonts.googleapis.com/css?family=3DRoboto:300,40=
+0,500,700);
+  @import url(https://fonts.googleapis.com/css?family=3DUbuntu:400,500,700);
+
+    </style>
+  <!--<![endif]--><style type=3D"text/css">
+  @media only screen and (min-width:480px) {
+    .mj-column-per-100 { width:100%!important; }
+  }
+</style>
+</head>
+<body>
+ =20
+  <div class=3D"mj-container"><!--[if mso | IE]>
+      <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"600" align=3D"center" style=3D"width:600px;">
+        <tr>
+          <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:e=
+xactly;">
+      <![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table ro=
+le=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:=
+0px;width:100%;" align=3D"center" border=3D"0"><tbody><tr><td style=3D"text=
+-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:20px 0=
+px;"><!--[if mso | IE]>
+      <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+        <tr>
+          <td style=3D"vertical-align:top;width:600px;">
+      <![endif]--><div class=3D"mj-column-per-100 outlook-group-fix" style=
+=3D"vertical-align:top;display:inline-block;direction:ltr;font-size:13px;te=
+xt-align:left;width:100%;"><table role=3D"presentation" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td style=3D"word-w=
+rap:break-word;font-size:0px;padding:10px 25px;" align=3D"center"><table ro=
+le=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;" align=3D"center" border=3D"0"><tbody><t=
+r><td style=3D"width:110px;"><img alt height=3D"auto" src=3D"https://my.ipt=
+vstack.com/hotlink-ok/brand_logos/iptvstack-logo.png" style=3D"border:none;=
+border-radius:0px;display:block;font-size:13px;outline:none;text-decoration=
+:none;width:100%;height:auto;" width=3D"110"></td></tr></tbody></table></td=
+></tr></tbody></table></div><!--[if mso | IE]>
+      </td></tr></table>
+      <![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+      </td></tr></table>
+      <![endif]-->
+      <!--[if mso | IE]>
+      <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"600" align=3D"center" style=3D"width:600px;">
+        <tr>
+          <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:e=
+xactly;">
+      <![endif]--><div style=3D"margin:0px auto;max-width:600px;background:=
+#fafafa;"><table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"font-size:0px;width:100%;background:#fafafa;" align=3D"center" bor=
+der=3D"0"><tbody><tr><td style=3D"text-align:center;vertical-align:top;bord=
+er-top:1px solid orange;direction:ltr;font-size:0px;padding:50px 10px;"><!-=
+-[if mso | IE]>
+      <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+        <tr>
+          <td style=3D"vertical-align:top;width:600px;">
+      <![endif]--><div class=3D"mj-column-per-100 outlook-group-fix" style=
+=3D"vertical-align:top;display:inline-block;direction:ltr;font-size:13px;te=
+xt-align:left;width:100%;"><table role=3D"presentation" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td style=3D"word-w=
+rap:break-word;font-size:0px;padding:10px 25px;" align=3D"left"><div style=
+=3D"cursor:auto;color:#626262;font-family:Ubuntu;font-size:26px;line-height=
+:22px;text-align:left;">Hello</div></td></tr><tr><td style=3D"word-wrap:bre=
+ak-word;font-size:0px;padding:10px 25px;" align=3D"left"><div style=3D"curs=
+or:auto;color:#525252;font-family:Ubuntu, Helvetica, Arial, sans-serif;font=
+-size:13px;line-height:22px;text-align:left;"><p style=3D"font-size:15px">Y=
+our new IPTV Trial subscription has been created successfully and a private=
+ dashboard has been assigned to your Email address.</p></div></td></tr><tr>=
+<td style=3D"word-wrap:break-word;font-size:0px;" align=3D"center"><table s=
+tyle=3D"color:#b9b9b9;font-family:Roboto, Ubuntu, Helvetica, Arial, sans-se=
+rif;font-size:13px;line-height:22px;" border=3D"0"><thead><tr style=3D"bord=
+er-bottom:1px solid #ecedee;"><th style=3D"font-weight:700;padding:10px 20p=
+x;text-align:left;text-transform:uppercase;font-family:Roboto, Ubuntu, Helv=
+etica, Arial, sans-serif;font-size:13px;line-height:22px;">Service</th><th =
+style=3D"font-weight:700;padding:10px 20px;text-align:left;text-transform:u=
+ppercase;font-family:Roboto, Ubuntu, Helvetica, Arial, sans-serif;font-size=
+:13px;line-height:22px;">Price</th><th style=3D"font-weight:700;padding:10p=
+x 20px;text-align:right;text-transform:uppercase;font-family:Roboto, Ubuntu=
+, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;">Quantity</=
+th></tr></thead><tbody><tr><td style=3D"font-weight:500;line-height:1;color=
+:#747474;font-family:Roboto, Ubuntu, Helvetica, Arial, sans-serif;font-size=
+:14px;padding:10px 20px;text-align:left;word-break:break-all;">1 Hour IPTV =
+Subscription</td><td style=3D"font-weight:500;line-height:1;color:#747474;f=
+ont-family:Roboto, Ubuntu, Helvetica, Arial, sans-serif;font-size:14px;padd=
+ing:10px 20px;text-align:left;">=E2=82=AC0.00</td><td style=3D"font-weight:=
+500;line-height:1;color:#747474;font-family:Roboto, Ubuntu, Helvetica, Aria=
+l, sans-serif;font-size:14px;padding:10px 20px;text-align:right;">1</td></t=
+r></tbody><tfoot><tr style=3D"border-top:1px solid #ecedee;"><th colspan=3D=
+"2" style=3D"font-weight:700;padding:10px 20px;text-align:left;text-transfo=
+rm:uppercase;font-family:Roboto, Ubuntu, Helvetica, Arial, sans-serif;font-=
+size:13px;line-height:22px;">Total:</th><td style=3D"font-family:Roboto, Ub=
+untu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:700;line-heig=
+ht:22px;padding:10px 20px;text-align:right;">=E2=82=AC0.00</td></tr></tfoot=
+></table></td></tr><tr><td style=3D"word-wrap:break-word;font-size:0px;padd=
+ing:10px 25px;" align=3D"left"><div style=3D"cursor:auto;color:#525252;font=
+-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22p=
+x;text-align:left;"><p style=3D"font-size:15px"></p><h3 style=3D"font-weigh=
+t: 100;margin: 0 0 5px 0;color: #147d96;">Dashboard Info:</h3>Username:=C2=
+=A0<b>mrcloud.med@gmail.com</b><br>Password:=C2=A0=C2=A0<b>6CH9h7PBob7417</=
+b><p></p></div></td></tr><tr><td style=3D"word-wrap:break-word;font-size:0p=
+x;padding:10px 25px;" align=3D"left"><table role=3D"presentation" cellpaddi=
+ng=3D"0" cellspacing=3D"0" style=3D"border-collapse:separate;" align=3D"lef=
+t" border=3D"0"><tbody><tr><td style=3D"border:none;border-radius:3px;color=
+:#ffffff;cursor:auto;height:35px;padding:10px 25px;" align=3D"center" valig=
+n=3D"middle" bgcolor=3D"#5c63e7"><a href=3D"https://my.iptvstack.com/verify=
+-email/verify_6217011T08G63GE4q7qTpmAsD63GE4q7qTpmT08G63GE4q7qTpm_162170116=
+0/60a93228c2f6488dfd889282" style=3D"text-decoration:none;background:#5c63e=
+7;color:#ffffff;font-family:Ubuntu;font-size:17px;font-weight:normal;line-h=
+eight:120%;text-transform:none;margin:0px;" target=3D"_blank">Open Dashboar=
+d</a></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso =
+| IE]>
+      </td></tr></table>
+      <![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+      </td></tr></table>
+      <![endif]-->
+      <!--[if mso | IE]>
+      <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"600" align=3D"center" style=3D"width:600px;">
+        <tr>
+          <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:e=
+xactly;">
+      <![endif]--><div style=3D"margin:0px auto;max-width:600px;background:=
+#fff";"><table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"font-size:0px;width:100%;background:#fff";" align=3D"center" border=
+=3D"0"><tbody><tr><td style=3D"text-align:center;vertical-align:top;directi=
+on:ltr;font-size:0px;padding:20px 0px;"><!--[if mso | IE]>
+      <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0">
+        <tr>
+          <td style=3D"vertical-align:top;width:600px;">
+      <![endif]--><div class=3D"mj-column-per-100 outlook-group-fix" style=
+=3D"vertical-align:top;display:inline-block;direction:ltr;font-size:13px;te=
+xt-align:left;width:100%;"><table role=3D"presentation" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td style=3D"word-w=
+rap:break-word;font-size:0px;padding:10px 25px;" align=3D"left"><div style=
+=3D"cursor:auto;color:#525252;font-family:Ubuntu, Helvetica, Arial, sans-se=
+rif;font-size:13px;line-height:22px;text-align:left;"><p style=3D"text-alig=
+n: center">Copyright =C2=A9 2021 , All rights reserved.<br>Contact us at: <=
+a style=3D"color:#525252" href=3D"mailto:support@my.iptvstack.com">support@=
+my.iptvstack.com</a></p></div></td></tr></tbody></table></div><!--[if mso |=
+ IE]>
+      </td></tr></table>
+      <![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+      </td></tr></table>
+      <![endif]--></div>
+</body>
+</html>
+--638e74868f49491b8d7f659e8191b246--

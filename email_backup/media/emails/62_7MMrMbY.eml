@@ -1,0 +1,59 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a9a:4583:0:b029:c3:278e:30dc with SMTP id m3csp2650857lkd;
+        Sun, 14 Mar 2021 01:19:06 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJwkEUnxCFBMiwjeJNSbwVQb7YgWCHrOZDecvAc6urPWO8I1Oez8MCzRnzGJYHFdnWuTQbnX
+X-Received: by 2002:a1c:9a09:: with SMTP id c9mr20715694wme.172.1615713546197;
+        Sun, 14 Mar 2021 01:19:06 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1615713546; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0OBL5bOUN38l2Ym3zlpSc1ggHdJHohELm2lIHEM3m7n5ygUr1S9CYL4sIEE3AYV3ke
+         7L5jxlp171rAXdv7G0tlTTs+9OHgXD1M4OzMfsUt55OQUIpWZig2iEZ7sLkkSsnjTo6f
+         p3FV1TneamYpDQq7wcsXETfmlqQtziiMxo0qH949piUDZfjWNKbTCS6A6J7TeCko7P+j
+         Y+zAzta0HrBjAKOgdSAqguoWVDN4t+FlVJCCyY/cE3d/gAe9oLKiQ/jKMGOIHcd/P0gV
+         1msafXK3qnxUJRRaQb3wiHoZMkYIc8cQnmvBLKpHtP58jt21yshyjFJncxU3yX/KLFvp
+         +8xA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=reply-to:from:mime-version:subject:to:message-id:date;
+        bh=CWs1AFD2Hh2TkjSOql0+jEMs40Jl2/McMOrVDUq/X98=;
+        b=Q8A4zT7nCqs1OYHA4foIqBa1kgEy/rPvyisb+OrIWtUrbu8xsQCM7bwmvLTCXmws7p
+         uC1PTivTKuDCMR3MJKai0oiEsSWCNA8XdTU+hfQweOGhuPmBpCgx4XRVBLmHGwLNz8Af
+         1P0VPFxbDSpCQWM13++6FA8pbiymNWGHdelDRJqlhgDKX4t8wF9EsLDxZorqiRijeTOk
+         CVerFU9qhSY5kaZDVCJgskU3Wgijcni/JrgO2NMM4n4QOWfgWOX05seb6aiH4JKKTtYO
+         MxoSAugqwJjIdyT0sNV3aXl9nDvRpa718LNBaNgUPT776cmRK0aTrcrnQHA4Ovi8bnvo
+         L/yQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: best guess record for domain of noreply@jpopsuki.eu designates 213.239.204.250 as permitted sender) smtp.mailfrom=noreply@jpopsuki.eu
+Return-Path: <noreply@jpopsuki.eu>
+Received: from jpopsuki.eu (jpopsuki.eu. [213.239.204.250])
+        by mx.google.com with ESMTPS id k65si8027084wme.209.2021.03.14.01.19.06
+        for <mrcloud.med@gmail.com>
+        (version=TLS1 cipher=AES128-SHA bits=128/128);
+        Sun, 14 Mar 2021 01:19:06 -0800 (PST)
+Received-SPF: pass (google.com: best guess record for domain of noreply@jpopsuki.eu designates 213.239.204.250 as permitted sender) client-ip=213.239.204.250;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: best guess record for domain of noreply@jpopsuki.eu designates 213.239.204.250 as permitted sender) smtp.mailfrom=noreply@jpopsuki.eu
+Received: from jpopsuki.eu (localhost [127.0.0.1])
+	by jpopsuki.eu (8.14.3/8.14.3/Debian-9.4) with ESMTP id 12E9J3Wu022507
+	for <mrcloud.med@gmail.com>; Sun, 14 Mar 2021 10:19:03 +0100
+Received: (from www-data@localhost)
+	by jpopsuki.eu (8.14.3/8.14.3/Submit) id 12E9J3vH022506;
+	Sun, 14 Mar 2021 10:19:03 +0100
+Date: Sun, 14 Mar 2021 10:19:03 +0100
+Message-Id: <202103140919.12E9J3vH022506@jpopsuki.eu>
+X-Authentication-Warning: jpopsuki.eu: www-data set sender to noreply@jpopsuki.eu using -f
+To: mrcloud.med@gmail.com
+Subject: New account confirmation at JPopsuki 2.0
+MIME-Version: 1.0
+Content-type: text/plain; charset=iso-8859-1
+From: "jpopsuki.eu" <noreply@jpopsuki.eu>
+Reply-To: noreply@jpopsuki.eu
+
+This email is to confirm the account you just created at JPopsuki 2.0
+
+You have 24 hours to click the link below and finish the registration process for the account created with the username: mrcloud
+
+http://jpopsuki.eu/register.php?confirm=abf15c694597571f04eb69a2b0de280a
+
+Thank you,
+JPopsuki 2.0 Staff
+

@@ -1,0 +1,577 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:c566:0:b029:f1:e639:b0fa with SMTP id z6csp1697795lkp;
+        Fri, 23 Apr 2021 13:13:27 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJyhXHZ8NnZgV+aQ1OhbDh58KB7lhUdcBgMk+il+k0eIOlanV0nmWvwsH5+iimSQ/3LsM7So
+X-Received: by 2002:a05:6a00:148c:b029:260:ef7c:3843 with SMTP id v12-20020a056a00148cb0290260ef7c3843mr5493473pfu.70.1619208806759;
+        Fri, 23 Apr 2021 13:13:26 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1619208806; cv=none;
+        d=google.com; s=arc-20160816;
+        b=WUd4NE5qon1KJLaarAGS7YlouG4o3vPpJE6Wzm6UjDv2ffmqEnAI/JV6uUNC/dbv+k
+         iZQ5zOJkqHMXIAlHgzqD2CLIIddILdjGoPWZijoXSuaW9/aSKun4Z5ROrmoFB/mtmekI
+         FQ6nHWEXSHp8an8NdNO9dAf75zTiMnuNUq4wF5FyRMV3ZM6v30fBXmneF7qLWKs2esnI
+         Da7F3KpZiquEBCVjC00Rn2EtzsutvvYbDM3+9egGn9MD5g4go2msH3byfESLEmH87NzJ
+         x2HtO77cWre2xWG+BM6WIjw/TaClvNkmUOOTl2/L9KsIUJAwxrLgHGlM9T0UgiF3kZnz
+         +Jfg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:subject:mime-version:errors-to:reply-to:from:to
+         :dkim-signature;
+        bh=/ACXpsudqKmi6MOHcz2vS6bD8tQkemfgKeGYDQj/TJQ=;
+        b=LaeXCIdhFFuypiu66uz8bjQWJ3Uv2yjYzxSxgzNY/x/fakQ+ZWMOoqS29C+dukGEy7
+         jRpSpCwWlylHsio535PSm6MjMBjLPILdxC7y8LrNAgu7RnBwVGkYKhWD7NeB7xBCyDhV
+         Fa5T+Qq6aA4b1lC2cyF5UyYBCf0oJD9psW0OZvFZAzLSS1dyaMZcOa9BXOSTHnLi8Kor
+         Q3Xm7442yyFdYoBL4k4RVNjHfN29NhH0ojvpXrq2yMGfktUF5mrNyz/SaTI8idPuDv7b
+         +25ZAMNRaSrr/juvDAh1spJ/6oifOiDyjGQOAj5sAVj7vq8lujcDkp1liqzEWtYdVyoz
+         41kg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@steampowered.com header.s=smtp header.b=O6RD48IF;
+       spf=pass (google.com: domain of noreply@steampowered.com designates 208.64.202.44 as permitted sender) smtp.mailfrom=noreply@steampowered.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=steampowered.com
+Return-Path: <noreply@steampowered.com>
+Received: from smtp-44.steampowered.com (smtp-44.steampowered.com. [208.64.202.44])
+        by mx.google.com with ESMTPS id j5si7918330pgb.340.2021.04.23.13.13.26
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Fri, 23 Apr 2021 13:13:26 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@steampowered.com designates 208.64.202.44 as permitted sender) client-ip=208.64.202.44;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@steampowered.com header.s=smtp header.b=O6RD48IF;
+       spf=pass (google.com: domain of noreply@steampowered.com designates 208.64.202.44 as permitted sender) smtp.mailfrom=noreply@steampowered.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=steampowered.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=steampowered.com; s=smtp; h=Date:Message-Id:Content-Type:Subject:
+	MIME-Version:Reply-To:From:To:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=/ACXpsudqKmi6MOHcz2vS6bD8tQkemfgKeGYDQj/TJQ=; b=O6RD48IFC5HwKphiAYQOOVsmm6
+	3e37zYUs6WZRwS6+Fzjr26s2VkDjKlcZ9z63X3ghvRzlb5WT+9ZofJcUN6Zft5dkDtkrxR9qqlBwi
+	2xE64lRAO4sj3ujbSf6HVwMxsZo1XKvb1rNp64nHa5NWEtrA/igNvj6ohumr0N1zLfK4=;
+Received: from [208.64.200.206] (helo=valvesoftware.com)
+	by smtp-01-tuk1.steampowered.com with smtp (Exim 4.90_1)
+	(envelope-from <noreply@steampowered.com>)
+	id 1la2B4-000BbV-F7
+	for mrcloud.med@gmail.com; Fri, 23 Apr 2021 13:13:26 -0700
+To: mrcloud.med@gmail.com
+From: Steam <noreply@steampowered.com>
+Reply-To: <noreply@steampowered.com>
+Errors-To: <noreply@steampowered.com>
+X-Steam-Message-Type: CEmailGiftDelivery
+MIME-Version: 1.0
+Subject: You've received a gift copy of the game Among Us on Steam
+Content-Type: multipart/alternative;
+ boundary="np60832a666c21e"
+Message-Id: <E1la2B4-000BbV-F7@smtp-01-tuk1.steampowered.com>
+Date: Fri, 23 Apr 2021 13:13:26 -0700
+
+This is a multi-part message in MIME format.
+--np60832a666c21e
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+
+You’ve received a gift!
+
+Your friend ✮Starsplash✮ has given you a gift subscription to the
+game<br><i>Among Us</i> on Steam.
+
+
+
+Once you've installed Steam and set up a Steam account, or if you already have
+an account, follow the link below to receive ✮Starsplash✮'s gift of Among
+Us:
+
+https://store.steampowered.com/account/ackgift/89855C7BD6F9D362?redeemer=mrcloud.med%40gmail.com
+
+Thanks, and enjoy your game!
+
+Cheers,
+The Steam Team
+
+--
+
+This notification has been sent to the email address associated with your Steam account.
+
+This email message was auto-generated. Please do not respond. If you need additional help, please visit Steam Support.
+https://help.steampowered.com
+
+© Valve Corporation
+All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+
+--
+
+View this message on the web:
+https://store.steampowered.com/email/gift?sparams=eJxtULtuwzAM_JXAW4Eita1YtjIFaRB0z9AlC23TthDJEvRIYRT991KpC3ToIoh3x-ORn5mCOHcTurBYzPZZnj1nDkFp-o_KtKAIsM70sQsz6CS5BARNqI_WGhdQg1QEr-XBJ9qaD3TYbzvzR-llSP1TCNbvry_XlwmV3f6jX009ziGGjloKXogyb5qcEztG9MGC9zdciGtEU1Wv9fHEz-LEeEkKOd9plLMKFnRr6mss6xIvAZwn3E8_dbKTQ0BcVdpP0LaRLhCJ0ug9jAl_o3SbxcTNaPZPaSOKJjU9xB0pzuZd-gl9YuQ4QyAHYs5qAX9ZZ9BONDj8HtlCdyNv2VPN8pqJ4qG7o4M7UMqJMhLFGyFyVnG2E2yoq6FlBeygLUpe15wxNuTtrupEcgzmcTXoe0e50zKuUyb2W439YUzU47xf376ApXo
+
+--np60832a666c21e
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="date=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>You've received a gift copy of the game Among Us on Steam</title>
+    <!--[if gte mso 9]>
+    <style type="text/css" media="all">
+        sup { font-size: 100% !important; }
+    </style>
+    <![endif]-->
+
+    <!--[if !mso]><!-->
+    <style type="text/css" media="screen">
+        @font-face {
+            font-family: 'Motiva Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Motiva Sans'), url('https://store.cloudflare.steamstatic.com/public/shared/fonts/email/MotivaSans-Light.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'Motiva Sans';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Motiva Sans'), url('https://store.cloudflare.steamstatic.com//public/shared/fonts/email/MotivaSans-Regular.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'Motiva Sans';
+            font-style: normal;
+            font-weight: bold;
+            src: local('Motiva Sans'), url('https://store.cloudflare.steamstatic.com//public/shared/fonts/email/MotivaSans-Bold.woff') format('woff');
+        }
+    </style>
+    <!--<![endif]-->
+
+    <style type="text/css" media="screen">
+        body { padding:0 !important; margin:0 auto !important; display:block !important; min-width:100% !important; width:100% !important; background:#ffffff; -webkit-text-size-adjust:none }
+        a { color:#3999ec; text-decoration:underline }
+        body a { color:#ffffff; text-decoration:underline }
+        img { margin: 0 !important; -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
+
+        /* for recepits */
+            table { mso-table-lspace:0pt; mso-table-rspace:0pt; }
+            img, a img{ border:0; outline:none; text-decoration:none; }
+            #outlook a { padding:0; }
+            .ReadMsgBody { width:100%; }
+            .ExternalClass { width:100%; }
+            div,p,a,li,td,blockquote { mso-line-height-rule:exactly; }
+            a[href^=tel],a[href^=sms] { color:inherit; text-decoration:none; }
+            .ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalClass div, .ExternalClass span, .ExternalClass font { line-height:100%; }
+        /* END for recepits */
+
+        a[x-apple-data-detectors] { color: inherit !important; text-decoration: inherit !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
+
+        .btn-18 a { display: block; padding: 13px 35px; text-decoration: none; }
+
+        .l-white a { color: #ffffff; }
+        .l-black a { color: #000001; }
+        .l-grey1 a { color: #dbdee2; }
+        .l-grey2 a { color: #a1a2a4; }
+        .l-grey3 a { color: #dadcdd; }
+        .l-grey4 a { color: #f1f1f1; }
+        .l-grey5 a { color: #dddedf; }
+        .l-grey6 a { color: #bfbfbf; }
+        .l-grey7 a { color: #dcdddd; }
+        .l-grey8 a { color: #8e96a4; }
+        .l-green a { color: #a4d007; }
+        .l-blue a { color: #6a7c96; }
+        .l-blue1 a { color: #3999ec; }
+        .l-blue2 a { color: #9eb8cc; }
+
+
+        /* Mobile styles */
+        @media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
+            .mpy-35 { padding-top: 35px !important; padding-bottom: 35px !important; }
+
+            .mpx-15 { padding-left: 15px !important; padding-right: 15px !important; }
+
+            .mpx-20 { padding-left: 20px !important; padding-right: 20px !important; }
+
+            .mpb-30 { padding-bottom: 30px !important; }
+
+            .mpb-10 { padding-bottom: 10px !important; }
+
+            .mpb-15 { padding-bottom: 15px !important; }
+
+            .mpb-20 { padding-bottom: 20px !important; }
+
+            .mpb-35 { padding-bottom: 35px !important; }
+
+            .mpb-40 { padding-bottom: 40px !important; }
+
+            .mpb-50 { padding-bottom: 50px !important; }
+
+            .mpb-60 { padding-bottom: 60px !important; }
+
+            .mpt-30 { padding-top: 30px !important; }
+
+            .mpt-40 { padding-top: 40px !important; }
+
+            .mpy-40 { padding-top: 40px !important; padding-bottom: 40px !important; }
+
+            .mpt-0 { padding-top: 0px !important; }
+
+            .mpr-0 { padding-right: 0px !important; }
+
+            .mfz-14 { font-size: 14px !important; }
+
+            .mfz-28 { font-size: 28px !important; }
+
+            .mfz-16 { font-size: 16px !important; }
+
+            .mfz-24 { font-size: 24px !important; }
+
+            .mlh-18 { line-height: 18px !important; }
+
+            u + body .gwfw { width:100% !important; width:100vw !important; }
+
+            .td,
+            .m-shell { width: 100% !important; min-width: 100% !important; }
+
+            .mt-left { text-align: left !important; }
+            .mt-center { text-align: center !important; }
+            .mt-right { text-align: right !important; }
+
+            .m-left { text-align: left !important; }
+            .me-left { margin-right: auto !important; }
+            .me-center { margin: 0 auto !important; }
+            .me-right { margin-left: auto !important; }
+
+            .mh-auto { height: auto !important; }
+            .mw-auto { width: auto !important; }
+
+            .fluid-img img { width: 100% !important; max-width: 100% !important; height: auto !important; }
+
+            .column,
+            .column-top,
+            .column-dir,
+            .column-dir-top { float: left !important; width: 100% !important; display: block !important; }
+
+            .kmMobileStretch { float: left !important; width: 100% !important; display: block !important; padding-left: 0 !important; padding-right: 0 !important; }
+
+            .m-hide { display: none !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; min-height: 0 !important; }
+            .m-block { display: block !important; }
+
+            .mw-15 { width: 15px !important; }
+
+            .mw-2p { width: 2% !important; }
+            .mw-32p { width: 32% !important; }
+            .mw-49p { width: 49% !important; }
+            .mw-50p { width: 50% !important; }
+            .mw-100p { width: 100% !important; }
+
+            .mbgs-200p { background-size: 200% auto !important; }
+        }
+    </style>
+</head>
+
+
+<body class="body" style="padding:0 !important; margin:0 auto !important; display:block !important; min-width:100% !important; width:100% !important; background:#ffffff; -webkit-text-size-adjust:none;">
+<center>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0"style="margin: 0; padding: 0; width: 100%; height: 100%;" bgcolor="#ffffff" class="gwfw">
+        <tr>
+            <td style="margin: 0; padding: 0; width: 100%; height: 100%;" align="center" valign="top">
+                <table width="775" border="0" cellspacing="0" cellpadding="0"class="m-shell">
+                    <tr>
+                        <td class="td" style="width:775px; min-width:775px; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <!-- Main -->
+                                <tr>
+                                    <td class="p-80 mpy-35 mpx-15" bgcolor="#212429" style="padding: 80px;">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                                            <!-- Logo -->
+                                            <tr>
+                                                <td class="img pb-45" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 45px;">
+                                                    <a href="https://store.steampowered.com/" target="_blank">
+                                                        <img src="https://store.cloudflare.steamstatic.com/public/shared/images/email/logo.png" width="615" height="88" border="0" alt="Steam" />
+                                                    </a>
+
+                                                </td>
+                                            </tr>
+                                            <!-- END Logo -->
+
+                                            <!-- All Content Exists within this table column -->
+                                            <tr>
+                                                <td>
+
+    <!-- Welcome  -->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="title-36 pb-30 c-grey6 fw-b" style="font-size:36px; line-height:42px; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; padding-bottom: 30px; color:#bfbfbf; font-weight:bold;">You’ve received a gift!</td>
+				</tr>
+			</table>
+			    <!-- End Welcome -->
+
+    <!-- Subtitle  -->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="text-18 c-white pb-20" style="font-size:18px; line-height:25px; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; color:#dbdbdb; padding-bottom: 20px;">Your friend ✮Starsplash✮ has given you a gift subscription to the game<br><i>Among Us</i> on Steam.</td>
+				</tr>
+			</table>
+			    <!-- End Subtitle -->
+
+
+<!-- Gift Contents -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+    <td class="pb-56" style="padding-bottom: 56px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="fluid-img pb-28" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 28px;">
+                    <a href="https://steamcommunity.com/my/inventory/#pending_gifts" target="_blank"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/945360/capsule_616x353_alt_assets_1.jpg?t=1617213983" width="616" height="353" border="0" alt="Among Us" /></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="img" width="3" bgcolor="#727a83" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
+                            <td class="img" width="34" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
+                            <td>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="text-18 c-grey4 pb-30" style="font-size:18px; line-height:25px; font-family:'Motiva Sans', Arial, sans-serif; text-align:left; color:#f1f1f1; padding-bottom: 30px;">
+                                            Dear mshabbureau,<br /><br />
+                                            Here you go:)                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-18 c-white fw-b pb-14" style="font-size:18px; line-height:25px; font-family:'Motiva Sans', Arial, sans-serif; text-align:left; color:#ffffff; font-weight:bold; padding-bottom: 14px;">Best Wishes,</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                                                                        <td class="img" width="45" style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                        <img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/68/689903563493f75fb31a4ab126776333f0b45c90.jpg" width="32" height="32" border="0" alt="" />
+                                                    </td>
+                                                                                                        <td class="text-18 c-white fw-b" style="font-size:18px; line-height:25px; font-family:'Motiva Sans', Arial, sans-serif; text-align:left; color:#ffffff; font-weight:bold;">
+                                                        FlyasS                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                                    </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+</table>
+<!-- END Gift Contents -->
+
+
+
+<!-- Big Button -->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="pb-20" style="padding-bottom: 20px;">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0"bgcolor="#17191c">
+							<tr>
+								<td class="py-35 px-56 mpx-20" align="center" style="padding-top: 35px; padding-bottom: 35px; padding-left: 56px; padding-right: 56px;">
+									<table width="400" border="0" cellspacing="0" cellpadding="0"class="mw-auto">
+										<tr>
+											<td class="btn-18 c-grey4 l-grey4 tt-u" bgcolor="#235ecf" style="font-size:18px; line-height:22px; mso-padding-alt:14px 35px; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:center; border-radius:5px; letter-spacing:1px; background:linear-gradient(90deg, #3A9BED 0%, #235ECF 100%); color:#f1f1f1; text-transform:uppercase;">
+												<a href="https://store.steampowered.com/account/ackgift/89855C7BD6F9D362?client=1&redeemer=mrcloud.med%40gmail.com" target="_blank" class="link c-grey4" style="display: block; padding: 13px 35px; text-decoration:none; color:#f1f1f1;">
+													<span class="link c-grey4" style="text-decoration:none; color:#f1f1f1;">Accept Gift&nbsp;&nbsp;&nbsp;</span>
+												</a>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!-- End Big Button -->
+
+<!-- Text -->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="text-18 c-grey4 pb-30" style="font-size:18px; line-height:25px; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; color:#dbdbdb; padding-bottom: 30px;">    If the above button doesn’t work for you, you may use this link to receive your gift:    <br/>
+    <a href="https://store.steampowered.com/account/ackgift/89855C7BD6F9D362?redeemer=mrcloud.med%40gmail.com" target="_blank" class="link-u c-white" style="text-decoration:underline; color:#ffffff;">
+        <span class="link-u c-white" style="text-decoration:underline; color:#ffffff;">
+            https://store.steampowered.com/account/ackgift/89855C7BD6F9D362?redeemer=mrcloud.med%40gmail.com        </span>
+    </a>
+    </td>
+				</tr>
+			</table>
+			<!-- End Text -->
+
+
+                                                                                                <!-- Signature -->
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td class="pt-30" style="padding-top: 30px;">
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                                                    <td class="img" width="3" bgcolor="#3a9aed" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
+                                                                    <td class="img" width="37" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
+                                                                    <td>
+                                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                            <tr>
+                                                                                                                                                                    <td class="text-16 py-20 c-grey4 fallback-font" style="font-size:16px; line-height:22px; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; padding-top: 20px; padding-bottom: 20px; color:#f1f1f1;">
+                                                                                        Cheers,<br />
+The Steam Team                                                                                    </td>
+                                                                                                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- END Signature -->
+                                                
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- END Main -->
+
+                                <!-- Footer -->
+                                <tr>
+                                    <td class="py-60 px-90 mpy-40 mpx-15" style="padding-top: 60px; padding-bottom: 60px; padding-left: 90px; padding-right: 90px;">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                                                                                        <tr>
+                                                <td class="text-18 pb-60 mpb-40 fallback-font" style="font-size:18px; line-height:25px; color:#000001; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; padding-bottom: 60px;">
+			                                        This notification has been sent to the email address associated with your Steam account.                                                    <br /><br />
+			                                        This email message was auto-generated. Please do not respond. If you need additional help, please visit Steam Support.                                                </td>
+                                            </tr>
+                                            
+                                                                                        <!-- A -->
+                                                                                        <tr>
+                                            <td class="pb-60" style="padding-bottom: 60px;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <th class="column" width="270" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                                                    <td class="text-18 mpb-40 fallback-font" style="font-size:18px; line-height:25px; color:#000001; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left;">
+                                                                        <a href="https://help.steampowered.com" target="_blank" class="link-u c-black" style="text-decoration:underline; color:#000001;">
+                                                                            <span class="link-u c-black" style="text-decoration:underline; color:#000001;">https://help.steampowered.com</span>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </th>
+                                                                                                            </tr>
+                                                </table>
+                                            </td>
+                                            </tr>
+                                            
+
+                                            <!-- B -->
+                                                                                            <tr>
+                                                    <td class="pb-50" style="padding-bottom: 50px;">
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <th class="column" width="270" valign="top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td class="img mpt-0" style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                                                <a href="https://store.steampowered.com/" target="_blank"><img src="https://store.cloudflare.steamstatic.com/public/shared/images/email/logo_footer.png" width="165" height="50" border="0" alt="" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </th>
+                                                                <th class="column-top mpb-40" width="15" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                                                <th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                                                                                    <tr>
+                                                                                <td class="text-12 fallback-font" style="font-size:12px; line-height:18px; color:#000001; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left;">
+                                                                                                                                                                            To download the Steam desktop client and learn more about Steam, please visit About Steam.                                                                                        <br /><br />
+                                                                                        <a href="https://store.steampowered.com/about/" target="_blank" class="link-u c-black" style="text-decoration:underline; color:#000001;">
+                                                                                            <span class="link-u c-black" style="text-decoration:underline; color:#000001;"><strong>About Steam</strong>
+                                                                                            </span>
+                                                                                        </a>
+                                                                                                                                                                    </td>
+                                                                            </tr>
+                                                                                                                                            </table>
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                            
+
+                                            <!-- C -->
+                                            <tr>
+                                                <td>
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <th class="column-top" valign="top" width="270" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                                            <a href="https://www.valvesoftware.com/en/" target="_blank">
+                                                                                                                                                                <img src="https://store.cloudflare.steamstatic.com/public/shared/images/email/logo_valve.jpg" width="165" height="48" border="0" alt="" />
+                                                                                                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                            <th class="column-top mpb-40" valign="top" width="15" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                                            <th class="column-top" valign="top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td class="text-12 pb-30 fallback-font" style="font-size:12px; line-height:18px; color:#000001; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; padding-bottom: 30px;">
+	                                                                                                                                                        <strong>© Valve Corporation</strong>
+                                                                                <br />
+                                                                                <strong>PO Box 1688 Bellevue, WA 98009</strong>
+                                                                                <br /><br />
+		                                                                        All rights reserved. All trademarks are property of their respective owners in the US and other countries.	                                                                                                                                                </td>
+                                                                    </tr>
+                                                                    
+                                                                </table>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            <!-- END Footer -->
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</center>
+
+    <center style="font-family:'Motiva Sans', Helvetica, Arial, sans-serif; color: #000000; font-size: 11px; margin-bottom: 4px;">
+        Trouble viewing this message?        <a href="https://store.steampowered.com/email/gift?sparams=eJxtULtuwzAM_JXAW4Eita1YtjIFaRB0z9AlC23TthDJEvRIYRT991KpC3ToIoh3x-ORn5mCOHcTurBYzPZZnj1nDkFp-o_KtKAIsM70sQsz6CS5BARNqI_WGhdQg1QEr-XBJ9qaD3TYbzvzR-llSP1TCNbvry_XlwmV3f6jX009ziGGjloKXogyb5qcEztG9MGC9zdciGtEU1Wv9fHEz-LEeEkKOd9plLMKFnRr6mss6xIvAZwn3E8_dbKTQ0BcVdpP0LaRLhCJ0ug9jAl_o3SbxcTNaPZPaSOKJjU9xB0pzuZd-gl9YuQ4QyAHYs5qAX9ZZ9BONDj8HtlCdyNv2VPN8pqJ4qG7o4M7UMqJMhLFGyFyVnG2E2yoq6FlBeygLUpe15wxNuTtrupEcgzmcTXoe0e50zKuUyb2W439YUzU47xf376ApXo"
+            style="font-family:'Motiva Sans', Helvetica, Arial, sans-serif; color: #000000; font-size: 11px; margin-bottom: 4px;">
+            Click here.        </a>
+    </center>
+
+</body>
+</html>
+
+
+--np60832a666c21e--

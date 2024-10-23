@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Detail</title>
+</head>
+<body>
+    <h2>{{ email.subject }}</h2>
+    <p><strong>From:</strong> {{ email.sender }}</p>
+    <p><strong>Date:</strong> {{ email.date_received }}</p>
+    <hr>
+    <pre>{{ body }}</pre>
+    <p><a href="{% url 'email_list' %}">Back to Email List</a></p>
+</body>
+</html>

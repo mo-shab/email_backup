@@ -1,0 +1,100 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:22e6:b029:f9:2098:e3d8 with SMTP id b6csp139827lkv;
+        Thu, 3 Jun 2021 03:02:09 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJypLg7IyDiGsUg0XyoUbL8wW7oA4mGz28ZnvE/vXhomyV8EieIgbHI6jCBHgmWF9H9dWXEI
+X-Received: by 2002:a4a:d754:: with SMTP id h20mr80017oot.40.1622714528976;
+        Thu, 03 Jun 2021 03:02:08 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1622714528; cv=none;
+        d=google.com; s=arc-20160816;
+        b=BNs4MNDW2oD28yu3TJhn2csnz1fAR3M2Wk824fYGobZUNQjhJB/p5BBJSv/Ih88yn3
+         9hG1yyUYCw41O+dU89Ep/ZkJbtap5ux90Wl0iIx3idcktf1RSmn8CQnH4JzRtWY9Djhr
+         UOhl1VvWEpzqAgl4GriI+lb2nBpbyEFoKgkw2/QiJV9kidgK1DUU2rRPWe61mQArLzt+
+         8iLEzoxLHylHIUcrSHt4PXN88XuCCwYKg4uFGK5rgLiRiIRj9Kt+zbtmwywyt/9d6eOS
+         qi6kUvcHFtgZOmsKh7YRUHsdosw96XSJigrcZA/PnBEYCFTEQolnWBxap033HaY9Wb1d
+         oNkQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:from:to:reply-to:message-id:sender:date
+         :dkim-signature:dkim-signature;
+        bh=dclTpKemNzXZBxZ4S+kao7BSO9y9ed+V3O7OmjCXUyk=;
+        b=chwYePH7o6Wf+x9wOEi96JvjUA9IPhfnVO1pp8IEuyYvxebcVoEBXvnZzw17f5quMF
+         a6oMRYQhGJXrbe9yMRN+MfmBscCopSKeqp6tBFpwZKyLVc0xmRTQSNjatjAHTbfkSUdG
+         LdOY6kiUGKxCyMWur0Ullsq5k59kVzLSLLx/3tSj82mnmfs1HaRLnX5BhA+IkKZxkh1Z
+         V9OJId6rQg+YFeyj1P+2MLp7VTFkic68QRkHQnjZZSNqtvyPemxdlC/Y1S/zy+hKommI
+         aC8vlNmi5ryWd8OgxY3ImmWuUZM2iVW5Dhl84W/UuPhBOv9uc7Xwe6HbKmjbG4pMCPal
+         U5Rw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.gazellegames.net header.s=smtp header.b=TTH3UNVA;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=lP1ZghHP;
+       spf=pass (google.com: domain of bounce+09c978.f106b-mrcloud.med=gmail.com@mail.gazellegames.net designates 209.61.151.230 as permitted sender) smtp.mailfrom="bounce+09c978.f106b-mrcloud.med=gmail.com@mail.gazellegames.net"
+Return-Path: <bounce+09c978.f106b-mrcloud.med=gmail.com@mail.gazellegames.net>
+Received: from rs230.mailgun.us (rs230.mailgun.us. [209.61.151.230])
+        by mx.google.com with UTF8SMTPS id e2si2010018otq.280.2021.06.03.03.02.06
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 03 Jun 2021 03:02:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+09c978.f106b-mrcloud.med=gmail.com@mail.gazellegames.net designates 209.61.151.230 as permitted sender) client-ip=209.61.151.230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.gazellegames.net header.s=smtp header.b=TTH3UNVA;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=lP1ZghHP;
+       spf=pass (google.com: domain of bounce+09c978.f106b-mrcloud.med=gmail.com@mail.gazellegames.net designates 209.61.151.230 as permitted sender) smtp.mailfrom="bounce+09c978.f106b-mrcloud.med=gmail.com@mail.gazellegames.net"
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mail.gazellegames.net;
+ q=dns/txt; s=smtp; t=1622714528; h=Content-Type: Mime-Version: Subject:
+ From: To: Reply-To: Message-Id: Sender: Date: X-Feedback-Id;
+ bh=dclTpKemNzXZBxZ4S+kao7BSO9y9ed+V3O7OmjCXUyk=; b=TTH3UNVAer3kpiVoAAfHUd17Ph0nSVTEqZPKmb0qiS1r56ybeonuKVMu1z+vwVPCDP8iC/gC
+ Db7n/stdaYKE1InjkEwoEudCHJFohgb6sEykIaTBs59WX28qYla21AXaOPJqmI4HiO6wI8ke
+ mGzNegvXgfAKvOJsXKRvpCbttJw=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg;
+ t=1622714528; h=Content-Type: Mime-Version: Subject: From: To:
+ Reply-To: Message-Id: Sender: Date: X-Feedback-Id;
+ bh=dclTpKemNzXZBxZ4S+kao7BSO9y9ed+V3O7OmjCXUyk=; b=lP1ZghHPZ41YX4Co5uZ3j3+Fp0m9HIv6mxyEXsBcaivdHTTxjzP1Ny+i8gquOG35gtdoI1qe
+ Etpsnetor91E+ERroE2U7mZU40q6FaqNYtXXaJOUJxTkZ5TpT4wm4yRpPP+BvK6qGAYuWzSR
+ ykKn3WFIFWawznCfTPjwWai+Lpk=
+X-Feedback-Id: 56dcd1a38032673e4e55cf7f:mailgun
+X-Mailgun-Sending-Ip: 209.61.151.230
+X-Mailgun-Sid: WyJiYTM3OSIsICJtcmNsb3VkLm1lZEBnbWFpbC5jb20iLCAiZjEwNmIiXQ==
+Received: by luna.mailgun.net with HTTP; Thu, 03 Jun 2021 10:01:58 +0000
+Date: Thu, 03 Jun 2021 10:01:58 +0000
+Sender: noreply=gazellegames.net@mail.gazellegames.net
+Message-Id: <20210603100158.1.6F379CB99F1F395D@mail.gazellegames.net>
+Reply-To: noreply@gazellegames.net
+To: mrcloud.med@gmail.com
+From: noreply@gazellegames.net
+Subject: You have been invited to GazelleGames.net
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary="0f5eafdcd3c94d69a852c43426153e3c"
+
+--0f5eafdcd3c94d69a852c43426153e3c
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="ascii"
+Mime-Version: 1.0
+
+The user Mcsticken has invited you to join GazelleGames.net, and has specified this address (mrcloud.med@gmail.com) as your e-mail address. If you do not know this person, please ignore this email, and do not reply.
+
+Please note that selling invites, trading invites, and giving invites away publicly (eg. on a forum) is strictly forbidden. If you have received your invite as a result of any of these things, do not bother signing up - you will be banned and lose your chances of ever signing up legitimately. Additionally, you must only sign up from your home internet connection, do not try to sign up using a VPN or you will be banned. If you wish to use a VPN, read our rules after signing up to see how you can apply.
+
+To confirm your invite, click on the following link:
+
+https://gazellegames.net/register.php?invite=5e0b5ea70472d3bc286b1466bfc50900
+
+After you register, you will be able to use your account. Please take note that if you do not use this invite in the next 3 days, it will expire. We urge you to read the site rules and the wiki immediately after you join. 
+
+Thank you,
+GazelleGames.net Staff
+--0f5eafdcd3c94d69a852c43426153e3c
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset="ascii"
+Mime-Version: 1.0
+
+The user Mcsticken has invited you to join GazelleGames.net, and has specified this address (mrcloud.med@gmail.com) as your e-mail address. If you do not know this person, please ignore this email, and do not reply.<br />
+<br />
+Please note that selling invites, trading invites, and giving invites away publicly (eg. on a forum) is strictly forbidden. If you have received your invite as a result of any of these things, do not bother signing up - you will be banned and lose your chances of ever signing up legitimately. Additionally, you must only sign up from your home internet connection, do not try to sign up using a VPN or you will be banned. If you wish to use a VPN, read our rules after signing up to see how you can apply.<br />
+<br />
+To confirm your invite, click on the following link:<br />
+<br />
+https://gazellegames.net/register.php?invite=5e0b5ea70472d3bc286b1466bfc50900<br />
+<br />
+After you register, you will be able to use your account. Please take note that if you do not use this invite in the next 3 days, it will expire. We urge you to read the site rules and the wiki immediately after you join. <br />
+<br />
+Thank you,<br />
+GazelleGames.net Staff
+--0f5eafdcd3c94d69a852c43426153e3c--

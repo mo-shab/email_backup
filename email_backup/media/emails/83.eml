@@ -1,0 +1,57 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp3287750lkb;
+        Sun, 11 Apr 2021 17:46:17 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJyU5c9raCzNoSPz6UNw5atYn+3A3OoXxDeayEje3bKrH8MMCZiPQcmYuNZE7fE/LtJGJO8i
+X-Received: by 2002:a25:824c:: with SMTP id d12mr23063635ybn.328.1618188377619;
+        Sun, 11 Apr 2021 17:46:17 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1618188377; cv=none;
+        d=google.com; s=arc-20160816;
+        b=mIlOybhLrPGKKxqtwEh531AX37oUc8XK9LEs0RNmGTgTGsIt2GzXG2/Dqq607oVH8Z
+         XXi+J2XDtzDBttMFkQObyjeGuVGsfw01IRxRlo9+gPwldg9BOxlm6gdaOivRpaekcduY
+         jPdmebmFz0rRodOXtW5naBOQndW8sz3ClTCXHsbhy9riUUROhNC4WZh7sONV76WiDMJ/
+         N3N+DYzd1X308cJM6iu34b3hYQmvW6JxRaeNjhdgimC/d+fWWDHz0/O6KvJV3RsA41mY
+         5LPtEY28eHZRAm5aaUzP5NFvrQsebRs0fQfvgBlAgXCaxpNC56UfFhXsk5loznnjfYnH
+         KmMw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=from:subject:to:message-id:date;
+        bh=Z0FlakaZIF+ixyYvkwgCjibxKeu1KF6B4ZUcj4J/Gg0=;
+        b=ZtiIlpQgncAZUV3C7i45Jm0b6xC/0p8QSdruUvr4gIc4kkXExTPn5pbLaFlhdKmnrW
+         JIaQLFh+e5QHpM5x/cxAPBVJEztAXJW+Zyve/XcZMxjoqvtWQNGw62T8yZvV8V7yaEed
+         ommsrsNadKqEET6P4K6E3AWVNhcW9KjXYzMXB/SVbvn/c6+ZNPFx/CxZOl03Cw2A15Ma
+         2t58rf1t2irvER6rdtZLXerFBsJ2glyOaTuycCcgdkQ1QAiLktaY+s2SrhkFPGIA+wcO
+         TV24r2Nzc7+7EJe6bI4fP8+vBqH9Z7kqAZa9Q6aibKI1vsBH2laOeatrvWBfPU2mGKAM
+         89RQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of anonymous@r3vuk.wtf designates 198.27.80.177 as permitted sender) smtp.mailfrom=anonymous@r3vuk.wtf;
+       dmarc=fail (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <anonymous@r3vuk.wtf>
+Received: from r3vuk.wtf (ns523389.ip-198-27-80.net. [198.27.80.177])
+        by mx.google.com with SMTP id 8si9776924ybo.475.2021.04.11.17.46.16
+        for <mrcloud.med@gmail.com>;
+        Sun, 11 Apr 2021 17:46:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of anonymous@r3vuk.wtf designates 198.27.80.177 as permitted sender) client-ip=198.27.80.177;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of anonymous@r3vuk.wtf designates 198.27.80.177 as permitted sender) smtp.mailfrom=anonymous@r3vuk.wtf;
+       dmarc=fail (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Received: (qmail 7942 invoked by uid 33); 12 Apr 2021 00:54:18 -0000
+Date: 12 Apr 2021 00:54:18 -0000
+Message-ID: <20210412005418.7941.qmail@r3vuk.wtf>
+To: mrcloud.med@gmail.com
+Subject: R3V WTF! user registration confirmation
+X-PHP-Originating-Script: 0:takesignup.php
+From: r3vuksite@gmail.com
+
+
+You have requested a new user account on R3V WTF! and you have
+specified this address (mrcloud.med@gmail.com) as user contact.
+
+If you did not do this, please ignore this email. The person who entered your
+email address had the IP address 41.250.6.63. Please do not reply.
+
+To confirm your user registration, you have to follow this link:
+
+https://r3vuk.wtf/confirm.php?id=6617&secret=
+
+After you do this, you will be able to use your new account. If you fail to
+do this, your account will be deleted within a few days. We urge you to read
+the RULES and FAQ before you start using R3V WTF!.

@@ -1,0 +1,228 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp169128lkb;
+        Tue, 23 Mar 2021 18:47:16 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJx8+BBAFTpssUR+iojgDBkMXQGbobTWBzOPLOF43Ta8bUmR8oCTy4z7HFbRmQQZz1wore/9
+X-Received: by 2002:a2e:9a0a:: with SMTP id o10mr435055lji.243.1616550436518;
+        Tue, 23 Mar 2021 18:47:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1616550436; cv=none;
+        d=google.com; s=arc-20160816;
+        b=eL4V6k99xDgHHyE4P5Stnzc8TCP6QcTZg3giw6quNDxdYQarxkQnimCZy/8S6Nobiy
+         nPqH6zRBHI/rpXd89MwFP3+LyZsvNQGRaiE+XX/Xo4d3n8TUKjytEL9rU1xOGyrbonVu
+         Q6VdaJn/P6A6CJ7jwEgk62ugAcEs60JOiKELqj8H0T+lce0EHqs+WxtdXWEsEVz+P+04
+         yJxROVNN0av8gb2A+T2ykkQDmYRnpLio/ME1Uge0ZL6fLxmk5QyEhZrY19oLcAcM4Y3Z
+         YI++tmnOrs3pLTB1QBQOZr/fhfApgy3TYF7YlUkU68SLLIuI/lAh0eCLsTTiIyrJhZsc
+         +6vA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:to:from:subject:date:message-id;
+        bh=MJ69dTssZu9ZcaI4OEPK9t0ni2DfCl9/ztZAX6fqpRQ=;
+        b=hC4cleIUfPC8XVLLWKBA2ZX3TnY4lStZIlOLMvb/XTFdcj3KeSUb+QRvINhyQFVzRG
+         Vx17AQfP31QpQuc4MkXUUC7nztRz0PGgtLhypIOlT6xwwYWhlJtK6B0dO316kJvbswO2
+         0NU2mbrSvH+vIQgueFJbA+4gcRO7HF+Q62P8Jx6TWATbuXg8YjczcKBuB+XCAyZMROaL
+         DMtPIGp1hGy6LgNHduq0J5fkRw6ujtmfpqacNwG4m6EDlKGaKLzpfIDTvNP4/YZ2STvx
+         Y82oVe55/c+mGxC7j2++mJzdGUjIgfv3rZQb33UuM92ZZUKBi4pVKW7GgQ3Fm0fEMAMC
+         MTJw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of noreply@concertos.live designates 77.73.67.241 as permitted sender) smtp.mailfrom=noreply@concertos.live
+Return-Path: <noreply@concertos.live>
+Received: from concertos.live (concertos.live. [77.73.67.241])
+        by mx.google.com with ESMTPS id d7si680855ljj.338.2021.03.23.18.47.16
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 23 Mar 2021 18:47:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@concertos.live designates 77.73.67.241 as permitted sender) client-ip=77.73.67.241;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of noreply@concertos.live designates 77.73.67.241 as permitted sender) smtp.mailfrom=noreply@concertos.live
+Received: from concertos.live (localhost [127.0.0.1])
+	by concertos.live (Postfix) with ESMTP id 2FE69288
+	for <mrcloud.med@gmail.com>; Wed, 24 Mar 2021 01:47:16 +0000 (UTC)
+Message-ID: <81d31451369d0dbca8f613243c132f51@concertos.live>
+Date: Wed, 24 Mar 2021 01:47:16 +0000
+Subject: Invite Received Concertos
+From: Concertos <noreply@concertos.live>
+To: mrcloud.med@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1616550436_3a1bd5f171015dc7c54bf1858a379359_=_"
+
+
+--_=_swift_1616550436_3a1bd5f171015dc7c54bf1858a379359_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+[Concertos](https://concertos.live)
+
+# Invitation to Concertos !
+
+*=
+*Message:** You have been invited to Concertos
+
+Sign up now: https://co=
+ncertos.live/register/6P9zWNAX9a_jb7aDfDHfLqxN2e1d2moq6WMjiUFyTf4
+
+=
+=C2=A9 2021 Concertos. All rights reserved.
+
+
+--_=_swift_1616550436_3a1bd5f171015dc7c54bf1858a379359_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.=
+w3.org/1999/xhtml">
+<head>
+<meta name=3D"viewport" content=3D"width=3Dd=
+evice-width, initial-scale=3D1.0">
+<meta http-equiv=3D"Content-Type" cont=
+ent=3D"text/html; charset=3DUTF-8">
+</head>
+<body style=3D"font-family:=
+ Avenir, Helvetica, sans-serif; box-sizing: border-box; background-color: #=
+F2F4F6; color: #74787E; height: 100%; line-height: 1.4; margin: 0; width: 1=
+00% !important; -webkit-text-size-adjust: none;">
+    <style>
+        @=
+media  only screen and (max-width: 600px) {
+            .inner-body {
+ =
+               width: 100% !important;
+            }
+
+            .fo=
+oter {
+                width: 100% !important;
+            }
+        =
+}
+
+        @media  only screen and (max-width: 500px) {
+            .=
+button {
+                width: 100% !important;
+            }
+      =
+  }
+    </style>
+<table class=3D"wrapper" width=3D"100%" cellpadding=3D=
+"0" cellspacing=3D"0" style=3D"font-family: Avenir, Helvetica, sans-serif; =
+box-sizing: border-box; background-color: #f5f8fa; margin: 0; padding: 0; w=
+idth: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premaile=
+r-width: 100%;"><tr>
+<td align=3D"center" style=3D"font-family: Avenir, H=
+elvetica, sans-serif; box-sizing: border-box;">
+                <table cl=
+ass=3D"content" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D=
+"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin=
+: 0; padding: 0; width: 100%; -premailer-cellpadding: 0; -premailer-cellspa=
+cing: 0; -premailer-width: 100%;">
+<tr>
+<td class=3D"header" style=3D"f=
+ont-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding:=
+ 25px 0; text-align: center;">
+        <a href=3D"https://concertos.live"=
+ style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-bo=
+x; color: #bbbfc3; font-size: 19px; font-weight: bold; text-decoration: non=
+e; text-shadow: 0 1px 0 white;">
+            Concertos
+        </a>
+ =
+   </td>
+</tr>
+<!-- Email Body --><tr>
+<td class=3D"body" width=3D"10=
+0%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-family: Avenir, Helve=
+tica, sans-serif; box-sizing: border-box; background-color: #FFFFFF; border=
+-bottom: 1px solid #EDEFF2; border-top: 1px solid #EDEFF2; margin: 0; paddi=
+ng: 0; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -=
+premailer-width: 100%;">
+                            <table class=3D"inne=
+r-body" align=3D"center" width=3D"570" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box=
+; background-color: #FFFFFF; margin: 0 auto; padding: 0; width: 570px; -pre=
+mailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px;"=
+>
+<!-- Body content --><tr>
+<td class=3D"content-cell" style=3D"font-fa=
+mily: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;=
+">
+                                        <h1 style=3D"font-family: Aven=
+ir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-siz=
+e: 19px; font-weight: bold; margin-top: 0; text-align: left;">Invitation to=
+ Concertos !</h1>
+<p style=3D"font-family: Avenir, Helvetica, sans-serif;=
+ box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5e=
+m; margin-top: 0; text-align: left;"><strong style=3D"font-family: Avenir, =
+Helvetica, sans-serif; box-sizing: border-box;">Message:</strong> You have =
+been invited to Concertos</p>
+<table class=3D"action" align=3D"center" wi=
+dth=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-family: Aven=
+ir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; paddi=
+ng: 0; text-align: center; width: 100%; -premailer-cellpadding: 0; -premail=
+er-cellspacing: 0; -premailer-width: 100%;"><tr>
+<td align=3D"center" sty=
+le=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">=
+
+            <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing:=
+ border-box;"><tr>
+<td align=3D"center" style=3D"font-family: Avenir, Hel=
+vetica, sans-serif; box-sizing: border-box;">
+                        <ta=
+ble border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-family: =
+Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr>
+<td style=3D=
+"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+  =
+                                  <a href=3D"https://concertos.live/registe=
+r/6P9zWNAX9a_jb7aDfDHfLqxN2e1d2moq6WMjiUFyTf4" class=3D"button button-blue"=
+ target=3D"_blank" style=3D"font-family: Avenir, Helvetica, sans-serif; box=
+-sizing: border-box; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0=
+, 0.16); color: #FFF; display: inline-block; text-decoration: none; -webkit=
+-text-size-adjust: none; background-color: #3097D1; border-top: 10px solid =
+#3097D1; border-right: 18px solid #3097D1; border-bottom: 10px solid #3097D=
+1; border-left: 18px solid #3097D1;">Sign up now</a>
+                    =
+            </td>
+                            </tr></table>
+</td>
+   =
+             </tr></table>
+</td>
+    </tr></table>
+</td>
+          =
+                      </tr>
+</table>
+</td>
+                    </tr>=
+
+<tr>
+<td style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizi=
+ng: border-box;">
+        <table class=3D"footer" align=3D"center" width=
+=3D"570" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-family: Avenir, =
+Helvetica, sans-serif; box-sizing: border-box; margin: 0 auto; padding: 0; =
+text-align: center; width: 570px; -premailer-cellpadding: 0; -premailer-cel=
+lspacing: 0; -premailer-width: 570px;"><tr>
+<td class=3D"content-cell" al=
+ign=3D"center" style=3D"font-family: Avenir, Helvetica, sans-serif; box-siz=
+ing: border-box; padding: 35px;">
+                    <p style=3D"font-fa=
+mily: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height: 1=
+.5em; margin-top: 0; color: #AEAEAE; font-size: 12px; text-align: center;">=
+=C2=A9 2021 Concertos. All rights reserved.</p>
+                </td>
+ =
+           </tr></table>
+</td>
+</tr>
+</table>
+</td>
+        </tr>=
+</table>
+</body>
+</html>
+
+--_=_swift_1616550436_3a1bd5f171015dc7c54bf1858a379359_=_--
+

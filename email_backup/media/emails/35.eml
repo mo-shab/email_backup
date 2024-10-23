@@ -1,0 +1,57 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:24:b029:bb:c18e:4504 with SMTP id h4csp3223757lkm;
+        Tue, 26 Jan 2021 00:07:49 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJx1WGybAF0hJZAT7hBCK/EWw4vtz8xOM2o0OwAzxl5LiLbsGbyoETU+5RI/fo9VaM30b+fp
+X-Received: by 2002:a17:902:e8cc:b029:de:a258:68af with SMTP id v12-20020a170902e8ccb02900dea25868afmr4745230plg.7.1611648468929;
+        Tue, 26 Jan 2021 00:07:48 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1611648468; cv=none;
+        d=google.com; s=arc-20160816;
+        b=P9dDR/A0O5l+Ijgo0o2kX+WCZuTvwNzh9KT8hcHWntpFN3Uigj4Y1MSwJIrNjJiP/e
+         72yCa+CW9RabeytpJ+sWB0x+zxLqD9L9LWfLVzR9sLmjaypvvAWDGyGVYlMWZuSYFX+f
+         kcgyugMyaS1ce6GFegiuWbkKNnygOVMLtoH5bYDP5y87kFH/dFqzOAIhz5Gd+4RKdWZr
+         uC3uj8YCULeb5YQZ58Tq8q0hAhd45Bw16A33AhwL4xeeq+y9uLXOSHrGufiK7iWGQRqM
+         J2/GprvicdG1EZznQ369devt/nvNKWGLY+PxHGTzGn1bIHnf/vBqPAfbQBeSk6PcaINI
+         L2KA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:date:message-id:content-transfer-encoding:mime-version
+         :subject:to:from:dkim-signature;
+        bh=0F59foz1Csp2l7OFZnmEidyJ8d/iRnhcB80cP02bC2o=;
+        b=WZ1/ZmM92NI+W4K2sZSagXVty5ZLmfuGA4cFHlTB38la3Q7nQxUjqKaXoSo05kDaoy
+         X3Sp4aNXZnN1aDU2+fbMRMoJpoOE9kv+MaALNZ26YMeOXqYA6Acc/v5b6SDV97SIpJ0O
+         BGEMxKw6GtkNwMbHhwgRJaGzyQy9A8Av0Onz8yrFLqddy1LjJD/ToH+7xaQ8ywkhbsSp
+         m1+c88V6Urje3k665yGZaLnC9O1Mz5KeQW0eVeL7zm2DZsuP62pQkiGd/YP52cfx7d3J
+         jft/D6UFNuemlbiWMTiG0ry7HPSDvmv/YGRvG0GQ7+NygBCawsvrv74CLGtq0H88NH/e
+         BouA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@amazonses.com header.s=hsbnp7p3ensaochzwyq5wwmceodymuwv header.b=eXoHCTVZ;
+       spf=pass (google.com: domain of 010101773dbc04a6-3ab57198-1505-4db5-86ad-6ffed9210c25-000000@us-west-2.amazonses.com designates 54.240.27.27 as permitted sender) smtp.mailfrom=010101773dbc04a6-3ab57198-1505-4db5-86ad-6ffed9210c25-000000@us-west-2.amazonses.com
+Return-Path: <010101773dbc04a6-3ab57198-1505-4db5-86ad-6ffed9210c25-000000@us-west-2.amazonses.com>
+Received: from a27-27.smtp-out.us-west-2.amazonses.com (a27-27.smtp-out.us-west-2.amazonses.com. [54.240.27.27])
+        by mx.google.com with ESMTPS id f33si22610911pgb.252.2021.01.26.00.07.48
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Tue, 26 Jan 2021 00:07:48 -0800 (PST)
+Received-SPF: pass (google.com: domain of 010101773dbc04a6-3ab57198-1505-4db5-86ad-6ffed9210c25-000000@us-west-2.amazonses.com designates 54.240.27.27 as permitted sender) client-ip=54.240.27.27;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@amazonses.com header.s=hsbnp7p3ensaochzwyq5wwmceodymuwv header.b=eXoHCTVZ;
+       spf=pass (google.com: domain of 010101773dbc04a6-3ab57198-1505-4db5-86ad-6ffed9210c25-000000@us-west-2.amazonses.com designates 54.240.27.27 as permitted sender) smtp.mailfrom=010101773dbc04a6-3ab57198-1505-4db5-86ad-6ffed9210c25-000000@us-west-2.amazonses.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1611648468;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=DYITCHPRYTQtqIQSmT5M/VloFBEgHZmIwqB0bdyS4iY=;
+	b=eXoHCTVZFy0gzG+uhSEJ6oP0uLd+AchzDI/Zr2cvbZ1dZ2AEpAGhWWD9cQ80deXC
+	HSQI2ydfEUoukUaa+dnqwIFonl4B/xG91X9tFjsCVdXm+lmArDCTbswsZj/QiZY1BG7
+	iCrAhzFqHO2sj3inCD7dIu2Tvxr3Qc1VAbsZuqng=
+From: HelloTalk Team <service@hellotalk.com>
+To: mrcloud.med@gmail.com
+Subject: Hellotalk Password Reset
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Message-ID: <010101773dbc04a6-3ab57198-1505-4db5-86ad-6ffed9210c25-000000@us-west-2.amazonses.com>
+Date: Tue, 26 Jan 2021 08:07:48 +0000
+X-SES-Outgoing: 2021.01.26-54.240.27.27
+Feedback-ID: 1.us-west-2.qitA99BPOKbkpGB5Jp+1erHBSxnD4/62O87gklbNa8k=:AmazonSES
+
+
+								Hi Mr Clouds,<br><br>We received a request to change your HelloTalk password. <br><a href="https://www.hellotalk.com/forgetpwd?id=YlhKamJHOTFaQzV0WldSQVoyMWhhV3d1WTI5dA==&token=17456e9ef4027cbcd06fc5e240ae17cc&modtime=1611648468"><u>Please click this link to reset your password</u></a><br><br>You can also copy the following link and open it on your browser:<br>https://www.hellotalk.com/forgetpwd?id=YlhKamJHOTFaQzV0WldSQVoyMWhhV3d1WTI5dA==&token=17456e9ef4027cbcd06fc5e240ae17cc&modtime=1611648468<br><br>If you did not request a password change, you can ignore this email.<br><br>Thank you.<br><br><font color="#888888">HelloTalk Team</font>

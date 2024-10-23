@@ -1,0 +1,78 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp4581415lkb;
+        Tue, 13 Apr 2021 05:28:20 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJz4n871PMa3ogbd0Nn5vSWyci/y0SBp7My7XZjK1BXNTnM8d4+7LdpfKi0MTXgpy3xMo9Rg
+X-Received: by 2002:a92:6f07:: with SMTP id k7mr25514677ilc.194.1618316900338;
+        Tue, 13 Apr 2021 05:28:20 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1618316900; cv=none;
+        d=google.com; s=arc-20160816;
+        b=AIg5tpNrxPLhkX6v9NggK/VGyV3RRpswSmEI1hjnO8vm0kUsk4uS0Wkvo177Gju05E
+         ZFn3sIlObPlumGkqDcuIQBo6A+XojMlu5kCPczEMVszZb7KU9viCTbyOCQnMA5b7cMtN
+         sy0HR6ZYx+UL3NXZzGcLam2u29mEV8+RBNmQ6VDC+2asmSHsWRvCgc2eDc2IS1QizgMP
+         Jps1/u28E9op+5Us1c5SpgIvxRSVTWL6xtB1/dCSKGfdwAR8as+7k0m98rb42XagveQA
+         Ucd5AspWVNr3hq7oISWktTza7nLHMGHRZ9gDyIA/hXXOoIwrb3tR9fd+4A2ONadTTmR9
+         n7iw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:reply-to:from:subject:to:dkim-signature;
+        bh=8PCUca4MPJvJgYQScM1clbQDPoywT4RCFhnpn5JqSSc=;
+        b=DRpHFjBU7WFsuhBX0nYqkwlSzCzpYViZfB/U943kx8sHq3SgSLxeNtljUFu/XSt7DI
+         +Hx79bFNpFhnq8PF60XUuZBfgblyPLbfJZNF9/4/qT44YVQJQnF3TQt15FAQotIYGVC+
+         AXOPUGXH6UhMZ/iwhdNCK31fbrMizEYcyGcQAD/Nq6dZ7sSB32msTl6FQ41YL9zzhPtD
+         GDD3Par4m+oNR8g9PJvpKiB/WihkhoUTavR5YDes6FyaQRrz7MJ5hYte8MausCcGtEXX
+         Aj9oeOzX8KZxVmrhGZY0QM5JUDgMPKgOWm4XP5FLtvXAhObs5IoNdB+b31NPGUG+Y90x
+         758g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@fou-du-cinema.net header.s=default header.b=p9RI9qeQ;
+       spf=pass (google.com: best guess record for domain of fouducinema@hybrid2308.ca.ns.planethoster.net designates 199.188.222.184 as permitted sender) smtp.mailfrom=fouducinema@hybrid2308.ca.ns.planethoster.net
+Return-Path: <fouducinema@hybrid2308.ca.ns.planethoster.net>
+Received: from hybrid2308.ca.ns.planethoster.net (hybrid2308.ca.ns.planethoster.net. [199.188.222.184])
+        by mx.google.com with ESMTPS id 15si16709603ilz.9.2021.04.13.05.28.19
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 13 Apr 2021 05:28:20 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of fouducinema@hybrid2308.ca.ns.planethoster.net designates 199.188.222.184 as permitted sender) client-ip=199.188.222.184;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@fou-du-cinema.net header.s=default header.b=p9RI9qeQ;
+       spf=pass (google.com: best guess record for domain of fouducinema@hybrid2308.ca.ns.planethoster.net designates 199.188.222.184 as permitted sender) smtp.mailfrom=fouducinema@hybrid2308.ca.ns.planethoster.net
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=fou-du-cinema.net; s=default; h=Date:Message-Id:Reply-To:From:Subject:To:
+	Sender:Cc:MIME-Version:Content-Type:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=8PCUca4MPJvJgYQScM1clbQDPoywT4RCFhnpn5JqSSc=; b=p9RI9qeQvQRxJomZFcX5LYYX/L
+	a+eLDc/rpdtjW4Thjb1t7CxF7IvsZXtrcGK2oAXi/EpYxDMlekKRglP5apYHkXnua6fsk6wUmrOUt
+	HUouMb7Digjh9oPFFhmqk1yCuvDrDpF1pgJjKn2o5ewz+BunUPcpocQeITGp0TOOLO7qm29sY+cS3
+	GErHN8iu5yuDGpa7L8bAqf5b5KAKfVJduRXr7+Inserqeklcxo3S3uLtsnYDTl+MpGk6DCCz+98+V
+	LrWXGri0cTUiIuM4b3IFnFAysdheWKidU9uRbirXtUqL950x7VdbtQAx3u/RmQV/Mo3V1OLWn1ZSs
+	Y4Qci4QA==;
+Received: from fouducinema by hybrid2308.ca.ns.planethoster.net with local (Exim 4.94)
+	(envelope-from <fouducinema@hybrid2308.ca.ns.planethoster.net>)
+	id 1lWI9R-0004tQ-Ud
+	for mrcloud.med@gmail.com; Tue, 13 Apr 2021 08:28:18 -0400
+To: mrcloud.med@gmail.com
+Subject: fou-du-cinema: nettoyage
+X-PHP-Script: fou-du-cinema.net/massmail.php for 93.23.229.198
+X-PHP-Originating-Script: 1004:massmail.php
+From:staff@fou-du-cinema.net
+Reply-To:staff@fou-du-cinema.net
+X-Mailer: PHP/7.3.27
+X-Sender-IP:10.121.0.122
+Message-Id: <E1lWI9R-0004tQ-Ud@hybrid2308.ca.ns.planethoster.net>
+Date: Tue, 13 Apr 2021 08:28:17 -0400
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - hybrid2308.ca.ns.planethoster.net
+X-AntiAbuse: Original Domain - gmail.com
+X-AntiAbuse: Originator/Caller UID/GID - [1004 993] / [47 12]
+X-AntiAbuse: Sender Address Domain - hybrid2308.ca.ns.planethoster.net
+X-Get-Message-Sender-Via: hybrid2308.ca.ns.planethoster.net: authenticated_id: fouducinema/from_h
+X-Authenticated-Sender: hybrid2308.ca.ns.planethoster.net: staff@fou-du-cinema.net
+X-Source: 
+X-Source-Args: php-fpm: pool fou-du-cinema_net                          
+X-Source-Dir: fou-du-cinema.net:/public_html
+
+Bonjour ,
+
+ce message est pour tous ceux qui ont des up sur leur client torrent car lundi 18/04/2021 nous allons effectuer un nettoyage des torrents mort , donc vérifié a ce que vos torrents soit en partage .
+
+amicalement a vous toutes et tous

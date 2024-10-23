@@ -1,0 +1,306 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:da56:0:b029:111:496c:77c4 with SMTP id k22csp4830901lkc;
+        Tue, 6 Jul 2021 12:22:34 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzLH0PMOIXkGRpw8H7eCEGpEtBKCGf0Y1RvXwW46dGJeAxjIKz3XgW8ImkZE2fTJ99UE8MW
+X-Received: by 2002:ac8:5745:: with SMTP id 5mr19203556qtx.199.1625599354435;
+        Tue, 06 Jul 2021 12:22:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1625599354; cv=none;
+        d=google.com; s=arc-20160816;
+        b=LKS5rQSx9FlZvJON70QYPD06pijbChP3CyBjgOgwXTgNQ5FPglKANsXuVoSO+zdlQ9
+         WAV5VJgm/MDUmR6vaiPQfv8MUl6F60WvKZvyoyNDGIRcKkePluHj4nsNtdYIU6kTJH2/
+         KNe5ahXMLuLRZ9gzu8WgBENZO/WU1siEQ37QuqRr0rJkTFYY6UB4eyazxE1IzV9XYSZO
+         ksqyGnb8LfgFl7xy4YyW82Dwrg1fyhH3NRH5khSguibZOVrus4TkKmqiK2AhIU6yhNkI
+         O2YiXL9+LsU3402g0zQudWSSKBKMostATeF5Kpa9cpJA4uxpfYv5lACJ+Z8RX2jPaP6E
+         XYMg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:message-id:to:mime-version:from:date:dkim-signature
+         :dkim-signature;
+        bh=Q+8lcGO9tFT1PHeFVa/jYwgmIDmFx3CXAm0ZseqTlR0=;
+        b=bDdF01X3bfA1jXKFK1i7sZVCIVWrQjUUW/JY7++y7XGXhDulNg8RTL8QiBUt9GFm4Y
+         C3dd890PBcY+Ru2R2BmU7I8q9ryDejqUvqAM3un8IOMG7flCohavSsGXbHTH2QVbiEO2
+         KTwc7kS6WYiESg1y6IM55YUTTRqJuDe+8Jl2SwPXtTcslW6zgMstP3+ciS+uIueRPMkh
+         0q8E+SUpk/JEKXpUtbVocp7shUnL9T9/JdBu/ascqjJNE58iJXas839XEvtelJWev/WN
+         tdxyPatZa/f+vK8YdE3lFSnWcDlFSTHsX4yJgoATDFUiYTO2ayZsiFv6hAIN+/uGxLX4
+         5hhg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@plex.tv header.s=api header.b=UHl7HlYH;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=dsLwyGqc;
+       spf=pass (google.com: domain of bounces+954487-a6a1-mrcloud.med=gmail.com@em8792.plex.tv designates 192.254.122.79 as permitted sender) smtp.mailfrom="bounces+954487-a6a1-mrcloud.med=gmail.com@em8792.plex.tv";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=plex.tv
+Return-Path: <bounces+954487-a6a1-mrcloud.med=gmail.com@em8792.plex.tv>
+Received: from o2.sg0.plex.tv (o2.sg0.plex.tv. [192.254.122.79])
+        by mx.google.com with ESMTPS id ke18si12786083qvb.206.2021.07.06.12.22.34
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 06 Jul 2021 12:22:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+954487-a6a1-mrcloud.med=gmail.com@em8792.plex.tv designates 192.254.122.79 as permitted sender) client-ip=192.254.122.79;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@plex.tv header.s=api header.b=UHl7HlYH;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=dsLwyGqc;
+       spf=pass (google.com: domain of bounces+954487-a6a1-mrcloud.med=gmail.com@em8792.plex.tv designates 192.254.122.79 as permitted sender) smtp.mailfrom="bounces+954487-a6a1-mrcloud.med=gmail.com@em8792.plex.tv";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=plex.tv
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=plex.tv; 
+	h=content-type:from:mime-version:to:subject; s=api; 
+	bh=Q+8lcGO9tFT1PHeFVa/jYwgmIDmFx3CXAm0ZseqTlR0=; b=UHl7HlYHCNprc
+	3kdvyQTayjCg4fnG0jn+U7NaZ2WEzrYOzWtF+/+TaTqv51I5lSNRRoPYtHiw0stv
+	929FcBCCwTg/OAYn8dzLGIrBcNa2LOK/47xiTV1WodZvR4JZAcIAYpb/E4BC4d2x
+	4Va7jeh9wBOMp6wVkloRZU5yf8dmlfFJZ/JWSENdeGxjeI7cvQoTS943QkIHceSK
+	uh8IS7ysHQwNmKzVrARjdffIeVlljNB7+c8hT4ijrRz+d3DUoGaQTo+oHYdtWeqP
+	WO1Y7QImLehew1rNDitV7cOIkd70SsfujU40gMSFOQqaaOsNrguPBWKWglmxnD2N
+	EtDQN1CIQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; 
+	d=sendgrid.info; 
+	h=content-type:from:mime-version:to:subject:x-feedback-id; 
+	s=smtpapi; bh=Q+8lcGO9tFT1PHeFVa/jYwgmIDmFx3CXAm0ZseqTlR0=; b=ds
+	LwyGqcnJRrlKv9/DQ/I0zFFHq2+Rshz5Eh4cOMWR7GlH8GWPuXD4ogdTegpH1ZMO
+	IXfcD8G0ll0cGpoRRqqLcfhH2qKC7tHAozV8duIXqPSEQQtbfZ72WMC/krVfJTEK
+	q8NgRunB74fX4rydjzpLHzSU0DDvmmH3ydzHMTfTU=
+Received: by filter2154p1las1.sendgrid.net with SMTP id filter2154p1las1-29824-60E4AD79-14
+        2021-07-06 19:22:33.513004387 +0000 UTC m=+432861.138688087
+Received: from OTU0NDg3 (unknown)
+	by geopod-ismtpd-3-1 (SG) with HTTP id 8Jrg0ZGLQ2u42aCcM3NECQ
+	Tue, 06 Jul 2021 19:22:33.286 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=b130af4016fd7a9eca1d553439b31f0a27c8144b515f967a3517da6fd3da
+Date: Tue, 06 Jul 2021 19:22:33 +0000 (UTC)
+From: "Plex" <noreply@plex.tv>
+Mime-Version: 1.0
+To: mrcloud.med@gmail.com
+Message-ID: <8Jrg0ZGLQ2u42aCcM3NECQ@geopod-ismtpd-3-1>
+Subject: =?UTF-8?B?Vm91cyBhdmV6IHJlw6d1IHVuZSBpbnZpdGF0aW9uIHBvdXIgcGFydGFnZXIgZHUgY29udGVudSBtw6lkaWEgZGFucyBQbGV4?=
+X-SG-EID: h6sQ1sFjCaCh7QEJDEJopElCge7kNbmsuoscmqhfeISc65jRLSsX8G1kHOg2TTLidtzLJIKLw02rRB
+ OoxpCw3ei8WJhHpuA8gudIYonlH51F5gVZ8wmSTM8flhQcORbmaKjspFOS625+ILW0wzOdpU5WvEk+
+ EJzhf8PVnaBS7HMe1Pa+kdybOJ6jczWwXCxfh6Y3xLKNkGlgB3KP3D/PtQ==
+X-SG-ID: QC2HZsqqFA7sweQ1IVwNOO/dMRBEe12aMKjlk92jI3g=
+X-Entity-ID: ERm8gm7cs6M577+yS95vkA==
+X-Feedback-ID: 954487:thxGR2YEjmBRfs/E7QFggUIcaGMLVIFnRdePwd4SB2k=:afJ/ZeC1fMgiUIlWbtD2Mhv8ea/8Bx6Hr2JGb03OyAU=:SG
+
+--b130af4016fd7a9eca1d553439b31f0a27c8144b515f967a3517da6fd3da
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+Mime-Version: 1.0
+
+Une personne merveilleuse a partag=C3=A9 ses fichiers multim=C3=A9dias Plex=
+ avec vous !
+
+Bonjour !
+
+Vous avez re=C3=A7u une invitation de mrcloud.91@protonmail.com pour partag=
+er du contenu m=C3=A9dia dans Plex. Pour accepter l=E2=80=99invitation et v=
+oir les fichiers multim=C3=A9dias de votre ami, cliquez sur le lien suivant=
+ :
+https://plex.tv/servers/shared_servers/accept?invite_token=3Dx12_yss5Mq6RH1=
+N8a1Fw
+
+Profitez des fichiers multim=C3=A9dias suppl=C3=A9mentaires et n&#39;oublie=
+z pas de remercier votre ami !
+
+--b130af4016fd7a9eca1d553439b31f0a27c8144b515f967a3517da6fd3da
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+Mime-Version: 1.0
+
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" =
+/>
+  <meta name=3D"HandheldFriendly" content=3D"True">
+  <meta name=3D"viewport" content=3D"width=3D600, initial-scale=3D1.0" />
+  <title></title>
+
+  <style type=3D"text/css">
+
+      @media screen {
+      @font-face {
+        font-family: 'eina01-bold';
+        font-style: normal;
+        font-weight: 400;
+        src: url('https://plex.tv/assets/eina01-bold-webfont-5c769da640dd0d=
+21b6b559716d19e7b1dfc03aa16a3f4d0de7c58a607e102fb8.woff');
+        src:
+          url('https://plex.tv/assets/eina01-bold-webfont-5c769da640dd0d21b=
+6b559716d19e7b1dfc03aa16a3f4d0de7c58a607e102fb8.woff') format('woff'),
+          url('https://plex.tv/assets/eina01-bold-webfont-3e0468b1f0f227cd8=
+0a59b4be3997b8fdd5fe338099290faa9e5e40956fb004d.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'eina01-regular';
+        font-style: normal;
+        font-weight: 400;
+        src: url('https://plex.tv/assets/eina01-regular-webfont-d20ab57528e=
+7e791e3ea178aefc21ba75a35b0d3d834fc9d88925a772f12fe3e.woff');
+        src:
+          url('https://plex.tv/assets/eina01-regular-webfont-d20ab57528e7e7=
+91e3ea178aefc21ba75a35b0d3d834fc9d88925a772f12fe3e.woff') format('woff'),
+          url('https://plex.tv/assets/eina01-regular-webfont-4964ecee096bca=
+ff80c04cfc36bc48967da9a3577c2fc0927fb42bbd51dfacb3.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'plexeina-bold';
+        font-style: normal;
+        font-weight: 400;
+        src: url('https://plex.tv/assets/plexeina-bold-webfont-17b2c870a3a0=
+6a880f955c016d9947ee128409b94d2c739755d73efbf2376bfc.woff');
+        src:
+          url('https://plex.tv/assets/plexeina-bold-webfont-17b2c870a3a06a8=
+80f955c016d9947ee128409b94d2c739755d73efbf2376bfc.woff') format('woff'),
+          url('https://plex.tv/assets/plexeina-bold-webfont-4ba81c36ac342fb=
+e2d12a278c919bd6fe5c213d9676ab3a9927210df1066fd14.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'plexeina-regular';
+        font-style: normal;
+        font-weight: 400;
+        src: url('https://plex.tv/assets/plexeina-regular-webfont-746d4811b=
+c622bdcb9ac38487da5e7fd63deee022744ef8f670fb59b6b9cda4c.woff');
+        src:
+          url('https://plex.tv/assets/plexeina-regular-webfont-746d4811bc62=
+2bdcb9ac38487da5e7fd63deee022744ef8f670fb59b6b9cda4c.woff') format('woff'),
+          url('https://plex.tv/assets/plexeina-regular-webfont-24bd93632297=
+b0e5882eb360cf7cdc27b7483ea9d702cc2f6f75dcd3d169a528.woff2') format('woff2'=
+);
+      }
+    }
+
+    html * {max-height:1000000px;}
+
+    body {
+      width: 100% !important;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF;
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      color: #535353;
+      font-size: 15px;
+      line-height: 20px;
+      -webkit-font-smoothing:antialiased;
+      -webkit-text-size-adjust:none;
+    }
+
+    img {
+      border: 0;
+    }
+
+    a,
+    a:hover,
+    a:active {
+      text-decoration: none;
+      color: #ff8a00;
+    }
+
+    b, strong {
+      font-weight: 700;
+      font-weight: bold;
+    }
+
+    ul {
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      color: #535353;
+      font-size: 15px;
+      line-height: 20px;
+      padding-top: 8px;
+    }
+
+    li {
+      padding-bottom: 8px;
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      color: #535353;
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+=20=20=20=20
+
+  </style>
+
+</head>
+<body style=3D"margin: 0; padding: 0; -webkit-font-smoothing: antialiased; =
+width:100% !important; background-color: #fff; -webkit-text-size-adjust:non=
+e;" topmargin=3D"0" leftmargin=3D"0" marginheight=3D"0" marginwidth=3D"0">
+  <div style=3D"display:none !important"></div>
+  <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" al=
+ign=3D"center" style=3D"width: 100%; background-color: #fff;">
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"padding-top: 25px;">
+      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600"=
+ align=3D"center" style=3D"border-collapse: collapse; mso-table-lspace: 0pt=
+; mso-table-rspace: 0pt; width: 600px; background-color: #fff;">
+        <tr>
+          <td align=3D"left" valign=3D"top" width=3D"600" bgcolor=3D"#fffff=
+f" style=3D"background-color: #ffffff; padding-top, padding-bottom: 40px; b=
+order-radius: 6px;">
+          <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+520" style=3D"width: 510px; border-collapse: collapse; mso-table-lspace: 0p=
+t; mso-table-rspace: 0pt;">
+            <tr>
+              <td align=3D"left" valign=3D"top" width=3D"520" height=3D"80">
+              <a target=3D"_blank" href=3D"https://plex.tv/"><img alt=3D"Pl=
+ex" width=3D"90" height=3D"29" border=3D"0" src=3D"https://plex.tv/assets/e=
+mail/plex-logo-53129eb1891f1187b48eb87be218065eb860bb5111c4afed9cd36829857d=
+9f4c.gif" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td align=3D"left" valign=3D"top" width=3D"520" style=3D"widt=
+h: 510px; color: #ff8a00; font-size: 32px; line-height: 38px; font-family: =
+'plexeina-bold', Helvetica, Arial, sans-serif; font-weight: 400; letter-spa=
+cing: -1px; padding-bottom: 30px; color: #282A2D;">
+              Une personne merveilleuse a partag=C3=A9 ses fichiers multim=
+=C3=A9dias Plex avec vous !
+
+              </td>
+            </tr>
+            <tr>
+              <td align=3D"left" valign=3D"top" style=3D"width: 520px; font=
+-family: 'plexeina-regular', Helvetica, Arial, sans-serif; font-weight: 400=
+; font-size: 15px; line-height: 20px; margin: 0; padding-bottom: 30px; colo=
+r: #282A2D;">
+              Bonjour !
+<br>
+<br>
+Vous avez re=C3=A7u une invitation de mrcloud.91@protonmail.com pour partag=
+er du contenu m=C3=A9dia dans Plex. Pour accepter l=E2=80=99invitation et v=
+oir les fichiers multim=C3=A9dias de votre ami, cliquez sur le lien suivant=
+ :
+<a href=3D"https://plex.tv/servers/shared_servers/accept?invite_token=3Dx12=
+_yss5Mq6RH1N8a1Fw">J&#39;accepte l&#39;invitation.</a>
+<br>
+<br>
+Profitez des fichiers multim=C3=A9dias suppl=C3=A9mentaires et n&#39;oublie=
+z pas de remercier votre ami !
+
+              </td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td height=3D"2" bgcolor=3D "#e0e0e0" style=3D"background-color:#=
+E0E3E6; font-size: 2px; line-height: 1%; mso-line-height-rule: exactly; mar=
+gin-top: 20px;"></td>
+        </tr>
+        <tr>
+          <td align=3D"left" valign=3D"top" width=3D"540" style=3D"padding-=
+top: 30px; font-family: 'plexeina-regular', Helvetica, Arial, sans-serif; f=
+ont-size: 13px; line-height: 24px; font-weight: normal; color: #B3BAC1; tex=
+t-align: left;">
+            Sent with =E2=99=A5 from Plex
+            <br>
+            Plex GmbH, Hansmatt 32, 6370 Stans, Switzerland
+            <br>
+            Ceci est un message g=C3=A9n=C3=A9r=C3=A9 automatiquement.
+          </td>
+        </tr>
+          </table>
+          </td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+
+--b130af4016fd7a9eca1d553439b31f0a27c8144b515f967a3517da6fd3da--

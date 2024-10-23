@@ -1,0 +1,185 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a9a:7ad1:0:b029:b6:48f8:3fed with SMTP id i17csp353066lkn;
+        Wed, 13 Jan 2021 06:20:57 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJwBb6/vHuIwaAQghlGFgiITtrS6I3dPSgXFKZMr+JqUdwwJYlnGEQILeIUxVJAPUP2ME484
+X-Received: by 2002:a17:90a:df0d:: with SMTP id gp13mr2679570pjb.151.1610547657404;
+        Wed, 13 Jan 2021 06:20:57 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1610547657; cv=none;
+        d=google.com; s=arc-20160816;
+        b=YtbJg69vfgil/Totz3VqBQsHOashXEakW6MkwuP97BsTDO2tppI6ZPKzbnDyrpbPMK
+         vmigXqwNZ452tFZPk6uA5eab4rfrSjxlOW76dtU8YaNAvfe+GYSCk1N33aKkyhYPQClr
+         F6GlruTUl4o8Bhl1PPjT+eQMGv5VQumhOItNT5Uzhzhr7TRLZpU6nS4Kg4XHULAqtma8
+         KnUulLFNCpD2CvVL27Ann3+kyekcu9sgcjUsYhsLUHbDJGc+SiwAYhg7REN+HI7TyQxE
+         73v3m8zNP9/uEXaHjpaZqflCIb9PPBXv+zlX1RtRP60m0XC8JcIvyW1ZR+MOoZ7kAp8D
+         dZhA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-id:list-unsubscribe:mime-version:to:from:subject:date
+         :message-id:dkim-signature;
+        bh=nmiMlyqVZf6+GcsztoAeBa2g5v2bEcWK3mfPXin8CeY=;
+        b=seExdqCy1gyzQbkZz+34ExGn/1FgcxOTABDrVYh4YTiIRrbZOnmfJYirv2NuuOH8ZU
+         aWHSuHAXdre/UTEG+OVjAFW37maSSlps6gLLj49lPB+J0pwLidaCEYfPCfH3Ishl/DJr
+         KNZ4wVmIPCbxest8GJzMNT8uKUKPFebB10N1yZqwD+qMlGSqHbGP1wjhEJH6w5NVS1Sd
+         K7QfAn4PngvbzHQpP2BnrSVo7XnLHevHUSk4XMzQ3RCor2jQQWSAspw8WeIIP868EZpZ
+         R82okFmnYfRqlXzmglNPDjQCQpuKqH1dSPYK+WtPEo8Co6GGDaOMV43xtST5o8dJI5Zy
+         64sw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@privatehd.to header.s=scph0416 header.b=aHmB8yht;
+       spf=neutral (google.com: 147.253.213.66 is neither permitted nor denied by best guess record for domain of msprvs1=18647wb3dww77=bounces-41712@bounces.avistaz.to) smtp.mailfrom="msprvs1=18647WB3dWw77=bounces-41712@bounces.avistaz.to";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=privatehd.to
+Return-Path: <msprvs1=18647WB3dWw77=bounces-41712@bounces.avistaz.to>
+Received: from mta-213-66.sparkpostmail.com (mta-213-66.sparkpostmail.com. [147.253.213.66])
+        by mx.google.com with ESMTPS id x1si2592563pfp.193.2021.01.13.06.20.57
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 13 Jan 2021 06:20:57 -0800 (PST)
+Received-SPF: neutral (google.com: 147.253.213.66 is neither permitted nor denied by best guess record for domain of msprvs1=18647wb3dww77=bounces-41712@bounces.avistaz.to) client-ip=147.253.213.66;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@privatehd.to header.s=scph0416 header.b=aHmB8yht;
+       spf=neutral (google.com: 147.253.213.66 is neither permitted nor denied by best guess record for domain of msprvs1=18647wb3dww77=bounces-41712@bounces.avistaz.to) smtp.mailfrom="msprvs1=18647WB3dWw77=bounces-41712@bounces.avistaz.to";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=privatehd.to
+X-MSFBL: HVXM0CeR5CUGSAFtwefOfwvRnj/V1XIvt7fEivnqcGg=|eyJyIjoibXJjbG91ZC5
+	tZWRAZ21haWwuY29tIiwidGVuYW50X2lkIjoic3BjIiwibWVzc2FnZV9pZCI6IjV
+	mZmNjODAxZmY1ZjhiYTg3NmVmIiwic3ViYWNjb3VudF9pZCI6IjAiLCJjdXN0b21
+	lcl9pZCI6IjQxNzEyIn0=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=privatehd.to;
+	s=scph0416; t=1610547656; i=@privatehd.to;
+	bh=nmiMlyqVZf6+GcsztoAeBa2g5v2bEcWK3mfPXin8CeY=;
+	h=Message-ID:Date:Subject:From:To:Content-Type;
+	b=aHmB8yhtmQRWl4BSvb/WgFfvjHmU9P+TrAA0BNqbvNrcugHXIo18AJbx4okep+Wck
+	 QjtSOgq0/WxuH4UzHJxl26Kj9qw/n+1DlBnTFFV4Y9rbbTC9HS37AG+m+SB561O2mM
+	 AMEqEi7xxv321O+WLIj/wzqc4UoT4gI4mdcGF3F4=
+Message-ID: <7dea0b4c40abad6c500b988a385e3ee5@swift.generated>
+Date: Wed, 13 Jan 2021 09:20:56 -0500
+Subject: PrivateHD - Invitation
+From: PrivateHD <noreply@privatehd.to>
+To: mrcloud.med@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1610547656_d9eaa48c2c055a2168e8035dacf3de7e_=_"
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:SCPutppVA6QKd4ejmZ7VYzAWBf3mfKopCCYNtqG7QXw~|eyAicmNwdF90byI6ICJtcmNsb3VkLm1lZEBnbWFpbC5jb20iLCAidGVuYW50X2lkIjogInNwYyIsICJjdXN0b21lcl9pZCI6ICI0MTcxMiIsICJtZXNzYWdlX2lkIjogIjVmZmNjODAxZmY1ZjhiYTg3NmVmIiwgInN1YmFjY291bnRfaWQiOiAiMCIgfQ~~>
+List-Id: <spc.41712.0.sparkpostmail.com>
+
+
+--_=_swift_1610547656_d9eaa48c2c055a2168e8035dacf3de7e_=_
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="utf-8"
+
+Dear mrcloud.med@gmail.com,
+
+You have been invited to join PrivateHD community by privatehd Staff.
+To accept this invitation, click the link below or copy and paste it into your web browser:
+
+http://click.avistaz.to/f/a/ZEFUaptw9DromZXC891r8Q~~/AACi8AA~/RgRh4YbIP0RBaHR0cHM6Ly9wcml2YXRlaGQudG8vYXV0aC9pbnZpdGUvNWE2YmY2ZWJjYWQxNzdiODk5MzZkNGY4YjRiOTM2NjhXA3NwY0IKX_zIAf9fi6h271IVbXJjbG91ZC5tZWRAZ21haWwuY29tWAQAAAAA
+
+You'll need to accept the invitation within 24 hours, or else the link will become inactive. We on PrivateHD hope that you'll accept the invitation and join our awesome community!
+
+If you do not know the person who has invited you, please delete this email.
+
+
+Best Regards,
+PrivateHD Team
+
+This is a service email for mrcloud.med@gmail.com containing necessary account information. Please do not reply to this message.
+
+Terms: http://click.avistaz.to/f/a/4gFgNRcp34tq-PzliqdRGw~~/AACi8AA~/RgRh4YbIP0QgaHR0cHM6Ly9wcml2YXRlaGQudG8vYWJvdXQvdGVybXNXA3NwY0IKX_zIAf9fi6h271IVbXJjbG91ZC5tZWRAZ21haWwuY29tWAQAAAAA
+Privacy: http://click.avistaz.to/f/a/6dNbvxg6GtSrKd8nA8oFYA~~/AACi8AA~/RgRh4YbIP0QpaHR0cHM6Ly9wcml2YXRlaGQudG8vYWJvdXQvcHJpdmFjeS1wb2xpY3lXA3NwY0IKX_zIAf9fi6h271IVbXJjbG91ZC5tZWRAZ21haWwuY29tWAQAAAAA
+Unsubscribe:
+<unsubscribe>http://click.avistaz.to/f/a/-72lVAPUJ5DdReFsA09bSA~~/AACi8AA~/RgRh4YbIP0RPaHR0cHM6Ly9wcml2YXRlaGQudG8vZW1haWwvdW5zdWJzY3JpYmU_ZW1haWw9bXJjbG91ZC5tZWRAZ21haWwuY29tPC91bnN1YnNjcmliZVcDc3BjQgpf_MgB_1-LqHbvUhVtcmNsb3VkLm1lZEBnbWFpbC5jb21YBAAAAAA~>
+
+
+--_=_swift_1610547656_d9eaa48c2c055a2168e8035dacf3de7e_=_
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>PrivateHD - Invitation</title>
+    <meta name="viewport" content="width=device-width"/>
+    <style type="text/css">
+        @media  only screen and (max-width: 550px), screen and (max-device-width: 550px) {
+            body[yahoo] .buttonwrapper {
+                background-color: transparent !important;
+            }
+
+            body[yahoo] .button {
+                padding: 0 !important;
+            }
+
+            body[yahoo] .button a {
+                background-color: #3697d9;
+                padding: 15px 25px !important;
+            }
+        }
+
+        @media  only screen and (min-device-width: 601px) {
+            .content {
+                width: 600px !important;
+            }
+
+            .col387 {
+                width: 387px !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0;" yahoo="fix">
+<div style="color:transparent;visibility:hidden;opacity:0;font-size:0px;border:0;max-height:1px;width:1px;margin:0px;padding:0px;border-width:0px!important;display:none!important;line-height:0px!important;"><img border="0" width="1" height="1" src="http://click.avistaz.to/q/3YoWYz0qMWq06Hao6sSsgA~~/AACi8AA~/RgRh4YbIPVcDc3BjQgpf_MgB_1-LqHbvUhVtcmNsb3VkLm1lZEBnbWFpbC5jb21YBAAAAAA~"/></div>
+
+<!--[if (gte mso 9)|(IE)]>
+<table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td><![endif]-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 600px;" class="content">
+    <tr>
+        <td align="center" bgcolor="#666666" style="padding: 10px; color: #ffffff; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold;">
+            PrivateHD - Invitation
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="#fbfbfb" style="padding: 10px 20px 20px 20px; color: #555555; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 1px solid #f6f6f6;">
+                <p>Hi mrcloud.med@gmail.com,</p>
+    <p>You have been invited to join <b>PrivateHD</b> community by <b>privatehd Staff</b></p>
+    <p>To <b>accept this invitation</b> click the link below:</p>
+    <a href="http://click.avistaz.to/f/a/ZEFUaptw9DromZXC891r8Q~~/AACi8AA~/RgRh4YbIP0RBaHR0cHM6Ly9wcml2YXRlaGQudG8vYXV0aC9pbnZpdGUvNWE2YmY2ZWJjYWQxNzdiODk5MzZkNGY4YjRiOTM2NjhXA3NwY0IKX_zIAf9fi6h271IVbXJjbG91ZC5tZWRAZ21haWwuY29tWAQAAAAA" style="color:#3697d9; font-size: 18px; font-weight: bold; text-align: center;">Accept invitation to PrivateHD</a>
+    <p>You'll need to accept the invitation within 24 hours, or else the link will become inactive. We on PrivateHD hope that you'll accept the invitation and join our awesome community!</p>
+    <p>If you do not know the person who has invited you, please delete this email.</p>
+                            <p>Best Regards, <br/>PrivateHD Team</p>
+                    </td>
+    </tr>
+    <tr>
+        <td align="center" bgcolor="#dddddd" style="padding: 15px 10px 15px 10px; color: #555555; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px;">
+                            This is a service email for
+                <span style="color: #2F90E2; text-decoration: none;">mrcloud.med@gmail.com</span> containing necessary account information.
+                <br/>
+                Please do not reply to this message.
+                    </td>
+    </tr>
+    <tr>
+        <td style="padding: 15px 10px 15px 10px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td width="60%" style="color: #999999; font-family: Arial, sans-serif; font-size: 12px;">
+                                                    <a href="http://click.avistaz.to/f/a/4gFgNRcp34tq-PzliqdRGw~~/AACi8AA~/RgRh4YbIP0QgaHR0cHM6Ly9wcml2YXRlaGQudG8vYWJvdXQvdGVybXNXA3NwY0IKX_zIAf9fi6h271IVbXJjbG91ZC5tZWRAZ21haWwuY29tWAQAAAAA" style="color: #3697d9;">Terms</a> |
+                            <a href="http://click.avistaz.to/f/a/6dNbvxg6GtSrKd8nA8oFYA~~/AACi8AA~/RgRh4YbIP0QpaHR0cHM6Ly9wcml2YXRlaGQudG8vYWJvdXQvcHJpdmFjeS1wb2xpY3lXA3NwY0IKX_zIAf9fi6h271IVbXJjbG91ZC5tZWRAZ21haWwuY29tWAQAAAAA" style="color: #3697d9;">Privacy</a> |
+                            <a href="http://click.avistaz.to/f/a/5NswLTJTZMFQetlmOcTDgQ~~/AACi8AA~/RgRh4YbIP0RCaHR0cHM6Ly9wcml2YXRlaGQudG8vZW1haWwvdW5zdWJzY3JpYmU_ZW1haWw9bXJjbG91ZC5tZWRAZ21haWwuY29tVwNzcGNCCl_8yAH_X4uodu9SFW1yY2xvdWQubWVkQGdtYWlsLmNvbVgEAAAAAA~~" style="color: #3697d9;">
+                                <unsubscribe>Unsubscribe</unsubscribe>
+                            </a>
+                                            </td>
+                    <td align="right" width="40%" style="color: #999999; font-family: Arial, sans-serif; font-size: 12px;">
+                        &copy; <a href="http://click.avistaz.to/f/a/d1RQPD4P6VS14tGID9sD2A~~/AACi8AA~/RgRh4YbIP0QUaHR0cHM6Ly9wcml2YXRlaGQudG9XA3NwY0IKX_zIAf9fi6h271IVbXJjbG91ZC5tZWRAZ21haWwuY29tWAQAAAAA" style="color: #3697d9;">PrivateHD</a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+<img border="0" width="1" height="1" alt="" src="http://click.avistaz.to/q/75FebYBPHb5yfc_v716wUw~~/AACi8AA~/RgRh4YbIPlcDc3BjQgpf_MgB_1-LqHbvUhVtcmNsb3VkLm1lZEBnbWFpbC5jb21YBAAAAAA~">
+</body>
+</html>
+
+
+--_=_swift_1610547656_d9eaa48c2c055a2168e8035dacf3de7e_=_--

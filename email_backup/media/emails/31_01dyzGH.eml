@@ -1,0 +1,296 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a9a:7ad1:0:b029:b6:48f8:3fed with SMTP id i17csp507064lkn;
+        Wed, 13 Jan 2021 09:40:59 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJxCXaYzCn8jN2+pcTDIwjlw9TfvxZMnthUEgv5kYkAhshLATGFYRMli7wa9HueHG5E7s1V/
+X-Received: by 2002:a17:902:7d84:b029:db:feae:425e with SMTP id a4-20020a1709027d84b02900dbfeae425emr3297079plm.43.1610559659262;
+        Wed, 13 Jan 2021 09:40:59 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1610559659; cv=none;
+        d=google.com; s=arc-20160816;
+        b=JJ9i1paGlt9J9JwTx8a/y9SRwtFRAmFumAvGkgERsdUs2WuEL7cQBLuOpQGlicb7i9
+         OM+bjVGbjXlXWrXTARYZA3fHwTi/R8PKGcC854Ic118iDBjlhAiLHw0hd0bpCxCcxqgP
+         9Hpvfxx52afuhIQTlMxCwvO3Gd532N6grXK6yjKWY0DkXCGof28w5qCGVloFufoIyNrN
+         dQ82NKZGHKX7gH6rJMTEx71glMnyyc7+WlcwmvGcmsr+QAgc3uSErGlTcRAz7muIkIpp
+         iURTOv74BZ2MSOplKUQ9yy5ykRyoyDjuq5K7p+G+zUyhu+meJzwEHNazS7oGHRgLd+zg
+         GAZQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-id:list-unsubscribe:content-transfer-encoding:auto-submitted
+         :date:subject:from:to:message-id:mime-version:dkim-signature;
+        bh=S6X7J/yV7iuT5wnQldRC7joStRHcj18Zb9148qiE7es=;
+        b=pWZH67DndZcvjkACe6QvC+JS2er7zRmpf9CsWnlFUYjENaPymxSr+7BBsqrwwq5W21
+         CRx6mhOgNYaX8sugLvDcC3zqJdC/2GiUyprUE+cre9Z8KqAqYgGO3D+hNK9k8rJZv9lb
+         1qs7qxWNpn8/53ydXTssMzw06qSRWL58hlSuNjLAySOWWSjSokqJ6NMDLFKNAftOd/Ac
+         HaJBxF67XQ7O+UGTiAOFmAUDyhbnfjBfQzbdxWyryjsYcqAHXHGPCkTJ4wCyU9zY2DNm
+         YoFSiqZKteYyKIX75KR/70xIK2t2Z6NEVJhCHxKfQUbS8p8VzkFO79cQw1Th88cvTgLK
+         EjvQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@privatehd.to header.s=scph0416 header.b=gRDNw5O0;
+       spf=neutral (google.com: 147.253.213.66 is neither permitted nor denied by best guess record for domain of msprvs1=18647wb3dww77=bounces-41712@bounces.avistaz.to) smtp.mailfrom="msprvs1=18647WB3dWw77=bounces-41712@bounces.avistaz.to";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=privatehd.to
+Return-Path: <msprvs1=18647WB3dWw77=bounces-41712@bounces.avistaz.to>
+Received: from mta-213-66.sparkpostmail.com (mta-213-66.sparkpostmail.com. [147.253.213.66])
+        by mx.google.com with ESMTPS id z192si3157939pfc.260.2021.01.13.09.40.58
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 13 Jan 2021 09:40:59 -0800 (PST)
+Received-SPF: neutral (google.com: 147.253.213.66 is neither permitted nor denied by best guess record for domain of msprvs1=18647wb3dww77=bounces-41712@bounces.avistaz.to) client-ip=147.253.213.66;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@privatehd.to header.s=scph0416 header.b=gRDNw5O0;
+       spf=neutral (google.com: 147.253.213.66 is neither permitted nor denied by best guess record for domain of msprvs1=18647wb3dww77=bounces-41712@bounces.avistaz.to) smtp.mailfrom="msprvs1=18647WB3dWw77=bounces-41712@bounces.avistaz.to";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=privatehd.to
+X-MSFBL: 4whZGWUDqxhFV3A4NFTUvuM+1z585XiVdPsrcWFQkQQ=|eyJyIjoibXJjbG91ZC5
+	tZWRAZ21haWwuY29tIiwic3ViYWNjb3VudF9pZCI6IjAiLCJ0ZW5hbnRfaWQiOiJ
+	zcGMiLCJtZXNzYWdlX2lkIjoiNWZmY2FhMzBmZjVmODdmMjdiNzMiLCJjdXN0b21
+	lcl9pZCI6IjQxNzEyIn0=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=privatehd.to;
+	s=scph0416; t=1610559658; i=@privatehd.to;
+	bh=S6X7J/yV7iuT5wnQldRC7joStRHcj18Zb9148qiE7es=;
+	h=Message-ID:To:From:Subject:Date:Content-Type;
+	b=gRDNw5O0oUG2dNOfCv4FhTxa45YYQV8wvMN8nXINrx1ngCDD2m2py0i0KYmJuvio0
+	 uyp2U+3FRJGMvVz8tHGQqrBOv4b5bAI5KlTu+5NNH0G5uGFc3E1i85B6M+b1t6QxxO
+	 y/GJOZy0Z6JtdmONr6uiHlCrs98963CIoT5K9CCQ=
+Authentication-Results:  aa.mta1vsmtp.cc.prd.sparkpost smtp.user=<hidden>; auth=pass (LOGIN)
+Received: from [149.56.240.51] ([149.56.240.51:54774] helo=smtp.sparkpostmail.com)
+	by aa.mta1vsmtp.cc.prd.sparkpost (envelope-from <info@privatehd.to>)
+	(ecelerity 4.3.1.84756 r(Core:4.3.1.63)) with ESMTPSA (cipher=AES-128-GCM) 
+	id B7/37-29697-AA03FFF5; Wed, 13 Jan 2021 17:40:58 +0000
+MIME-Version: 1.0
+Message-ID: <B7.37.29697.AA03FFF5@aa.mta1vsmtp.cc.prd.sparkpost>
+To: mrcloud.med@gmail.com
+From: =?UTF-8?B?UHJpdmF0ZUhEIEZvcnVtcw==?= <info@privatehd.to>
+Subject: =?UTF-8?B?WW91ciByZWdpc3RyYXRpb24gaXMgY29tcGxldGUh?=
+Date: Wed, 13 Jan 2021 17:40:57 +0000
+Auto-Submitted: auto-generated
+Content-Type: multipart/alternative; boundary="--==_mimepart_fb46af2358b06e92102e7b856ec71789"; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:WXJsoUUTWGJaIHNmT0ywTknEN5q9L2naReXqGxFIIEU~|eyAicmNwdF90byI6ICJtcmNsb3VkLm1lZEBnbWFpbC5jb20iLCAidGVuYW50X2lkIjogInNwYyIsICJjdXN0b21lcl9pZCI6ICI0MTcxMiIsICJzdWJhY2NvdW50X2lkIjogIjAiLCAibWVzc2FnZV9pZCI6ICI1ZmZjYWEzMGZmNWY4N2YyN2I3MyIgfQ~~>
+List-Id: <spc.41712.0.sparkpostmail.com>
+
+
+----==_mimepart_fb46af2358b06e92102e7b856ec71789
+Content-Type: text/plain; charset=UTF-8
+
+
+
+
+Hi mrcloud,
+
+Welcome to PrivateHD Forums and thank you for joining. 
+
+Go to PrivateHD Forums: https://forums.privatehd.to/
+
+-- PrivateHD Forums
+
+-----
+
+
+
+
+PrivateHD Forums
+----==_mimepart_fb46af2358b06e92102e7b856ec71789
+Content-Type: text/html; charset=UTF-8
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title></title>
+		<style type="text/css">
+		
+			#outlook a {padding:0;}
+			body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} 
+			.ExternalClass {width:100%;}
+			.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+			#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+
+			img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} 
+			a img {border:none;} 
+			.image_fix {display:block;}
+
+			p {margin: 1em 0;}
+
+			h1 { color: white !important; }
+			h2, h3, h4, h5, h6 {color: #333333 !important;}
+
+			h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+				color: red !important;
+			}
+
+			h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+				color: purple !important;
+			}
+
+			table td {border-collapse: collapse;}
+
+			table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+
+			a {color: #4a8aca;}
+			
+			/* Unhides cells that we set to hide in the HTML in case the client doesn't support style properly */
+			*[class~=hidePhone] {
+			    display : block !important;
+			    width : auto !important;
+			    max-height: inherit !important;
+			    overflow : visible !important;
+			    float : none !important;
+			}
+
+			*[class~=hidePhone][width="30"] {
+				width: 30px !important;
+			}
+
+			*[class~=hidePhone][width="40"] {
+				width: 40px !important;
+			}
+
+			td[class~=hidePhone] {
+				display: table-cell !important;
+			}
+
+			@media only screen and (max-width: 480px) {
+				a[href^="tel"], a[href^="sms"] {
+					text-decoration: none;
+					color: blue;
+					pointer-events: none;
+					cursor: default;
+				}
+
+				.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+					text-decoration: default;
+					color: orange !important;
+					pointer-events: auto;
+					cursor: default;
+				}
+
+				#userPhoto, .hidePhone, *[class~=hidePhone], td[class~=hidePhone] {
+					display: none !important;
+				}
+
+				.responsive_table > tr > td, .responsive_table > tbody > tr > td,
+				.responsive_table > tr, .responsive_table > tbody > tr {
+					display: block;
+					text-align: left;
+				}
+
+				html[dir="rtl"] .responsive_table > tr > td, html[dir="rtl"] .responsive_table > tbody > tr > td,
+				html[dir="rtl"] .responsive_table > tr, html[dir="rtl"] .responsive_table > tbody > tr {
+					text-align: right;
+				}
+
+				.responsive_row {
+					margin-bottom: 10px;
+				}
+
+				.responsive_fullwidth {
+					width: 100% !important;
+				}
+
+				.cOurPicksRow {
+					margin-bottom: 30px;
+					padding-bottom: 30px;
+					border-bottom: 1px solid #e0e0e0;
+				}
+			}
+
+			@media only screen and (min-width: 768px) and (max-width: 1024px) {
+				a[href^="tel"], a[href^="sms"] {
+					text-decoration: none;
+					color: blue;
+					pointer-events: none;
+					cursor: default;
+				}
+
+				.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+					text-decoration: default;
+					color: orange !important;
+					pointer-events: auto;
+					cursor: default;
+				}
+			}
+
+			/* Share Links */
+			.cShareLink:hover {
+				color: white;
+			}
+		</style>
+	</head>
+	<body bgcolor="#f1f1f1" style='direction: ltr'>
+		<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#f1f1f1">
+			<tr height='25'>
+				<td dir='ltr'><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr'><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr'><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+			</tr>
+			<tr>
+				<td dir='ltr' valign="top"><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr' valign='middle' style="font-family: 'Helvetica Neue', helvetica, sans-serif; font-size: 30px; font-weight: 300; color: #262e33; line-height: 48px; padding-left: 10px;">
+					<a href='https://forums.privatehd.to/' style='text-decoration: none; color: #262e33; border: 0;'>
+						
+						
+						
+							PrivateHD Forums
+						
+					</a>
+				</td>
+				<td dir='ltr' valign="top"><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+			</tr>
+			<tr height='25'>
+				<td dir='ltr'><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr'><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr'><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+			</tr>
+			<tr>
+				<td dir='ltr'><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr' width='800' id='main' bgcolor='#ffffff' style='border-top: 10px solid #3f6d98; line-height: 1.5;'>
+					<table width='100%' cellpadding='20'>
+						
+						<tr>
+							<td dir='ltr' style="font-family: 'Helvetica Neue', helvetica, sans-serif; font-size: 15px; color: #333333; line-height: 21px">
+								
+								
+									<strong style='font-size: 17px'>Hi mrcloud,</strong>
+									<br />
+								
+
+								
+
+Welcome to PrivateHD Forums and thank you for joining. 
+
+<br />
+<br />
+<a href='https://forums.privatehd.to/' style="color: #ffffff; font-family: 'Helvetica Neue', helvetica, sans-serif; text-decoration: none; font-size: 12px; background: #3f6d98; line-height: 32px; padding: 0 10px; display: inline-block; border-radius: 3px;">Go to PrivateHD Forums</a>
+
+<br /><br />
+<em style='color: #8c8c8c'>&mdash; PrivateHD Forums</em>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td dir='ltr'><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+			</tr>
+			<tr height='25'>
+				<td dir='ltr'><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr'><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr'><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+			</tr>
+			
+			
+			
+
+			
+			
+				<tr>
+					<td dir='ltr' valign="top"><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+					<td dir='ltr' valign='top' width='800' align='center' style="font-family: 'Helvetica Neue', helvetica, sans-serif; font-size: 12px; color: #bdbdbd; line-height: 18px; padding-left: 10px;">
+						PrivateHD Forums
+					</td>
+					<td dir='ltr' valign="top"><img src='https://forums.privatehd.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				</tr>
+			
+		</table>
+	</body>
+</html>
+
+----==_mimepart_fb46af2358b06e92102e7b856ec71789--
+

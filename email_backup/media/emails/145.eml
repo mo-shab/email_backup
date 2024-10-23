@@ -1,0 +1,595 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:22e6:b029:f9:2098:e3d8 with SMTP id b6csp1849287lkv;
+        Mon, 24 May 2021 05:19:48 -0700 (PDT)
+X-Received: by 2002:ac8:7d4c:: with SMTP id h12mr26848846qtb.130.1621858787772;
+        Mon, 24 May 2021 05:19:47 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1621858787; cv=none;
+        d=google.com; s=arc-20160816;
+        b=dddVh7uW5/LWRSkpZ+IThlPE/RE4nT4mgXhpS+GfTcGMPWWN0VbHyUQOAlubRPojnJ
+         J3TA0DsVGLNcWjNxN0TdeoZ5W0PXgaeU/MQLultPAG/Ly4ycul/e0Q35WQjO0A0jyLTT
+         xvYWwaiEVDb+COMCTfqjzxVaRYO7OlshlVS8L744otIwsF2bTWlx3l/bR/vFlRhcBOmX
+         p+i3j/ZRM6YKGAE/XSauql8ogVVpm7vUjOJSFE/g2t70QgkN1HR684CrvXLbAf+voQLx
+         NJqMy+aoeEsVF1CZvYw+TOTi9qaWlyxepd4Ugch5j24n6zFxKjpKKYy19cEbv6f51DVo
+         CwOA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:list-id:feedback-id:list-unsubscribe
+         :precedence:reply-to:date:mime-version:dkim-signature;
+        bh=06cbUiMS5tq7ZckwTAiWTjOg7ua3WaGWOjmEdr2d/Eg=;
+        b=oS1W6W297/3CqOd22L+MSQyxhUAGwFxs84HgeRCUZUXl0zOHpNfIsJAlczBX+3hxwL
+         oE1aq7wDpk5yhwUP3hCsRJHwFvP9OdtTeUmFSnx1HXhY0rHiZc/OqVDOXw9uiMFYXrZn
+         I+TR4I2fbrLt+7MFI7+NrkIednlrLSMOPRkBDIFo3RmaCYKT5LotJkD4G3DLwKwtSaxO
+         OxSduACy5wWiqvmQzXzn6vHh6WYd8VegeiKJQ91QFy1ydKOBuJ48An/idMIxBHdr4wZF
+         WUBoGVAFEADS5YEU3C+kWJZKMdmbU6n9QTjjICqYoh8Y+qQ5tPQx8kxUhMkJs2toQOQF
+         qweg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=Ne2u0gQA;
+       spf=pass (google.com: domain of 345mryagtc9a9a-d0b7kwyyag9fe.2aa270.ya88dy7agz.80z28w47.ya8@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=345mrYAgTC9A9A-D0B7KwyyAG9FE.2AA270.yA88Dy7AGz.80z28w47.yA8@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=accounts.google.com
+Return-Path: <345mrYAgTC9A9A-D0B7KwyyAG9FE.2AA270.yA88Dy7AGz.80z28w47.yA8@scoutcamp.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id w19sor12959537qkf.165.2021.05.24.05.19.47
+        for <mrcloud.med@gmail.com>
+        (Google Transport Security);
+        Mon, 24 May 2021 05:19:47 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 345mryagtc9a9a-d0b7kwyyag9fe.2aa270.ya88dy7agz.80z28w47.ya8@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=Ne2u0gQA;
+       spf=pass (google.com: domain of 345mryagtc9a9a-d0b7kwyyag9fe.2aa270.ya88dy7agz.80z28w47.ya8@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=345mrYAgTC9A9A-D0B7KwyyAG9FE.2AA270.yA88Dy7AGz.80z28w47.yA8@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=accounts.google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20161025;
+        h=mime-version:date:reply-to:precedence:list-unsubscribe:feedback-id
+         :list-id:message-id:subject:from:to;
+        bh=06cbUiMS5tq7ZckwTAiWTjOg7ua3WaGWOjmEdr2d/Eg=;
+        b=Ne2u0gQA4SKm+lZGH+a9FB5sWkuVCcbXWCYGFb8lzY9QcyIknIHM5+ZCpE99fV8aTI
+         pKHy+Ij2x92sgEMHYeZn5fzhJwLydDWc3+Ct4TTpi9y4BcIFVLBW181jIpM44Uburypm
+         gkcQazzlMhfwpjhcyACzT4T/QAtNMObKZ7iDR7YYfmwXdKmNHb4G1z3UDgU4eybIcy6N
+         plh6PRZjasDwlBGbHjjaGilVW+yVJ62b9jwZIpTaJt6x5Oo5gmMJ3itB9jLVjDdD7+Wu
+         beLlExEemGr8LPbgKd4C+BKaXME3CnZ2e5v5opEQgmg4tPJA3E+VvKrf5oix4aOPRiXk
+         dTyA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:date:reply-to:precedence
+         :list-unsubscribe:feedback-id:list-id:message-id:subject:from:to;
+        bh=06cbUiMS5tq7ZckwTAiWTjOg7ua3WaGWOjmEdr2d/Eg=;
+        b=SiGzWSCE1OSV4Vnx9zUf6vgX187gE2XgwduuLhpP5CbLP13lXR6pnEbHVJOvVEupZz
+         fK/8GAgV31GqPqHd5rXMO6wZBETf3948WesOhPE19d0MI3Gu+YLH3W9c7N5VfZSSeEmi
+         Fm47t8Cd/U8rF0M773/XOGC+JxbBxHKet8mngRnKsDXKD23iQO0gXJRti6jshuizd6bQ
+         P81aIVj3HyEuoEL8r7vwf9xWzUkqpoBkHIxCVINvBGvhs/55I3yWFyz8jzJW9N3LnTvk
+         t22pm9pertPUWYQLnl7uITvVpvzxdidjvh4VQTcBG0ddosmnJ94iHCykXpHptMfu2pkb
+         g0XA==
+X-Gm-Message-State: AOAM5332zXmLAfDIskwr4CWCZUCbuYCKlZ/ZxoBgLHqRIdXVY6gYOVbL
+	ATeT/263xmTqM/QZ86w1+8pk
+X-Google-Smtp-Source: ABdhPJxBOzDEFOayyrz0ijz+Nf8G+j8oCMFeNJBqDEmhrjjHeN+rSKZW6DG+5jTwnWBTLDYhdK2fvBc=
+MIME-Version: 1.0
+X-Received: by 2002:a05:620a:1654:: with SMTP id c20mr29470813qko.282.1621858787491;
+ Mon, 24 May 2021 05:19:47 -0700 (PDT)
+Date: Mon, 24 May 2021 05:19:47 -0700
+Reply-To: Google <no-reply@accounts.google.com>
+X-Google-Id: 4016728
+Precedence: bulk
+List-Unsubscribe: <https://notifications.google.com/g/optout/AD-FnEz9IwN5zenWu-WSgatMiR-e3YbVYEfKkoc5umDA0NvlF4XTbYi_tdh_jdW1Ysr0k9Rj62lRHn8nrg6L-BvYmGqkuayC7gO-J2KNbdNpYpayBn0Yr_qFDGWLisvIVyBz?hl=en>
+Feedback-ID: P-232--1013180605:C20079005:M110314573-en:gamma
+List-Id: <b0a8bb4990e841b919666c65f4128d727c412573.google.com>
+X-Notifications: GAMMA:<64ecd23464d9bef8d491d8a502d169488ee58b98-20079005-110875516@google.com>
+Message-ID: <64ecd23464d9bef8d491d8a502d169488ee58b98-20079005-110875516@google.com>
+Subject: =?UTF-8?Q?=E2=9C=85_Mrcloud=2C_finish_setting_up_your_Huawei_P20_Pro_w?=
+	=?UTF-8?Q?ith_Google?=
+From: Google <no-reply@accounts.google.com>
+To: mrcloud.med@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000e77f4005c3126cea"
+
+--000000000000e77f4005c3126cea
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+SGkgTXJjbG91ZCwNCg0KQSBiZXR0ZXIgQW5kcm9pZCBleHBlcmllbmNlIGlzIHdhaXRpbmcNCg0K
+VGFrZSBvbmUgbWludXRlIHRvIHNldCB1cCB5b3VyIHBob25lIHdpdGggR29vZ2xlDQoNCkdldCBz
+dGFydGVkICANCjxodHRwczovL25vdGlmaWNhdGlvbnMuZ29vZ2xlLmNvbS9nL3AvQUQtRm5FeDh0
+RVVUSDNJSTY4N1lPUF9ZRTZLVTRtcDJaYmcyTGtNREJucEZrR2VpYkotYXhITVBPX3lhREpZMV9z
+a0tIZWNmZWFPQTRQQUZPVXVQNmJoS0xpWUQyb2tBLXFqdy1yQm0zUWJNZ29ncXFPbFF3UDZyOVJJ
+Y09FeHJQZHdJell2VjB4aFAwNVZwaTk0bEJYT3dXWHRha0tNVGVucDZpMEp5ZE9nR3NOQk1EbGRV
+MVY4ellFN1hON19hSzNkeVVfMFBnRko3R2hFNVlIenlteFIzd2FkMk1tVTBVeGZWM1FxQktqRlpV
+NmRkWU9aWTVjMjNtdkxYcjFSZmYxM0NrTHFuNXVSWHR5T0Q0czk5ZWN5aXhDVmlyWHVVSUd0ZFlj
+d3dneGp0alYzLUJkbVdYd25aYXJuaDA2QmVzcHlqWWZYQ3k1LU5VNmNkN1VNVFlZNUxRa1JfamJX
+U2owTUZpX0JfcU9EQ25qMGlyVG5qU1BsVGExbTdnTngyZVVSa2s5VGt1TWtpTTk0MGdUNGFZTDd2
+RlhnTVlrTE9QY0o0QVBwakl0MmFpd05sZmhrVTBYbFlKUFRLM3RsaldVTlhSTGdCclA3cWI5eGtw
+ZEpiWkI5a3lNLXFpUjMxdWY3Z2lCcWQ0cDZ2amJ2RXA1VXE3U215NkZ6bXRxWWtXU19uRDZHeXhh
+UTQyenIyRTM1cV9TbkY4R051dF9IZDk2RWxPaVZpbERYUTgweGZGWDd5eWxjM3lyaWFBS0oweGF5
+NWFLeG5YVkIxQjI2cVpiMVZyWHFxV3ZPSWtEbnpGU2x5S0NnMlJodU9pMGNvc3VRLTVjSUcyM2lj
+R1E+DQoNClRoaXMgZW1haWwgd2FzIHNlbnQgdG8gbXJjbG91ZC5tZWRAZ21haWwuY29tIDxtcmNs
+b3VkLm1lZEBnbWFpbC5jb20+ICANCmJlY2F1c2UgeW91IHJlY2VudGx5IHNpZ25lZCBpbnRvIHlv
+dXIgR29vZ2xlIEFjY291bnQgb24geW91ciBIdWF3ZWkgUDIwICANClByby4gSWYgeW91IGRvIG5v
+dCB3aXNoIHRvIHJlY2VpdmUgZW1haWxzIHRvIGhlbHAgeW91IHNldCB1cCB5b3VyIG5ldyAgDQpk
+ZXZpY2Ugd2l0aCBHb29nbGUgd2hlbiB5b3Ugc2lnbiBpbnRvIHlvdXIgYWNjb3VudCBvbiB0aGUg
+ZGV2aWNlIGZvciB0aGUgIA0KZmlyc3QgdGltZSwgcGxlYXNlIHVuc3Vic2NyaWJlICANCjxodHRw
+czovL25vdGlmaWNhdGlvbnMuZ29vZ2xlLmNvbS9nL3AvQUQtRm5FeGlXTmo5ejA5UHZ1NmlmbDUy
+VnZrdE9VRFdKODV2UnNWY0FxU0JKWUxMcFdnYlg1YmxEOHpHYlowQ1Zaclh4MVN6YkRxc0lXM213
+NmdVSWtCdjc4MmptSm9fX19vaFhZdDdOYnNOVEctQXEzWWNscl9IRHZldkxIckszN2x3eDB5anJa
+czAxVE9fN2hySld4ekxPa3MtemlWS2EtbmZPN1BkaU5uX2puZ2JKenpUdFY0bmk4NjhrRmFDS253
+M2lmdzlGZll3TnJwWWdDWFlwM3E0VEZqcXV3M0U3S1RMT3ZwbmJNWkgtM1hJTHphRlhodHFwY21W
+d2hoXzdTMmZEODhMSlprUlM4QzRta2k4UVZvNDVEZ1hISFlDVE1tU2h1aGwxMmY4UFhZeWRZWGQ+
+Lg0KDQrCqSAyMDIxIEdvb2dsZSBMTEMgMTYwMCBBbXBoaXRoZWF0cmUgUGFya3dheSwgTW91bnRh
+aW4gVmlldywgQ0EgOTQwNDMNCg==
+--000000000000e77f4005c3126cea
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html public "- / /w3c / /dtd xhtml 1.0 transitional / /en" "http:=
+ / /www.w3.org /tr /xhtml1 /dtd /xhtml1-transitional.dtd">
+<html xmlns=3Dhttp://www.w3.org/1999/xhtml xmlns:v=3Durn:schemas-microsoft-=
+com:vml xmlns:o=3Durn:schemas-microsoft-com:office:office lang=3Den>
+<head>
+<title>Get started on your new device</title>
+<meta name=3Dx-apple-disable-message-reformatting>
+<meta http-equiv=3DX-UA-Compatible>
+<meta http-equiv=3DContent-Type content=3D"text/html; charset=3DUTF-8">
+<meta name=3Dviewport content=3D"initial-scale =3D 1.0,maximum-scale =3D 1.=
+0">
+<meta name=3Dviewport content=3Dtarget-densitydpi=3Ddevice-dpi>
+<link href=3Dhttps://fonts.googleapis.com/css?family=3DRoboto:100,100i,300,=
+300i,400,400i,500,500i,700,700i rel=3Dstylesheet>
+<style>
+.mobile_only{display:none; font-size:0px; line-height:0px; height:0px; max-=
+height:0px; overflow:hidden;}
+</style>
+<style>
+@media screen and (max-width:900px){
+.desktop_only_new {
+display:none !important;
+font-size:0px !important;
+line-height:0 !important;
+height:0px !important;
+max-height:0px !important;
+overflow:hidden !important;
+}
+.mobile_only_new {
+height: auto !important;
+overflow: visible !important;
+display: block !important;
+max-height: inherit !important;
+width: 100% !important;
+font-size:inherit !important;
+line-height:inherit !important;
+}
+.headline{
+}
+.subheadline{
+}
+.footer_main{padding-bottom:0px !important;}
+.main_table{width:95% !important;}
+.desktop_cell{display:none !important;}
+.mobile_cell{display:table-cell !important; width:100% !important;}
+}
+</style>
+<style>
+@media screen and (max-width: 767px) {
+.body{margin:0px !important; padding:0px !important; background:#fff !impor=
+tant;}
+.desktop{display:none !important;}
+.mobile{display:inline-block !important; width:100% !important;}
+img.mobile{display:inline-block !important; width:100% !important;}
+}
+</style>
+<style>
+@media screen and (max-width: 767px) {
+table, tr, td{width:100% !important; min-width:100% !important; max-width:1=
+00% !important; border-spacing: 0px; padding: 0px; margin: 0px; background-=
+size:100% !important;}
+.width_100{width:100% !important; min-width:100% !important; max-width:100%=
+ !important; border: 0px; padding: 0px; margin: 0px; line-height:0px; font-=
+size:0px;}
+.footer_main{padding: 0 10px !important;}
+.subhead_cls{padding:0px 20px 10px 20px !important;}
+.pad_lr_10{padding:0 10px !important;}
+.micon{padding-left: 10px !important;}
+.headline{
+padding-top: 15px !important;
+padding-left: 10px !important;
+padding-bottom: 3px !important;
+padding-left: 15px !important;
+}
+.subheadline{
+padding-top: 0px !important;
+padding-left: 10px !important;
+padding-bottom: 7px !important;
+padding-left: 15px !important;
+}
+.rating{padding-left: 15px !important;}
+.rate{padding-left: 15px !important; padding-bottom: 15px !important;}
+.cta_button{padding-left: 15px !important; padding-right: 15px !important; =
+padding-bottom: 15px !important;}
+}
+</style>
+<style>
+@media screen and (max-width: 767px) and (orientation: landscape){
+.table_container{width:360px !important; min-width:360px !important; max-wi=
+dth:360px !important;}
+.table_container, .main_table{min-width: 360px !important; width: 360px !im=
+portant; max-width: 360px !important;}
+}
+</style>
+<style>
+@media screen and (min-width: 812px) and (max-width: 812px),
+screen and (min-width: 736px) and (max-width: 736px),
+screen and (min-width: 667px) and (max-width: 667px),
+screen and (min-width: 568px) and (max-width: 568px),
+screen and (min-width: 414px) and (max-width: 414px),
+screen and (min-width: 375px) and (max-width: 375px),
+screen and (min-width: 320px) and (max-width: 320px) {
+.body {
+min-width: 100vw !important;
+}
+}
+</style>
+<style>
+.subhead_cls {padding: 0px 44px 10px 44px !important;}
+</style>
+<!--[if mso]>
+<style>
+html, body, table, tr, td, div{
+font-family: Arial, sans-serif !important;
+}
+</style>
+<![endif]-->
+<!--[if gte mso 9]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+</head>
+<body style=3D"color:#444444; font-family:Google Sans, Roboto, San-Francisc=
+o, Helvetica, Arial; font-size:14px; font-weight:normal; margin:0; padding:=
+0; " class=3D"body ">
+<div style=3D"display:none; font-size:1px; color:#333333; line-height:1px; =
+max-height:0px; max-width:0px; opacity:0; overflow:hidden;">Finish set-up =
+=F0=9F=93=B2</div>
+<div style=3D"font-size: 0px; line-height:0px; display: none; max-height: 0=
+px; overflow: hidden;">
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0 =E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0 =E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0 =E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0
+</div><div style=3D"font-size: 0px; line-height:0px; color: #ffffff; displa=
+y: none;">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0=C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0</div>
+<section>
+<center class=3Dwrapper_app style=3D"width:100%; margin:4px auto 0 auto;">
+<!--[if gte mso 9]> <table role=3D"presentation" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"600" style=3D"width:600px; margin:0; padd=
+ing:0; table-layout:fixed; ">
+<![endif]-->
+<!--[if !mso]><!-- --> <table role=3Dpresentation border=3D0 cellpadding=3D=
+0 cellspacing=3D0 style=3D"margin:0 auto; padding:0; table-layout:fixed; ">
+<![endif]--> <tr style=3D"border-collapse: collapse; border-spacing: 0; pad=
+ding: 0; margin: 0;">
+<td style=3D"background:#ffffff;max-width:600px; padding: 0; margin: 0;widt=
+h:600px;" width=3D600 align=3Dcenter bgcolor=3D#ffffff class=3Dmain_table>
+<table role=3Dpresentation class=3Dtable_container border=3D0 cellpadding=
+=3D0 cellspacing=3D0 width=3D504 style=3D"border-collapse: collapse; border=
+-spacing: 0; padding: 0; margin: 0; max-width:504px; width:504px; backgroun=
+d-color: #FFFFFF;">
+<tr border=3D0 style=3D"border-collapse: collapse; border-spacing: 0; paddi=
+ng: 0; margin: 0;">
+<td align=3D"" valign=3D"" bgcolor=3D"" width=3D"" height=3D"" class=3D"" s=
+tyle=3D"border-collapse: collapse; border-spacing: 0; padding: 0; margin: 0=
+; ">
+<table role=3Dpresentation width=3D504 bgcolor=3D#ffffff border=3D0 cellpad=
+ding=3D0 cellspacing=3D0 style=3D"border-collapse: collapse; border-spacing=
+: 0; padding:0; margin:0 auto; background:#ffffff; width:504px; min-width:5=
+04px;" align=3Dcenter>
+<tr>
+<td>
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 width=3D502 styl=
+e=3D"width:502px; margin:0 auto; border: 1px solid #E8EAED; border-radius: =
+8px;">
+<tr>
+<td width=3D100% style=3D"width:100%; text-align:center; padding-top: 21px;=
+ padding-bottom: 10px; padding-left:44px; padding-right:44px;" align=3Dcent=
+er valign=3Dtop>
+<img role=3Dpresentation src=3Dhttps://services.google.com/fh/files/emails/=
+google_logo_orig.png width=3D88 style=3D"width:88px; outline:0; border:0;">
+</td>
+</tr>
+<tr>
+<td class=3Dhead_cls style=3D"padding-top:0px; padding-bottom:6px; width:10=
+0%; padding-left:15px; padding-right:15px; font-family:Google Sans, Roboto,=
+ San-Francisco, Helvetica, Arial; font-size: 22px; line-height: 28px; color=
+: #202124; text-align:center; font-weight:500; background-color: #FFFFFF;di=
+rection:ltr; padding:10px 44px 0px 44px;font-size:28px; line-height:36px; f=
+ont-weight:normal;" width=3D100% dir=3Dltr>Hi Mrcloud,</td>
+</tr>
+<tr>
+<td class=3Dhead_cls style=3D"padding-top:0px; padding-bottom:6px; width:10=
+0%; padding-left:15px; padding-right:15px; font-family:Google Sans, Roboto,=
+ San-Francisco, Helvetica, Arial; font-size: 22px; line-height: 28px; color=
+: #202124; text-align:center; font-weight:500; background-color: #FFFFFF;di=
+rection:ltr; padding:10px 44px 0px 44px;font-size:28px; line-height:36px; f=
+ont-weight:normal; padding:0px 44px 15px 44px;" width=3D100% dir=3Dltr>A be=
+tter Android experience<br class=3Ddesktop_only_new> is waiting</td>
+</tr>
+<tr>
+<td class=3Dsubhead_cls style=3D"padding-top:0px; padding-bottom:20px; widt=
+h:100%; font-weight:500; padding-left:35px; padding-right:35px; font-family=
+:Google Sans, Roboto, San-Francisco, Helvetica, Arial; font-size: 18px; mso=
+-line-height-rule: exactly; color:#202124; text-align:center; background-co=
+lor: #FFFFFF; line-height:27px; direction:ltr; padding: 0px 44px 10px 44px;=
+ font-weight:normal;" width=3D100% dir=3Dltr>Take one minute to set up your=
+ phone<br class=3Ddesktop_only_new> with Google</td>
+</tr>
+<tr>
+<td style=3D"-webkit-font-smoothing: antialiased;-webkit-text-size-adjust: =
+none;-ms-text-size-adjust: 100%;border-radius: 8px;direction:ltr;padding: 1=
+0px 0 30px 0; padding: 10px 44px 30px 44px;" dir=3Dltr>
+<table role=3Dpresentation border=3D0 cellspacing=3D0 cellpadding=3D0 width=
+=3D100%>
+<tr>
+<td>
+<table role=3Dpresentation border=3D0 cellspacing=3D0 cellpadding=3D0 align=
+=3Dcenter width=3D100%>
+<tr>
+<td style=3D"text-align: center;padding: 0;">
+<div>
+<!--[if mso]>
+<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schem=
+as-microsoft-com:office:word" href=3D"https://notifications.google.com/g/p/=
+AD-FnEyjg_0gXRopnRkSnpoOQv-Wow_KPp9jgEt9kNMVMNNk-0P8vAhO-L6H8yRWnRXnxiPc2Xf=
+-a8pm7dU1TS61Cy1rT58tpzHzbcZkNnrj4Fhqp7if-mLrnMMZbEUz8CKgaRBUpRClpf1tj9EWzf=
+7qlJNyhK3qPqzdHFfIn4OhrBi14mGsWateMexk3wr0pRJ6FV-c_luocrTSne9tIzP5OZ362A6cV=
+rY7l0GdLLMRECO__gq4ng_9axssFymmnPjTiwwHlAoB_pppsBKZNAXAIuGqkOchxjikECb2y0J7=
+kB_FVxbnVm2D2W_pY3pTlQy5clqPcBA-x2QasVy2TW8HcwTW0PLSZANq8ezHWYa-CEbD9iWgFPm=
+GGAjzVt_TmFQYDU91MQgL2nMh17o9o2t76DCHeZ43z724RcoG1eUITtW--dXXCclWOerhteAuiJ=
+scuc-mu9qBkWbDtgEKyDduPROZCqatTKgqhHcEbKMHR5PAIYwn-S2EHyqRArdPlN4DblKft-D-s=
+Vj8_boqjPAnBkk46Y23O97BnA4TGJ94TcElyuqmfemcWF10Vk8HxS2J4GEjYB7lHJuzVYMM9MWE=
+dATI23GK66GQp8_sy-BMLFhkOGHMyT05OEHaC2HO" style=3D"height:37px; v-text-anch=
+or:middle; width:120px;" arcsize=3D"20%" strokecolor=3D"#1A73E8" fillcolor=
+=3D"#1A73E8">
+<w:anchorlock/>
+<center style=3D"color:#ffffff;font-family:Google Sans, Roboto, San-Francis=
+co, Helvetica, Arial; font-size:16px; font-weight:normal; word-break:normal=
+;direction:ltr;" dir=3D"ltr">Get started</center>
+</v:roundrect>
+<a href=3D"https://notifications.google.com/g/p/AD-FnEyjg_0gXRopnRkSnpoOQv-=
+Wow_KPp9jgEt9kNMVMNNk-0P8vAhO-L6H8yRWnRXnxiPc2Xf-a8pm7dU1TS61Cy1rT58tpzHzbc=
+ZkNnrj4Fhqp7if-mLrnMMZbEUz8CKgaRBUpRClpf1tj9EWzf7qlJNyhK3qPqzdHFfIn4OhrBi14=
+mGsWateMexk3wr0pRJ6FV-c_luocrTSne9tIzP5OZ362A6cVrY7l0GdLLMRECO__gq4ng_9axss=
+FymmnPjTiwwHlAoB_pppsBKZNAXAIuGqkOchxjikECb2y0J7kB_FVxbnVm2D2W_pY3pTlQy5clq=
+PcBA-x2QasVy2TW8HcwTW0PLSZANq8ezHWYa-CEbD9iWgFPmGGAjzVt_TmFQYDU91MQgL2nMh17=
+o9o2t76DCHeZ43z724RcoG1eUITtW--dXXCclWOerhteAuiJscuc-mu9qBkWbDtgEKyDduPROZC=
+qatTKgqhHcEbKMHR5PAIYwn-S2EHyqRArdPlN4DblKft-D-sVj8_boqjPAnBkk46Y23O97BnA4T=
+GJ94TcElyuqmfemcWF10Vk8HxS2J4GEjYB7lHJuzVYMM9MWEdATI23GK66GQp8_sy-BMLFhkOGH=
+MyT05OEHaC2HO" class=3D"header_part btn_mod2_mobile2" target=3D"_blank" sty=
+le=3D"background-color:#1A73E8; border:1px solid #1A73E8;border-radius:4px;=
+color:#ffffff;display:inline-block;font-family:Google Sans, Roboto, San-Fra=
+ncisco, Helvetica, Arial;font-size:14px;line-height:21px;text-decoration:no=
+ne;padding: 7px 0px 7px 0px;-webkit-text-size-adjust:none;mso-hide:all;font=
+-weight:500;text-align: center;word-break:normal;direction:ltr;width: 120px=
+;" dir=3D"ltr">Get started</a>
+<![endif]-->
+<!--[if !mso]><!-->
+<a href=3Dhttps://notifications.google.com/g/p/AD-FnEyjg_0gXRopnRkSnpoOQv-W=
+ow_KPp9jgEt9kNMVMNNk-0P8vAhO-L6H8yRWnRXnxiPc2Xf-a8pm7dU1TS61Cy1rT58tpzHzbcZ=
+kNnrj4Fhqp7if-mLrnMMZbEUz8CKgaRBUpRClpf1tj9EWzf7qlJNyhK3qPqzdHFfIn4OhrBi14m=
+GsWateMexk3wr0pRJ6FV-c_luocrTSne9tIzP5OZ362A6cVrY7l0GdLLMRECO__gq4ng_9axssF=
+ymmnPjTiwwHlAoB_pppsBKZNAXAIuGqkOchxjikECb2y0J7kB_FVxbnVm2D2W_pY3pTlQy5clqP=
+cBA-x2QasVy2TW8HcwTW0PLSZANq8ezHWYa-CEbD9iWgFPmGGAjzVt_TmFQYDU91MQgL2nMh17o=
+9o2t76DCHeZ43z724RcoG1eUITtW--dXXCclWOerhteAuiJscuc-mu9qBkWbDtgEKyDduPROZCq=
+atTKgqhHcEbKMHR5PAIYwn-S2EHyqRArdPlN4DblKft-D-sVj8_boqjPAnBkk46Y23O97BnA4TG=
+J94TcElyuqmfemcWF10Vk8HxS2J4GEjYB7lHJuzVYMM9MWEdATI23GK66GQp8_sy-BMLFhkOGHM=
+yT05OEHaC2HO target=3D_blank dir=3Dltr style=3D"text-align: center; display=
+: inline-block; text-decoration:none;">
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 align=3Dcenter>
+<tr style=3D"padding: 0; margin: 0; font-size: 0; line-height: 0;"><td styl=
+e=3D"border-top: 6px solid #ffffff;border-top-left-radius: 4px;border-top-r=
+ight-radius: 4px;display:inline-block;-webkit-text-size-adjust:none;mso-hid=
+e:all;text-align: center;"></td></tr>
+<tr><td style=3D"background-color:#1A73E8;border:1px solid #1A73E8;border-r=
+adius:4px;color:#ffffff;font-family:Google Sans, Roboto, San-Francisco, Hel=
+vetica, Arial; font-size:14px;line-height:21px;text-decoration:none;padding=
+: 7px 22px 7px 22px;-webkit-text-size-adjust:none;mso-hide:all;font-weight:=
+500;text-align: center;direction:ltr;" class=3D"header_part btn_mod2_mobile=
+2">Get started
+</td></tr>
+<tr style=3D"padding: 0; margin: 0; font-size: 0; line-height: 0;"><td styl=
+e=3D"border-top: 5px solid #ffffff;display:inline-block;border-bottom-left-=
+radius: 4px;border-bottom-right-radius: 4px;-webkit-text-size-adjust:none;m=
+so-hide:all;text-align: center;"></td></tr>
+</table></a>
+<!--<![endif]-->
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr border=3D0 style=3D"border-collapse: collapse; border-spacing: 0; paddi=
+ng: 0; margin: 0;">
+<td align=3D"" valign=3D"" bgcolor=3D"" width=3D"" height=3D"" class=3D"" s=
+tyle=3D"border-collapse: collapse; border-spacing: 0; padding: 0; margin: 0=
+; ">
+<table role=3Dpresentation border=3D0 cellspacing=3D0 cellpadding=3D0 width=
+=3D100% height=3D20 style=3D"width:100%; font-size:0; line-height:0; mso-li=
+ne-height-rule:exactly; height:20px">
+<tr>
+<td width=3D100% height=3D20 style=3D"width:100%; font-size:0; line-height:=
+0; mso-line-height-rule:exactly; height:20px">=C2=A0</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr border=3D0 style=3D"border-collapse: collapse; border-spacing: 0; paddi=
+ng: 0; margin: 0;">
+<td align=3D"" valign=3D"" bgcolor=3D"" width=3D"" height=3D"" class=3D"" s=
+tyle=3D"border-collapse: collapse; border-spacing: 0; padding: 0; margin: 0=
+; ">
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 style=
+=3D"width:504px; background-color:#FFFFFF" width=3D504 align=3Dcenter>
+<tbody>
+<tr>
+<td align=3Dcenter valign=3D"" bgcolor=3DFFFFFF width=3D"" height=3D"" clas=
+s=3Dfooter_main style=3D"border-collapse: collapse;border-spacing: 0;paddin=
+g: 0;margin: 0;width: 504px; background-color: #FFFFFF;">
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 style=
+=3D"width:504px; background-color:#FFFFFF" width=3D504>
+<tbody>
+<tr>
+<td class=3D"footer_texts footer_address" style=3D"font-family:Roboto, San-=
+Francisco, Helvetica, Arial; font-weight:normal; font-size:10px; line-heigh=
+t:16px; color:#9B9B9B; text-align:center; background-color:#FFFFFF; color:#=
+5F6368; font-family: Roboto, San-Francisco, Helvetica, Arial; font-size:12p=
+x; line-height:18px;direction:ltr; padding:0px 5px 10px 5px;" dir=3Dltr>
+This email was sent to <a href=3Dmailto:mrcloud.med@gmail.com target=3D_bla=
+nk style=3D"color:#5F6368; text-decoration:none; font-weight:normal; border=
+:0; ; white-space: nowrap;"> mrcloud.med@gmail.com</a> because you recently=
+ signed into your Google Account on your Huawei P20 Pro. If you do not wish=
+ to receive emails to help you set up your new device with Google when you =
+sign into your account on the device for the first time, please <a href=3Dh=
+ttps://notifications.google.com/g/p/AD-FnEzT7l_w_kLzgSWJAtzcDEgjMv6O-s48Rcy=
+KdzjkJg1R-F-iOddGp8jgQXbDdXwiQlca6khlL2tFkNITzvrE8Oe6AlqecwDYyJvr1aoquApdIR=
+ksy9FPM0gCfbVvb3MJZGUsWF5I4K1iFysD3r32DKeoU6Nc8YUBeCyD8k1AF_Z_278yvmBtslxp_=
+sSjbviYW8fl3awVk5E2XiJ_23wX847hicDf-OHP8RV8drq6wpKlTTiN4pfedrGWBJ0bZ8EtYZZT=
+shmCSxoA3nwNxdyLqTlDcrw8Q6x5wahGFFSwbTfGiiMBymHGeYQ target=3D_blank style=
+=3D"color:#5F6368; text-decoration:underline; font-weight:normal; border:0;=
+ ; white-space: nowrap;"> unsubscribe</a>.
+</td>
+</tr>
+<tr>
+<td class=3D"footer_texts footer_address" style=3D"font-family:Roboto, San-=
+Francisco, Helvetica, Arial; font-weight:normal; font-size:10px; line-heigh=
+t:16px; color:#9B9B9B; text-align:center; padding: 0px 10px 32px 10px;backg=
+round-color:#FFFFFF; font-size:12px; line-height:18px;color:#5F6368;">
+<span style=3D"font-size:inherit; color:inherit; font-weight:inherit; line-=
+height:inherit; font-family:inherit;">=C2=A9 2021 Google LLC 1600 Amphithea=
+tre Parkway, Mountain View, CA 94043</span>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr border=3D0 style=3D"border-collapse: collapse; border-spacing: 0; paddi=
+ng: 0; margin: 0;">
+<td align=3D"" valign=3D"" bgcolor=3D"" width=3D"" height=3D20 class=3Dmobi=
+leRow style=3D"border-collapse: collapse; border-spacing: 0; padding: 0; ma=
+rgin: 0; height:20px;">
+=C2=A0 </td>
+</tr>
+</table>
+</center>
+</section>
+<img alt=3D"" height=3D1 width=3D3 src=3Dhttps://notifications.google.com/g=
+/img/AD-FnEz0t8WveW9dmgSLbCD5OEMhhd_2hkqV6uGhUOUIDg8VSA.gif></body>
+</html>
+--000000000000e77f4005c3126cea--

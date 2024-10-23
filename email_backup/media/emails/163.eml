@@ -1,0 +1,111 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:22e6:b029:f9:2098:e3d8 with SMTP id b6csp908323lkv;
+        Wed, 2 Jun 2021 16:48:52 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJyXaxSuyQd0biKmYNxCAKSohOrT67Sv15Otzh5i6E+uxuA79tNjA/370bK3uTDod08Sf6eu
+X-Received: by 2002:a1c:ed03:: with SMTP id l3mr34741714wmh.130.1622677732768;
+        Wed, 02 Jun 2021 16:48:52 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1622677732; cv=none;
+        d=google.com; s=arc-20160816;
+        b=XHZwXWRbDqwrBS8RH2OEjBjiCIWqYGEzKtCZcJlFHWYalNM2L/Puix5LGfnPlo1F8j
+         2uG9t1NLWUa1LXxDsszM3baiLYQIHQuYM0n43fBFDVhUxS1+6nNodzZV+8pFg0CfTenw
+         qn4Tpiqh/ce+elVxhWTvNH/hjeQBS7QueTRE5Of48JRhIgl3E1d1x/Bd9bu06ZKuFsLr
+         o992FP5DCiP1gIyJC8sxJu2Wq44VgggcFiZROOM779hIvUe7+2qWFYXqRB3HoQg4//wZ
+         g38jsVmXjphPIHb203XtBumo0jKqZxQbqtq1ERzYvjUEVWTUtcXeZ7VySJAHgM4bEpbE
+         oryA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:references:in-reply-to:message-id:subject:reply-to
+         :from:to:dkim-signature:date;
+        bh=OtuvDPK/JNmygi2MuKeRicVBdJbl1RQcCazofL6hyQM=;
+        b=uONXXmhqyk3Ykx8ZdT6Sr0PBQTFxw2bWc9fisRJa5yokbjTMdh/HXVpg4wmPVsSb5B
+         9bh/tavOav6KiixtJGtQnenowogVf8TS1ini2QqSl8Fp7j7z1VefNvFMTEl/VSMHcffO
+         a3Btfk+y5SZenq9UEw9YCy6EqIU8pAXWAhO8GffLfZBah5V+35oZQnuUfXCXgv5womH2
+         W21oEKfESgXjWfoR+4vdBHs0fwBVH3cG11KlDYbfNM6kt+DU8h42s8HrIWfAJ1qPuzJB
+         kaaQMboHG93IQ4Ymo4+khQv9r4H8PD1caY+ungY93UEZy90+YrO30yWZWs7SuEowkmfy
+         Db/Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@protonmail.com header.s=protonmail header.b=ZAol7kuH;
+       spf=pass (google.com: domain of robbinama123@protonmail.com designates 185.70.40.137 as permitted sender) smtp.mailfrom=robbinama123@protonmail.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=protonmail.com
+Return-Path: <robbinama123@protonmail.com>
+Received: from mail-40137.protonmail.ch (mail-40137.protonmail.ch. [185.70.40.137])
+        by mx.google.com with ESMTPS id q66si5368600wma.180.2021.06.02.16.48.52
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 02 Jun 2021 16:48:52 -0700 (PDT)
+Received-SPF: pass (google.com: domain of robbinama123@protonmail.com designates 185.70.40.137 as permitted sender) client-ip=185.70.40.137;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@protonmail.com header.s=protonmail header.b=ZAol7kuH;
+       spf=pass (google.com: domain of robbinama123@protonmail.com designates 185.70.40.137 as permitted sender) smtp.mailfrom=robbinama123@protonmail.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=protonmail.com
+Date: Wed, 02 Jun 2021 23:48:43 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=protonmail.com;
+	s=protonmail; t=1622677732;
+	bh=OtuvDPK/JNmygi2MuKeRicVBdJbl1RQcCazofL6hyQM=;
+	h=Date:To:From:Reply-To:Subject:In-Reply-To:References:From;
+	b=ZAol7kuHCtUtXw0S+UtRB5kskXyVIM9VR+uY5+G6k6u2wYT+SrilQwv5YwLoVrWQJ
+	 JDZQV1N+ueZQ6G+h3PvqBaspbtUTSjnZMRd5aE51Z4jW5hMW4P0oWj9CCRzDuOfTOX
+	 BOiW8grovXUOyMW/sk23Fsjb4Uc+PUhhxukbTGKI=
+To: mrcloud med <mrcloud.med@gmail.com>
+From: robbinama123 <robbinama123@protonmail.com>
+Reply-To: robbinama123 <robbinama123@protonmail.com>
+Subject: Re: TL from S4M
+Message-ID: <mPRG5Y7kKrksDf5sTy3imTIlu8yCI64GxomaqGZwJKDih1Od4ZfgVvLY0fcQfZqk3wefs5N-yp4dOcVx1rb5EnKfoRKlgiUUxR8KHRQ4XRY=@protonmail.com>
+In-Reply-To: <CAHQY9xb8dxyjjybPJ_bTb9m=UuoiUFLLiCQ2LxrvVz1J8ZvoBg@mail.gmail.com>
+References: <kRgdYydM_fwDtyHlItCgVKOqYLVTrMlhTQa_o9tBdFQLUBWSsbzcrZ91DProh2jTCYtkxdKQCT5JOAcJ2nAkGkS-8EO-BV5_k5ZPmo0jJVw=@protonmail.com> <CAHQY9xb8dxyjjybPJ_bTb9m=UuoiUFLLiCQ2LxrvVz1J8ZvoBg@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b1_6aBShmXM2CeHoK8lY5Me8wOA39fCMwrle4RYpJUgqs"
+X-Spam-Status: No, score=-0.7 required=10.0 tests=ALL_TRUSTED,DKIM_SIGNED,
+	DKIM_VALID,DKIM_VALID_AU,DKIM_VALID_EF,FREEMAIL_ENVFROM_END_DIGIT,
+	FREEMAIL_FROM,FREEMAIL_REPLYTO_END_DIGIT,HTML_MESSAGE shortcircuit=no
+	autolearn=disabled version=3.4.4
+X-Spam-Checker-Version: SpamAssassin 3.4.4 (2020-01-24) on
+	mailout.protonmail.ch
+
+This is a multi-part message in MIME format.
+
+--b1_6aBShmXM2CeHoK8lY5Me8wOA39fCMwrle4RYpJUgqs
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+VGhhbmt5b3UKClNlbnQgZnJvbSBQcm90b25NYWlsIGZvciBpT1MKCk9uIFRodSwgSnVuIDMsIDIw
+MjEgYXQgNTowMiBBTSwgbXJjbG91ZCBtZWQgPG1yY2xvdWQubWVkQGdtYWlsLmNvbT4gd3JvdGU6
+Cgo+IEhlbGxvCj4gSW52aXRhdGlvbiBpcyBzZW50IHRvIHlvdXIgZW1haWwsIG1ha2Ugc3VyZSB0
+byByZWFkIHRoZSBydWxlcywgYW5kIGFkZCB5b3VyIHNlZWRib3ggdG8geW91ciBwcm9maWxlLiBF
+bmpveSBUTC4KPgo+IE9uIFdlZCwgSnVuIDIsIDIwMjEgYXQgNDoxMiBBTSByb2JiaW5hbWExMjMg
+PHJvYmJpbmFtYTEyM0Bwcm90b25tYWlsLmNvbT4gd3JvdGU6Cj4KPj4gSSd2ZSBiZWVuIGF0IHNl
+ZWRpdDRtZSBmb3IgOCBtb250aHMgbm93LiBMaWtlIHRoZSBwcmV2aW91cyBtZW1iZXIgSSBhbHNv
+IG1pc3NlZCB0aGUgVEwgcHJvbW8uIElmIHlvdSBjYW4gaW52aXRlIG1lIEkgd291bGQgYXBwcmVj
+aWF0ZSBpdC4gVGhhbmt5b3UKPj4KPj4gU2VudCB3aXRoIFtQcm90b25NYWlsXShodHRwczovL3By
+b3Rvbm1haWwuY29tKSBTZWN1cmUgRW1haWwu
+
+--b1_6aBShmXM2CeHoK8lY5Me8wOA39fCMwrle4RYpJUgqs
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGhlYWQ+PC9oZWFkPjxib2R5PiAgIDxkaXY+VGhhbmt5b3UmbmJzcDs8Y2FyZXQ+PC9j
+YXJldD48L2Rpdj48ZGl2Pjxicj48L2Rpdj48ZGl2IGlkPSJwcm90b25tYWlsX21vYmlsZV9zaWdu
+YXR1cmVfYmxvY2siPjxkaXY+U2VudCBmcm9tIFByb3Rvbk1haWwgZm9yIGlPUzwvZGl2PjwvZGl2
+PiA8ZGl2Pjxicj48L2Rpdj48ZGl2Pjxicj48L2Rpdj5PbiBUaHUsIEp1biAzLCAyMDIxIGF0IDU6
+MDIgQU0sIG1yY2xvdWQgbWVkICZsdDs8YSBocmVmPSJtYWlsdG86bXJjbG91ZC5tZWRAZ21haWwu
+Y29tIiBjbGFzcz0iIj5tcmNsb3VkLm1lZEBnbWFpbC5jb208L2E+Jmd0OyB3cm90ZTo8YmxvY2tx
+dW90ZSBjbGFzcz0icHJvdG9ubWFpbF9xdW90ZSIgdHlwZT0iY2l0ZSI+ICA8ZGl2IGRpcj0ibHRy
+Ij5IZWxsbzxkaXY+SW52aXRhdGlvbiBpcyBzZW50IHRvIHlvdXIgZW1haWwsIG1ha2Ugc3VyZSB0
+byByZWFkIHRoZSBydWxlcywgYW5kIGFkZCB5b3VyIHNlZWRib3ggdG8geW91ciBwcm9maWxlLiBF
+bmpveSBUTC48L2Rpdj48L2Rpdj48YnI+PGRpdiBjbGFzcz0iZ21haWxfcXVvdGUiPjxkaXYgZGly
+PSJsdHIiIGNsYXNzPSJnbWFpbF9hdHRyIj5PbiBXZWQsIEp1biAyLCAyMDIxIGF0IDQ6MTIgQU0g
+cm9iYmluYW1hMTIzICZsdDs8YSBocmVmPSJtYWlsdG86cm9iYmluYW1hMTIzQHByb3Rvbm1haWwu
+Y29tIj5yb2JiaW5hbWExMjNAcHJvdG9ubWFpbC5jb208L2E+Jmd0OyB3cm90ZTo8YnI+PC9kaXY+
+PGJsb2NrcXVvdGUgY2xhc3M9ImdtYWlsX3F1b3RlIiBzdHlsZT0ibWFyZ2luOjBweCAwcHggMHB4
+IDAuOGV4O2JvcmRlci1sZWZ0OjFweCBzb2xpZCByZ2IoMjA0LDIwNCwyMDQpO3BhZGRpbmctbGVm
+dDoxZXgiPjxkaXY+SSd2ZSBiZWVuIGF0IHNlZWRpdDRtZSBmb3IgOCBtb250aHMgbm93LiBMaWtl
+IHRoZSBwcmV2aW91cyBtZW1iZXIgSSBhbHNvIG1pc3NlZCB0aGUgVEwgcHJvbW8uIElmIHlvdSBj
+YW4gaW52aXRlIG1lIEkgd291bGQgYXBwcmVjaWF0ZSBpdC4gVGhhbmt5b3U8L2Rpdj48ZGl2Pjxi
+cj48L2Rpdj48ZGl2PjxkaXY+PGJyPjwvZGl2PjxkaXY+U2VudCB3aXRoIDxhIGhyZWY9Imh0dHBz
+Oi8vcHJvdG9ubWFpbC5jb20iPlByb3Rvbk1haWw8L2E+IFNlY3VyZSBFbWFpbC48YnI+PC9kaXY+
+PC9kaXY+PGRpdj48YnI+PC9kaXY+PC9ibG9ja3F1b3RlPjwvZGl2Pg0KPC9ibG9ja3F1b3RlPjxk
+aXY+PGJyPjwvZGl2PjxkaXY+PGJyPjwvZGl2PjwvYm9keT48L2h0bWw+
+
+
+--b1_6aBShmXM2CeHoK8lY5Me8wOA39fCMwrle4RYpJUgqs--
+

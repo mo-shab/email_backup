@@ -1,0 +1,115 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp348152lkb;
+        Thu, 25 Mar 2021 02:49:45 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJw8ASzTIj3QFrk3Dx8mIIoKWYLduANdB0HRAjSqcJrvgUfzPU0keeHJ/fakiUZzNWXXLzuq
+X-Received: by 2002:a25:4144:: with SMTP id o65mr1609220yba.501.1616665785309;
+        Thu, 25 Mar 2021 02:49:45 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1616665785; cv=none;
+        d=google.com; s=arc-20160816;
+        b=z0MvkOFL0tkkYzsWIo3EPoaE8MJLe0VYS3LK4oQhK89yKBA65qZI6dUoAVmkKQ60AD
+         7tBnMwjqvaMZoPJk19EEUDI+dztk5dTQMnNHG85k28jC8Wk0jJ6ze4XBuP3MV4Oh286t
+         cVgSeiUlJm/7f/r1PgrANm3OpdOtmXwPO+RvjSTb9FykbWfqtC56YRhDgSasVtGtW1oD
+         ETI3gXctIeaCBQc9PYveBHF8+rHYvxwkMY2B5IgP1737AyRyA4J2+ffA72vZ9qg6tJqN
+         tkMYNq4RVkkEBiLh0j8U40yg63AsNh3BXvKiUDSJz0usuTJZQbztWTr+UVqN1Jkwvvyq
+         e+Bw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:feedback-id:to:message-id
+         :subject:date:from:dkim-signature:dkim-signature:dkim-signature;
+        bh=D476A7ChF+6WmXaqs7w6MzRx+NqZJ88EmFYd84fGU5k=;
+        b=dGWi2AF14RXBcxuvv1JdC63HSaHuux3AeGilk2T6QD/1HgewjbnQtCkm9AfI+NH42G
+         d85fa7Ae9rmem1RxdQdMJhI9z30dPG1Zy7PVlNQoQa9+0pLS2ELEUGmStPZJdg++T8ep
+         bgSIHoRYmcLYD+d+YyNqW/N6ZnQkPYPi1UqI2Wpj8mIJzbXbHkks1pzWqA2yrtaycp8J
+         zP7U5nz5Lufwg8+sWbwT6TktFSOqtwXJ8/xm9NYobK2JAaUL3PwMU5Uy/T/E/scvgMHf
+         Ni4dsYmO9Moz3FUG7wDAIungbCLgVf224JWGYHcxj50LxKZyVD4UpVhfpiKnY/vrlyTM
+         ELpQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@irccloud.com header.s=20130905102700.pm header.b=AuGlIsmu;
+       dkim=pass header.i=@pm.mtasv.net header.s=pm header.b=nRnru4Ga;
+       dkim=pass header.i=@irccloud.com header.s=20130905102700.pm header.b=UwzQ1ZoQ;
+       spf=pass (google.com: domain of pm_bounces@return-path.irccloud.com designates 104.245.209.198 as permitted sender) smtp.mailfrom=pm_bounces@return-path.irccloud.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=irccloud.com
+Return-Path: <pm_bounces@return-path.irccloud.com>
+Received: from mta198a-ord.mtasv.net (mta198a-ord.mtasv.net. [104.245.209.198])
+        by mx.google.com with ESMTPS id g6si4763546ybd.101.2021.03.25.02.49.44
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 25 Mar 2021 02:49:45 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pm_bounces@return-path.irccloud.com designates 104.245.209.198 as permitted sender) client-ip=104.245.209.198;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@irccloud.com header.s=20130905102700.pm header.b=AuGlIsmu;
+       dkim=pass header.i=@pm.mtasv.net header.s=pm header.b=nRnru4Ga;
+       dkim=pass header.i=@irccloud.com header.s=20130905102700.pm header.b=UwzQ1ZoQ;
+       spf=pass (google.com: domain of pm_bounces@return-path.irccloud.com designates 104.245.209.198 as permitted sender) smtp.mailfrom=pm_bounces@return-path.irccloud.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=irccloud.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=20130905102700.pm; d=irccloud.com;
+ h=From:Date:Subject:Message-Id:To:Feedback-ID:MIME-Version:Content-Type:Content-Transfer-Encoding; i=team@irccloud.com;
+ bh=7oWWCx2WuFtNAdT7q1YbeHkuFR8=;
+ b=AuGlIsmuISNTu+UWVdZ+/c2CUMqmAueZFijlN9nTbOuWuds/XQXdEuSHE3Qb5W6mO0P3/Wsy2pq6
+   6V7jZNq/ZVCEmMKlSXeQyiPbreupGJYNavnEZ23+6AGzGqxLUlkYvSm3SjqALlmYw3UXf7mjAr5n
+   QxINlt12poqfajVoWro=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=pm; d=pm.mtasv.net;
+ h=From:Date:Subject:Message-Id:To:Feedback-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ bh=7oWWCx2WuFtNAdT7q1YbeHkuFR8=;
+ b=nRnru4GaOaO6pcA7dV6B08ib2W+6MxoHTszKqNjldfnp8rAGYeYiG2Legtf/diYjXngZUL5K+6b/
+   TdftuW0ZSV97OmKu2RxZRyTxjNZz0xqLG1w0tlJaDXuGyNmp3UA2PUY2Rt8FRcM/8L9dJfnAH4lZ
+   LIYHo/+jIJBFKMI8buE=
+Received: by mta198a-ord.mtasv.net id hbhebi1jk5kb for <mrcloud.med@gmail.com>; Thu, 25 Mar 2021 05:49:44 -0400 (envelope-from <pm_bounces@return-path.irccloud.com>)
+X-PM-IP: 104.245.209.198
+X-IADB-IP: 104.245.209.198
+X-IADB-IP-REVERSE: 198.209.245.104
+DKIM-Signature: v=1; a=rsa-sha256; d=irccloud.com; s=20130905102700.pm;
+	c=relaxed/relaxed; i=team@irccloud.com; t=1616665784;
+	h=cc:content-description:content-id:content-transfer-encoding:content-type:
+	date:from:in-reply-to:list-archive:list-help:list-id:list-owner:list-post:
+	list-subscribe:list-unsubscribe:mime-version:message-id:references:reply-to:
+	resent-cc:resent-date:resent-from:resent-message-id:resent-sender:resent-to:
+	sender:subject:to:feedback-id;
+	bh=D476A7ChF+6WmXaqs7w6MzRx+NqZJ88EmFYd84fGU5k=;
+	b=UwzQ1ZoQDB7NckzxG2qIjEQoZXvED6/404tyLfk1BdB7+pcKlylEi/yCazlG4981WpbfvoyPXmL
+	FF+M7OSOHsF6sNmRsCMkPoUbpNZ+KguzOh5CNTLppjEgz8G2lFT4dI8tHEAWf1sRx/YpMIiGtV46s
+	7Eo4e/KO+wdNJfsJjNs=
+From: IRCCloud <team@irccloud.com>
+Date: Thu, 25 Mar 2021 05:49:44 -0400
+Subject: Upgrade to stay connected
+Message-Id: <21060428-3d53-4de7-9cad-50af3c3e0c4a@mtasv.net>
+To: mrcloud.med@gmail.com
+Feedback-ID: s68852-_:s68852:a67636:postmark
+X-Complaints-To: abuse@postmarkapp.com
+X-PM-Message-Id: 21060428-3d53-4de7-9cad-50af3c3e0c4a
+X-PM-RCPT: |bTB8Njc2MzZ8Njg4NTJ8bXJjbG91ZC5tZWRAZ21haWwuY29t|
+X-PM-Message-Options: v1;9Hcc_PIAriBnYBOfaIwCcyIPcaJJ4QcTBG0Vjf0upsLgpqRZa9tU6RIlMq6j-Xrc
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi Mrcloud1,
+
+The trial period for your IRCCloud account is almost over and your acc=
+ount will soon become limited. This means you=E2=80=99ll no longer sta=
+y connected to IRC while offline and will have to reconnect every time=
+ you return to the app or website.
+
+To keep your account connected permanently, upgrade here:
+ https://www.irccloud.com/?/upgrade
+
+We hope you=E2=80=99ve been finding the service useful. If you have an=
+y questions or feedback, please let us know - just reply to this email=
+, or find us in our #feedback channel on IRC.
+
+Remember, we also have apps available for mobile
+iOS: https://itunes.apple.com/app/irccloud/id672699103
+Android: https://play.google.com/store/apps/details?id=3Dcom.irccloud.=
+android
+
+
+Regards,
+
+The IRCCloud Team
+
+https://www.irccloud.com
+
+IRCCloud Ltd.
+Kemp House
+152 City Road
+London EC1V 2NX
+UK

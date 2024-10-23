@@ -1,0 +1,1084 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:cb45:0:b029:11e:b57c:dd52 with SMTP id h5csp1297497lkt;
+        Sun, 1 Aug 2021 13:30:07 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzeH2jXSc7yCwti1fU7r1hkkfLbYJKiS1OHkJSFEknIt4Ltyk35bLH+jlDhIWKmuy9L4Pzg
+X-Received: by 2002:a05:6402:26c6:: with SMTP id x6mr4530807edd.175.1627849807166;
+        Sun, 01 Aug 2021 13:30:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1627849807; cv=none;
+        d=google.com; s=arc-20160816;
+        b=e+Xh1WZBwtylhEq/3ikOQcVH6u6Nk9swiGJ/XQZBFLUUWCwD/BKT10XqQDkbJlHLKq
+         ZaYqRpN+OQItZ6ipE6gQCW6QJNBTrEL+1PMgZXWxwjnoskhn9xaCxqrePQrXDR/6+BZs
+         HyeBRrrZiYExCyLY44MhEtT/TNYI7gWgNX/Kayo/O9oj3PJcoV1H/OdZ4pDN38MEot3d
+         OFfjqttMUXqZls+2NLWvKnKwLmDvUWjlOLjl32TK6iewAbpShgOJybswEy94CPI3vfB8
+         cuXrl6CxDHS2tyh53bxeuoI3dklHsg3th7ZFkHF1rHdxTy61zWLCm0H029cLgBEahRAi
+         ZaYw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:reply-to:subject:message-id:mime-version:from:date
+         :dkim-signature:dkim-signature;
+        bh=2AlqWnRsAkp2fsIYdc8knW//dz7RZIUtlo7DG3mMHi8=;
+        b=QOcgCIjPeNTL/Q1dO/Nqgq81PrK5zCH9tpf26vQJ9ERTj6B8KSDA6QZsp0Zs4ccAwu
+         ShjHqAuErictxa4SOz0DE828PUx+HEC2FjHWCjg2cfnEzynBMvMROZk6XFGxbnetohEJ
+         F/lUYj+IIh3daU3qwg4sZtSy1BGBViWfYqYifth0aNYFEG2XgRTxMHOcRwU7evwCqnTY
+         evvEbx7WfsMjtsuNDmunePjZ4bzg+6Rc4+1+UFoZIWcj6N1se89zdoXc/fzynECMVSlv
+         x/m7nqUj8E/Y0r58DxZ5zZbaEJNuRVX+yGQEJz53hE1wx63I8d35ny39mCE+IwaJndoc
+         eASg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@news.nianticlabs.com header.s=s2 header.b=XLvi7rPG;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b="sFihO7/L";
+       spf=pass (google.com: domain of bounces+8341777-4350-mrcloud.med=gmail.com@em.news.nianticlabs.com designates 168.245.70.217 as permitted sender) smtp.mailfrom="bounces+8341777-4350-mrcloud.med=gmail.com@em.news.nianticlabs.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=nianticlabs.com
+Return-Path: <bounces+8341777-4350-mrcloud.med=gmail.com@em.news.nianticlabs.com>
+Received: from o2798.em.news.nianticlabs.com (o2798.em.news.nianticlabs.com. [168.245.70.217])
+        by mx.google.com with ESMTPS id k19si7861183eds.581.2021.08.01.13.30.06
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sun, 01 Aug 2021 13:30:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+8341777-4350-mrcloud.med=gmail.com@em.news.nianticlabs.com designates 168.245.70.217 as permitted sender) client-ip=168.245.70.217;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@news.nianticlabs.com header.s=s2 header.b=XLvi7rPG;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b="sFihO7/L";
+       spf=pass (google.com: domain of bounces+8341777-4350-mrcloud.med=gmail.com@em.news.nianticlabs.com designates 168.245.70.217 as permitted sender) smtp.mailfrom="bounces+8341777-4350-mrcloud.med=gmail.com@em.news.nianticlabs.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=nianticlabs.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=news.nianticlabs.com;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to;
+	s=s2; bh=2AlqWnRsAkp2fsIYdc8knW//dz7RZIUtlo7DG3mMHi8=;
+	b=XLvi7rPGFN3UgCNXOAFTPQNX6YYCqxl7kHZT35IyWUrI1JOQv2sb+YfCI5NdK6gL5SRB
+	VKsB8Dg4Ot02cGdkJ9EPLQnsAbtd/3LRRMZo0Pot+h9OORdE1vvAYvtE+5cQerGm/9sQvJ
+	ad/69VvHAMqWBUr86jaYsV5Ol/j1h8OwE=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to;
+	s=smtpapi; bh=2AlqWnRsAkp2fsIYdc8knW//dz7RZIUtlo7DG3mMHi8=;
+	b=sFihO7/La4PR44rOXDsuKFIj5ghigTTO3M+tkF6AHb8203/eQuRH1/0C9deGMPPR1qQV
+	JUqOiAMK9SylOzpMBuA6CT5/WjfyOsm32Xa2HK2K8wcYnWNgZAmPAtB+xej/NQ3gEjPT+i
+	x5ICbLyVMR3ugDkERScC6hWCXPyYs8ZBI=
+Received: by filterdrecv-6d8b86f4d4-h79gz with SMTP id filterdrecv-6d8b86f4d4-h79gz-1-61070449-55
+        2021-08-01 20:30:01.844554771 +0000 UTC m=+525552.549203745
+Received: from ODM0MTc3Nw (unknown)
+	by geopod-ismtpd-3-2 (SG) with HTTP
+	id DzEOw79tQPGcJD7brRKxcQ
+	Sun, 01 Aug 2021 20:30:01.839 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=2a74ff64a4ff3c23f48ade9cf9773e060e756041badf631732aa3de68e47
+Date: Sun, 01 Aug 2021 20:30:01 +0000 (UTC)
+From: Ingress <ingress@news.nianticlabs.com>
+Mime-Version: 1.0
+Message-ID: <DzEOw79tQPGcJD7brRKxcQ@geopod-ismtpd-3-2>
+Subject: =?UTF-8?B?8J+PhQ==?= August Virtual First Saturday
+Reply-To: no-reply@nianticlabs.com
+X-Feedback-ID: 8341777:SG
+X-SG-EID: 
+ =?us-ascii?Q?n8wjf2ZHaGqe9vxmK1yRFiGjL=2FZh=2FZkGAYKNHiWNc8eHJaosvyngvc=2Fidsoksa?=
+ =?us-ascii?Q?mQT8V10UfM=2FAwkmzeDoSg2I8p=2Fw8DyyUA2Pf49m?=
+ =?us-ascii?Q?V+Zk16Xk7sbiCJ2Qlw5m3TGRpdmm3KvCrGvFXvK?=
+ =?us-ascii?Q?ojBt=2FRskXtMT2p722kjXitdcj9So8LiyXfUVKlK?=
+ =?us-ascii?Q?Ds93j5d=2FvrU1knSiekLRdYzqUMLN63Tj9gLSCue?=
+ =?us-ascii?Q?rrTxZCDmI4MkIsQbweuw9D4aHI0KYw+=2FRDW1LF?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FKvUYPFb2vwyNNeBc9bJi?=
+ =?us-ascii?Q?Ch2U+qayagF9R=2FgbiouGtTSJoQzKvXeW8xEVo5X?=
+ =?us-ascii?Q?ifzaNi9e8fpDiCsIjU6LR1lv1VNOGUaEMtCbmNA?=
+ =?us-ascii?Q?yRP72NKknp3Y2n0gfL3aGJNuSgyk90GZCUrGk0=2F?=
+ =?us-ascii?Q?RC6HqvB=2FmNB++XBrHSgx5zCWdik2vQQseA0bI8Z?=
+ =?us-ascii?Q?lJC+CdCordE=2FR3jS1olcle2FGV3GyzvEEPmOQ+l?=
+ =?us-ascii?Q?Ns58l4zmPyv8yw7h10YxRKB5nKwruMIoFFhocpT?=
+ =?us-ascii?Q?ar4zXWam2RV9blz4NIsMb3Vbq7buJucVDCjsUrj?=
+ =?us-ascii?Q?arE9LvjZm=2F+rIypDLNM3Ytjw6ZkA9kT5NxfnJ4Y?=
+ =?us-ascii?Q?h2XvPU2yeQf0tG6hIFsQ5d0AsQqEpmJAtGWGY69?=
+ =?us-ascii?Q?36KqLqBn2XdQXjOSU=2FbRgm5bViwFjpWwrUTNLbh?=
+ =?us-ascii?Q?p88KhXMes5lBblNK1BF9GVx18KBQ86WfGe2ZihT?=
+ =?us-ascii?Q?7rY4RXEsnJRly1Ky=2FaqX2?=
+To: mrcloud.med@gmail.com
+X-Entity-ID: ewz76wPwOOWqgseepxXEEg==
+
+--2a74ff64a4ff3c23f48ade9cf9773e060e756041badf631732aa3de68e47
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+ We=E2=80=99ll have our August FS@Home
+on Saturday, August 7th. Be sure to register and connect with the
+Ingress community and don=E2=80=99t miss out on obtaining the Media of
+August=E2=80=99s Artwork competition winner!
+                     Faction:
+Resistance
+Level: 4 Ingress Prime
+BEGIN TRANSMISSION ( https://links.news.nianticlabs.com/ls/click?upn=3DivI1=
+9cFRVvyn3BQVqmNLrQTWGXIpaAqo-2BMPFHfALkrZYjp1kp6GtSNU2PYVAmlt5CBPj_QepoJ3M9=
+Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi9=
+0PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig=
+62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2F=
+ZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoT=
+BL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b=
+7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI=
+9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVC=
+jR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHlpskzsomEV5KpxjDvbx8pk4TUXJGBwF-2BL=
+jsAuH8CfU85jxUuvg8Te4ggnIqnGWVl1HIUyybO6kPpLWwbkQ6f86daqWGzMsbdsMVjC4pzfh9q=
+RkgTmJy1p-2B302L2eeBiVbo8lwZXddgQn4cgNjvZcdI-3D )
+            August FS@Home
+=F0=9F=97=93=EF=B8=8F Saturday, August 7th, 2021        We=E2=80=99ll have =
+our August
+FS@Home on Saturday, August 7th. Be sure to register and connect
+with the Ingress community and don=E2=80=99t miss out on obtaining the
+Media of August=E2=80=99s Artwork competition winner!       I'm
+Interested! ( https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvy=
+n3BQVqmNLrRkrX-2BK6dmRgePpCtjUAvXBxeoT9yESqmNrt1y4fMAdgbjUs_QepoJ3M9Piv-2BH=
+3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2=
+BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F=
+49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo=
+52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPW=
+gYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNX=
+sf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJ=
+wwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJ=
+CK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHu3SudKR8P2OAMsHNmPSALpKQhL9WbdinVicF4QA-2F=
+uPMxAkS2pATpjki7lQ5gLEuhUZvUugsq79zcVzgy-2BE02Ylq-2F-2BFY4sO3cSfs20jPB-2Bl2=
+F7RbcvqlJOiu35FMbUHXxxKDORCQD17j-2BVl6uPD-2Ffvg-3D )
+Ingress First Saturday is a cross-faction event organized and run
+by agents, for agents all across the world on the First Saturday
+of each month. To view the list of cities hosting First Saturdays
+and to register, access the Fev Games=E2=80=99 IngressFS Event
+Registration page ( https://links.news.nianticlabs.com/ls/click?upn=3DivI19=
+cFRVvyn3BQVqmNLrRkrX-2BK6dmRgePpCtjUAvXBxeoT9yESqmNrt1y4fMAdgwf1p_QepoJ3M9P=
+iv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90=
+PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig6=
+2zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZ=
+NTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTB=
+L-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7=
+thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9=
+X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCj=
+R1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHsP0JZEAFiLeVmHJKdtOBWTd0kmNS1l1x5sHI=
+NLUKKUctriR1rqEgxod7UCPeGK1r-2BEQy32-2F6BWysU-2FiSuhtNm-2FEudXJHNx3rl8Y9Emc=
+M-2FDuWrLL1ZFdMpugHzCEbptiH1RHbZJTJ1uVVnA32yxN5mQ-3D ). You don=E2=80=99t
+want to miss out.       Learn More=20
+( https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvyn3BQVqmNLrRk=
+rX-2BK6dmRgePpCtjUAvXBxeoT9yESqmNrt1y4fMAdgFzjJ_QepoJ3M9Piv-2BH3Hf7qB6es7FO=
+todjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bN=
+eLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6P=
+nV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZN=
+t51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4=
+sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA=
+0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLo=
+Q8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2=
+CFxA-2BwsKRXCiSze75AHp3qTGinIB1A57RNPxYM64J39OG4dwaiaXqWYJ-2BjiD4xemSUlBZ5m=
+atP3BJJ6vl9qIbY9BlEsQYgBgnaFwlSPm0sxd-2FVdw3Z6XztMNhV0tAZCucgcuSg1Z7o4GR690=
+ptdd9Q2vFq3mdksgb02TpS-2BWM-3D )
+
+              ingress=20
+( https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvyn3BQVqmNLrSg=
+riayukgSANLDbjN-2FKTm0-3DCMX-_QepoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2r=
+ncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkI=
+lJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLka=
+vqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX1=
+2lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9S=
+bnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2Fbd=
+kKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNy=
+HcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze7=
+5AHgDpOIiQI-2BrOPTGVfGklv-2FBi1R5PU7ToGU4h-2B-2BnP-2BLJ-2FF48-2BXi-2FtoMTcn=
+4bQhdebgRjSWZgPvhufTeHrMkuuhbtBfYvWB0rKFEYFv4WnoJcBkoaMYhDbghCH76zY1CnE0JHs=
+2i7ia-2FgmOKroCzue-2Fzk-3D )  fb ( https://links.news.nianticlabs.com/ls/cl=
+ick?upn=3DexuuFupu5TcXl8J9NltzdamDat704fYAouDGTF4NiJvjwd5vvWHzw3eZFCxCYBHAz=
+UFo_QepoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx=
+-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fk=
+KJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfH=
+qf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1L=
+qXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkk=
+XKkjiaN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0=
+H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrt=
+ZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHoyIG8FS-2B7tAIkIzKn8CPb=
+FK9bm1HoePtHzLldXk7aLsPGmVF7vyX-2BJvQ4kuzXfzzCMG-2F2TmVJF-2Fo-2F0B2vZ81P3xP=
+a-2F3RXK-2FGb-2FxIqQe2tZEfqJT8myV11ZAeeEkr9HlQmbtxbg3wfN5B36C4qtALzg-3D )
+tw ( https://links.news.nianticlabs.com/ls/click?upn=3DZPaH6PQ6-2BiRxMYAt7i=
+mf9YgTWwneLEtbhqUNpIsAgg1gSE5OsROCCqltZ7z0eDM8mc2w_QepoJ3M9Piv-2BH3Hf7qB6es=
+7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk=
+0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJ=
+y6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0L=
+VZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGX=
+Pw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQY=
+geA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9=
+CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6M=
+WQ2CFxA-2BwsKRXCiSze75AHgej1f7ER7UDcpR9eY8Pp1Tul1Zx-2FbNLRbB5oBR75M64jeJcal=
+0vogacPFRAVhvUA1aa6vYygP-2FiwgtWTFxCZwel5sW9EabDdpc3yPh11msGDbeckCza-2BYYLu=
+Vn7klKEKzVVlvi86wi06WjuVWq-2BAR8-3D )  insta=20
+( https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvyn3BQVqmNLrSO=
+3vBSFkNc7UB7SYAaYWIbpKcEubl-2Bu1-2F-2FcRQ4c8XglcoOf_QepoJ3M9Piv-2BH3Hf7qB6e=
+s7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHO=
+k0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2F=
+Jy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0=
+LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SG=
+XPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQ=
+YgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF=
+9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6=
+MWQ2CFxA-2BwsKRXCiSze75AHpRbJYtC75IGLMK5cRG9e3aKdNdvjImXLP9ZatACzqhCL5xEmG8=
+yBzFjeyHO0Snp66hN-2BFuyIi0Bxnt9qMT2F-2FjEYo1YsQi9N2qocy-2FAuG-2BDMlUrNWQBKX=
+ebDqOna3pVVQJ38f1S25iuaIYGCia1F2c-3D )  yt=20
+( https://links.news.nianticlabs.com/ls/click?upn=3DexuuFupu5TcXl8J9NltzdTD=
+lqiEOkQ1fmCEXh2nTl2IxYYePorj-2BCovLsXcPFEDFvYqi_QepoJ3M9Piv-2BH3Hf7qB6es7FO=
+todjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bN=
+eLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6P=
+nV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZN=
+t51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4=
+sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA=
+0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLo=
+Q8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2=
+CFxA-2BwsKRXCiSze75AHiPjcmCT7l1-2BAkFL4EoDEs4ned9l55wDgSjVCPUY-2B5eS18DfDhv=
+Z3N8ZZjD2oyFjkpcIC4t3yEgnOF90nSnbCqK8XzeCJQa9GAqKBfckQIfwcqSiFWCNU9zfACzqcS=
+rRQBKMQZ3q6gBZ5RKRCCMgLp4-3D )
+Copyright =C2=A9 2015-2021 Niantic, Inc. All Rights Reserved.
+
+This email was sent to mrcloud.med@gmail.com because
+you indicated that you'd like to receive news, offers,
+promotions, and updates from Niantic. If you don't want to
+receive such emails in the future, please unsubscribe here (
+https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvyn3BQVqmNLrf0pD=
+92ei6geRGGiYobkfd2WNZcDjVw-2BIOaBTR5wKmRcqmQMiufd7H37dtXTgTAvskNTnfjMm1hFIs=
+QJAGziFP8T4oR8uvt0yTnIIPpf76Mk-2FONzxf4faxcwGIAMUMEZfuG-2F4ZXRROuzNyXiwxLBd=
+fsFkH01y7ZjVWWsdyVtIK80mz7abbAfBlLMQ5Wk7jtyz3855NLC6SoNBdWgXHM3UQBI6qE0iwLO=
+6IKdkiWmOwF-2FOzltH6Mv2ZTV-2B2X28FaWzCxZq8vnpcjId5CviV9GqVCJcs35WQkVPmf-2Bj=
+z2ZgRSLD6lJim2b1u0ZOvh3fIH2DNafnBVTqzKtfTVWWw5oZGaX9ECkBbLBmBmgJ5-2B8mdhQmk=
+Ts2Pw5zA7-2FRlV-2F-2Fj82W0LsAXoB1nNR1aNRjUTIuxAzKZ-2FWs6rKF5S8EtWmAfkTJkIqR=
+6nZckSJ-2BY-2Bk6SR1-2FdHaWGf7FDzZ5t75bephYHxHlNud-2Foy3-2B56sah2HUGA80AvRtj=
+rSuiDpsVoZ83vAVAJpo8c6V6cS9zR4ucVeEggSiz-2BwKFqSyI3x-2Bof9aAp69hUmNwC2j1RF3=
+vJmy-2B5pfA-3D-3Di1Ls_QepoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmE=
+pSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB=
+4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2=
+BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw7=
+9Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-=
+2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47V=
+s6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-=
+2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHkYiov=
+SwD7jny9mkzUAfquKDbOwzAoh5pLxqC4W9m7spb3g8FdcszPetLVywbzMhqM8U8Rb3FoghBNsjT=
+PXp5XwASo61KhanK5YZ1AjGBDwkn3FAxtbSnl4hQ7AJo7GFwZiQuHv4JLk6kEJ0aqjID7o-3D )=
+. You can also change your
+preferences by opening the Ingress app and updating your settings
+from the Email menu.      Get it on Google Play=20
+( https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvyn3BQVqmNLraj=
+Xqd0Fw87i5Qtds1UfqbqA6a5a-2BhSa5Rdvl978-2BtqBNIRiaVIDKbCgCXJ-2F-2B1W-2F-2BT=
+1zTGQ9PDvzM-2BIiexy3dgnL3G-2BVkBr2zvx9mVxBvg7xV3Yp_QepoJ3M9Piv-2BH3Hf7qB6es=
+7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk=
+0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJ=
+y6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0L=
+VZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGX=
+Pw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQY=
+geA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9=
+CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6M=
+WQ2CFxA-2BwsKRXCiSze75AHlgIVykrLGswbZHv0y4Q991y2H3d2pfCYTJHjq5E2Jzjpd4yhpVi=
+mulyoJcnOBZU6N-2FaytYDh0506TyP2HNdIGkg4zl-2FPXd2eeJSzHxeD64fp-2BKpStNXYt5Vg=
+PREVGpszdEpt-2Fxv3YBsPKknwFxNUKw-3D )
+  Download on the App Store=20
+( https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvyn3BQVqmNLrbg=
+0zi3k8mpY3PPxdVWAxKH950hhIOcbzNmqx52f5efPwGxEV2ui7rfDsKrRAPNwlw-3D-3Dw4tp_Q=
+epoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3R=
+TwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz=
+-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1By=
+O6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2=
+BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkji=
+aN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw=
+4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQ=
+lcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHn0NvQqbaAJ7lp92Lhn3rCHjCDyzi=
+DDYbqWYpl-2FVBymJJ-2FwP0PEBpnMd0Pe6UsmfalqtH7y7DZ1svWliBC7rG3X4jSJOG1o3rBFw=
+ohQ-2FPc9Xu9vY-2BWr3-2BvERvRE0PF4-2FJPTtNTGbvOOydOmhxnXzaYo-3D )
+Niantic ( https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvyn3BQ=
+VqmNLrTNux-2FMT-2FOK8WKs-2FCLqPqM80XFZ5EEQo-2BAwku6i62nouR93H_QepoJ3M9Piv-2=
+BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5=
+-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-=
+2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWD=
+do52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2B=
+PWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFB=
+NXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83U=
+YJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wX=
+ZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHk7ZAlxZJcecUflYarfLaaRpi6-2BD6IacOmIiGx8=
+-2BJTnr-2FEz9VASeVItTbvi-2BXyoqQ8sx2T6OxwsozE5JUs0eJev2ioUIJgHlQtnV3nqh4Nke=
+b1AE2oBbtm6pzQ29eXITW-2FPbPA2VJiMwTZChYzZghPY-3D )
+
+Help Center ( https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvy=
+n3BQVqmNLrboXzvaQuN7jKEywNCrT35yPGdXkmWgDT1EvA82Zc-2FTcYQEW_QepoJ3M9Piv-2BH=
+3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2=
+BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F=
+49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo=
+52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPW=
+gYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNX=
+sf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJ=
+wwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJ=
+CK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHqRhSY-2FVhn654MHN6-2Bbp3oN-2BhBmGlk50OtwKI=
+QMFtIUYKNFydgllBoQdx9cJLTkTyb14KToFcR11xOLIjk2J1GcpglSjm4XrDR-2FitNgvKea7pP=
+fevDIFj8z4DoPsXmCXV6CX9fEnCv9EQbK3NLAQNns-3D ) Privacy
+Policy ( https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvyn3BQV=
+qmNLrTNux-2FMT-2FOK8WKs-2FCLqPqM-2BgpXAhMD-2BnHmX2SnZEe-2FWQVRYf_QepoJ3M9Pi=
+v-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90P=
+dY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62=
+zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZN=
+TWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL=
+-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7t=
+hFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X=
+83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR=
+1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHnP4Vi150hePd9hc2hIztyvS2gmjWbpw5bauSy=
+z7F7ewILYekhvXSTNq6WhtRLtnoSw7jru7qwi0JABb3dL9fo430viZmOPfnFRpBzL-2BKq0YTT4=
+8XPnpxfLOhDkTyEPS0Z0qVG8BOnZiL4r2vDnwCTs-3D ) Terms of
+Service ( https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvyn3BQ=
+VqmNLrTNux-2FMT-2FOK8WKs-2FCLqPqM8LsyuyMtOp-2FHM98QMtkBZr8lku_QepoJ3M9Piv-2=
+BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5=
+-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-=
+2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWD=
+do52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2B=
+PWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFB=
+NXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83U=
+YJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wX=
+ZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHpEOUqx5j-2BQDglHtt9o9Nai6whHr7-2BW6ZI4mo=
+srW7Btaj1duQVwj3Z3dokwOCJ2MauqvjrMzKkJnTjfD-2FEPtH-2BKZ3LeXVIA1vrGn5FW6PuaL=
+-2FExjy8PSPpNknaE7NJ5Vyy5JWKrrtlEmiF-2BJzHohclk-3D ) Unsubscribe (
+https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvyn3BQVqmNLrf0pD=
+92ei6geRGGiYobkfd2WNZcDjVw-2BIOaBTR5wKmRcqmQMiufd7H37dtXTgTAvskNTnfjMm1hFIs=
+QJAGziFP8T4oR8uvt0yTnIIPpf76Mk-2FONzxf4faxcwGIAMUMEZfuG-2F4ZXRROuzNyXiwxLBd=
+fsFkH01y7ZjVWWsdyVtIK80mz7abbAfBlLMQ5Wk7jtyz3855NLC6SoNBdWgXHM3UQBI6qE0iwLO=
+6IKdkiWmOwF-2FOzltH6Mv2ZTV-2B2X28FaWzCxZq8vnpcjId5CviV9GqVCJcs35WQkVPmf-2Bj=
+z2ZgRSLD6lJim2b1u0ZOvh3fIH2DNafnBVTqzKtfTVWWw5oZGaX9ECkBbLBmBmgJ5-2B8mdhQmk=
+Ts2Pw5zA7-2FRlV-2F-2Fj82W0LsAXoB1nNR1aNRjUTIuxAzKZ-2FWs6rKF5S8EtWmAfkTJkIqR=
+6nZckSJ-2BY-2Bk6SR1-2FdHaWGf7FDzZ5t75bephYHxHlNud-2Foy3-2B56sah2HUGA80AvRtj=
+rSuiDpsVoZ83vAVAJpo8c6V6cS9zR4ucVeEggSiz-2BwKFqSyI3x-2Bof9aAp69hUmNwC2j1RF3=
+vJmy-2B5pfA-3D-3DUakb_QepoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmE=
+pSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB=
+4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2=
+BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw7=
+9Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-=
+2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47V=
+s6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-=
+2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHt-2Ba=
+zI-2FuXMFweamLRu-2BSD6DOupOOdzq98uNTt1LYxFhKO9l4QUL9rqphJd-2FDNRQScBjsupa1T=
+iFL20yShnr3Oyx5VzNf79YV8EO15k0stYJCMOH0IgKaZhgwp8CNxX-2FJLFDosJnZ7OPUb4KGD0=
+K0csQ-3D )
+
+--2a74ff64a4ff3c23f48ade9cf9773e060e756041badf631732aa3de68e47
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml><![endif]-->
+<title>INGRESS PRIME</title>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0 ">
+<meta name=3D"format-detection" content=3D"telephone=3Dno">
+
+<!--[if !mso]><!-->
+<link href=3D"https://fonts.googleapis.com/css?family=3DExo:300,400,500,600=
+,700,800,900" rel=3D"stylesheet">
+<!--<![endif]-->
+
+<!--[if gte mso 9]>
+<style type=3D"text/css">
+.em_w_break { word-break:break-all;}
+</style>
+<![endif]-->
+
+<style type=3D"text/css">
+body { margin: 0 auto; padding: 0; -webkit-text-size-adjust: 100% !importan=
+t; -ms-text-size-adjust: 100% !important; -webkit-font-smoothing: antialias=
+ed !important; }
+img { border: 0 !important; outline: none !important; }
+p { Margin: 0px !important; Padding: 0px !important; }
+table { border-collapse: collapse; mso-table-lspace: 0px; mso-table-rspace:=
+ 0px; }
+td, a, span { border-collapse: collapse; mso-line-height-rule: exactly; }
+.ExternalClass * { line-height: 100%; }
+.em_defaultlink a { color: inherit; text-decoration: none; }
+.em_purple a { color: #9588e4; text-decoration: none; font-weight: bold; }
+.em_footer_link a { color: #9588e4; text-decoration: none; }
+.em_white a { color: #ffffff; text-decoration: none; }
+.em_g_img + div { display: none; }
+a[x-apple-data-detectors], u + .em_body a, #MessageViewBody a { color: inhe=
+rit; text-decoration: none; font-size: inherit; font-family: inherit; font-=
+weight: inherit; line-height: inherit; }
+@media only screen and (max-width:667px) {
+.em_main_table { width: 100% !important; }
+.em_wrapper { width: 100% !important; }
+.em_hide { display: none !important; }
+.em_full_img img { width: 100% !important; height: auto !important; }
+.em_full_img { width: 100% !important; height: auto !important; }
+.em_aside10 { padding: 0px 10px !important; }
+.em_ptop { padding-top: 20px !important; }
+.em_h20 { height: 20px !important; font-size: 1px!important; line-height: 1=
+px!important; }
+.em_mob_block { display: block !important; }
+u + .em_body .em_full_wrap { width: 100% !important; width: 100vw !importan=
+t; }
+.em_side20 { width: 20px !important; }
+.em_pad1 { padding: 0px 20px 30px 20px !important; }
+.em_aside20 { padding: 0px 20px !important; }
+}
+@media screen and (max-width: 480px) {
+.em_font_30 { font-size: 28px !important; line-height: 32px !important; }
+.em_font_10 { font-size: 12px !important; line-height: 17px !important; }
+.em_icon { width: 27px !important; height: auto !important; }
+.em_footer_font { font-size: 13px !important; line-height: 20px !important;=
+ }
+}
+@media screen and (max-width: 374px) {
+.em_font_30 { font-size: 24px !important; line-height: 28px !important; }
+.em_font_10 { font-size: 11px !important; line-height: 15px !important; }
+.em_icon { width: 23px !important; height: auto !important; }
+.em_icon_1 img { width: 130px !important; height: 44px !important; }
+.em_footer_font { font-size: 11px !important; line-height: 15px !important;=
+ }
+.em_side5 { width: 5px !important; }
+}
+</style>
+<!--[if mso]>
+<style type=3D"text/css">
+body, table, td {font-family: Arial,  sans-serif !important;}
+</style>
+<![endif]-->
+</head>
+
+<body class=3D"em_body" style=3D"margin:0px auto; padding:0px;" bgcolor=3D"=
+#f3f3f3">
+<div style=3D"display:none !important;visibility:hidden;mso-hide:all;font-s=
+ize:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:=
+0;overflow:hidden;">
+We=E2=80=99ll have our August FS@Home on Saturday, August 7th. Be sure to r=
+egister and connect with the Ingress community and don=E2=80=99t miss out o=
+n obtaining the Media of August=E2=80=99s Artwork competition winner!=20
+</div>
+<!-- =3D=3D Header Section =3D=3D -->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap" bgcolor=3D"#f3f3f3">
+  <tr>
+    <td align=3D"center" valign=3D"top"><table align=3D"center" width=3D"80=
+0" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"em_main_table"=
+ style=3D"width:800px; table-layout:fixed;">
+        <tr>
+          <td align=3D"center" valign=3D"top" style=3D"padding:0px 60px;" c=
+lass=3D"em_aside10"><table width=3D"680" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"width:680px;" class=3D"em_wrapper"=
+>
+              <tr>
+                <td align=3D"center" valign=3D"top" style=3D"padding:30px 0=
+px 30px 0px;"><table width=3D"650" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" align=3D"center" class=3D"em_wrapper" style=3D"width:650px;">
+                    <tr>
+                      <td valign=3D"top">
+<table width=3D"405" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width:405px;" align=3D"left" class=3D"em_wrapper">
+                          <tr>
+                            <td align=3D"center" valign=3D"top"><table bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" class=3D"em_wra=
+pper">
+                                <tr>
+                                  <td align=3D"center" valign=3D"top"><tabl=
+e border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" width=3D"=
+210" style=3D"width:210px;" class=3D"em_wrapper">
+                                      <tr>
+                                        <td align=3D"left" valign=3D"top"><=
+img src=3D"https://appboy-images.com/appboy/communication/assets/image_asse=
+ts/images/5c2fc7ed15dae611c2a8b2a8/original.png?1546635245" alt=3D"" width=
+=3D"30" height=3D"27" border=3D"0" style=3D"display:block; max-width:30px;"=
+></td>
+                                      </tr>
+                                      <tr>
+                                        <td align=3D"left" valign=3D"top" s=
+tyle=3D"font-size:16px; line-height:17px; font-family:Exo,Arial,sans-serif;=
+ color:#444444;">=20
+                                      =20
+                                        Faction: <span style=3D"color:#7e7e=
+7e">Resistance</span><br>
+                                          Level: <span style=3D"color:#7e7e=
+7e">4</span>
+</td>
+                                      </tr>
+                                    </table></td>
+                                  <td class=3D"em_side20" width=3D"40" styl=
+e=3D"width:40px;">&nbsp;</td>
+                                  <td align=3D"right" valign=3D"top"><img s=
+rc=3D"https://appboy-images.com/appboy/communication/assets/image_assets/im=
+ages/5bad4bcfe5b31e6d59c866fb/original.png?1538083791" width=3D"113" height=
+=3D"116" border=3D"0" alt=3D"Ingress Prime" style=3D"display:block; max-wid=
+th:113px; font-size:16px; line-height:19px; color:#000000; font-family:Aria=
+l, Helvetica, sans-serif;"></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table>
+                       =20
+                        <!--[if gte mso 9]>
+</td>
+<td valign=3D"top">
+<![endif]-->
+                       =20
+                        <table width=3D"205" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0" style=3D"width:205px;" align=3D"right" class=3D"em_hide"=
+>
+                          <tr>
+                            <td class=3D"em_h20" height=3D"30" style=3D"hei=
+ght:30px;">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td align=3D"center" valign=3D"top"><a href=3D"=
+https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvyn3BQVqmNLrQTWG=
+XIpaAqo-2BMPFHfALkrZYjp1kp6GtSNU2PYVAmlt5GRJb_QepoJ3M9Piv-2BH3Hf7qB6es7FOto=
+djIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeL=
+tyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV=
+5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt5=
+1ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF=
+3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA0s=
+LbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8=
+BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CF=
+xA-2BwsKRXCiSze75AHuTY-2FjYGtCkHvr7RuIHDOB5XnNSgTHE2jC2RM7Tp7IHz-2Fb4m1Tn-2=
+BJgr-2FvRB0AErmfqJADITZFUVFTFMFUCS2LjF-2Betg8oU9QWaTv7kTxKnyHA5j-2FTCSsSxAa=
+djSkJ8meC-2FPbDaae3GaKAPLrJZb0OTQ-3D" target=3D"_blank"><img src=3D"https:/=
+/appboy-images.com/appboy/communication/assets/image_assets/images/5bad4bcf=
+e5b31e6e2ac866fb/original.png?1538083791" width=3D"205" height=3D"73" borde=
+r=3D"0" alt=3D"BEGIN TRANSMISSION" style=3D"display:block; max-width:205px;=
+ font-size:16px; line-height:19px; color:#000000; font-family:Arial, Helvet=
+ica, sans-serif;"></a></td>
+                          </tr>
+                        </table>
+</td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<!-- =3D=3D //Header Section =3D=3D -->=20
+
+<!-- =3D=3D Section-1 =3D=3D -->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap" bgcolor=3D"#f3f3f3">
+  <tr>
+    <td align=3D"center" valign=3D"top"><table align=3D"center" width=3D"80=
+0" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"em_main_table"=
+ style=3D"width:800px; table-layout:fixed;">
+        <tr>
+          <td align=3D"center" valign=3D"top" style=3D"padding:0px 100px 36=
+px 100px;" class=3D"em_pad1"><table width=3D"600" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"width:600px;" class=3D"e=
+m_wrapper">
+              =20
+              <tr>
+                <td align=3D"center" valign=3D"top">=20
+                  <table width=3D"600" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" align=3D"center" style=3D"width:600px;" class=3D"em_wrapper">
+                    <tr>
+                      <td class=3D"em_defaultlink em_font_25" align=3D"cent=
+er" valign=3D"top" style=3D"color:#9588e4; font-size:40px; line-height:45px=
+; font-family:Exo,Arial,sans-serif; text-transform:uppercase; font-style:it=
+alic; font-weight:300; padding-bottom:15px;">
+                   August FS@Home<br>
+<span style=3D"font-size:28px; color: #444444">
+=F0=9F=97=93=EF=B8=8F Saturday, August 7<sup style=3D"font-size: 13px">th</=
+sup>, 2021</span>
+</td>
+                    </tr>
+                     <tr>
+                <td align=3D"center" valign=3D"top" style=3D"padding-bottom=
+:16px;"><a target=3D"_blank" href=3D"https://links.news.nianticlabs.com/ls/=
+click?upn=3DivI19cFRVvyn3BQVqmNLrRkrX-2BK6dmRgePpCtjUAvXBxeoT9yESqmNrt1y4fM=
+Adgw370_QepoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAo=
+Xgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5So=
+Y0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQ=
+PUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05W=
+CF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGq=
+LhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYn=
+w0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5=
+jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHtbxLL9GkIXVXhL6GkaE=
+1EZi6numLTrH0ZqL0tjxBPf2194CPMQzI932W-2Fn-2BdBVZCP2j3ykiioIgkb1n5YEWzcnSLL5=
+R0Pk3SL0ZrQvyMpcgnPsIYN4c-2BHXwJi7Dxulf9fVo0ukcgRHEcWBzHzc-2FHv4-3D" style=
+=3D"text-decoration:none; line-height:38px; display:block; color:#ffffff; "=
+><img src=3D"https://appboy-images.com/appboy/communication/assets/image_as=
+sets/images/5fbc09ed2213595d831f85fd/original.png?1606158829" width=3D"250"=
+ border=3D"0" alt=3D"" style=3D"display:block; max-width:250px; border-radi=
+us:10px;" class=3D"em_full_img"></a></td>
+              </tr>
+                    <tr>
+                      <td class=3D"em_purple" align=3D"center" valign=3D"to=
+p" style=3D"font-size:17px; line-height:25px; font-family:Exo,Arial,sans-se=
+rif; color:#000000; padding: 20px 30px;">
+                      We=E2=80=99ll have our August FS@Home on Saturday, Au=
+gust 7th. Be sure to register and connect with the Ingress community and do=
+n=E2=80=99t miss out on obtaining the Media of August=E2=80=99s Artwork com=
+petition winner!
+</td>
+                    </tr>
+                    <tr>
+                      <td align=3D"center" valign=3D"top"><table align=3D"c=
+enter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                          <tbody>
+                            <tr>
+                              <td class=3D"em_white" height=3D"38" align=3D=
+"center" valign=3D"middle" bgcolor=3D"#9588e4" style=3D"font-family: Exo,Ar=
+ial,sans-serif; font-size:16px; color:#ffffff; font-weight:300; height:38px=
+; background-color:#9588e4; text-transform:uppercase; padding:0px 20px;"><a=
+ target=3D"_blank" href=3D"https://links.news.nianticlabs.com/ls/click?upn=
+=3DivI19cFRVvyn3BQVqmNLrRkrX-2BK6dmRgePpCtjUAvXBxeoT9yESqmNrt1y4fMAdgj5hd_Q=
+epoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3R=
+TwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz=
+-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1By=
+O6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2=
+BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkji=
+aN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw=
+4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQ=
+lcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHn0jVMMZIb-2F-2FM-2FzzwtdMEO8=
+fGBEBPTpUBZA6zJOkrP9zpGVzzDdU-2FLhpfIRgauWHXXGbQY9VAE8jobuAoQgHQDTANMfmmQKN=
+YSnj4OnAv6FhDW8cCmBxWV04raqw99vt6lc0HTg7-2BNzc7WnbfrF-2FfnE-3D" style=3D"te=
+xt-decoration:none; line-height:38px; display:block; color:#ffffff; ">I'm I=
+nterested!</a></td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                   =20
+                    <tr>
+                      <td class=3D"em_purple" align=3D"center" valign=3D"to=
+p" style=3D"font-size:17px; line-height:25px; font-family:Exo,Arial,sans-se=
+rif; color:#000000; padding: 20px 40px;">
+<br>Ingress First Saturday is a cross-faction event organized and run by ag=
+ents, for agents all across the world on the First Saturday of each month. =
+To view the list of cities hosting First Saturdays and to register, access =
+the <a style=3D"color:#9588e4" href=3D"https://links.news.nianticlabs.com/l=
+s/click?upn=3DivI19cFRVvyn3BQVqmNLrRkrX-2BK6dmRgePpCtjUAvXBxeoT9yESqmNrt1y4=
+fMAdgHVom_QepoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTj=
+AoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5=
+SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31Blt=
+dQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q0=
+5WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2F=
+GqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kM=
+Ynw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLH=
+O5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHhL1R6TqkGMD062H4a=
+D4FLjvt4-2Fptynrkk9Pc324aSej3zcrZp9CO0OhhhzIWGp6X0ipPBnD47wNEdVN0YDD2JeAxi-=
+2BHMN0YEUsnNNzOg-2BRyYAuEgn6zaNU4rJvArez2iqBeaMyx6O1EV0QIrLsKwJo-3D">Fev Ga=
+mes=E2=80=99 IngressFS Event Registration page</a>. You don=E2=80=99t want =
+to miss out.=20
+</td>
+                    </tr>
+                    <tr>
+                      <td align=3D"center" valign=3D"top"><table align=3D"c=
+enter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                          <tbody>
+                            <tr>
+                              <td class=3D"em_white" height=3D"38" align=3D=
+"center" valign=3D"middle" bgcolor=3D"#7e7e7e" style=3D"font-family: Exo,Ar=
+ial,sans-serif; font-size:16px; color:#ffffff; font-weight:300; height:38px=
+; background-color:#7e7e7e; text-transform:uppercase; padding:0px 20px;"><a=
+ target=3D"_blank" href=3D"https://links.news.nianticlabs.com/ls/click?upn=
+=3DivI19cFRVvyn3BQVqmNLrRkrX-2BK6dmRgePpCtjUAvXBxeoT9yESqmNrt1y4fMAdgb_OA_Q=
+epoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3R=
+TwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz=
+-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1By=
+O6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2=
+BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkji=
+aN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw=
+4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQ=
+lcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHlrdmvQjmFzOWe5-2FvsG88Ti52w5=
+RyTwTISqzP4WvJ2uJPar6EsVk-2Bnd6IvKkB6HW0Z4-2B2cJXp2kM9Xcoy7hJeNTIcNgc591mmQ=
+1xwmOvrAGzYC3KbDGEUAjneIy-2BtfUS5NVM0geV3cfBzleXEJnJBj0-3D" style=3D"text-d=
+ecoration:none; line-height:38px; display:block; color:#ffffff; ">Learn Mor=
+e</a></td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                  =20
+
+                  </table>
+                 </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<!-- =3D=3D //Section-1 =3D=3D -->=20
+
+
+
+<!-- =3D=3D Footer Section =3D=3D -->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap" bgcolor=3D"#f3f3f3">
+  <tr>
+    <td align=3D"center" valign=3D"top"><table align=3D"center" width=3D"80=
+0" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"em_main_table"=
+ style=3D"width:800px;">
+        <tr>
+          <td align=3D"center" valign=3D"top" class=3D"em_aside20" style=3D=
+"padding:0px 50px;"><table width=3D"680" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" style=3D"width:680px;" class=3D"em_wrapper">
+              <tr>
+                <td align=3D"center" valign=3D"top">  <!-- =3D=3D en Footer=
+ Start =3D=3D -->
+                 =20
+                  <table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"em_wrapper" style=3D"width:680px;" width=3D"680">
+                    <tbody>
+                      <tr>
+                        <td align=3D"center" valign=3D"top"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"em_wrapper" style=3D"wi=
+dth:680px;" width=3D"680">
+                            <tbody>
+                              <tr>
+                                <td align=3D"left" style=3D"padding-bottom:=
+20px;" valign=3D"top"><table align=3D"left" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" class=3D"em_wrapper">
+                                    <tbody>
+                                      <tr>
+                                        <td align=3D"center" valign=3D"top"=
+><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                            <tbody>
+                                              <tr>
+                                                <td align=3D"center" valign=
+=3D"top"><a href=3D"https://links.news.nianticlabs.com/ls/click?upn=3DivI19=
+cFRVvyn3BQVqmNLrSgriayukgSANLDbjN-2FKTm0-3DdgIl_QepoJ3M9Piv-2BH3Hf7qB6es7FO=
+todjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bN=
+eLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6P=
+nV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZN=
+t51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4=
+sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA=
+0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLo=
+Q8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2=
+CFxA-2BwsKRXCiSze75AHomf79Qogj2GMrwgntX-2Ff-2F9EwgdWAuLfyTGo1-2FUQY5VE9Og28=
+eMNaMJuILZVf1l2nCTqJ60bgWnlHqKpVzO5X9316W2hUkzTogXIAfJe7-2B9JvRoco6F24-2BcC=
+cyNLPFPM4EqPIjXoojrepWD7edhgF-2Bk-3D" style=3D"color:#000000; text-decorati=
+on:none;" target=3D"_blank"><img alt=3D"ingress" border=3D"0" src=3D"https:=
+//appboy-images.com/appboy/communication/assets/image_assets/images/5bbcf21=
+93d55571596612377/original.png?1539109401" style=3D"max-width:45px; display=
+:block; font-size:12px; line-height:14px; color:#000000; font-family:Arial,=
+ sans-serif;" width=3D"45"></a></td>
+                                                <td class=3D"em_side5" styl=
+e=3D"width:10px; line-height:0px; font-size:0px;" width=3D"10"></td>
+                                                <td align=3D"center" valign=
+=3D"top"><a href=3D"https://links.news.nianticlabs.com/ls/click?upn=3DexuuF=
+upu5TcXl8J9NltzdamDat704fYAouDGTF4NiJvjwd5vvWHzw3eZFCxCYBHAJkPs_QepoJ3M9Piv=
+-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90Pd=
+Y5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62z=
+E-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNT=
+WDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-=
+2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7th=
+FBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X8=
+3UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1=
+wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHqZhY1WFAqDXzcpKtnQld9IS0MIzYwc-2B7HtZN=
+AAdSXAq-2FSX0NsCN6sWGu843OoRbpWsGMzEDEvA74gELoMNGFSE1FZh0UcCMnyMRb2hSKnXwFx=
+3hrYnX1Mi7zKh4VIANeXxHNHJ3QjSFa3D8AdttH7Q-3D" style=3D"color:#000000; text-=
+decoration:none;" target=3D"_blank"><img alt=3D"fb" border=3D"0" src=3D"htt=
+ps://appboy-images.com/appboy/communication/assets/image_assets/images/5bbc=
+f2193d5557147561237c/original.png?1539109401" style=3D"max-width:45px; disp=
+lay:block; font-size:12px; line-height:14px; color:#000000; font-family:Ari=
+al, sans-serif;" width=3D"45"></a></td>
+                                                <td class=3D"em_side5" styl=
+e=3D"width:10px; line-height:0px; font-size:0px;" width=3D"10"></td>
+                                                <td align=3D"center" valign=
+=3D"top"><a href=3D"https://links.news.nianticlabs.com/ls/click?upn=3DZPaH6=
+PQ6-2BiRxMYAt7imf9YgTWwneLEtbhqUNpIsAgg1gSE5OsROCCqltZ7z0eDM8ZYGy_QepoJ3M9P=
+iv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90=
+PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig6=
+2zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZ=
+NTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTB=
+L-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7=
+thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9=
+X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCj=
+R1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHsfzflwfa0tjwh-2BefugY6B-2B3iy2cZLMAW=
+vjyeQDlB3nkUOwZqW9lt8EQF7JJGxfYcLl7YaedI7O0jFssPaT1vnKtsKVA7ueJ1p2j9GhnUtSw=
+RnABbrn8cIV07C-2BRon3Zyv-2F7k1D2xpGh5XCiB3Q98Dg-3D" style=3D"color:#000000;=
+ text-decoration:none;" target=3D"_blank"><img alt=3D"tw" border=3D"0" src=
+=3D"https://appboy-images.com/appboy/communication/assets/image_assets/imag=
+es/5bbcf2193d5557143d61237a/original.png?1539109401" style=3D"max-width:45p=
+x; display:block; font-size:12px; line-height:14px; color:#000000; font-fam=
+ily:Arial, sans-serif;" width=3D"45"></a></td>
+                                                <td class=3D"em_side5" styl=
+e=3D"width:10px; line-height:0px; font-size:0px;" width=3D"10"></td>
+                                                <td align=3D"center" valign=
+=3D"top"><a href=3D"https://links.news.nianticlabs.com/ls/click?upn=3DivI19=
+cFRVvyn3BQVqmNLrSO3vBSFkNc7UB7SYAaYWIbpKcEubl-2Bu1-2F-2FcRQ4c8XglIrsS_QepoJ=
+3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRa=
+qi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2Ft=
+Dig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3=
+-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneE=
+IoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2=
+B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4S=
+NhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSj=
+vVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHsvffUgmR7-2BS3od6Btgx8wPeh-2B6c2=
+KI4DEPrFahpvDCTo2zD-2F9GaEJiQFz3UR5Bat1OynHQdBIIgGtWp-2BeXGr9KsENEY6inwgAQO=
+ZZxiI5tM0TRY8VWu6SAHJGlUyKaHoH-2Bx2x8fHFW74oY5jKAep7o-3D" style=3D"color:#0=
+00000; text-decoration:none;" target=3D"_blank"><img alt=3D"insta" border=
+=3D"0" src=3D"https://appboy-images.com/appboy/communication/assets/image_a=
+ssets/images/5bbcf2193d555713b461237b/original.png?1539109401" style=3D"max=
+-width:45px; display:block; font-size:12px; line-height:14px; color:#000000=
+; font-family:Arial, sans-serif;" width=3D"45"></a></td>
+                                                <td style=3D"width:10px; li=
+ne-height:0px; font-size:0px;" width=3D"10"></td>
+                                                <td align=3D"center" class=
+=3D"em_side5" valign=3D"top"><a href=3D"https://links.news.nianticlabs.com/=
+ls/click?upn=3DexuuFupu5TcXl8J9NltzdTDlqiEOkQ1fmCEXh2nTl2IxYYePorj-2BCovLsX=
+cPFEDF-WOz_QepoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCT=
+jAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT=
+5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31Bl=
+tdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q=
+05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2=
+FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9k=
+MYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsL=
+HO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHv9LS5a4cu4er5Jzu=
+X-2FxrcJ8-2FxBtlXpAgNG1MdbP7yZ2y45-2B8jp6Gh0jZj2HC5Nm6Z-2BwmeMfIXPzNoeBCEvE=
+v-2FOUQAMLC9sMoSMouGHOVZ-2BVCQ2YuDzK9ANwLzkH-2BxVnNrbhQ-2FPkBcJhpY63zzJfyTs=
+-3D" style=3D"color:#000000; text-decoration:none;" target=3D"_blank"><img =
+alt=3D"yt" border=3D"0" src=3D"https://appboy-images.com/appboy/communicati=
+on/assets/image_assets/images/5bbcf2193d5557156461237b/original.png?1539109=
+401" style=3D"max-width:45px; display:block; font-size:12px; line-height:14=
+px; color:#000000; font-family:Arial, sans-serif;" width=3D"45"></a></td>
+                                              </tr>
+                                            </tbody>
+                                          </table></td>
+                                      </tr>
+                                    </tbody>
+                                  </table></td>
+                              </tr>
+                              <tr>
+                                <td align=3D"center" style=3D"padding-botto=
+m:15px;" valign=3D"top"><table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                      <tr>
+                                        <td valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"em_wrapper" style=3D"width:540px;" width=3D"540">
+                                            <tbody>
+                                              <tr>
+                                                <td align=3D"left" class=3D=
+"em_footer_link" style=3D"font-family:Exo,Arial,sans-serif; font-size:13px;=
+ line-height:17px; padding-bottom:15px;" valign=3D"top">Copyright =C2=A9 20=
+15-2021 Niantic, Inc. All Rights Reserved.<br>
+                                                  <br>
+                                                  This email was sent to mr=
+cloud.med@gmail.com because you indicated that you'd like to receive news, =
+offers, promotions, and updates from Niantic. If you don't want to receive =
+such emails in the future, please unsubscribe <span style=3D"color:#9588e4;=
+ text-decoration: none;"><a href=3D"https://links.news.nianticlabs.com/ls/c=
+lick?upn=3DivI19cFRVvyn3BQVqmNLrf0pD92ei6geRGGiYobkfd2WNZcDjVw-2BIOaBTR5wKm=
+RcqmQMiufd7H37dtXTgTAvskNTnfjMm1hFIsQJAGziFP8T4oR8uvt0yTnIIPpf76Mk-2FONzxf4=
+faxcwGIAMUMEZfuG-2F4ZXRROuzNyXiwxLBdfsFkH01y7ZjVWWsdyVtIK80mz7abbAfBlLMQ5Wk=
+7jtyz3855NLC6SoNBdWgXHM3UQBI6qE0iwLO6IKdkiWmOwF-2FOzltH6Mv2ZTV-2B2X28FaWzCx=
+Zq8vnpcjId5CviV9GqVCJcs35WQkVPmf-2Bjz2ZgRSLD6lJim2b1u0ZOvh3fIH2DNafnBVTqzKt=
+fTVWWw5oZGaX9ECkBbLBmBmgJ5-2B8mdhQmkTs2Pw5zA7-2FRlV-2F-2Fj82W0LsAXoB1nNR1aN=
+RjUTIuxAzKZ-2FWs6rKF5S8EtWmAfkTJkIqR6nZckSJ-2BY-2Bk6SR1-2FdHaWGf7FDzZ5t75be=
+phYHxHlNud-2Foy3-2B56sah2HUGA80AvRtjrSuiDpsVoZ83vAVAJpo8c6V6cS9zR4ucVeEggSi=
+z-2BwKFqSyI3x-2Bof9aAp69hUmNwC2j1RF3vJmy-2B5pfA-3D-3DMDZq_QepoJ3M9Piv-2BH3H=
+f7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ=
+2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49=
+fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52=
+Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgY=
+e0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf=
+8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJww=
+nxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK=
+-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHl0ffc1kXVXSUxXXOJgoGg3289uiuUw4k28iQGQnVOBQD=
+ggq6RSDx8NUyamwQNAM2ca-2FgIT7SBqqy-2BUrMuci7UMTl7kQgJTVXSS13UKB5wIxyXYiFPy9=
+9UHp-2BuMaU4WgM1-2F0aambBDqp-2F51jtadlKfQ-3D" style=3D"color:#9588e4; text-=
+decoration: none;" target=3D"_blank">here</a></span>. You can also change y=
+our preferences by opening the Ingress app and updating your settings from =
+the Email menu.</td>
+                                              </tr>
+                                              <tr>
+                                                <td align=3D"left" valign=
+=3D"top"><table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td align=3D"center=
+" class=3D"em_icon_1" valign=3D"top"><a href=3D"https://links.news.nianticl=
+abs.com/ls/click?upn=3DivI19cFRVvyn3BQVqmNLrajXqd0Fw87i5Qtds1UfqbqA6a5a-2Bh=
+Sa5Rdvl978-2BtqBNIRiaVIDKbCgCXJ-2F-2B1W-2F-2BT1zTGQ9PDvzM-2BIiexy3dgnL3G-2B=
+VkBr2zvx9mVxBvg7xFfAz_QepoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmE=
+pSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB=
+4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2=
+BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw7=
+9Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-=
+2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47V=
+s6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-=
+2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHuLGSZ=
+nPlt5EfLM0o2hokG-2FFJDle4glgLUZnXwmMWbQ0IA-2BXSEVRtyuElLpfJ2omPlRy1HAzAWCdz=
+Vsa0dy6lac5GAJbdJZg6n5yq9FscYzejXUFX1v80XeafBhSoj0f2WEta2rX70ohrVsVsf3h3yo-=
+3D" style=3D"color:#000000; text-decoration:none;" target=3D"_blank"><img a=
+lt=3D"Get it on Google Play" border=3D"0" height=3D"50" src=3D"https://appb=
+oy-images.com/appboy/communication/assets/image_assets/images/5bad4bd0e5b31=
+e6dbac866fc/original.png?1538083792" style=3D"max-width:150px; display:bloc=
+k; font-size:12px; line-height:14px; color:#000000; font-family:Arial, sans=
+-serif;" width=3D"150"></a></td>
+                                                        <td style=3D"width:=
+16px; line-height:0px; font-size:0px;" width=3D"16"></td>
+                                                        <td align=3D"center=
+" class=3D"em_icon_1" valign=3D"top"><a href=3D"https://links.news.nianticl=
+abs.com/ls/click?upn=3DivI19cFRVvyn3BQVqmNLrbg0zi3k8mpY3PPxdVWAxKH950hhIOcb=
+zNmqx52f5efPwGxEV2ui7rfDsKrRAPNwlw-3D-3DHKOc_QepoJ3M9Piv-2BH3Hf7qB6es7FOtod=
+jIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeLt=
+yPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV5=
+HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt51=
+ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF3=
+gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA0sL=
+bJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8B=
+enIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CFx=
+A-2BwsKRXCiSze75AHrvYBbDdzOnju3g3D7lAj0t8WouoezVQeIAUBrkoqwDJGNGuumeIA5hSXj=
+7bN5evpq3zh0MxXYGx6-2Fs4vAcyNMtVhtWb0utZuq8bk71OPUz5GWLxRjG8ygUfb1XJQd3Ds65=
+xaHrTQ8A4otcBQDkP8WA-3D" style=3D"color:#000000; text-decoration:none;" tar=
+get=3D"_blank"><img alt=3D"Download on the App Store" border=3D"0" height=
+=3D"50" src=3D"https://appboy-images.com/appboy/communication/assets/image_=
+assets/images/5bad4bcfe5b31e6dfdc866f9/original.png?1538083791" style=3D"ma=
+x-width:150px; display:block; font-size:12px; line-height:14px; color:#0000=
+00; font-family:Arial, sans-serif;" width=3D"150"></a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                         =20
+                                          <!--[if gte mso 9]>
+</td>
+<td valign=3D"top">
+<![endif]-->
+                                         =20
+                                          <table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"em_wrapper" style=3D"width:140px;" width=
+=3D"140">
+                                            <tbody>
+                                              <tr>
+                                                <td align=3D"center" class=
+=3D"em_ptop" valign=3D"top"><a href=3D"https://links.news.nianticlabs.com/l=
+s/click?upn=3DivI19cFRVvyn3BQVqmNLrTNux-2FMT-2FOK8WKs-2FCLqPqM80XFZ5EEQo-2B=
+Awku6i62nouNVne_QepoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9=
+B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OI=
+AaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lX=
+t31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9=
+-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKO=
+b5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUv=
+Gei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALe=
+YGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHlDXcpXvZERB=
+Z0dWYg6lLy-2F-2BtiCseskKh65xMQf9c4KT9FjAtJFCc5NrwsoAB33NgnXe3Fouxk8EM1KJ0A6=
+sErDA0IkL3YbjSc8eLwiEnLlAP7xQNa038CsntyUxR2K1UhypxA9u5em-2F0gPacmyqfC4-3D" =
+style=3D"color:#000000; text-decoration:none;" target=3D"_blank"><img alt=
+=3D"Niantic" border=3D"0" src=3D"https://appboy-images.com/appboy/communica=
+tion/assets/image_assets/images/5fdab5d5d3d4dd7378e33724/original.png?16081=
+68917" style=3D"max-width:86px; display:block; font-size:12px; line-height:=
+14px; color:#000000; font-family:Arial, sans-serif;" width=3D"86"></a></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+</td>
+                                      </tr>
+                                    </tbody>
+                                  </table></td>
+                              </tr>
+                              <tr>
+                                <td align=3D"left" class=3D"em_footer_font"=
+ style=3D"padding-bottom:30px; font-size:13px; line-height:19px; font-weigh=
+t:bold; text-transform:uppercase; color:#9588e4; font-family:Exo,Arial,sans=
+-serif;" valign=3D"top">
+<a href=3D"https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvyn3B=
+QVqmNLrboXzvaQuN7jKEywNCrT35yPGdXkmWgDT1EvA82Zc-2FTcrCYd_QepoJ3M9Piv-2BH3Hf=
+7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2=
+euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49f=
+Z9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52F=
+udrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe=
+0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8=
+kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwn=
+xuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-=
+2FCN6MWQ2CFxA-2BwsKRXCiSze75AHiqHfIxROLA5UscRJJ75yRdsMsr0ZSaj1-2BDRPVMdM81p=
+DttbuLX0sCZ59uO0gGhq3uc9noj-2Fr1rxBf3NPu7YUjvRyB15-2BAfETCCknrjRTvtZo1jGg8y=
+P-2BQehZI89j-2FvDYX8dQsHoIt0WPeMNd76YqSE-3D" style=3D"color:#9588e4; text-d=
+ecoration:none; white-space:nowrap;" target=3D"_blank">Help Center</a>&nbsp=
+;&nbsp;&nbsp;&nbsp;<a href=3D"https://links.news.nianticlabs.com/ls/click?u=
+pn=3DivI19cFRVvyn3BQVqmNLrTNux-2FMT-2FOK8WKs-2FCLqPqM-2BgpXAhMD-2BnHmX2SnZE=
+e-2FWQ6fFT_QepoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rncw2HBmEpSOBw9B3yCT=
+jAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIlJkcQaDB4r59OIAaDBT=
+5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkavqZIoo-2BRm7lXt31Bl=
+tdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12lB0Wyw79Ksbc9-2F7q=
+05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9SbnKoVvM-2FNPKOb5K-2=
+FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2FbdkKoNV47Vs6hoUvGei9k=
+MYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyHcqXBY5-2FFALeYGxsL=
+HO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75AHiMS62OS7muo1RoPw=
+djrXOb0qfMEC-2BuajRj98-2BJSz9BfWU1olrTGl1V88YcN5YvtA0lEzg1Gbbzp6g2PQNwW9Wzq=
+U-2B4cwRN4TcAgm6F-2FnPhwmmmJUVa3d5LLlc4cX80d5zGFd8CZWkgOfbS471OtARI-3D" sty=
+le=3D"color:#9588e4; text-decoration:none; white-space:nowrap;" target=3D"_=
+blank">Privacy Policy</a><span class=3D"em_hide">&nbsp;&nbsp;&nbsp;&nbsp;</=
+span><span class=3D"em_mob_block"></span><a href=3D"https://links.news.nian=
+ticlabs.com/ls/click?upn=3DivI19cFRVvyn3BQVqmNLrTNux-2FMT-2FOK8WKs-2FCLqPqM=
+8LsyuyMtOp-2FHM98QMtkBZrnXFX_QepoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2rn=
+cw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPkIl=
+JkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLkav=
+qZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX12=
+lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9Sb=
+nKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2Fbdk=
+KoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SNyH=
+cqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze75=
+AHml8ojMa4gj9tkkN9lQi3Wng4DvajZCN-2FH6lMRt-2FEVUZ6nnrOgBBsvZjQhuG-2BuIuLzZE=
+v3YYC7yYsGorq-2BxbXt2Qbh1XpxHiKr8VS67tehEFxQGrvaq8SvSbUt7QqiftnlYn-2B-2FCLI=
+isFUJbT0AvlHOA-3D" style=3D"color:#9588e4; text-decoration:none; white-spac=
+e:nowrap;" target=3D"_blank">Terms of Service</a>&nbsp;&nbsp;&nbsp;&nbsp;<a=
+ href=3D"https://links.news.nianticlabs.com/ls/click?upn=3DivI19cFRVvyn3BQV=
+qmNLrf0pD92ei6geRGGiYobkfd2WNZcDjVw-2BIOaBTR5wKmRcqmQMiufd7H37dtXTgTAvskNTn=
+fjMm1hFIsQJAGziFP8T4oR8uvt0yTnIIPpf76Mk-2FONzxf4faxcwGIAMUMEZfuG-2F4ZXRROuz=
+NyXiwxLBdfsFkH01y7ZjVWWsdyVtIK80mz7abbAfBlLMQ5Wk7jtyz3855NLC6SoNBdWgXHM3UQB=
+I6qE0iwLO6IKdkiWmOwF-2FOzltH6Mv2ZTV-2B2X28FaWzCxZq8vnpcjId5CviV9GqVCJcs35WQ=
+kVPmf-2Bjz2ZgRSLD6lJim2b1u0ZOvh3fIH2DNafnBVTqzKtfTVWWw5oZGaX9ECkBbLBmBmgJ5-=
+2B8mdhQmkTs2Pw5zA7-2FRlV-2F-2Fj82W0LsAXoB1nNR1aNRjUTIuxAzKZ-2FWs6rKF5S8EtWm=
+AfkTJkIqR6nZckSJ-2BY-2Bk6SR1-2FdHaWGf7FDzZ5t75bephYHxHlNud-2Foy3-2B56sah2HU=
+GA80AvRtjrSuiDpsVoZ83vAVAJpo8c6V6cS9zR4ucVeEggSiz-2BwKFqSyI3x-2Bof9aAp69hUm=
+NwC2j1RF3vJmy-2B5pfA-3D-3Doby9_QepoJ3M9Piv-2BH3Hf7qB6es7FOtodjIQnZkYxJ6Nsi2=
+rncw2HBmEpSOBw9B3yCTjAoXgkx-2F3RTwRaqi90PdY5-2BZ2euHHOk0bNeLtyPNPcH4RiIjMPk=
+IlJkcQaDB4r59OIAaDBT5SoY0fkKJ0iz-2FtDig62zE-2F49fZ9-2FJy6PnV5HAAW77Ov-2FLLk=
+avqZIoo-2BRm7lXt31BltdQPUfHqf1ByO6Y3-2FZNTWDdo52Fudrz0LVZNt51ik01bEnLRz5unX=
+12lB0Wyw79Ksbc9-2F7q05WCF1LqXD-2BneEIoTBL-2BPWgYe0b5SGXPw4sF3gpnrA6sBbFSsp9=
+SbnKoVvM-2FNPKOb5K-2FGqLhkkXKkjiaN-2B7b7thFBNXsf8kvshQYgeA0sLbJ3uz4v-2B-2Fb=
+dkKoNV47Vs6hoUvGei9kMYnw0L0H0wuw4N4SNhI9X83UYJwwnxuCDF9CLoQ8BenIWRNYqC0G4SN=
+yHcqXBY5-2FFALeYGxsLHO5jbrtZgGWQlcSjvVCjR1wXZJCK-2FCN6MWQ2CFxA-2BwsKRXCiSze=
+75AHsbesZpAQFYNseaWR1yV8hBTwy8eZ7e5AH69Wb7oAJSBUWXdeR4Xwu9x4kCS2-2BDveLuLfO=
+t-2BeAZF1arc-2FfwAm-2BbDjlPA3NFO-2B84sU4Y8KjZSIqdmrE4NqlZDAjiXWC-2FUsXi5Yhd=
+mk-2BXSQGN9cCzkBWQ-3D" style=3D"color:#9588e4; text-decoration:none; white-=
+space:nowrap;" target=3D"_blank">Unsubscribe</a>
+</td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                 =20
+                  <!-- =3D=3D //en Footer End =3D=3D -->  </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td class=3D"em_hide" style=3D"line-height:1px;min-width:800px;ba=
+ckground-color:#f3f3f3;"><img alt=3D"" src=3D"https://appboy-images.com/app=
+boy/communication/assets/image_assets/images/5e33279167184440f9578c5e/origi=
+nal.gif?1580410769" height=3D"1" width=3D"800" style=3D"max-height:1px; min=
+-height:1px; display:block; width:800px; min-width:800px;" border=3D"0"></t=
+d>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<!-- =3D=3D //Footer Section =3D=3D -->
+<img src=3D"https://links.news.nianticlabs.com/wf/open?upn=3DCwU1znFXc593ac=
+7MkXz1gzwEG8dOHeUtvyRTdmN1sxaZ4gdX9JdvOivQs2lnr6kIjG8dXRyAoFgM3qXjFSoiCpzyw=
+GW2yUtWo8OL56C8pTXQz14VPJdifaDlf69ENKU0cotSziCIQhNfpznq6tkR4z34lIFlXkwA3qqp=
+rB6A2dQdlQchNhInpUp3TGBOvDtmlZ8l8zVy5SAh2Cq5tCq2G7vaHRi0NHb3mz9yYX-2FEp4F7A=
+44xZrHxjdoYIjQisVGEaxxm7hy6XZ4HpgA-2BaY6cO-2B8F49t-2FG-2BE9SDNduUIIEycj1DFz=
+NAr3dtWiuPiUHNz3UEdJyQZ8AVyKTfPu0mbDlRjWV6MR9sWfkLwSQ5VbVDNmbsD8sLG-2F8li4L=
+NoDsWPFOc-2FH00QnogTe22ZHZyuoG8QiUTDu70aKlSbLdU0nJPegcZ9sPV4ilrnlWxNLBCWN4-=
+2BHvaawT5JtV-2BGW4CcVnA6DHCfw6NCN46cvobDEPGKa3ug06k6J4wanJg72aOWwWw4hQFT5W6=
+a-2F96-2B0jP7nfkU9dl79yUI9reS7u1UETpB2fvEKPmbCsnExiKqs3JOYbN2bkBdFHBQmEk5fk=
+Z3TK2hL-2BBTQ5RKILMW2p0iMhdH-2Bo9Ntjt2jwaZTWjTD4-2FM1kMeDul4Ijpcy4RxMOIudCe=
+OOZarX3VQ5NLGqHGQuuGxM-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" s=
+tyle=3D"height:1px !important;width:1px !important;border-width:0 !importan=
+t;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !import=
+ant;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !imp=
+ortant;padding-right:0 !important;padding-left:0 !important;"/></body>
+</html>
+
+--2a74ff64a4ff3c23f48ade9cf9773e060e756041badf631732aa3de68e47--

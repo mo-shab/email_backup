@@ -1,0 +1,698 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:cad2:0:b029:f4:b3fb:84d3 with SMTP id e18csp5038608lky;
+        Wed, 12 May 2021 07:58:32 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwVbn/NjmcA9ClttWfpGr44xogFBMisRubLgQ3gNF95g2wo5wyqB7XbFDNPXegWScqF3DFV
+X-Received: by 2002:a05:6214:18d:: with SMTP id q13mr36053720qvr.60.1620831512093;
+        Wed, 12 May 2021 07:58:32 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1620831512; cv=none;
+        d=google.com; s=arc-20160816;
+        b=gXxzoG/t0V2Dpl7VtoGFp+fo+3RzmfLbqGOlX+q+WyprfwiSrWHcSDtJdDxFZ7VtsF
+         EJokiOCzXcvS7UBbNL5JY9KlplWv1Pv+s7E6SZugBaMhY+naPCG4Y/E3e2hmUm5gR3ne
+         Gbz9uzQfG9AG4mcBAALuAjn9/wqmkmicd1n+/7NbT73ti+ZDYFWb+pTbSZcUjM+dJ/vM
+         G9xL9k+qnIGP55+GtLSMju/xe7WGa4JsIPJtHcT6ZPFRIxwVx4fr1LJBFKIeDxopMbPD
+         HIm0A58tqGKgZhw7PTGKeL/GyTA2H7V86eh34GpCyFU4B9Bkvdr3yCb2cHOPhYIIE3EQ
+         Fx6g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:list-unsubscribe-post:list-unsubscribe:feedback-id
+         :sender:content-transfer-encoding:mime-version:date:subject:from:to
+         :dkim-signature:dkim-signature;
+        bh=XgNEWhyUu6XcRdoT6/gmuvbqCKNYq+JvPwC45FdyGCo=;
+        b=L2FuEoScX5cFX7Et8rwkBfrnvt16OUommWMCN2dlcJQltbil9NofDUx1mJxCUqv5td
+         kAFoLaUPCxr03OEbF1IX8J9ZMu4CyHWestYrok9UKbgVNzkAuDRxWEVuYmHLTk0UqOA1
+         ZvOAnPnCxjFHQO2Wg5MVWejfzIRltkiDZU/TL74QDRbAxT4mJQjUa8rfGvCI6z/LqGgl
+         +ikk7HNe6E1M11oXHHMLwLuZHUrQ3VIUhxGVJFNQPNMimBuHzhEkqiXRQdQwC6P36DDx
+         LCf0pghzYBO6l2zot3cE0xAgeyn6JUu2XGrFhY+RMEmJ5Cg7p+wpS/juXoGA9T29qjzj
+         fbLg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@s1.asa1.acemsc3.com header.s=dk header.b=U0IMt8i8;
+       dkim=pass header.i=@acems1.com header.s=dk header.b=wqwzF5QO;
+       spf=pass (google.com: domain of bounce-920364-310-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com designates 192.92.97.74 as permitted sender) smtp.mailfrom="bounce-920364-310-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com"
+Return-Path: <bounce-920364-310-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com>
+Received: from s1.asa1.acemsc3.com (s1.asa1.acemsc3.com. [192.92.97.74])
+        by mx.google.com with ESMTPS id x16si16670610qtm.67.2021.05.12.07.58.31
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 12 May 2021 07:58:32 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-920364-310-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com designates 192.92.97.74 as permitted sender) client-ip=192.92.97.74;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@s1.asa1.acemsc3.com header.s=dk header.b=U0IMt8i8;
+       dkim=pass header.i=@acems1.com header.s=dk header.b=wqwzF5QO;
+       spf=pass (google.com: domain of bounce-920364-310-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com designates 192.92.97.74 as permitted sender) smtp.mailfrom="bounce-920364-310-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=s1.asa1.acemsc3.com;
+ h=To:From:Subject:Date:MIME-Version:Content-Type:Content-Transfer-Encoding:
+ Sender:List-Unsubscribe:Message-ID;
+ i=denverkr.activehosted.com@s1.asa1.acemsc3.com;
+ bh=XgNEWhyUu6XcRdoT6/gmuvbqCKNYq+JvPwC45FdyGCo=;
+ b=U0IMt8i82KXIkI60lJMuwYykKUFH6+a2fdagygjhJthjpJUsTtSaQFgy59TTdmfCVkgRX3esijfB
+   oYD++gG7EJ6pX+YeG9GxIUEqU1NZML/rUi4jv4c/zznW/O4WM0dXflmZsxLDWbcQy8zVn0lijIP7
+   XmyOFFw4n69JmQtBmaE=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=acems1.com;
+ h=To:From:Subject:Date:MIME-Version:Content-Type:Content-Transfer-Encoding:
+ Sender:List-Unsubscribe:Message-ID;
+ bh=XgNEWhyUu6XcRdoT6/gmuvbqCKNYq+JvPwC45FdyGCo=;
+ b=wqwzF5QOZropONSStGrkTMyEYKjIvIBegMEwmNyPO14V513Hca5eFJPh1grUoXN6mzTNe+R4OYx7
+   bd7qW1kd1FxyUMmH1xumMSL26m2+pNW5+gfCz3rzPp2Wyszwt5EQVKBfWZzq8364e84RddHfx/ky
+   KLTqGrgsYpy94m7kX/s=
+Received: by s1.asa1.acemsc3.com id hjfmhe2p4doe for <mrcloud.med@gmail.com>; Wed, 12 May 2021 14:58:24 +0000 (envelope-from <bounce-920364-310-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com>)
+To: mrcloud.med@gmail.com
+From: "Denver Riddle" <denver@colorgradingcentral.com>
+Subject: Here's the 70 LUTS Master Bundle
+Date: Wed, 12 May 2021 09:58:24 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift-1579006902609bed1039b195.42854257_=_"
+Content-Transfer-Encoding: 7bit
+Sender: <denverkr.activehosted.com@s1.asa1.acemsc3.com>
+X-Sender: <denverkr.activehosted.com@s1.asa1.acemsc3.com>
+X-Report-Abuse: Please report abuse to abuse@activecampaign.com
+X-mid: bXJjbG91ZC5tZWRAZ21haWwuY29tICwgYzMxMCAsIG0zNDYgLCBzMjE0Mjg1Mg
+Feedback-ID: 920364:activecampaign
+X-250ok-CID: 920364-310
+List-Unsubscribe: <mailto:unsubscribe-5f8cbe28ba5f9070131677bfba9fca7e-310-98e2737d7256ebc4244dca9ee0144d65@s1.asa1.acemsc3.com>,
+ <http://denverkr.activehosted.com/box.php?nl=3&c=310&m=346&s=98e2737d7256ebc4244dca9ee0144d65&funcml=unsub2&luha=1>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Message-ID: <20210512145824.12032.393434023.swift@denverkr.activehosted.com>
+
+
+--_=_swift-1579006902609bed1039b195.42854257_=_
+Content-Type: text/plain; charset=utf-8
+
+Hey ,
+
+Hey this is Denver and I want to officially welcome you to Color Grading
+Central.
+
+I also want to assure you that you can be amazing at color grading and
+that's why Color Grading Central was created.
+
+Color grading has had a profound influence on my life (and I'm not
+talking about the cool projects I've been able to work on.)
+
+But color grading has helped improve the look of my films and get me to
+stand out even in the midst of a recession.
+
+TODAY you can start seeing a difference in your films with the 70 LUTs
+Master Bundle... the only LUTs you need :)
+
+https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZ3d3cuY29sb3JncmFkaW5nY2VudHJhbC5jb20lMkZmcmVlLWx1dHMtZG93bmxvYWQtYWRvYmUlMkY=&a=89849254&account=denverkr%2Eactivehosted%2Ecom&email=7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=98e2737d7256ebc4244dca9ee0144d65&i=310A346A3A2604 
+
+Premiere Pro
+Click button below to download and get help with installing
+
+DOWNLOAD LUTS HERE
+
+You might be wondering why you're getting the master LUT collection
+valued at $450 for FREE.  The answer is simple. 
+
+To help you get STARTED and for that you need to start seeing results
+TODAY!
+
+This also ties back to my story of how color grading changed my life... 
+
+...going from the depths of depression out of work to helping me to land
+my first career job.
+
+For me it literally STARTED with a few presets or "looks"...
+
+I'll share that story with you in my newsletter and how it eventually
+led to landing big freelancing gigs... 
+
+...with companies like Facebook and even designing the original video
+filters in the Instagram app.
+
+For today enjoy the 70 free LUTs!
+
+Cheers,
+Denver Riddle
+
+P.S. Subscribe to our YouTube channel
+
+and follow us on Instagram  for
+daily and weekly published grading videos!
+
+https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZjZ2NwdWJsaWMuczMtdXMtd2VzdC0yLmFtYXpvbmF3cy5jb20lMkZkZW52ZXJfaG9sbGFuZF9hdmF0YXIucG5n&a=89849254&account=denverkr%2Eactivehosted%2Ecom&email=7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=98e2737d7256ebc4244dca9ee0144d65&i=310A346A3A2607 
+
+Denver Riddle
+Founder of Color Grading Central
+denver@colorgradingcentral.com
+
+https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZ3d3cueW91dHViZS5jb20lMkZjaGFubmVsJTJGVUNBWVZkMGZYbVJKRmtCQWFRSlJ2Y3V3JTNGc3ViX2NvbmZpcm1hdGlvbiUzRDE=&a=89849254&account=denverkr%2Eactivehosted%2Ecom&email=7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=98e2737d7256ebc4244dca9ee0144d65&i=310A346A3A2605
+
+ 
+
+https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZ3d3cuaW5zdGFncmFtLmNvbSUyRmNvbG9yZ3JhZGluZyUyRg==&a=89849254&account=denverkr%2Eactivehosted%2Ecom&email=7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=98e2737d7256ebc4244dca9ee0144d65&i=310A346A3A2606 
+
+ 
+
+https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZ3d3cuZmFjZWJvb2suY29tJTJGQ29sb3ItR3JhZGluZy1DZW50cmFsLTExNDIwNTM0MjAwNzk1OSUyRg==&a=89849254&account=denverkr%2Eactivehosted%2Ecom&email=7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=98e2737d7256ebc4244dca9ee0144d65&i=310A346A3A2608 
+
+Sent to: mrcloud.med@gmail.com
+
+Color Grading Central LLC, PO Box 478, Huntsville, UT 84317, United States
+
+Don't want future emails? 
+
+Unsubscribe 
+_________________
+
+Sent to mrcloud.med@gmail.com
+
+Unsubscribe:
+http://denverkr.activehosted.com/proc.php?nl=3&amp;c=310&amp;m=346&amp;s=98e2737d7256ebc4244dca9ee0144d65&amp;act=unsub
+
+Color Grading Central LLC, PO Box 478, Huntsville, UT 84317, United States
+--_=_swift-1579006902609bed1039b195.42854257_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html>=0A<head><!--[if !mso]><meta http-equiv=3D"X-UA-Compat=
+ible" content=3D"IE=3Dedge"><!--<![endif]--><meta http-equiv=3D"Content-Typ=
+e" content=3D"text/html; charset=3Dutf-8"><meta http-equiv=3D"Content-Langu=
+age" content=3D"en-us"><meta name=3D"format-detection" content=3D"telephone=
+=3Dno"><meta name=3D"format-detection" content=3D"date=3Dno"><meta name=3D"=
+format-detection" content=3D"address=3Dno"><meta name=3D"format-detection" =
+content=3D"email=3Dno"><style data-ac-keep=3D"true"> .ExternalClass { width=
+: 100%; background: inherit; background-color: inherit; } .ExternalClass p,=
+ .ExternalClass ul, .ExternalClass ol { Margin: 0; } .undoreset div p, .und=
+oreset p { margin-bottom: 20px; } div[class^=3D"aolmail_divbody"] { overflo=
+w: auto; } [owa] #ac-footer { padding: 20px 0px !important; background: inh=
+erit; background-color: inherit; } </style><style data-ac-keep=3D"true">=0A=
+@media only screen and (max-width: 600px) { /*-----------------------------=
+--------------------------------------------*\ Abandoned Cart widget \*----=
+--------------------------------------------------------------------*/ .td_=
+abandoned-cart img {display: block;padding-right: 0 !important;padding-bott=
+om: 0 !important;width: 100% !important;max-width: 100% !important;height: =
+auto !important;} body { padding: 0!important; font-size:1em!important; } *=
+ { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing:=
+ border-box; } *[class].divbody {-webkit-text-size-adjust:none !important; =
+width:auto !important;} *[class].td_picture img {width:auto !important;} *[=
+class].td_text { line-height: 110%; } *[class].td_button { width: auto; } /=
+* Collapse all block elements */ :not(.body) table { display: block!importa=
+nt; float:none!important; border-collapse:collapse !important; width:100% !=
+important; min-width:100% !important; clear:both!important; } :not(.body) t=
+head,=0A:not(.body) tbody, :not(.body) tr { display:block!important; float:=
+none!important; width:100% !important; } :not(.body) th, :not(.body) td, :n=
+ot(.body) p { display:block!important; float:none!important; width:100% !im=
+portant; clear:both!important; } /* Remove browser default styling for elem=
+ents */ ul, ol { margin-left: 20px; margin-bottom: 10px; margin-top: 10px; =
+-webkit-margin-before: 0; -webkit-margin-after: 0; -webkit-padding-start: 0=
+; } /* Set default height for spacer once collapse */ *[class].spacer { hei=
+ght: auto!important; } a[href^=3Ddate]{ color:inherit !important; text-deco=
+ration:none !important;} a[href^=3Dtelephone]{ color:inherit !important; te=
+xt-decoration:none !important;} a[href^=3Daddress]{ color:inherit !importan=
+t; text-decoration:none !important;} a[href^=3Demail]{ color:inherit !impor=
+tant; text-decoration:none !important;} /* Default table cell height */ td[=
+height=3D"12"]{height:12px!important;font-size:12px!important;line-height:1=
+2px!important;}=0Atd[height=3D"0"]{height:0px!important;font-size:0px!impor=
+tant;line-height:0px!important;}=0Atd[height=3D"11"]{height:11px!important;=
+font-size:11px!important;line-height:11px!important;} /*-------------------=
+------------------------------------------------------*\ Product Widget \*-=
+------------------------------------------------------------------------*/ =
+.td_product > div { float: none !important; width: 100% !important; margin-=
+bottom: 20px !important; } .td_product > div img { width: 75% !important; }=
+ /* Default social icons */ *[class].ac-social-icon-16 {width:16px !importa=
+nt; height:16px !important;} *[class].ac-social-icon-24 {width:24px !import=
+ant; height:24px !important;} *[class].ac-social-icon-28 {width:28px !impor=
+tant; height:28px !important;} *[class].__ac_social_icons { margin-right: 0=
+px !important; } }=0A</style><style data-ac-keep=3D"true"> @media only scre=
+en and (max-width: 320px) { #layout-row4424 img { width: 100% !important; h=
+eight: auto !important; max-width: 75px !important; } #layout-row4430 img {=
+ width: 100% !important; height: auto !important; max-width: 320px !importa=
+nt; } div.divbody { padding: 20px !important; } .td_rss .rss-item img.iphon=
+e_large_image { width: auto !important; } u + .body { display: table !impor=
+tant; width: 100vw !important; min-width: 100vw !important; } u + .body tab=
+le { display: table !important; width: 100% !important; min-width: 100% !im=
+portant; } u + .body td { display: block !important; width: 100% !important=
+; min-width: 100% !important; } u + .body img { display: inline-block !impo=
+rtant; margin: auto !important; width: auto !important; vertical-align: bot=
+tom !important; } u + .body center { display: block !important; margin: aut=
+o !important; width: 100% !important; min-width: 100% !important; text-alig=
+n: center !important; } u +=0A.body table._ac_social_table, u + .body table=
+._ac_social_table td, u + .body table._ac_social_table div, u + .body table=
+._ac_social_table a { display: inline-block !important; margin: auto !impor=
+tant; width: auto !important; min-width: auto !important; text-align: cente=
+r !important; } u + .body table._ac_social_table img { display: inline-bloc=
+k !important; margin: auto !important; width: 32px !important; min-width: 3=
+2px !important; max-width: 32px !important; }=0A}=0A@media only screen and =
+(max-width: 375px) { #layout-row4424 img { width: 100% !important; height: =
+auto !important; max-width: 75px !important; } #layout-row4430 img { width:=
+ 100% !important; height: auto !important; max-width: 375px !important; } d=
+iv.divbody { padding: 20px !important; } .td_rss .rss-item img.iphone_large=
+_image { width: auto !important; } u + .body { display: table !important; w=
+idth: 100vw !important; min-width: 100vw !important; } u + .body table { di=
+splay: table !important; width: 100% !important; min-width: 100% !important=
+; } u + .body td { display: block !important; width: 100% !important; min-w=
+idth: 100% !important; } u + .body img { display: inline-block !important; =
+margin: auto !important; width: auto !important; vertical-align: bottom !im=
+portant; } u + .body center { display: block !important; margin: auto !impo=
+rtant; width: 100% !important; min-width: 100% !important; text-align: cent=
+er !important; } u + .body table._ac_social_table, u +=0A.body table._ac_so=
+cial_table td, u + .body table._ac_social_table div, u + .body table._ac_so=
+cial_table a { display: inline-block !important; margin: auto !important; w=
+idth: auto !important; min-width: auto !important; text-align: center !impo=
+rtant; } u + .body table._ac_social_table img { display: inline-block !impo=
+rtant; margin: auto !important; width: 32px !important; min-width: 32px !im=
+portant; max-width: 32px !important; }=0A}=0A@media only screen and (max-wi=
+dth: 414px) { #layout-row4424 img { width: 100% !important; height: auto !i=
+mportant; max-width: 75px !important; } #layout-row4430 img { width: 100% !=
+important; height: auto !important; max-width: 414px !important; } div.divb=
+ody { padding: 20px !important; } .td_rss .rss-item img.iphone_large_image =
+{ width: auto !important; } u + .body { display: table !important; width: 1=
+00vw !important; min-width: 100vw !important; } u + .body table { display: =
+table !important; width: 100% !important; min-width: 100% !important; } u +=
+ .body td { display: block !important; width: 100% !important; min-width: 1=
+00% !important; } u + .body img { display: inline-block !important; margin:=
+ auto !important; width: auto !important; vertical-align: bottom !important=
+; } u + .body center { display: block !important; margin: auto !important; =
+width: 100% !important; min-width: 100% !important; text-align: center !imp=
+ortant; } u + .body table._ac_social_table, u +=0A.body table._ac_social_ta=
+ble td, u + .body table._ac_social_table div, u + .body table._ac_social_ta=
+ble a { display: inline-block !important; margin: auto !important; width: a=
+uto !important; min-width: auto !important; text-align: center !important; =
+} u + .body table._ac_social_table img { display: inline-block !important; =
+margin: auto !important; width: 32px !important; min-width: 32px !important=
+; max-width: 32px !important; }=0A}=0A@media only screen and (max-width: 66=
+7px) { #layout-row4424 img { width: 100% !important; height: auto !importan=
+t; max-width: 75px !important; } #layout-row4430 img { width: 100% !importa=
+nt; height: auto !important; max-width: 667px !important; } div.divbody { p=
+adding: 20px !important; } .td_rss .rss-item img.iphone_large_image { width=
+: auto !important; } u + .body { display: table !important; width: 100vw !i=
+mportant; min-width: 100vw !important; } u + .body table { display: table !=
+important; width: 100% !important; min-width: 100% !important; } u + .body =
+td { display: block !important; width: 100% !important; min-width: 100% !im=
+portant; } u + .body img { display: inline-block !important; margin: auto !=
+important; width: auto !important; vertical-align: bottom !important; } u +=
+ .body center { display: block !important; margin: auto !important; width: =
+100% !important; min-width: 100% !important; text-align: center !important;=
+ } u + .body table._ac_social_table, u +=0A.body table._ac_social_table td,=
+ u + .body table._ac_social_table div, u + .body table._ac_social_table a {=
+ display: inline-block !important; margin: auto !important; width: auto !im=
+portant; min-width: auto !important; text-align: center !important; } u + .=
+body table._ac_social_table img { display: inline-block !important; margin:=
+ auto !important; width: 32px !important; min-width: 32px !important; max-w=
+idth: 32px !important; }=0A} </style><!--[if !mso]><!-- webfonts --><!--<![=
+endif]--><!--[if lt mso 12]> <![endif]--></head><body id=3D"ac-designer" cl=
+ass=3D"body" style=3D"font-family: Arial; line-height: 1.1; margin: 0px; ba=
+ckground-color: #ffffff; width: 100%; text-align: center;"><div class=3D"di=
+vbody" style=3D"margin: 0px; outline: none; padding: 0px; color: #000000; f=
+ont-family: arial; line-height: 1.1; width: 100%; background-color: #ffffff=
+; background: #ffffff; text-align: center;"><table class=3D"template-table"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" align=3D"l=
+eft" style=3D"font-size: 14px; min-width: auto; mso-table-lspace: 0pt; mso-=
+table-rspace: 0pt; background-color: #ffffff; background: #ffffff;"><tr><td=
+ align=3D"center" valign=3D"top" width=3D"100%"><table class=3D"template-ta=
+ble" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600" bgcolor=
+=3D"#ffffff" style=3D"font-size: 14px; min-width: auto; mso-table-lspace: 0=
+pt; mso-table-rspace: 0pt; max-width: 600px;"><tr><td=0Aid=3D"layout_table_=
+4e3439338d3ec47ea73db23a94ca7f2dff3141c8" valign=3D"top" align=3D"center" w=
+idth=3D"600"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=
+=3D"layout layout-table root-table" width=3D"600" style=3D"font-size: 14px;=
+ min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td id=
+=3D"layout-row-margin4420" valign=3D"top" style=3D"padding: 0;"><table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-s=
+ize: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; b=
+order-collapse: initial !important;"><tr id=3D"layout-row4420" class=3D"lay=
+out layout-row widget _widget_text style4420" style=3D"margin: 0; padding: =
+0;"><td id=3D"layout-row-padding4420" valign=3D"top" style=3D"padding: 0 0p=
+x 20px 20px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt;=
+ mso-table-rspace: 0pt;"><tr><td id=3D"text_div3659" class=3D"td_text td_bl=
+ock" valign=3D"top" align=3D"left" width=3D"580"=0Astyle=3D"line-height: 15=
+0%; margin: 0; outline: none; padding: 0; color: inherit; font-size: 12px; =
+font-weight: inherit; line-height: 1.5; text-decoration: inherit; font-fami=
+ly: Arial; mso-line-height-rule: exactly;"> <div style=3D"line-height: 150%=
+; margin: 0; outline: none; padding: 0; line-height: 1.5; mso-line-height-r=
+ule: exactly;" data-line-height=3D"1.5"> <p style=3D"margin: 0; outline: no=
+ne; padding: 0; color: inherit; font-size: inherit; font-weight: inherit; l=
+ine-height: inherit; text-decoration: inherit;"></p>=0A<div style=3D"margin=
+: 0; outline: none; padding: 0; font-family: Helvetica, Arial, sans-serif; =
+font-size: 16px; display: inline;"></div>=0A<p style=3D"margin: 0; outline:=
+ none; padding: 0; color: #222222; font-size: 22px; font-weight: 400; line-=
+height: inherit; text-decoration: none; font-style: normal;"><span style=3D=
+"color: inherit; font-size: inherit; font-weight: inherit; line-height: inh=
+erit; text-decoration: inherit; font-family: Helvetica, Arial, sans-serif;"=
+ class=3D""><br>Hey ,</span></p>=0A<p style=3D"margin: 0; outline: none; pa=
+dding: 0; color: #222222; font-size: 22px; font-weight: 400; line-height: i=
+nherit; text-decoration: none; font-style: normal;"><br style=3D"font-famil=
+y: Helvetica, Arial, sans-serif;color: #222222; text-decoration: none; text=
+-align: inherit;"></p>=0A<p style=3D"margin: 0; outline: none; padding: 0; =
+color: inherit; font-size: 22px; font-weight: inherit; line-height: inherit=
+; text-decoration: inherit;"><span style=3D"color: inherit; font-size: inhe=
+rit; font-weight: inherit; line-height: inherit; text-decoration: inherit; =
+font-family: Helvetica, Arial, sans-serif;" class=3D""><span style=3D"color=
+: #222222; font-size: inherit; font-weight: inherit; line-height: inherit; =
+text-decoration: inherit;">Hey this is Denver and I want to officially welc=
+ome you to Color Grading Central.</span><br><br><span style=3D"color: #2222=
+22; font-size: inherit; font-weight: inherit; line-height: inherit; text-de=
+coration: inherit;">I also want to assure you that you can be amazing at co=
+lor grading and that's why Color Grading Central was created.</span><br><br=
+><span style=3D"color: #222222; font-size: inherit; font-weight: inherit; l=
+ine-height: inherit; text-decoration: inherit;">Color grading has had a pro=
+found influence on my life (and I'm not=0Atalking about the cool projects I=
+'ve been able to work on.)</span><br><br><span style=3D"color: #222222; fon=
+t-size: inherit; font-weight: inherit; line-height: inherit; text-decoratio=
+n: inherit;">But color grading has helped improve the look of my films and<=
+/span> <span style=3D"color: #222222; font-size: inherit; font-weight: inhe=
+rit; line-height: inherit; text-decoration: inherit;">get me to stand out <=
+/span><span style=3D"color: #222222; font-size: inherit; font-weight: 400; =
+line-height: inherit; text-decoration: underline; font-style: normal;" clas=
+s=3D"">even in the midst of a recession.</span><br><br><span style=3D"color=
+: #222222; font-size: 22px; font-weight: 400; line-height: inherit; text-de=
+coration: inherit; font-family: Helvetica, Arial, sans-serif; font-style: n=
+ormal;">TODAY you can start seeing a difference in your films with the 70 L=
+UTs Master Bundle... the only LUTs you need :)</span><br></span></p>=0A<p s=
+tyle=3D"margin: 0; outline: none; padding: 0; color: inherit; font-size: in=
+herit; font-weight: inherit; line-height: inherit; text-decoration: inherit=
+;"></p>=0A<p style=3D"margin: 0; outline: none; padding: 0; color: inherit;=
+ font-size: inherit; font-weight: inherit; line-height: inherit; text-decor=
+ation: inherit;"></p>=0A<p style=3D"margin: 0; outline: none; padding: 0; c=
+olor: inherit; font-size: inherit; font-weight: inherit; line-height: inher=
+it; text-decoration: inherit;"></p>=0A </div>=0A<!--[if (gte mso 12)&(lte m=
+so 15) ]>=0A<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_di=
+v3659, #text_div3659 div { line-height: 150% !important; };=0A</style>=0A<!=
+[endif]--></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</t=
+r>=0A<tr><td id=3D"layout-row-margin4430" valign=3D"top"><table width=3D"10=
+0%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14=
+px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr id=
+=3D"layout-row4430" class=3D"layout layout-row widget _widget_picture " ali=
+gn=3D"center"><td id=3D"layout-row-padding4430" valign=3D"top"><table width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-si=
+ze: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><=
+tr><td class=3D"image-td" align=3D"center" valign=3D"top" width=3D"600"><a =
+href=3D"https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=3DaHR=
+0cHMlM0ElMkYlMkZ3d3cuY29sb3JncmFkaW5nY2VudHJhbC5jb20lMkZmcmVlLWx1dHMtZG93bm=
+xvYWQtYWRvYmUlMkY=3D&a=3D89849254&account=3Ddenverkr%2Eactivehosted%2Ecom&e=
+mail=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=3D98e2737d7256e=
+bc4244dca9ee0144d65&i=3D310A346A3A2604" style=3D"margin: 0; outline: none; =
+padding: 0; color: #045fb4; display: block; min-width: 100%;"><img=0Asrc=3D=
+"https://denverkr.imgus11.com/public//9c602e8b68e169997561c39b05677e32.png?=
+r=3D1007468748" alt=3D"" width=3D"101" style=3D"border: none; display: bloc=
+k; outline: none; width: 101px; opacity: 1; max-width: 100%;"></a></td>=0A<=
+/tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr><td id=3D"=
+layout-row-margin4428" valign=3D"top" style=3D"padding: 5px;"><table width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-si=
+ze: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; bo=
+rder-collapse: initial !important;"><tr id=3D"layout-row4428" class=3D"layo=
+ut layout-row widget _widget_text style4428" style=3D"margin: 0; padding: 0=
+;"><td id=3D"layout-row-padding4428" valign=3D"top" style=3D"padding: 5px;"=
+><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" sty=
+le=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rs=
+pace: 0pt;"><tr><td id=3D"text_div3665" class=3D"td_text td_block" valign=
+=3D"top" align=3D"left" width=3D"580" style=3D"line-height: 150%; margin: 0=
+; outline: none; padding: 0; color: inherit; font-size: 12px; font-weight: =
+inherit; line-height: 1.5; text-decoration: inherit; font-family: Arial; ms=
+o-line-height-rule: exactly;"> <div style=3D"line-height: 150%; margin: 0; =
+outline: none; padding: 0; font-size: 22px;=0Aline-height: 1.5; mso-line-he=
+ight-rule: exactly;" data-line-height=3D"1.5"> <div style=3D"margin: 0; out=
+line: none; padding: 0;"><div style=3D"margin: 0; outline: none; padding: 0=
+; text-align: center;"><span style=3D"color: inherit; font-size: inherit; f=
+ont-weight: inherit; line-height: inherit; text-decoration: inherit; font-f=
+amily: Helvetica, Arial, sans-serif;" class=3D""><span style=3D"color: #000=
+000; font-size: inherit; font-weight: 700; line-height: inherit; text-decor=
+ation: inherit;">Premiere Pro<br></span><span style=3D"color: #000000; font=
+-size: inherit; font-weight: 400; line-height: inherit; text-decoration: in=
+herit;">Click button below to download and get help with installing</span><=
+/span><br></div>=0A</div>=0A </div>=0A<!--[if (gte mso 12)&(lte mso 15) ]>=
+=0A<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_div3665, #t=
+ext_div3665 div { line-height: 150% !important; };=0A</style>=0A<![endif]--=
+></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr>=
+<td id=3D"layout-row-margin4429" valign=3D"top" style=3D"padding: 5px;"><ta=
+ble width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspa=
+ce: 0pt; border-collapse: initial !important;"><tr id=3D"layout-row4429" cl=
+ass=3D"layout layout-row widget _widget_button style4429" style=3D""><td id=
+=3D"layout-row-padding4429" valign=3D"top" style=3D"padding: 5px;"><table w=
+idth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"fon=
+t-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+;"><tr><td class=3D"td_button td_block customizable" valign=3D"top" align=
+=3D"left" width=3D"580"> <div class=3D"button-wrapper" style=3D"margin: 0; =
+outline: none; padding: 0; text-align: center;">=0A<!--[if mso]> <v:roundre=
+ct xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microso=
+ft-com:office:word" href=3D"https://denverkr.lt.acemlnc.com/Prod/link-track=
+er?redirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuY29sb3JncmFkaW5nY2VudHJhbC5jb20lMk=
+ZmcmVlLWx1dHMtZG93bmxvYWQtYWRvYmUlMkY=3D&a=3D89849254&account=3Ddenverkr%2E=
+activehosted%2Ecom&email=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%=
+3D&s=3D98e2737d7256ebc4244dca9ee0144d65&i=3D310A346A3A2604" style=3D"v-text=
+-anchor:middle; width:306px; height:68px; " arcsize=3D"10%" strokecolor=3D"=
+#B5B5B5" strokeweight=3D"1pt" fillcolor=3D"#08c775" o:button=3D"true" o:all=
+owincell=3D"true" o:allowoverlap=3D"false" > <v:textbox inset=3D"2px,2px,2p=
+x,2px"> <center style=3D"color:#ffffff;font-family:Helvetica, Arial, sans-s=
+erif; font-size:22px; line-height: 1.1;">DOWNLOAD LUTS HERE</center> </v:te=
+xtbox> </v:roundrect>=0A<![endif]--> <a href=3D"https://denverkr.lt.acemlnc=
+.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuY29sb3JncmFkaW=
+5nY2VudHJhbC5jb20lMkZmcmVlLWx1dHMtZG93bmxvYWQtYWRvYmUlMkY=3D&a=3D89849254&a=
+ccount=3Ddenverkr%2Eactivehosted%2Ecom&email=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C=
+%2FF3J%2FgQB9Uu3XAY%3D&s=3D98e2737d7256ebc4244dca9ee0144d65&i=3D310A346A3A2=
+604" style=3D"margin: 0; outline: none; padding: 12px; color: #ffffff; back=
+ground-color: #08c775; border: 1px solid #B5B5B5; border-radius: 3px; font-=
+family: Helvetica, Arial, sans-serif; font-size: 22px; display: inline-bloc=
+k; line-height: 1.1; text-align: center; text-decoration: none; mso-hide: a=
+ll;"> <span style=3D"color:#ffffff;font-family:Helvetica, Arial, sans-serif=
+;font-size:22px;"> DOWNLOAD LUTS HERE </span> </a> </div>=0A=0A</td>=0A</tr=
+>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr><td id=3D"lay=
+out-row-margin4427" valign=3D"top" style=3D"padding: 5px;"><table width=3D"=
+100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: =
+14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border=
+-collapse: initial !important;"><tr id=3D"layout-row4427" class=3D"layout l=
+ayout-row widget _widget_text style4427" style=3D"margin: 0; padding: 0;"><=
+td id=3D"layout-row-padding4427" valign=3D"top" style=3D"padding: 5px 5px 4=
+0px 5px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt;"><tr><td id=3D"text_div3664" class=3D"td_text td_block=
+" valign=3D"top" align=3D"left" width=3D"580" style=3D"line-height: 150%; m=
+argin: 0; outline: none; padding: 0; color: inherit; font-size: 12px; font-=
+weight: inherit; line-height: 1.5; text-decoration: inherit; font-family: A=
+rial; mso-line-height-rule: exactly;"> <div style=3D"line-height: 150%; mar=
+gin: 0; outline: none; padding: 0;=0Afont-size: 22px; line-height: 1.5; mso=
+-line-height-rule: exactly;" data-line-height=3D"1.5"> <div style=3D"margin=
+: 0; outline: none; padding: 0; color: #000000;"><div style=3D"margin: 0; o=
+utline: none; padding: 0; font-style: normal; font-weight: 400; color: #222=
+222; text-align: center;"><br style=3D"font-family: Helvetica, Arial, sans-=
+serif;"></div>=0A<span style=3D"color: #000000; font-size: inherit; font-we=
+ight: 400; line-height: inherit; text-decoration: inherit; font-style: norm=
+al; font-family: Helvetica, Arial, sans-serif;" class=3D""><span style=3D"c=
+olor: #000000; font-size: 22px; font-weight: inherit; line-height: inherit;=
+ text-decoration: inherit; font-family: Helvetica, Arial, sans-serif; font-=
+style: normal;">You might be wondering why you're getting the master LUT co=
+llection valued at $450 for FREE.=C2=A0=C2=A0</span><span style=3D"color: #=
+000000; font-size: 22px; font-weight: inherit; line-height: inherit; text-d=
+ecoration: inherit; font-family: Helvetica, Arial, sans-serif; font-style: =
+normal;">The answer is simple.</span><span style=3D"color: #222222; font-si=
+ze: inherit; font-weight: inherit; line-height: inherit; text-decoration: i=
+nherit;"> <br><br>To help you get STARTED and for that you need to start se=
+eing results TODAY!</span><br style=3D""><br style=3D""><span style=3D"colo=
+r: #222222; font-size: inherit; font-weight:=0Ainherit; line-height: inheri=
+t; text-decoration: inherit;">This also ties back to my story of how color =
+grading changed my life... <br><br>...going from the depths of depression o=
+ut of work to helping me to land my first career job.</span><br style=3D"">=
+<br style=3D""><span style=3D"color: #222222; font-size: inherit; font-weig=
+ht: inherit; line-height: inherit; text-decoration: inherit;">For me it lit=
+erally STARTED with a few presets or "looks"...</span><br style=3D""><br st=
+yle=3D""><span style=3D"color: #222222; font-size: inherit; font-weight: in=
+herit; line-height: inherit; text-decoration: inherit;">I'll share that sto=
+ry with you in my newsletter and how it eventually led to landing big freel=
+ancing gigs... <br><br>...with companies like Facebook and even designing t=
+he original video filters in the Instagram app.</span><br style=3D""><br st=
+yle=3D""><span style=3D"color: #222222; font-size: inherit; font-weight: in=
+herit; line-height: inherit; text-decoration: inherit;" class=3D""><span=0A=
+style=3D"color: #222222; font-size: 22px; font-weight: 400; line-height: in=
+herit; text-decoration: inherit; font-family: Helvetica, Arial, sans-serif;=
+ font-style: normal;">For today enjoy the 70 </span><span style=3D"color: #=
+222222; font-size: 22px; font-weight: 400; line-height: inherit; text-decor=
+ation: inherit; font-family: Helvetica, Arial, sans-serif; font-style: norm=
+al;">free</span><span style=3D"color: #222222; font-size: 22px; font-weight=
+: 400; line-height: inherit; text-decoration: inherit; font-family: Helveti=
+ca, Arial, sans-serif; font-style: normal;"> LUTs!</span></span><br style=
+=3D""><br style=3D""><span style=3D"color: #222222; font-size: inherit; fon=
+t-weight: inherit; line-height: inherit; text-decoration: inherit;">Cheers,=
+</span><br style=3D""><span style=3D"color: #222222; font-size: inherit; fo=
+nt-weight: inherit; line-height: inherit; text-decoration: inherit;">Denver=
+ Riddle<br><br>P.S. Subscribe to our <a=0Ahref=3D"https://denverkr.lt.aceml=
+nc.com/Prod/link-tracker?redirectUrl=3Dhttps://www.youtube.com/channel/UCAY=
+Vd0fXmRJFkBAaQJRvcuw?sub_confirmation=3D1&a=3D89849254&account=3Ddenverkr%2=
+Eactivehosted%2Ecom&email=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY=
+%3D&s=3D98e2737d7256ebc4244dca9ee0144d65&i=3D310A346A3A2605" data-ac-defaul=
+t-color=3D"1" target=3D"_blank" style=3D"margin: 0; outline: none; padding:=
+ 0; color: #045fb4; text-decoration: underline;"><span style=3D"color: ; fo=
+nt-size: inherit; font-weight: inherit; line-height: inherit; text-decorati=
+on: inherit;">YouTube channel</span></a> and follow us on <a href=3D"https:=
+//denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlM=
+kZ3d3cuaW5zdGFncmFtLmNvbSUyRmNvbG9yZ3JhZGluZyUyRg=3D=3D&a=3D89849254&accoun=
+t=3Ddenverkr%2Eactivehosted%2Ecom&email=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3=
+J%2FgQB9Uu3XAY%3D&s=3D98e2737d7256ebc4244dca9ee0144d65&i=3D310A346A3A2606" =
+data-ac-default-color=3D"1" target=3D"_blank" style=3D"margin: 0; outline: =
+none; padding: 0; color: #045fb4; text-decoration: underline;"><span style=
+=3D"color: ; font-size: inherit; font-weight:=0Ainherit; line-height: inher=
+it; text-decoration: inherit;">Instagram</span></a> for daily and weekly pu=
+blished grading videos!</span></span><br></div>=0A </div>=0A<!--[if (gte ms=
+o 12)&(lte mso 15) ]>=0A<style data-ac-keep=3D"true" data-ac-inline=3D"fals=
+e"> #text_div3664, #text_div3664 div { line-height: 150% !important; };=0A<=
+/style>=0A<![endif]--></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=
+=0A</td>=0A</tr>=0A<tr id=3D"layout-row4425" class=3D"layout layout-row cle=
+ar-this "><td id=3D"layout-row-padding4425" valign=3D"top"><table width=3D"=
+100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: =
+14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><=
+td id=3D"layout_table_996a1562892b5f8cf6abd4b6f5f7015f5d470c1c" valign=3D"t=
+op" width=3D"101"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" c=
+lass=3D"layout layout-table " width=3D"101" style=3D"font-size: 14px; min-w=
+idth: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td id=3D"la=
+yout-row-margin4424" valign=3D"top" style=3D"padding: 0 20px 6px 0;"><table=
+ width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"f=
+ont-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt; border-collapse: initial !important;"><tr id=3D"layout-row4424" class=
+=3D"layout layout-row widget _widget_picture style4424" align=3D"left" styl=
+e=3D""><td id=3D"layout-row-padding4424" valign=3D"top" style=3D"padding: 0=
+;"><table=0Awidth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-tabl=
+e-rspace: 0pt;"><tr><td class=3D"image-td" align=3D"left" valign=3D"top" wi=
+dth=3D"81"><a href=3D"https://denverkr.lt.acemlnc.com/Prod/link-tracker?red=
+irectUrl=3DaHR0cHMlM0ElMkYlMkZjZ2NwdWJsaWMuczMtdXMtd2VzdC0yLmFtYXpvbmF3cy5j=
+b20lMkZkZW52ZXJfaG9sbGFuZF9hdmF0YXIucG5n&a=3D89849254&account=3Ddenverkr%2E=
+activehosted%2Ecom&email=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%=
+3D&s=3D98e2737d7256ebc4244dca9ee0144d65&i=3D310A346A3A2607" style=3D"margin=
+: 0; outline: none; padding: 0; color: #045fb4; display: block; min-width: =
+100%;"><img src=3D"https://denverkr.imgus11.com/public//695f092d6294790aef5=
+04709636924b3.png?r=3D890340605" alt=3D"Denver Avatar" width=3D"75" style=
+=3D"border: none; display: block; outline: none; width: 75px; opacity: 1; m=
+ax-width: 100%;"></a></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A=
+</td>=0A</tr>=0A</table>=0A</td>=0A<td id=3D"layout_table_34b0f6156f1042ddf=
+80b5ac1206f724072085f3c" valign=3D"top" width=3D"499"><table cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" class=3D"layout layout-table " width=3D"=
+499" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-=
+table-rspace: 0pt;"><tr id=3D"layout-row4423" class=3D"layout layout-row cl=
+ear-this "><td id=3D"layout-row-padding4423" valign=3D"top"><table width=3D=
+"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:=
+ 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr>=
+<td id=3D"layout_table_51a2b63a3a1fb011db5d7432c8aa19fc37e49922" valign=3D"=
+top" width=3D"243"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+class=3D"layout layout-table " width=3D"243" style=3D"font-size: 14px; min-=
+width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td id=3D"l=
+ayout-row-margin4421" valign=3D"top" style=3D"padding: 0 0 10px 0;"><table =
+width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"fo=
+nt-size: 14px; min-width: 100%;=0Amso-table-lspace: 0pt; mso-table-rspace: =
+0pt; border-collapse: initial !important;"><tr id=3D"layout-row4421" class=
+=3D"layout layout-row widget _widget_text style4421" style=3D"margin: 0; pa=
+dding: 0;"><td id=3D"layout-row-padding4421" valign=3D"top" style=3D"paddin=
+g: 0;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt;"><tr><td id=3D"text_div3660" class=3D"td_text td_block" va=
+lign=3D"top" align=3D"left" width=3D"243" style=3D"line-height: 140%; margi=
+n: 0; outline: none; padding: 0; color: inherit; font-size: 12px; font-weig=
+ht: inherit; line-height: 1.4; text-decoration: inherit; font-family: Arial=
+; mso-line-height-rule: exactly;"> <div style=3D"line-height: 140%; margin:=
+ 0; outline: none; padding: 0; line-height: 1.4; mso-line-height-rule: exac=
+tly; font-size: 12px;" class=3D"" data-line-height=3D"1.4"><span class=3D""=
+ style=3D"color: inherit; font-size: 12px; font-weight: inherit; line-heigh=
+t:=0Ainherit; text-decoration: inherit;"><span style=3D"color: inherit; fon=
+t-size: inherit; font-weight: 700; line-height: inherit; text-decoration: i=
+nherit;" class=3D"">Denver Riddle<br class=3D""></span>Founder of Color Gra=
+ding Central<br class=3D"">denver@colorgradingcentral.com</span></div>=0A<!=
+--[if (gte mso 12)&(lte mso 15) ]>=0A<style data-ac-keep=3D"true" data-ac-i=
+nline=3D"false"> #text_div3660, #text_div3660 div { line-height: 140% !impo=
+rtant; };=0A</style>=0A<![endif]--></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=
+=0A</table>=0A</td>=0A</tr>=0A<tr><td id=3D"layout-row-margin4426" valign=
+=3D"top" style=3D"padding: 0px;"><table width=3D"100%" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso=
+-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: initial !import=
+ant;"><tr id=3D"layout-row4426" class=3D"layout layout-row widget _widget_s=
+ocial style4426" style=3D""><td id=3D"layout-row-padding4426" valign=3D"top=
+" style=3D"padding: 0px 0px 20px 0px;"><table width=3D"100%" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100=
+%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td><table width=3D"1=
+00%" cellspacing=3D"0" cellpadding=3D"0" style=3D"font-size: 14px; min-widt=
+h: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td width=3D"24=
+3" align=3D"left"> <center style=3D"margin: 0; outline: none; padding: 0; f=
+ont-size: 0px;"> <table class=3D"_ac_social_table" cellspacing=3D"0" cellpa=
+dding=3D"0" align=3D"left" style=3D"font-size: 0; min-width: auto!important=
+; mso-table-lspace: 0pt;=0Amso-table-rspace: 0pt; margin: auto!important; d=
+isplay: inline-block!important; text-align: left!important;"><tr><td align=
+=3D"center" valign=3D"middle" width=3D"34" style=3D"display:inline-block!im=
+portant;font-size:0;width:34px!important;"><div class=3D"__ac_social_icons"=
+ style=3D"margin: 0; outline: none; padding: 0;"><a href=3D"https://denverk=
+r.lt.acemlnc.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cueW=
+91dHViZS5jb20lMkZjaGFubmVsJTJGVUNBWVZkMGZYbVJKRmtCQWFRSlJ2Y3V3JTNGc3ViX2Nvb=
+mZpcm1hdGlvbiUzRDE=3D&a=3D89849254&account=3Ddenverkr%2Eactivehosted%2Ecom&=
+email=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=3D98e2737d7256=
+ebc4244dca9ee0144d65&i=3D310A346A3A2605" id=3D"youtube" class=3D"__ac_socia=
+l_icon_link" style=3D"margin: 0; outline: none; padding: 0; color: #045fb4;=
+"><img src=3D"https://denverkr.img-us6.com/_social_/flat-color-square-youtu=
+be.png" border=3D"0" width=3D"34" style=3D"border: none;"></a></div>=0A</td=
+>=0A<td width=3D"10" style=3D"display:inline-block!important;font-size:0;wi=
+dth:10px!important;">=C2=A0</td>=0A<td align=3D"center" valign=3D"middle" w=
+idth=3D"34" style=3D"display:inline-block!important;font-size:0;width:34px!=
+important;"><div class=3D"__ac_social_icons" style=3D"margin: 0; outline: n=
+one; padding: 0;"><a href=3D"https://denverkr.lt.acemlnc.com/Prod/link-trac=
+ker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuaW5zdGFncmFtLmNvbSUyRmNvbG9yZ3JhZ=
+GluZyUyRg=3D=3D&a=3D89849254&account=3Ddenverkr%2Eactivehosted%2Ecom&email=
+=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=3D98e2737d7256ebc42=
+44dca9ee0144d65&i=3D310A346A3A2606" id=3D"instagram" class=3D"__ac_social_i=
+con_link" style=3D"margin: 0; outline: none; padding: 0; color: #045fb4;"><=
+img src=3D"https://denverkr.img-us6.com/_social_/flat-color-square-instagra=
+m.png" border=3D"0" width=3D"34" style=3D"border: none;"></a></div>=0A</td>=
+=0A<td width=3D"10" style=3D"display:inline-block!important;font-size:0;wid=
+th:10px!important;">=C2=A0</td>=0A<td align=3D"center" valign=3D"middle" wi=
+dth=3D"34" style=3D"display:inline-block!important;font-size:0;width:34px!i=
+mportant;"><div class=3D"__ac_social_icons" style=3D"margin: 0; outline: no=
+ne; padding: 0;"><a href=3D"https://denverkr.lt.acemlnc.com/Prod/link-track=
+er?redirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuZmFjZWJvb2suY29tJTJGQ29sb3ItR3JhZG=
+luZy1DZW50cmFsLTExNDIwNTM0MjAwNzk1OSUyRg=3D=3D&a=3D89849254&account=3Ddenve=
+rkr%2Eactivehosted%2Ecom&email=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9U=
+u3XAY%3D&s=3D98e2737d7256ebc4244dca9ee0144d65&i=3D310A346A3A2608" id=3D"fac=
+ebook" class=3D"__ac_social_icon_link" style=3D"margin: 0; outline: none; p=
+adding: 0; color: #045fb4;"><img src=3D"https://denverkr.img-us6.com/_socia=
+l_/flat-color-square-facebook.png" border=3D"0" width=3D"34" style=3D"borde=
+r: none;"></a></div>=0A</td>=0A</tr>=0A</table>=0A</center> </td>=0A </tr>=
+=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=
+=0A</tr>=0A</table>=0A</td>=0A<td id=3D"layout_table_71fbc00366736142dc5beb=
+37e0fc400138d3f8da" valign=3D"top" width=3D"200"><table cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0" class=3D"layout layout-table " width=3D"200" =
+style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table=
+-rspace: 0pt;"><tr><td id=3D"layout-row-margin4422" valign=3D"top" style=3D=
+"padding: 0;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt;=
+ mso-table-rspace: 0pt; border-collapse: initial !important;"><tr id=3D"lay=
+out-row4422" class=3D"layout layout-row widget _widget_text style4422" styl=
+e=3D"margin: 0; padding: 0;"><td id=3D"layout-row-padding4422" valign=3D"to=
+p" style=3D"padding: 0 0 20px 0;"><table width=3D"100%" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td id=3D"text_div3661" cl=
+ass=3D"td_text td_block" valign=3D"top" align=3D"left" width=3D"200" style=
+=3D"line-height: 140%;=0Amargin: 0; outline: none; padding: 0; color: inher=
+it; font-size: 12px; font-weight: inherit; line-height: 1.4; text-decoratio=
+n: inherit; font-family: Arial; mso-line-height-rule: exactly;"> <div data-=
+line-height=3D"1.4" style=3D"line-height: 140%; margin: 0; outline: none; p=
+adding: 0; line-height: 1.4; mso-line-height-rule: exactly; font-size: 11px=
+;"> <span class=3D"" style=3D"color: inherit; font-size: 11px; font-weight:=
+ inherit; line-height: inherit; text-decoration: inherit;"> </span><div sty=
+le=3D"margin: 0; outline: none; padding: 0; text-align: right;"><span style=
+=3D"color: #555555; font-size: 12px; font-weight: inherit; line-height: inh=
+erit; text-decoration: inherit; text-align: inherit;" class=3D"">Sent to:=
+=C2=A0mrcloud.med@gmail.com</span></div>=0A<div style=3D"margin: 0; outline=
+: none; padding: 0; text-align: right;"><span style=3D"color: #555555; font=
+-size: 12px; font-weight: inherit; line-height: inherit; text-decoration: i=
+nherit; text-align: inherit;" class=3D"">Color Grading Central LLC, PO Box =
+478, Huntsville, UT 84317, United States</span></div>=0A<div style=3D"margi=
+n: 0; outline: none; padding: 0; text-align: right;"><span style=3D"color: =
+#555555; font-size: 12px; font-weight: inherit; line-height: inherit; text-=
+decoration: inherit;" class=3D""><div style=3D"margin: 0; outline: none; pa=
+dding: 0; text-align: inherit; display: inline;">Don't want future emails?=
+=C2=A0</div>=0A<a href=3D"http://denverkr.activehosted.com/proc.php?nl=3D3&=
+c=3D310&m=3D346&s=3D98e2737d7256ebc4244dca9ee0144d65&act=3Dunsub" style=3D"=
+margin: 0; outline: none; padding: 0; color: #555555; text-decoration: unde=
+rline; text-align: inherit;" target=3D"_blank"><span style=3D"color: #55555=
+5; font-size: inherit; font-weight: inherit; line-height: inherit; text-dec=
+oration: inherit;">Unsubscribe</span></a></span><br style=3D"text-align: in=
+herit; color: #333333;"></div>=0A </div>=0A<!--[if (gte mso 12)&(lte mso 15=
+) ]>=0A<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_div3661=
+, #text_div3661 div { line-height: 140% !important; };=0A</style>=0A<![endi=
+f]--></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A=
+</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</=
+tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td=
+>=0A</tr>=0A</table>=0A</div>=0A<img src=3D"https://denverkr.lt.acemlnc.com=
+/Prod/link-tracker?nl=3D3&c=3D310&m=3D346&s=3D98e2737d7256ebc4244dca9ee0144=
+d65&l=3Dopen&account=3Ddenverkr.activehosted.com" border=3D"0" width=3D"1" =
+height=3D"1" style=3D"display:block;width:1px!important;min-width:1px!impor=
+tant;max-width:1px!important;height:1px!important;border:0;overflow:hidden;=
+" /><br clear=3D"all" /></body>=0A</html>
+--_=_swift-1579006902609bed1039b195.42854257_=_--
+

@@ -1,0 +1,57 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:cad2:0:b029:f4:b3fb:84d3 with SMTP id e18csp1356479lky;
+        Sat, 8 May 2021 06:13:38 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwbVZUrXqW5/O26seyTMw/uLM1jL7IiFo5Wl3snJSNnwhbhQrh5Ec/F3CSs7GUXlmkjHrdJ
+X-Received: by 2002:a2e:b5d8:: with SMTP id g24mr12236560ljn.115.1620479618576;
+        Sat, 08 May 2021 06:13:38 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1620479618; cv=none;
+        d=google.com; s=arc-20160816;
+        b=nV2jJZZJgRzCk1PwY+485OsLT+lEnkYIRNW/NElj7sAqUeMvtiUXQ02tlReD5uBWsv
+         Kzm5KqfzJCWcb1j/8QW9OfKHV4+rY61KJqoJdkEcT0Xpl2DFWuY9f5YC+ud90Ftk1AiB
+         JdDROyaWLmMZHAriaMKd6z068lh1zVluBFjKOydGJ0vqKm1pDzIx2IkEmGpd7Yd606+a
+         Ztn3CQeYd2IRtlFnWfvVsOYzau+mkGmLD7t/K7noB+KyRh/qkRAaS+FOqAqBjExLejTg
+         ADdx1spe8ix8iuA6IMFH5MNTbnSgJS3aOhcIKX8L0LldTk6ktsXkMU88kegpkSY9ui2X
+         C7tA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:reply-to:from:mime-version:subject:to:message-id;
+        bh=OCO5kjxTGSuVv0rSiCOloEjWHDiYdbV+IZSOdqMVBwM=;
+        b=VHaABhx3aAFQfQKH9gTAhD9m/y/4RJpOeU++Fr0EdHqNpWBjODS4oI2+R97ZnuPWmk
+         LiUmL1pDxvrxBI11/28Z4PPLAcdoHpDc7a9ICeWsripDJ4uHXn/xumaLpgegS8xX28+7
+         6HGps212+iCIqGVkcCbVBL7u9ul6s/U/8jJro7DY0uBktvh5EkWEqKxJiKb57L7MW+ri
+         QV4XYS25/SiWkP2yCgrVVpjQS2cvjsL/otOyihldahvwpgAicUtHbG86U/0MbhsgbYDJ
+         JLf06XCW1EntzdtHr+yvaA7YAPhr4uUy3/+FJiDOuXIpHK7MzaGvNPfczurHYtgMqB7U
+         Q71Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=softfail (google.com: domain of transitioning noreply@www.happyfappy.org does not designate 185.25.51.12 as permitted sender) smtp.mailfrom=noreply@www.happyfappy.org
+Return-Path: <noreply@www.happyfappy.org>
+Received: from core.thespit.me (mail.thespit.me. [185.25.51.12])
+        by mx.google.com with ESMTP id 188si10667826lfc.309.2021.05.08.06.13.38
+        for <mrcloud.med@gmail.com>;
+        Sat, 08 May 2021 06:13:38 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning noreply@www.happyfappy.org does not designate 185.25.51.12 as permitted sender) client-ip=185.25.51.12;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning noreply@www.happyfappy.org does not designate 185.25.51.12 as permitted sender) smtp.mailfrom=noreply@www.happyfappy.org
+Message-ID: <60968e82.1c69fb81.30dd4.c081SMTPIN_ADDED_BROKEN@mx.google.com>
+X-Google-Original-Message-ID: <5a6e728b83854bdfe47bb4d816ad02a0@www.happyfappy.org
+Received: by core.thespit.me (Postfix, from userid 33)
+	id 30AB586E85; Sat,  8 May 2021 14:13:38 +0100 (BST)
+To: mrcloud.med@gmail.com
+Subject: New account confirmation
+MIME-Version: 1.0
+Content-type: text/plain; charset=iso-8859-1
+From: HappyFappy
+ <noreply@www.happyfappy.org>
+Reply-To: noreply@www.happyfappy.org
+X-Mailer: Project Luminance
+X-Priority: 3
+Date: Sat,  8 May 2021 14:13:38 +0100 (BST)
+
+This email is to confirm the account you just created at HappyFappy
+
+You have 24 hours to click the link below and finish the registration process for this account.
+
+https://www.happyfappy.org/users/create?token=85cc28af555d75f47d485c5b0ac56a12d2f548a4b832a546af1de8e7f65013edb555bc1bce988dcbf16606dd2c596020719f618ee86430dd56ef11209f4c32f3262ac634caec2f8cb4df313ceb4d161bcff7710db1095090487f3633a7aaf3a42d76dd7a33b4ba05c0a5136d2728aaa20e91404074826497f3591eac930859556928b4fbd5c42dd7eaf24430b5fcb8b2ae8d24a653d67f8cd4f561499f0fcfb3a21dd1f958cc687ee961bb41cb909990
+
+Thank you,
+HappyFappy Staff
+

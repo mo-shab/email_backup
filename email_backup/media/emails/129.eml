@@ -1,0 +1,69 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:2894:b029:f7:3642:9e90 with SMTP id e20csp1742778lkc;
+        Mon, 17 May 2021 05:35:28 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzR8NFGuf5+9VgDlLqkAQObBYogyiIrGEInNERm5OvO/TAohy2Rm3j5CGJU0yarl/6rrMkw
+X-Received: by 2002:a17:906:4b19:: with SMTP id y25mr326922eju.49.1621254928673;
+        Mon, 17 May 2021 05:35:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1621254928; cv=none;
+        d=google.com; s=arc-20160816;
+        b=caaBPQXh2a8SVBUcRyQuMATg4hTuronPvDuxKmpidxwBIHbJyUof1Xzjll3pqTZSoD
+         uOH8jJRgbWDVKWB0eT66uUDp/0JcNUcCwihOO1dmMWVij/Pnq2OmkMewsSPcKji44Lr0
+         YTgsbFqVS7QIPzDHtRJZgl9KPJ4Rmy6vB6z+pSKV0f3VE8JliYWmtfuvv0aUAtEO64Jp
+         2R8YKhi6coZcuh8ph65hHcMMwrqvaylazB9NVdFqOJQar34OQDRT7sxi73BT6lYlnMQL
+         gfUNaGe+KklsdA7hkI4m042LCCQRxSs0tmkQoLF3ebv+WA+BDFAwXMorzSYzdtljbLXc
+         XHBQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:content-transfer-encoding:to:subject:from;
+        bh=ZIQZpnqFRBPoeLCFJimTDPkKjJb9bgvmblJesbSdsFY=;
+        b=0B0jtZwSZZiOcdVy3Z2wP27TIAG95Pjw2wBv9+BbnuJTB78j9UMXeAQ04TP24sd4yW
+         e+44c5WRNI0GVP4jdQEq7qNFVvKzzIiaRYZclyNN5rXGJQDaiMDjqVn+dbLS0bA0Zs7U
+         59iOTmJpONsnEls0JmF13tJXz7O2uqa1gSfCqFBC2L3K0tlvO5lG6ahcmf1bFCRVF75Z
+         hM7J3ZPVtao6fuw80rH5f93wBkhA/YT4DhqgQf1rwWt8xfCYzt0CjrkyZX6OsuuUjTeF
+         4nHpXq7FAihykbdRbhUeSoub4oG07RDfiQ5m6ihfl4frtk9Ncan/6sK7EBBQBSbr7Sqx
+         vKrQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of noreply@avito.ma designates 18.203.180.56 as permitted sender) smtp.mailfrom=noreply@avito.ma;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=avito.ma
+Return-Path: <noreply@avito.ma>
+Received: from www.avito.ma (email.avito.ma. [18.203.180.56])
+        by mx.google.com with ESMTP id b15si8729183edd.87.2021.05.17.05.35.28
+        for <mrcloud.med@gmail.com>;
+        Mon, 17 May 2021 05:35:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@avito.ma designates 18.203.180.56 as permitted sender) client-ip=18.203.180.56;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of noreply@avito.ma designates 18.203.180.56 as permitted sender) smtp.mailfrom=noreply@avito.ma;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=avito.ma
+Received: from trans.avito.ma (trans-1 [10.0.100.7])
+	by www.avito.ma (Postfix) with ESMTP id 7223B6437F
+	for <mrcloud.med@gmail.com>; Mon, 17 May 2021 13:35:28 +0100 (WEST)
+Received: by trans.avito.ma (Postfix, from userid 503)
+	id 6FD6263726; Mon, 17 May 2021 13:35:26 +0100 (WEST)
+From: =?UTF-8?Q?avito.ma?= <noreply@avito.ma>
+Subject: Activez votre email Avito.ma!
+To: mrcloud.med@gmail.com
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <20210517123528.6FD6263726@trans.avito.ma>
+Date: Mon, 17 May 2021 13:35:26 +0100 (WEST)
+
+Bonjour!
+
+F=C3=A9licitations votre compte Avito.ma est maintenant cr=C3=A9=C3=A9
+
+
+  Merci de valider votre email en cliquant sur le lien ci-dessous.
+  https://www.avito.ma/account/activate?ac=3D824bb01faeb6968043dccc6152b3=
+ae284c458d7b
+
+
+---------------------------------------------------------------------
+Avito.ma, num=C3=A9ro 1 de la petite annonce au Maroc
+NB : Toute annonce publi=C3=A9e doit =C3=AAtre conforme au R=C3=A8glement=
+ de notre site Avito.ma. 
+
+T=C3=A9l=C3=A9chargeable sur votre smartphone ici :
+
+Android : https://play.google.com/store/apps/details?id=3Dse.scmv.morocco=
+
+IPhone, iPad : https://itunes.apple.com/fr/app/avito.ma/id740544172
+

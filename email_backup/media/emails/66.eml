@@ -1,0 +1,906 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp815164lkb;
+        Wed, 24 Mar 2021 12:08:57 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwgHDd0rfQDzlQbRsiWjx69h/F9Gn7UTTX2vWhI6MlWZt1XPPyKtjHDYUDFETYFZZIa2Oc4
+X-Received: by 2002:a17:90a:bd09:: with SMTP id y9mr4834047pjr.179.1616612937613;
+        Wed, 24 Mar 2021 12:08:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1616612937; cv=none;
+        d=google.com; s=arc-20160816;
+        b=QdYuk/rrPVnD4dC7NjHfNmsGFCzifBPUNfQTh0hrmYHk25YKVxjpzO/ZXqDYWBt63P
+         jfXlj882UcLC1Jjr2teVzGYGLBM3j8nvWhjGuRadpQ7TIgxn/fMpAL/CMrrvtkrkiRwl
+         SZu3lG+RUjGP6mUQL4ljRgmhQ5s67uNmAEZYAXg7T0v0R4HvTcfAC+9o6iPdcEmxoMF/
+         CndtS98CMlNHbGeXQKsURFmLGmpJQ5gHsX3Um0huNcjA8XVoX6kLiWfY9hsM4xC8+ofF
+         HTXosshfTBFfZ6/a/FNMSNcD1bru9COPmF2bOVolZj8zWEgDtK8bQGU/q9ccB3HVrMFB
+         7+cQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-id:list-unsubscribe:feedback-id:from:subject:reply-to
+         :mime-version:date:message-id:to:dkim-signature;
+        bh=RvGE9u0Z/ZU0N6SbqurNOatEnWsiaDBu9k2Qjwy5Upo=;
+        b=R7JrdJ6/OvaisS84YgK4je09OyXATE1tKw/Uft6DF9kb7eGOC9i/ldJRb0VbXGY88A
+         UgF/W11u2ot35KVf3ZiahXoFIESl5M+QXEF/y5+VG90hW+S8TtRZtrUCWTno0neSiuiC
+         lElao6dzDkkxSNOrsFueAXrzsp99dDBL5/U+VA7DjVUJhgaAoaWTqh3kxZizXFko7oMA
+         m/Yq1CPXkLqnbHW7Uu5I6R62W6rM7/Z+cmo8STPVEvq4bWc2BxIfMKLPDi8HvcpXOubc
+         trwGbr7pNJ3C/4bZmQrbOGtYlMELPkeChnY45D+gyvnjuczwGIJWyWWPE3wr0zwqjH+a
+         9rgw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.plex.tv header.s=scph0420 header.b=molem9YZ;
+       spf=pass (google.com: domain of msprvs1=1871792k5ezve=bounces-282520@bounce.plex.tv designates 156.70.3.97 as permitted sender) smtp.mailfrom="msprvs1=1871792k5ezvE=bounces-282520@bounce.plex.tv";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=plex.tv
+Return-Path: <msprvs1=1871792k5ezvE=bounces-282520@bounce.plex.tv>
+Received: from mta-70-3-97.sparkpostmail.com (mta-70-3-97.sparkpostmail.com. [156.70.3.97])
+        by mx.google.com with ESMTPS id h19si2877545pjv.8.2021.03.24.12.08.56
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 24 Mar 2021 12:08:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=1871792k5ezve=bounces-282520@bounce.plex.tv designates 156.70.3.97 as permitted sender) client-ip=156.70.3.97;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.plex.tv header.s=scph0420 header.b=molem9YZ;
+       spf=pass (google.com: domain of msprvs1=1871792k5ezve=bounces-282520@bounce.plex.tv designates 156.70.3.97 as permitted sender) smtp.mailfrom="msprvs1=1871792k5ezvE=bounces-282520@bounce.plex.tv";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=plex.tv
+X-MSFBL: AGBqK/AMG/el3x0r0vhOV373smDM8svEJkDinaMn8bE=|eyJ0ZW5hbnRfaWQiOiJ
+	zcGMiLCJjdXN0b21lcl9pZCI6IjI4MjUyMCIsInN1YmFjY291bnRfaWQiOiIwIiw
+	ibWVzc2FnZV9pZCI6IjYwNTgyMThlNWI2MGU4Mzk3NmY2IiwiciI6Im1yY2xvdWQ
+	ubWVkQGdtYWlsLmNvbSJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.plex.tv;
+	s=scph0420; t=1616612898; i=@mail.plex.tv;
+	bh=RvGE9u0Z/ZU0N6SbqurNOatEnWsiaDBu9k2Qjwy5Upo=;
+	h=To:Message-ID:Date:Content-Type:Subject:From;
+	b=molem9YZdIR9piPjhhwY6E32Vdik5J2/uLm7mlcWnfSOt5wrggbXQKNdC7gOUTXxi
+	 730g0xlUYtiCyGx4z2hGjXZ50dnhr7aOqNg38FUx7x/0XAPH5MZG7unWoZpHjHaAwo
+	 AB4DjIZsqZRh+ZNLRre5idI75u17gsRihnRotfMs=
+To: mrcloud.med@gmail.com
+Message-ID: <67.6F.47476.12E8B506@ba.mta1vrest.cc.prd.sparkpost>
+Date: Wed, 24 Mar 2021 19:08:17 +0000
+Content-Type: multipart/alternative; boundary="_----00F+g8sRrPVlJ5Vib5iYrA===_AC/5F-47476-12E8B506"
+MIME-Version: 1.0
+Reply-To: hello@mail.plex.tv
+Subject: =?utf-8?B?U3ByaW5n4oCUYW5kIFBsZXhjZXJwdHPigJRoYXZlIHNwcnVuZw==?=
+X-Campaign-ID: 2138202
+From: "Plex" <hello@mail.plex.tv>
+X-Message-ID: 1fd23e6da13d4a25870b3209dabb9d7e
+X-Feedback-ID: 2932758:2138202:30772:iterable
+Feedback-ID: 2932758:2138202:30772:iterable
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:hslc4QAAQRZeYtOLloFVz0JI_QNsSbRoSucB9nhJXsA~|eyAicmNwdF90byI6ICJtcmNsb3VkLm1lZEBnbWFpbC5jb20iLCAidGVuYW50X2lkIjogInNwYyIsICJjdXN0b21lcl9pZCI6ICIyODI1MjAiLCAibWVzc2FnZV9pZCI6ICI2MDU4MjE4ZTViNjBlODM5NzZmNiIsICJzdWJhY2NvdW50X2lkIjogIjAiIH0~>
+List-Id: <spc.282520.0.sparkpostmail.com>
+
+--_----00F+g8sRrPVlJ5Vib5iYrA===_AC/5F-47476-12E8B506
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Plex is on Facebook Portal, security news & more =0A=0A=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=0A=
+=0A =0A<https://www.plex.tv/=3Futm_source=3DPlex&utm_medium=3Demail&utm_con=
+tent=3Dplex_logo_header&utm_campaign=3DNewsletter_Mar_24_2021_RoW_NonPP>=0A=
+=0A =0A<https://www.plex.tv/=3Futm_source=3DPlex&utm_medium=3Demail&utm_con=
+tent=3Dplexcerpts_header&utm_campaign=3DNewsletter_Mar_24_2021_RoW_NonPP>=
+=0A Welcome back to Plexcerpts, our (mostly) monthly roundup of the latest =
+=0Ahappenings and goings-on at Plex. =0A=0A=0A=0ADiscover a new portal to P=
+lex. =0A Stay close to your loved ones, your friends, and now all the enter=
+tainment =0Ayou love most with Plex on Portal from Facebook. Download our a=
+pp on Portal, =0APortal TV, Portal+, or Portal Mini to experience your medi=
+a in a whole new way. =0A=0A=0A Network security newness. =0A Network conne=
+ctions for Plex servers are now provided by Let's Encrypt. =0AThanks to thi=
+s new configuration, your connections should be quicker to start =0Aup, mor=
+e reliable, and even more private than before. =0A=0ALearn More =0A<https:/=
+/support.plex.tv/articles/206225077-how-to-use-secure-server-connections/=
+=3Futm_source=3DPlex&utm_medium=3Demail&utm_content=3Dnetwork_security_butt=
+on&utm_campaign=3DNewsletter_Mar_24_2021_RoW_NonPP>=0A=0A Meet the Plexians=
+ =0A Welcome to the inaugural series of =E2=80=9CMeet the Plexians=E2=80=9D=
+ where we introduce you =0Ato the people who make the magic happen at Plex =
+and share some of their =0Abehind-the-scenes tips. =0A=0A Celestine =0A Tes=
+t Engineer (QA / CS / Metrics) =0A This month, meet Celestine, a test engin=
+eer who does the nitty gritty backend =0Astuff to make sure your experience=
+ of our app is up to snuff. She=E2=80=99s based out =0Aof Vancouver, BC and=
+ was already a Plex user when she saw in a newsletter that =0Awe were hirin=
+g six years ago (a newsletter much like this one!). =0A What do you enjoy m=
+ost about your job=3F =0AEveryone is so easy-going and makes you feel like =
+a part of a big family. The =0Aflexibility of hours is a huge bonus, which =
+allows me to work around things I =0Aneed to do with the toddler. I also lo=
+ve working on something that I use every =0Aday. The changes that I push fo=
+r have a direct impact on how the product =0Aaffects me. =0A What do you us=
+e Plex for=3F =0AI have a PMS that hosts my anime and Asian TV shows. I als=
+o share my photos =0Alibrary with family and I play back videos of my son t=
+o him=E2=80=94it keeps him =0Aentertained for a long time just watching him=
+self. =0A What do you do outside of work=3F =0AVideo games! I play a bit of=
+ PS4 (need to get a PS5) and I play FF14 almost on =0Aa daily basis. =0A=0A=
+ Platform Updates =0A This month includes additions, improvements, and a wh=
+ole lotta debuggin=E2=80=99. =0A=0A=0A=0A=0A Roku =0AUpdated styles for mor=
+e beautiful backgrounds and smoother transitions. =0A * Enabled alphabetica=
+l source sorting in the More menu. =0A * Fixed crashes, hidden subtitles, a=
+nd surround sound issues. =0A * Get full release notes here =0A<https://for=
+ums.plex.tv/t/plex-for-roku/9463/259=3Futm_source=3DPlex&utm_medium=3Demail=
+&utm_content=3Droku_update_inline&utm_campaign=3DNewsletter_Mar_24_2021_RoW=
+_NonPP>=0A=0A=0A=0A=0A Apple iOS =0AMore vibrant app background and some UI=
+ fixes. =0A * Set post-play screen to end playback after 10 minutes of inac=
+tivity. =0A * Enabled alphabetical source sorting in the More menu. =0A * G=
+et full release notes for iOS here =0A<https://forums.plex.tv/t/plex-for-io=
+s/31524/152=3Futm_source=3DPlex&utm_medium=3Demail&utm_content=3DiOS_update=
+_inline&utm_campaign=3DNewsletter_Mar_24_2021_RoW_NonPP>=0A=0A=0A=0A=0A App=
+leTV =0ACustom functions are mo=E2=80=99 betta for mo=E2=80=99 enjoyment. =
+=0A * Set post-play screen to end playback after 10 minutes of inactivity. =
+=0A * Fixed an issue with some hubs being lost from the home screen with cu=
+stom =0Ahome enabled. =0A * In-progress videos now resume correctly when pl=
+ayed directly from Top Shelf.=0A * Get full release notes for AppleTV here =
+=0A<https://forums.plex.tv/t/plex-for-apple-tv/121357/103=3Futm_source=3DPl=
+ex&utm_medium=3Demail&utm_content=3DiOS_update_inline&utm_campaign=3DNewsle=
+tter_Mar_24_2021_RoW_NonPP>=0A=0A=0A=0A=0A Plex Web =0ASmashing bugs and ti=
+dying up around the Plex web app is what we do, all for =0Ayou. =0A * Made =
+adjustments to modifiable fields in TV item edit modals. =0A * Resolved inc=
+orrect subtitling issue on Live TV. =0A * Fixed unplayed indicator badge ap=
+pearing on recently played podcasts. =0A * Present more meaningful informat=
+ion when creating a gaming library. =0A * Get full release notes here =0A<h=
+ttps://forums.plex.tv/t/plex-web/20528/345=3Futm_source=3DPlex&utm_medium=
+=3Demail&utm_content=3Dplex_web_update_inline&utm_campaign=3DNewsletter_Mar=
+_24_2021_RoW_NonPP>=0A=0APlex Pass members get more. =0A The passion and su=
+pport of Plex Pass members is what keeps our engineers fed, =0Afueled, and =
+inspired to create the next best thing. Here are just some of the =0Abenefi=
+ts you=E2=80=99ll receive for playing such a vital role in our global commu=
+nity. =0A=0A=0A=0A Plexamp =0A Music, made beautiful.=0A=0A=0A=0A Skip Intr=
+o =0A Binge-watch better.=0A=0A=0A=0A=0A Ultimate Live TV & DVR =0A Watch. =
+Record. Repeat.=0A=0A=0A=0A The Power to Download =0A Sync your media to mo=
+bile.=0A=0A=0A=0AUpgrade to a Plex Pass =0A<https://www.plex.tv/plex-pass/p=
+urchase/=3Futm_source=3DPlex&utm_medium=3Demail&utm_content=3Dplex_pass_ups=
+ell_button&utm_campaign=3DNewsletter_Mar_24_2021_RoW_NonPP>=0A=0A =0A<https=
+://www.plex.tv/=3Futm_source=3DPlex&utm_medium=3Demail&utm_content=3Dplex_l=
+ogo_footer&utm_campaign=3DPlex_Pass_Upsell_Skip_Intro_September_3_2020>=0A=
+=0A =0A<https://twitter.com/plex=3Futm_source=3DPlex&utm_medium=3Demail&utm=
+_content=3Dsocial_footer_twitter&utm_campaign=3DNewsletter_Mar_24_2021_RoW_=
+NonPP>=0A =0A<https://www.facebook.com/plexapp=3Futm_source=3DPlex&utm_medi=
+um=3Demail&utm_content=3Dsocial_footer_facebook&utm_campaign=3DNewsletter_M=
+ar_24_2021_RoW_NonPP>=0A =0A<https://www.instagram.com/plex.tv/=3Futm_sourc=
+e=3DPlex&utm_medium=3Demail&utm_content=3Dsocial_footer_instagram&utm_campa=
+ign=3DNewsletter_Mar_24_2021_RoW_NonPP>=0A =0A<https://www.youtube.com/user=
+/plextvapp=3Futm_source=3DPlex&utm_medium=3Demail&utm_content=3Dsocial_foot=
+er_youtube&utm_campaign=3DNewsletter_Mar_24_2021_RoW_NonPP>=0A =0A<https://=
+www.linkedin.com/company/plex-inc=3Futm_source=3DPlex&utm_medium=3Demail&ut=
+m_content=3Dsocial_footer_linkdin&utm_campaign=3DNewsletter_Mar_24_2021_RoW=
+_NonPP>=0A You have received this email because you're a valued Plex custom=
+er. If you no =0Alonger wish to receive these extremely cool emails, please=
+unsubscribe =0A<https://links.plex.tv/e/encryptedUnsubscribe=3F_r=3D3bef3c5=
+0f13f4320a9e31b8be79c6ad2&_s=3D1fd23e6da13d4a25870b3209dabb9d7e&_t=3DHcbeiI=
+1kwLDLuvrBpXfKu_0uT4l_SjAM8dERcnb1Tim-5LyU-8U2DZ6CV_pOmQEwHeMsv95ZsxXWKyy0q=
+NIkzvivHRqUkrcKFtbPYLgXoDmG4r-IZdZAKoxhWFi7hV7ynsOSiykXFNCTcD1lNMAcWOu8cgDx=
+jelkin5mmpdnwj8%3D>=0A.=0A=0APlex GmbH, Hansmatt 32, 6370 Stans, Switzerlan=
+d=0ACopyright =C2=A9 2021 Plex, Inc. All rights reserved.=0A=0AView Online =
+=0A<https://links.plex.tv/e/evib=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=
+=3D1fd23e6da13d4a25870b3209dabb9d7e&_e=3DHcbeiI1kwLDLuvrBpXfKu_0uT4l_SjAM8d=
+ERcnb1Tikn-PQLVi18xT4_Eg6gNxs1lPgv5H5WSlZND9IvpprlwLjhiPHRB1QHlpOQKcaVeuEdK=
+5ujIvjiT-_BfEYFtTfY>
+--_----00F+g8sRrPVlJ5Vib5iYrA===_AC/5F-47476-12E8B506
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns=3D"http://www.w3=
+.org/1999/xhtml" style=3D"color-scheme: light dark; supported-color-scheme=
+s: light dark;"> <head> <meta http-equiv=3D"Content-Type" content=3D"text/h=
+tml; charset=3DUTF-8"> <meta name=3D"viewport" content=3D"width=3Ddevice-wi=
+dth; initial-scale=3D1.0; maximum-scale=3D1.0; user-scalable=3Dno;"> <meta =
+http-equiv=3D"X-UA-Compatible" content=3D"IE=3D9; IE=3D8; IE=3D7; IE=3DEDGE=
+"> <style type=3D"text/css">@media screen{@font-face{font-family:'plexeina-=
+bold';src:url('https://assets.plex.tv/email/assets/fonts/plexeina-bold-webf=
+ont.woff2') format('woff2'),url('https://assets.plex.tv/email/assets/fonts/=
+plexeina-bold-webfont.woff') format('woff');font-weight:normal;font-style:n=
+ormal}@font-face{font-family:'plexeina-regular';src:url('https://assets.ple=
+x.tv/email/assets/fonts/plexeina-regular-webfont.woff2') format('woff2'),ur=
+l('https://assets.plex.tv/email/assets/fonts/plexeina-regular-webfont.woff'=
+) format('woff');font-weight:normal;font-style:normal}}:root{color-scheme:l=
+ight dark;supported-color-schemes:light dark}#outlook a{padding:0}body{widt=
+h:100%!important;min-width:100%!important;margin:0;padding:0;-webkit-text;s=
+ize-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiase=
+d;font-smoothing:antialiased;text-rendering:optimizeLegibility}.ReadMsgBody=
+{width:100%}.ExternalClass{width:100%}.backgroundTable{margin:0 auto;paddin=
+g:0;width:100%;!important}table td{border-collapse:collapse}.ExternalClass =
+*{line-height:115%}b,strong{font-family:'plexeina-bold',Helvetica,Arial,san=
+s-serif;font-weight:normal}ul{line-height:19px;margin-bottom:0;padding:0 0 =
+0 16px}li{padding-bottom:8px;line-height:19px;text-align:left!important}@-m=
+s-viewport{width:device-width}@media screen and (max-device-width:650px),sc=
+reen and (max-width:650px){.header-title{font-size:14px}*[class=3D"80p"]{wi=
+dth:100%!important;height:auto!important;display:block}*[class=3D"70p"]{wid=
+th:100%!important;height:auto!important;display:block}*[class=3D"50p"]{widt=
+h:100%!important;height:auto!important;display:block}*[class=3D"30p"]{width=
+:100%!important;height:auto!important;display:block}*[class=3D"20p"]{width:=
+100%!important;height:auto!important;display:block}*[class=3D"100p"]{width:=
+100%!important;height:auto!important}*[class=3D"upsell"]{width:280px!import=
+ant}*[class=3D"plexcerpts"]{width:250px!important;height:auto!important;dis=
+play:block}*[class=3D"container-mobile"]{padding:40px 25px!important}*[clas=
+s=3D"container-mobile-alabaster"]{padding:40px 25px!important}*[class=3D"pl=
+exian"]{padding:40px 25px!important}*[class=3D"container-mobile-athens-grey=
+"]{padding:40px 25px!important}*[class=3D"container-mobile-hero"]{padding:2=
+0px 25px 40px!important}*[class=3D"container-mobile-flush"]{padding:40px 25=
+px 0!important}*[class=3D"container-mobile-flush-top"]{padding:0 25px 40px!=
+important}*[class=3D"mobile-text-center"]{text-align:center!important}*[cla=
+ss=3D"mobile-text-center-hero"]{text-align:center!important;padding:0!impor=
+tant}*[class=3D"mobile-text-center-hdr"]{text-align:center!important;paddin=
+g:10px 0 0 0!important}*[class=3D"mobile-text-center-flush-sides"]{text-ali=
+gn:center!important;padding:20px 0 0 0!important}*[class=3D"mobile-flush"]{=
+padding:0!important}*[class=3D"title"]{font-size:28px!important;line-height=
+:34px!important;text-align:center!important}*[class=3D"hideContent"]{displa=
+y:none!important}*[class=3D"feature-right"]{width:88%!important;height:auto=
+!important;display:block;text-align:center!important;margin:0 auto!importan=
+t}*[class=3D"feature-left"]{width:88%!important;height:auto!important;displ=
+ay:block;text-align:center!important;margin:0 auto 15px auto!important}}@me=
+dia(prefers-color-scheme:dark){table,td{color:#fff!important}.container-mob=
+ile,.container-mobile-flush{background-color:#034!important;color:#fff!impo=
+rtant}.container-mobile-alabaster,.updates,.feature-left,.feature-right{bac=
+kground-color:#04080c!important;color:#fff!important}.container-mobile-athe=
+ns-grey{background-color:#242424!important;color:#fff!important}.plexian{ba=
+ckground-image:linear-gradient(135deg,#007b8b 0,#034 100%)!important}.job-t=
+itle{color:#b3d8dc!important}}[data-ogsc] table,[data-ogsc] .td{color:#fff!=
+important}[data-ogsc] .container-mobile,[data-ogsc] .container-mobile-flush=
+{background-color:#034!important;color:#fff!important}[data-ogsc] .containe=
+r-mobile-alabaster,[data-ogsc] .updates,[data-ogsc] .feature-left,[data-ogs=
+c] .feature-right{background-color:#04080c!important;color:#fff!important}[=
+data-ogsc] .container-mobile-athens-grey{background-color:#242424!important=
+;color:#fff!important}[data-ogsc] .plexian{background-image:linear-gradient=
+(135deg,#007b8b 0,#034 100%)!important}[data-ogsc] .job-title{color:#b3d8dc=
+!important}</style> <!--[if gte mso 9]><style type=3D"text/css">#outlookhol=
+der{width:650px}</style><![endif]--> </head> <body align=3D"center" bgcolor=
+=3D"#e6e7e8" style=3D"undefined: -webkit-text; size-adjust: 100%; -ms-text-=
+size-adjust: 100%; -webkit-font-smoothing: antialiased; font-smoothing: ant=
+ialiased; text-rendering: optimizeLegibility; margin: 0; padding: 0; width:=
+ 100% !important; min-width: 100% !important;">=0D=0A<div style=3D"color:tr=
+ansparent;visibility:hidden;opacity:0;font-size:0px;border:0;max-height:1px=
+;width:1px;margin:0px;padding:0px;border-width:0px!important;display:none!i=
+mportant;line-height:0px!important;"><img border=3D"0" width=3D"1" height=
+=3D"1" src=3D"http://sp.plex.tv/q/GoeAzYnphjkQSWDi-Ly13w~~/AARPmAA~/RgRiPhM=
+hPVcDc3BjQgpgWCGOW2DoOXb2UhVtcmNsb3VkLm1lZEBnbWFpbC5jb21YBAAAAAA~"/></div>=
+=0D=0A<span style=3D"color:transparent;visibility:hidden;display:none;opaci=
+ty:0;height:0;width:0;font-size:0;">Plex is on Facebook Portal, security ne=
+ws & more</span><img src=3D"https://links.plex.tv/e/eo=3F_t=3D3bef3c50f13f4=
+320a9e31b8be79c6ad2&amp;_m=3D1fd23e6da13d4a25870b3209dabb9d7e&amp;_e=3DHcbe=
+iI1kwLDLuvrBpXfKu_0uT4l_SjAM8dERcnb1Tim-5LyU-8U2DZ6CV_pOmQEwHeMsv95ZsxXWKyy=
+0qNIkzvivHRqUkrcKFtbPYLgXoDmG4r-IZdZAKoxhWFi7hV7ynsOSiykXFNCTcD1lNMAcWOu8cg=
+Dxjelkin5mmpdnwj8%3D" style=3D"border:0;width:1px;height:1px;border-width:0=
+px!important;display:none!important;line-height:0!important;" width=3D"1" h=
+eight=3D"1"/> <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bgcol=
+or=3D"#e6e7e8" width=3D"100%" style=3D"background-color: #e6e7e8; width: 10=
+0%;" class=3D"100p"> <tr> <td align=3D"center" style=3D"border-collapse: co=
+llapse; margin-top: 0px; background-color: #e6e7e8;" bgcolor=3D"#e6e7e8"> <=
+!-- start HIDDEN_PREVIEW_TEXT --><!--[if !mso]><! --> <div style=3D"display=
+:none !important; display:none; overflow:hidden; float:left; width:0px; max=
+-height:0px; max-width:0px; line-height:0px; visibility:hidden;">=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;</div> <!--<![endif]--><!-- end HIDDEN_PREVIEW_TEXT --> <!--[if gte ms=
+o 9]><table id=3D"outlookholder" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center"><tr><td><![endif]--> <!--[if (IE)]><table border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"650" align=3D"center"><tr>=
+<td><![endif]--> <table align=3D"center" width=3D"100%" style=3D"max-width:=
+ 650px; width: 100%;" class=3D"100p" cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0"> <tr> <td align=3D"center" style=3D"border-collapse: collapse;">=
+ <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bgc=
+olor=3D"#003344" style=3D"background-image: linear-gradient(135deg, #978766=
+ 0%, #007b8b 55%, #003344 100%);"> <tr> <td align=3D"center" style=3D"borde=
+r-collapse: collapse; padding: 20px 0;"> <a href=3D"https://links.plex.tv/a=
+/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D1fd23e6da13d4a25870b320=
+9dabb9d7e&_e=3D_cyzlwhA-wUh8ym-OIYN0P4hIBApAPvCXQEXvnBZYtblAXf6A3fMhMBzjLyl=
+e8nvMOukRalk8Zhvs3Nfy1CoC1khF0q5WetaRRUyW5oAPMJHVlCoU_w_iex81H3wqisRAXbbagd=
+4lPUUEpTltwEPUxbMbX10rsySGKVXaXTVU-wi7xZr5QXDuealhOynfX3mR2qq2YZCutcdkILywO=
+kO_Ij8ffWwEj2jP7KwhcZaV_i64J7sV03RqnnNPr4keXukANe8741s2NHa8XI2ejCjWxM8_JCTt=
+2cW0obtf08iI67HyJzbWb059pK9SEWjAfkNASAxGAQMpWVVkau_gUlR131rgzzHi_fRGDe24xsX=
+m05yFqrnAlD7gQG96PfVd0p_doNZFgyr3jGIXyunL2zEiw%3D%3D" target=3D"_blank"><im=
+g src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669=
+d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/plex-log=
+o.png" width=3D"70" style=3D"display: block;" border=3D"0" alt=3D"Plex"></a=
+> </td> </tr> <tr> <td align=3D"center" class=3D"container-mobile-hero" sty=
+le=3D"border-collapse: collapse; padding: 40px 25px 60px 25px;"> <table ali=
+gn=3D"center" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0"> <tr> <td align=3D"center" valign=3D"top" style=3D"border-collapse: coll=
+apse;"> <a href=3D"https://links.plex.tv/a/click=3F_t=3D3bef3c50f13f4320a9e=
+31b8be79c6ad2&_m=3D1fd23e6da13d4a25870b3209dabb9d7e&_e=3D_cyzlwhA-wUh8ym-OI=
+YN0P4hIBApAPvCXQEXvnBZYtblAXf6A3fMhMBzjLyle8nvMOukRalk8Zhvs3Nfy1CoC9WXST4uH=
+aW8V1yDQe9FVHdXmzD62VdoHvECEjgT76KjJhrYRdSH4ZS9fn6EBqbZH6lS_oHjtF5M2msnNZ2l=
+NKw2e6vgRfhCeunTjLvYhnWohiNh1jM8AHKqGnXomoJkgg3g6zL0l9zECjuYaO6SoWjQ9eSmaw1=
+tWQvdypDko1cfAD7qBfs6yODytpQ8slQrL-5V37NMh55VRvEjmQNDTKEAsekrBb-941KCBy47Pd=
+jTkPSLvpQnmX6cOs7kJTfPSftEWpfFcaOtwxXJxVQ0osN-hwx77fx21HfbpwBJw8BqcaReUCWn9=
+3iEDn35l5j8Dw%3D%3D" target=3D"_blank"><img src=3D"https://d15k2d11r6t6rl.c=
+loudfront.net/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a=
+/3bef3c50f13f4320a9e31b8be79c6ad2/plexcerpts-mar-2021.png" width=3D"420" cl=
+ass=3D"100p" style=3D"display: block;" border=3D"0" alt=3D"Plexcerpts"></a>=
+ </td> </tr> <tr> <td align=3D"center" valign=3D"top" style=3D"border-colla=
+pse: collapse; padding: 20px 50px 0 50px; font-size: 18px; line-height: 26p=
+x; text-align: center; font-family: 'plexeina-regular', Helvetica, Arial, s=
+ans-serif; color: #FFFFFF;" class=3D"mobile-text-center-hdr"> Welcome back =
+to Plexcerpts, our (mostly) monthly roundup of the latest happenings and go=
+ings-on at Plex. </td> </tr> </table> </td> </tr> </table> <table align=3D"=
+center" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"> <t=
+r> <td align=3D"center" style=3D"border-collapse: collapse;"> <table align=
+=3D"center" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+> <tr> <td align=3D"center" style=3D"border-collapse: collapse;"> <img src=
+=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713=
+-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/fb-portal.jpg=
+" alt=3D"Now compatible with Facebook Portal." width=3D"100%" style=3D"disp=
+lay: block;" border=3D"0" class=3D"100p"> </td> </tr> </table> </td> </tr> =
+<tr> <td align=3D"center" class=3D"container-mobile-alabaster" style=3D"bor=
+der-collapse: collapse; background: #f9f9f9; padding: 30px 25px 60px 25px;"=
+> <table align=3D"center" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0"> <tr> <td align=3D"center" valign=3D"top" style=3D"border-co=
+llapse: collapse; font-size: 34px; line-height: 42px; font-family: 'plexein=
+a-bold', Helvetica, Arial, sans-serif; color: #282A2D;" class=3D"title"> <d=
+iv style=3D"width: 400px; margin: 0 auto;" class=3D"100p">Discover a new po=
+rtal to Plex.</div> </td> </tr> <tr> <td align=3D"center" valign=3D"top" st=
+yle=3D"border-collapse: collapse; padding: 20px 20px 0 20px; font-size: 18p=
+x; line-height: 26px; text-align: center; font-family: 'plexeina-regular', =
+Helvetica, Arial, sans-serif; color: #3f4245;" class=3D"mobile-text-center-=
+flush-sides"> Stay close to your loved ones, your friends, and now all the =
+entertainment you love most with Plex on Portal from Facebook. Download our=
+ app on Portal, Portal TV, Portal+, or Portal Mini to experience your media=
+ in a whole new way. </td> </tr> </table> </td> </tr> </table> <table align=
+=3D"center" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+> <tr> <td align=3D"center" class=3D"container-mobile" style=3D"border-coll=
+apse: collapse; background: #FFFFFF; padding: 60px 25px;"> <table align=3D"=
+center" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"> <t=
+r> <td align=3D"center" valign=3D"top" style=3D"border-collapse: collapse; =
+padding-bottom: 30px;"> <img src=3D"https://d15k2d11r6t6rl.cloudfront.net/p=
+ublic/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f43=
+20a9e31b8be79c6ad2/encryption.png" width=3D"90" style=3D"display: block;" b=
+order=3D"0" alt=3D"Network security newness."> </td> </tr> <tr> <td align=
+=3D"center" valign=3D"top" style=3D"border-collapse: collapse; font-size: 3=
+4px; line-height: 42px; font-family: 'plexeina-bold', Helvetica, Arial, san=
+s-serif; color: #282A2D;" class=3D"title"> Network security newness. </td> =
+</tr> <tr> <td align=3D"center" valign=3D"top" style=3D"border-collapse: co=
+llapse; padding: 20px 20px 0 20px; font-size: 18px; line-height: 26px; text=
+-align: center; font-family: 'plexeina-regular', Helvetica, Arial, sans-ser=
+if; color: #3f4245;" class=3D"mobile-text-center-flush-sides"> Network conn=
+ections for Plex servers are now provided by <strong style=3D"font-family: =
+'plexeina-bold', Helvetica, Arial, sans-serif; font-weight: normal;">Let's =
+Encrypt</strong>. Thanks to this new configuration, your connections should=
+ be quicker to start up, more reliable, and even more private than before. =
+</td> </tr> <tr> <td align=3D"center" style=3D"border-collapse: collapse;">=
+ <table align=3D"center" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0"> <tr> <td align=3D"center" valign=3D"top" style=3D"border-col=
+lapse: collapse; padding-top: 30px;"> <div><!--[if mso]><v:roundrect xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:of=
+fice:word" href=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e=
+31b8be79c6ad2&_m=3D1fd23e6da13d4a25870b3209dabb9d7e&_e=3D_cyzlwhA-wUh8ym-OI=
+YN0IA_PaAEbDHvHfCeJvP7BkPNaKW2gfNLuVRmJrRYL9upJ6PZQAxeQp1MQcpwjVYbpM59MAR6_=
+y87ZXOa8oDBsuqMFwENxJoSWuIFUmQfMTYQXRFBy1LkTN7FSkc1RyDU78EzbMz0ifHSaVIRlzac=
+CM0dhm2viwibPYhNWPCuFVLKWvE9i0T4036FxhKpKrKHAN-Gjza-n1E5zseAlwIdc3gbNBmyG6F=
+KlmBsx_1a6uhxEcAfRXpkjlUFrHOFJyPB36ywBMmHT8JSuNMaF-HuazmqH_NE-vmHqB8H-pw_zN=
+C5qBsjp-jPsb2mpfUsivonUdSt4yLymSLYkBIkS_reC4LxvNC0uNNZCy5i6nnEwhdlRlwwqvBVO=
+IIxw35inIZnDNzX5m_neOv-Kk04a2S64pLTd3CXsmcy4le6_FcyiLU1ySalcpUtuSCqq71VzTOb=
+eO3TC6h6aapXzxI5muktjgQ%3D" target=3D"_blank" style=3D"height:46px;v-text-a=
+nchor:middle;width:280px;" arcsize=3D"250%" strokecolor=3D"#E5A00D" fillcol=
+or=3D"#E5A00D"> <w:anchorlock/> <center style=3D"color:#FFFFFF;font-family:=
+sans-serif;font-size:16px;font-weight:bold;">Learn More</center></v:roundre=
+ct><![endif]--><a clicktracking=3D"off" href=3D"https://links.plex.tv/u/cli=
+ck=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D1fd23e6da13d4a25870b3209dab=
+b9d7e&_e=3D_cyzlwhA-wUh8ym-OIYN0IA_PaAEbDHvHfCeJvP7BkPNaKW2gfNLuVRmJrRYL9up=
+J6PZQAxeQp1MQcpwjVYbpM59MAR6_y87ZXOa8oDBsuqMFwENxJoSWuIFUmQfMTYQXRFBy1LkTN7=
+FSkc1RyDU78EzbMz0ifHSaVIRlzacCM0dhm2viwibPYhNWPCuFVLKWvE9i0T4036FxhKpKrKHAN=
+-Gjza-n1E5zseAlwIdc3gbNBmyG6FKlmBsx_1a6uhxEcAfRXpkjlUFrHOFJyPB39tWiHg6H5PV3=
+E-VplGD2mV9kBcogZlyh4_J8l0iIZuyGErJ2QUIQ1rGli1E-x61wipYBjYh73ikvzBHyjumQvmr=
+ZUgLRqlGBhj2p0NztozFTiOomYkyMM_VLWAkQNP3Db3-HjZfzwnvs0AfLR2K9Z4mWokaG2MO1ZL=
+TqUPwOpkK23d6JY6MiAeCbHI2TPNPQ2275lJ6QViaUTVzwD-w-cM%3D" target=3D"_blank" =
+style=3D"background-color: #e5a00d; border-radius: 1000px; color: #ffffff; =
+display: inline-block; font-family: 'plexeina-bold', Helvetica, Arial, sans=
+-serif; font-size: 16px; font-weight: 400; line-height: 46px; text-align: c=
+enter; text-decoration: none; width: 280px; -webkit-text-size-adjust: none;=
+ mso-hide: all;" rel=3D"noopener noreferrer">Learn More</a></div> </td> </t=
+r> </table> </td> </tr> </table> </td> </tr> </table> <table align=3D"cente=
+r" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"> <tr> <t=
+d align=3D"center" class=3D"plexian" bgcolor=3D"#007b8b" style=3D"border-co=
+llapse: collapse; background-image: linear-gradient(135deg, #007b8b 0%, #00=
+3344 100%); padding: 60px 25px;"> <table align=3D"center" width=3D"100%" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"center" v=
+align=3D"top" style=3D"border-collapse: collapse; font-size: 34px; line-hei=
+ght: 42px; font-family: 'plexeina-bold', Helvetica, Arial, sans-serif; colo=
+r: #FFFFFF;" class=3D"title"> Meet the Plexians </td> </tr> <tr> <td align=
+=3D"left" valign=3D"top" style=3D"border-collapse: collapse; padding: 20px =
+20px 30px 20px; font-size: 18px; line-height: 26px; text-align: left; font-=
+family: 'plexeina-regular', Helvetica, Arial, sans-serif; color: #FFFFff;">=
+ Welcome to the inaugural series of =E2=80=9CMeet the Plexians=E2=80=9D whe=
+re we introduce you to the people who make the magic happen at Plex and sha=
+re some of their behind-the-scenes tips. </td> </tr> <tr> <td align=3D"cent=
+er" valign=3D"top" style=3D"border-collapse: collapse;"> <img src=3D"https:=
+//d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-46bb=
+-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/celestine.png" width=3D=
+"400" style=3D"display: block;" border=3D"0" alt=3D"We want you." class=3D"=
+100p"> </td> </tr> <tr> <td align=3D"center" valign=3D"top" style=3D"border=
+-collapse: collapse; padding-top: 30px; font-size: 26px; line-height: 30px;=
+ text-align: center; font-family: 'plexeina-bold', Helvetica, Arial, sans-s=
+erif; color: #FFFFFF;" class=3D"mobile-text-center"> Celestine </td> </tr> =
+<tr> <td align=3D"center" valign=3D"top" style=3D"border-collapse: collapse=
+; padding-top: 5px; font-size: 14px; line-height: 20px; font-family: 'plexe=
+ina-bold', Helvetica, Arial, sans-serif; color: #b3d8dc; text-transform: up=
+percase;" class=3D"job-title"> Test Engineer (QA / CS / Metrics) </td> </tr=
+> <tr> <td align=3D"left" valign=3D"top" style=3D"border-collapse: collapse=
+; padding: 20px 20px 0 20px; font-size: 18px; line-height: 26px; text-align=
+: left; font-family: 'plexeina-regular', Helvetica, Arial, sans-serif; colo=
+r: #FFFFFF;"> This month, meet Celestine, a test engineer who does the nitt=
+y gritty backend stuff to make sure your experience of our app is up to snu=
+ff. She=E2=80=99s based out of Vancouver, BC and was already a Plex user wh=
+en she saw in a newsletter that we were hiring six years ago (a newsletter =
+much like this one!). </td> </tr> <tr> <td align=3D"left" valign=3D"top" st=
+yle=3D"border-collapse: collapse; padding: 30px 20px 5px 20px; font-size: 2=
+0px; line-height: 26px; text-align: left; font-family: 'plexeina-bold', Hel=
+vetica, Arial, sans-serif; color: #FFFFFF;"> What do you enjoy most about y=
+our job=3F </td> </tr> <tr> <td align=3D"left" valign=3D"top" style=3D"bord=
+er-collapse: collapse; padding: 10px 20px 20px 20px; font-size: 16px; line-=
+height: 24px; text-align: left; font-family: 'plexeina-regular', Helvetica,=
+ Arial, sans-serif; color: #FFFFFF;"> <em>Everyone is so easy-going and mak=
+es you feel like a part of a big family. The flexibility of hours is a huge=
+ bonus, which allows me to work around things I need to do with the toddler=
+. I also love working on something that I use every day. The changes that =
+I push for have a direct impact on how the product affects me.</em> </td> <=
+/tr> <tr> <td align=3D"left" valign=3D"top" style=3D"border-collapse: colla=
+pse; padding: 20px 20px 5px 20px; font-size: 20px; line-height: 26px; text-=
+align: left; font-family: 'plexeina-bold', Helvetica, Arial, sans-serif; co=
+lor: #FFFFFF;"> What do you use Plex for=3F </td> </tr> <tr> <td align=3D"l=
+eft" valign=3D"top" style=3D"border-collapse: collapse; padding: 10px 20px =
+20px 20px; font-size: 16px; line-height: 24px; text-align: left; font-famil=
+y: 'plexeina-regular', Helvetica, Arial, sans-serif; color: #FFFFFF;"> <em>=
+I have a PMS that hosts my anime and Asian TV shows. I also share my photos=
+ library with family and I play back videos of my son to him=E2=80=94it kee=
+ps him entertained for a long time just watching himself.</em> </td> </tr> =
+<tr> <td align=3D"left" valign=3D"top" style=3D"border-collapse: collapse; =
+padding: 20px 20px 5px 20px; font-size: 20px; line-height: 26px; text-align=
+: left; font-family: 'plexeina-bold', Helvetica, Arial, sans-serif; color: =
+#FFFFFF;"> What do you do outside of work=3F </td> </tr> <tr> <td align=3D"=
+left" valign=3D"top" style=3D"border-collapse: collapse; padding: 10px 20px=
+ 20px 20px; font-size: 16px; line-height: 24px; text-align: left; font-fami=
+ly: 'plexeina-regular', Helvetica, Arial, sans-serif; color: #FFFFFF;"> <em=
+>Video games! I play a bit of PS4 (need to get a PS5) and I play FF14 almos=
+t on a daily basis.</em> </td> </tr> </table> </td> </tr> </table> <table a=
+lign=3D"center" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0"> <tr> <td align=3D"center" class=3D"container-mobile-athens-grey" st=
+yle=3D"border-collapse: collapse; background: #F2F3F4; padding: 60px 25px;"=
+> <table align=3D"center" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0"> <tr> <td align=3D"center" valign=3D"top" style=3D"border-co=
+llapse: collapse; font-size: 34px; line-height: 44px; font-family: 'plexein=
+a-bold', Helvetica, Arial, sans-serif; color: #282A2D;" class=3D"title"> Pl=
+atform Updates </td> </tr> <tr> <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse: collapse; padding: 10px 90px 0 90px; font-size: 18px; =
+line-height: 26px; text-align: center; font-family: 'plexeina-regular', Hel=
+vetica, Arial, sans-serif; color: #3f4245;" class=3D"mobile-text-center-hdr=
+"> This month includes additions, improvements, and a whole lotta debuggin=
+=E2=80=99. </td> </tr> <tr> <td align=3D"center" valign=3D"top" style=3D"bo=
+rder-collapse: collapse; padding: 30px 0 0 0;"> <table cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" width=3D"100%" class=3D"100p"> <tr> <td style=
+=3D"border-collapse: collapse; border-radius: 8px; background-color: #FFFFF=
+F; padding: 25px; box-shadow: 0 10px 20px rgba(0,0,0,.05);" class=3D"update=
+s" bgcolor=3D"#FFFFFF"> <table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" width=3D"100%" class=3D"100p"> <tr> <td align=3D"center" valign=3D"m=
+iddle" width=3D"30%" class=3D"30p" style=3D"border-collapse: collapse;"> <t=
+able cellpadding=3D"5" cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"le=
+ft" valign=3D"middle" style=3D"border-collapse: collapse; padding-right: 10=
+px;"> <img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integr=
+ators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2=
+/roku-app-icon.png" width=3D"100" style=3D"display: block;" border=3D"0" al=
+t=3D"Roku"> </td> </tr> </table> </td> <td align=3D"left" valign=3D"middle"=
+ width=3D"70%" class=3D"70p" style=3D"border-collapse: collapse;"> <table c=
+ellpadding=3D"5" cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"left" va=
+lign=3D"middle" style=3D"border-collapse: collapse; font-size: 20px; line-h=
+eight: 24px; text-align: left; font-family: 'plexeina-bold', Helvetica, Ari=
+al, sans-serif; color: #282A2D;"> Roku </td> </tr> <tr> <td align=3D"left" =
+valign=3D"middle" style=3D"border-collapse: collapse; font-size: 16px; line=
+-height: 24px; text-align: left; font-family: 'plexeina-regular', Helvetica=
+, Arial, sans-serif; color: #3f4245;">Updated styles for more beautiful bac=
+kgrounds and smoother transitions. <ul style=3D"line-height: 19px; margin-b=
+ottom: 0; padding: 0 0 0 16px;"> <li style=3D"padding-bottom: 8px; line-hei=
+ght: 19px; text-align: left !important;">Enabled alphabetical source sortin=
+g in the More menu.</li> <li style=3D"padding-bottom: 8px; line-height: 19p=
+x; text-align: left !important;">Fixed crashes, hidden subtitles, and surro=
+und sound issues.</li> <li style=3D"padding-bottom: 8px; line-height: 19px;=
+ text-align: left !important;">Get full release notes <a href=3D"https://li=
+nks.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D1fd23e6da1=
+3d4a25870b3209dabb9d7e&_e=3D_cyzlwhA-wUh8ym-OIYN0LepyOw7Dm6b04AumIq68XC5a_3=
+StHlstbK7Cb7tM66eqOQAlcpxqr0TYbKKMjovNJMXMY-TSw6iVIu4Kf1OfOTesZmEC2-gIzuvnB=
+AmV5R5uk90XDZxeDF7b8_skovT5oeqjUNVhTNj0697BqhCOkzq7eAoJXZKEnTuHL_EnImk_mdbG=
+F5Jzvbkr7bQ0vFBqdhLzPyDUJIu_xGknh9H4AKlVJeJ4AraUyedAOlmCjqlKwvHkCGvv6OXrjvN=
+GbDdhRo5cXK93XJotbCY27XVXcOhJjRvKFjFO8bjI_OM3OhZjLcmRqYsQHCbKxLssNTbV39sFHK=
+pGq8l1Qk9FdTrc50zmc2-2H7fdggz7dgCnjRHNdq_KzPUowKXO-dSbgBePySrj2ZscJY6brVi2G=
+uDp4UrUA6vl-MpRtFpdcU0Rlve" target=3D"_blank" style=3D"text-decoration: non=
+e; color: #E5A00D;" rel=3D"noopener noreferrer"><strong style=3D"font-famil=
+y: 'plexeina-bold', Helvetica, Arial, sans-serif; font-weight: normal;">her=
+e</strong></a></li> </ul> </td> </tr> </table> </td> </tr> </table> </td> <=
+/tr> </table> </td> </tr> <tr> <td align=3D"center" valign=3D"top" style=3D=
+"border-collapse: collapse; padding: 20px 0 0 0;"> <table cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" width=3D"100%" class=3D"100p"> <tr> <td sty=
+le=3D"border-collapse: collapse; border-radius: 8px; background-color: #FFF=
+FFF; padding: 25px; box-shadow: 0 10px 20px rgba(0,0,0,.05);" class=3D"upda=
+tes" bgcolor=3D"#FFFFFF"> <table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" width=3D"100%" class=3D"100p"> <tr> <td align=3D"center" valign=3D"m=
+iddle" width=3D"30%" class=3D"30p" style=3D"border-collapse: collapse;"> <t=
+able cellpadding=3D"5" cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"le=
+ft" valign=3D"middle" style=3D"border-collapse: collapse; padding-right: 10=
+px;"> <img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integr=
+ators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2=
+/7_iOS.png" width=3D"100" style=3D"display: block;" border=3D"0" alt=3D"App=
+le"> </td> </tr> </table> </td> <td align=3D"left" valign=3D"middle" width=
+=3D"70%" class=3D"70p" style=3D"border-collapse: collapse;"> <table cellpad=
+ding=3D"5" cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"left" valign=
+=3D"middle" style=3D"border-collapse: collapse; font-size: 20px; line-heigh=
+t: 24px; text-align: left; font-family: 'plexeina-bold', Helvetica, Arial, =
+sans-serif; color: #282A2D;"> Apple iOS </td> </tr> <tr> <td align=3D"left"=
+ valign=3D"middle" style=3D"border-collapse: collapse; font-size: 16px; lin=
+e-height: 24px; text-align: left; font-family: 'plexeina-regular', Helvetic=
+a, Arial, sans-serif; color: #3f4245;">More vibrant app background and some=
+ UI fixes. <ul style=3D"line-height: 19px; margin-bottom: 0; padding: 0 0 0=
+ 16px;"> <li style=3D"padding-bottom: 8px; line-height: 19px; text-align: l=
+eft !important;">Set post-play screen to end playback after 10 minutes of i=
+nactivity.</li> <li style=3D"padding-bottom: 8px; line-height: 19px; text-a=
+lign: left !important;">Enabled alphabetical source sorting in the More men=
+u.</li> <li style=3D"padding-bottom: 8px; line-height: 19px; text-align: le=
+ft !important;">Get full release notes for iOS <a href=3D"https://links.ple=
+x.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D1fd23e6da13d4a258=
+70b3209dabb9d7e&_e=3D_cyzlwhA-wUh8ym-OIYN0LepyOw7Dm6b04AumIq68XACkMIzn7o-rg=
+tnzgGt6OCCztEfpAOcvAPVihk7rnaBwfE6uSOuLOz1Rn0b8A2AEoulKdQtYW_mRY1JIND8BFMRQ=
+Qzs69O_Oq5vIlmoFITs6uOBVBovQmOp5UNt_jLz6GTcYccgAedu0l_l4aDIynxTldg0cAD2Fii6=
+UMfOg8kniwnOMqkqVn9uRDs94Ma3gnEAox86g7yAykIJeGfKLH1Y_swzaRQllwzdvtEj-4JDrzR=
+BHb0a-EDCeYy5ePCyntSYQustYWOeBFqhgtFMBNBg_9ViDk5yP3-cwlIzs6sWyYOWVk_6TVob2c=
+IKdaGlc4QqpXSgU17fd25LYdNFAESImbPHJGRkMgd8IGXLmXGqd9KnAYpHIiG18BBRo_y5L07Az=
+JT1YAwntax0_tfnTsxE" target=3D"_blank" style=3D"text-decoration: none; colo=
+r: #E5A00D;" rel=3D"noopener noreferrer"><strong style=3D"font-family: 'ple=
+xeina-bold', Helvetica, Arial, sans-serif; font-weight: normal;">here</stro=
+ng></a></li> </ul> </td> </tr> </table> </td> </tr> </table> </td> </tr> </=
+table> </td> </tr> <tr> <td align=3D"center" valign=3D"top" style=3D"border=
+-collapse: collapse; padding: 20px 0 0 0;"> <table cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0" width=3D"100%" class=3D"100p"> <tr> <td style=3D"b=
+order-collapse: collapse; border-radius: 8px; background-color: #FFFFFF; pa=
+dding: 25px; box-shadow: 0 10px 20px rgba(0,0,0,.05);" class=3D"updates" bg=
+color=3D"#FFFFFF"> <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+width=3D"100%" class=3D"100p"> <tr> <td align=3D"center" valign=3D"middle" =
+width=3D"30%" class=3D"30p" style=3D"border-collapse: collapse;"> <table ce=
+llpadding=3D"5" cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"left" val=
+ign=3D"middle" style=3D"border-collapse: collapse; padding-right: 10px;"> <=
+img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/6=
+69d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/6_appl=
+e-tv.png" width=3D"100" style=3D"display: block;" border=3D"0" alt=3D"Apple=
+"> </td> </tr> </table> </td> <td align=3D"left" valign=3D"middle" width=3D=
+"70%" class=3D"70p" style=3D"border-collapse: collapse;"> <table cellpaddin=
+g=3D"5" cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"left" valign=3D"m=
+iddle" style=3D"border-collapse: collapse; font-size: 20px; line-height: 24=
+px; text-align: left; font-family: 'plexeina-bold', Helvetica, Arial, sans-=
+serif; color: #282A2D;"> AppleTV </td> </tr> <tr> <td align=3D"left" valign=
+=3D"middle" style=3D"border-collapse: collapse; font-size: 16px; line-heigh=
+t: 24px; text-align: left; font-family: 'plexeina-regular', Helvetica, Aria=
+l, sans-serif; color: #3f4245;">Custom functions are mo=E2=80=99 betta for =
+mo=E2=80=99 enjoyment. <ul style=3D"line-height: 19px; margin-bottom: 0; pa=
+dding: 0 0 0 16px;"> <li style=3D"padding-bottom: 8px; line-height: 19px; t=
+ext-align: left !important;">Set post-play screen to end playback after 10 =
+minutes of inactivity.</li> <li style=3D"padding-bottom: 8px; line-height: =
+19px; text-align: left !important;">Fixed an issue with some hubs being los=
+t from the home screen with custom home enabled.</li> <li style=3D"padding-=
+bottom: 8px; line-height: 19px; text-align: left !important;">In-progress v=
+ideos now resume correctly when played directly from Top Shelf.</li> <li st=
+yle=3D"padding-bottom: 8px; line-height: 19px; text-align: left !important;=
+">Get full release notes for AppleTV <a href=3D"https://links.plex.tv/u/cli=
+ck=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D1fd23e6da13d4a25870b3209dab=
+b9d7e&_e=3D_cyzlwhA-wUh8ym-OIYN0LepyOw7Dm6b04AumIq68XCEgIBE888p40Z1zk6rz5Yi=
+fVePMVH-BiWx_Ce2MN_XJiGBKrIfn6pB7cbnoQkYJinV884XjV_qR5zZwBWZtEKY3AJc5WNCC9j=
+CQN21gf_ECy-FF_vvlQnBjVGJAKwbkzMBeZKP7cgYobPxwlAabXQljsymiZEUIDdVG1Ldf2y3B3=
+Ttx6jyepOe6bTTkH4BDDDbRqb1FLwE2VmsezSQ3Y-pOTTw1Hvl0BGu6nMrfGQsQpbzVQjuky3Ep=
+C8DUZUMt9gPN26940yPfM4oAnuJXL-UynJ2bKDCteRZk0OnTz_ezHUAxaQfmxWD2hbuWDioxdrB=
+4kYo-WSDz0f4vJDqaYLbyICqcqu0oz8p4FLX6Y0YVDAopMh9pLVabSHnXYQ1Z6NnIsw8uyKPX6U=
+DlrJIdSQR" target=3D"_blank" style=3D"text-decoration: none; color: #E5A00D=
+;" rel=3D"noopener noreferrer"><strong style=3D"font-family: 'plexeina-bold=
+', Helvetica, Arial, sans-serif; font-weight: normal;">here</strong></a></l=
+i> </ul> </td> </tr> </table> </td> </tr> </table> </td> </tr> </table> </t=
+d> </tr> <tr> <td align=3D"center" valign=3D"top" style=3D"border-collapse:=
+ collapse; padding: 20px 0 0 0;"> <table cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0" width=3D"100%" class=3D"100p"> <tr> <td style=3D"border-coll=
+apse: collapse; border-radius: 8px; background-color: #FFFFFF; padding: 25p=
+x; box-shadow: 0 10px 20px rgba(0,0,0,.05);" class=3D"updates" bgcolor=3D"#=
+FFFFFF"> <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"1=
+00%" class=3D"100p"> <tr> <td align=3D"center" valign=3D"middle" width=3D"3=
+0%" class=3D"30p" style=3D"border-collapse: collapse;"> <table cellpadding=
+=3D"5" cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"left" valign=3D"mi=
+ddle" style=3D"border-collapse: collapse; padding-right: 10px;"> <img src=
+=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713=
+-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/plex-app-icon=
+.png" width=3D"100" style=3D"display: block;" border=3D"0" alt=3D"plex web=
+b"> </td> </tr> </table> </td> <td align=3D"left" valign=3D"middle" width=
+=3D"70%" class=3D"70p" style=3D"border-collapse: collapse;"> <table cellpad=
+ding=3D"5" cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"left" valign=
+=3D"middle" style=3D"border-collapse: collapse; font-size: 20px; line-heigh=
+t: 24px; text-align: left; font-family: 'plexeina-bold', Helvetica, Arial, =
+sans-serif; color: #282A2D;"> Plex Web </td> </tr> <tr> <td align=3D"left" =
+valign=3D"middle" style=3D"border-collapse: collapse; font-size: 16px; line=
+-height: 24px; text-align: left; font-family: 'plexeina-regular', Helvetica=
+, Arial, sans-serif; color: #3f4245;">Smashing bugs and tidying up around t=
+he Plex web app is what we do, all for you. <ul style=3D"line-height: 19px;=
+ margin-bottom: 0; padding: 0 0 0 16px;"> <li style=3D"padding-bottom: 8px;=
+ line-height: 19px; text-align: left !important;">Made adjustments to modif=
+iable fields in TV item edit modals.</li> <li style=3D"padding-bottom: 8px;=
+ line-height: 19px; text-align: left !important;">Resolved incorrect subtit=
+ling issue on Live TV.</li> <li style=3D"padding-bottom: 8px; line-height: =
+19px; text-align: left !important;">Fixed unplayed indicator badge appearin=
+g on recently played podcasts.</li> <li style=3D"padding-bottom: 8px; line-=
+height: 19px; text-align: left !important;">Present more meaningful informa=
+tion when creating a gaming library.</li> <li style=3D"padding-bottom: 8px;=
+ line-height: 19px; text-align: left !important;">Get full release notes <a=
+ href=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6=
+ad2&_m=3D1fd23e6da13d4a25870b3209dabb9d7e&_e=3D_cyzlwhA-wUh8ym-OIYN0LepyOw7=
+Dm6b04AumIq68XDPTY68eaLsc_I5psqhzDGdT0fZ3Hgx0FAfKpToFPU8BgSNVS08DxC67BiPlSs=
+XrbwWVvkhP82ZaGUGr_lnlb1QC31RsDOi--6zx8Uphu4JjM7rPXZMXTqPBgg57CL3yA0SE53f5x=
+Z0wk6aIyE9KCFrZu9u_wii_PCARDEiU3o3AqsVxuKbjgkfl_Qnj8_T3JDrDS-D7pCad2EnBNdYY=
+cXJGcqNJqHW8O1iCTDab8Rb6sTKuUUIOefH8Hr9ndXjtYHv7W8h6mpCwDJL6wcSE7K5-ZgZGz6t=
+ZNVTnxILjjWFlAEE41LoDNq0qRy2u7yL5iH0Ofh4sIeS7HRsI9Omn4CyzN2XCJK4jF3JC0FdP6E=
+Ou4scaMFUO2RE4kZRPVhOxxl5rIswoqnY95psBKXiRok3" target=3D"_blank" style=3D"t=
+ext-decoration: none; color: #E5A00D;" rel=3D"noopener noreferrer"><strong =
+style=3D"font-family: 'plexeina-bold', Helvetica, Arial, sans-serif; font-w=
+eight: normal;">here</strong></a></li> </ul> </td> </tr> </table> </td> </t=
+r> </table> </td> </tr> </table> </td> </tr> </table> </td> </tr> </table> =
+<table align=3D"center" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0"> <tr> <td align=3D"center" class=3D"container-mobile" style=3D=
+"border-collapse: collapse; background: #FFFFFF; padding: 60px 25px;"> <tab=
+le align=3D"center" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bord=
+er=3D"0"> <tr> <td align=3D"center" valign=3D"top" style=3D"border-collapse=
+: collapse; font-size: 34px; line-height: 44px; font-family: 'plexeina-bold=
+', Helvetica, Arial, sans-serif; color: #282A2D;" class=3D"title"> <div sty=
+le=3D"width: 320px; margin: 0 auto;" class=3D"upsell">Plex Pass members get=
+ more.</div> </td> </tr> <tr> <td align=3D"center" valign=3D"top" style=3D"=
+border-collapse: collapse; padding: 20px 25px; font-size: 18px; line-height=
+: 26px; text-align: center; font-family: 'plexeina-regular', Helvetica, Ari=
+al, sans-serif; color: #3f4245;" class=3D"mobile-text-center-flush-sides"> =
+The passion and support of Plex Pass members is what keeps our engineers fe=
+d, fueled, and inspired to create the next best thing. Here are just some o=
+f the benefits you=E2=80=99ll receive for playing such a vital role in our =
+global community. </td> </tr> <tr> <td align=3D"center" valign=3D"top" styl=
+e=3D"border-collapse: collapse;"> <table align=3D"center" width=3D"100%" ce=
+llpadding=3D"0" cellspacing=3D"15" border=3D"0"> <tr> <td align=3D"center" =
+valign=3D"top" width=3D"48%" class=3D"feature-left" bgcolor=3D"#ffffff" sty=
+le=3D"border-collapse: collapse; background-color: #ffffff; padding: 20px; =
+border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,.05);"> <table cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width: 100%;"> <tr> <t=
+d align=3D"center" valign=3D"top" style=3D"border-collapse: collapse; paddi=
+ng-bottom: 10px;" class=3D"icon"> <img src=3D"https://d15k2d11r6t6rl.cloudf=
+ront.net/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef=
+3c50f13f4320a9e31b8be79c6ad2/plexamp.png" width=3D"80" height=3D"80" style=
+=3D"display: block;" border=3D"0" alt=3D"Plexamp"> </td> </tr> <tr> <td ali=
+gn=3D"center" valign=3D"top" style=3D"border-collapse: collapse; font-size:=
+ 20px; line-height: 24px; font-family: 'plexeina-bold', Helvetica, Arial, s=
+ans-serif; color: #282A2D; padding-bottom: 5px;" class=3D"mobile-text-cente=
+r"> Plexamp </td> </tr> <tr> <td align=3D"center" valign=3D"top" style=3D"b=
+order-collapse: collapse; font-size: 18px; line-height: 26px; text-align: c=
+enter; font-family: 'plexeina-regular', Helvetica, Arial, sans-serif; color=
+: #3f4245;" class=3D"mobile-text-center"> Music, made beautiful.<br><br> </=
+td> </tr> </table> </td> <td align=3D"center" valign=3D"top" width=3D"48%" =
+class=3D"feature-right" bgcolor=3D"#ffffff" style=3D"border-collapse: colla=
+pse; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shad=
+ow: 0 10px 20px rgba(0,0,0,.05);"> <table cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" style=3D"width: 100%;"> <tr> <td align=3D"center" valign=3D=
+"top" style=3D"border-collapse: collapse; padding-bottom: 10px;" class=3D"i=
+con"> <img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integr=
+ators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2=
+/skip-intro_1.png" width=3D"80" height=3D"80" style=3D"display: block;" bor=
+der=3D"0" alt> </td> </tr> <tr> <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse: collapse; font-size: 20px; line-height: 24px; font-fam=
+ily: 'plexeina-bold', Helvetica, Arial, sans-serif; color: #282A2D; padding=
+-bottom: 5px;" class=3D"mobile-text-center"> Skip Intro </td> </tr> <tr> <t=
+d align=3D"center" valign=3D"top" style=3D"border-collapse: collapse; font-=
+size: 18px; line-height: 26px; text-align: center; font-family: 'plexeina-r=
+egular', Helvetica, Arial, sans-serif; color: #3f4245;" class=3D"mobile-tex=
+t-center"> Binge-watch better.<br><br> </td> </tr> </table> </td> </tr> <tr=
+> <td align=3D"center" valign=3D"top" width=3D"48%" class=3D"feature-left" =
+bgcolor=3D"#ffffff" style=3D"border-collapse: collapse; background-color: #=
+ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0=
+,0,.05);"> <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D=
+"width: 100%;"> <tr> <td align=3D"center" valign=3D"top" style=3D"border-co=
+llapse: collapse; padding-bottom: 10px;" class=3D"icon"> <img src=3D"https:=
+//d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-46bb=
+-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/live-tv-dvr.png" width=
+=3D"80" height=3D"80" style=3D"display: block;" border=3D"0" alt=3D"Ultimat=
+e Live TV & DVD"> </td> </tr> <tr> <td align=3D"center" valign=3D"top" styl=
+e=3D"border-collapse: collapse; font-size: 20px; line-height: 24px; font-fa=
+mily: 'plexeina-bold', Helvetica, Arial, sans-serif; color: #282A2D; paddin=
+g-bottom: 5px;" class=3D"mobile-text-center"> Ultimate Live TV & DVR </td> =
+</tr> <tr> <td align=3D"center" valign=3D"top" style=3D"border-collapse: co=
+llapse; font-size: 18px; line-height: 26px; text-align: center; font-family=
+: 'plexeina-regular', Helvetica, Arial, sans-serif; color: #3f4245;" class=
+=3D"mobile-text-center"> Watch. Record. Repeat.<br><br> </td> </tr> </table=
+> </td> <td align=3D"center" valign=3D"top" width=3D"48%" class=3D"feature-=
+right" bgcolor=3D"#ffffff" style=3D"border-collapse: collapse; background-c=
+olor: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 10px 20px r=
+gba(0,0,0,.05);"> <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" s=
+tyle=3D"width: 100%;"> <tr> <td align=3D"center" valign=3D"top" style=3D"bo=
+rder-collapse: collapse; padding-bottom: 10px;" class=3D"icon"> <img src=3D=
+"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b=
+6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/mobile-sync_1.pn=
+g" width=3D"80" height=3D"80" style=3D"display: block;" border=3D"0" alt=3D=
+"The Power to Download"> </td> </tr> <tr> <td align=3D"center" valign=3D"to=
+p" style=3D"border-collapse: collapse; font-size: 20px; line-height: 24px; =
+font-family: 'plexeina-bold', Helvetica, Arial, sans-serif; color: #282A2D;=
+ padding-bottom: 5px;" class=3D"mobile-text-center"> The Power to Download =
+</td> </tr> <tr> <td align=3D"center" valign=3D"top" style=3D"border-collap=
+se: collapse; font-size: 18px; line-height: 26px; text-align: center; font-=
+family: 'plexeina-regular', Helvetica, Arial, sans-serif; color: #3f4245;" =
+class=3D"mobile-text-center"> Sync your media to mobile.<br><br> </td> </tr=
+> </table> </td> </tr> </table> </td> </tr> <tr> <td align=3D"center" style=
+=3D"border-collapse: collapse;"> <table align=3D"center" width=3D"100%" cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"center" va=
+lign=3D"top" style=3D"border-collapse: collapse; padding-top: 30px;"> <div>=
+<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word" href=3D"https://links.plex.tv/u/=
+click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D1fd23e6da13d4a25870b3209=
+dabb9d7e&_e=3D_cyzlwhA-wUh8ym-OIYN0D6Owta_48emGJPe2VdlzXDA2LjZ4XCLd7ef4bbDJ=
+KSRl7UMmxkPu8SbU9BMxuNoei49D1sZWd0nySglywbZQphOJSCZoynN0vQyRbLr0b2juVOZbm5K=
+cToXm32l5xe04I8MUv-4hs31ZsED5F9af6wbJgXvu03w4LAKpca_HjW2aAVTQp_o7el2X-jJIcF=
+mwcXHSZlW_W71S6G8bXvxR9aNojbn7xizNicciPe0RgjW0pFe-Rpdbg_hHgbtPDwoYNrMIKjBdw=
+wOqHadUBrDpXfCMZfIRiDMNBVTocscq_NrD8RcSeZTaA0uIlPaRopskhUSx5DalsMgp01wRQr-Z=
+WrdeX0Av6ppPuw3XtfMuMiJ54hk0m8f5OOf2c55uUFtBSk1H5xzE7D_Jlz-loPfWZLLn_OHlvCm=
+U-bseT_sBRXP" target=3D"_blank" style=3D"height:46px;v-text-anchor:middle;w=
+idth:280px;" arcsize=3D"250%" strokecolor=3D"#E5A00D" fillcolor=3D"#E5A00D"=
+> <w:anchorlock/> <center style=3D"color:#FFFFFF;font-family:sans-serif;fon=
+t-size:16px;font-weight:bold;">Upgrade to a Plex Pass</center></v:roundrect=
+><![endif]--><a clicktracking=3D"off" href=3D"https://links.plex.tv/u/click=
+=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D1fd23e6da13d4a25870b3209dabb9=
+d7e&_e=3D_cyzlwhA-wUh8ym-OIYN0D6Owta_48emGJPe2VdlzXDA2LjZ4XCLd7ef4bbDJKSRl7=
+UMmxkPu8SbU9BMxuNoei49D1sZWd0nySglywbZQphOJSCZoynN0vQyRbLr0b2juVOZbm5KcToXm=
+32l5xe04I8MUv-4hs31ZsED5F9af6wbJgXvu03w4LAKpca_HjW2aAVTQp_o7el2X-jJIcFmwcXH=
+SZlW_W71S6G8bXvxR9bAPMYIe_bCzVSml5CiXaFtksm_FA814iewP10PjG_RRaw2AmFn1oOq7Ua=
+JL3sQydESIUPWS_IVf0hwEsvsQEVFNI0reqmyJ-Yw8x2EnLVqa3bA_t--PXYr4ALRsV46vcSpLV=
+xBMl6A1FVt3n94PTGqluoShB4GVwPgywP7ziBTZ7YnFjs7-v8kaF_M9Tp28Zf_Ve_P16MAPHx8f=
+eJnRMVm" target=3D"_blank" style=3D"background-color: #e5a00d; border-radiu=
+s: 1000px; color: #ffffff; display: inline-block; font-family: 'plexeina-bo=
+ld', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-=
+height: 46px; text-align: center; text-decoration: none; width: 280px; -web=
+kit-text-size-adjust: none; mso-hide: all;" rel=3D"noopener noreferrer">Upg=
+rade to a Plex Pass</a></div> </td> </tr> </table> </td> </tr> </table> </t=
+d> </tr> </table> <table align=3D"center" width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"center" style=3D"border-c=
+ollapse: collapse; background-color: #282A2D; padding: 60px 20px;" bgcolor=
+=3D"#282A2D"> <table align=3D"center" width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0"> <tr> <td align=3D"center" valign=3D"top" class=
+=3D"header" style=3D"border-collapse: collapse;"> <a href=3D"https://links.=
+plex.tv/a/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D1fd23e6da13d4a=
+25870b3209dabb9d7e&_e=3D_cyzlwhA-wUh8ym-OIYN0P4hIBApAPvCXQEXvnBZYtblAXf6A3f=
+MhMBzjLyle8nvMOukRalk8Zhvs3Nfy1CoC1khF0q5WetaRRUyW5oAPMLFOqYf1VbPFz8T9ChAZ5=
+_X-UzmFmSIOjMWCJujPH9QcHkOVvAOyWqlvpS-pdQIsOrI7V-_aB2XHePMo29o0zNtBablZeiUl=
+hHzKdESeYuWsVqhnrAROQIOUnwc_7srEK9eHHnm8CfzWKMROug4QqRvjXS4BIoSOXueFDYce5Pn=
+bVgzj5OB4qRjYllEe54kwm0okqMK0rUmYXV8AIlyRfVyfw_yqgxKRlEFCGYlvV17lnneGOjMVNC=
+i_nlEBve-dhggxh293TNozaesRak86U11bz35kfh1bp3EGPFKhosSc_QvmqjBcSOgTBPEFeDfZt=
+U%3D" target=3D"_blank"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net/p=
+ublic/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f43=
+20a9e31b8be79c6ad2/plex-logo.png" width=3D"70" style=3D"display: block;" bo=
+rder=3D"0" alt=3D"Plex"></a> </td> </tr> <tr> <td align=3D"center" valign=
+=3D"top" style=3D"border-collapse: collapse; padding-top: 30px;"> <table bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"270" style=3D"width=
+: 230px;"> <tr> <td align=3D"center" valign=3D"top" width=3D"46" style=3D"b=
+order-collapse: collapse;"> <a href=3D"https://links.plex.tv/u/click=3F_t=
+=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D1fd23e6da13d4a25870b3209dabb9d7e&_=
+e=3D_cyzlwhA-wUh8ym-OIYN0In5Md6od3sECOjLQrX5rHIrbDOSDLhZcXJmbeDVkUaN9mAGhgd=
+OSd_6uIgZh7KLMXXVJUlWL4YY-P4new60u8l2BixoDCczo66SgzefTdP8O-aVq8tQUOY9ZZJVL_=
+vAUkGFdLBPHbmJI2x4DYV8YGURO_4Kq3soZI2lOM6yasDSUSc87YbuyaI46UWO7KqzRS36F9wvE=
+uVw58G1lgUG_bRfvV3rK4QKN62BYm5hXxySWJyECmLVXRipPwb83hSMZ0PaCmHKFewg4FmkJPnu=
+x9wLJEG3lZxZxalfNzAxnFY4Ivq8vOrVYtSg9qREfD76_CcHdIgG7TKtHJulEuVcQRBdejGld3C=
+646wIPuDDHpd96xhPbcwUdg_MAb5W1Uzu6kFfwgcygHtuqtPJZcHYQp4%3D" target=3D"_bla=
+nk"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrat=
+ors/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/i=
+con-twitter.png" width=3D"23" height=3D"23" style=3D"display: block;" borde=
+r=3D"0" alt=3D"Twitter"></a> </td> <td align=3D"center" valign=3D"top" widt=
+h=3D"46" style=3D"border-collapse: collapse;"> <a href=3D"https://links.ple=
+x.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D1fd23e6da13d4a258=
+70b3209dabb9d7e&_e=3D_cyzlwhA-wUh8ym-OIYN0DuLZJB04tzxxdzqzNUvdEr6HSFN9gEcoQ=
+zXRW9Gs3glxpqiscKbUHiOoeEHxqJvciaHdskghEmkTkn87t3a4Ta0vVSF1h0Qz5TbvCf-qThJG=
+tUm1s4j9Oj3gCnGuNl1p6r5DOEOf_jqhOOWesvYkVTeUDC9zJoikdlZtAGgL2alHXvzETqDzpIq=
+Sg6QtQxQoqShhYpCrjNSBKC7MuqjKoAD8XxuU5DApdItqVi3n0rh4fGPAWYFkBcFI4Ij2-rBMIf=
+fcHIx8gPXx3kN53QPo_2NJXJrX64Ef28DgNaepGFbpeJIaCbfxRGL9CiU9t10Vp_fvwKQCDSPcg=
+dY0SFBoUrsf3DB4KIo3WE8Pg3h5Zh6bq96Yszv0zls5GqFZJEdK24-Co2yyMut3m2qD7xOtXM%3=
+D" target=3D"_blank"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net/publ=
+ic/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a=
+9e31b8be79c6ad2/icon-facebook.png" width=3D"23" height=3D"23" style=3D"disp=
+lay: block;" border=3D"0" alt=3D"Facebook"></a> </td> <td align=3D"center" =
+valign=3D"top" width=3D"46" style=3D"border-collapse: collapse;"> <a href=
+=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_=
+m=3D1fd23e6da13d4a25870b3209dabb9d7e&_e=3D_cyzlwhA-wUh8ym-OIYN0CAQGG_9jVd7w=
+XWH-aqcL4EWtjaE1q4LxXZOqntuTS9lov-OOVNAaJKBSVUWpUHn6UkDU-TFDoeBTmz1WdG78DcR=
+wBFrNUCmVPsXMQTBtri_q9m2JFzi7xK8Z0NbQwGt8dhg8jG7h-HMbLN66Ak7BGfqMHfzxXBm9WM=
+kBhCdhgGPHefgM_2g7ILu1jwOmlGTL5fu868oEGP-pDby1-1am64NDK7QowEg2Ba4RxLYjuCqU8=
+3ScLt9qqfrfgNLknAJMGTbEkLu3LZuksCa0JxRTeCScB0oUChv0FEfbUKk3XdtA3H0JErSyxskS=
+XYEBhoJHNOQzCqRw7VR-0JECVDDvDWoxWVYH-fEEixU1gst1A8_oNgN6Z0ZYatNKd2acmjCPN9W=
+rLzwHXyYFKaHOst037sB5z8Lu6vra0KAi4TGdptQ" target=3D"_blank"><img src=3D"htt=
+ps://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-4=
+6bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/icon-instagram.png" =
+width=3D"23" height=3D"23" style=3D"display: block;" border=3D"0" alt=3D"In=
+stagram"></a> </td> <td align=3D"center" valign=3D"top" width=3D"46" style=
+=3D"border-collapse: collapse;"> <a href=3D"https://links.plex.tv/u/click=
+=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D1fd23e6da13d4a25870b3209dabb9=
+d7e&_e=3D_cyzlwhA-wUh8ym-OIYN0KE1iPABhPvHKVMPs_SCztwDEQUHBdDyK_whNkupPZfzd2=
+9eCXNfRJPazXRsdARIDyi8aAD11hs_JydRG3rKwOEOQ91g7MfQpMR07PnJ9Qo6HGrIOqAT8NvU1=
+jv9w_fLu_cwZQPnA1-scDlW93FtdMOQweypty1UqK_Tukxb5wZuWw0pIN7pJtZgDo5H4f_sKf8y=
+aSYEiu56gYp_8jvwZ5V3XK24lMj-Z-orDiqO0dMzLuznc7i512YqzIfVN9H_DPz_CdH6R0nEa-d=
+gAI_0sYQZf_GxL3TEGffbeOw1egrpzigNGtcjFXmGOXGa6P3ZIq_Qyx5NatvM5Gxbuc5aU2KGuJ=
+CxB9tooqEnF-Qm3jDLS-5c5pIaocXgl6UCmT_cpGMVisVxM2dXei-2K_d2HaJ2icTKe5BLabecx=
+Wo8YZXv" target=3D"_blank"><img src=3D"https://d15k2d11r6t6rl.cloudfront.ne=
+t/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13=
+f4320a9e31b8be79c6ad2/icon-youtube.png" width=3D"23" height=3D"23" style=3D=
+"display: block;" border=3D"0" alt=3D"You Tube"></a> </td> <td align=3D"cen=
+ter" valign=3D"top" width=3D"46" style=3D"border-collapse: collapse;"> <a h=
+ref=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad=
+2&_m=3D1fd23e6da13d4a25870b3209dabb9d7e&_e=3D_cyzlwhA-wUh8ym-OIYN0FvhPOtqCA=
+SG2zOyoSOa6bAvsjkccZxbj0OTTDHdX2fLUoPYu_Tp3pYL_yrd4Eyw66QBgEQQ1K8123kqB5jJJ=
+1f_9lZzEraJrSPMd-oxBAs5B8QB80irsQ70UHANf3yvjgplU3Cfy9ihGVcCvNBDO_BxOeRK8Bh5=
+iajd6HimBftW2vd89F4zzNAq8PiAvjdYHdOekV9HDLul_eNiBkAZuU4ffA03xmXQwJ_sUZ6Nbif=
+qpeSdmue5oySc31haUP6swnHfTo9k2p2hofGbBjwfGt-y7MgpnKh5Mzst13nLWd9Ul4z2cfDP-4=
+yq7IRw10yMuUFe8o_--rWFezI2FvYnOoHib_qfT3t0kQgFIewcV5PfixOVC2rLqJSRBe70H-yRn=
+l7Cl2exIurqq4IC9EaUsil-7bZnQrcm5WFiLyvkhBkg" target=3D"_blank"><img src=3D"=
+https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6=
+a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/icon-linkedin.png=
+" width=3D"23" height=3D"23" style=3D"display: block;" border=3D"0" alt=3D"=
+LinkedIn"></a> </td> </tr> </table> </td> </tr> <tr> <td align=3D"center" v=
+align=3D"top" style=3D"border-collapse: collapse; font-size: 13px; line-hei=
+ght: 20px; font-family: 'plexeina-regular', Helvetica, Arial, sans-serif; c=
+olor: #949596; font-weight: 400; padding-top: 20px;"> You have received thi=
+s email because you're a valued Plex customer. If you no longer wish to rec=
+eive these extremely cool emails, please <a target=3D"_blank" style=3D"colo=
+r: #AAAAAA; text-decoration: none;" href=3D"https://links.plex.tv/e/encrypt=
+edUnsubscribe=3F_r=3D3bef3c50f13f4320a9e31b8be79c6ad2&_s=3D1fd23e6da13d4a25=
+870b3209dabb9d7e&_t=3DHcbeiI1kwLDLuvrBpXfKu_0uT4l_SjAM8dERcnb1Tim-5LyU-8U2D=
+Z6CV_pOmQEwHeMsv95ZsxXWKyy0qNIkzvivHRqUkrcKFtbPYLgXoDmG4r-IZdZAKoxhWFi7hV7y=
+nsOSiykXFNCTcD1lNMAcWOu8cgDxjelkin5mmpdnwj8%3D">unsubscribe</a>.<br><br>Ple=
+x GmbH, Hansmatt 32, 6370 Stans, Switzerland<br>Copyright &copy; 2021 Plex,=
+ Inc. All rights reserved.<br><br><a target=3D"_blank" style=3D"color: #D4D=
+4D5; text-decoration: underline;" href=3D"https://links.plex.tv/e/evib=3F_t=
+=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D1fd23e6da13d4a25870b3209dabb9d7e&_=
+e=3DHcbeiI1kwLDLuvrBpXfKu_0uT4l_SjAM8dERcnb1Tikn-PQLVi18xT4_Eg6gNxs1lPgv5H5=
+WSlZND9IvpprlwLjhiPHRB1QHlpOQKcaVeuEdK5ujIvjiT-_BfEYFtTfY">View Online</a> =
+</td> </tr> </table> </td> </tr> </table> </td> </tr> </table> <!--[if mso]=
+></td></tr></table><![endif]--> <!--[if (IE)]></td></tr></table><![endif]--=
+> </td> </tr> </table> =0D=0A<img border=3D"0" width=3D"1" height=3D"1" alt=
+=3D"" src=3D"http://sp.plex.tv/q/dJE9GBYqW4wtqqYmn-ZQdw~~/AARPmAA~/RgRiPhMh=
+PlcDc3BjQgpgWCGOW2DoOXb2UhVtcmNsb3VkLm1lZEBnbWFpbC5jb21YBAAAAAA~">=0D=0A</b=
+ody> </html>
+--_----00F+g8sRrPVlJ5Vib5iYrA===_AC/5F-47476-12E8B506--
+

@@ -1,0 +1,375 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:cb45:0:b029:11e:b57c:dd52 with SMTP id h5csp3203670lkt;
+        Tue, 3 Aug 2021 19:35:42 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwCQd6HTyRFz1zhUbU3vPueIbmrRF5KR5+tEaPRz53dvoSXzJDAY3Gw4fIAMXL1CBfYzzWm
+X-Received: by 2002:adf:d4c6:: with SMTP id w6mr26142279wrk.353.1628044542168;
+        Tue, 03 Aug 2021 19:35:42 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1628044542; cv=none;
+        d=google.com; s=arc-20160816;
+        b=nzUbBOmwewcR3j3/JtE2zaE7tdFp79apscHY/Yz+rWpngeXmlet4b0GKaFxKebjytk
+         NdLmHsLR9QYicZPAxolWXJ5Bg4v13vBZ0b24ksvvRYDmNqAKvnJP3psbHjAnCsN9L8WU
+         FmJSfckalWm1pqhGK6gl0JapmlQsV12/mm5bh4R2TSN3iJM11cY78CJyhLDJ8a6hQOjo
+         p3pi8ckR7W/7DNo5sOzJdArsiEw2C6wkLfQQXElcaysY23+8wEAFl1qD3MCY6Es2tu8R
+         bymAFPBWfQVe68xxTT6CNCuMwrrjsEjpTdw58UREjhVT7tethoACNDnJFQXOTkSN5ZCB
+         AGzw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:reply-to:sender:from:date;
+        bh=L+8MVpkXNPhTFM2RX1wWHvYmg0K3XuQ1E2tR+jm4sHo=;
+        b=P+5rAW76m1Ui8bKEpIBYmUbfbkZiX14dDnUMvynUDPi4wCWETZEgkJGQQxcmvUtXiQ
+         hEIO+tAi4T+3ENsfxFr40+lLrSXMWM3KSn11kGqiMuNwjMnudbaIeEWaVbvvG3gxuWJJ
+         i3pPBF9QUmopO4hilWEdMaX7ssOvIFAZIumw4hLyTJHQ+GcyrUiGQHo8rifZEnXnDd0f
+         oedjlhvH7K1RNaDPpb+V7aT8IjYbqSaXwigLwmb9ZwvyTuRkXnExQgJDh12+W2eC+kVN
+         2BzUzlMsqCOkKGF21OpS3YlphYwVCulmPDumUXkcwa+WOERWtHpfOwuyNv/tNRru9F4x
+         9rEg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of message-nhlluhfne@contact.avito.ma designates 52.31.93.239 as permitted sender) smtp.mailfrom=message-nhlluhfne@contact.avito.ma
+Return-Path: <message-nhlluhfne@contact.avito.ma>
+Received: from email.goapp.ma (ec2-52-31-93-239.eu-west-1.compute.amazonaws.com. [52.31.93.239])
+        by mx.google.com with ESMTPS id k23si732682wrh.110.2021.08.03.19.35.41
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 03 Aug 2021 19:35:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of message-nhlluhfne@contact.avito.ma designates 52.31.93.239 as permitted sender) client-ip=52.31.93.239;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of message-nhlluhfne@contact.avito.ma designates 52.31.93.239 as permitted sender) smtp.mailfrom=message-nhlluhfne@contact.avito.ma
+Received: from ip-10-12-5-30.eu-west-1.compute.internal (ec2-54-216-79-140.eu-west-1.compute.amazonaws.com [54.216.79.140])
+	(Authenticated sender: proavitomsgc)
+	by email.goapp.ma (Postfix) with ESMTPSA id 914F36A2DE
+	for <mrcloud.med@gmail.com>; Wed,  4 Aug 2021 03:35:41 +0100 (WEST)
+Date: Wed, 4 Aug 2021 04:35:40 +0200 (CEST)
+From: "Utilisateur via Avito.ma" <message-nhlluhfne@contact.avito.ma>
+Sender: message-nhlluhfne@contact.avito.ma
+Reply-To: "Utilisateur via Avito.ma" <message-nhlluhfne@contact.avito.ma>
+To: Shab tech <mrcloud.med@gmail.com>
+Message-ID: <a8cb8cf0-f4cc-11eb-9237-028cf19e7a61@avitoma>
+Subject: Canon 600D
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_7759379_1858770732.1628044541508"
+
+: 
+
+------=_Part_7759379_1858770732.1628044541508
+Content-Type: multipart/related; 
+	boundary="----=_Part_7759380_199256544.1628044541508"
+
+------=_Part_7759380_199256544.1628044541508
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_7759381_1538391099.1628044541530"
+
+------=_Part_7759381_1538391099.1628044541530
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+salam
+------=_Part_7759381_1538391099.1628044541530
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+    <!-- If you delete this tag, the sky will fall on your head -->
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width" />
+
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+" />
+    <script>/*STRIP_FROM_PLAIN_TEXT*/</script>
+    <title>Avito</title>
+
+    <style>
+        /* -------------------------------------
+                GLOBAL
+        ------------------------------------- */
+        * {
+            margin:0;
+            padding:0;
+        }
+        * { font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-ser=
+if; }
+
+        img {
+            max-width: 100%;
+        }
+        body {
+            -webkit-font-smoothing:antialiased;
+            -webkit-text-size-adjust:none;
+            width: 100%!important;
+            height: 100%;
+            color: #555;
+        }
+
+
+        /* ---------------------------------------------------
+                RESPONSIVENESS
+                Nuke it from orbit. It's the only way to be sure.
+        ------------------------------------------------------ */
+
+        /* Set a max-width, and make it display as block so it will automat=
+ically stretch to that width, but will also shrink down on a phone or somet=
+hing */
+        .container {
+            display:block!important;
+            max-width:600px!important;
+            margin:0 auto!important; /* makes it centered */
+            clear:both!important;
+        }
+        /* This should also be a block element, so that it will fill 100% o=
+f the .container */
+        .content {
+            padding:12px;
+            max-width:600px;
+            margin:0 auto;
+            display:block;
+        }
+
+        /* Let's make sure tables in the content area are 100% wide */
+        .content table { width: 100%; }
+
+
+
+        /* Be sure to place a .clear element after each set of columns, jus=
+t to be safe */
+        .clear { display: block; clear: both; }
+        /* -------------------------------------------
+                PHONE
+                For clients that support media queries.
+                Nothing fancy.
+        -------------------------------------------- */
+        @media only screen and (max-width: 600px) {
+
+            table.body-wrap, table.head-wrap {
+                border-spacing: 0px;
+            }
+            .container {
+                width: 100%;
+            }
+        }
+     /*END_STRIP_FROM_PLAIN_TEXT*/
+    </style>
+
+</head>
+
+<body bgcolor=3D"#F8F8F8" style=3D"margin: 0;padding: 0;font-family:  Helve=
+tica Neue , Arial,  Lucida Grande , sans-serif;-webkit-font-smoothing: anti=
+aliased;-webkit-text-size-adjust: none;height: 100%;color: #555;width: 100%=
+!important;">
+
+
+<table align=3D"center" style=3D"margin: 0 auto;min-width:100%;max-width: 6=
+00px;border-spacing: 0px;" bgcolor=3D"#F8F8F8">
+    <tr style=3D"margin: 0;padding: 0;">
+        <td style=3D"margin: 0 auto;padding: 0;min-width:100%;max-width: 60=
+0px;">
+
+        <!-- HEADER -->
+            <table class=3D"head-wrap" style=3D"border-spacing: 0px;margin:=
+ 0;padding: 0;font-family: Helvetica Neue ,Arial, Lucida Grande, sans-serif=
+; min-width:100%;max-width: 600px;">
+                <tr style=3D"margin: 0;padding: 0;font-family:  Helvetica N=
+eue , Arial,  Lucida Grande , sans-serif;min-width:100%;">
+                    <td style=3D"margin: 0;padding: 0;font-family:  Helveti=
+ca Neue , Arial,  Lucida Grande , sans-serif;"></td>
+                    <td class=3D"container" style=3D"padding: 10px 0 0 0;ma=
+rgin: 0 auto!important;font-family:  Helvetica Neue , Arial,  Lucida Grande=
+ , sans-serif;display: block!important;min-width:100%;max-width: 600px!impo=
+rtant;clear: both!important;">
+
+                      <div class=3D"content" style=3D"margin: 0 auto;paddin=
+g: 12px;font-family:  Helvetica Neue , Arial,  Lucida Grande , sans-serif;d=
+isplay: block;">
+                            <table style=3D"margin: 0;padding: 0;font-famil=
+y: Helvetica Neue, Arial, Lucida Grande, sans-serif; min-width:100%;">
+                                <tr style=3D"margin: 0;padding: 0;font-fami=
+ly:  Helvetica Neue , Arial,  Lucida Grande , sans-serif;">
+                                    <td align=3D"center" style=3D"text-alig=
+n:center;margin: 0;padding: 0;font-family:  Helvetica Neue , Arial,  Lucida=
+ Grande , sans-serif; min-width: 100%;">
+                                    <a href=3D"https://www.avito.ma">
+                                       <img align=3D"center" width=3D"200" =
+src=3D"https://static.messaging.advgo.net/v1/avito-logo-2x.png" style=3D"ma=
+rgin: 0 auto;padding: 0;font-family:  Helvetica Neue , Arial,  Lucida Grand=
+e , sans-serif; width: 200px;">
+                                   </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </td>
+                    <td style=3D"margin: 0;padding: 0;font-family:  Helveti=
+ca Neue , Arial,  Lucida Grande , sans-serif;"></td>
+                </tr>
+            </table>
+            <!-- /HEADER -->
+
+                               =20
+             <!-- AD -->
+            <table class=3D"body-wrap" style=3D"border-spacing: 0px;margin:=
+ 0;padding: 0 0 20px 0;font-family: Helvetica Neue , Arial, Lucida Grande ,=
+ sans-serif;min-width: 100%;">
+                <tr style=3D"margin: 0;padding: 0;font-family:  Helvetica N=
+eue , Arial,  Lucida Grande , sans-serif;">
+                    <td style=3D"margin: 0;padding: 0;font-family:  Helveti=
+ca Neue , Arial,  Lucida Grande , sans-serif;"></td>
+                    <td class=3D"container" bgcolor=3D"#FFFFFF" style=3D"bo=
+rder: 1px solid #D2D2D2; margin: 0 auto!important;padding: 0;font-family:  =
+Helvetica Neue , Arial,  Lucida Grande , sans-serif;display: block!importan=
+t;width:100%;max-width: 600px!important;clear: both!important;">
+                     <table style=3D"width: 100%;">
+                        <tr>
+                        <td style=3D"padding: 12px;width: 100%;">
+                        <div class=3D"content" style=3D"margin: 0 auto;padd=
+ing: 0px;font-family:  Helvetica Neue , Arial,  Lucida Grande , sans-serif;=
+max-width: 600px;display: block;">
+                            <a href=3D"https://www.avito.ma/vi/45562431.htm=
+" style=3D"text-decoration: none;">
+                            <table style=3D"border-spacing: 0px; margin: 0;=
+width:100%;">
+                                <tr>
+                                    <td width=3D"58" height=3D"42" style=3D=
+"margin: 0;">
+                                        <a href=3D"https://www.avito.ma/vi/=
+45562431.htm" style=3D"text-decoration: none;">
+                                        <img width=3D"50" height=3D"42" sty=
+le=3D"display: block;border-radius: 4px;margin-right:8px;" src=3D"https://w=
+ww.avito.ma/images/10/10027289570.jpg">
+                                        </a>
+                                     </td>
+                                    <td style=3D"border-spacing: 0px;margin=
+: 0;padding: 0;">
+                                        <h3 style=3D"font-family: Helvetica=
+ Neue, Arial, Lucida Grande, sans-serif; width:100%;font-size: 14px; margin=
+:0px; margin-bottom: 5px;color: #5A5A5A;text-decoration: none;word-break: b=
+reak-word;"><a href=3D"https://www.avito.ma/vi/45562431.htm" style=3D"color=
+: #5A5A5A;text-decoration: none;">Canon 600D</a>
+                                        </h3>
+                                        <p style=3D"font-family: Helvetica =
+Neue, Arial, Lucida Grande, sans-serif;width:100%;margin:0px;font-size: 16p=
+x; color: #00AC64;line-height: 16px;font-weight: bold;text-decoration: none=
+;">3000 Dhs</p>
+                                    </td>
+                                </tr> =20
+                            </table>
+                            </a>
+                         </div>
+                        </td>
+                        </tr>
+                    </table>
+                    </td>
+                    <td style=3D"margin: 0;padding: 0;font-family:  Helveti=
+ca Neue , Arial,  Lucida Grande , sans-serif;"></td>
+                </tr>
+            </table>
+              <!-- /AD -->
+
+            <!-- BODY -->
+            <table class=3D"body-wrap" style=3D"border-spacing: 0px;margin:=
+ 0;padding: 0;font-family:  Helvetica Neue , Arial,  Lucida Grande , sans-s=
+erif;width: 100%;">
+                <tr style=3D"margin: 0;padding: 0;font-family:  Helvetica N=
+eue , Arial,  Lucida Grande , sans-serif;">
+                    <td style=3D"margin: 0;padding: 0;font-family:  Helveti=
+ca Neue , Arial,  Lucida Grande , sans-serif;"></td>
+                    <td class=3D"container" bgcolor=3D"#FFFFFF" style=3D"bo=
+rder: 1px solid #D2D2D2; margin: 0 auto!important;padding: 0;font-family:  =
+Helvetica Neue , Arial,  Lucida Grande , sans-serif;display: block!importan=
+t;max-width: 600px!important;clear: both!important;">
+
+                        <!-- content -->
+                        <table style=3D"width: 100%;">
+                        <tr>
+                        <td style=3D"padding: 12px">
+                        <div class=3D"content" style=3D"margin: 0 auto;padd=
+ing: 0px;font-family:  Helvetica Neue , Arial,  Lucida Grande , sans-serif;=
+max-width: 600px;display: block;word-break: break-word;">
+                            <h4 style=3D"margin: 0;padding: 0;font-family: =
+ Helvetica Neue , Arial,  Lucida Grande , sans-serif;font-weight: 400;font-=
+size: 18px;color: #5A5A5A;">
+                                    Bonjour <span style=3D"color: #5A5A5A;"=
+>Shab tech,</span> Vous avez un nouveau message.</h4>
+                        </div>
+                        </td>
+                        </tr>
+                        </table>
+                        <!-- /content -->
+                        <div class=3D"newmsg" style=3D"margin: 0;padding: 0=
+px;font-family:  Helvetica Neue , Arial,  Lucida Grande , sans-serif;">
+                        <table style=3D"border-spacing: 0px; margin: 0; min=
+-width: 100%; width:100%;">
+                        <tr>
+                        <td style=3D"min-width: 100%; width:100%; padding: =
+12px; background-color: #F2F8FF;">
+                          =20
+                            <span style=3D"vertical-align:middle;border-rad=
+ius: 3px;padding: 2px 4px 4px 8px;background: #1D72DB;color: white;font-siz=
+e: 10px;margin-right: 8px;font-family:  Helvetica Neue , Arial,  Lucida Gra=
+nde , sans-serif;">
+                                nouveau
+                            </span>
+                             <p class=3D"user" style=3D"vertical-align: inh=
+erit;display:inline-block;font-size: 13px;color: #5A5A5A;margin: 0;padding:=
+ 0;font-family:  Helvetica Neue , Arial,  Lucida Grande , sans-serif;">
+                                <strong>Utilisateur</strong>
+                            </p>
+                            <p style=3D"font-size: 10px;color: #969696;marg=
+in: 8px 0;">2021-08-04 03:35</p>
+                            <p class=3D"msg" style=3D"line-height: 20px;mar=
+gin: 0;padding: 2px;font-family:  Helvetica Neue , Arial,  Lucida Grande , =
+sans-serif;font-size: 14px;color: #4A4A4A;margin-bottom: 10px;margin-top: 8=
+px;">
+                             salam
+                            </p>
+
+                            </p>
+                         </td>
+                        </tr>
+                        </table>
+                        </div>
+                    </td>
+                    <td style=3D"margin: 0;padding: 0;font-family:  Helveti=
+ca Neue , Arial,  Lucida Grande , sans-serif;"></td>
+                </tr>
+            </table><!-- /BODY -->
+
+            <!-- FOOTER -->
+            <table class=3D"footer-wrap" style=3D"margin: 0;padding: 0;font=
+-family:  Helvetica Neue , Arial,  Lucida Grande , sans-serif;width: 100%;c=
+lear: both!important;">
+                <tr style=3D"margin: 0;padding: 0;font-family:  Helvetica N=
+eue , Arial,  Lucida Grande , sans-serif;">  =20
+                    <td class=3D"container" style=3D"margin: 0 auto!importa=
+nt;padding: 0;font-family:  Helvetica Neue , Arial,  Lucida Grande , sans-s=
+erif;display: block!important;max-width: 600px!important;clear: both!import=
+ant;">
+                        <div class=3D"content" style=3D"margin: 0 auto;padd=
+ing: 12px;font-family:  Helvetica Neue , Arial,  Lucida Grande , sans-serif=
+;max-width: 600px;display: block;">
+                            <table style=3D"margin: 0;padding: 0;font-famil=
+y:  Helvetica Neue , Arial,  Lucida Grande , sans-serif;width: 100%;">
+                                <tr style=3D"margin: 0;padding: 0;font-fami=
+ly:  Helvetica Neue , Arial,  Lucida Grande , sans-serif;">
+                                    <td align=3D"center" style=3D"margin: 0=
+;padding: 0;font-family:  Helvetica Neue , Arial,  Lucida Grande , sans-ser=
+if;">
+                                        <p style=3D"font-size: 12px;margin:=
+ 20px 0;color: #666666;padding: 0;font-family:  Helvetica Neue , Arial,  Lu=
+cida Grande , sans-serif;">Copyright =C2=A9 avito.ma
+</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /content -->
+                    </td>
+                </tr>
+            </table><!-- /FOOTER -->
+        </td></tr>
+</table>
+</body>
+</html>
+------=_Part_7759381_1538391099.1628044541530--
+
+------=_Part_7759380_199256544.1628044541508--
+
+------=_Part_7759379_1858770732.1628044541508--

@@ -1,0 +1,248 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:c3c4:0:b029:be:51e1:283e with SMTP id b4csp1696990lkq;
+        Fri, 12 Feb 2021 16:01:15 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJzjX50IcwixTF2x2jR3r66dQtMw5cP6IXg/WXb5gr1c3tNAs9rAmBa7IGJVu27NCa+1aeAv
+X-Received: by 2002:a50:8466:: with SMTP id 93mr5836824edp.55.1613174475669;
+        Fri, 12 Feb 2021 16:01:15 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1613174475; cv=none;
+        d=google.com; s=arc-20160816;
+        b=m5RXvRC+pH1jH+0NM5QuD+RdP/14n8cxFEHkTYlQi/zX32t6AvAiRZYdaqjnmV1vi/
+         7verss0HxoZwgd51wxQLIGvmGLYHCW61ydtoZr5fQdWOxxbUB4tW0BF1uEzKzrlt/+Mp
+         NJz5bapyCT0b4dSuksCUG1ECSqE++CV4tJBZLdU7PAsmB8IEZCXAYjYholE9JEECu2LU
+         y9fWX4tcD0RhoGOmGUsiZn45NsW0y2kqmI5m7Q31bYNi70vGPCeVtZZvNlEqh2ty5Zq3
+         ik6nC8GcywSmMeH7IdSmRB4U+3ReyqcdMXfvDjtf0SYy+O2aJr+8EIsm3rXV7sDM2UJV
+         /ZQw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:content-transfer-encoding:mime-version:message-id
+         :subject:from:to:date:dkim-signature:dkim-signature;
+        bh=SJun81u7bk3ps/9b+8MoRw6Zbqc7LN/Fg4mdZjiF9Z0=;
+        b=ZQZjw+6uW7T8t4KWMEkSXp+O2vCYvvIgECJuDVhT2HC+u5jS0EW/QKNDZxeUEUIl2P
+         UUlAp1hE2niY4+1FvE8GEKiPSuhgk+tlZpGyn1I//vPnJ3vRzJrw3prQCSF2lIProSkt
+         bf95L6rt1bnqHvr4bLyvvbKKHVEqctA8tjxGoq+q+Qo1vepioKzCdBtTmv9SCgfCXD6Z
+         tu34BRqHs5rAMS0N3XMjlWYgfMJi8Wy2BCxAkCxVno+Vrtr+NsEMcBwpNcB454psKfSc
+         ncf2/LN9mE3yL3VZksjJ1TLQuSnPVrXqacYHCwrLlENet6ao1nXXprItiYZf4DZEDsXO
+         q0XA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@smtpcorp.com header.s=a1-4 header.b="Vop/No9C";
+       dkim=pass header.i=@seedit4.me header.s=s375287 header.b=naW0Rrr+;
+       spf=pass (google.com: domain of bt.ig7zdk9q30=5j5canch40tw=cegezcbi11@em375287.seedit4.me designates 103.2.140.105 as permitted sender) smtp.mailfrom="bT.ig7zdk9q30=5j5canch40tw=cegezcbi11@em375287.seedit4.me"
+Return-Path: <bT.ig7zdk9q30=5j5canch40tw=cegezcbi11@em375287.seedit4.me>
+Received: from e2i105.smtp2go.com (e2i105.smtp2go.com. [103.2.140.105])
+        by mx.google.com with ESMTPS id z102si7061673ede.224.2021.02.12.16.01.15
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 12 Feb 2021 16:01:15 -0800 (PST)
+Received-SPF: pass (google.com: domain of bt.ig7zdk9q30=5j5canch40tw=cegezcbi11@em375287.seedit4.me designates 103.2.140.105 as permitted sender) client-ip=103.2.140.105;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@smtpcorp.com header.s=a1-4 header.b="Vop/No9C";
+       dkim=pass header.i=@seedit4.me header.s=s375287 header.b=naW0Rrr+;
+       spf=pass (google.com: domain of bt.ig7zdk9q30=5j5canch40tw=cegezcbi11@em375287.seedit4.me designates 103.2.140.105 as permitted sender) smtp.mailfrom="bT.ig7zdk9q30=5j5canch40tw=cegezcbi11@em375287.seedit4.me"
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=smtpcorp.com; s=a1-4; h=Feedback-ID:X-Smtpcorp-Track:Message-ID:Subject:
+	From:To:Date:Reply-To:Sender:List-Unsubscribe;
+	bh=SJun81u7bk3ps/9b+8MoRw6Zbqc7LN/Fg4mdZjiF9Z0=; b=Vop/No9CvziJoPoRolZjEwMZnr
+	z9CPl1ml1SH81mq2kv31d73nDqGsbuMnLQjPvpvLFnQoJN4JXP1W75poV1ZalEAwvuyoIJp0fgrWu
+	17b8M3s0yzaGbzsuTbfYAmXcZXRDBwSYSCKJGdicX55rwQPW+1GAWXkpw/qEvDON6uIInqfKxmuyD
+	9TXmYOXWttNDw6VBJCxQs3dPHg/JCjPI09V639Qg8/uz0ddqRBVb0GpklqPv4qwyEwLIMsUmtfA0G
+	AXJH033lfwkvucPsWEKtL7JKDzLKsULJF4p131PsRh1HAZSQNsyMjlJV0VEG/4G0trJMJo0i5VCUS
+	dw00CtZA==;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=seedit4.me;
+ i=@seedit4.me; q=dns/txt; s=s375287; t=1613174475; h=from : subject :
+ to : message-id : date;
+ bh=SJun81u7bk3ps/9b+8MoRw6Zbqc7LN/Fg4mdZjiF9Z0=;
+ b=naW0Rrr+iWPXW8JDOxoopyiPC1tK41Cfn6NZB/lyK5eOhlr0WBaY5s8GNQgtD1XmSbs1x
+ q+OWwGldCou7jZI/tOFGdfk7bGkq42l++ypN8GEk6OisyCXPv+RSbGneTG+qlku7Z+Th+mh
+ fGOWX8WuW1XGUPepd1+L28fCpSba2wxsd4hzkzYam8Okp2GbcR6mQuStE5P4oA+P0PiG1iU
+ joonTpEyPGkCdi3DsgcRnUF2TCdE4CRnFcMeDnAulpjASo5W+1jDQzIhWPqUnGVj6WXmvyP
+ 5Pvv0yiQ5+qZd57JB3hSRku8jQhBZsprztxwlHRxJO1kzD3htcc0kcU4innw==
+Received: from [10.176.58.103] (helo=SmtpCorp)
+ by smtpcorp.com with esmtpsa (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256)
+ (Exim 4.92-S2G) (envelope-from <support@seedit4.me>)
+ id 1lAiN9-Y8PIp1-1l
+ for mrcloud.med@gmail.com; Sat, 13 Feb 2021 00:01:15 +0000
+Received: from [10.78.46.76] (helo=seedit4.me)
+ by smtpcorp.com with esmtpsa (TLS1.2:ECDHE_RSA_AES_128_GCM_SHA256:128)
+ (Exim 4.92-S2G) (envelope-from <support@seedit4.me>)
+ id 1lAiN8-9EFOo4-QO
+ for mrcloud.med@gmail.com; Sat, 13 Feb 2021 00:01:14 +0000
+Date: Sat, 13 Feb 2021 00:01:14 +0000
+To: "Mr.Cloud2 Mr.Cloud2" <mrcloud.med@gmail.com>
+From: "Seedit4.me" <support@seedit4.me>
+Subject: Service Suspension Notification
+Message-ID: <kB6mAPTxfzeWVOPXgvu7XIM1SrWguPD4t3fI7JGvXA@seedit4.me>
+X-Mailer: Seedit4.me
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b1_kB6mAPTxfzeWVOPXgvu7XIM1SrWguPD4t3fI7JGvXA"
+Content-Transfer-Encoding: 8bit
+X-Smtpcorp-Track: 1_jiN89EFOo4QO.J6PLmq8989J5c
+Feedback-ID: 375287m:375287a156e1_:375287sK7hOl3HqS
+X-Report-Abuse: Please forward a copy of this message, including all headers,
+ to <abuse-report@smtp2go.com>
+
+This is a multi-part message in MIME format.
+
+--b1_kB6mAPTxfzeWVOPXgvu7XIM1SrWguPD4t3fI7JGvXA
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Dear Mr.Cloud2 Mr.Cloud2,
+
+
+This is a notification that your service has now been suspended. The details of this suspension are below:
+
+
+Product/Service: Sidekick
+Amount: €9.99
+Due Date: 2021-02-13
+Suspension Reason: Overdue on Payment
+
+
+Please contact us as soon as possible to get your service reactivated.
+
+
+If your service is suspended due to over due bill the seedbox will automatically enabled once payment is made
+
+
+Billing time zone is GMT
+
+
+If you do not wish to renew Please Cancel your seedbox on your https://my.seedit4.me/boxes  this will cancel the outstanding invoice and stop any more emails 
+
+
+Seedit4.me 
+
+PLEASE DO NOT REPLY. THIS MAILBOX IS NOT MONITORED, IF YOU NEED SUPPORT OPEN A TICKET IN YOUR CLIENT AREA.
+
+--b1_kB6mAPTxfzeWVOPXgvu7XIM1SrWguPD4t3fI7JGvXA
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0A<html xmlns=3D"http://www.=
+w3.org/1999/xhtml">=0A    <head>=0A        <meta http-equiv=3D"Content-Type=
+" content=3D"text/html; charset=3Dutf-8" />=0A        <meta name=3D"viewpor=
+t" content=3D"width=3Ddevice-width, initial-scale=3D1, maximum-scale=3D1, u=
+ser-scalable=3Dno">=0A        <style type=3D"text/css">=0A            .Exte=
+rnalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.External=
+Class span,.ExternalClass td,h1,img{line-height:100%}h1,h2{display:block;fo=
+nt-family:Helvetica;font-style:normal;font-weight:700}#outlook a{padding:0}=
+.ExternalClass,.ReadMsgBody{width:100%}a,blockquote,body,li,p,table,td{-web=
+kit-text-size-adjust:100%;-ms-text-size-adjust:100%}table,td{mso-table-lspa=
+ce:0;mso-table-rspace:0}img{-ms-interpolation-mode:bicubic;border:0;height:=
+auto;outline:0;text-decoration:none}table{border-collapse:collapse!importan=
+t}#bodyCell,#bodyTable,body{height:100%!important;margin:0;padding:0;width:=
+100%!important}#bodyCell{padding:20px;}#templateContainer{width:600px;borde=
+r:1px solid #ddd;background-color:#fff}#bodyTable,body{background-color:#FA=
+FAFA}h1{color:#202020!important;font-size:26px;letter-spacing:normal;text-a=
+lign:left;margin:0 0 10px}h2{color:#404040!important;font-size:20px;line-he=
+ight:100%;letter-spacing:normal;text-align:left;margin:0 0 10px}h3,h4{displ=
+ay:block;font-style:italic;font-weight:400;letter-spacing:normal;text-align=
+:left;margin:0 0 10px;font-family:Helvetica;line-height:100%}h3{color:#6060=
+60!important;font-size:16px}h4{color:grey!important;font-size:14px}.headerC=
+ontent{background-color:#f8f8f8;border-bottom:1px solid #ddd;color:#505050;=
+font-family:Helvetica;font-size:20px;font-weight:700;line-height:100%;text-=
+align:left;vertical-align:middle;padding:0}.bodyContent,.footerContent{font=
+-family:Helvetica;line-height:150%;text-align:left;}.footerContent{text-ali=
+gn:center}.bodyContent pre{padding:15px;background-color:#444;color:#f8f8f8=
+;border:0}.bodyContent pre code{white-space:pre;word-break:normal;word-wrap=
+:normal}.bodyContent table{margin:10px 0;background-color:#fff;border:1px s=
+olid #ddd}.bodyContent table th{padding:4px 10px;background-color:#f8f8f8;b=
+order:1px solid #ddd;font-weight:700;text-align:center}.bodyContent table t=
+d{padding:3px 8px;border:1px solid #ddd}.table-responsive{border:0}.bodyCon=
+tent a{word-break:break-all}.headerContent a .yshortcuts,.headerContent a:l=
+ink,.headerContent a:visited{color:#1f5d8c;font-weight:400;text-decoration:=
+underline}#headerImage{height:auto;max-width:600px;padding:20px}#templateBo=
+dy{background-color:#fff}.bodyContent{color:#505050;font-size:14px;padding:=
+20px}.bodyContent a .yshortcuts,.bodyContent a:link,.bodyContent a:visited{=
+color:#1f5d8c;font-weight:400;text-decoration:underline}.bodyContent a:hove=
+r{text-decoration:none}.bodyContent img{display:inline;height:auto;max-widt=
+h:560px}.footerContent{color:grey;font-size:12px;padding:20px}.footerConten=
+t a .yshortcuts,.footerContent a span,.footerContent a:link,.footerContent =
+a:visited{color:#606060;font-weight:400;text-decoration:underline}@media on=
+ly screen and (max-width:640px){h1,h2,h3,h4{line-height:100%!important}#tem=
+plateContainer{max-width:600px!important;width:100%!important}#templateCont=
+ainer,body{width:100%!important}a,blockquote,body,li,p,table,td{-webkit-tex=
+t-size-adjust:none!important}body{min-width:100%!important}#bodyCell{paddin=
+g:10px!important}h1{font-size:24px!important}h2{font-size:20px!important}h3=
+{font-size:18px!important}h4{font-size:16px!important}#templatePreheader{di=
+splay:none!important}.headerContent{font-size:20px!important;line-height:12=
+5%!important}.footerContent{font-size:14px!important;line-height:115%!impor=
+tant}.footerContent a{display:block!important}.hide-mobile{display:none;}}=
+=0A        </style>=0A    </head>=0A    <body leftmargin=3D"0" marginwidth=
+=3D"0" topmargin=3D"0" marginheight=3D"0" offset=3D"0">=0A        <center>=
+=0A            <table align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" height=3D"100%" width=3D"100%" id=3D"bodyTable">=0A           =
+     <tr>=0A                    <td align=3D"center" valign=3D"top" id=3D"b=
+odyCell">=0A                        <table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" id=3D"templateContainer">=0A                            <t=
+r>=0A                                <td align=3D"center" valign=3D"top">=
+=0A                                    <table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" id=3D"templateHeader">=0A               =
+                         <tr>=0A                                           =
+ <td valign=3D"top" class=3D"headerContent">=0A                            =
+                    <a href=3D"http://www.seedit4.me">=0A                  =
+                                  <img src=3D"https://billing.seedit4.me/im=
+g/email1.png" style=3D"max-width:600px;padding:20px 20px 0 20px" id=3D"head=
+erImage" alt=3D"Seedit4.me" />=0A                                          =
+  </td>=0A                                        </tr>=0A                 =
+                   </table>=0A                                </td>=0A     =
+                       </tr>=0A                            <tr>=0A         =
+                       <td align=3D"center" valign=3D"top">=0A             =
+                       <table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%" id=3D"templateBody">=0A                                 =
+       <tr>=0A                                            <td valign=3D"top=
+" class=3D"bodyContent">=0A<!-- message header end --><p>Dear Mr.Cloud2 Mr.=
+Cloud2,</p>=0A<p>This is a notification that your service has now been susp=
+ended. The details of this suspension are below:</p>=0A<p>Product/Service: =
+Sidekick<br />Amount: =E2=82=AC9.99<br />Due Date: 2021-02-13<br />Suspensi=
+on Reason: <strong>Overdue on Payment</strong></p>=0A<p>Please contact us a=
+s soon as possible to get your service reactivated.</p>=0A<p>If your servic=
+e is suspended due to over due bill the seedbox will automatically enabled =
+once payment is made</p>=0A<p><strong>Billing time zone is GMT</strong></p>=
+=0A<p><span style=3D"color: #ff0000;"><strong><span style=3D"background-col=
+or: #ffffff;"><span style=3D"font-family: Calibri, sans-serif; font-size: 1=
+1pt;"><span style=3D"background-color: #ffffff; font-family: Lato; font-siz=
+e: 14px;"><span style=3D"font-family: Calibri, sans-serif; font-size: 11pt;=
+"><span style=3D"background-color: #ffffff;">If you do not wish to renew Pl=
+ease Cancel your seedbox on your=C2=A0</span><a style=3D"background-color: =
+#ffffff; color: #ff0000;" href=3D"https://my.seedit4.me/boxes">Dash</a></sp=
+an></span></span></span><span style=3D"background-color: #ffffff;"><span st=
+yle=3D"font-family: Calibri, sans-serif; font-size: 11pt;"><span style=3D"b=
+ackground-color: #ffffff; font-family: Lato; font-size: 14px;"><span style=
+=3D"font-family: Calibri, sans-serif; font-size: 11pt;"><span style=3D"back=
+ground-color: #ffffff;">=C2=A0 this will cancel the outstanding invoice and=
+ stop any more email</span></span></span></span></span></strong></span><spa=
+n style=3D"background-color: #ffffff; color: #626262; font-weight: bold;"><=
+span style=3D"font-family: Calibri, sans-serif; font-size: 11pt;"><span sty=
+le=3D"background-color: #ffffff; color: #626262; font-family: Lato; font-si=
+ze: 14px;"><span style=3D"font-family: Calibri, sans-serif; font-size: 11pt=
+;"><span style=3D"color: #626262; background-color: #ffffff;">s=C2=A0</span=
+></span></span></span></span></p>=0A<p>Seedit4.me <br />
+<br />
+PLEASE DO NOT REPLY. THIS MAILBOX IS NOT MONITORED, IF YOU NEED SUPPORT OPE=
+N A TICKET IN YOUR CLIENT AREA.</p><!-- message footer start -->=0A</td>=0A=
+                                        </tr>=0A                           =
+         </table>=0A                                </td>=0A               =
+             </tr>=0A                            <tr>=0A                   =
+             <td align=3D"center" valign=3D"top">=0A                       =
+             <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" id=3D"templateFooter">=0A                                        =
+<tr>=0A                                            <td valign=3D"top" class=
+=3D"footerContent">=0A                                                 <a h=
+ref=3D"http://www.seedit4.me">visit our website</a>=0A                     =
+                           <span class=3D"hide-mobile"> | </span>=0A       =
+                                         <a href=3D"https://my.seedit4.me">=
+log in to your account</a>=0A                                              =
+  <span class=3D"hide-mobile"> | </span>=0A                                =
+                <a href=3D"https://my.seedit4.me/support">get support</a> <=
+br />=0A                                                Copyright =C2=A9 Se=
+edit4.me, All rights reserved.=0A                                          =
+  </td>=0A                                        </tr>=0A                 =
+                   </table>=0A                                </td>=0A     =
+                       </tr>=0A                        </table>=0A         =
+           </td>=0A                </tr>=0A            </table>=0A        <=
+/center>=0A    </body>=0A</html>
+
+--b1_kB6mAPTxfzeWVOPXgvu7XIM1SrWguPD4t3fI7JGvXA--
+

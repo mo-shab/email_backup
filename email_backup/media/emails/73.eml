@@ -1,0 +1,82 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp2830134lkb;
+        Sun, 4 Apr 2021 06:47:03 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJyaW/Kuy3Ko0criBxTNU9CxZGtvnwypqkCd8qBjXpc6e6E+IXM2d7G9hLmgZe3yHsBXhXC+
+X-Received: by 2002:a62:7a09:0:b029:1f1:5cf4:3fd7 with SMTP id v9-20020a627a090000b02901f15cf43fd7mr19520885pfc.66.1617544022928;
+        Sun, 04 Apr 2021 06:47:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1617544022; cv=none;
+        d=google.com; s=arc-20160816;
+        b=PdCYgus5vU7wGDTRpw7k5XNvtnWQTyAK8b72B2akgClTy0r6VdIV1KgE2XHZ7FliME
+         FcqLWIq32ixfVNSYMMgp36GabUFBKqtFzTq6A/WNxLWiha8IwLFhInRVe6+cqyqd544W
+         V5qPrLuIM0As8e7Mp9bfT8dzSgM6v78rJe59koNCWng+8JHyzezJ97OMYAgqJ2GN1nWE
+         vcc1r7mTL//kzfZ9P8JoqfEz3jZMc+ZWxOPWauoEeznUjqt7DgSQTeySJVL4c/Z5GWR4
+         wVIsVWaWQG2cihKzyGWrLfI2MeMTSbVYGU6BqAdZRYM8S2lbZmuTIw/JxapixuO8kTu6
+         rnDg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:message-id:subject:reply-to
+         :from:to:date;
+        bh=rbdcjvXU/ZDx/tQMyaxJq5DIo12TC+ofL/BQzoRr1x0=;
+        b=uksO5pBXI64klH5/FqKmafTqi8kwv4R3KLdcyJYzoebsgDvRW4UB9VMHGEU6rnyDix
+         OT8fgp3dzznp3W1TemfdT4P1X03OP+Rg0TEj2etywbqfTSTn1AprWwpdyzbXVF26E8zT
+         O58zbDLMlWv7dJNHumhyuLYZ0OaZcbURqKa0JvUyxImhAI6khqbI9sW8fiyOKNH0vP7F
+         oOXIc4kFom9QMP+O6+uc9d4Wx9gcrNjZhjJoG+Pn5mUMzQksZePmjtTc1QdsqBdtE+TS
+         MOwKscpuMWnD/GSKNe8Dy6JHYyFSfPns6ALlCxVxHQpGikOkqpSwmrXMi4Kk22HACOW8
+         1Wtg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=neutral (google.com: 198.54.127.61 is neither permitted nor denied by best guess record for domain of verify@gfxpeers.club) smtp.mailfrom=verify@gfxpeers.club
+Return-Path: <verify@gfxpeers.club>
+Received: from MTA-08-3.privateemail.com (mta-08-3.privateemail.com. [198.54.127.61])
+        by mx.google.com with ESMTPS id v10si14430171plz.156.2021.04.04.06.47.02
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 04 Apr 2021 06:47:02 -0700 (PDT)
+Received-SPF: neutral (google.com: 198.54.127.61 is neither permitted nor denied by best guess record for domain of verify@gfxpeers.club) client-ip=198.54.127.61;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 198.54.127.61 is neither permitted nor denied by best guess record for domain of verify@gfxpeers.club) smtp.mailfrom=verify@gfxpeers.club
+Received: from MTA-08.privateemail.com (localhost [127.0.0.1])
+	by MTA-08.privateemail.com (Postfix) with ESMTP id EF65A60052
+	for <mrcloud.med@gmail.com>; Sun,  4 Apr 2021 09:47:01 -0400 (EDT)
+Received: from gfxpeers.net (unknown [10.20.151.201])
+	by MTA-08.privateemail.com (Postfix) with ESMTPA id 780F06004C
+	for <mrcloud.med@gmail.com>; Sun,  4 Apr 2021 09:47:01 -0400 (EDT)
+Date: Sun, 4 Apr 2021 13:46:59 +0000
+To: "mrcloud.med@gmail.com" <mrcloud.med@gmail.com>
+From: GFXPeers Team <verify@gfxpeers.club>
+Reply-To: Information <verify@gfxpeers.club>
+Subject: New account confirmation at GFXPeers
+Message-ID: <HJbywniBelbMeTzSy0vMB6gkCLKctWoyKVLbtyzcjU@gfxpeers.net>
+X-Mailer: PHPMailer 6.0.7 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Scanned: ClamAV using ClamSMTP
+
+<div class=3D"mcont" tabindex=3D"0" style=3D"padding:10px;outline:0px;" onc=
+lick=3D"setarr();" id=3D"bcnt6138514000000084019">      <div style=3D"paddi=
+ng: 10px" vlink=3D"#176093" alink=3D"#176093" link=3D"#176093" bgcolor=3D"#=
+F0F0F0" text=3D"#141414" dir=3D"LTR">  <table style=3D"background-color: #f=
+0f7fc; border: 1px solid #a5cae4; border-radius: 5px; direction: ltr;" dir=
+=3D"LTR" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">  <tbody><tr>   <=
+td style=3D"background-color: #d7edfc; padding: 5px 10px; border-bottom: 1p=
+x solid #a5cae4; border-top-left-radius: 4px; border-top-right-radius: 4px;=
+ font-family: 'trebuchet ms', helvetica, arial, sans-serif; font-size: 11px=
+; line-height: 1.231;">    <a target=3D"_blank" href=3D"http://gfxpeers.net=
+/">GFXPeers</a>   </td>  </tr>  <tr>   <td style=3D"background-color: #fcfc=
+ff; padding: 1em; color: #141414; font-family: 'trebuchet ms', helvetica, a=
+rial, sans-serif; font-size: 13px; line-height: 1.231;">    <p style=3D"mar=
+gin-top: 0">Dear mrcloud, in order to complete your registration at <a targ=
+et=3D"_blank" href=3D"http://gfxpeers.net/">GFXPeers</a>, you need to confi=
+rm your account by following the link below.</p> <h2 style=3D"font-size: 14=
+pt; font-weight: normal; margin: 10px 0 4px"><a target=3D"_blank" href=3D"h=
+ttp://gfxpeers.net/register.php?confirm=3Dyn7m57k3apvup2ox0k2kgqixtsgf18lu"=
+>Confirm Account</a></h2> <div style=3D"color: #176093; font-size: 11px; ma=
+rgin: 4px 0 10px"><a target=3D"_blank" href=3D"http://gfxpeers.net/register=
+.php?confirm=3Dyn7m57k3apvup2ox0k2kgqixtsgf18lu">http://gfxpeers.net/regist=
+er.php?confirm=3Dyn7m57k3apvup2ox0k2kgqixtsgf18lu</a></div> <p>Thanks for r=
+egistering.<br>GFXPeers Team</p>   </td>  </tr>  <tr>   <td style=3D"backgr=
+ound-color: #f0f7fc; padding: 5px 10px; border-top: 1px solid #d7edfc; bord=
+er-bottom-left-radius: 4px; border-bottom-right-radius: 4px; text-align: ri=
+ght; font-family: 'trebuchet ms', helvetica, arial, sans-serif; font-size: =
+11px; line-height: 1.231;">    <a target=3D"_blank" href=3D"http://gfxpeers=
+.net/">http://gfxpeers.net/</a>   </td>  </tr>  </tbody></table>  </div></d=
+iv>

@@ -1,0 +1,202 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp1574002lkb;
+        Fri, 26 Mar 2021 11:09:40 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzmgko3pNR6vRqrBjQ5OuE4gJxOUpesiyOWdSVY63r21+QzoIf4l83jQNH7U7FV/x3fKhjH
+X-Received: by 2002:a17:90a:1f0e:: with SMTP id u14mr15183617pja.155.1616782180704;
+        Fri, 26 Mar 2021 11:09:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1616782180; cv=none;
+        d=google.com; s=arc-20160816;
+        b=iMuMufSkRpAlZxAahK1ysPAgqctwUdryVbroD8wOa5Ht4qGZ6VlgG6L4lIEmACteU+
+         RivjzpfEK6sf+fTSjshW4Ne1m9ZRKosdwF+/XNIZ2BmqD/ztuOViScctNS3JTNaU2uZt
+         8GewP9l7CIt7mts4z2p52AMMTKnRsr6Hv54Mqyk9HjFV9VR3bZoi3nKTgrgzogkbOm+B
+         fJL2a72VEuV7bzSHCNr+UDiSj9XQaYGzt83PD5pF5unDVDzKP8kLOEg112ufrkiDS7Aj
+         xiTneh3MAEPhWOfTEd0Sak516YkIWKDEscPDaLqdKbNq6DSh21s/1OGvnT9PNx69vd27
+         4Zmg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:to:from:subject:date:message-id;
+        bh=gzmfJPZG4RA9x3oFp7WHdu/N9JW08rfA+RtFimjmulA=;
+        b=Go3TkfT377j+aWsVvgBTaBqeudR+1z3FgxLYMPpBsF2KSpTyh1fteU17wvh9wXyXKF
+         b24IcM/misyHhqXmG+B+Rzt4N5mgPDuvG9uTP7r3o85XsC/DpTN1oD/cO0vrP/n03737
+         jrkygdOEBdAMPkWmjzasrCQuvvWPSldiNbXZJV0SBQ358BFQoiGxbyVCpNvU9kG++3mV
+         VJTAMTkxAL5pu5/LEiFIy3NLoeyfXOI+TLMwU0ckV5Fa1uURH/+p90Py58fDexy/HJHs
+         3QR3atlDspcJPaBXog8XtEicuHhseFM4WRc332+UrAQaK9/PMAg00kBjrcsOmYC+Q359
+         Rl8A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=neutral (google.com: 198.54.127.86 is neither permitted nor denied by best guess record for domain of admin@teamos-hkrg.com) smtp.mailfrom=admin@teamos-hkrg.com
+Return-Path: <admin@teamos-hkrg.com>
+Received: from se18-3.privateemail.com (se18-3.privateemail.com. [198.54.127.86])
+        by mx.google.com with ESMTPS id t17si9711664pge.255.2021.03.26.11.09.40
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 26 Mar 2021 11:09:40 -0700 (PDT)
+Received-SPF: neutral (google.com: 198.54.127.86 is neither permitted nor denied by best guess record for domain of admin@teamos-hkrg.com) client-ip=198.54.127.86;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 198.54.127.86 is neither permitted nor denied by best guess record for domain of admin@teamos-hkrg.com) smtp.mailfrom=admin@teamos-hkrg.com
+Received: from new-01-4.privateemail.com ([198.54.127.54])
+	by se18.registrar-servers.com with esmtpsa (TLSv1.2:AES128-GCM-SHA256:128)
+	(Exim 4.92)
+	(envelope-from <admin@teamos-hkrg.com>)
+	id 1lPqtr-0002oo-5V
+	for mrcloud.med@gmail.com; Fri, 26 Mar 2021 11:09:39 -0700
+Received: from MTA-06-1.privateemail.com (unknown [10.50.14.16])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by NEW-01-4.privateemail.com (Postfix) with ESMTPS id 0437E80890
+	for <mrcloud.med@gmail.com>; Fri, 26 Mar 2021 14:09:35 -0400 (EDT)
+Received: from MTA-06.privateemail.com (localhost [127.0.0.1])
+	by MTA-06.privateemail.com (Postfix) with ESMTP id D93D660043
+	for <mrcloud.med@gmail.com>; Fri, 26 Mar 2021 14:09:34 -0400 (EDT)
+Received: from teamos-hkrg.com (unknown [10.20.151.202])
+	by MTA-06.privateemail.com (Postfix) with ESMTPA id 5EE876004F
+	for <mrcloud.med@gmail.com>; Fri, 26 Mar 2021 14:09:34 -0400 (EDT)
+Message-ID: <1a6ce7412cd06d37c45e9a52021ea0c1@teamos-hkrg.com>
+Date: Fri, 26 Mar 2021 18:09:32 +0000
+Subject: Team OS : Your Only Destination To Custom OS !! - Account
+ confirmation required
+From: "TeamOS : A Complete Operating System Solution" <admin@teamos-hkrg.com>
+To: mrcloud <mrcloud.med@gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1616782172_45b996a728e5f72294f3438a7bbba580_=_"
+X-To-Validate: 1230437d+mrcloud.med@gmail.com
+X-Virus-Scanned: ClamAV using ClamSMTP
+X-Originating-IP: 198.54.127.54
+X-SpamExperts-Domain: o2.privateemail.com
+X-SpamExperts-Username: out-02
+Authentication-Results: registrar-servers.com; auth=pass (plain) smtp.auth=out-02@o2.privateemail.com
+X-SpamExperts-Outgoing-Class: ham
+X-SpamExperts-Outgoing-Evidence: Combined (0.15)
+X-Recommended-Action: accept
+X-Filter-ID: Pt3MvcO5N4iKaDQ5O6lkdGlMVN6RH8bjRMzItlySaT9WLQux0N3HQm8ltz8rnu+BPUtbdvnXkggZ
+ 3YnVId/Y5jcf0yeVQAvfjHznO7+bT5xcBIiolEln+yOPUwZbdNMmX+/DRe0Gh+EUe0eRShoiL9cV
+ PSoHm0W/3adFfiYl2nuC9ozXDFlmWoWSg4EGvnH3/T4GcPvCLvSpAEEGy7kYxntH2YEAwvq4xV+c
+ hECmFSdBU4MSKwhxpck6GKs/b5nlpuGXed8VjoeeEKguXydrkXHkuq4CQ+P7obm8pENXVrz08ESs
+ My9wOGWcQ6d3BMXRC3G/sG7WSBh053rh3Jn0Yjycrdko/LT6lThJNEpI9+/BPeWxfLTyo52lpUOn
+ 40xHoOAmb0xgXrrQKITtclJwwjxIPj1UU4msT2Odp9D6f/Om/kpOWQV1ILff1+qZar/CZdONW7YG
+ NNLfGcEBhKT67pwmJNoc3y6AVAo2vdMceU7Fdy7AiHLyUr2dj6lXvfszIxfs2qKc0fhF4YMd0lwH
+ wOXyY7DGIntSiB4r6Kj1fsjkwpinXL/m6yBpu4SgZSX6awuEHFChrk1/9txPAMqiqkkdTbG8Soxb
+ n1FE6WelWGzdZh03ExTqDquACpNsmDrlcntZzD+8euQ3PTJH+fGZGHMcN6qoXPjenLhIOF1oeRZ8
+ 2vkf+WbHQKQJLX9zQj69AEmAMrtbsgSDPqEsHg0TurwQGtvbUWKhwPV6oob15qiT7UVZD68nyrOg
+ wO0GKtxtthwTofBzZWwNnxdn51RZYCzo6zsMBiN5CrtOSZw5b+5pDXXLeVZQfHLXpTOd/Oqab+yY
+ U9Twoou7sNC2P1NwlhMxcvYBLM7b/H8VcCqxF+AFo+S2xt71OU3XO4su2uxrRMbYoMKMYV4zhXTM
+ HYdQhm8DdAQpMwW9RYHmSXu2k4qtQbXR0OzUtcNDcHHtLdtJYnNGFdRN3CtPPBjSHkIxZcdHj6Ts
+ 5swrRlPD6EaoGuLnFL/NV+urNmku+ljA/fSsoSyaA1TzQpMNBxbB7RLiYEFSRBPGZbjh5YR/nmtA
+ C++iIg56iHbgoxR1+oDOF+GQePQ44lqMDpyryPGheI8wLj5zjtsKfDucBQ4ohToXHG6oM0pOgvbF
+ CaqvXm81A7xJ
+X-Report-Abuse-To: spam@se16.registrar-servers.com
+
+
+--_=_swift_v4_1616782172_45b996a728e5f72294f3438a7bbba580_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+mrcloud, in order to complete your registration or reactivate your account =
+at Team OS : Your Only Destination To Custom OS !! (https://www.teamos-hkrg=
+.com/), you need to confirm your email address by clicking the button below=
+.
+
+Confirm your email (https://www.teamos-hkrg.com/account-confirmation=
+/mrcloud.899690/email?c=3DMQUekx8QPo0qxgyP)
+
+--------------------------=
+---
+
+Visit Team OS : Your Only Destination To Custom OS !!: https://www=
+.teamos-hkrg.com/
+
+--_=_swift_v4_1616782172_45b996a728e5f72294f3438a7bbba580_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang=3D"en-US" dir=3D"LTR">
+<head>
+<meta http-e=
+quiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<base href=
+=3D"https://www.teamos-hkrg.com/">
+<meta name=3D"viewport" content=3D"wid=
+th=3Ddevice-width, initial-scale=3D1">
+<meta http-equiv=3D"X-UA-Compatibl=
+e" content=3D"IE=3Dedge">
+<meta name=3D"format-detection" content=3D"tele=
+phone=3Dno">
+<title>Team OS : Your Only Destination To Custom OS !! - Acc=
+ount confirmation required</title>
+</head>
+<body dir=3D"LTR" leftmargin=
+=3D"0" topmargin=3D"0" marginwidth=3D"0" marginheight=3D"0" style=3D'margin=
+: 0; padding: 0; word-wrap: break-word; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%; background-color: #1f2126; font-size: 13px; font-f=
+amily: "Open Sans",BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helveti=
+ca,Arial,sans-serif; line-height: 1.5; color: #dae1f3;'>
+
+<table id=3D"=
+bodyTable" border=3D"0" width=3D"100%" height=3D"100%" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"border-spacing: 0; mso-table-lspace: 0pt; mso-tabl=
+e-rspace: 0pt; border-collapse: collapse; margin: 0; padding: 0; background=
+-color: #1f2126; height: 100%; width: 100%;"><tr>
+<td align=3D"center" va=
+lign=3D"top" id=3D"bodyTableContainer" style=3D"border-collapse: collapse; =
+background-color: #1f2126;">
+=09=09<table border=3D"0" width=3D"600" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"container" dir=3D"LTR" style=3D"bo=
+rder-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; width: 100%; max-width: 600px;">
+<tr>
+<td class=3D"heade=
+r" align=3D"center" valign=3D"top" style=3D'border-collapse: collapse; colo=
+r: #919cb0; padding: 6px 12px; border-top-left-radius: 4px; border-top-righ=
+t-radius: 4px; font-family: "Open Sans",BlinkMacSystemFont,-apple-system,Se=
+goe UI,Roboto,Helvetica,Arial,sans-serif; font-size: 22px; line-height: 1.5=
+;'>
+=09=09=09=09<a href=3D"https://www.teamos-hkrg.com/" style=3D"text-de=
+coration: none; color: #919cb0;">Team OS : Your Only Destination To Custom =
+OS !!</a>
+=09=09=09</td>
+=09=09</tr>
+<tr>
+<td class=3D"content" ali=
+gn=3D"left" valign=3D"top" style=3D'border-collapse: collapse; background-c=
+olor: #2d3037; border-radius: 2px; color: #dae1f3; padding: 12px; font-size=
+: 13px; font-family: "Open Sans",BlinkMacSystemFont,-apple-system,Segoe UI,=
+Roboto,Helvetica,Arial,sans-serif; line-height: 1.5;'>
+
+<p style=3D"mar=
+gin-top: 0;">mrcloud, in order to complete your registration or reactivate =
+your account at <a href=3D"https://www.teamos-hkrg.com/" style=3D"color: #f=
+afafa; text-decoration: none;">Team OS : Your Only Destination To Custom OS=
+ !!</a>, you need to confirm your email address by clicking the button belo=
+w.</p>
+
+<p style=3D"margin-bottom: 0;"><a href=3D"https://www.teamos-hk=
+rg.com/account-confirmation/mrcloud.899690/email?c=3DMQUekx8QPo0qxgyP" clas=
+s=3D"button" style=3D"display: inline-block; padding: 5px 10px; background-=
+color: #d6d9e0; border: none; border-radius: 4px; font-size: 12px; color: #=
+4f5766; text-decoration: none;">Confirm your email</a></p>
+
+=09=09=09</=
+td>
+=09=09</tr>
+<tr>
+<td class=3D"footer" align=3D"center" valign=3D"=
+top" style=3D'border-collapse: collapse; padding: 6px 12px; text-align: cen=
+ter; color: #7c869d; font-size: 12px; font-family: "Open Sans",BlinkMacSyst=
+emFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; line-heigh=
+t: 1.5;'>
+=09=09=09=09<div><a href=3D"https://www.teamos-hkrg.com/" style=
+=3D"color: #7c869d; text-decoration: underline;">Visit Team OS : Your Only =
+Destination To Custom OS !!</a></div>
+
+=09=09=09=09
+=09=09=09</td>
+=
+=09=09</tr>
+</table>
+</td>
+</tr></table>
+</body>
+</html>
+
+--_=_swift_v4_1616782172_45b996a728e5f72294f3438a7bbba580_=_--
+

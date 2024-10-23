@@ -1,0 +1,515 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:c566:0:b029:f1:e639:b0fa with SMTP id z6csp1694647lkp;
+        Fri, 23 Apr 2021 13:09:06 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxixCHTqDT+7BzQH3xmzYmH+EGeSmk4UfHQz7ArBRuYpkKEsvbNVNag1AveVgtwcqWSzRC2
+X-Received: by 2002:a17:902:e293:b029:ec:aa43:4aad with SMTP id o19-20020a170902e293b02900ecaa434aadmr5362404plc.32.1619208545736;
+        Fri, 23 Apr 2021 13:09:05 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1619208545; cv=none;
+        d=google.com; s=arc-20160816;
+        b=f6D/cPPhICwFahBHa0mKrC2vpygf5C++Hy/DmNV/koaZPbCRF2zBlEFpdgs1Wkw1+g
+         dsHdcvbvz9DtJe4DDOmr+XbBVWpCr4EaMDMtNXa22cZTvRFLYKKfxsRZQT7xNxkk6nbq
+         qhD308HAEqw8RMfUNz4d6/v7wmavDWGjDI4r9Y01bnTu6HIBEelK8iLVuNKJWBcGRumD
+         I/IoA2E9LzAioaZyHxBQQbI3ijXAUxUjTd87xj2PiTIClfYUwCwvmA6fL+3MOuRciBxO
+         g6gZ3u+avvBeL25DhJPhZddbe+HsgTc3WAp/5ZNMDoaajjc7PcS5y8OmzW8ZXRi48C0I
+         CPMQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:subject:mime-version:errors-to:reply-to:from:to
+         :dkim-signature;
+        bh=kn0U0xmVJjUt09mXqpBw/3MjSI2A2d/3Bm5ns7IeFTA=;
+        b=mdEvpLI12Aj3PjVsUmvxUSfSXevAUvv/Gp3Pqvn+z9wmIV2u+iKmahzY8lYgDlHT2d
+         GV8Hzy5AHFr7mbgnVgnbGByV6Sk9Kb19CmXa42KHjYxv4jr7aObt40mxWCE+hue15wGw
+         0G9m+7yN+NRDn96g1rAgoLn6C0tgfH5U3u+Ul3SzL9KXXb91dNFDHK6mqMNbf5odB7f1
+         Oi4b1l21J+yUPx3YQY2V2j0h5hAYN5Lbp+W4aNALb+ePCbpYtROcn1viamt1oUlhrItn
+         vodedFZ+4vsj9Z8Wq5SztjgvOeH/RvngsJqoMs/toN5iROwHoULheG9GJ724NUowsOqf
+         QZGQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@steampowered.com header.s=smtp header.b=Xwi4OkYf;
+       spf=pass (google.com: domain of noreply@steampowered.com designates 208.64.202.60 as permitted sender) smtp.mailfrom=noreply@steampowered.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=steampowered.com
+Return-Path: <noreply@steampowered.com>
+Received: from smtp-60.steampowered.com (smtp-60.steampowered.com. [208.64.202.60])
+        by mx.google.com with ESMTPS id q11si7294209pjg.74.2021.04.23.13.09.05
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Fri, 23 Apr 2021 13:09:05 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@steampowered.com designates 208.64.202.60 as permitted sender) client-ip=208.64.202.60;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@steampowered.com header.s=smtp header.b=Xwi4OkYf;
+       spf=pass (google.com: domain of noreply@steampowered.com designates 208.64.202.60 as permitted sender) smtp.mailfrom=noreply@steampowered.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=steampowered.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=steampowered.com; s=smtp; h=Date:Message-Id:Content-Type:Subject:
+	MIME-Version:Reply-To:From:To:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=kn0U0xmVJjUt09mXqpBw/3MjSI2A2d/3Bm5ns7IeFTA=; b=Xwi4OkYfohxjsDTuAcsrCcY7XS
+	tQRo6Ntq2bfvYibTcGL2Nz0mAwi1WUzX/cSejd4PDjMQ2ei6T4UFYef329LkhUm3aGEZuIyryHhJN
+	SywRthDRdkKshCESR3OdZhHeWHLa82Qqbs5uh/5RVztE+xfuVHetkH3AhIcWjzHgjWZs=;
+Received: from [208.64.200.174] (helo=valvesoftware.com)
+	by smtp-02-tuk1.steampowered.com with smtp (Exim 4.90_1)
+	(envelope-from <noreply@steampowered.com>)
+	id 1la26r-0007ho-7l
+	for mrcloud.med@gmail.com; Fri, 23 Apr 2021 13:09:05 -0700
+To: mrcloud.med@gmail.com
+From: "Le support Steam" <noreply@steampowered.com>
+Reply-To: <noreply@steampowered.com>
+Errors-To: <noreply@steampowered.com>
+X-Steam-Message-Type: CEmailSteamGuard_Web
+MIME-Version: 1.0
+Subject: Votre compte Steam : =?UTF-8?B?YWNjw6hzIGRlcHVpcyB1biBub3V2ZWF1IG5hdmln?=
+ =?UTF-8?B?YXRldXIgd2ViIG91IGFwcGFyZWlsIG1vYmlsZQ==?=
+Content-Type: multipart/alternative;
+ boundary="np6083296132c27"
+Message-Id: <E1la26r-0007ho-7l@smtp-02-tuk1.steampowered.com>
+Date: Fri, 23 Apr 2021 13:09:05 -0700
+
+This is a multi-part message in MIME format.
+--np6083296132c27
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+
+Bonjour mrcloud53,
+
+Voici le code Steam Guard dont vous avez besoin pour vous connecter au compte
+mrcloud53 :
+
+NBWBB
+
+Cet e-mail vous a été envoyé car une tentative de connexion depuis un navigateur ou un appareil mobile identifié par l'adresse 196.64.31.100 (MA) à été enregistrée. La tentative de connexion renseignait correctement votre nom de compte et votre mot de passe.
+
+https://steamcommunity.com/actions/ReportSuspiciousLogin?stoken=a8386ed7298769c3ad58ab1de94233332fcc9218e20baef1bc6610317b333626ca0abcc9e9611cd6cffc63a63abd963a17885c69b9c7bfe5dcb8e5a75359452794adada65d1a3d28b8b49e512f937269f7a5f8835281031fdd82eb05ac323840
+
+Le code Steam Guard est nécessaire pour vous connecter. Personne ne peut accéder à votre compte sans avoir accès à cet e-mail.
+
+Si vous n'êtes pas à l'origine de cette demande, veuillez changer votre mot de passe Steam. Il est également recommandé de modifier l'adresse e-mail pour assurer la sécurité de votre compte.
+
+Si vous n'arrivez plus à accéder à votre compte, utilisez ce lien de récupération de compte. Nous vous aiderons à soit récupérer votre compte soit le verrouiller.
+
+https://help.steampowered.com/wizard/HelpUnauthorizedLogin?stoken=GLfY0sYYimx9b7L2WgtnvaNglTNIEMLZhHpMz1WhrHolWglQvFMGuyxV8wKIkZMPYNTpBfMz%2F4HYimzFXUoOh4qG1M35c0eq%2B7X5saoiuaE%3D
+
+Cordialement,
+L'équipe Steam
+
+--
+
+Cette notification a été envoyée à l'adresse e-mail associée à votre compte Steam.
+
+Ce message a été généré automatiquement. Merci de ne pas y répondre. Si vous avez besoin d'aide, veuillez consulter le site d'assistance de Steam.
+https://help.steampowered.com
+
+© Valve Corporation
+Tous droits réservés. Toutes les marques commerciales sont la propriété de leurs détenteurs respectifs, aux États-Unis et dans d'autres pays.
+
+--
+
+Consultez ce message depuis votre navigateur :
+https://store.steampowered.com/email/codefornewwebloginwithiplocwarning?sparams=eJyFUltv2yAU_itVpL5NiQGDodK0LVqbVIuzS9ulqfLCzTGqbVwDTZNp_32Q5aGVJg0Ql--c8_EdDr9GDQ-drPXg970eXYyy0bvRoHnTxv22sYI3EegHq4L0HW-Ty43XvI2oC31vB69bbpoIn44fXTL3dqcHrcbSvvJ0xqf42vveXWwmm0mtm378D_8TqdOdD17GEEAAgxnFOU5sWg7aS6sS2XK6mk4TuD0BaTk7SjybBT6oJL_hez2c1LeDbGxQGB0TTbL62ri6Md3jG21HWVFOGzrj90nYZsKlN7Zzm8mPY-BNcL2Rxga3sFvTfXDePuruPaeIEq0KyGhBmERcYcoFUJrlEMUGKykZBFTDTHBdASEJARkChYhGAonkGRfRRTMCgFREVpUkiMchFIszKCjFkjDBZCEqjZUUVGNeYIRZjmHBcq5iJ1gBjhSkgoqcaQxgxVABCasKjitKEYY0XVspRaEWGeYSQUTz9ANSYULHg6_tYA5acSm1c_-v3WayM4f46JvJPJrvXjG8eaHZolpnbr027QsTxQKutr575sttc7u8viwXD_W8Lw9gVQ9z26y2zffnq3IW9i8_6e7L9eND-W29vO2nVXk4h1f5PLIcru7v7Nc6f5qBEmGZ6adzOC3usePWBH55jj7HnEzPlRr-pgEYGZN8jMAYZClfaUPnh_3pi5SfRr__AO4ZBig
+
+--np6083296132c27
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="date=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>Votre compte Steam : accès depuis un nouveau navigateur web ou appareil mobile</title>
+    <!--[if gte mso 9]>
+    <style type="text/css" media="all">
+        sup { font-size: 100% !important; }
+    </style>
+    <![endif]-->
+
+    <!--[if !mso]><!-->
+    <style type="text/css" media="screen">
+        @font-face {
+            font-family: 'Motiva Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Motiva Sans'), url('https://store.cloudflare.steamstatic.com/public/shared/fonts/email/MotivaSans-Light.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'Motiva Sans';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Motiva Sans'), url('https://store.cloudflare.steamstatic.com//public/shared/fonts/email/MotivaSans-Regular.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'Motiva Sans';
+            font-style: normal;
+            font-weight: bold;
+            src: local('Motiva Sans'), url('https://store.cloudflare.steamstatic.com//public/shared/fonts/email/MotivaSans-Bold.woff') format('woff');
+        }
+    </style>
+    <!--<![endif]-->
+
+    <style type="text/css" media="screen">
+        body { padding:0 !important; margin:0 auto !important; display:block !important; min-width:100% !important; width:100% !important; background:#ffffff; -webkit-text-size-adjust:none }
+        a { color:#3999ec; text-decoration:underline }
+        body a { color:#ffffff; text-decoration:underline }
+        img { margin: 0 !important; -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
+
+        /* for recepits */
+            table { mso-table-lspace:0pt; mso-table-rspace:0pt; }
+            img, a img{ border:0; outline:none; text-decoration:none; }
+            #outlook a { padding:0; }
+            .ReadMsgBody { width:100%; }
+            .ExternalClass { width:100%; }
+            div,p,a,li,td,blockquote { mso-line-height-rule:exactly; }
+            a[href^=tel],a[href^=sms] { color:inherit; text-decoration:none; }
+            .ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalClass div, .ExternalClass span, .ExternalClass font { line-height:100%; }
+        /* END for recepits */
+
+        a[x-apple-data-detectors] { color: inherit !important; text-decoration: inherit !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
+
+        .btn-18 a { display: block; padding: 13px 35px; text-decoration: none; }
+
+        .l-white a { color: #ffffff; }
+        .l-black a { color: #000001; }
+        .l-grey1 a { color: #dbdee2; }
+        .l-grey2 a { color: #a1a2a4; }
+        .l-grey3 a { color: #dadcdd; }
+        .l-grey4 a { color: #f1f1f1; }
+        .l-grey5 a { color: #dddedf; }
+        .l-grey6 a { color: #bfbfbf; }
+        .l-grey7 a { color: #dcdddd; }
+        .l-grey8 a { color: #8e96a4; }
+        .l-green a { color: #a4d007; }
+        .l-blue a { color: #6a7c96; }
+        .l-blue1 a { color: #3999ec; }
+        .l-blue2 a { color: #9eb8cc; }
+
+
+        /* Mobile styles */
+        @media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
+            .mpy-35 { padding-top: 35px !important; padding-bottom: 35px !important; }
+
+            .mpx-15 { padding-left: 15px !important; padding-right: 15px !important; }
+
+            .mpx-20 { padding-left: 20px !important; padding-right: 20px !important; }
+
+            .mpb-30 { padding-bottom: 30px !important; }
+
+            .mpb-10 { padding-bottom: 10px !important; }
+
+            .mpb-15 { padding-bottom: 15px !important; }
+
+            .mpb-20 { padding-bottom: 20px !important; }
+
+            .mpb-35 { padding-bottom: 35px !important; }
+
+            .mpb-40 { padding-bottom: 40px !important; }
+
+            .mpb-50 { padding-bottom: 50px !important; }
+
+            .mpb-60 { padding-bottom: 60px !important; }
+
+            .mpt-30 { padding-top: 30px !important; }
+
+            .mpt-40 { padding-top: 40px !important; }
+
+            .mpy-40 { padding-top: 40px !important; padding-bottom: 40px !important; }
+
+            .mpt-0 { padding-top: 0px !important; }
+
+            .mpr-0 { padding-right: 0px !important; }
+
+            .mfz-14 { font-size: 14px !important; }
+
+            .mfz-28 { font-size: 28px !important; }
+
+            .mfz-16 { font-size: 16px !important; }
+
+            .mfz-24 { font-size: 24px !important; }
+
+            .mlh-18 { line-height: 18px !important; }
+
+            u + body .gwfw { width:100% !important; width:100vw !important; }
+
+            .td,
+            .m-shell { width: 100% !important; min-width: 100% !important; }
+
+            .mt-left { text-align: left !important; }
+            .mt-center { text-align: center !important; }
+            .mt-right { text-align: right !important; }
+
+            .m-left { text-align: left !important; }
+            .me-left { margin-right: auto !important; }
+            .me-center { margin: 0 auto !important; }
+            .me-right { margin-left: auto !important; }
+
+            .mh-auto { height: auto !important; }
+            .mw-auto { width: auto !important; }
+
+            .fluid-img img { width: 100% !important; max-width: 100% !important; height: auto !important; }
+
+            .column,
+            .column-top,
+            .column-dir,
+            .column-dir-top { float: left !important; width: 100% !important; display: block !important; }
+
+            .kmMobileStretch { float: left !important; width: 100% !important; display: block !important; padding-left: 0 !important; padding-right: 0 !important; }
+
+            .m-hide { display: none !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; min-height: 0 !important; }
+            .m-block { display: block !important; }
+
+            .mw-15 { width: 15px !important; }
+
+            .mw-2p { width: 2% !important; }
+            .mw-32p { width: 32% !important; }
+            .mw-49p { width: 49% !important; }
+            .mw-50p { width: 50% !important; }
+            .mw-100p { width: 100% !important; }
+
+            .mbgs-200p { background-size: 200% auto !important; }
+        }
+    </style>
+</head>
+
+
+<body class="body" style="padding:0 !important; margin:0 auto !important; display:block !important; min-width:100% !important; width:100% !important; background:#ffffff; -webkit-text-size-adjust:none;">
+<center>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0"style="margin: 0; padding: 0; width: 100%; height: 100%;" bgcolor="#ffffff" class="gwfw">
+        <tr>
+            <td style="margin: 0; padding: 0; width: 100%; height: 100%;" align="center" valign="top">
+                <table width="775" border="0" cellspacing="0" cellpadding="0"class="m-shell">
+                    <tr>
+                        <td class="td" style="width:775px; min-width:775px; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <!-- Main -->
+                                <tr>
+                                    <td class="p-80 mpy-35 mpx-15" bgcolor="#212429" style="padding: 80px;">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                                            <!-- Logo -->
+                                            <tr>
+                                                <td class="img pb-45" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 45px;">
+                                                    <a href="https://store.steampowered.com/" target="_blank">
+                                                        <img src="https://store.cloudflare.steamstatic.com/public/shared/images/email/logo.png" width="615" height="88" border="0" alt="Steam" />
+                                                    </a>
+
+                                                </td>
+                                            </tr>
+                                            <!-- END Logo -->
+
+                                            <!-- All Content Exists within this table column -->
+                                            <tr>
+                                                <td>
+
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="title-36 pb-30 c-grey6 fw-b" style="font-size:36px; line-height:42px; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; padding-bottom: 30px; color:#bfbfbf; font-weight:bold;">Bonjour mrcloud53,</td>
+				</tr>
+			</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="text-18 c-grey4 pb-30" style="font-size:18px; line-height:25px; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; color:#dbdbdb; padding-bottom: 30px;">Voici le code Steam Guard dont vous avez besoin pour vous connecter au compte mrcloud53 :</td>
+				</tr>
+			</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="pb-70 mpb-50" style="padding-bottom: 70px;">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0"bgcolor="#17191c">
+							<tr>
+								<td class="py-30 px-56" style="padding-top: 30px; padding-bottom: 30px; padding-left: 56px; padding-right: 56px;">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td class="title-48 c-blue1 fw-b a-center" style="font-size:48px; line-height:52px; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; color:#3a9aed; font-weight:bold; text-align:center;">
+												NBWBB											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="text-18 c-grey4 pb-30" style="font-size:18px; line-height:25px; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; color:#dbdbdb; padding-bottom: 30px;">Cet e-mail vous a été envoyé car une tentative de connexion depuis un navigateur ou un appareil mobile <a style="color: #c6d4df;" href="https://steamcommunity.com/actions/ReportSuspiciousLogin?stoken=a8386ed7298769c3ad58ab1de94233332fcc9218e20baef1bc6610317b333626ca0abcc9e9611cd6cffc63a63abd963a17885c69b9c7bfe5dcb8e5a75359452794adada65d1a3d28b8b49e512f937269f7a5f8835281031fdd82eb05ac323840">identifié par l'adresse 196.64.31.100 (MA)</a> à été enregistrée. La tentative de connexion renseignait correctement votre nom de compte et votre mot de passe.<br><br>
+Le code Steam Guard est nécessaire pour vous connecter. <span style="color: #ffffff; font-weight: bold;">Personne ne peut accéder à votre compte sans avoir accès à cet e-mail.</span><br><br>
+<span style="color: #ffffff; font-weight: bold;">Si vous n'êtes pas à l'origine de cette demande</span>, veuillez changer votre mot de passe Steam . Il est également recommandé de modifier l'adresse e-mail associée au compte pour assurer la sécurité de votre compte.</td>
+				</tr>
+			</table>
+			            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td class="text-18 c-blue1 pb-40" style="font-size:18px; line-height:25px; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; color:#3a9aed; padding-bottom: 40px;"></td>
+                </tr>
+            </table>
+            
+                                                                                                <!-- Signature -->
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td class="pt-30" style="padding-top: 30px;">
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                                                    <td class="img" width="3" bgcolor="#3a9aed" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
+                                                                    <td class="img" width="37" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
+                                                                    <td>
+                                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                            <tr>
+                                                                                                                                                                    <td class="text-16 py-20 c-grey4 fallback-font" style="font-size:16px; line-height:22px; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; padding-top: 20px; padding-bottom: 20px; color:#f1f1f1;">
+                                                                                        Cordialement,<br />
+L'équipe Steam                                                                                    </td>
+                                                                                                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- END Signature -->
+                                                
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- END Main -->
+
+                                <!-- Footer -->
+                                <tr>
+                                    <td class="py-60 px-90 mpy-40 mpx-15" style="padding-top: 60px; padding-bottom: 60px; padding-left: 90px; padding-right: 90px;">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                                                                                        <tr>
+                                                <td class="text-18 pb-60 mpb-40 fallback-font" style="font-size:18px; line-height:25px; color:#000001; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; padding-bottom: 60px;">
+			                                        Cette notification a été envoyée à l'adresse e-mail associée à votre compte Steam.                                                    <br /><br />
+			                                        Ce message a été généré automatiquement. Merci de ne pas y répondre. Si vous avez besoin d'aide, veuillez consulter le site d'assistance de Steam.                                                </td>
+                                            </tr>
+                                            
+                                                                                        <!-- A -->
+                                                                                        <tr>
+                                            <td class="pb-60" style="padding-bottom: 60px;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <th class="column" width="270" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                                                    <td class="text-18 mpb-40 fallback-font" style="font-size:18px; line-height:25px; color:#000001; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left;">
+                                                                        <a href="https://help.steampowered.com" target="_blank" class="link-u c-black" style="text-decoration:underline; color:#000001;">
+                                                                            <span class="link-u c-black" style="text-decoration:underline; color:#000001;">https://help.steampowered.com</span>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </th>
+                                                                                                            </tr>
+                                                </table>
+                                            </td>
+                                            </tr>
+                                            
+
+                                            <!-- B -->
+                                                                                            <tr>
+                                                    <td class="pb-50" style="padding-bottom: 50px;">
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <th class="column" width="270" valign="top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td class="img mpt-0" style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                                                <a href="https://store.steampowered.com/" target="_blank"><img src="https://store.cloudflare.steamstatic.com/public/shared/images/email/logo_footer.png" width="165" height="50" border="0" alt="" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </th>
+                                                                <th class="column-top mpb-40" width="15" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                                                <th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                                                                                    <tr>
+                                                                                <td class="text-12 fallback-font" style="font-size:12px; line-height:18px; color:#000001; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left;">
+                                                                                                                                                                            Pour plus d'informations à propos de Steam et pour télécharger le client Steam, consultez la section « À propos de Steam ».                                                                                        <br /><br />
+                                                                                        <a href="https://store.steampowered.com/about/" target="_blank" class="link-u c-black" style="text-decoration:underline; color:#000001;">
+                                                                                            <span class="link-u c-black" style="text-decoration:underline; color:#000001;"><strong>À propos de Steam</strong>
+                                                                                            </span>
+                                                                                        </a>
+                                                                                                                                                                    </td>
+                                                                            </tr>
+                                                                                                                                            </table>
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                            
+
+                                            <!-- C -->
+                                            <tr>
+                                                <td>
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <th class="column-top" valign="top" width="270" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                                            <a href="https://www.valvesoftware.com/en/" target="_blank">
+                                                                                                                                                                <img src="https://store.cloudflare.steamstatic.com/public/shared/images/email/logo_valve.jpg" width="165" height="48" border="0" alt="" />
+                                                                                                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                            <th class="column-top mpb-40" valign="top" width="15" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                                            <th class="column-top" valign="top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td class="text-12 pb-30 fallback-font" style="font-size:12px; line-height:18px; color:#000001; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; padding-bottom: 30px;">
+	                                                                                                                                                        <strong>© Valve Corporation</strong>
+                                                                                <br />
+                                                                                <strong>PO Box 1688 Bellevue, WA 98009 USA</strong>
+                                                                                <br /><br />
+		                                                                        Tous droits réservés. Toutes les marques commerciales sont la propriété de leurs détenteurs respectifs, aux États-Unis et dans d'autres pays.	                                                                                                                                                </td>
+                                                                    </tr>
+                                                                    
+                                                                </table>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            <!-- END Footer -->
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</center>
+
+    <center style="font-family:'Motiva Sans', Helvetica, Arial, sans-serif; color: #000000; font-size: 11px; margin-bottom: 4px;">
+        Ce message ne s'affiche pas correctement ?        <a href="https://store.steampowered.com/email/codefornewwebloginwithiplocwarning?sparams=eJyFUltv2yAU_itVpL5NiQGDodK0LVqbVIuzS9ulqfLCzTGqbVwDTZNp_32Q5aGVJg0Ql--c8_EdDr9GDQ-drPXg970eXYyy0bvRoHnTxv22sYI3EegHq4L0HW-Ty43XvI2oC31vB69bbpoIn44fXTL3dqcHrcbSvvJ0xqf42vveXWwmm0mtm378D_8TqdOdD17GEEAAgxnFOU5sWg7aS6sS2XK6mk4TuD0BaTk7SjybBT6oJL_hez2c1LeDbGxQGB0TTbL62ri6Md3jG21HWVFOGzrj90nYZsKlN7Zzm8mPY-BNcL2Rxga3sFvTfXDePuruPaeIEq0KyGhBmERcYcoFUJrlEMUGKykZBFTDTHBdASEJARkChYhGAonkGRfRRTMCgFREVpUkiMchFIszKCjFkjDBZCEqjZUUVGNeYIRZjmHBcq5iJ1gBjhSkgoqcaQxgxVABCasKjitKEYY0XVspRaEWGeYSQUTz9ANSYULHg6_tYA5acSm1c_-v3WayM4f46JvJPJrvXjG8eaHZolpnbr027QsTxQKutr575sttc7u8viwXD_W8Lw9gVQ9z26y2zffnq3IW9i8_6e7L9eND-W29vO2nVXk4h1f5PLIcru7v7Nc6f5qBEmGZ6adzOC3usePWBH55jj7HnEzPlRr-pgEYGZN8jMAYZClfaUPnh_3pi5SfRr__AO4ZBig"
+            style="font-family:'Motiva Sans', Helvetica, Arial, sans-serif; color: #000000; font-size: 11px; margin-bottom: 4px;">
+            Cliquez ici        </a>
+    </center>
+
+</body>
+</html>
+
+
+--np6083296132c27--

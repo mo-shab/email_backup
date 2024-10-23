@@ -1,0 +1,301 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:22e6:b029:f9:2098:e3d8 with SMTP id b6csp1230920lkv;
+        Sun, 23 May 2021 09:53:26 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwg6zLsBnTV98DOjHulv1siiqhtxKi9SExol2AgdBqlaHyw6eX3z11ConxsENaZtcxSDmUL
+X-Received: by 2002:a17:90a:a40a:: with SMTP id y10mr20516269pjp.151.1621788806061;
+        Sun, 23 May 2021 09:53:26 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1621788806; cv=none;
+        d=google.com; s=arc-20160816;
+        b=p6Z6xm0FefCPq0OcEQG41HNU37NlkPGpxyZu6D7LrBywDMFsKE+GQjx/YM6auYI9Qw
+         c+FomzfWGV2SHgqsRbyEPETVegfWYOglcwShlv1QF+5N0PIr63eiv44sCPgQRfE3LoYi
+         hhz7M5Y1SIZhlfXnSXFLNZnM8L3GmLWwecxjK+t4gTobymx63q2xBI+8o8QJObu8j3lD
+         QM96CiUXzwNUqkUCLsd25KoNCfiSDRm8TqymYSc1P0k6DexV8SZalDI37oFz+Bf3cPJw
+         E+eE7JA/kCRNh5M54TCK1Yty9etmrNAbY33GQUM3+w7h7uFyjmLubVbdCf+ucjkJZcnv
+         eDjQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-id:list-unsubscribe:content-transfer-encoding:auto-submitted
+         :date:subject:from:to:message-id:mime-version:dkim-signature;
+        bh=iblMmckIwAhFuURmwUddnPI2eC7QA8T92r8XeXDUcSQ=;
+        b=cjcAM5VVnsf4fTUaBaH33pywjv8kinrjXjH/+FyYDzfmqpma2k2zycyqKU+pwh38yH
+         svSXdulKKMmZITe3iWb6ZdMWWbOoaUXr8X0b7fm8mG3QeOEjZvUEA2ThHZcq+kaNldOk
+         1Zli5/AuwaMlxcKthbLaTg6BdmqHjX9UwwGl0xntttQOR+kcv0hsWCyMVamOfZ+u+pOw
+         u2lSUOJYWo6uGkIyyQMljqv7wmm+vMb6x3EQraULKAEppjONrpC5uMMde6vMJ6R90Y6O
+         kDOg7Zh5TpbL/Jw5tsqAWwewshKBrdj2F1nEGJ1vKGJngVbKe+tK65OmoCpuA4EA/fxN
+         60mg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@avistaz.to header.s=scph0416 header.b=sJAzpBDZ;
+       spf=neutral (google.com: 147.253.213.66 is neither permitted nor denied by best guess record for domain of msprvs1=18777iqha6z-g=bounces-41712@bounces.avistaz.to) smtp.mailfrom="msprvs1=18777iqHA6Z-G=bounces-41712@bounces.avistaz.to";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=avistaz.to
+Return-Path: <msprvs1=18777iqHA6Z-G=bounces-41712@bounces.avistaz.to>
+Received: from mta-213-66.sparkpostmail.com (mta-213-66.sparkpostmail.com. [147.253.213.66])
+        by mx.google.com with ESMTPS id i10si14293026pfa.101.2021.05.23.09.53.25
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 23 May 2021 09:53:26 -0700 (PDT)
+Received-SPF: neutral (google.com: 147.253.213.66 is neither permitted nor denied by best guess record for domain of msprvs1=18777iqha6z-g=bounces-41712@bounces.avistaz.to) client-ip=147.253.213.66;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@avistaz.to header.s=scph0416 header.b=sJAzpBDZ;
+       spf=neutral (google.com: 147.253.213.66 is neither permitted nor denied by best guess record for domain of msprvs1=18777iqha6z-g=bounces-41712@bounces.avistaz.to) smtp.mailfrom="msprvs1=18777iqHA6Z-G=bounces-41712@bounces.avistaz.to";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=avistaz.to
+X-MSFBL: +1FUIbHaxsOJLBohh9NyZMVe8y/Alf7gP03zOsHv2lU=|eyJzdWJhY2NvdW50X2l
+	kIjoiMCIsInRlbmFudF9pZCI6InNwYyIsIm1lc3NhZ2VfaWQiOiI2MGEzODU4OGF
+	hNjBjYTFiNDA5NyIsInIiOiJtcmNsb3VkLm1lZEBnbWFpbC5jb20iLCJjdXN0b21
+	lcl9pZCI6IjQxNzEyIn0=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=avistaz.to;
+	s=scph0416; t=1621788805; i=@avistaz.to;
+	bh=iblMmckIwAhFuURmwUddnPI2eC7QA8T92r8XeXDUcSQ=;
+	h=Message-ID:To:From:Subject:Date:Content-Type;
+	b=sJAzpBDZIo572fCZnwZSBNEiSgK3VCkasOK8ujxlK4RHEuqCg1OQYyFe2vCNfwnZ5
+	 stp1ZFrJ4BKkICWrNcmtZzeQYS78IGMc3GsWkcdDvZgKmzYY2WiSE80Me6eVsGufgR
+	 LLRTHSOiLabV5DRTV6L3y+9SvLQrxPh0kBcxdd8E=
+Authentication-Results:  aa.mta1vsmtp.cc.prd.sparkpost smtp.user=<hidden>; auth=pass (LOGIN)
+Received: from [51.79.80.175] ([51.79.80.175:54300] helo=smtp.sparkpostmail.com)
+	by aa.mta1vsmtp.cc.prd.sparkpost (envelope-from <noreply@avistaz.to>)
+	(ecelerity 4.3.2.17932 r(msys-ecelerity:tags/4.3.2.5)) with ESMTPSA (cipher=AES-128-GCM) 
+	id 04/79-62680-5888AA06; Sun, 23 May 2021 16:53:25 +0000
+MIME-Version: 1.0
+Message-ID: <04.79.62680.5888AA06@aa.mta1vsmtp.cc.prd.sparkpost>
+To: mrcloud.med@gmail.com
+From: =?UTF-8?B?QXZpc3RhWiBGb3J1bXM=?= <noreply@avistaz.to>
+Subject: =?UTF-8?B?WW91ciByZWdpc3RyYXRpb24gaXMgY29tcGxldGUh?=
+Date: Sun, 23 May 2021 16:53:23 +0000
+Auto-Submitted: auto-generated
+Content-Type: multipart/alternative; boundary="--==_mimepart_3206d7970b17ffc305af0a0e4d33b5fd"; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:BOnBS7Ldi7Tea-lTMWAGrAtOT0ycBpzCBmxj2wFVcjk~|eyAicmNwdF90byI6ICJtcmNsb3VkLm1lZEBnbWFpbC5jb20iLCAidGVuYW50X2lkIjogInNwYyIsICJjdXN0b21lcl9pZCI6ICI0MTcxMiIsICJzdWJhY2NvdW50X2lkIjogIjAiLCAibWVzc2FnZV9pZCI6ICI2MGEzODU4OGFhNjBjYTFiNDA5NyIgfQ~~>
+List-Id: <spc.41712.0.sparkpostmail.com>
+
+
+----==_mimepart_3206d7970b17ffc305af0a0e4d33b5fd
+Content-Type: text/plain; charset=UTF-8
+
+
+
+
+Hi mrcloud,
+
+Welcome to AvistaZ Forums and thank you for joining. 
+
+Go to AvistaZ Forums: https://forums.avistaz.to/
+
+-- AvistaZ Forums
+
+-----
+
+
+
+
+AvistaZ Forums
+----==_mimepart_3206d7970b17ffc305af0a0e4d33b5fd
+Content-Type: text/html; charset=UTF-8
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title></title>
+		<style type="text/css">
+		
+			#outlook a {padding:0;}
+			body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} 
+			.ExternalClass {width:100%;}
+			.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+			#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+
+			img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} 
+			a img {border:none;} 
+			.image_fix {display:block;}
+
+			p {margin: 1em 0;}
+
+			h1 { color: white !important; }
+			h2, h3, h4, h5, h6 {color: #333333 !important;}
+
+			h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+				color: red !important;
+			}
+
+			h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+				color: purple !important;
+			}
+
+			table td {border-collapse: collapse;}
+
+			table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+
+			a {color: #4a8aca;}
+			
+			/* Unhides cells that we set to hide in the HTML in case the client doesn't support style properly */
+			*[class~=hidePhone] {
+			    display : block !important;
+			    width : auto !important;
+			    max-height: inherit !important;
+			    overflow : visible !important;
+			    float : none !important;
+			}
+
+			*[class~=hidePhone][width="30"] {
+				width: 30px !important;
+			}
+
+			*[class~=hidePhone][width="40"] {
+				width: 40px !important;
+			}
+
+			td[class~=hidePhone] {
+				display: table-cell !important;
+			}
+
+			.ipsImage {
+				max-width: 100% !important;
+				height: auto !important;
+			}
+
+			@media only screen and (max-width: 480px) {
+				a[href^="tel"], a[href^="sms"] {
+					text-decoration: none;
+					color: blue;
+					pointer-events: none;
+					cursor: default;
+				}
+
+				.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+					text-decoration: default;
+					color: orange !important;
+					pointer-events: auto;
+					cursor: default;
+				}
+
+				#userPhoto, .hidePhone, *[class~=hidePhone], td[class~=hidePhone] {
+					display: none !important;
+				}
+
+				.responsive_table > tr > td, .responsive_table > tbody > tr > td,
+				.responsive_table > tr, .responsive_table > tbody > tr {
+					display: block;
+					text-align: left;
+				}
+
+				html[dir="rtl"] .responsive_table > tr > td, html[dir="rtl"] .responsive_table > tbody > tr > td,
+				html[dir="rtl"] .responsive_table > tr, html[dir="rtl"] .responsive_table > tbody > tr {
+					text-align: right;
+				}
+
+				.responsive_row {
+					margin-bottom: 10px;
+				}
+
+				.responsive_fullwidth {
+					width: 100% !important;
+				}
+
+				.cOurPicksRow {
+					margin-bottom: 30px;
+					padding-bottom: 30px;
+					border-bottom: 1px solid #e0e0e0;
+				}
+			}
+
+			@media only screen and (min-width: 768px) and (max-width: 1024px) {
+				a[href^="tel"], a[href^="sms"] {
+					text-decoration: none;
+					color: blue;
+					pointer-events: none;
+					cursor: default;
+				}
+
+				.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+					text-decoration: default;
+					color: orange !important;
+					pointer-events: auto;
+					cursor: default;
+				}
+			}
+
+			/* Share Links */
+			.cShareLink:hover {
+				color: white;
+			}
+		</style>
+	</head>
+	<body bgcolor="#f1f1f1" style='direction: ltr'>
+		<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#f1f1f1">
+			<tr height='25'>
+				<td dir='ltr'><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr'><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr'><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+			</tr>
+			<tr>
+				<td dir='ltr' valign="top"><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr' valign='middle' style="font-family: 'Helvetica Neue', helvetica, sans-serif; font-size: 30px; font-weight: 300; color: #262e33; line-height: 48px; padding-left: 10px;">
+					<a href='https://forums.avistaz.to/' style='text-decoration: none; color: #262e33; border: 0;'>
+						
+						
+						
+							AvistaZ Forums
+						
+					</a>
+				</td>
+				<td dir='ltr' valign="top"><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+			</tr>
+			<tr height='25'>
+				<td dir='ltr'><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr'><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr'><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+			</tr>
+			<tr>
+				<td dir='ltr'><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr' width='800' id='main' bgcolor='#ffffff' style='border-top: 10px solid #3f6d98; line-height: 1.5;'>
+					<table width='100%' cellpadding='20'>
+						
+						<tr>
+							<td dir='ltr' style="font-family: 'Helvetica Neue', helvetica, sans-serif; font-size: 15px; color: #333333; line-height: 21px">
+								
+								
+									<strong style='font-size: 17px'>Hi mrcloud,</strong>
+									<br />
+								
+
+								
+
+Welcome to AvistaZ Forums and thank you for joining. 
+
+<br />
+<br />
+<a href='https://forums.avistaz.to/' style="color: #ffffff; font-family: 'Helvetica Neue', helvetica, sans-serif; text-decoration: none; font-size: 12px; background: #3f6d98; line-height: 32px; padding: 0 10px; display: inline-block; border-radius: 3px;">Go to AvistaZ Forums</a>
+
+<br /><br />
+<em style='color: #8c8c8c'>&mdash; AvistaZ Forums</em>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td dir='ltr'><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+			</tr>
+			<tr height='25'>
+				<td dir='ltr'><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr'><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				<td dir='ltr'><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+			</tr>
+			
+			
+			
+
+			
+			
+				<tr>
+					<td dir='ltr' valign="top"><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+					<td dir='ltr' valign='top' width='800' align='center' style="font-family: 'Helvetica Neue', helvetica, sans-serif; font-size: 12px; color: #bdbdbd; line-height: 18px; padding-left: 10px;">
+						AvistaZ Forums
+					</td>
+					<td dir='ltr' valign="top"><img src='https://forums.avistaz.to/applications/core/interface/email/spacer.png' width='1' height='1' alt=''></td>
+				</tr>
+			
+		</table>
+	</body>
+</html>
+
+----==_mimepart_3206d7970b17ffc305af0a0e4d33b5fd--
+

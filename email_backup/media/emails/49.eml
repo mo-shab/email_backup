@@ -1,0 +1,74 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:c3c4:0:b029:be:51e1:283e with SMTP id b4csp4444990lkq;
+        Tue, 16 Feb 2021 07:27:27 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJwrok8ZBdftluzhkRPhZgVE40sm8pWiyl7yY0G0KQaZRkXBkJMz2ooiAzFGwkwN3Z+mE2zk
+X-Received: by 2002:ac8:7383:: with SMTP id t3mr18761086qtp.242.1613489247736;
+        Tue, 16 Feb 2021 07:27:27 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1613489247; cv=none;
+        d=google.com; s=arc-20160816;
+        b=co1tY+udS+BiG/RQa51TXJdNP1FfUqQyxhf9KoWOH2Ugml4WKSqbQWdBKiMpQ03q8N
+         dfkMOITfgudPQ+p1uo1/n5C4RUUD7BjacJcmFhodK7HFcXmPbd1ov55FsZUV1k/mzsQV
+         Pahf4YsZ/fj9Jr1Ojuli5XFW1j961eU0cVDbfBQQukN965TH0ZN89+cQ/Gg5bB8yERLN
+         tVZSyxwPS+HhUrBVx1XQjHuAjEleBmJs1V8MKmJDmZbFFajN5HszlYrC9ZvPnBaJlLkx
+         jQeqh27V5piwH5ZaUr/PPoVDnHeOoJLKjF4qmdSYK+0+vRmJK63eSo/lQEX5EzhvDCEZ
+         1x8w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:from:to:reply-to:message-id:sender:date
+         :content-transfer-encoding:dkim-signature:dkim-signature;
+        bh=n4W0uY+CpCjZVTAQBtGG1R83erLYgr/UcHmrLqgjGpA=;
+        b=yyz6uTjNyw/PJvDbR0EARhwR+X2uPJ1V8pvwzTXJRB9d0WBmUKL/EZwSo6VUBaRBtv
+         m5LNCEpj66XF5Mg4bUYjyq1X+L160A9ghyoGLpp+KOh00YdZcbnaysyRHYwW3iohhIuS
+         3IzAY+momQWDmhbh3YicF8J7SRbIj+4Kvv7bb10NCbDp519lVeReIYO/mNzjJ6Zks0dj
+         bI6X1rVca5ww9LDFOTeCR/yQKo1WddvaDQiuuwH7ff+yeg7zqgbyasTXLP9xPvgDjsK5
+         xsGfHvD+78ikVLOnVIMXNr+VHaR+guabgOXdZ+EZffJiYmqZeGuWKsi8mil04tBZWphg
+         LZXg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mg.hqmusic.info header.s=krs header.b="uc/M3iiZ";
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=1EGDOqYf;
+       spf=pass (google.com: domain of bounce+35bac9.d22b92-mrcloud.med=gmail.com@mg.hqmusic.info designates 104.130.122.30 as permitted sender) smtp.mailfrom="bounce+35bac9.d22b92-mrcloud.med=gmail.com@mg.hqmusic.info"
+Return-Path: <bounce+35bac9.d22b92-mrcloud.med=gmail.com@mg.hqmusic.info>
+Received: from mail30.static.mailgun.info (mail30.static.mailgun.info. [104.130.122.30])
+        by mx.google.com with UTF8SMTPS id q17si6394806qkc.277.2021.02.16.07.27.26
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 16 Feb 2021 07:27:27 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce+35bac9.d22b92-mrcloud.med=gmail.com@mg.hqmusic.info designates 104.130.122.30 as permitted sender) client-ip=104.130.122.30;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mg.hqmusic.info header.s=krs header.b="uc/M3iiZ";
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=1EGDOqYf;
+       spf=pass (google.com: domain of bounce+35bac9.d22b92-mrcloud.med=gmail.com@mg.hqmusic.info designates 104.130.122.30 as permitted sender) smtp.mailfrom="bounce+35bac9.d22b92-mrcloud.med=gmail.com@mg.hqmusic.info"
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.hqmusic.info; q=dns/txt;
+ s=krs; t=1613489247; h=Mime-Version: Content-Type: Subject: From: To:
+ Reply-To: Message-Id: Sender: Date: Content-Transfer-Encoding:
+ X-Feedback-Id; bh=n4W0uY+CpCjZVTAQBtGG1R83erLYgr/UcHmrLqgjGpA=; b=uc/M3iiZStEtAyNw7NdjNhYZeNdAy/Uy2yztIw1fI1MgZ8nI5yxoToBMEinyZqB98EAJYOYJ
+ 0zJdhtIngQiCWopOI9K3uPdyx7nTX6eEZsD98aDg4cjIEONtFBSEz5WMcp+dTXS23PZaYH0Z
+ QJmSopt0T91uyxXn9SeTmw+2Jnk=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg;
+ t=1613489247; h=Mime-Version: Content-Type: Subject: From: To:
+ Reply-To: Message-Id: Sender: Date: Content-Transfer-Encoding:
+ X-Feedback-Id; bh=n4W0uY+CpCjZVTAQBtGG1R83erLYgr/UcHmrLqgjGpA=; b=1EGDOqYf4nmHHfE9BKHS4HwRgw0OD39YoLqKMEzVSDaucSImI9Gyid3/BQaEMMqoOLKgAB5X
+ 2auAvkh1nPpvrFjI4rnFWHx59W8tJnVMzNzB2I4BUazkZPMUzkHNFCjIoyv38fJHmhdSKjSf
+ uk71OsaTgIXKV1u/NXPDEZFfL58=
+X-Feedback-Id: 5cb54ebf1f4b8b0001a1b641:mailgun
+X-Mailgun-Sending-Ip: 104.130.122.30
+X-Mailgun-Sid: WyI0ZTI0YyIsICJtcmNsb3VkLm1lZEBnbWFpbC5jb20iLCAiZDIyYjkyIl0=
+Content-Transfer-Encoding: 7bit
+Received: by luna.mailgun.net with HTTP; Tue, 16 Feb 2021 15:27:22 +0000
+Date: Tue, 16 Feb 2021 15:27:22 +0000
+Sender: noreply=hqmusic.info@mg.hqmusic.info
+Message-Id: <20210216152722.1.3E359738BCA7057B@mg.hqmusic.info>
+Reply-To: noreply@hqmusic.info
+To: mrcloud.med@gmail.com
+From: noreply@hqmusic.info
+Subject: New account confirmation at HQMusic.info
+Content-Type: text/plain; charset="ascii"
+Mime-Version: 1.0
+
+This email is to confirm the account you just created at HQMusic.info
+
+You have 24 hours to click the link below and finish the registration process for the account created with the username: mrcloud1
+
+http://hqmusic.info/register.php?confirm=329280cb08fd62236c4bd8d92f40fd28
+
+Thank you,
+HQMusic.info Staff

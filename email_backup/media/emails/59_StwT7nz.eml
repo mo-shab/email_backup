@@ -1,0 +1,57 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a9a:4583:0:b029:c3:278e:30dc with SMTP id m3csp1633721lkd;
+        Fri, 12 Mar 2021 13:12:55 -0800 (PST)
+X-Received: by 2002:a67:bc11:: with SMTP id t17mr191108vsn.51.1615583335367;
+        Fri, 12 Mar 2021 13:08:55 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJxqo6EtASB6cYrPg3owJR1G7Ue7CEvgRNwYt7xSdqykQwaC8O7fYZzj7SXlvNx1/KSNhXQF
+X-Received: by 2002:a67:bc11:: with SMTP id t17mr191038vsn.51.1615583334145;
+        Fri, 12 Mar 2021 13:08:54 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1615583334; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fd9MJ1r0SUjLqMJQA4G7cJAZRSU8jFagSBpmBOHOwUU/KyNnVxxFqu4KW3m+aWcpmx
+         +iYW/6URpAKn7NxNt/l0QnDUzR/ArNoGUZTktIiL53dIyVY6H+92auNdAP90polPaeJg
+         TiVDrkhkFvgFhNBCbMRfdbi3m7ql/UlIxniYJfxx6ocQ64rK25tT2jnmXNDlWn4/swbE
+         BrgwkzDOIHhgndHzaYBaaIdHOFb6Xp92YOBH9vY9YHerIPPEp/FD5SKgq1yQjaDtI139
+         NF/ntdnl1+V3RulVcwI55tDfAvFDFwx5xXKRKgVH8mXPj9RGhf6Ey7m64DCXxcvEXf/z
+         7HLQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:from:subject:to;
+        bh=LUrOHg4c62o7mBA6I3h/erpQM8m+PXrm10n8mxCDxQE=;
+        b=Dzd9Jkm1UN0IZClp0ELldULxGjtK/dH5bsa9TYiRkg9qeXTQ1AZDDlg3vT/XEKvevk
+         YKz/r30umELO47n3l+7FFyviZL69dPScof6iVfuk4wGcJWo0yvBtNcajdEbS7je796T5
+         OjHH2uA/XPsnkBZUi8FCYO8v67GyU4+O4kkADvYx+qdyy81WtW2mjLGHLTGGsukFwTt1
+         3IwE1otsZ6KHOUiVUZ0owhJ4u5V7iVJxxbHlncqBf8glz1vKdJgHqRZtgoB/vRqhteTG
+         rh/Iy/VJodQChocvITrgLT6j+Xx5r5x+yVAyenBmnLu3nFlhLyjdHguVqDQoEKm3Abwi
+         fmtQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=fail (google.com: domain of noreply@hdme.eu does not designate 209.44.101.226 as permitted sender) smtp.mailfrom=noreply@hdme.eu
+Return-Path: <noreply@hdme.eu>
+Received: from hdme.eu ([209.44.101.226])
+        by mx.google.com with ESMTP id l8si964719vst.389.2021.03.12.13.08.53
+        for <mrcloud.med@gmail.com>;
+        Fri, 12 Mar 2021 13:08:54 -0800 (PST)
+Received-SPF: fail (google.com: domain of noreply@hdme.eu does not designate 209.44.101.226 as permitted sender) client-ip=209.44.101.226;
+Authentication-Results: mx.google.com;
+       spf=fail (google.com: domain of noreply@hdme.eu does not designate 209.44.101.226 as permitted sender) smtp.mailfrom=noreply@hdme.eu
+Received: by hdme.eu (Postfix, from userid 500)
+	id B77041C00BC; Fri, 12 Mar 2021 21:14:05 +0000 (GMT)
+To: mrcloud.med@gmail.com
+Subject: HDME.eu user registration confirmation
+X-PHP-Originating-Script: 0:takesignup.php
+From: noreply@hdme.eu
+Message-Id: <20210312211405.B77041C00BC@hdme.eu>
+Date: Fri, 12 Mar 2021 21:14:05 +0000 (GMT)
+
+You have requested a new user account on HDME.eu and you have
+specified this address (mrcloud.med@gmail.com) as user contact.
+
+If you did not do this, please ignore this email. The person who entered your
+email address had the IP address 162.158.23.88. Please do not reply.
+
+To confirm your user registration, you have to follow this link:
+
+http://hdme.eu/confirm.php?id=98064&secret=99699bde584cbef2625e8377c33042a9
+
+After you do this, you will be able to use your new account. If you fail to
+do this, you account will be deleted within a few days. We urge you to read
+the RULES and FAQ before you start using torrentbits.

@@ -1,0 +1,193 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp343511lkb;
+        Wed, 24 Mar 2021 00:42:08 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJz2kRnB/GWM6z3YUN77SN5aHRrZL4DTzHXwC3EH8e1JGGGBEJBKTOuduzJuo/7Am+4ln1Ow
+X-Received: by 2002:a05:6512:2341:: with SMTP id p1mr1275485lfu.46.1616571728554;
+        Wed, 24 Mar 2021 00:42:08 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1616571728; cv=none;
+        d=google.com; s=arc-20160816;
+        b=FlrRK8tlpVrW9LmCq51PnTGTHrk85XHjAmt8Wv6fh8Xda6LncnDThIr2ImqUYedRyZ
+         34YrZE0BRcLCl01zhdKRTgK19oakfjTugJVD+BCosmZa22HFVWtt/PAhwVU/OPo/9wu6
+         ORr2MyISxVJy5D9u4zrkTlZXpao/mY5rOAeO9GMid26vVB1o2LEnSCk8h387kAxSypJ9
+         y+Zm+jG1o/zjE6iGJo7t3OYsfOXXpQcb8Okli51OJyW10vohigxAeBRb55G8MaLAuT7F
+         zOMpXHSQhVTKqtfcx5JUgTTbvy8iOrKJWaI9JobolQ4K1j3cJuHKYIISyUB3vqLHIkoj
+         myMg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:to:from:subject:date
+         :message-id;
+        bh=ZvaVggjSYR4ZIUtYIms/VbqfE46B5RCUd+GQIJnyo+g=;
+        b=DW23SW0mZFfjrvUedJ7kUfjMgNZiOj6KyHxrF8CVuO0TqEbPrTSBznl+mEcJDXwyEb
+         KlOFdJKUDn8il3yw1XLmOr99yQ+eXutjYyo3jCywSLkSxrfu5ksKsHJnORWKjAouHIoo
+         NGbQ8iMa0ZYk0eyEfI64vNFyXGPgnNUSD8wHVpdVM/RjI98F0pgErRv15UlrDaPNlBWq
+         +KsMgi8rrOdskzDhs3iqOYPvpkPB/8200dz/CQaQV+lnwi+l7C9ge7CZh9XqbHOxTmPU
+         c7GfLnuwubDnnwglRboNQhH8W/XHHMWmX947T3N8gu/CTBdTR6DGJcSY11xRgOXfbA9v
+         dzPQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of noreply@concertos.live designates 77.73.67.241 as permitted sender) smtp.mailfrom=noreply@concertos.live
+Return-Path: <noreply@concertos.live>
+Received: from concertos.live (concertos.live. [77.73.67.241])
+        by mx.google.com with ESMTPS id t18si1467421lfk.555.2021.03.24.00.42.08
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 24 Mar 2021 00:42:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@concertos.live designates 77.73.67.241 as permitted sender) client-ip=77.73.67.241;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of noreply@concertos.live designates 77.73.67.241 as permitted sender) smtp.mailfrom=noreply@concertos.live
+Received: from concertos.live (localhost [127.0.0.1])
+	by concertos.live (Postfix) with ESMTP id EAAF9160A
+	for <mrcloud.med@gmail.com>; Wed, 24 Mar 2021 07:42:07 +0000 (UTC)
+Message-ID: <503a74c557467fd730b2bc2314a41de0@concertos.live>
+Date: Wed, 24 Mar 2021 07:42:07 +0000
+Subject: Concertos - Account Activation Link
+From: Concertos <noreply@concertos.live>
+To: mrcloud <mrcloud.med@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html>
+<head>
+<meta name=3D"viewport" content=3D"widt=
+h=3Ddevice-width"/>
+<meta http-equiv=3D"Content-Type" content=3D"text/htm=
+l; charset=3DUTF-8"/>
+<title>Concertos - Account Activation Link</title>=
+
+<style>img{border:none;-ms-interpolation-mode:bicubic;max-width:100%}bod=
+y{background-color:#f6f6f6;font-family:sans-serif;-webkit-font-smoothing:an=
+tialiased;font-size:14px;line-height:1.4;margin:0;padding:0;-ms-text-size-a=
+djust:100%;-webkit-text-size-adjust:100%}table{border-collapse:separate;mso=
+-table-lspace:0pt;mso-table-rspace:0pt;width:100%}table td{font-family:sans=
+-serif;font-size:14px;vertical-align:top}.body{background-color:#f6f6f6;wid=
+th:100%}.container{display:block;margin:0 auto !important;max-width:580px;p=
+adding:10px;width:auto !important;width:580px}.content{box-sizing:border-bo=
+x;display:block;margin:0 auto;max-width:580px;padding:10px}.main{background=
+:#fff;border-radius:3px;width:100%}.wrapper{box-sizing:border-box;padding:2=
+0px}.footer{clear:both;padding-top:10px;text-align:center;width:100%}.foote=
+r td,.footer p,.footer span,.footer a{color:#999999;font-size:12px;text-ali=
+gn:center}h1,h2,h3,h4{color:#000000;font-family:sans-serif;font-weight:400;=
+line-height:1.4;margin:0;margin-bottom:30px}h1{font-size:35px;font-weight:3=
+00;text-align:center;text-transform:capitalize}p,ul,ol{font-family:sans-ser=
+if;font-size:14px;font-weight:normal;margin:0;margin-bottom:15px}p li,ul li=
+,ol li{list-style-position:inside;margin-left:5px}a{color:#3498db;text-deco=
+ration:underline}.btn{box-sizing:border-box;width:100%}.btn > tbody > tr > =
+td{padding-bottom:15px}.btn table{width:auto}.btn table td{background-color=
+:#ffffff;border-radius:5px;text-align:center}.btn a{background-color:#fffff=
+f;border:solid 1px #3498db;border-radius:5px;box-sizing:border-box;color:#3=
+498db;cursor:pointer;display:inline-block;font-size:14px;font-weight:bold;m=
+argin:0;padding:12px 25px;text-decoration:none;text-transform:capitalize}.b=
+tn-primary table td{background-color:#3498db}.btn-primary a{background-colo=
+r:#3498db;border-color:#3498db;color:#ffffff}.last{margin-bottom:0}.first{m=
+argin-top:0}.align-center{text-align:center}.align-right{text-align:right}.=
+align-left{text-align:left}.clear{clear:both}.mt0{margin-top:0}.mb0{margin-=
+bottom:0}.preheader{color:transparent;display:none;height:0;max-height:0;ma=
+x-width:0;opacity:0;overflow:hidden;mso-hide:all;visibility:hidden;width:0}=
+.powered-by a{text-decoration:none}hr{border:0;border-bottom:1px solid #f6f=
+6f6;margin:20px 0}@media  only screen and (max-width: 620px){table[class=3D=
+body] h1{font-size:28px !important;margin-bottom:10px !important}table[clas=
+s=3Dbody] p,table[class=3Dbody] ul,table[class=3Dbody] ol,table[class=3Dbod=
+y] td,table[class=3Dbody] span,table[class=3Dbody] a{font-size:16px !import=
+ant}table[class=3Dbody] .wrapper,table[class=3Dbody] .article{padding:10px =
+!important}table[class=3Dbody] .content{padding:0 !important}table[class=3D=
+body] .container{padding:0 !important;width:100% !important}table[class=3Db=
+ody] .main{border-left-width:0 !important;border-radius:0 !important;border=
+-right-width:0 !important}table[class=3Dbody] .btn table{width:100% !import=
+ant}table[class=3Dbody] .btn a{width:100% !important}table[class=3Dbody] .i=
+mg-responsive{height:auto !important;max-width:100% !important;width:auto !=
+important}}@media  all{.ExternalClass{width:100%}.ExternalClass,.ExternalCl=
+ass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalCl=
+ass div{line-height:100%}.apple-link a{color:inherit !important;font-family=
+:inherit !important;font-size:inherit !important;font-weight:inherit !impor=
+tant;line-height:inherit !important;text-decoration:none !important}.btn-pr=
+imary table td:hover{background-color:#34495e !important}.btn-primary a:hov=
+er{background-color:#34495e !important;border-color:#34495e !important}}</s=
+tyle></head>
+<body class=3D"">
+<table border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"body">
+<tr>
+<td>&nbsp;</td>
+<td class=3D"con=
+tainer">
+<div class=3D"content">
+<table class=3D"main">
+<tr>
+<td cl=
+ass=3D"wrapper">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0">=
+
+<tr>
+<td>
+<h1>Hi! Thank you for signing up on Concertos.</h1>
+<p>T=
+o complete your account activation click the button below:</p>
+<table bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"btn btn-primary">
+=
+<tbody>
+<tr>
+<td align=3D"left">
+<table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0">
+<tbody>
+<tr>
+<td><a href=3D"https://concertos.li=
+ve/activate/cf1a8da628c7c05407a833a92c26b341351a0e8d1e12aab5bf44bfccf611b88=
+9" target=3D"_blank">Activate account</a></td>
+</tr>
+</tbody>
+</table=
+>
+</td>
+</tr>
+</tbody>
+</table><p style=3D"word-wrap: break-word; o=
+verflow-wrap: break-word; word-break: break-word;">https://concertos.live/a=
+ctivate/cf1a8da628c7c05407a833a92c26b341351a0e8d1e12aab5bf44bfccf611b889</p=
+>
+<p>If the button above does not work, copy and paste the URL into your =
+browser&#039;s address bar.</p>
+<p>Best Regards,</p>
+<p> Team.</p>
+</=
+td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div class=3D"footer">=
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tr>
+<td cl=
+ass=3D"content-block">
+<a href=3D"https://concertos.live/about/terms">Ter=
+ms</a> |
+<a href=3D"https://concertos.live/about/privacy-policy">Privacy<=
+/a> |
+<a href=3D"https://concertos.live/email/unsubscribe?email=3Dmrcloud=
+.med@gmail.com"><unsubscribe>Unsubscribe</unsubscribe></a>
+</td>
+</tr>=
+
+<tr>
+<td>
+This is a service email for <span style=3D"color: #2F90E2;=
+ text-decoration: none;">mrcloud.med@gmail.com</span> containing necessary =
+account information.<br>Please do not reply to this message.<br><span class=
+=3D"apple-link"><a href=3D"https://concertos.live"></a></span>
+</td>
+</=
+tr>
+</table>
+</div>
+</div>
+</td>
+<td> </td>
+</tr>
+</table>
+=
+</body>
+</html>

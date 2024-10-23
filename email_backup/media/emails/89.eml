@@ -1,0 +1,112 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp806357lkb;
+        Fri, 16 Apr 2021 14:15:42 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwvJ1X+1kOBp0RD8nxlC3tnOhtAHXIId7HM8+A9p18YCTNWpAUX9ZLv3n7Zsu6YiIOqxxDb
+X-Received: by 2002:a1c:f20f:: with SMTP id s15mr10276972wmc.61.1618607742591;
+        Fri, 16 Apr 2021 14:15:42 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1618607742; cv=none;
+        d=google.com; s=arc-20160816;
+        b=t0xVbS7lIHgsEgKOAx156Lk08w8I7WHZVXizyHwdlGMMyceqLyZOUg0Jm5IN0K7co0
+         JTVVEV2OU19tK15aKh6yHT3YycQvKYDXToA4PCrPBYMiNU13oYbIY0Hnj7SSPOr/Uy+x
+         XJiR+kzyZ3Vt06K99yd9EyoP/TSM5VGQ+9wHD2gEI6JAVuer0DFx7aWM7KfUInGF4Wf7
+         3U3dHN7rm2TyJPpMp9uqd5u5EOFH1CpjBi/bQhS0HrA8vD9QDY4kotM7GPSfvmW8AE5h
+         Aqd/zG8mp1SXa6hAYlf0gOb4Wrvt1V/McBnWp11b5Viz3qBnnIu8mw2SeIxEtB0TJ+ET
+         c7jw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:content-transfer-encoding:mime-version:reply-to:from:subject
+         :to:dkim-signature:dkim-filter:message-id;
+        bh=jxJydEIMLMhr+MEnou6Ry2mmXeky8ePS9wHRxMWXa+U=;
+        b=Lg+YPXekVBjUVRYS0+hQ1EmCYp2rp1NM3+ibS9ErH/20kG+iGV8jmKwmOHnnZUtwRf
+         k/NpttYkFGQmgPJf4H5o7Yms+U84q8jtmbzThBBa1tHsvmvRCAZAWJDAYu99JaOnBh3U
+         MGxPhWe7HMfHS94/gkmhNFARR3DEd4Pfm9if2bMFttac7JSTlvValLJhpmFx1AT9HL4N
+         pyTUTLxE+pYFsWWhjMOxtXz7Q2UyMGcpufe/fK52JuXsKy2kEEBK0RRwXBGVDgDHF5Fj
+         7TY4fLdTy0NNT2iKiQ5CaJZMGD9Ee4S9ZbA/bzQqcgj6ACnt+1BRI36E9FTm9ta4SB1O
+         ITcA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ztracker.cc header.s=mail header.b=hFLGuTrs;
+       spf=pass (google.com: domain of webmaster@ztracker.cc designates 92.204.54.74 as permitted sender) smtp.mailfrom=webmaster@ztracker.cc
+Return-Path: <webmaster@ztracker.cc>
+Received: from astra7318.startdedicated.com (astra7318.startdedicated.com. [92.204.54.74])
+        by mx.google.com with UTF8SMTPS id i18si7136903wra.164.2021.04.16.14.15.42
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 16 Apr 2021 14:15:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of webmaster@ztracker.cc designates 92.204.54.74 as permitted sender) client-ip=92.204.54.74;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ztracker.cc header.s=mail header.b=hFLGuTrs;
+       spf=pass (google.com: domain of webmaster@ztracker.cc designates 92.204.54.74 as permitted sender) smtp.mailfrom=webmaster@ztracker.cc
+Message-ID: <6079fe7e.1c69fb81.f15a8.6443SMTPIN_ADDED_BROKEN@mx.google.com>
+X-Google-Original-Message-ID: <74a1cdfe3d454f49b44241e386591293 thesystem@ztracker.cc>
+Received: by astra7318.startdedicated.com (Postfix, from userid 1002)
+	id 34DF01D21727; Fri, 16 Apr 2021 21:15:42 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 astra7318.startdedicated.com 34DF01D21727
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ztracker.cc; s=mail;
+	t=1618607742; bh=jxJydEIMLMhr+MEnou6Ry2mmXeky8ePS9wHRxMWXa+U=;
+	h=To:Subject:From:Reply-To:Date:From;
+	b=hFLGuTrs+hPYFMF7S5U3n1aBlMYB0kyDZp+TOuZ4j1JPsKD/BlCANoGBTAbMCdfBn
+	 01iC3Ffl1TFrvDq5VIRQ/5Dpf6NsWcGdHpSXYDYxYXh1y4kPZ7emHc8lLQkV7oOX9P
+	 E82WuwWRjHpiIObfJ625Dley4QmsNdC1DPK6dEYWKUtQ+8Zur6+3Tsl1zwrto9+uPT
+	 NUTQJAO2Wul7VyR7MRDhGRYKufx5Olxx1X0k3sg3+Ms9KPj/jpsPjXDoekT+yljJoh
+	 m6x7degh0VPrJ1PasSNUT4U+ldXPZa4tCKAm2cwqR4kC4yEyaSMQzW48XwxqbgTyLl
+	 YoVzpR2uLfftw==
+To: mrcloud.med@gmail.com
+Subject: Ztracker.cc felhasználói fiókjának megerõsítése
+X-PHP-Originating-Script: 1002:ts_functions.php
+From: Ztracker.cc <contact@ztracker.cc>
+Reply-To: Ztracker.cc <contact@ztracker.cc>
+X-Mailer: PHP v7.1.33-25+0~20210112.45+debian9~1.gbp1a89bf
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Content-type: text/html; charset=iso-8859-2
+X-Sender: PHP
+Date: Fri, 16 Apr 2021 21:15:42 +0000 (UTC)
+
+<br />
+Szia kedves mrcloud,<br />
+Ezt az e-mailt a <a href="http://ztracker.cc" target="_self">http://ztracker.cc</a> rendszere küldte.<br />
+<br />
+Ezt az üzenetet azért kapod, mert ezzel a címmel regisztráció történt az oldalunkra.<br />
+Feltételezzük, hogy Te voltál, de, ha mégsem, akkor hagyd figyelmen kívül ezt az üzenetet.<br />
+Fiókod megerõsítés nélkül pár napon belül automatikusan törlõdik a rendszerbõl.<br />
+<br />
+------------------------------------------------<br />
+Aktivációs utasítások<br />
+------------------------------------------------<br />
+<br />
+Köszönjük regisztrációdat!<br />
+Fiókod teljes értékü használatához elõször is aktiválnod kell azt.<br />
+<br />
+Az alábbi linkre kattintva ezt meg is teheted:<br />
+<br />
+<a href="http://ztracker.cc/confirm.php?id=636586&amp;secret=1a6fcb18d755079a6059acffdc345f72" target="_self">http://ztracker.cc/confirm.php?id=636586&amp;secret=1a6fcb18d755079a6059acffdc345f72</a><br />
+<br />
+(AOL e-mail felhasználóknak célszerü kimásolni az elõbbi linket az internet böngészõjükbe és úgy megnyitni).<br />
+<br />
+------------------------------------------------<br />
+Nem sikerült?<br />
+------------------------------------------------<br />
+<br />
+Ha nem sikerült az elõbbi módszerrel érvényesítened a fiókodat, akkor próbáld meg az alábbi linkre kattintva<br />
+megtenni ezt:<br />
+<br />
+<a href="http://ztracker.cc/confirm.php?act=manual" target="_self">http://ztracker.cc/confirm.php?act=manual</a><br />
+<br />
+Ehhez szükséged lesz a felhasználói számodra és a biztonsági kulcsodra. Lentebb meg is<br />
+tekinthetõ:<br />
+<br />
+Felhasználói ID szám: 636586<br />
+<br />
+Biztonsági kulcs: 1a6fcb18d755079a6059acffdc345f72<br />
+<br />
+Ezeket az adatokat a szövegmezõ megfelelõ rublikáiba másold be!<br />
+<br />
+Ha még mindig nem tudod érvényesíteni a fiókodat, akkor valószínu az eltávolításra került a rendszerbõl.<br />
+Ha ez így történt, kérlek próbáld újra a regisztrációt illetve lépj kapcsolatba az ügyintézõinkkel!<br />
+<br />
+További kellemes böngészést!<br />
+<br />
+Üdvözlettel,<br />
+<br />
+A Ztracker.cc csapat.<br />
+<a href="http://ztracker.cc/index.php" target="_self">http://ztracker.cc/index.php</a><br />
+

@@ -1,0 +1,329 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a9a:7ad1:0:b029:b6:48f8:3fed with SMTP id i17csp1116684lkn;
+        Sat, 9 Jan 2021 07:14:12 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJwd5wMcwGOvsbeOtJO+fv4uF232zxz93F9fVAHiCZiwgsb1MbXbGSyY58HhpwM02HFLYl+F
+X-Received: by 2002:a62:1d0a:0:b029:1a9:8b33:a1bf with SMTP id d10-20020a621d0a0000b02901a98b33a1bfmr8577765pfd.32.1610205252660;
+        Sat, 09 Jan 2021 07:14:12 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1610205252; cv=none;
+        d=google.com; s=arc-20160816;
+        b=c2zNxPdkPN9RAxWNDXEc+u9PTUby+MJy5av2CpMC4HMUy2dso4B0wwlWTsMaLnc5Q2
+         C1n01oKUzbmg4qlTOfTYTGxzOa/fuG52AuaRrJGZ5WYsQsjGE/Wd2aVItizp86ZNegFC
+         jx9W6HChRwaizk8uWMSji00s2hXetQVBlC7MA2mbs1NBxxHbydltbXsQgcGnUelvMr+2
+         S61uQW+M4Yjkc18JjS3w8U2FG79lP69gGBpvkW6abiZQr19G/BpBDV+cuvdqNU4eARAC
+         UoAY7UUR9ZWPrKnxGot+xJlJQXsswd9/lt4KvLs410ZVwav9uU+cjXrimNXXk73Q5pG2
+         4Gzw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-id:list-unsubscribe:feedback-id:from:subject:reply-to
+         :mime-version:date:message-id:to:dkim-signature;
+        bh=0R+FqMxBjNs73h4eS2yUxUILS60O+zAx3BV+Bzn9Unc=;
+        b=eH+3RlGNIkfc2W4bHRMMdU11S4cSntpiibFjQQ5wYKBO/oDCvEWUp/jWdA7hF79Bl/
+         348EvQlbmroPrtSGgK97hCdHuuJQUW29R4Wy3HFeu3byurclh/CbTXBstmCne7TnTMrQ
+         9aVyC7vvFk752Gsfi6peoWyodEwRLFLCgOnQdJM/mm2+OFQv7MW5H85d2gTL6M0gSTAX
+         wYFsVyswkmO3CV2CeRAUnMMwOLNWNYFkkaC2cpGx4XLG+9E0Dy/ctKHUsd4hQ7f1AgAT
+         TMOiAgQH+Zi2itb3EnL+0D69ha7a7ZsCdiTxD3UqGjrgN37X9xfzeVqmpj5xRB32Pi/i
+         KPCw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.plex.tv header.s=scph0420 header.b=MyEmks95;
+       spf=pass (google.com: domain of msprvs1=18643oa6n6syj=bounces-282520@bounce.plex.tv designates 156.70.3.98 as permitted sender) smtp.mailfrom="msprvs1=18643OA6N6SYJ=bounces-282520@bounce.plex.tv";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=plex.tv
+Return-Path: <msprvs1=18643OA6N6SYJ=bounces-282520@bounce.plex.tv>
+Received: from mta-70-3-98.sparkpostmail.com (mta-70-3-98.sparkpostmail.com. [156.70.3.98])
+        by mx.google.com with ESMTPS id m63si12244197pfd.203.2021.01.09.07.14.12
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 09 Jan 2021 07:14:12 -0800 (PST)
+Received-SPF: pass (google.com: domain of msprvs1=18643oa6n6syj=bounces-282520@bounce.plex.tv designates 156.70.3.98 as permitted sender) client-ip=156.70.3.98;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.plex.tv header.s=scph0420 header.b=MyEmks95;
+       spf=pass (google.com: domain of msprvs1=18643oa6n6syj=bounces-282520@bounce.plex.tv designates 156.70.3.98 as permitted sender) smtp.mailfrom="msprvs1=18643OA6N6SYJ=bounces-282520@bounce.plex.tv";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=plex.tv
+X-MSFBL: Ba7SGOIKfkexPVDzcs66+enPVrhgWoO5BZnzWZP8/Cs=|eyJ0ZW5hbnRfaWQiOiJ
+	zcGMiLCJyIjoibXJjbG91ZC5tZWRAZ21haWwuY29tIiwic3ViYWNjb3VudF9pZCI
+	6IjAiLCJtZXNzYWdlX2lkIjoiNWZmNjQ0YzhmOTVmMTQ5Y2NiNWYiLCJjdXN0b21
+	lcl9pZCI6IjI4MjUyMCJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.plex.tv;
+	s=scph0420; t=1610205252; i=@mail.plex.tv;
+	bh=0R+FqMxBjNs73h4eS2yUxUILS60O+zAx3BV+Bzn9Unc=;
+	h=To:Message-ID:Date:Content-Type:Subject:From;
+	b=MyEmks95cNJV8Nt223bGRBzHtXvvTLvvuCDmcC8bKen0GztNxLG0H3SZIklCrPyR8
+	 oN9Bnc+wqeLpb4/egDnk6DO0iG3v0WBGNEhg3rUsAN8MoKUq7/eEMihhQj1ktUiB1U
+	 nDSRRFR37gCmy3sIflAmo980aDfSiHCTwCXHVZzc=
+To: mrcloud.med@gmail.com
+Message-ID: <BC.F5.02532.448C9FF5@ai.mta1vrest.cc.prd.sparkpost>
+Date: Sat, 09 Jan 2021 15:14:12 +0000
+Content-Type: multipart/alternative; boundary="_----LwnEImnlEe9vupTQ3Qb7MA===_2C/F5-02532-448C9FF5"
+MIME-Version: 1.0
+Reply-To: hello@mail.plex.tv
+Subject: Upgrade your Plex experience
+X-Campaign-ID: 1191538
+From: "Plex" <hello@mail.plex.tv>
+X-Message-ID: 52653fdc5e0f4bf989946f4f9b49b756
+X-Feedback-ID: 1663705:1191538:30772:iterable
+Feedback-ID: 1663705:1191538:30772:iterable
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:ZzBCT4E-cB-S6q6ntyTo7wQS9ycNwFN6i6GpP5GB06U~|eyAicmNwdF90byI6ICJtcmNsb3VkLm1lZEBnbWFpbC5jb20iLCAidGVuYW50X2lkIjogInNwYyIsICJjdXN0b21lcl9pZCI6ICIyODI1MjAiLCAibWVzc2FnZV9pZCI6ICI1ZmY2NDRjOGY5NWYxNDljY2I1ZiIsICJzdWJhY2NvdW50X2lkIjogIjAiIH0~>
+List-Id: <spc.282520.0.sparkpostmail.com>
+
+--_----LwnEImnlEe9vupTQ3Qb7MA===_2C/F5-02532-448C9FF5
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+<https://www.plex.tv/=3Futm_source=3DPlex&utm_medium=3Demail&utm_content=3D=
+plex_logo_header&utm_campaign=3DOnboarding+Plex+Pass+Upsell>=0A=0ADon=E2=80=
+=99t miss out on Premium Features! =0A=0A=0A=0A Now that you=E2=80=99ve got=
+ten a taste of what Plex can do, we want to show you some =0Afeatures that =
+thousands of our users love! Plex Live TV and DVR, Virtual =0AReality, Came=
+ra Upload, and Mobile Sync are just a few of the awesome features =0Aready =
+for you to enjoy.=0A=0AAccess all of the latest features and benefits Plex =
+has to offer by upgrading =0Ato Plex Pass! =0AExplore Plex Pass =0A<https:/=
+/www.plex.tv/plex-pass/=3Futm_source=3DPlex&utm_medium=3Demail&utm_content=
+=3Dexplore_plex_pass_button&utm_campaign=3DOnboarding+Plex+Pass+Upsell>=0A=
+=0A=0A <https://www.plex.tv/> =0A=0A <https://twitter.com/plex>  <https://w=
+ww.facebook.com/plexapp>  =0A<https://www.instagram.com/plex.tv/>  <https:/=
+/www.youtube.com/user/plextvapp>  =0A<https://www.linkedin.com/company/plex=
+-inc> =0A You have received this email because you're a valued Plex custome=
+r. If you no =0Alonger wish to receive these extremely cool emails, pleaseu=
+nsubscribe =0A<https://links.plex.tv/e/eh=3F_t=3D3bef3c50f13f4320a9e31b8be7=
+9c6ad2&_m=3D52653fdc5e0f4bf989946f4f9b49b756&_e=3DHJroR1LkMgktfpQmZHU91u1RV=
+diS3uU7RXGUnkD1akFpsjLnmmpsfo0HJi2B7csTGAMckPfWvuDpnO0RiJ_h9r-MvpegzuJ59oSK=
+wZlG_BfONqTLdDRiRnlF8E-JmG3ClfgLph4AsXMI05gU_JzDZOBARAESz4Rf48m9inbX1HMMUwe=
+7kHGiysFj7GQ2ICO5iZAGkiYLcLCyqVfEZpwrrnvMqbUxd4UvKeMMm4npNX9aVUSNzYBVGAQ3lb=
+saJtUY6LZmVe0Axa6QiQzgjEVBtQv_75mkaEbiz2Cla76C1uhduEKA4xP_y2aCmlUS0R8C>=0A.=
+=0A=0APlex GmbH, Hansmatt 32, 6370 Stans, Switzerland=0ACopyright =C2=A9 20=
+21 Plex, Inc. All rights reserved.=0A=0AView Online =0A<https://links.plex.=
+tv/e/evib=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D52653fdc5e0f4bf98994=
+6f4f9b49b756&_e=3D4XMuojOTWfica8BlU2ScAkyUQneT3JKuwO9Ok5Ivpb66E08I_xTPROcbo=
+NKShEr0ZBOCSk1dilBD9wAUDdZt5SXusMKXBqRT2WGk8GcndcDUrPvlec8_9-7SmcapqVV0>
+--_----LwnEImnlEe9vupTQ3Qb7MA===_2C/F5-02532-448C9FF5
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns=3D"http://www.w3=
+.org/1999/xhtml"> <head> <meta http-equiv=3D"Content-Type" content=3D"text=
+/html; charset=3DUTF-8"> <meta name=3D"viewport" content=3D"width=3Ddevice-=
+width; initial-scale=3D1.0; maximum-scale=3D1.0; user-scalable=3Dno;"> <met=
+a http-equiv=3D"X-UA-Compatible" content=3D"IE=3D9; IE=3D8; IE=3D7; IE=3DED=
+GE"> <style type=3D"text/css">@media screen{@font-face{font-family:'plexein=
+a-bold';src:url('https://assets.plex.tv/email/assets/fonts/plexeina-bold-we=
+bfont.woff2') format('woff2'),url('https://assets.plex.tv/email/assets/font=
+s/plexeina-bold-webfont.woff') format('woff');font-weight:normal;font-style=
+:normal}@font-face{font-family:'plexeina-regular';src:url('https://assets.p=
+lex.tv/email/assets/fonts/plexeina-regular-webfont.woff2') format('woff2'),=
+url('https://assets.plex.tv/email/assets/fonts/plexeina-regular-webfont.wof=
+f') format('woff');font-weight:normal;font-style:normal}}#outlook a{padding=
+:0}body{width:100%!important;min-width:100%!important;margin:0;padding:0;-w=
+ebkit-text;size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothin=
+g:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility}=
+.ReadMsgBody{width:100%}.ExternalClass{width:100%}.backgroundTable{margin:=
+0 auto;padding:0;width:100%;!important}table td{border-collapse:collapse}.E=
+xternalClass *{line-height:115%}b,strong{font-family:'plexeina-bold',Helvet=
+ica,Arial,sans-serif;font-weight:normal}@-ms-viewport{width:device-width}@m=
+edia screen and (max-device-width:680px),screen and (max-width:680px){.head=
+er-title{font-size:16px}.header img{width:70px}td.header{padding:20px 20px!=
+important}*[class=3D"50p"]{width:100%!important;height:auto!important;displ=
+ay:block}*[class=3D"30p"]{width:100%!important;height:auto!important;displa=
+y:block}*[class=3D"100p"]{width:100%!important;height:auto!important}*[clas=
+s=3D"container-mobile"]{padding:40px 20px!important}*[class=3D"container-mo=
+bile-flush"]{padding:40px 20px 0!important}*[class=3D"mobile-text-center"]{=
+text-align:center!important}*[class=3D"icon"]{padding-bottom:5px!important}=
+*[class=3D"title"]{font-size:28px!important;line-height:34px!important;text=
+-align:center!important}*[class=3D"container-mobile-header"]{padding:25px!i=
+mportant}*[class=3D"container-mobile-hero"]{padding:40px 20px 15px 20px!imp=
+ortant}*[class=3D"container-mobile-copy"]{padding:15px 20px 40px 20px!impor=
+tant}}</style> <!--[if gte mso 9]><style type=3D"text/css">#outlookholder{w=
+idth:500px}</style><![endif]--> </head> <body style=3D"undefined: -webkit-t=
+ext; size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing:=
+ antialiased; font-smoothing: antialiased; text-rendering: optimizeLegibili=
+ty; margin: 0; padding: 0; background-color: #F2F3F4; width: 100% !importan=
+t; min-width: 100% !important;">=0D=0A<div style=3D"color:transparent;visib=
+ility:hidden;opacity:0;font-size:0px;border:0;max-height:1px;width:1px;marg=
+in:0px;padding:0px;border-width:0px!important;display:none!important;line-h=
+eight:0px!important;"><img border=3D"0" width=3D"1" height=3D"1" src=3D"htt=
+p://sp.plex.tv/q/3F3JNpW5_sqKSN03AVIGlw~~/AARPmAA~/RgRh3E1EPVcDc3BjQgpf9kTI=
+-V8UnMtfUhVtcmNsb3VkLm1lZEBnbWFpbC5jb21YBAAAAAA~"/></div>=0D=0A<span style=
+=3D"color:transparent;visibility:hidden;display:none;opacity:0;height:0;wid=
+th:0;font-size:0;"></span><img src=3D"https://links.plex.tv/e/eo=3F_t=3D3be=
+f3c50f13f4320a9e31b8be79c6ad2&amp;_m=3D52653fdc5e0f4bf989946f4f9b49b756&amp=
+;_e=3D4XMuojOTWfica8BlU2ScAkyUQneT3JKuwO9Ok5Ivpb47ztk9oSVhLDmXa6haZufMaWwNE=
+YAUzwjHav_tkD_svKIbe39QqdOM9J1KoBXzeNvvqImkQAOVlae9JG6p5muAqk77_GNLSNfU_jvN=
+HZrpyZ6Vf9r6onIyIS-H4ouG0f0%3D" style=3D"border:0;width:1px;height:1px;bord=
+er-width:0px!important;display:none!important;line-height:0!important;" wid=
+th=3D"1" height=3D"1"/> <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%"> <!-- LOGO --> <tr> <td bgcolor=3D"#282A2D" align=3D"=
+center" style=3D"border-collapse: collapse;"> <!--[if (gte mso 9)|(IE)]><ta=
+ble align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=
+=3D"600"> <tr> <td align=3D"center" valign=3D"top" width=3D"600"><![endif]-=
+-> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" s=
+tyle=3D"max-width: 600px;"> <tr> <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse: collapse; padding: 30px 20px;" class=3D"header"> <a hr=
+ef=3D"https://links.plex.tv/a/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2=
+&_m=3D52653fdc5e0f4bf989946f4f9b49b756&_e=3DHJroR1LkMgktfpQmZHU91hUOF4IvLdG=
+D3Tz2ptzKiE7-YLR26xP5OcYM8jGQ-VL9plgoz3QvWvrQbrZbxiGPUEWdQuPvMvirkxd9KKuBZ_=
+ndPOCyfwlysB01KRt3PruwGMLsx4mxWFcb4WrKAUbAyWXnE73UXO8CfHb5wwUEz1SfN6vIcl8Fb=
+Z3idD8ohXYPYflSGxOD-EHCDm3LpoC-SiIDbCf0s0eUhbL7z_T-LzCe4l2UB6Hd4YDBt6eK9C26=
+ciBHjPKT3NngcGr5Hv-tgfOFWNWWMgnyiBsGxv0ZaRGbb7RFMF0LSiq13Wl_zIy7rGrt7y30fl-=
+q0KQdNvvmaQ3tXt4bUYN5_jmNEp80-Tilx6zAVehze7HUklrupcUPP_cJxPfff3x85PAjem7ULA=
+%3D%3D" target=3D"_blank"> <img alt src=3D"https://d15k2d11r6t6rl.cloudfron=
+t.net/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c5=
+0f13f4320a9e31b8be79c6ad2/plex-logo.png" width=3D"70" style=3D"display: blo=
+ck; font-family: 'plexeina-bold', Helvetica, Arial, sans-serif; color: #FFF=
+FFF; font-size: 18px;" border=3D"0"> </a> </td> </tr> </table> <!--[if (gte=
+ mso 9)|(IE)]></td></tr></table><![endif]--> </td> </tr> <!-- HERO --> <tr>=
+ <td bgcolor=3D"#282A2D" align=3D"center" style=3D"border-collapse: collaps=
+e;"> <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" width=3D"600"> <tr> <td align=3D"center" valig=
+n=3D"top" width=3D"600"><![endif]--> <table border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"100%" style=3D"max-width: 600px;"> <tr> <td bgco=
+lor=3D"#FFFFFF" align=3D"center" valign=3D"top" style=3D"border-collapse: c=
+ollapse; padding: 40px 20px 20px 20px; border-radius: 6px 6px 0px 0px; colo=
+r: #282A2D; font-family: 'plexeina-bold', Helvetica, Arial, sans-serif; fon=
+t-size: 34px; line-height: 40px;" class=3D"container-mobile-hero"> <div sty=
+le=3D"width: 400px;" class=3D"100p"><span class=3D"title">Don=E2=80=99t mis=
+s out on Premium Features!</span></div> </td> </tr> </table> <!--[if (gte m=
+so 9)|(IE)]></td></tr></table><![endif]--> </td> </tr> <!-- COPY BLOCK --> =
+<tr> <td bgcolor=3D"#F2F3F4" align=3D"center" style=3D"border-collapse: col=
+lapse;"> <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" width=3D"600"> <tr> <td align=3D"center" v=
+align=3D"top" width=3D"600"><![endif]--> <table border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" width=3D"100%" style=3D"max-width: 600px;"> <!-- COPY=
+ --> <tr> <td bgcolor=3D"#FFFFFF" align=3D"center" style=3D"border-collapse=
+: collapse; padding: 20px 40px 60px; border-radius: 0px 0px 6px 6px;" class=
+=3D"container-mobile-copy"> <table cellpadding=3D"0" cellspacing=3D"0" bord=
+er=3D"0"> <tr> <td align=3D"center" valign=3D"top" style=3D"border-collapse=
+: collapse;"> <img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/user=
+s/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8b=
+e79c6ad2/plex-pass.png" width=3D"150" style=3D"display: block;" border=3D"0=
+" alt> </td> </tr> <tr> <td align=3D"center" valign=3D"top" style=3D"border=
+-collapse: collapse; padding-top: 20px; font-size: 16px; line-height: 24px;=
+ font-family: 'plexeina-regular', Helvetica, Arial, sans-serif; color: #3F4=
+245;"> Now that you=E2=80=99ve gotten a taste of what Plex can do, we want =
+to show you some features that thousands of our users love! Plex Live TV an=
+d DVR, Virtual Reality, Camera Upload, and Mobile Sync are just a few of th=
+e awesome features ready for you to enjoy.<br><br>Access all of the latest =
+features and benefits Plex has to offer by upgrading to Plex Pass! </td> </=
+tr> <tr> <td align=3D"center" valign=3D"top" style=3D"border-collapse: coll=
+apse; padding-top: 30px;"> <div><!--[if mso]><v:roundrect xmlns:v=3D"urn:sc=
+hemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+href=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6a=
+d2&_m=3D52653fdc5e0f4bf989946f4f9b49b756&_e=3DHJroR1LkMgktfpQmZHU91r1JES9AO=
+3g9qf9wMj7mz-DScf_1jT_-88WTp1noYkXyFY-wI7WP7rC-vS3MhFpZ6RAIi68oXs-73OweOdHs=
+59a1uBDXBvt1RW2XuTrCev2UGb8ordzUFvHy-56Q8EaRD5J29ju8hQa-Nr4d2L4NQpJ4NnQ1lm8=
+02u8BXQRyFXysBe7RYaUylxgkzUYlrnvRUfFBB6qRRlbPUaMZdAbNENYSuSf56unI06Zvjx2pxn=
+4asTcdtpBlZOP-cDh2aRNGKc_V-eR4jLsIW8UKEjub95dLBjSNCZhQQGMA6S5Jx8fo8eF2n_McY=
+djnNMBJnnu_xRMTQQ0lBC_xXTJ5GgCfso9uAmp_KC1OabpbqGbyLUSGgEfUaDXgzu-uAsyfw4iy=
+jcNxBzpIaPQWBAyzSKBiqWA%3D" style=3D"height:46px;v-text-anchor:middle;width=
+:210px;" arcsize=3D"250%" strokecolor=3D"#E5A00D" fillcolor=3D"#E5A00D"> <w=
+:anchorlock/> <center style=3D"color:#FFFFFF;font-family:sans-serif;font-si=
+ze:16px;font-weight:bold;">Explore Plex Pass</center></v:roundrect><![endif=
+]--><a href=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8=
+be79c6ad2&_m=3D52653fdc5e0f4bf989946f4f9b49b756&_e=3DHJroR1LkMgktfpQmZHU91r=
+1JES9AO3g9qf9wMj7mz-DScf_1jT_-88WTp1noYkXyFY-wI7WP7rC-vS3MhFpZ6RAIi68oXs-73=
+OweOdHs59a1uBDXBvt1RW2XuTrCev2UGb8ordzUFvHy-56Q8EaRD5J29ju8hQa-Nr4d2L4NQpJ4=
+NnQ1lm802u8BXQRyFXysBe7RYaUylxgkzUYlrnvRUc-lIejOTWdIKvwslf4P0pe0Bmf9zRL5zjr=
+IrO96165kwUiViWaoNcrvh0MDhEa-lq6MBIIyHThPGH2Ptb-1cismBbqcADQ_zkUdfHfI0urfZa=
+htx_ixetzlhCaKmX638GDNRctJ59xNh9i6-20uO6uJyp-3xImvxpfUQ9DEIhd1Pqndovse9uvDL=
+hfEwO805JqRPli8ZClZz27FFDc-3cw%3D" style=3D"background-color: #E5A00D; bord=
+er: 2px solid #E5A00D; border-radius: 1000px; color: #FFFFFF; display: inli=
+ne-block; font-family: 'plexeina-bold', Helvetica, Arial, sans-serif; font-=
+size: 16px; font-weight: 400; line-height: 46px; text-align: center; text-d=
+ecoration: none; width: 210px; -webkit-text-size-adjust: none;mso-hide:all;=
+">Explore Plex Pass</a></div> </td> </tr> </table> <table cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"center" valign=3D"top" s=
+tyle=3D"border-collapse: collapse; padding-top: 30px;"> <img src=3D"https:/=
+/d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-46bb-=
+bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/tweet-praise.gif" width=
+=3D"500" style=3D"display: block;" border=3D"0" class=3D"100p" alt> </td> <=
+/tr> </table> </td> </tr> </table> <!--[if (gte mso 9)|(IE)]></td></tr></ta=
+ble><![endif]--> </td> </tr> <!-- FOOTER --> <tr> <td bgcolor=3D"#F2F3F4" a=
+lign=3D"center" valign=3D"top" style=3D"border-collapse: collapse; padding:=
+ 20px 20px 40px 20px;" class=3D"container-mobile"> <!--[if gte mso 9]><tabl=
+e id=3D"outlookholder" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" ali=
+gn=3D"center"><tr><td><![endif]--> <!--[if (IE)]><table border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0" width=3D"500" align=3D"center"><tr><td><![end=
+if]--> <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600=
+" style=3D"width: 600px;" class=3D"100p"> <tr> <td align=3D"center" valign=
+=3D"top" style=3D"padding: 30px 20px;" class=3D"header"> <a href=3D"https:/=
+/links.plex.tv/a/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D52653fd=
+c5e0f4bf989946f4f9b49b756&_e=3DHJroR1LkMgktfpQmZHU91vti0a8b_8c9deJmY9TTaSl0=
+fAwqwrCZpJNq6_qVpLGIXlqtK3sDO33S0ybZ1-y-_ELQPcxezJs9IWPVXNmd4EkguMR-tOfEr3V=
+Wtkqo4j06K8A8GKFfTahvZsAjP9CZA7Aag0h3D3zOPGdBsiYHV5jgxNyo9wjNCz5xzPK1ZmQJHS=
+in_l0I29u3qR-GVLw7EWKHc_RjhXYP6n4BG83pSIofJzJF5tyyGEI6xYlg79BP"><img src=3D=
+"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b=
+6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/plex-logo-drk.pn=
+g" width=3D"70" style=3D"display: block;" border=3D"0" alt=3D"Plex"/></a> <=
+/td> </tr> <tr> <td align=3D"center" valign=3D"top"> <table border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"230" style=3D"width: 230px;"> <t=
+r> <td align=3D"center" valign=3D"top" width=3D"46"> <a href=3D"https://lin=
+ks.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D52653fdc5e0=
+f4bf989946f4f9b49b756&_e=3DHJroR1LkMgktfpQmZHU91mVaK8LuDHmy38Bpa3P8HTVhSxAD=
+ZDNvVww-artlc4Z8V7NOV_bwaVor3n9bMyl0cL7ZxsMIPVnl5jQfi8OWaSrzk3bzB0HZ1t0FjaI=
+vXwtyQciLYMmq4lrb_Qpbcb45yyHQS5NjUPSvn3KYfZ46zZPKBiqH14ESgZd7n5EjRkuXvpZa-z=
+gFP3CK_kFmU7nE_BoPD59lRpB87mq-qt7eWPc9H_c0necFIDc9FPb9qaXXF2ktskFY5jrJAi0a9=
+scqIQ%3D%3D"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users=
+/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be=
+79c6ad2/icon-twitter-light.png" width=3D"23" height=3D"23" style=3D"display=
+: block;" border=3D"0" alt=3D"Twitter"/></a> </td> <td align=3D"center" val=
+ign=3D"top" width=3D"46"> <a href=3D"https://links.plex.tv/u/click=3F_t=3D3=
+bef3c50f13f4320a9e31b8be79c6ad2&_m=3D52653fdc5e0f4bf989946f4f9b49b756&_e=3D=
+HJroR1LkMgktfpQmZHU91nttvMo2A4lTvmbD0dXSME0jjuuF10PdAUvOQTFrPoV8OfOsx9SzZzq=
+x-qwg2aJEsAkEu0HLhwR0Elo19V-CRXfcqX32OVX2Y81S0h00zUJ9vgV-CKGq9LDR--Zo8Kt794=
+2vrvF33RuL5gbj7T74vPrCn1vB-9V8u_O6L89jGy-lcvUgupw2Mf1V0yxcDof2OZ5RqWZo6Xdj1=
+VTep9woEn0XOgEis2UBcriPYvWWZTuHFRoYl1zmrAo2bz2IIyo5ag%3D%3D"><img src=3D"ht=
+tps://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-=
+46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/icon-facebook-light=
+.png" width=3D"23" height=3D"23" style=3D"display: block;" border=3D"0" al=
+t=3D"Facebook"/></a> </td> <td align=3D"center" valign=3D"top" width=3D"46"=
+> <a href=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be=
+79c6ad2&_m=3D52653fdc5e0f4bf989946f4f9b49b756&_e=3DHJroR1LkMgktfpQmZHU91itG=
+XOOHmtDqW3DPhk1hfOflVQQtD-DtNMxp0KL7GxJO8Yg3SbqzMI3_sfZHO9cp4SC11_IV2lJFSIO=
+B9gJgqsoWNFXHyB5Y-Sh2hu5PukKYtUXCrmAZkYDwVN5L_LFi_z714EItcICK84yyCku56DwdZ6=
+zWm8isjag29217NJ6U4AMxQJe8Snv9vFWe32X0HRYyWY5SOMMEPHBiqy4qql5XsRGWUZwQ681Et=
+aRHHCoVw6F5AnWbzvp4dvW-S-nvRA%3D%3D"><img src=3D"https://d15k2d11r6t6rl.clo=
+udfront.net/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3=
+bef3c50f13f4320a9e31b8be79c6ad2/icon-instagram-light.png" width=3D"23" heig=
+ht=3D"23" style=3D"display: block;" border=3D"0" alt=3D"Instagram"/></a> </=
+td> <td align=3D"center" valign=3D"top" width=3D"46"> <a href=3D"https://li=
+nks.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D52653fdc5e=
+0f4bf989946f4f9b49b756&_e=3DHJroR1LkMgktfpQmZHU91n5PZiVIGZ2RWuiS8sze3nKb2QX=
+rfX2rqeIy70ON5QwiUqTaNUtDwtTHlDZpvyvLjWMmcBsL1xn6YBDIfv6P2Tj_2BcVwUYFc04h4N=
+_23K3XYwn6zLwpGROx8SLhXf3sWE3aVsbQZ3KLjymKZ0dxUGatgaO2EyKCMoIVAthk1aTIGKNOp=
+rBET2-a56IszSVa4s790lJ16A53DudNCy2zqiOFVMRpDiriyeuJPaCWps_M4amm2YDCAQge02vR=
+1mdaHQ%3D%3D"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/user=
+s/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8b=
+e79c6ad2/icon-youtube-light.png" width=3D"23" height=3D"23" style=3D"displa=
+y: block;" border=3D"0" alt=3D"You Tube"/></a> </td> <td align=3D"center" v=
+align=3D"top" width=3D"46"> <a href=3D"https://links.plex.tv/u/click=3F_t=
+=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D52653fdc5e0f4bf989946f4f9b49b756&_=
+e=3DHJroR1LkMgktfpQmZHU91u89-9HlKiGHz7Ki5f8HfZmq6J2BFK-kSWp6aSyqmLwT0sug8Wa=
+LF7JdrbLwpU24TAzquFaL4EiD3-Aeu4oYa_WBOY_nGNhHV8MGDOB5kq4BIESo3s9NPMNe2hXZsD=
+OipKeJ7etk0IJ3X9AJNrS1NeMGhXD8EWmMo6qI1uLl4CxfewjoYkbNRrZz47MRtfLh-Ydlc7hwZ=
+YEJT3W4I1VC6KzoKHPwWZurQaMrOB7-dDAiqGLQG3bfpknVbpv9g5cpB2e9Jony5G1Krw_MoF1U=
+bo0%3D"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Inte=
+grators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6a=
+d2/icon-linkedin-light.png" width=3D"23" height=3D"23" style=3D"display: bl=
+ock;" border=3D"0" alt=3D"LinkedIn"/></a> </td> </tr> </table> </td> </tr> =
+<tr> <td align=3D"center" valign=3D"top" style=3D"font-size: 13px; line-hei=
+ght: 20px; font-family: 'plexeina-regular', Helvetica, Arial, sans-serif; c=
+olor: #B3BAC1; font-weight: 400; padding-top: 20px;"> You have received thi=
+s email because you're a valued Plex customer. If you no longer wish to rec=
+eive these extremely cool emails, please <a style=3D"color: #8c8e8f; text-d=
+ecoration: none;" href=3D"https://links.plex.tv/e/eh=3F_t=3D3bef3c50f13f432=
+0a9e31b8be79c6ad2&_m=3D52653fdc5e0f4bf989946f4f9b49b756&_e=3DHJroR1LkMgktfp=
+QmZHU91u1RVdiS3uU7RXGUnkD1akFpsjLnmmpsfo0HJi2B7csTGAMckPfWvuDpnO0RiJ_h9r-Mv=
+pegzuJ59oSKwZlG_BfONqTLdDRiRnlF8E-JmG3ClfgLph4AsXMI05gU_JzDZOBARAESz4Rf48m9=
+inbX1HMMUwe7kHGiysFj7GQ2ICO5iZAGkiYLcLCyqVfEZpwrrnvMqbUxd4UvKeMMm4npNX9aVUS=
+NzYBVGAQ3lbsaJtUY6LZmVe0Axa6QiQzgjEVBtQv_75mkaEbiz2Cla76C1uhduEKA4xP_y2aCml=
+US0R8C">unsubscribe</a>.<br/><br/>Plex GmbH, Hansmatt 32, 6370 Stans, Switz=
+erland<br/>Copyright &copy; 2021 Plex, Inc. All rights reserved.<br/><br/><=
+a target=3D"_blank" style=3D"color: #8C8E8F; text-decoration: underline;" h=
+ref=3D"https://links.plex.tv/e/evib=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2=
+&_m=3D52653fdc5e0f4bf989946f4f9b49b756&_e=3D4XMuojOTWfica8BlU2ScAkyUQneT3JK=
+uwO9Ok5Ivpb66E08I_xTPROcboNKShEr0ZBOCSk1dilBD9wAUDdZt5SXusMKXBqRT2WGk8Gcndc=
+DUrPvlec8_9-7SmcapqVV0">View Online</a> </td> </tr> </table> <!--[if mso]><=
+/td></tr></table><![endif]--> <!--[if (IE)]></td></tr></table><![endif]--> =
+</td> </tr> </table> =0D=0A<img border=3D"0" width=3D"1" height=3D"1" alt=
+=3D"" src=3D"http://sp.plex.tv/q/q765SlNTBx2rLIIJPTdzTg~~/AARPmAA~/RgRh3E1E=
+PlcDc3BjQgpf9kTI-V8UnMtfUhVtcmNsb3VkLm1lZEBnbWFpbC5jb21YBAAAAAA~">=0D=0A</b=
+ody> </html>
+--_----LwnEImnlEe9vupTQ3Qb7MA===_2C/F5-02532-448C9FF5--
+

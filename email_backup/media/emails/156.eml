@@ -1,0 +1,69 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:22e6:b029:f9:2098:e3d8 with SMTP id b6csp292966lkv;
+        Thu, 27 May 2021 23:44:28 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxcIAIo/+3LjmtkD1lCnuKoemmjqmTuft1S/+TQ6qRHiFudf8VRDIn+drgS7EJtUyWNRXKB
+X-Received: by 2002:a05:6512:a8b:: with SMTP id m11mr4678525lfu.599.1622184268279;
+        Thu, 27 May 2021 23:44:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1622184268; cv=none;
+        d=google.com; s=arc-20160816;
+        b=AGcviRXVydJ7w36FQUFlXahl6pHNVo3rspBQXAewDiyYirQt873uZahVldOdMtU1aU
+         KMBbqYrhRPD7PyCJZkpTs8qA0jr9Y2bWKYjKFH/l66T980AWmVeyM9TQGGeXHaE5/XAQ
+         9H+5nPBwV8CIacsQko9jj/HzuWCONweOWIOyI7MiVeSzwPXsU0LXBHJBKHRO6yIZcXVS
+         ThlgAL2nqTQxd+RulsgvT6zLfhhe3mlKFtCHExNpVLqytrqsJGxLM3n7ebb1IuaGjxN8
+         MsDNXzZu2nJARJ1JKVuH86acAItDrOsssnztWWZ+NGmBA77msoH7p1zVxti2FcFq6ZVG
+         n6Gg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:message-id:date:mime-version:subject
+         :references:in-reply-to:to:from:dkim-signature;
+        bh=Ta4CXIlFNijGeJdaA4vyF77HHctVSvLvH8YZ00Qul18=;
+        b=bBLNkjnTPzOrw3fiUYDFFwca/JXm6iMgKWmyxHK9A8BEmuM+n7RWRkuBNItCsvl7WI
+         kDU8H7U6bNIu4p8ATz5kM7zDPOEc0mgHuLYvnjLAc14f+aP0iJjPRl4UwzSRIF8A4Ak5
+         HLr5F3VPsf2dNH/VQHS1SIp9iDprQNlrvQsjdN8mvEVPP6BTD48lJXKMXyVz+27FsODv
+         FJF6zds3OCOPWraaa972uUAaeAlzxjmLEKv/W4ndUfZMrTY//H2WbKOfLtDP8ZgrUS6B
+         z4oUi6hHiFNgXmRUfQqb7fOFeOowY3Ril2vCLYhq1DUHHDNVe0xejAJvYey/Cbyiy2Yw
+         C3Hg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=neutral (body hash did not verify) header.i=@yandex.com header.s=mail header.b=xbSAagwM;
+       spf=pass (google.com: domain of nicholasetin@yandex.com designates 2a02:6b8:0:1472:2741:0:8b7:110 as permitted sender) smtp.mailfrom=nicholasetin@yandex.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=yandex.com
+Return-Path: <nicholasetin@yandex.com>
+Received: from forward500p.mail.yandex.net (forward500p.mail.yandex.net. [2a02:6b8:0:1472:2741:0:8b7:110])
+        by mx.google.com with ESMTPS id u19si5189861lfs.72.2021.05.27.23.44.27
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 27 May 2021 23:44:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of nicholasetin@yandex.com designates 2a02:6b8:0:1472:2741:0:8b7:110 as permitted sender) client-ip=2a02:6b8:0:1472:2741:0:8b7:110;
+Authentication-Results: mx.google.com;
+       dkim=neutral (body hash did not verify) header.i=@yandex.com header.s=mail header.b=xbSAagwM;
+       spf=pass (google.com: domain of nicholasetin@yandex.com designates 2a02:6b8:0:1472:2741:0:8b7:110 as permitted sender) smtp.mailfrom=nicholasetin@yandex.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=yandex.com
+Received: from sas1-360337fcddb6.qloud-c.yandex.net (sas1-360337fcddb6.qloud-c.yandex.net [IPv6:2a02:6b8:c08:101c:0:640:3603:37fc])
+	by forward500p.mail.yandex.net (Yandex) with ESMTP id C79AC9401F6
+	for <mrcloud.med@gmail.com>; Fri, 28 May 2021 09:44:27 +0300 (MSK)
+Received: from mail.yandex.com (mail.yandex.com [89.38.225.36])
+	by sas1-360337fcddb6.qloud-c.yandex.net (mxback/Yandex) with HTTP id PiWlU71JteA1-iRJuaJmU;
+	Fri, 28 May 2021 09:44:27 +0300
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yandex.com; s=mail; t=1622184267;
+	bh=YG8LEywnItpm1ogZc2+gAMuLemhtJ39g8HMXZD4AuXI=;
+	h=References:Date:Message-Id:Subject:In-Reply-To:To:From;
+	b=xbSAagwM0ucJYvvvT0iNsIqLEEIH6Pz+oRQHI6pRS139Mc7Fe8B/L7zUomzOvyoHR
+	 +urLfIl+bCoPAz5QhfrAvElQyPvt+5+kyILVAtE6PlYhJ//A/9jt74mjsWozomm3Cq
+	 MTxkWDvPIQSFkypoHmttWPYjPIzhVuOl/VeF/wcQ=
+Authentication-Results: sas1-360337fcddb6.qloud-c.yandex.net; dkim=pass header.i=@yandex.com
+Received: by sas1-c37eebe3eab8.qloud-c.yandex.net with HTTP;
+	Fri, 28 May 2021 09:44:26 +0300
+From: Nick Setin <nicholasetin@yandex.com>
+To: mrcloud med <mrcloud.med@gmail.com>
+In-Reply-To: <CAHQY9xbQZMtw4QgoArqp5tfDojo3TDBfdA8fZen8FtpwstEcYQ@mail.gmail.com>
+References: <387531622066964@mail.yandex.com> <CAHQY9xbQZMtw4QgoArqp5tfDojo3TDBfdA8fZen8FtpwstEcYQ@mail.gmail.com>
+Subject: Re: TL from S4M
+MIME-Version: 1.0
+X-Mailer: Yamail [ http://yandex.ru ] 5.0
+Date: Fri, 28 May 2021 14:44:26 +0800
+Message-Id: <714721622184233@mail.yandex.com>
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html
+
+<div>I received it .<br />Thank you so much !!!</div><div><br /></div><div><br /></div><div>27.05.2021, 20:43, "mrcloud med" &lt;mrcloud.med@gmail.com&gt;:</div><blockquote><div dir="ltr">Check your Email, Invite Sent</div><br /><div class="f13ca48719c8a60033905b23b39675agmail_quote"><div class="334d7d341e3233c5b27ca91297445127gmail_attr" dir="ltr">On Thu, May 27, 2021 at 12:16 AM Nick Setin &lt;<a href="mailto:nicholasetin@yandex.com">nicholasetin@yandex.com</a>&gt; wrote:<br /></div><blockquote class="f13ca48719c8a60033905b23b39675agmail_quote" style="border-left-color:rgb( 204 , 204 , 204 );border-left-style:solid;border-left-width:1px;margin:0px 0px 0px 0.8ex;padding-left:1ex"><div>Hi , my name is Fin Dee<br />This is the email I used to open Seedit4me's account : <a href="mailto:nicholasetin@yandex.com" target="_blank">nicholasetin@yandex.com</a></div>
+</blockquote></div>
+</blockquote>

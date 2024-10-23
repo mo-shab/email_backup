@@ -1,0 +1,75 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:304:b029:c0:ca65:b0d6 with SMTP id gk4csp5224131lkb;
+        Wed, 3 Mar 2021 02:53:21 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJwzscARgMA7jsykOAt8nOFLRtwF1gsDKc4bpYrX6iofgEdHW97xOjUhUupIgkojHCsHebXN
+X-Received: by 2002:ac8:75d4:: with SMTP id z20mr22161487qtq.61.1614768801529;
+        Wed, 03 Mar 2021 02:53:21 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1614768801; cv=none;
+        d=google.com; s=arc-20160816;
+        b=yC0CRMSLoEwriiB/zPCP7g0Zi5HZJaCmb1TYuWmhL8jBKKp+6UX/jeG3TGr6hOpaKf
+         jetMM+gvgzX5kLqPGkFElwszWo5dY71KDkAFMuFpK9+Yj8Zq+Up5vO56QF0vDXmle+xU
+         WBlQ+W0H4K1EljQs/rjDLljKR1J4OEVb+do00QW4y25Iv0lHBHc1BbdUSV1uwoR4vN0i
+         uDPMi8xvDfG+wMxwtikRLVfNg+ifjZSTvCD9JeZullET+hKpDDXBR+cGBD0U5dcppU3K
+         MfhZ3C16tJ/ne9ToDo3pTHIc3SAhlTEQy3wUJpyQWL8o9sQQY73SttfXX3qGox7kJCtH
+         JKYQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:message-id:date:to:from:subject
+         :content-transfer-encoding:mime-version:dkim-signature;
+        bh=g9ZKAFf2WwgLMG7oapOMzHplxMLXvhuAqeqMN+Dtgyw=;
+        b=Y684UEGivDxlzn9pFpF4gYLMCOD5aLxSo6q4yAUeGpespEz2sqqeH12sy42XQr8FTl
+         viLf5RpqsCK2KlrCuOjwqDgQGY8p7GyR5wPMERnAjeN0iSGhhzPEVewn41mKqxGL6rx5
+         n5HYjkthgV/mYD9i6g5W13MJrbk2gf4hQDW5YQa0lhCUEp0c+N2JWiJWeo8oBCdGBHjK
+         2FNhq/GjzIHFLMYCIZGXWaxpPtwSs0CJdDwtnwJrgfH+8Mgh5cfhFEf5wws0oGBcWIVG
+         s1iXcEdn8oY+p5XJTgw9LWKZqFqkLR08pc5XOuN41FIW7qS6P6Rk9YQWcgsUQ0uCQlpH
+         xv0w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=YOSjc2Ne;
+       spf=pass (google.com: domain of 01000177f7b882bf-fc7c4cbf-66a2-470d-84f9-190d2b27a5c0-000000@amazonses.com designates 54.240.8.26 as permitted sender) smtp.mailfrom=01000177f7b882bf-fc7c4cbf-66a2-470d-84f9-190d2b27a5c0-000000@amazonses.com
+Return-Path: <01000177f7b882bf-fc7c4cbf-66a2-470d-84f9-190d2b27a5c0-000000@amazonses.com>
+Received: from a8-26.smtp-out.amazonses.com (a8-26.smtp-out.amazonses.com. [54.240.8.26])
+        by mx.google.com with ESMTPS id v22si12785200qtw.272.2021.03.03.02.53.20
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Wed, 03 Mar 2021 02:53:21 -0800 (PST)
+Received-SPF: pass (google.com: domain of 01000177f7b882bf-fc7c4cbf-66a2-470d-84f9-190d2b27a5c0-000000@amazonses.com designates 54.240.8.26 as permitted sender) client-ip=54.240.8.26;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=YOSjc2Ne;
+       spf=pass (google.com: domain of 01000177f7b882bf-fc7c4cbf-66a2-470d-84f9-190d2b27a5c0-000000@amazonses.com designates 54.240.8.26 as permitted sender) smtp.mailfrom=01000177f7b882bf-fc7c4cbf-66a2-470d-84f9-190d2b27a5c0-000000@amazonses.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1614768800;
+	h=Content-Type:MIME-Version:Content-Transfer-Encoding:Subject:From:To:Date:Message-ID:Feedback-ID;
+	bh=g9ZKAFf2WwgLMG7oapOMzHplxMLXvhuAqeqMN+Dtgyw=;
+	b=YOSjc2NeTyz5VwDyI5KUFzIWWpf1a3SmsaqWSyr7sDT0rakkBwuStbguMZzQhjeE
+	HZUeyEvr7FFuev/WI9rUQEJwq2p2tQMm62WncInW/FM3uOfK/g7M1SBoNHOM/29p1FM
+	ZfKfjkK92xvKWvve04DBp3MKYZWfycY6uxVZhamo=
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: [freesound] Your activation link
+From: Freesound NoReply <noreply@freesound.org>
+To: mrcloud.med@gmail.com
+Date: Wed, 3 Mar 2021 10:53:20 +0000
+Message-ID: <01000177f7b882bf-fc7c4cbf-66a2-470d-84f9-190d2b27a5c0-000000@email.amazonses.com>
+X-SES-Outgoing: 2021.03.03-54.240.8.26
+Feedback-ID: 1.us-east-1.1E27eNRK2ofyXxW3gI7gic6pmR/YOcmT1L0Yc66t/YI=:AmazonSES
+
+Hello there mrcloud123,
+
+
+Thank you for signing up at Freesound!
+
+In order to activate your Freesound account, please click this link:
+
+https://freesound.org/home/activate/mrcloud123/a3f8e74f/
+
+If for some reason this fails, try copy-pasting the complete link into you browser. Some mail clients break up long lines, or do strange things to URLs!
+
+
+
+kindest,
+
+
+ - The Freesound Mail Robot!
+
+PS: replies to this email address will end up in the garbage can, please see the message for further details!
+

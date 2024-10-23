@@ -1,0 +1,150 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:ca0f:0:b029:10a:7b09:6672 with SMTP id z15csp1313758lkq;
+        Fri, 25 Jun 2021 03:28:48 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJyWGgET6Vpfr5l9poprQXPBBr+ICCNTFLikIL07K47JlQFEp564o8YHo3tPxFAscnWmi1+A
+X-Received: by 2002:a54:4886:: with SMTP id r6mr7958584oic.108.1624616927909;
+        Fri, 25 Jun 2021 03:28:47 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1624616927; cv=none;
+        d=google.com; s=arc-20160816;
+        b=YvnovLtfw6ZAtoeJl/0yWeSraa4VPetcmHzebvoRay3rjr3BQIIf2x4QaLt6Ia92jz
+         IyEVmmNvxFEE1rXahgSlfiiDB5zKZ0yw07h6IS8OgkKqVSkCFP1mi0e7DfDd2Wam6TjK
+         Z7wUFn1pmb46zxPyLYTP5gzlUqmtpOylYARcd4gL6UDVC9UqGN443pkfNN4YE1LFQwXY
+         JbfLA8aOyRu/2kuGThqeuEMUe9aEtoQr4uxy/KhIdN5L82H62ikBMeB/UNKGND2XVHQf
+         wAIAuuqvYEBN9ikYy4PCejeqVCtAbyw+j2kVAQoZy0ziadrp63QEWegPVVI9S4nP7B8F
+         qR6w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version;
+        bh=QDpq+YXSOFfdcEsA8Ob3T9p4g14jBRuCJynUlIyfTwM=;
+        b=WWZdJH0LfMieQN3l3++6h30PA/q83eEHuOh0FrHIFDdGJ3Vx9bLy0oC0hhwtIsUGVZ
+         55x6Z3/VNbgAhCLWUb/VlqeK8cRLtDj5qkhRbBeIXlNS2i4dA244kV4/s6lWV1sgFm1G
+         4YC38wxL9XLjwxJA0TmsjFUE6Vd7EnMQyoPJjdy8ABcyZepDCg5rl6aC9M/rXuCoNw8w
+         hj/l7gfhlLMUwoYEP19lW0ZsQa2ChUUdCWXTLO0nFlnqEtmhJTASMTFUhOqS90mR52F1
+         Z6Qxz162W3OUwYJM/KimZtByWWHcr8DUMe1n8cfr0UbA9zlwDi0/v4hlE9pHmoRk7FxD
+         J6yg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=neutral (google.com: 54.206.16.166 is neither permitted nor denied by best guess record for domain of support@hellotalk.com) smtp.mailfrom=support@hellotalk.com
+Return-Path: <support@hellotalk.com>
+Received: from smtpbgau1.qq.com (smtpbgau1.qq.com. [54.206.16.166])
+        by mx.google.com with ESMTPS id d15si4585458otl.141.2021.06.25.03.28.46
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 25 Jun 2021 03:28:47 -0700 (PDT)
+Received-SPF: neutral (google.com: 54.206.16.166 is neither permitted nor denied by best guess record for domain of support@hellotalk.com) client-ip=54.206.16.166;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 54.206.16.166 is neither permitted nor denied by best guess record for domain of support@hellotalk.com) smtp.mailfrom=support@hellotalk.com
+X-QQ-mid: bizesmtp36t1624616922tb07n5es
+Received: from mail-ot1-f42.google.com (unknown [209.85.210.42])
+	by esmtp6.qq.com (ESMTP) with SMTP id 0
+	for <mrcloud.med@gmail.com>; Fri, 25 Jun 2021 18:28:40 +0800 (CST)
+X-QQ-SSF: 00110000002000Z0Z000000A0000000
+X-QQ-FEAT: RrNHXvtSNlT/isOrgXrpnGmk4pgNK3yPi52lcbMtYvnStVXAtRspjCZUfeHF0
+	Z0pqMamN+KLQtbSRaVeEWHltD5A0R2DiDKKP3wwRzdXtyxzPn62UW0duX2ufFZRP0l7QC+m
+	D1eq1GOfT23yQ2GYoAcMm+DDDD7JWRHZ4DBE5aZuWyb+gOWNSfKtpKwtxwHG73S3TJ2VtAA
+	Dvi6zIr85IP8nB2mCk3/hElnjOp7pWNnnum/Z2Y5rdWhTRhoHMtT0BKxV2LFAvNdcglt+71
+	knhbWrryxbk+n3zKDM3LsxBJ5VqS9sEGdf4T8K/65mXu4kwHwqWvGQe2bueJSGcoUPMOgnP
+	UW6HX5ZeMlWtuZccfRUnETr06e6SihqY19T5FIy3kC8xNXkLhczKmy+vjieWEyLe+2VlaXp
+X-QQ-GoodBg: 2
+Received: by mail-ot1-f42.google.com with SMTP id n99-20020a9d206c0000b029045d4f996e62so8802726ota.4
+        for <mrcloud.med@gmail.com>; Fri, 25 Jun 2021 03:28:41 -0700 (PDT)
+X-Gm-Message-State: AOAM5323bPREzAIlBLV1vRb+IeHIA0yr6xr2RjxQsn1TqUyaVniGbFgZ
+	2FI0itdQbhNedn/U39pgoNRSGuhboBp1gc1u7h0=
+X-Received: by 2002:a9d:1e5:: with SMTP id e92mr6869316ote.353.1624616920153;
+ Fri, 25 Jun 2021 03:28:40 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAHQY9xZHkHas6yN3Ew6gO6DU=hEm_1z+A+YGO4zT1su5TaFPfQ@mail.gmail.com>
+ <CAM5bELKTNC-KNyDc2Nvn90gJYE5Mc0DLbpgbRiebFZs5wtw4+w@mail.gmail.com> <CAHQY9xbUGr3eT4RN0FAMmUpmMSEwBBj-VQp7UfoyLJxGYxH--A@mail.gmail.com>
+In-Reply-To: <CAHQY9xbUGr3eT4RN0FAMmUpmMSEwBBj-VQp7UfoyLJxGYxH--A@mail.gmail.com>
+From: HelloTalk Language App <support@hellotalk.com>
+Date: Fri, 25 Jun 2021 18:28:04 +0800
+X-Gmail-Original-Message-ID: <CAM5bELL=V1HJ23ib1DDx2DgiNwLgQNVVEN9qbCrZq9P+tz5mkw@mail.gmail.com>+F8F65862A079D55E
+Message-ID: <CAM5bELL=V1HJ23ib1DDx2DgiNwLgQNVVEN9qbCrZq9P+tz5mkw@mail.gmail.com>
+Subject: Re: Change my country
+To: mrcloud med <mrcloud.med@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000006c00f905c5949a58"
+X-QQ-SENDSIZE: 520
+Feedback-ID: bizesmtp:hellotalk.com:qybgforeign:qybgforeign1
+X-QQ-Bgrelay: 1
+
+--0000000000006c00f905c5949a58
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+We have changed it for you.
+
+mrcloud med <mrcloud.med@gmail.com> =E4=BA=8E2021=E5=B9=B46=E6=9C=8825=E6=
+=97=A5=E5=91=A8=E4=BA=94 =E4=B8=8B=E5=8D=886:25=E5=86=99=E9=81=93=EF=BC=9A
+
+> Moroccan, i was on USA for some times.
+> now i ve returned home.
+>
+> Le ven. 25 jui. 2021 =C3=A0 11:15, HelloTalk Language App <
+> support@hellotalk.com> a =C3=A9crit :
+>
+>>
+>> ID=EF=BC=9Ab_mrcloudmed
+>>
+>> What is your nationality?
+>>
+>> mrcloud med <mrcloud.med@gmail.com> =E4=BA=8E2021=E5=B9=B46=E6=9C=8825=
+=E6=97=A5=E5=91=A8=E4=BA=94 =E4=B8=8B=E5=8D=885:42=E5=86=99=E9=81=93=EF=BC=
+=9A
+>>
+>>> Hello
+>>> i want to change the country flag into my account, i was in the US, now
+>>> i m in Morocco, How i can do it?
+>>> Thank you.
+>>> My Email is mrcloud.med@gmail.com <mrcloudmed@gmail.com>.
+>>>
+>>>
+
+--0000000000006c00f905c5949a58
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-size:small"><br=
+></div><div class=3D"gmail_default" style=3D"font-size:small">We have chang=
+ed it for you.</div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" c=
+lass=3D"gmail_attr">mrcloud med &lt;<a href=3D"mailto:mrcloud.med@gmail.com=
+">mrcloud.med@gmail.com</a>&gt; =E4=BA=8E2021=E5=B9=B46=E6=9C=8825=E6=97=A5=
+=E5=91=A8=E4=BA=94 =E4=B8=8B=E5=8D=886:25=E5=86=99=E9=81=93=EF=BC=9A<br></d=
+iv><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;bord=
+er-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"auto">Moro=
+ccan, i was on USA for some times.<div dir=3D"auto">now i ve returned home.=
+</div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_=
+attr">Le ven. 25 jui. 2021 =C3=A0 11:15, HelloTalk Language App &lt;<a href=
+=3D"mailto:support@hellotalk.com" target=3D"_blank">support@hellotalk.com</=
+a>&gt; a =C3=A9crit=C2=A0:<br></div><blockquote class=3D"gmail_quote" style=
+=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding=
+-left:1ex"><div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-size=
+:small"><br></div><div class=3D"gmail_default" style=3D"font-size:small"><s=
+pan style=3D"color:rgb(0,0,0);font-family:Arial,sans-serif;font-size:12px">=
+ID=EF=BC=9A</span><span style=3D"padding:0px;margin:0px;font-size:12px;line=
+-height:12px;font-family:Arial,sans-serif;color:rgb(0,0,0)">b_mrcloudmed</s=
+pan><br></div><div class=3D"gmail_default" style=3D"font-size:small"><span =
+style=3D"padding:0px;margin:0px;font-size:12px;line-height:12px;font-family=
+:Arial,sans-serif;color:rgb(0,0,0)"><br></span></div><div class=3D"gmail_de=
+fault" style=3D"font-size:small"><span style=3D"padding:0px;margin:0px;font=
+-size:12px;line-height:12px;font-family:Arial,sans-serif;color:rgb(0,0,0)">=
+What is your nationality?</span></div></div><br><div class=3D"gmail_quote">=
+<div dir=3D"ltr" class=3D"gmail_attr">mrcloud med &lt;<a href=3D"mailto:mrc=
+loud.med@gmail.com" rel=3D"noreferrer" target=3D"_blank">mrcloud.med@gmail.=
+com</a>&gt; =E4=BA=8E2021=E5=B9=B46=E6=9C=8825=E6=97=A5=E5=91=A8=E4=BA=94 =
+=E4=B8=8B=E5=8D=885:42=E5=86=99=E9=81=93=EF=BC=9A<br></div><blockquote clas=
+s=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid r=
+gb(204,204,204);padding-left:1ex"><div dir=3D"auto"><div style=3D"font-fami=
+ly:sans-serif;font-size:12.8px" dir=3D"auto"><div style=3D"width:328px;marg=
+in:16px 0px"><div><div dir=3D"auto">Hello<div dir=3D"auto">i want to change=
+ the country flag into my account, i was in the US, now i m in Morocco, How=
+ i can do it?</div><div dir=3D"auto">Thank you.</div><div dir=3D"auto">My E=
+mail is=C2=A0<a href=3D"mailto:mrcloudmed@gmail.com" style=3D"text-decorati=
+on-line:none;color:rgb(66,133,244)" rel=3D"noreferrer" target=3D"_blank">mr=
+cloud.med@gmail.com</a>.</div></div></div></div><div style=3D"height:0px"><=
+/div></div><br></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+
+--0000000000006c00f905c5949a58--
+
+

@@ -1,0 +1,74 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp5092751lkb;
+        Tue, 13 Apr 2021 17:28:46 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJyaSwiaxtosCiSz2+9J8pQaQIu69oqOQyh3othuzExw5/OQ2UsBf3LdqsFWLXu1Hq9kxmF7
+X-Received: by 2002:a7b:c098:: with SMTP id r24mr249202wmh.77.1618360126457;
+        Tue, 13 Apr 2021 17:28:46 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1618360126; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Bp1W0uezRRIi6iYh8OphydTgNqCkBSrzXuptwdupWgEXTATWryo56plE2TEHCsjTzQ
+         pUgg4zbbe0exaGeN3M1BbwZB60rc94efejUq67tnReyW98/R73mZycY8pllODemrMSLd
+         PLKX1HCKPmfSrhEegSyle2x+XU0TYFyn9wsnXEQuFQE+yl2CofxSP6o70R0JNosEmVta
+         OfYWisZ4YHQoDzaZKe40fMSGedm8H34daRQi5BH87xBE8tKAhzN6r/bVPMtmJ/THiTGA
+         BtiooKcBRCSqUIOA6jlkQgMu0FzZok0O3BRLua+TE5OHmflI16cRfgL+rdyXmUV1jv5h
+         Dj6A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:from:mime-version:subject:to:dkim-signature;
+        bh=yaEq/lCocypqARjjnjjiARACKwKqk5qGqgaDKNC8mgM=;
+        b=sAUz+rGKjPk09aN5RyNEkv99MkWzyHpar9jvcnGTtZSq7QmMb2CMJTd98MbRU66Xnl
+         ypF053tOSKdWayNtooajE8t4sD/iosqImy+XKh/FrgIlPbj2uf1xQAFhDNtaYwpke963
+         UPg/eHFgeCUalJn0c9or5YIZKKwNTbFa1NM6aE+LoQ/QbGA7PxHNxibpOeYq3dXOzDy0
+         ML/bWnL0yGswJlD0bocv+ineVA4OGEKOZI4SNejwkV1gVqRYIgkYQGj2B1/F+jaQtC3U
+         t7obf73ykGE1uErXdCq6zIC3u3+aPE6MwICRCBauTqjUc998taMVVVkI7ZFUZAygnYoB
+         4BaQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mdan.org header.s=mail header.b=moDUjqC5;
+       spf=pass (google.com: domain of admin@host.mdan.org designates 5.135.179.154 as permitted sender) smtp.mailfrom=admin@host.mdan.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mdan.org
+Return-Path: <admin@host.mdan.org>
+Received: from host.mdan.org (ns3287763.ip-5-135-179.eu. [5.135.179.154])
+        by mx.google.com with ESMTPS id g9si4516453wme.198.2021.04.13.17.28.46
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 13 Apr 2021 17:28:46 -0700 (PDT)
+Received-SPF: pass (google.com: domain of admin@host.mdan.org designates 5.135.179.154 as permitted sender) client-ip=5.135.179.154;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mdan.org header.s=mail header.b=moDUjqC5;
+       spf=pass (google.com: domain of admin@host.mdan.org designates 5.135.179.154 as permitted sender) smtp.mailfrom=admin@host.mdan.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mdan.org
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mdan.org;
+	 s=mail; h=Date:Message-Id:From:Content-type:MIME-Version:Subject:To:Sender:
+	Reply-To:Cc:Content-Transfer-Encoding:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=yaEq/lCocypqARjjnjjiARACKwKqk5qGqgaDKNC8mgM=; b=moDUjqC5XFR00bcFDSqNP6FbAm
+	s2ruKULD9avxjDjc/H089iRPDaSB9lkFoJ8k1NX/S8JvdpnCJbz0KZKvUYfbE7EPggYYoWGoMvfhC
+	5SxzG6SOhoB8+VZ48faq0zYifdch/8Qpdk+Q8N2FrOywSsGeJnHb4eWZyl+lszYpZNfk=;
+Received: from admin by host.mdan.org with local (Exim 4.92.3)
+	(envelope-from <admin@host.mdan.org>)
+	id 1lWTOg-00038X-00
+	for mrcloud.med@gmail.com; Tue, 13 Apr 2021 21:28:46 -0300
+To: mrcloud.med@gmail.com
+Subject: MDAN Fansub - Tracker - confirmação de registro
+X-PHP-Originating-Script: 1004:takesignup.php
+MIME-Version: 1.0
+Content-type: text/html; charset=utf-8
+From:MDAN Fansub Tracker <noreply@mdan.org>
+Message-Id: <E1lWTOg-00038X-00@host.mdan.org>
+Date: Tue, 13 Apr 2021 21:28:46 -0300
+
+
+Você solicitou um registro de conta no MDAN Fansub - Tracker e
+especificou o e-mail (mrcloud.med@gmail.com) como contato.
+
+Se você não tiver feito isso, por favor, ignore este e-mail. A pessoa que
+registrou seu endereço usou o IP 41.143.26.66. Por favor, não responda esta mensagem.
+
+Para confirmar seu registro, use este link:
+
+https://bt.mdan.org/confirm.php?id=131652&secret=45fff38ca1b1a9e927179eddfd94932c
+
+Após isso, você poderá usar sua nova conta. Se não confirmá-la,
+a conta será deletada em alguns dias. Recomendamos que leia as
+REGRAS e o FAQ antes de começar a usar o MDAN Fansub - Tracker.

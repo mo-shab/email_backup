@@ -1,0 +1,202 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:cad2:0:b029:f4:b3fb:84d3 with SMTP id e18csp5034710lky;
+        Wed, 12 May 2021 07:53:40 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwFeoJpntnQroPKv7RtVmTvs3ffy2e4JuuRfpUnp/JZ97t6PfJttcfGXSX51cYotL456PV6
+X-Received: by 2002:aa7:c54a:: with SMTP id s10mr4462887edr.132.1620831220240;
+        Wed, 12 May 2021 07:53:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1620831220; cv=none;
+        d=google.com; s=arc-20160816;
+        b=H2YBOFdQS7DKUTNL6jQVZ7fZxJo8AR59BvTVxhDENphrQj0UJkBeZC2jUV1b+S560a
+         Bl79G5NQO0sY/FQVH4CD6DHvYTmFJwNaBQVbRPUvF+hMOGEehk+K17GvcWjx+2Rqr3en
+         l7mw5EcAo7V0qfavke1s/5GYtxZVronsUu7AMMlzwwrz73368JaFhxQso1HUbT3JCHFc
+         L+k4eFE5daJxhkzqjIIfXnFF4H4dFTpcV7FV2cn2bC1n3v3cZ+4EV/tclsQT2HaE0b1c
+         xkl5JvkOobgTBZcNQMylHiXiJrHjStScKcrA+HbQRmsePJQJveYDjO7DKKkm1LHHJGWN
+         leSA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:message-id:to:reply-to:mime-version:from:date
+         :dkim-signature:dkim-signature;
+        bh=L2dpmk+t3P6w/kS35y6i3jzFCPNAFxtKpjm5zlygXTU=;
+        b=YG5oTzjFneiBcn9MEKN7/is2IglhIi8UJkHOD7GQe1R6rw2Y26OeYRQhCrVcloRZNk
+         PQovc82EeAdH8icdJvNtgE9y3fi4DzgyuED+twqRB4LwVRwANtg5ph+gzqM7BMYeb4Cf
+         jtgq3uPwcq80lRmFW+mDCp1czj9HT1KQgMFCqu/tY9HdLOxhHEo6e2kOG9rEzH8ZHZNU
+         ru0h76IKGQ5LPV0FBLKSRLoKBPe2jeTG+x7WjfqvUSCLyxDd8/OA2JzB80tvJqX5zr+6
+         CKKc5+LlOYSKkxsm9xvN9YhR8ZcXPcRzcgPuCzCl/5FxQSnN3IU0SZmtzTZRAdzkdpT4
+         r2LA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@colorgradingcentral.com header.s=smtpapi header.b=NmKxSez1;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=B1kZuOYT;
+       spf=pass (google.com: domain of bounces+1486486-c9b5-mrcloud.med=gmail.com@em.webinarjam.net designates 192.254.124.80 as permitted sender) smtp.mailfrom="bounces+1486486-c9b5-mrcloud.med=gmail.com@em.webinarjam.net"
+Return-Path: <bounces+1486486-c9b5-mrcloud.med=gmail.com@em.webinarjam.net>
+Received: from o2.em.webinarjam.net (o2.em.webinarjam.net. [192.254.124.80])
+        by mx.google.com with ESMTPS id n25si2748077edv.9.2021.05.12.07.53.39
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 12 May 2021 07:53:40 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+1486486-c9b5-mrcloud.med=gmail.com@em.webinarjam.net designates 192.254.124.80 as permitted sender) client-ip=192.254.124.80;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@colorgradingcentral.com header.s=smtpapi header.b=NmKxSez1;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=B1kZuOYT;
+       spf=pass (google.com: domain of bounces+1486486-c9b5-mrcloud.med=gmail.com@em.webinarjam.net designates 192.254.124.80 as permitted sender) smtp.mailfrom="bounces+1486486-c9b5-mrcloud.med=gmail.com@em.webinarjam.net"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; 
+	d=colorgradingcentral.com; 
+	h=content-type:from:mime-version:reply-to:to:subject; s=smtpapi; 
+	bh=L2dpmk+t3P6w/kS35y6i3jzFCPNAFxtKpjm5zlygXTU=; b=NmKxSez19tpKp
+	d0dDy2t14eObZBNst/XWM0e4Qw7OG1jeCdISmp3rCe6Za7glkjzKPUVXZSbPqm2R
+	3O/9HIn7u9frM5RiZyM7DEsOzOK7wA+gCHoZMNq1xDWIfK5b+ZH4afGr5EWTkG7z
+	wo8AL45K1CRrYRF79sTpuFN3yVyxsU=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; 
+	d=sendgrid.info; 
+	h=content-type:from:mime-version:reply-to:to:subject:x-feedback-id; 
+	s=smtpapi; bh=L2dpmk+t3P6w/kS35y6i3jzFCPNAFxtKpjm5zlygXTU=; b=B1
+	kZuOYTuhkXOCv4McNTbX7oXqRRbu6Blj4PaINUiZtG2tz4jVos71fX7YAsdxiKpG
+	Y1o3Ha+VrVBFp02YVct+e9zq17YSOLVHI/xYIv52nKd+G4W7jOxT04Oqm8mXpg6y
+	RSHFFRwQlrVyW4Z2Z+HzabvWTFVl+FNRgcaq+ErK4=
+Received: by filter1739p1iad2.sendgrid.net with SMTP id filter1739p1iad2-13778-609BEBF1-28
+        2021-05-12 14:53:37.455709024 +0000 UTC m=+1800010.047252594
+Received: from MTQ4NjQ4Ng (unknown)
+	by geopod-ismtpd-1-0 (SG) with HTTP id hWxOYwPcTX--_Dt3pgjUMA
+	Wed, 12 May 2021 14:53:37.435 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=1580e27292e17da66942b43dc64ca9b1ee18c233c973d4f1d2c6622b759e
+Date: Wed, 12 May 2021 14:53:37 +0000 (UTC)
+From: "Denver Riddle" <denver@colorgradingcentral.com>
+Mime-Version: 1.0
+Reply-to: denver@colorgradingcentral.com
+To: "Mrcloud" <mrcloud.med@gmail.com>
+Message-ID: <hWxOYwPcTX--_Dt3pgjUMA@geopod-ismtpd-1-0>
+Subject: [Confirmation] Your webinar link
+X-WJ-memberId: 205257
+X-WJ-communicationId: 10
+X-WJ-leadId: 52357
+X-SG-EID: h6sQ1sFjCaCh7QEJDEJopElCge7kNbmsuoscmqhfeIQXNuU0lUpcyIvKn+Deq6RUx5HjOFOjFfpzm0
+ 3kIY0Asl0o0sNpWqkaBIOKzzf6RV86TqANfmMonxRzkPTsPKmhBaxSzNeX4hxR9jfu2OqrR50xets5
+ nHDvgtJJDzwtn5TU0ofRLfadyOBQGN730Yz5RNkr6Q2HOH5ycAo/72ziXHV2tTROfpbJ9mh5f9/Clx
+ 4gV3xofn3jezKSiS5TNZdC
+X-SG-ID: 7O7IaqGL+cSJoB+9auA2wlGLPfhzqHH8yrWrZc/bXerc3Y6aBKi+lkHzPOXCEtjN8PLHm+msxj9HMy
+ X7MeoHK+aMkWuyI/3evsLxtWDXV3E=
+X-Entity-ID: i8Hz9qbgo3IkDnKfWU1g2A==
+X-Feedback-ID: 1486486:CKvcThDRHekSgQeSUsSqSWxFJCTxS5u9Hgx2BFcosF8=:CKvcThDRHekSgQeSUsSqSWxFJCTxS5u9Hgx2BFcosF8=:SG
+
+--1580e27292e17da66942b43dc64ca9b1ee18c233c973d4f1d2c6622b759e
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+Mime-Version: 1.0
+
+How To Color Grade Like A Hollywood Colorist In Adobe Premiere=20
+Hosted by Denver Riddle=20
+Wednesday, May 12 2021=20
+11:00 AM Eastern Time (US and Canada) GMT -4=20
+
+Congratulations! You have successfully registered.
+
+The best thing you can do now is to bookmark the webinar link, and to
+set a reminder on your calendar so you do not miss the webinar.
+
+	* WEBINAR ROOM: https://event.webinarjam.com/t/click/ownr9i1fkbrlk6fq15mtl=
+myxi9t1 [/https://event.webinarjam.com/t/click/ownr9i1fkbrlk6fq15mtlmyxi9t1]
+ 	* ROOM PASSWORD: N/A
+
+See you on the workshop!
+
+You are receiving this email because you registered for this webinar.=20
+Unsubscribe [/https://event.webinarjam.com/unsubscribe/0z7x6bwf7bgn56t1k4os=
+o8l7ug] to stop receiving notifications
+about this event.
+
+WebinarJam LLC=20
+7660 Fay Ave Ste H184=20
+La Jolla, CA 92037=20
+USA
+
+POWERED BY...
+
+=20=
+
+--1580e27292e17da66942b43dc64ca9b1ee18c233c973d4f1d2c6622b759e
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+Mime-Version: 1.0
+
+<html><body><div style=3D"padding: 20px; font-family: arial; font-weight: 4=
+00; font-size: 14px; color: #000; line-height: 140%; text-align: left;">
+<div style=3D"border-bottom: 1px solid #ccc; padding: 0px 0px 0px 0px; marg=
+in: 0px 0px 20px 0px;">
+<div style=3D"font-size: 18px; font-weight: 700; line-height: 120%; color: =
+#000; padding-bottom: 5px;">How To Color Grade Like A Hollywood Colorist In=
+ Adobe Premiere</div>
+
+<div style=3D"font-size: 12px; line-height: 120%; color: #666; padding-bott=
+om: 20px; font-style: italic;">Hosted by Denver Riddle</div>
+
+<div style=3D"line-height: 120%; color: #D87A00; padding-bottom: 5px;">Wedn=
+esday, May 12 2021</div>
+
+<div style=3D"line-height: 120%; color: #D87A00; padding-bottom: 20px;">11:=
+00 AM Eastern Time (US and Canada) GMT -4</div>
+</div>
+
+
+<div style=3D"padding: 10px auto 20px auto;">
+<p>Congratulations! You have successfully registered.</p>
+
+<p>The best thing you can do now is to bookmark the webinar link, and to se=
+t a reminder on your calendar so you do not miss the webinar.</p>
+
+<ul><li><strong>Webinar room:</strong> <a href=3D"https://event.webinarjam.=
+com/t/click/ownr9i1fkbrlk6fq15mtlmyxi9t1">https://event.webinarjam.com/t/cl=
+ick/ownr9i1fkbrlk6fq15mtlmyxi9t1</a></li>
+	<li><strong>Room password:</strong> N/A</li>
+</ul><p>See you on the workshop!</p>
+</div>
+</div>
+
+<div style=3D"padding: 20px; font-family: arial; font-weight: 400; font-siz=
+e: 12px; color: #999; line-height: 140%; text-align: left;">
+            <!-- START FOOTER -->
+            <div style=3D" border-top: 1px solid #ccc; padding: 0px 0px 20p=
+x 0px; margin: 20px 0px 0px 0px;">
+
+            <div style=3D"margin: 0px auto 0px auto; padding: 20px 0px 0px =
+0px;">
+            <div style=3D"float: left; vertical-align: middle;">
+            <p style=3D"color: #000; font-size: 12px;">You are receiving th=
+is email because you registered for this webinar. <br><a style=3D"color: #0=
+0f; font-weight: 600; text-decoration: underline;" href=3D"https://event.we=
+binarjam.com/unsubscribe/0z7x6bwf7bgn56t1k4oso8l7ug">Unsubscribe</a> to sto=
+p receiving notifications about this event.</p>
+            <p>WebinarJam LLC
+                <br>
+                7660 Fay Ave Ste H184
+                <br>
+                La Jolla, CA 92037
+                <br>
+                USA</p>
+            </div>
+            <div style=3D"float: right; vertical-align: top; text-align: ce=
+nter;">
+            <p>POWERED BY...</p>
+            <img src=3D"https://webinarjam-assets.s3-us-west-2.amazonaws.co=
+m/images/logo-WJ-email-footer.png" alt=3D"" width=3D"130" height=3D"20"></d=
+iv>
+            <div style=3D"clear: both;"></div>
+            </div>
+
+            </div>
+            <!-- END FOOTER -->
+            <img src=3D"https://event.webinarjam.com/t/open/0z7x6bwf7bgn56t=
+1k4oso8l7ug" width=3D"0" height=3D"0" border=3D"0" style=3D"visibility:hidd=
+en; display:none; height:0px!important; width:0px!important; border:none;">=
+</div>
+<img src=3D"http://em.webinarjam.net/wf/open?upn=3DCwU1znFXc593ac7MkXz1gzwE=
+G8dOHeUtvyRTdmN1sxaRg4TFkzxDralfM0tJvb-2ByZslikLjfYIYemv-2Frs2net9DXXseF7L7=
+QVfW5RvDGswUggYLT-2FxkcwNsQT-2BK19EYUFOFVINbqKQyk3xLU5nUBZM7LJGn39-2FcTuTgv=
+sfnGga8-2BTv-2FZZNheScJwBKbhuM3UDumhA49Qg9tVT2ibL8iUg-2FWsvzwnfZDlyCJ8N2K1-=
+2F0pLoWaqpxDB-2BCkSIM8rxD4kDBZ5snveaHR7P40S9X3GIaeXEqqpIitmqCffYKtKBI6dmulo=
+H5o9GUcFpuKXcBUksOCQK4GW-2F9Z4R5riDD8ZpQ-3D-3D" alt=3D"" width=3D"1" height=
+=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !important;bor=
+der-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;m=
+argin-right:0 !important;margin-left:0 !important;padding-top:0 !important;=
+padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !impo=
+rtant;"/>
+</body></html>
+
+--1580e27292e17da66942b43dc64ca9b1ee18c233c973d4f1d2c6622b759e--

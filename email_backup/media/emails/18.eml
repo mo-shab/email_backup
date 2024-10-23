@@ -1,0 +1,336 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a9a:7ad1:0:b029:b6:48f8:3fed with SMTP id i17csp368337lkn;
+        Thu, 7 Jan 2021 07:03:30 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJx3ehtSnyKzgOjcoFk40TUybrMT3vHDl4EEj2ek9FEgowC+X7t/qm3dTTtEliJwM4nUOInf
+X-Received: by 2002:a50:f307:: with SMTP id p7mr1949326edm.368.1610031810669;
+        Thu, 07 Jan 2021 07:03:30 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1610031810; cv=none;
+        d=google.com; s=arc-20160816;
+        b=u7GT8RamERRfliTUg+Vr5PJ1uCPqLgIpn1IdkByf5WG38xbpxB+Wm+2Y80DDVZPSys
+         JtTZodyNHHreQ8NR0/8r1Xi7jO/ig9xtQsMNYmkunA6qW1BwwUnJnjsZKadacqXIWQ7e
+         UOzrWFl4zY0jkJT6uVPWBMtm0qD/u6VpTwYjr5aPWC3Ji4fzDZ3kseuoTD9h3i1tGLP/
+         H5y+SkPda63gL0pQxv7IC2BgWSRRK+SSRh37Dt/94l4YnUnkK2sIYvXVhmuTRRYYqSiH
+         Gc8vPTfgxldCYh/RxpAJym8lbtdEvd3sTKDOAKEtQ2TsoBQu07ywbxjwVIbPjuBh3w1q
+         tO7w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:to:reply-to:mime-version:subject
+         :message-id:from:date:dkim-signature:dkim-signature;
+        bh=K+r1tslnXKJilkrYSNapeKRIJvaywkN/OxUXBVLJQsY=;
+        b=S3xGPZKvxDo0+lvhRlWICFr3eIGiq2xpIZF3mzjbBkMZeSKvVedSJU65K0k+SIGKJN
+         3HPUQby+dr3aqbgMcQsbdzT0Eu7blegGO0Y48K9q+eVDy94aBiXaXMIbSQ3U2uay8L0o
+         zar4nLOz76Qokj00eX2LlkXzXoIzL3mXT9mWb2IEx6F2GwLIKat8IZTwi5Vk+YC+hplw
+         U7Qan34EKfjS9AaOaB7BqJDa4FZxwMyv+f3eH8twX8Qx+8f16YAhm8F7Hhx3TJTPKfUE
+         56N4oa0TlyO8hynIC36kQPSVWh9WB7SsP+VQKupu/gHB7Gtcu1NMfuhSJ2knnqrmN06H
+         2Hug==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@plex.tv header.s=s1 header.b=H27xLFz7;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=RCf8wkC+;
+       spf=pass (google.com: domain of bounces+954487-a6a1-mrcloud.med=gmail.com@em3521.plex.tv designates 192.254.122.79 as permitted sender) smtp.mailfrom="bounces+954487-a6a1-mrcloud.med=gmail.com@em3521.plex.tv";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=plex.tv
+Return-Path: <bounces+954487-a6a1-mrcloud.med=gmail.com@em3521.plex.tv>
+Received: from o2.sg0.plex.tv (o2.sg0.plex.tv. [192.254.122.79])
+        by mx.google.com with ESMTPS id md2si2194968ejb.699.2021.01.07.07.03.30
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 07 Jan 2021 07:03:30 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+954487-a6a1-mrcloud.med=gmail.com@em3521.plex.tv designates 192.254.122.79 as permitted sender) client-ip=192.254.122.79;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@plex.tv header.s=s1 header.b=H27xLFz7;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=RCf8wkC+;
+       spf=pass (google.com: domain of bounces+954487-a6a1-mrcloud.med=gmail.com@em3521.plex.tv designates 192.254.122.79 as permitted sender) smtp.mailfrom="bounces+954487-a6a1-mrcloud.med=gmail.com@em3521.plex.tv";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=plex.tv
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=plex.tv;
+	h=from:subject:mime-version:reply-to:x-feedback-id:to:content-type:
+	content-transfer-encoding;
+	s=s1; bh=K+r1tslnXKJilkrYSNapeKRIJvaywkN/OxUXBVLJQsY=;
+	b=H27xLFz7AbUU9ntV3PZJnt0gRK2lLx0Jy+okeDF4Hi3nQ84cuvocMxlHj9zbztvhQQtD
+	MddAD2Wt6QsKni4dxhHNdpQJK5SLBHAvUJuClaSsciamW+jao+UcgEy0vmZLhZXHH56Cxq
+	+u1xMtOYDVwoD61NHnclZ5htPRpN3dWZg=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=from:subject:mime-version:reply-to:x-feedback-id:to:content-type:
+	content-transfer-encoding;
+	s=smtpapi; bh=K+r1tslnXKJilkrYSNapeKRIJvaywkN/OxUXBVLJQsY=;
+	b=RCf8wkC+vh4cQaUFHGNU0/624ylUXJd0di1LjT5OAIVPe8EwM9Swml9jMJsN+iuKbeEE
+	YCeEU3BQe4cJJbfxVn1JClRdaJ+3GZuKp2aFcz7RZyXjWEeBIgi1r8KW6bCZvpRqxTSEFO
+	hq+ElmbOIH3TLnkZdpTQEWCzBC1tB3QRE=
+Received: by filterdrecv-p1iad2-asgard-b-74679c64f7-xz42z with SMTP id filterdrecv-p1iad2-asgard-b-74679c64f7-xz42z-14-5FF722C1-1B
+        2021-01-07 15:03:29.179149411 +0000 UTC m=+2390095.473013625
+Received: from plex.tv (unknown)
+	by ismtpd0008p1lon1.sendgrid.net (SG)
+	with ESMTP id jhVx22GrR0G4LGOIqOGf4A
+	for <mrcloud.med@gmail.com>;
+	Thu, 07 Jan 2021 15:03:28.967 +0000 (UTC)
+Date: Thu, 07 Jan 2021 15:03:29 +0000 (UTC)
+From: Plex <noreply@plex.tv>
+Message-ID: <5ff722c0c3a1f_153fc4fd8df0fc124537@640ed165a67e.mail>
+Subject: Bienvenue sur Plex
+Mime-Version: 1.0
+Reply-To: Plex <noreply@plex.tv>
+X-Feedback-ID: 954487:SG
+X-SG-EID: 
+ =?us-ascii?Q?0pWTT=2FJ5ZI1MpRf144x7bL0ZGrB=2FIseg8QwAEo+T60rPgCZxUHqot2Qhx79IE1?=
+ =?us-ascii?Q?CYdPsgb2uM5gB3IWA8=2FMTm69ub7NAjD4o+RNAG1?=
+ =?us-ascii?Q?qnHj40SplykLYh5714O1N2TReMIYHkdUE+e9z8h?=
+ =?us-ascii?Q?K3Kuh+URmJLZUCsJtvrLsFopxRLOo8dzPKn0mCi?=
+ =?us-ascii?Q?JqAtEBLAN3a815wfwsA0ShEYgNdEMbwhus+4iB5?=
+ =?us-ascii?Q?J1R8VKLsb=2FxXiXSG=2FREGHOoZA+F2cDlef0WBnd?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb80i4xGJn0XeqBxZVsIYC2ndThbQiN4kgkun3JLfj4?=
+ =?us-ascii?Q?ripuGdli53xhr21qZlQlbu9w=3D=3D?=
+To: mrcloud.med@gmail.com
+X-Entity-ID: ERm8gm7cs6M577+yS95vkA==
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5ff722c0c2c9a_153fc4fd8df0fc124414";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5ff722c0c2c9a_153fc4fd8df0fc124414
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Your Mediaverse Awaits=0D
+=0D
+Bonjour mrcloud.med@gmail.com,=0D
+=0D
+As the newest member of our ever-growing worldwide tribe, you can finally e=
+njoy all the media you love in a single app on any device, no matter where =
+you are. That=E2=80=99s the power of Plex. Welcome to the club=E2=80=94just=
+ verify your email address to start exploring.=0D
+=0D
+Verify Email: https://plex.tv/users/confirmation?confirmation_token=3Di33DG=
+enKQnMXT1_egM1Z=0D
+=0D
+=0D
+Merci d&#39;avoir choisi Plex !=0D
+L&#39;=C3=A9quipe Plex=0D
+
+----==_mimepart_5ff722c0c2c9a_153fc4fd8df0fc124414
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns=3D"http://www.w3.org/1999/xhtml">=0D
+<head>=0D
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" =
+/>=0D
+  <meta name=3D"HandheldFriendly" content=3D"True">=0D
+  <meta name=3D"viewport" content=3D"width=3D600, initial-scale=3D1.0" />=0D
+  <title></title>=0D
+=0D
+  <style type=3D"text/css">=0D
+=0D
+      @media screen {=0D
+      @font-face {=0D
+        font-family: 'eina01-bold';=0D
+        font-style: normal;=0D
+        font-weight: 400;=0D
+        src: url('https://plex.tv/assets/eina01-bold-webfont-5c769da640dd0d=
+21b6b559716d19e7b1dfc03aa16a3f4d0de7c58a607e102fb8.woff');=0D
+        src:=0D
+          url('https://plex.tv/assets/eina01-bold-webfont-5c769da640dd0d21b=
+6b559716d19e7b1dfc03aa16a3f4d0de7c58a607e102fb8.woff') format('woff'),=0D
+          url('https://plex.tv/assets/eina01-bold-webfont-3e0468b1f0f227cd8=
+0a59b4be3997b8fdd5fe338099290faa9e5e40956fb004d.woff2') format('woff2');=0D
+      }=0D
+      @font-face {=0D
+        font-family: 'eina01-regular';=0D
+        font-style: normal;=0D
+        font-weight: 400;=0D
+        src: url('https://plex.tv/assets/eina01-regular-webfont-d20ab57528e=
+7e791e3ea178aefc21ba75a35b0d3d834fc9d88925a772f12fe3e.woff');=0D
+        src:=0D
+          url('https://plex.tv/assets/eina01-regular-webfont-d20ab57528e7e7=
+91e3ea178aefc21ba75a35b0d3d834fc9d88925a772f12fe3e.woff') format('woff'),=0D
+          url('https://plex.tv/assets/eina01-regular-webfont-4964ecee096bca=
+ff80c04cfc36bc48967da9a3577c2fc0927fb42bbd51dfacb3.woff2') format('woff2');=0D
+      }=0D
+      @font-face {=0D
+        font-family: 'plexeina-bold';=0D
+        font-style: normal;=0D
+        font-weight: 400;=0D
+        src: url('https://plex.tv/assets/plexeina-bold-webfont-17b2c870a3a0=
+6a880f955c016d9947ee128409b94d2c739755d73efbf2376bfc.woff');=0D
+        src:=0D
+          url('https://plex.tv/assets/plexeina-bold-webfont-17b2c870a3a06a8=
+80f955c016d9947ee128409b94d2c739755d73efbf2376bfc.woff') format('woff'),=0D
+          url('https://plex.tv/assets/plexeina-bold-webfont-4ba81c36ac342fb=
+e2d12a278c919bd6fe5c213d9676ab3a9927210df1066fd14.woff2') format('woff2');=0D
+      }=0D
+      @font-face {=0D
+        font-family: 'plexeina-regular';=0D
+        font-style: normal;=0D
+        font-weight: 400;=0D
+        src: url('https://plex.tv/assets/plexeina-regular-webfont-746d4811b=
+c622bdcb9ac38487da5e7fd63deee022744ef8f670fb59b6b9cda4c.woff');=0D
+        src:=0D
+          url('https://plex.tv/assets/plexeina-regular-webfont-746d4811bc62=
+2bdcb9ac38487da5e7fd63deee022744ef8f670fb59b6b9cda4c.woff') format('woff'),=0D
+          url('https://plex.tv/assets/plexeina-regular-webfont-24bd93632297=
+b0e5882eb360cf7cdc27b7483ea9d702cc2f6f75dcd3d169a528.woff2') format('woff2'=
+);=0D
+      }=0D
+    }=0D
+=0D
+    html * {max-height:1000000px;}=0D
+=0D
+    body {=0D
+      width: 100% !important;=0D
+      margin: 0;=0D
+      padding: 0;=0D
+      background-color: #FFF;=0D
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;=0D
+      font-weight: 400;=0D
+      color: #535353;=0D
+      font-size: 15px;=0D
+      line-height: 20px;=0D
+      -webkit-font-smoothing:antialiased;=0D
+      -webkit-text-size-adjust:none;=0D
+    }=0D
+=0D
+    img {=0D
+      border: 0;=0D
+    }=0D
+=0D
+    a,=0D
+    a:hover,=0D
+    a:active {=0D
+      text-decoration: none;=0D
+      color: #ff8a00;=0D
+    }=0D
+=0D
+    b, strong {=0D
+      font-weight: 700;=0D
+      font-weight: bold;=0D
+    }=0D
+=0D
+    ul {=0D
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;=0D
+      font-weight: 400;=0D
+      color: #535353;=0D
+      font-size: 15px;=0D
+      line-height: 20px;=0D
+      padding-top: 8px;=0D
+    }=0D
+=0D
+    li {=0D
+      padding-bottom: 8px;=0D
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;=0D
+      font-weight: 400;=0D
+      color: #535353;=0D
+      font-size: 15px;=0D
+      line-height: 20px;=0D
+    }=0D
+=0D
+   =20=0D
+=0D
+  </style>=0D
+=0D
+</head>=0D
+<body style=3D"margin: 0; padding: 0; -webkit-font-smoothing: antialiased; =
+width:100% !important; background-color: #fff; -webkit-text-size-adjust:non=
+e;" topmargin=3D"0" leftmargin=3D"0" marginheight=3D"0" marginwidth=3D"0">=0D
+  <div style=3D"display:none !important"></div>=0D
+  <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" al=
+ign=3D"center" style=3D"width: 100%; background-color: #fff;">=0D
+    <tr>=0D
+      <td align=3D"center" valign=3D"top" style=3D"padding-top: 25px;">=0D
+      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600"=
+ align=3D"center" style=3D"border-collapse: collapse; mso-table-lspace: 0pt=
+; mso-table-rspace: 0pt; width: 600px; background-color: #fff;">=0D
+        <tr>=0D
+          <td align=3D"left" valign=3D"top" width=3D"600" bgcolor=3D"#fffff=
+f" style=3D"background-color: #ffffff; padding-top, padding-bottom: 40px; b=
+order-radius: 6px;">=0D
+          <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+520" style=3D"width: 510px; border-collapse: collapse; mso-table-lspace: 0p=
+t; mso-table-rspace: 0pt;">=0D
+            <tr>=0D
+              <td align=3D"left" valign=3D"top" width=3D"520" height=3D"80"=
+>=0D
+              <a target=3D"_blank" href=3D"https://plex.tv/"><img alt=3D"Pl=
+ex" width=3D"90" height=3D"29" border=3D"0" src=3D"https://plex.tv/assets/e=
+mail/plex-logo-53129eb1891f1187b48eb87be218065eb860bb5111c4afed9cd36829857d=
+9f4c.gif" /></a>=0D
+              </td>=0D
+            </tr>=0D
+            <tr>=0D
+              <td align=3D"left" valign=3D"top" width=3D"520" style=3D"widt=
+h: 510px; color: #ff8a00; font-size: 32px; line-height: 38px; font-family: =
+'plexeina-bold', Helvetica, Arial, sans-serif; font-weight: 400; letter-spa=
+cing: -1px; padding-bottom: 30px; color: #282A2D;">=0D
+              Your Mediaverse Awaits=0D
+=0D
+              </td>=0D
+            </tr>=0D
+            <tr>=0D
+              <td align=3D"left" valign=3D"top" style=3D"width: 520px; font=
+-family: 'plexeina-regular', Helvetica, Arial, sans-serif; font-weight: 400=
+; font-size: 15px; line-height: 20px; margin: 0; padding-bottom: 30px; colo=
+r: #282A2D;">=0D
+              Bonjour mrcloud.med@gmail.com,=0D
+<br>=0D
+<br>=0D
+As the newest member of our ever-growing worldwide tribe, you can finally e=
+njoy all the media you love in a single app on any device, no matter where =
+you are. That=E2=80=99s the power of Plex. Welcome to the club=E2=80=94just=
+ verify your email address to start exploring.=0D
+<br>=0D
+<br>=0D
+<div>=0D
+  <!--[if mso]>=0D
+  <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:sch=
+emas-microsoft-com:office:word" href=3D"https://plex.tv/users/confirmation?=
+confirmation_token=3Di33DGenKQnMXT1_egM1Z" style=3D"height:40px;v-text-anch=
+or:middle;width:200px;" arcsize=3D"100%" stroke=3D"f" fillcolor=3D"#ff8a00"=
+> <w:anchorlock/>=0D
+  <center>=0D
+  <![endif]-->=0D
+  <a href=3D"https://plex.tv/users/confirmation?confirmation_token=3Di33DGe=
+nKQnMXT1_egM1Z" style=3D"background-color: #E5A00D; border: 2px solid #E5A0=
+0D; border-radius: 1000px; color: #FFFFFF; display: inline-block; font-fami=
+ly: 'plexeina-bold', Helvetica, Arial, sans-serif; font-size: 16px; font-we=
+ight: 400; line-height: 46px; text-align: center; text-decoration: none; wi=
+dth: 220px; -webkit-text-size-adjust: none;mso-hide:all;" rel=3D"noopener n=
+oreferrer">Verify Email</a>=0D
+  <!--[if mso]> </center> </v:roundrect> <![endif]-->=0D
+</div>=0D
+=0D
+<br>=0D
+<br>=0D
+Merci d&#39;avoir choisi Plex !=0D
+<br>=0D
+L&#39;=C3=A9quipe Plex=0D
+=0D
+              </td>=0D
+            </tr>=0D
+          </table>=0D
+          </td>=0D
+        </tr>=0D
+        <tr>=0D
+          <td height=3D"2" bgcolor=3D "#e0e0e0" style=3D"background-color:#=
+E0E3E6; font-size: 2px; line-height: 1%; mso-line-height-rule: exactly; mar=
+gin-top: 20px;"></td>=0D
+        </tr>=0D
+        <tr>=0D
+          <td align=3D"left" valign=3D"top" width=3D"540" style=3D"padding-=
+top: 30px; font-family: 'plexeina-regular', Helvetica, Arial, sans-serif; f=
+ont-size: 13px; line-height: 24px; font-weight: normal; color: #B3BAC1; tex=
+t-align: left;">=0D
+            Sent with =E2=99=A5 from Plex=0D
+            <br>=0D
+            Plex GmbH, Hansmatt 32, 6370 Stans, Switzerland=0D
+            <br>=0D
+            Ceci est un message g=C3=A9n=C3=A9r=C3=A9 automatiquement.=0D
+          </td>=0D
+        </tr>=0D
+          </table>=0D
+          </td>=0D
+        </tr>=0D
+      </table>=0D
+      </td>=0D
+    </tr>=0D
+  </table>=0D
+</body>=0D
+</html>=0D
+
+----==_mimepart_5ff722c0c2c9a_153fc4fd8df0fc124414--

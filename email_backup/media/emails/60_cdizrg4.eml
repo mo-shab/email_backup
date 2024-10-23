@@ -1,0 +1,77 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a9a:4583:0:b029:c3:278e:30dc with SMTP id m3csp2189699lkd;
+        Sat, 13 Mar 2021 07:51:38 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJyvK4f75G1K0Y00k8g92FzFD0FdfcDw1aePmeAenfKzyVFIUSqLdF5Krtwm0VSPO9sj5uas
+X-Received: by 2002:a17:906:abcd:: with SMTP id kq13mr14896248ejb.477.1615650697977;
+        Sat, 13 Mar 2021 07:51:37 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1615650697; cv=none;
+        d=google.com; s=arc-20160816;
+        b=jfsrCqNPRUeBoTy3SoY71J2UFZ5Vcs2bVIlmRWDkLPBDxbzrrnPzip35NBSyHrf5LS
+         QYvRpWHzVK0u7RAoRpNCSPN8X472NpTMm2Ydb38mm8fym/GtyjJSR8TJD/BgLeonEHbr
+         cb3emV+PZlbzTpJnRxXMpoS0yV4xP3WDrdjFg2z5GIlirfhXpKOlT3WykFecl5G6jPL2
+         4w8w02tQQV0QTfjmxTMCUWasU/vdC9jjk3UKLTRrJ0Yx+MI63pC2cynTCWVkWOdGzhxm
+         Djg+PZAEF+f17n65s8COrLbJbdjrFnjb4XfdwIq1Htlc7aQg9YKEX6Sv55axQJFsrujE
+         4O/A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:reply-to:from:mime-version:subject:to
+         :dkim-signature;
+        bh=eSnkb9ekRU+vgObZ/HD9ISkNNTmRfA+cUoFuxYzsx9k=;
+        b=Z4SnwGHNQ+047AQGXiIaXlLpEYUP4B+cRdVc7OL38HaP6bt3kq46WCsi6urdeivAAb
+         f4UF99nIwGbwXBfnkqVD/6+08JO31khh3anrfQz/H4j4jBgbOFT20wu/ytgvAFMrmzrU
+         oTghCAmQz0qicmKSwfdSVA9GVX6s73AehuC/MN+CExLS/bR86QbSqM2XiXNIFhHQ4jfI
+         7snLNBclykmpcOWyCk3Y6U7No9XMIGIjR5AVII4b2UCPGWzRYIhEG+MZmmrv+3DrDCJY
+         AexTK7hj7JustVXYdn9+sPEbWy5PvDoZLZ1Jl91kjcbFzJTVXVoHQHVN7RTpI3M77j7y
+         qh4Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@pixelcove.me header.s=default header.b=diKvVySb;
+       spf=pass (google.com: domain of noreply@pixelcove.me designates 193.29.56.46 as permitted sender) smtp.mailfrom=noreply@pixelcove.me
+Return-Path: <noreply@pixelcove.me>
+Received: from mail.pixelcove.me (mail.pixelcove.me. [193.29.56.46])
+        by mx.google.com with ESMTP id ci1si7064022ejb.3.2021.03.13.07.51.37
+        for <mrcloud.med@gmail.com>;
+        Sat, 13 Mar 2021 07:51:37 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply@pixelcove.me designates 193.29.56.46 as permitted sender) client-ip=193.29.56.46;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pixelcove.me header.s=default header.b=diKvVySb;
+       spf=pass (google.com: domain of noreply@pixelcove.me designates 193.29.56.46 as permitted sender) smtp.mailfrom=noreply@pixelcove.me
+Received: from jeff.pixelcove.me (jeff [10.8.1.2])
+	by mail.pixelcove.me (Postfix) with ESMTP id 90591A000AB
+	for <mrcloud.med@gmail.com>; Sat, 13 Mar 2021 10:51:37 -0500 (EST)
+Received: by jeff.pixelcove.me (Postfix, from userid 33)
+	id 56F492202CD; Sat, 13 Mar 2021 17:51:37 +0200 (EET)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=pixelcove.me;
+	s=default; t=1615650697;
+	bh=eSnkb9ekRU+vgObZ/HD9ISkNNTmRfA+cUoFuxYzsx9k=;
+	h=To:Subject:From:Reply-To:Date:From;
+	b=diKvVySbZP6wQX0JFAPiUejOf4WdqNXRWawVzoU2j1UXHDTTwEMldWJ9i1Z0SzJ6T
+	 FTLJF6n8HmJFePnyMsmS5CFFiV5GIKQy12KppzB5bVgfrZRtKR2twXVdKINhctVJ1N
+	 CQpklOWWeKx06gRpIE/j1WpBUrrrJ8nO07J7++u8SZ9pHBGyT59XVAvxut6YyvziL4
+	 YVx5pHsnVLLAujpLlUjop2xxn5pAFBWeaSKDf6Jg7VeRyYDoz1MorAMdV0a7yIM6n8
+	 EX4MAByIWA5unmKXltmIEeDa5ZrTJgTSMA5TzFcIfjYQ5xYakTz8M4p4JwDTaCYp0s
+	 YL4m1GFBOQMhg==
+To: mrcloud.med@gmail.com
+Subject: You have been invited to PixelCove
+X-PHP-Originating-Script: 0:EmailManager.php
+MIME-Version: 1.0
+Content-type: text/plain; charset=iso-8859-1
+From: PixelCove
+ <noreply@pixelcove.me>
+Reply-To: noreply@pixelcove.me
+X-Mailer: Project Luminance
+Message-Id: <c8bf39ac2d86e32408cdb4ebcbc73077@pixelcove.me>
+X-Priority: 3
+Date: Sat, 13 Mar 2021 17:51:37 +0200 (EET)
+
+You have been sent an anonymous invite to join PixelCove. If you were not expecting this invite then please ignore this email, and do not reply.
+
+Please note that selling invites, trading invites, and giving invites away publicly (eg. on a forum) is strictly forbidden. If you have received your invite as a result of any of these things, do not bother signing up - you will be banned and lose your chances of ever signing up legitimately.
+
+To confirm your invite, click on the following link:
+
+https://www.pixelcove.me/users/register?invite=a3cb63407b62805df28df96450cb44f77626b94b3c950696c3fb68d42d18a3cd4d4cb2da3d7de4640e0c8094a2b6fa584f2eb51319df0889c6cd7f618dac003d3b0e4e1714438384c024e50290717eda7583028bc4a3495484fe024c9bf39c6ac9fdfda0bb2a0a03323623221c382be4c74b6c3d34d1b0a3adfce82e8e9b7c6bb0f274834c57211c54d591324a0224136c76509f6e771d4651a3e9ad5e1b116893a4055b66aa43713b85d5cbe2c6e530d74c7eedda3cad5f1b4b8c1e1d60b085
+
+After you register, you will be able to use your account. Please take note that if you do not use this invite in the next 3 days, it will expire. We urge you to read the RULES immediately after you join.
+
+Thank you,
+PixelCove Staff
+

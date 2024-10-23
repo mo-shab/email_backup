@@ -1,0 +1,104 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:22e6:b029:f9:2098:e3d8 with SMTP id b6csp145484lkv;
+        Thu, 3 Jun 2021 03:09:43 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzf71Le66ZEIkRAJkISuFKpUKk5VNKbIwGfmsoBXpLtfH/gRDoiHH6DuA+B+PxXyJpCYEA7
+X-Received: by 2002:a05:6830:1594:: with SMTP id i20mr28913576otr.279.1622714983754;
+        Thu, 03 Jun 2021 03:09:43 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1622714983; cv=none;
+        d=google.com; s=arc-20160816;
+        b=QrPPy8CeZB8gPCpLVVRqt4OZipGcB2utSs8cNLlTA7ZOHOhw2QhxMyZdUmYXbP8gIk
+         WJNBuoKQnC0wWfd08oBdIF3gzWCsLYJ+Q269Yr/+QwqPr+EBIljVTJiE5XlNaBo9emIy
+         kzQi8YStbqeGqww1lYLThYKoJUb/BVZBsso1iTWxoVbuAbjRIic+0tf+UG8Bntefth7L
+         KYaMiHLuUk8I6LfZ18FsP/yHoFloaHaqTzLphEHFszuzpvgachTwws8xTZRvh0pt7who
+         +F12tC9AG2vf0anuge+YWCg1O/QhNxw8Bm1mzwTMUQD5oBp05kObn6cYEHX08y9lGHG3
+         XPUA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:from:to:reply-to:message-id:sender:date
+         :dkim-signature:dkim-signature;
+        bh=Pca20PHN/1wNsb07udlcJ8wbKo/P/hvIiyFKNkuAKD8=;
+        b=QsyZ0PaSd6qayYXuVP/DRio5b6qr/pNV2NaoJWv1wHSy/sKu65P9BZU9fqUDE/hjy8
+         8WnIid0yNkx2fcK6OZDsoWPq2/wZQ22cx2/mzmM59T2Yk4Dtjc1IVU0a8KKU3LMEgPaN
+         X/1LD8w0DF5+5m9UwR0LKW99SFEWdGrNPuOoL9GXFj46dpEjyvd6q+NbO4K30lYaVBKZ
+         4ae863+L6MrZ6xyTFazMoap6sElo20yOguAbiEIBDsKdx+glmlOq0s15u4RYtyk+q/SG
+         bRqdknkel0b0LaIIUpo4VN0ILoKSf5IFequAUCHe4fXt6L1HCHAemIpgiINl07vn4kmK
+         0n4Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.gazellegames.net header.s=smtp header.b=kQiC4nRm;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b="jEWYlF/P";
+       spf=pass (google.com: domain of bounce+09c978.f106b-mrcloud.med=gmail.com@mail.gazellegames.net designates 209.61.151.230 as permitted sender) smtp.mailfrom="bounce+09c978.f106b-mrcloud.med=gmail.com@mail.gazellegames.net"
+Return-Path: <bounce+09c978.f106b-mrcloud.med=gmail.com@mail.gazellegames.net>
+Received: from rs230.mailgun.us (rs230.mailgun.us. [209.61.151.230])
+        by mx.google.com with UTF8SMTPS id e7si2814876oth.319.2021.06.03.03.09.43
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 03 Jun 2021 03:09:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+09c978.f106b-mrcloud.med=gmail.com@mail.gazellegames.net designates 209.61.151.230 as permitted sender) client-ip=209.61.151.230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.gazellegames.net header.s=smtp header.b=kQiC4nRm;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b="jEWYlF/P";
+       spf=pass (google.com: domain of bounce+09c978.f106b-mrcloud.med=gmail.com@mail.gazellegames.net designates 209.61.151.230 as permitted sender) smtp.mailfrom="bounce+09c978.f106b-mrcloud.med=gmail.com@mail.gazellegames.net"
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mail.gazellegames.net;
+ q=dns/txt; s=smtp; t=1622714983; h=Content-Type: Mime-Version: Subject:
+ From: To: Reply-To: Message-Id: Sender: Date: X-Feedback-Id;
+ bh=Pca20PHN/1wNsb07udlcJ8wbKo/P/hvIiyFKNkuAKD8=; b=kQiC4nRmGcyoDwGrRUG60fGD7wJD7sD5BoRauH+QbRzknkZDumksr0qU3hvbYJUpg5qPwmlv
+ 7fx4T3WFxaEAQh2uFXLrDgmg4iPOvHtaTBa9SlHtFFyzGmEO1SNiDfVrQWKqsSZpcpMxJuRv
+ D3HBZRHZvVTH7kmcll58KzeGdBo=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg;
+ t=1622714983; h=Content-Type: Mime-Version: Subject: From: To:
+ Reply-To: Message-Id: Sender: Date: X-Feedback-Id;
+ bh=Pca20PHN/1wNsb07udlcJ8wbKo/P/hvIiyFKNkuAKD8=; b=jEWYlF/P9r0I97EtFVHt0IwQJJIBJremHx5g4ZMi4CrrmNiE5bLe1T1NVDAiNZ6AGncCOOMr
+ jAkszBqviLqFAs9iZZFtzMyk93Y6YPEVl7vLohXWyR1Lw9nW/PMa4UGKC9ejVhOfOFEYtUoi
+ FthAapv/P8KYyxiZN/AZ+NOxvfs=
+X-Feedback-Id: 56dcd1a38032673e4e55cf7f:mailgun
+X-Mailgun-Sending-Ip: 209.61.151.230
+X-Mailgun-Sid: WyJiYTM3OSIsICJtcmNsb3VkLm1lZEBnbWFpbC5jb20iLCAiZjEwNmIiXQ==
+Received: by luna.mailgun.net with HTTP; Thu, 03 Jun 2021 10:09:42 +0000
+Date: Thu, 03 Jun 2021 10:09:42 +0000
+Sender: noreply=gazellegames.net@mail.gazellegames.net
+Message-Id: <20210603100942.1.7C4B143DF5B03BBB@mail.gazellegames.net>
+Reply-To: noreply@gazellegames.net
+To: mrcloud.med@gmail.com
+From: noreply@gazellegames.net
+Subject: New account confirmation at GazelleGames.net
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary="88f7f203764c4d09bf116e691b4258e4"
+
+--88f7f203764c4d09bf116e691b4258e4
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="ascii"
+Mime-Version: 1.0
+
+This e-mail confirms the account you just created at GazelleGames.net
+
+You have 24 hours to click the link below and finish the registration process for the account created with the username: mrcloud
+
+To access the site, visit https://gazellegames.net.
+
+Check the "Remember me" box if you're at home and login.
+
+CLICK BELOW TO CONFIRM:
+https://gazellegames.net/register.php?confirm=ace2fa920f224b0f6fa87f73721e5ea6
+
+Thank you,
+GazelleGames.net Staff
+
+--88f7f203764c4d09bf116e691b4258e4
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset="ascii"
+Mime-Version: 1.0
+
+This e-mail confirms the account you just created at GazelleGames.net<br />
+<br />
+You have 24 hours to click the link below and finish the registration process for the account created with the username: mrcloud<br />
+<br />
+To access the site, visit https://gazellegames.net.<br />
+<br />
+Check the "Remember me" box if you're at home and login.<br />
+<br />
+CLICK BELOW TO CONFIRM:<br />
+https://gazellegames.net/register.php?confirm=ace2fa920f224b0f6fa87f73721e5ea6<br />
+<br />
+Thank you,<br />
+GazelleGames.net Staff<br />
+
+--88f7f203764c4d09bf116e691b4258e4--

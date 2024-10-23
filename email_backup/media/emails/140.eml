@@ -1,0 +1,183 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:4d49:b029:f8:ecf1:fcc2 with SMTP id cz9csp306404lkb;
+        Fri, 21 May 2021 03:41:10 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwg0iGOXi7gqCh0qmYXZ+gaERb36+X8E4VbfwJQJ/2hJce3rMPL5tGNrmfiW848ODn93/L5
+X-Received: by 2002:a17:90a:55c5:: with SMTP id o5mr10016005pjm.169.1621593670666;
+        Fri, 21 May 2021 03:41:10 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1621593670; cv=none;
+        d=google.com; s=arc-20160816;
+        b=RIMX+L5g4bZz1nKKekntRvblzSDxCqGfab3stUYVG+GMC/Y0kOTzmUv4zrtchLstnZ
+         AM8q17yc7W6+0NhAAAtTXKN1Nt0YoAWmNeTNcp0rL93CLmFBvOG7LWa5ZoRJVY0pSXk7
+         dkDMXO42Ppmb5tqNIf1WzrrDeoD+Cs/+YuL7YxhVGr+Z3ngxhyDTyI3FVR7KLUWfdKM1
+         cJQfTxK/JknAU9FBQlPj4g8GZxj7MLnwfdwXMxDLksfzxzyevrhuU2BnCsBHlQvVnJ0X
+         zWqMZxoZyK3AVKUpj0B1hCCtaycSHL4aeq841SCPzYAt7UwkH28cxvBAiZTR1DedEwGO
+         Zuiw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-id:list-unsubscribe:mime-version:to:from:subject:date
+         :message-id:dkim-signature;
+        bh=xGM8NF+CAu+j5+KkJdBetXVAVXJ4j7A/mZq5mualBFM=;
+        b=fXDALLQOE3BE7WYJ50TyD+U01pKxBbd7QhRfJgM49BrlEkGG+/ogpo5bk3LrQO4rQc
+         yYjXHugmOgXaKwwTzRtR6Q+RB/maAW+rVcFPQMp0AoLA2AZDZh+9Tfgjl5PackT7c6Sd
+         cI/aZEbI8n+Sy+UYufdsHK9mjE22tMh56uQ5K6s5v7Yh5hUond4VtZ3j5Yv0CDRs3HbV
+         EGdSKfhImDddyB3uq0fRk3IYfV6gBwlBk80T38Af7Snqkq9iKzrJxX+6UPomGjBcV2D0
+         wj0b2FxGMgcjPRue+zUY1EYGV0BAb7luIhleZ72fbNWuS/aXua3YRKji+mQD3c8TtXeo
+         JBMg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cinemaz.to header.s=scph0916 header.b=EIe7vNSr;
+       spf=neutral (google.com: 147.253.213.66 is neither permitted nor denied by best guess record for domain of msprvs1=18775mu1lht7q=bounces-41712@bounces.avistaz.to) smtp.mailfrom="msprvs1=18775MU1Lht7q=bounces-41712@bounces.avistaz.to";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=cinemaz.to
+Return-Path: <msprvs1=18775MU1Lht7q=bounces-41712@bounces.avistaz.to>
+Received: from mta-213-66.sparkpostmail.com (mta-213-66.sparkpostmail.com. [147.253.213.66])
+        by mx.google.com with ESMTPS id k10si14928394pjs.23.2021.05.21.03.41.10
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 21 May 2021 03:41:10 -0700 (PDT)
+Received-SPF: neutral (google.com: 147.253.213.66 is neither permitted nor denied by best guess record for domain of msprvs1=18775mu1lht7q=bounces-41712@bounces.avistaz.to) client-ip=147.253.213.66;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cinemaz.to header.s=scph0916 header.b=EIe7vNSr;
+       spf=neutral (google.com: 147.253.213.66 is neither permitted nor denied by best guess record for domain of msprvs1=18775mu1lht7q=bounces-41712@bounces.avistaz.to) smtp.mailfrom="msprvs1=18775MU1Lht7q=bounces-41712@bounces.avistaz.to";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=cinemaz.to
+X-MSFBL: aiK0QiyvGjuVVjlpHfqR0vUxX0Y7Bto32s/r8Iku5no=|eyJyIjoibXJjbG91ZC5
+	tZWRAZ21haWwuY29tIiwiY3VzdG9tZXJfaWQiOiI0MTcxMiIsInN1YmFjY291bnR
+	faWQiOiIwIiwidGVuYW50X2lkIjoic3BjIiwibWVzc2FnZV9pZCI6IjYwYTY0Njh
+	lYTc2MGE3MGVmMzllIn0=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=cinemaz.to;
+	s=scph0916; t=1621593670; i=@cinemaz.to;
+	bh=xGM8NF+CAu+j5+KkJdBetXVAVXJ4j7A/mZq5mualBFM=;
+	h=Message-ID:Date:Subject:From:To:Content-Type;
+	b=EIe7vNSrH6zpCpcEOZXCs04C6/bABhquFBHI4YxSjGHeRi4oNqmGBI2InpqOG/Di3
+	 XGIRLnBWTpLPSle7BjTUFtwq4DrSgWMt+cnN/0ROyMfRdoI3yNJlrL5GNL5CCtkJro
+	 hSOAInukGnqKz9m8+SypcDKM9qoOovu0glal8sCA=
+Message-ID: <d2713b5796dd0ee1a7fb714a94e13169@swift.generated>
+Date: Fri, 21 May 2021 06:41:09 -0400
+Subject: CinemaZ - Account Activation Link
+From: CinemaZ <noreply@cinemaz.to>
+To: mrcloud.med@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1621593669_371abb5c24697f2a4e75abcc89dae5e2_=_"
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:EIz5xLFNDGyxuVS4dukbgp87IBhISId6UsyW04AG-9k~|eyAicmNwdF90byI6ICJtcmNsb3VkLm1lZEBnbWFpbC5jb20iLCAidGVuYW50X2lkIjogInNwYyIsICJjdXN0b21lcl9pZCI6ICI0MTcxMiIsICJtZXNzYWdlX2lkIjogIjYwYTY0NjhlYTc2MGE3MGVmMzllIiwgInN1YmFjY291bnRfaWQiOiAiMCIgfQ~~>
+List-Id: <spc.41712.0.sparkpostmail.com>
+
+
+--_=_swift_1621593669_371abb5c24697f2a4e75abcc89dae5e2_=_
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="utf-8"
+
+Dear mrcloud,
+
+Thank you for registering on CinemaZ
+
+To complete your account confirmation click the link below:
+
+http://click.avistaz.to/f/a/WPCr-mn0HcrmZKWWCn1T4A~~/AACi8AA~/RgRiihNGP0RHaHR0cHM6Ly9jaW5lbWF6LnRvL2F1dGgvY29uZmlybS8xNTQzOTcvNzlkZGRhMjUwNTYxMDFiYjFjMTA1YzZmOWI5OTg3M2RXA3NwY0IKYKZGjqdgpw7znlIVbXJjbG91ZC5tZWRAZ21haWwuY29tWAQAAAAA
+
+If you did not register, please delete this email.
+
+
+Best Regards,
+CinemaZ Team
+
+This is a service email for mrcloud.med@gmail.com containing necessary account information. Please do not reply to this message.
+
+Terms: http://click.avistaz.to/f/a/Uodvrc122Px8dOwyWOEsUw~~/AACi8AA~/RgRiihNGP0QeaHR0cHM6Ly9jaW5lbWF6LnRvL2Fib3V0L3Rlcm1zVwNzcGNCCmCmRo6nYKcO855SFW1yY2xvdWQubWVkQGdtYWlsLmNvbVgEAAAAAA~~
+Privacy: http://click.avistaz.to/f/a/nSNqFBcy4pehH6kNReipNA~~/AACi8AA~/RgRiihNGP0QnaHR0cHM6Ly9jaW5lbWF6LnRvL2Fib3V0L3ByaXZhY3ktcG9saWN5VwNzcGNCCmCmRo6nYKcO855SFW1yY2xvdWQubWVkQGdtYWlsLmNvbVgEAAAAAA~~
+Unsubscribe:
+<unsubscribe>http://click.avistaz.to/f/a/Oge5f5WS8tvXEL1YlpF61Q~~/AACi8AA~/RgRiihNGP0RNaHR0cHM6Ly9jaW5lbWF6LnRvL2VtYWlsL3Vuc3Vic2NyaWJlP2VtYWlsPW1yY2xvdWQubWVkQGdtYWlsLmNvbTwvdW5zdWJzY3JpYmVXA3NwY0IKYKZGjqdgpw7znlIVbXJjbG91ZC5tZWRAZ21haWwuY29tWAQAAAAA>
+
+
+--_=_swift_1621593669_371abb5c24697f2a4e75abcc89dae5e2_=_
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>CinemaZ - Account Activation Link</title>
+    <meta name="viewport" content="width=device-width"/>
+    <style type="text/css">
+        @media  only screen and (max-width: 550px), screen and (max-device-width: 550px) {
+            body[yahoo] .buttonwrapper {
+                background-color: transparent !important;
+            }
+
+            body[yahoo] .button {
+                padding: 0 !important;
+            }
+
+            body[yahoo] .button a {
+                background-color: #3697d9;
+                padding: 15px 25px !important;
+            }
+        }
+
+        @media  only screen and (min-device-width: 601px) {
+            .content {
+                width: 600px !important;
+            }
+
+            .col387 {
+                width: 387px !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0;" yahoo="fix">
+<div style="color:transparent;visibility:hidden;opacity:0;font-size:0px;border:0;max-height:1px;width:1px;margin:0px;padding:0px;border-width:0px!important;display:none!important;line-height:0px!important;"><img border="0" width="1" height="1" src="http://click.avistaz.to/q/GySajC2GYndm5XYa5VPctw~~/AACi8AA~/RgRiihNGPVcDc3BjQgpgpkaOp2CnDvOeUhVtcmNsb3VkLm1lZEBnbWFpbC5jb21YBAAAAAA~"/></div>
+
+<!--[if (gte mso 9)|(IE)]>
+<table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td><![endif]-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 600px;" class="content">
+    <tr>
+        <td align="center" bgcolor="#666666" style="padding: 10px; color: #ffffff; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold;">
+            CinemaZ - Account Activation Link
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="#fbfbfb" style="padding: 10px 20px 20px 20px; color: #555555; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 1px solid #f6f6f6;">
+                <p>Hi mrcloud,</p>
+    <p>Thank you for registering on CinemaZ</p>
+    <p>To complete your <b>account confirmation</b> click the link below:</p>
+    <a href="http://click.avistaz.to/f/a/WPCr-mn0HcrmZKWWCn1T4A~~/AACi8AA~/RgRiihNGP0RHaHR0cHM6Ly9jaW5lbWF6LnRvL2F1dGgvY29uZmlybS8xNTQzOTcvNzlkZGRhMjUwNTYxMDFiYjFjMTA1YzZmOWI5OTg3M2RXA3NwY0IKYKZGjqdgpw7znlIVbXJjbG91ZC5tZWRAZ21haWwuY29tWAQAAAAA" style="color:#3697d9; font-size: 18px; font-weight: bold; text-align: center;">Confirm Account</a>
+    <p>If you did not register, please delete this email.</p>
+                            <p>Best Regards, <br/>CinemaZ Team</p>
+                    </td>
+    </tr>
+    <tr>
+        <td align="center" bgcolor="#dddddd" style="padding: 15px 10px 15px 10px; color: #555555; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px;">
+                            This is a service email for
+                <span style="color: #2F90E2; text-decoration: none;">mrcloud.med@gmail.com</span> containing necessary account information.
+                <br/>
+                Please do not reply to this message.
+                    </td>
+    </tr>
+    <tr>
+        <td style="padding: 15px 10px 15px 10px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td width="60%" style="color: #999999; font-family: Arial, sans-serif; font-size: 12px;">
+                                                    <a href="http://click.avistaz.to/f/a/Uodvrc122Px8dOwyWOEsUw~~/AACi8AA~/RgRiihNGP0QeaHR0cHM6Ly9jaW5lbWF6LnRvL2Fib3V0L3Rlcm1zVwNzcGNCCmCmRo6nYKcO855SFW1yY2xvdWQubWVkQGdtYWlsLmNvbVgEAAAAAA~~" style="color: #3697d9;">Terms</a> |
+                            <a href="http://click.avistaz.to/f/a/nSNqFBcy4pehH6kNReipNA~~/AACi8AA~/RgRiihNGP0QnaHR0cHM6Ly9jaW5lbWF6LnRvL2Fib3V0L3ByaXZhY3ktcG9saWN5VwNzcGNCCmCmRo6nYKcO855SFW1yY2xvdWQubWVkQGdtYWlsLmNvbVgEAAAAAA~~" style="color: #3697d9;">Privacy</a> |
+                            <a href="http://click.avistaz.to/f/a/JteNiWHp7D3G3j1pdDuFFw~~/AACi8AA~/RgRiihNGP0RAaHR0cHM6Ly9jaW5lbWF6LnRvL2VtYWlsL3Vuc3Vic2NyaWJlP2VtYWlsPW1yY2xvdWQubWVkQGdtYWlsLmNvbVcDc3BjQgpgpkaOp2CnDvOeUhVtcmNsb3VkLm1lZEBnbWFpbC5jb21YBAAAAAA~" style="color: #3697d9;">
+                                <unsubscribe>Unsubscribe</unsubscribe>
+                            </a>
+                                            </td>
+                    <td align="right" width="40%" style="color: #999999; font-family: Arial, sans-serif; font-size: 12px;">
+                        &copy; <a href="http://click.avistaz.to/f/a/6l2NViTOHzpBPhL4BesLcw~~/AACi8AA~/RgRiihNGP0QSaHR0cHM6Ly9jaW5lbWF6LnRvVwNzcGNCCmCmRo6nYKcO855SFW1yY2xvdWQubWVkQGdtYWlsLmNvbVgEAAAAAA~~" style="color: #3697d9;">CinemaZ</a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+<img border="0" width="1" height="1" alt="" src="http://click.avistaz.to/q/s-mjgQ6x2Fqiv8oZJtOncg~~/AACi8AA~/RgRiihNGPlcDc3BjQgpgpkaOp2CnDvOeUhVtcmNsb3VkLm1lZEBnbWFpbC5jb21YBAAAAAA~">
+</body>
+</html>
+
+
+--_=_swift_1621593669_371abb5c24697f2a4e75abcc89dae5e2_=_--

@@ -1,0 +1,95 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:22e6:b029:f9:2098:e3d8 with SMTP id b6csp781198lkv;
+        Thu, 27 May 2021 09:37:35 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJyzeFATHZ7AsiqlMLMGSB/vVmfClb/MvrXFdjQqjoT0pDESeZJEniKdbSlDyc4KrUTTU+7L
+X-Received: by 2002:a7b:cbc2:: with SMTP id n2mr9444097wmi.116.1622133455075;
+        Thu, 27 May 2021 09:37:35 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1622133455; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0ua0Bx9G0+C1kKKYVkbKi+pGUs9GFDFx3U061WyV8Zp0EDZqU1l39BsBTs2VJvQGrW
+         i57e3uKDqqmi4uZFMDuhQEkaSezst4y8DkJ18uFccgUQH0oYMzgbrmQ6mo64wyUTzCz3
+         tKdIe/hvDyjLbUca8iTcMecWeIerY5VLu04EUAPhSF1iq4/y7t6hYgZtvwsURWSAmQsY
+         jklM+8jsURVy3zq/KqCPWDSiqqYUgx4jd4/vTSgrPSXpanuprvfqsFIm6VS8pK6IDfo+
+         Bwrm9nBipVSqCj7WdWEL/HLsCYn86fbyPs9exxytrm5JIqNbtwF88UZwiNEwa3bu1qQ3
+         xyZQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:date:from:mime-version:subject:message-id
+         :to:ironport-sdr;
+        bh=tOYgtQxuwXeSg7AhGpEidok3VtiCrC4WYAzc9ZU8RGA=;
+        b=ptMMCfuR+8pz69oUEM9XqrFrqcL8G+ySl+Gih3xvtvKtmao+qble7g4m4yNPMNFl1C
+         BqkK6ZLIxd8xJe3gUIBmNJIuLHtaHh2ogOUNqs9RgRM26xhWJ3aGkPlGNGgei4/AVcyQ
+         zdEFRlqvseVm9O6ZCulJ0bT2iREosKEDUvyIlQTeKORE2tMtJz6NIM9nDyc+JnNJczeb
+         uVFODAVoTnd26lY5y5mlmDaUWOPjimGrFg7XZTrjYsk8Gz21O35AA/Re7CQtHpqa1rct
+         O+/VJwqazH6h0Wyhw6kszNFsHcOzBNv4KQn+lWys5ZtMfLXlU+D8FmzY/zt+28PZhGgz
+         oU1A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of webmaster@lydec.co.ma designates 194.204.254.66 as permitted sender) smtp.mailfrom=webmaster@lydec.co.ma
+Return-Path: <webmaster@lydec.co.ma>
+Received: from mail.lydec.co.ma (ll194-66-254-204-194.ll194.iam.net.ma. [194.204.254.66])
+        by mx.google.com with ESMTP id b5si3309812wmc.115.2021.05.27.09.37.34
+        for <mrcloud.med@gmail.com>;
+        Thu, 27 May 2021 09:37:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of webmaster@lydec.co.ma designates 194.204.254.66 as permitted sender) client-ip=194.204.254.66;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of webmaster@lydec.co.ma designates 194.204.254.66 as permitted sender) smtp.mailfrom=webmaster@lydec.co.ma
+IronPort-SDR: S5Cw2GQoMwq6qbh9pZkzWkKHPlG12z68s+ZQ35a7otbaL+QkQhe+cGAvMgKp3j2wYyGrtD/9EU
+ CLQSOT+3CzdQ==
+X-IronPort-AV: E=Sophos;i="5.81,217,1610406000"; 
+   d="scan'208";a="26461318"
+Received: from was7node5 ([192.168.11.17])
+          by ntsiege1.lydec.wnet (Lotus Domino Release 8.5.3)
+          with ESMTP id 2021052717314485-13416 ;
+          Thu, 27 May 2021 17:31:44 +0000 
+To: mrcloud.med@gmail.com
+Message-ID: <-1270335591.2831.1622133380777.JavaMail.webmaster@lydec.co.ma>
+Subject: =?UTF-8?Q?Activation_de_votre_compte_d'a?=
+ =?UTF-8?Q?cc=C3=A8s_=C3=A0_l'agence_en_ligne_Lydec?=
+MIME-Version: 1.0
+X-MIMETrack: Itemize by SMTP Server on NTSIEGE1/MOR/LDE/SLE(Release 8.5.3|September 15, 2011) at
+ 27/05/2021 17:31:44,
+	Serialize by Router on NTSIEGE1/MOR/LDE/SLE(Release 8.5.3|September 15, 2011) at
+ 27/05/2021 17:31:44,
+	Serialize complete at 27/05/2021 17:31:44
+From: webmaster@lydec.co.ma
+Date: Thu, 27 May 2021 17:31:44 +0000
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PGZvbnQgc2l6ZT0iMiIgZmFjZT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiI+Q2hlciBD
+bGllbnQsIDxicj48YnI+Tm91cyB2b3VzIHJlbWVyY2lvbnMgZGUgdm90cmUgY29uZmlhbmNlLiBW
+b3VzIHBvdXZleiBhY2MmZWFjdXRlO2RlciAmYWdyYXZlOyB2b3RyZSBjb21wdGUgZW4gY2xpcXVh
+bnQgc3VyIGxlIGxpZW4gc3VpdmFudCA6IDxhIGhyZWY9Imh0dHA6Ly93d3cubHlkZWMubWEiPmh0
+dHA6Ly93d3cubHlkZWMubWE8L2E+Ljxicj48YnI+Tm91cyB2b3VzIHJhcHBlbG9ucyB2b3MgaW5m
+b3JtYXRpb25zIGRlIGNvbm5leGlvbiA6IDxicj5Mb2dpbiA6bWF6bTEyMzQ8YnI+TW90IGRlIHBh
+c3NlIDptYXJvYzEyMzxicj5Wb3MgY29udHJhdHMgOjx1bD48bGk+NTIgQklTIExPVElTU0VNRU5U
+IFJJQUQgRVNTQUxBTSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHVsPjxsaT5N
+MTU4OTMyIC9FYXUgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2xpPjwvdWw+PC9saT48bGk+
+NTIgQklTIExPVElTU0VNRU5UIFJJQUQgRVNTQUxBTSAgRXRhZ2UgMSAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICA8dWw+PGxpPk0yMDE1NDEgL0VsZWN0cmljaXRlICAgICAgICAgICAg
+ICAgICAgIDwvbGk+PC91bD48L2xpPjxsaT41MiBCSVMgTE9USVNTRU1FTlQgUklBRCBFU1NBTEFN
+ICBFdGFnZSAyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx1bD48bGk+TTIwMTU0
+MyAvRWxlY3RyaWNpdGUgICAgICAgICAgICAgICAgICAgPC9saT48L3VsPjwvbGk+PGxpPjUyIEJJ
+UyBMT1RJU1NFTUVOVCBSSUFEIEVTU0FMQU0gIEV0YWdlIE1JICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgIDx1bD48bGk+TTIwMTU0NiAvRWxlY3RyaWNpdGUgICAgICAgICAgICAgICAg
+ICAgPC9saT48L3VsPjwvbGk+PC91bD4gPGJyPiBTJmVhY3V0ZTtjdXJpcyZlYWN1dGU7ZSBldCBn
+cmF0dWl0ZSwgbCdhZ2VuY2UgZW4gbGlnbmUgZGUgTHlkZWMgdm91cyBwZXJtZXQgZGUgYiZlYWN1
+dGU7biZlYWN1dGU7ZmljaWVyIGRlIHBsdXNpZXVycyBzZXJ2aWNlcyA6IGNvbnN1bHRlciB2b3Mg
+Y29udHJhdHMsIGxlIGQmZWFjdXRlO3RhaWwgZGUgdm9zIGZhY3R1cmVzLCBsJyZlYWN1dGU7dGF0
+IGRlIHZvcyByJmVncmF2ZTtnbGVtZW50cyBldCBpbXBheSZlYWN1dGU7cywgciZlYWN1dGU7Z2xl
+ciB2b3MgZmFjdHVyZXMsIHImZWFjdXRlO2FsaXNlciBkZXMgc2ltdWxhdGlvbnMgZGUgZmFjdHVy
+ZXMuLi48YnI+IEQmZWdyYXZlO3MgbGUgcHJlbWllciBhY2MmZWdyYXZlO3MgJmFncmF2ZTsgdm90
+cmUgZXNwYWNlIHBlcnNvbm5lbCwgbm91cyB2b3VzIGNvbnNlaWxsb25zIGRlIGNoYW5nZXIgdm90
+cmUgbW90IGRlIHBhc3NlLjxicj48YnI+Q29yZGlhbGVtZW50LjwvZm9udD4KPHA+Q2UgbWVzc2Fn
+ZSBldCB0b3V0ZXMgbGVzIHBpw6hjZXMgam9pbnRlcyAoY2ktYXByw6hzIGxlICJtZXNzYWdlIikg
+c29udCDDqXRhYmxpcyDDoCBsJ2ludGVudGlvbiBleGNsdXNpdmUgZGUgc2VzIGRlc3RpbmF0YWly
+ZXMgZXQgc29udCBjb25maWRlbnRpZWxzLiBTaSB2b3VzIHJlY2V2ZXogY2UgbWVzc2FnZSBwYXIg
+ZXJyZXVyLCBtZXJjaSBkZSBsZSBkw6l0cnVpcmUgZXQgZCdlbiBhdmVydGlyIGltbcOpZGlhdGVt
+ZW50IGwnZXhww6lkaXRldXIuIFRvdXRlIHV0aWxpc2F0aW9uIGRlIGNlIG1lc3NhZ2Ugbm9uIGNv
+bmZvcm1lIMOgIHNhIGRlc3RpbmF0aW9uLCB0b3V0ZSBkaWZmdXNpb24gb3UgdG91dGUgcHVibGlj
+YXRpb24sIHRvdGFsZSBvdSBwYXJ0aWVsbGUsIGVzdCBpbnRlcmRpdGUsIHNhdWYgYXV0b3Jpc2F0
+aW9uIGV4cHJlc3NlLiBMJ2ludGVybmV0IG5lIHBlcm1ldHRhbnQgcGFzIGQnYXNzdXJlciBsJ2lu
+dMOpZ3JpdMOpIGRlIGNlIG1lc3NhZ2UsIExZREVDIGTDqWNsaW5lIHRvdXRlIHJlc3BvbnNhYmls
+aXTDqSBhdSB0aXRyZSBkZSBjZSBtZXNzYWdlLCBkYW5zIGwnaHlwb3Row6hzZSBvw7kgaWwgYXVy
+YWl0IMOpdMOpIG1vZGlmacOpLjwvcD4KCjxwPlBlbnNleiDDoCBub3RyZSBlbnZpcm9ubmVtZW50
+LCBuJ2ltcHJpbWV6IGNlIG1lc3NhZ2UgcXVlIHNpIG7DqWNlc3NhaXJlLjwvcD4=
+

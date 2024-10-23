@@ -1,0 +1,83 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:d908:0:b029:fc:9c37:7144 with SMTP id u8csp362729lkc;
+        Thu, 17 Jun 2021 04:36:37 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxQUwFUxo9B2vXqL6Xk8xmpcM59Wyo/XpizipnGIy2bCW1/uARpv8oMHl1PPRspAD+MvYQk
+X-Received: by 2002:a1f:788e:: with SMTP id t136mr2668725vkc.11.1623929797649;
+        Thu, 17 Jun 2021 04:36:37 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1623929797; cv=none;
+        d=google.com; s=arc-20160816;
+        b=EYMlwNZEztU2dhFCrdFJI8ZEWOYb2/1JiYlbgl/Hztn4pWGJpupsJH4Bst+cFss6MQ
+         n5jU+ykfSz0EjO5rNBlRG/iLOAnFY1WMgCZvM1NVNyvVNgPA3+YpszkBUv1ZgmB3dfTb
+         L7PtpRHU7gNeZBWLDZQny9s3aFQB3B5t761bTT1ue9dVEzTd4wjIw75ZtIgXmd7F7eJD
+         J1cuAIIfU2h4Gs3hYHW7UD43at6zjKV42UTxTGYCVlvej0/hIdSic0MTLLUqqLm8HS8l
+         YcSy1LqSlr5Gm0dIGigKSftLOfcKsAt26v/gpW53MLM8DUFYIcxgJrUpjLePcuCXDtKf
+         ur0g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:reply-to:from:subject:to:dkim-signature;
+        bh=4O2AtXEp8yLo3nNAEByb7IEzG3XST2kpPJIeMBP92II=;
+        b=cKNJGX6C0YuOv2NIHd/NhBDOrk9LEPH3zfGBXIthgxCtyD3xmaElPpmNnW0fsGiNRb
+         kLZMpE9XjY0OAarZel7bygpPq9ll763Q2Tvcr3pr4bhkPDlCx/BfgISi4D19FxJ06eSX
+         wYlvaZBQNb7Z5dYHoQnuCmOR3jvZHs1GDWb6LGrT2i9k10++v3zqO4zj71iM4c6Wh1/o
+         74EO7c/dbHzy1C8AT7UZj3g9CHSZ7cG19n/sV3FW+xGnVbGjdEJpGFX/lFpb1QYdWpX8
+         wLAHeJsUnayTRgOJ7HsXDdlQSv6gdLECBDJz30N5YatnfLWe75iuRvwAqTl43Cgp+1T2
+         0CAw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@fou-du-cinema.net header.s=default header.b=hWT8yS7m;
+       spf=pass (google.com: best guess record for domain of fouducinema@hybrid2308.ca.ns.planethoster.net designates 199.188.222.184 as permitted sender) smtp.mailfrom=fouducinema@hybrid2308.ca.ns.planethoster.net
+Return-Path: <fouducinema@hybrid2308.ca.ns.planethoster.net>
+Received: from hybrid2308.ca.ns.planethoster.net (hybrid2308.ca.ns.planethoster.net. [199.188.222.184])
+        by mx.google.com with ESMTPS id m12si3739827vsk.368.2021.06.17.04.36.37
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 17 Jun 2021 04:36:37 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of fouducinema@hybrid2308.ca.ns.planethoster.net designates 199.188.222.184 as permitted sender) client-ip=199.188.222.184;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@fou-du-cinema.net header.s=default header.b=hWT8yS7m;
+       spf=pass (google.com: best guess record for domain of fouducinema@hybrid2308.ca.ns.planethoster.net designates 199.188.222.184 as permitted sender) smtp.mailfrom=fouducinema@hybrid2308.ca.ns.planethoster.net
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=fou-du-cinema.net; s=default; h=Date:Message-Id:Reply-To:From:Subject:To:
+	Sender:Cc:MIME-Version:Content-Type:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=4O2AtXEp8yLo3nNAEByb7IEzG3XST2kpPJIeMBP92II=; b=hWT8yS7mSy7PAS95j7tOEY8rzL
+	9XlmXOJLMSErVGUetjvmMSRiIc87gsYliFnFpRmtUdLqevdysEsbVbBGZnKnw3wjcLj/oZaKOc4hL
+	aAn50kaVNl0z51hPvn3BHLZ+2YbzEUUKxYlPE+hVdbdkfdszBNrOS4X5P6MnwFl/vqmAK9QLuZ1Rs
+	oDqXOH02gpcmcOBot1nmVcW9aUzr/Wl7w4Ux420ylOcOVbdQplEdzE9I+xRZCjlEl1rixoVEgUw7y
+	TKFc/IhLxwQsGFHMErkj8BcH3jM6jKMD+vZb+zgCedWNqXZaBEJn+r2A8qzFrl3ae554eti95trdK
+	ZQpKfEBA==;
+Received: from fouducinema by hybrid2308.ca.ns.planethoster.net with local (Exim 4.94.2)
+	(envelope-from <fouducinema@hybrid2308.ca.ns.planethoster.net>)
+	id 1ltqK3-0004Lc-Ld
+	for mrcloud.med@gmail.com; Thu, 17 Jun 2021 07:36:35 -0400
+To: mrcloud.med@gmail.com
+Subject: fou-du-cinema: Compte désactivé automatiquement
+X-PHP-Script: fou-du-cinema.net/announce.php for 89.149.200.160
+X-PHP-Originating-Script: 1004:main_include.php
+From:staff@fou-du-cinema.net
+Reply-To:staff@fou-du-cinema.net
+X-Mailer: PHP/7.3.28
+X-Sender-IP:10.121.0.122
+Message-Id: <E1ltqK3-0004Lc-Ld@hybrid2308.ca.ns.planethoster.net>
+Date: Thu, 17 Jun 2021 07:36:35 -0400
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - hybrid2308.ca.ns.planethoster.net
+X-AntiAbuse: Original Domain - gmail.com
+X-AntiAbuse: Originator/Caller UID/GID - [1004 993] / [47 12]
+X-AntiAbuse: Sender Address Domain - hybrid2308.ca.ns.planethoster.net
+X-Get-Message-Sender-Via: hybrid2308.ca.ns.planethoster.net: authenticated_id: fouducinema/from_h
+X-Authenticated-Sender: hybrid2308.ca.ns.planethoster.net: staff@fou-du-cinema.net
+X-Source: 
+X-Source-Args: php-fpm: pool fou-du-cinema_net                          
+X-Source-Dir: fou-du-cinema.net:/public_html
+
+Bonjour mrcloud,
+
+Votre compte sur  fou-du-cinema, a été automatiquement désactivé.
+Malheureusement, vous ne pouvez plus profiter de la communauté.
+
+Raison:
+Le crédit de votre compte Temps a été épuisé.
+Avec un peu plus d'activité, cela ne serait pas arrivé.
+
+L'équipe de fou-du-cinema

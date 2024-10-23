@@ -1,0 +1,494 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:1cc:b029:116:74a9:312d with SMTP id v12csp676653lka;
+        Thu, 22 Jul 2021 10:41:32 -0700 (PDT)
+X-Received: by 2002:a67:2687:: with SMTP id m129mr1373412vsm.52.1626975691908;
+        Thu, 22 Jul 2021 10:41:31 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1626975691; cv=none;
+        d=google.com; s=arc-20160816;
+        b=KfzbazBmxrANJ1ejhKZQU0NyF2in+cKaGbXqqqFGnEN8A+bUjTLGtOfGVDF7rYZcHj
+         qKU7d0MgNO9wAGoj9c5PQEcNJXS85V7eTZpAlJ59whOkuE62IySuBu61UcpZyCC62LHX
+         7LZ9y7qTgkXmVP2b1maWtM+ROkOxeak38Sd1+mDgbdmjKdZLdWHmHSs1j8u7HIIhD3Rb
+         hivCAArQHQztsgbTEG6Frax9JcogTC0Ocpc+BfaWAQ7Esf/JtTNeXqIhgWmYUw5RhscX
+         XNTtnb99ovf9Jksb6RnmPLtoC7bqWyz3C+9TcQi7NYc7JF3iazsUECkYRvn2R0S4r52D
+         yflg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:feedback-id:reply-to:date:mime-version
+         :dkim-signature;
+        bh=tIBWU/732NtmRmsXj0yCWmbaqyNm/i0TR2qg7xV6GC8=;
+        b=P3f/AuiDFh1eH0zb4g2jWA/VHGgC3xMu8K00y3bMzJRdiu8KRGjJkAhN31UX4kF8xd
+         ehFVB6teyj35Q3qQaZxeBT11ZI0xQl4usYWaVX7rq+pCX/vL8/m78X2yt3tT3Rz2X01I
+         Bkc1ukKEA20Zam8M+gmTTZZkbH9XQSLV8DO6oiGHCfU+tsKes0X0Qh4Ok1D/v4iXyoBE
+         rtiDgm8k4zY9MvNrGT8I0bYFZ5efqQMUFo/swbypmwg/Eehqpz8cZQ6nW8P+EXkFPBdA
+         qI4ay4X5PdQx9Gmg13imxBe5pjbXgMt7pbSMo+SuK5pRralb4oCJO48Es6QB2d3PVcS3
+         3zsQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=hYitxpkz;
+       spf=pass (google.com: domain of 3y635ybakcxw7aj632k6-fgj6hdq8gg8d6.4geej4dgm5.e658e2ad.4ge@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3y635YBAKCxw7AJ632K6-FGJ6HDQ8GG8D6.4GEEJ4DGM5.E658E2AD.4GE@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Return-Path: <3y635YBAKCxw7AJ632K6-FGJ6HDQ8GG8D6.4GEEJ4DGM5.E658E2AD.4GE@scoutcamp.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id n10sor1621368vsg.64.2021.07.22.10.41.31
+        for <mrcloud.med@gmail.com>
+        (Google Transport Security);
+        Thu, 22 Jul 2021 10:41:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3y635ybakcxw7aj632k6-fgj6hdq8gg8d6.4geej4dgm5.e658e2ad.4ge@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=hYitxpkz;
+       spf=pass (google.com: domain of 3y635ybakcxw7aj632k6-fgj6hdq8gg8d6.4geej4dgm5.e658e2ad.4ge@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3y635YBAKCxw7AJ632K6-FGJ6HDQ8GG8D6.4GEEJ4DGM5.E658E2AD.4GE@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20161025;
+        h=mime-version:date:reply-to:feedback-id:message-id:subject:from:to;
+        bh=tIBWU/732NtmRmsXj0yCWmbaqyNm/i0TR2qg7xV6GC8=;
+        b=hYitxpkzi2LYqkq3THpAyhT1DPdG9dXaSJ0NZ4BCpG85ql/mABWKRZbmMcqDLqjkZg
+         5NGqZpFB7Z18gLvnZ0k5VYqP4rs2POLazgGWFCZ6M9/VaC44IrUSaHwQAH+dRhV5k9aD
+         BJHk5rP/ZLe+pTF6w4TgbUWM4QrQaVsMPSXxBevuQFrF8c2kOsUvF5j8FcmtqQuhhFq4
+         bdJAJ+ZHBaxjQI8TzUZoLl0gSfxRiyimb2nxy3WBbUxu3jQo4zcPT4rBW1QW5bCsk1S3
+         LU9WgWGk3cEQOhL1358Jm78WocJdagk0NZiRGbVO7BXrRM/vgQo/0Tl64hOCt4okDv11
+         LCPw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:date:reply-to:feedback-id
+         :message-id:subject:from:to;
+        bh=tIBWU/732NtmRmsXj0yCWmbaqyNm/i0TR2qg7xV6GC8=;
+        b=Rb64xJm9AGKfY1X9NMOwMhMSifgsfCQajoKDmkOuyd4e1cRzsQEyE4KpJvahA0xnwG
+         5xfXiHZxyXw0B8jki7d3Yl5agAPYHMFEHaU1jeLFYEtKnprRMMzOhYBb54nYpAy6Ys6e
+         HKjZpJm8L3UV0XCSY/mMYE9xk0wTQ0GpJoSpJGJCKHMnO+UcaQ402RyLJ7bSdYl4lpHY
+         CfYdcZZtT5bXA5nMLInJed7LgTdLdIyPytYHJLYPXCh1B05Ka68d/EucX62ZljCAfkHH
+         3hXaJrIJ1MUUGS4ax6qTCvH6A8Eh5qRHvJpfSwEFgDwUa1eYSA5nujxQmD72MQwaOs3i
+         9LBQ==
+X-Gm-Message-State: AOAM53158rH6xmiMSO4JcHKOJye+orUEo3CyfoxexYs0ihdI+rxcGYM+
+	vYNUCT/yp0/wZctQ8GkomDIa
+X-Google-Smtp-Source: ABdhPJxRaGUmLOq0vM2I9Gyzz2YnrdCLTbJF+z3KCSJa9O5BJM+e49bWg621/PlumTYDk5jHGZt261E=
+MIME-Version: 1.0
+X-Received: by 2002:a67:ed5a:: with SMTP id m26mr1008818vsp.59.1626975691482;
+ Thu, 22 Jul 2021 10:41:31 -0700 (PDT)
+Date: Thu, 22 Jul 2021 10:41:31 -0700
+Reply-To: Firebase <firebase-noreply@google.com>
+X-Google-Id: 4092147
+Feedback-ID: P-43-0:C20169449:M110461690-en-US:gamma
+X-Notifications: GAMMA:<b28329e5e2c623b17043c37c72452eb9e4227610-20169449-110992543@google.com>
+X-Notifications-Bounce-Info: ARgXy4CJrcT4zyJ8paZLwdp-xDvwv-1UEDFXkYULAp4Xa6KAD7Nqrlbt33rHeV2XqaYYGxKv5B0WmQBHSNitXKHheXbSdOfTHDkMrG00Ix076ErPmvn26p5AdoOUeGQl33IYG37BU2UtM1D1Gm7nsldwaIR6dQrkSR0fyFzqypEJa7_fsLGwlNElKkA-TqocKlcREcXGnVxukh07nXVdJbWrdQm_yhi67NGP40O9M3m-3UxGHYLW0-ZrDVTxh8yNlnpDYEKYVM8IoyPaRMCyYS7aAXRoMCo
+Message-ID: <b28329e5e2c623b17043c37c72452eb9e4227610-20169449-110992543@google.com>
+Subject: [Update] Cloud Storage for Firebase: New API(s) and service account(s)
+From: Firebase <firebase-noreply@google.com>
+To: mrcloud.med@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000002627bb05c7b9cc06"
+
+--0000000000002627bb05c7b9cc06
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+SGkgbXJjbG91ZCwNCg0KV2UgYXJlIHVwZGF0aW5nIG91ciBwcm9kdWN0IEFQSSBmb3IgQ2xvdWQg
+U3RvcmFnZSBmb3IgRmlyZWJhc2Ugc28gdGhhdCBlYWNoICANCkZpcmViYXNlIHByb2plY3QgaGFz
+IGl0cyBvd24gZGVkaWNhdGVkIFN0b3JhZ2Ugc2VydmljZSBhY2NvdW50LiBObyBhY3Rpb24gIA0K
+aXMgcmVxdWlyZWQgb24geW91ciBwYXJ0LCB1bmxlc3MgeW91IHVzZSBUZXJyYWZvcm0uDQoNCllv
+dSB3aWxsIHNlZSBvdXIgQVBJIGVuYWJsZWQgYW5kIGFkZGVkIHNlcnZpY2UgYWNjb3VudChzKSBv
+biB5b3VyICANCnByb2plY3QocykgYnkgSnVseSAyMywgMjAyMS4NCg0KV2hhdCBoYXBwZW5lZD8N
+Cg0KVGhlIENsb3VkIFN0b3JhZ2UgZm9yIEZpcmViYXNlIEFQSVsxXSB3aWxsIGJlIGVuYWJsZWQg
+b24geW91ciBwcm9qZWN0KHMpICANCihzZWUgdGhlIGxpc3QgYmVsb3cpLiBUaGlzIGNoYW5nZSBl
+bmFibGVzIG5ldyBzZWN1cml0eSBhbmQgcHJvamVjdC13aWRlICANCmZlYXR1cmVzIHRoYXQgd2Un
+ZCBsaWtlIHRvIGFkZCBpbiB0aGUgZnV0dXJlLg0KDQpBIG5ldyBzZXJ2aWNlIGFjY291bnQgd2ls
+bCBiZSBhZGRlZCB0byB5b3VyIHByb2plY3QocykgdG8gbWFuYWdlIHlvdXIgIA0KYnVja2V0KHMp
+IGFuZCB3aWxsIGZvbGxvdyB0aGlzIHBhdHRlcm46DQoNCuKAg+KAg3NlcnZpY2UtPHByb2plY3Qg
+bnVtYmVyPkBnY3Atc2EtZmlyZWJhc2VzdG9yYWdlLmlhbS5nc2VydmljZWFjY291bnQuY29tDQoN
+CllvdXIgYXBwbGljYXRpb25zIHdpbGwgY29udGludWUgdG8gd29yayBhcyBiZWZvcmUuIE5vIGFj
+dGlvbiBpcyByZXF1aXJlZCBvbiAgDQp5b3VyIHBhcnQsIHVubGVzcyB5b3UgdXNlIFRlcnJhZm9y
+bTsgVGVycmFmb3JtIHVzZXJzIHdpbGwgbmVlZCB0byBhZGQgIA0KZmlyZWJhc2VzdG9yYWdlLmdv
+b2dsZWFwaXMuY29tIHRvIHRoZWlyIGxpc3Qgb2YgZW5hYmxlZCBBUElzIGFuZCBhZGQgdGhlICAN
+Cm5ldyBzZXJ2aWNlIGFjY291bnQgdG8gdGhlaXIgSUFNIGNvbmZpZ3VyYXRpb24uDQoNCkJ5IEp1
+bHkgMjksIDIwMjIsIHRoZSBsZWdhY3kgc2hhcmVkIEZpcmViYXNlIHNlcnZpY2UgYWNjb3VudCwg
+IA0KZmlyZWJhc2Utc3RvcmFnZUBzeXN0ZW0uZ3NlcnZpY2VhY2NvdW50LmNvbVsyXSwgd2lsbCBi
+ZSBmdWxseSByZXBsYWNlZCBieSAgDQpkZWRpY2F0ZWQgc2VydmljZSBhY2NvdW50cy4NCg0KV2ls
+bCB0aGlzIGFmZmVjdCBteSBiaWxsPw0KDQpObywgdGhpcyBjaGFuZ2Ugd2lsbCBvbmx5IGVuYWJs
+ZSB0aGUgcHJvZHVjdCBBUEkgZm9yIENsb3VkIFN0b3JhZ2UgZm9yICANCkZpcmViYXNlIGFuZCB1
+cGdyYWRlIHlvdSB0byBhIGRlZGljYXRlZCBzZXJ2aWNlIGFjY291bnQgZm9yIHlvdXIgcHJvamVj
+dChzKS4NCg0KQXJlIHRoZXJlIHNlY3VyaXR5IGNvbmNlcm5zIHdpdGggZW5hYmxpbmcgdGhpcyBB
+UEk/DQoNClRoZSBuZXcgc2VydmljZSBhY2NvdW50cyB3aWxsIGhhdmUgdGhlIHNhbWUgcGVybWlz
+c2lvbnMgYW5kIGZ1bmN0aW9uYWxpdHkgIA0KYXMgdGhlIHNlcnZpY2UgYWNjb3VudCB0aGV5IGFy
+ZSByZXBsYWNpbmcuIFRoaXMgY2hhbmdlIGRvZXMgbm90IGFmZmVjdCAgDQpvdGhlciBwZXJtaXNz
+aW9ucyBmb3IgeW91ciBwcm9qZWN0Lg0KDQpUaGUgcHJvZHVjdCBBUEkgYW5kIG5ldyBzZXJ2aWNl
+IGFjY291bnRzIHdpbGwgYmUgYWRkZWQgdG8geW91ciBwcm9qZWN0cyAgDQpsaXN0ZWQgYmVsb3c6
+DQoNCiAgLSBKYXZhU2NyaXB0IChqYXZhc2NyaXB0LTdiYjc2KQ0KDQpGb3IgZnVydGhlciBpbmZv
+cm1hdGlvbiwgdmlzaXQgb3VyIEZBUVszXSBhbmQgcmVhZCBhYm91dCBGaXJlYmFzZSBzZXJ2aWNl
+ICANCmFjY291bnRzWzRdLg0KDQpJZiB5b3UgaGF2ZSBhbnkgcXVlc3Rpb25zLCBwbGVhc2UgY29u
+dGFjdCBzdXBwb3J0WzVdLg0KDQpUaGFua3MsDQpUaGUgRmlyZWJhc2UgVGVhbQ0KDQpbMV1odHRw
+czovL2NvbnNvbGUuY2xvdWQuZ29vZ2xlLmNvbS9hcGlzL2xpYnJhcnkvZmlyZWJhc2VzdG9yYWdl
+Lmdvb2dsZWFwaXMuY29tDQpbMl1tYWlsdG86ZmlyZWJhc2Utc3RvcmFnZUBzeXN0ZW0uZ3NlcnZp
+Y2VhY2NvdW50LmNvbQ0KWzNdaHR0cHM6Ly9maXJlYmFzZS5nb29nbGUuY29tL3N1cHBvcnQvZmFx
+LyNkZXZlbG9wDQpbNF1odHRwczovL2ZpcmViYXNlLmdvb2dsZS5jb20vc3VwcG9ydC9ndWlkZXMv
+c2VydmljZS1hY2NvdW50cw0KWzVdaHR0cHM6Ly9maXJlYmFzZS5nb29nbGUuY29tL3N1cHBvcnQN
+Cg0KWW91IGhhdmUgcmVjZWl2ZWQgdGhpcyBtYW5kYXRvcnkgc2VydmljZSBhbm5vdW5jZW1lbnQg
+dG8gdXBkYXRlIHlvdSBhYm91dCAgDQppbXBvcnRhbnQgY2hhbmdlcyB0byBGaXJlYmFzZSBvciB5
+b3VyIGFjY291bnQuDQrCqSAyMDIxIEdvb2dsZSBMTEMgMTYwMCBBbXBoaXRoZWF0cmUgUGFya3dh
+eSBNb3VudGFpbiBWaWV3LCBDQSA5NDA0MyBVU0ENCg==
+--0000000000002627bb05c7b9cc06
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <head>
+=20
+    <meta http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8">
+    </meta>
+    <!-- [if !mso]><! -->
+    <meta http-equiv=3DX-UA-Compatible content=3DIE=3Dedge>
+    </meta>
+    <!-- <![endif] -->
+=20
+    <meta name=3Dviewport content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0">
+    </meta>
+    <meta name=3Drobots content=3D"no index">
+    </meta>
+    <!--
+      [if mso | ie]> <style> .sup { vertical-align: 1px !important; font-si=
+ze: 100% !important; }
+      </style> <![endif]
+    -->
+    <!--
+      [if ie]> <style> .sup { vertical-align: 6px !important; font-size: 80=
+% !important; } </style>
+      <![endif]
+    -->
+    <title>Mandatory Service Announcement from Firebase</title>
+    <html lang=3Den>
+    <style>
+      body{
+        font-family:Google Sans, Roboto,  sans-serif;
+        font-size:14px;
+        -webkit-text-size-adjust: none !important;
+        -webkit-font-smoothing: antialiased
+        !important;
+        -ms-text-size-adjust: none !important;
+      }
+      table, tr, td {
+        border-collapse:collapse;
+=20
+        mso-table-lspace:0pt;
+        mso-table-rspace:0pt;
+      }
+      a{
+        color:#0288d1;
+        text-decoration: none;">
+      }
+      a:link, a:visited, a:hover, a:active {
+        color: #4285f4;
+        text-decoration: none;
+      }
+      .appleLinks a {
+        color:#000000   !important;
+=20
+        text-decoration:none !important;
+      }
+      strong {
+        font-weight: bold !important;
+      }
+      em {
+        font-style: italic !important;
+      }
+      .yshortcuts a span {
+        color: inherit !important;
+        border-bottom: none !important;
+      }
+      html {
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: 100%;
+      }
+      .ReadMsgBody {
+        width: 100%;
+      }
+      .ExternalClass {
+        width:
+        100%;
+      }
+      .ExternalClass * {
+        line-height: 100%
+      }
+      td {
+        -webkit-text-size-adjust: none;
+      }
+      a[href^=3Dtel] {
+        color:     inherit;
+        text-decoration:   none;
+      }
+      .mob-hide {
+        display:none !important;
+      }
+      div, p, a, li, td {
+        -webkit-text-size-adjust:none;
+      }
+      td {
+        text-decoration:none !important;
+      }
+      a[x-apple-data-detectors] {
+        color: inherit
+        !important;
+        text-decoration:   none !important;
+        font-size: inherit !important;
+=20
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height:   inherit
+        !important;
+      }
+      @media all and (max-width: 600px) {
+        .table-main-gmail {
+          /*   Forces
+          Gmail to display Desktop   view */
+          width: 100% !important;
+          min-width:100% !important;
+        }
+      }
+    </style>
+  </head>
+  <body style=3Dbackground-color:#F5F5F5;>
+    <div class=3Dmain style=3D"padding:10px 0;">
+        <!--
+        Note that you'll need to adjust the width of the whole email here i=
+f the email is set at
+        700px, etc. - set style=3D"min-width" to the pixel width of the ema=
+il on the TABLE and the
+        TD for Gmail App
+        -->
+        <!-- Main contentr style=3D"    vertical-align: top;
+            padding: 30px 25px;
+            border-top:1px solid #e0e0e0;
+    "t -->
+        <!-- [if !mso]><! -->
+        <table class=3D"table-main table-main-gmail" style=3D" border:1px s=
+olid #dedede;
+            border-spacing: 0px;
+            width: 600;
+            max-width:600px;
+            border:1px solid #dedede;
+            border-spacing: 0px;
+            width: 600;
+            max-width:600px;
+            background-color:#ffffff;" align=3Dcenter>
+        <!-- <![endif] -->
+        <!--
+        [if (gte mso 9)|(IE)]>
+        <table class=3D"table-main table-main-other">
+        <![endif]
+        -->
+          <tbody class=3Dmain>
+
+            <!-- PREHEADER START -->
+            <tr>
+              <td>
+                <table role=3Dpresentation class=3Dlogo-table style=3D"widt=
+h: 100%">
+                  <tbody>
+                    <tr>
+                      <td class=3Dlogo style=3D"align: center;
+                          vertical-align: top;
+                          padding:23px 0;" align=3Dcenter>
+                        <a target=3D_blank href=3Dhttps://notifications.goo=
+gle.com/g/p/AD-FnEyLrWjTmwIWhWYwcR8pA-cIkTdnSA5RIzUhsJD4ibMrBztJ18uEx5I-oeN=
+0f5oIgsGjLQZiT7VGfi7Em0tUWjWlReEuHAXJw3I>
+                        <img style=3D" height: 40px;
+                            vertical-align: middle" alt=3D"Firebase Console=
+" src=3Dhttp://gstatic.com/pantheon/images/iam/email/firebase_lockup.png ti=
+tle=3DFirebase>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+                <!-- Displayed in the inbox preview, but does not appear in=
+ the message body. -->
+ =20
+    <div style=3D"height:0px; font-size:0px; max-height:0px; min-height: 0p=
+x; line-height:0px; width: 100%; color: #fff; display:none;">We=E2=80=99re =
+adding new API(s) and service account(s) to your project(s).</div>
+           =20
+            <!-- PREHEADER END -->
+
+            <!-- BODY START -->
+            <tr>
+              <td class=3Dcontent style=3D"
+                  vertical-align: top;
+                  padding: 30px 25px;
+                  border-top:1px solid #e0e0e0;
+                  font-weight:400;
+                  font-size:14px;
+                  line-height:22px;
+                  color: #455A64">
+              <div class=3Dhello style=3D"
+                  color:#263238;
+                  font-weight:700;
+                  font-size:20px;
+                  font-family: Google Sans, Roboto, sans-serif;
+                  line-height:26px;
+                  padding:0 0;">
+                Hi mrcloud,
+              </div>
+       =20
+
+<p>We are updating our product API for Cloud Storage for Firebase so that e=
+ach Firebase project has its own dedicated Storage service account. <strong=
+>No action is required on your part, unless you use Terraform.</strong></p>
+
+<p>You will see our API enabled and added service account(s) on your projec=
+t(s) <strong>by July 23, 2021.</strong></p>
+
+<h3>What happened?</h3>
+
+<p>The <a style=3D"color:#1a73e8; font-family:Roboto, arial; font-size:14px=
+; text-decoration:none" target=3D_blank href=3Dhttps://notifications.google=
+.com/g/p/AD-FnEyADZsxArWIpLAOdKnPUrAA-iM4SMPkH9Jsf7cFeK-w5lYmwzgjzqav_Pewp0=
+SfM0cJNaV32CIJPx9-6MXdgJZDs5Xzp5H9TYrBk9czloaDYg0ZIfTZtxzWV3rgpHoqwxPIT6LEU=
+5VgwWUJUcPoTi6Y>Cloud Storage for Firebase API</a> will be enabled on your =
+project(s) (see the list below). This change enables new security and proje=
+ct-wide features that we&#39;d like to add in the future.</p>
+
+<p>A new service account will be added to your project(s) to manage your bu=
+cket(s) and will follow this pattern:</p>
+
+<p>=E2=80=83=E2=80=83service-<strong>&lt;project number&gt;</strong>@<a rel=
+=3Dnofollow style=3Dtext-decoration:none>gcp-sa-firebasestorage.iam.gservic=
+eaccount.com</a></p>
+
+<p>Your applications will continue to work as before. <strong>No action is =
+required on your part, unless you use Terraform; Terraform users will need =
+to add <a rel=3Dnofollow style=3D"text-decoration:none; color:#898989"><cod=
+e>firebasestorage.googleapis.com</code></a> to their list of enabled APIs a=
+nd add the new service account to their IAM configuration.</strong></p>
+
+<p>By <strong>July 29, 2022, </strong>the legacy shared Firebase service ac=
+count, <a rel=3Dnofollow style=3D"text-decoration:none; color:#455A64">fire=
+base-storage@system.gserviceaccount.com</a>, will be fully replaced by dedi=
+cated service accounts.</p>
+
+<h4>Will this affect my bill?</h4>
+
+<p>No, this change will only enable the product API for Cloud Storage for F=
+irebase and upgrade you to a dedicated service account for your project(s).=
+</p>
+
+<h4>Are there security concerns with enabling this API?</h4>
+
+<p>The new service accounts will have the same permissions and functionalit=
+y as the service account they are replacing. <strong>This change does not a=
+ffect other permissions for your project.</strong></p>
+
+<p>The product API and new service accounts will be added to your projects =
+listed below:</p>
+
+<ul>
+<li>
+   <a style=3D"color:#1a73e8; font-family:Roboto, arial; font-size:14px; te=
+xt-decoration:none" href=3Dhttps://notifications.google.com/g/p/AD-FnEwRcT7=
+UTN56GgimmELYPLRq3-k-SMkrD1pPKVzOZ1VJpzYdFPgjAFNPHp1p3Ryz3KOmtTjYq2DegZVJtP=
+FAk92mUYOe-pHmG9nT6pfAxs75BgWiMDIGRtEYQiUtqUJjBZKAOdmmH6-__A target=3D_blan=
+k>JavaScript (javascript-7bb76)</a>
+</li>
+</ul>
+
+<p>For further information, visit our <a style=3D"color:#1a73e8; font-famil=
+y:Roboto, arial; font-size:14px; text-decoration:none" target=3D_blank href=
+=3Dhttps://notifications.google.com/g/p/AD-FnEwDLc3OONC7UxrZapgbEDVFzqHKF-O=
+ZDFGkQ3ZjgEhGg9BPfkE8QFGa114SDnHyOF3-5rRqC0I5eKthq_48UJ9DG2_cOkFu-SqPYSwnEW=
+HT-OaTQLo>FAQ</a> and read about <a style=3D"color:#1a73e8; font-family:Rob=
+oto, arial; font-size:14px; text-decoration:none" target=3D_blank href=3Dht=
+tps://notifications.google.com/g/p/AD-FnExeXoNwpsOMZOkV0ZQVM5xM4KMiHDCNRRS5=
+83eeAwPYdawHvgNHiMJTM8mI2Da4k6H1IHokc9_ZLeRcUeFNn4ouj-JQE5tw2BRW6fYoOYKgRRH=
+xth5tkixg9kUuRc5yAQ>Firebase service accounts</a>.</p>
+
+<p>If you have any questions, please <a style=3D"color:#1a73e8; font-family=
+:Roboto, arial; font-size:14px; text-decoration:none" target=3D_blank href=
+=3Dhttps://notifications.google.com/g/p/AD-FnEweqgZrJ-TL31cQys7edwdYh5VypGO=
+elNjaTfWEKopBaU_HbXTfgMgYDhF4XZWd0z3TchM-UDV4ceLT93X0m2ZgR6BliOK5RA>contact=
+ support</a>.</p>
+
+              =20
+          <!-- SIGNATURE START -->
+
+<div style=3D"padding:20px 0 0;">
+                Thanks,
+              </div>
+              <div class=3Dsignoff style=3D"
+              color:#263238;
+              font-weight:700;
+              font-size:14px;
+              line-height:20px;">
+             The Firebase Team
+              </div>
+           =20
+          <!-- SIGNATURE END -->
+
+
+</td>
+          </tr>
+        =20
+            <!-- BODY END -->
+
+
+          <!-- FOOTER START -->
+          <tr>
+            <td class=3Dtype-msa style=3D"
+                vertical-align: top;
+                background-color: #F4F4F6;
+                color:#4D4D4D;
+                font-weight:400;
+                font-size:12px;
+                line-height:16px;
+                padding:20px 25px;
+                text-align: center;">
+              You have received this mandatory service announcement to upda=
+te you
+              about important changes to Firebase or your account.
+            </td>
+          </tr>
+=20
+          <tr>
+            <td class=3Dgoogle-legal style=3D"
+                text-align: center;
+                vertical-align: top;
+                background-color: #4D4D4D;
+                padding:24px 24px;">
+              <table style=3D"
+                  width:100%;
+                  border: 0;
+                  border-spacing: 0px;
+                  border-collapse: separate;
+                  padding: 0;">
+                <tbody>
+                  <tr>
+                    <td align=3Dleft valign=3Dmiddle>
+                      <img alt=3D"" src=3Dhttps://www.gstatic.com/images/br=
+anding/googlelogo/2x/googlelogo_light_color_74x24dp.png height=3D24 width=
+=3D70 title=3DGoogle style=3Ddisplay:block;>
+                    </td>
+=20
+                    <td align=3Dright valign=3Dmiddle style=3D"color:#D6DDE=
+1; font-weight:400; font-size:12px; line-height:14px; padding:0 0;">
+                      <a href=3D# style=3D"text-decoration: none; color: #F=
+4F4F6;">
+                        =C2=A9 2021 Google LLC
+                        <br>
+                        1600 Amphitheatre Parkway
+                        <br>
+                        Mountain View, CA 94043 USA
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <!-- FOOTER END -->
+=20
+        </tbody>
+      </table>
+    <!-- MAIN CONTENT END -->
+    </div>
+  <img alt=3D"" height=3D1 width=3D3 src=3Dhttps://notifications.google.com=
+/g/img/AD-FnEyjfGOr_HUpXHPTDBkuy6fay5D_gK3i0fOPy4yZcuVQJHIk.gif></body>
+</html>
+
+--0000000000002627bb05c7b9cc06--

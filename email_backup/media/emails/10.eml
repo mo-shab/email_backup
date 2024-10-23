@@ -1,0 +1,46 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a9a:7ad1:0:b029:b6:48f8:3fed with SMTP id i17csp5896945lkn;
+        Sat, 2 Jan 2021 12:01:29 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJzuY/PQz8409lu4yic/iKkorAi43fo+G/o1M5V+C5DiXt0qqhcgy72UQAvYUfHlFo+12kVG
+X-Received: by 2002:a25:3290:: with SMTP id y138mr94601531yby.485.1609617689159;
+        Sat, 02 Jan 2021 12:01:29 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1609617689; cv=none;
+        d=google.com; s=arc-20160816;
+        b=cFoVTjpgBvIAT6e5MVzyWqgR0Mj2JXhUbb9r8AlXA8iegVPcGFuG7i3SVvC5ZTwKjK
+         liIvlfHbTIFnUDNsPs+0Kdj9DVQI9q4wdPRy6vuLxzMqTK6LJaQyFaAIj3D4p7LdZ5M3
+         aLy5PYTHrHUX8HP0zUQ+nnbhEJGusOrr9el2aPw4i44qDBwFwEbVy4FWp/ypisDnONFu
+         ofcy1hlyIT8dB8f3kNcKuDwCMt6bBNgfePEFElN64527Jytk3QBjuqKOEBGfBKN8Z5Qp
+         Zk0zOXJ7GuHktSZUB/jjiJxzd6o3HKOl5959qtqElA0/FuOiTFfE+IA62GuYLQMylUmG
+         nOpQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:from:subject:to;
+        bh=k2uProW8OQO38tYNrrHxPhhTULlHmudUTz5w+kCNaXM=;
+        b=JRMB54BzTo3HTp1nVJ7r0ex0WVLgomGe9eJeX6PLjy0bId6hXudHzkSMS5vfyhbhRO
+         rXgSuFf7UUqhB/dleRvy09HwEY81+Ag3I7f5Mo7UXmkEO13vVQ2QxkyUWpYjHgPR3hFy
+         bVVYUm3CZLleEroo+1fyDDaJCTVf/po8J2r3L5BkEzpGveFjJn0gZbMkWz+mKZqTTdvK
+         GrfYE0Ea+3CwFYzUMSPDDRZNZ905qGoJGYht5Qj6uIMt6jSeTQRyW2j9iLXQzF7ZeA8V
+         ZI6RyWlhMN4Eitx0VUq/NbcUBIdDr1IvnPQEAhrlXLE5A7S76D4XyQKnKCQSdT4OaWbu
+         OZXg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of noreply@trinity-palace.org designates 198.245.62.196 as permitted sender) smtp.mailfrom=noreply@trinity-palace.org
+Return-Path: <noreply@trinity-palace.org>
+Received: from MTL-208580 (ns507571.ip-198-245-62.net. [198.245.62.196])
+        by mx.google.com with ESMTPS id b15si46941990ybn.473.2021.01.02.12.01.28
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Sat, 02 Jan 2021 12:01:29 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply@trinity-palace.org designates 198.245.62.196 as permitted sender) client-ip=198.245.62.196;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of noreply@trinity-palace.org designates 198.245.62.196 as permitted sender) smtp.mailfrom=noreply@trinity-palace.org
+Received: by MTL-208580 (Postfix, from userid 112)
+	id 23E53C21279; Sat,  2 Jan 2021 20:01:27 +0000 (UTC)
+To: Multiple recipients <noreply@trinity-palace.org>
+Subject: We are a invite site now
+X-PHP-Originating-Script: 0:admin.massemail.php
+From: noreply@trinity-palace.org
+Message-Id: <20210102200127.23E53C21279@MTL-208580>
+Date: Sat,  2 Jan 2021 20:01:27 +0000 (UTC)
+
+We are a invite site now
+Inviter will have to confirm invited user account
+Please send your invites out if you need any more Please ask staff who will give you them 
+Many thax admin

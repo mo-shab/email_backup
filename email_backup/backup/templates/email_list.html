@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email List</title>
+</head>
+<body>
+    <h2>Saved Emails</h2>
+    <ul>
+        {% for email in emails %}
+        <li>
+            <strong>Subject:</strong> <a href="{% url 'email_detail' email.id %}">{{ email.subject }}</a><br>
+            <strong>From:</strong> {{ email.sender }}<br>
+            <strong>Date:</strong> {{ email.date_received }}<br>
+            <a href="{{ email.eml_file.url }}" download>Download EML</a>
+        </li>
+            <hr>
+        {% empty %}
+            <li>No emails found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

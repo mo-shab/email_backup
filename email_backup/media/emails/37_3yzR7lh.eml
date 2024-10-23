@@ -1,0 +1,245 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:24:b029:bb:c18e:4504 with SMTP id h4csp1765194lkm;
+        Fri, 29 Jan 2021 04:12:57 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJzBjryqOUH1IRVwuts9nIkFvMcJvFjxUG1Fv9ynxc3n34ZUBoNEgvx0959dc4gVxYUQ72Or
+X-Received: by 2002:a17:90a:c257:: with SMTP id d23mr4399082pjx.190.1611922376776;
+        Fri, 29 Jan 2021 04:12:56 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1611922376; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Y+dfOsPsBN91/tawSFYCQ+ZkhjHFowNWaDNdzCoxUdZnNPar9U5vMUUqi+Aj3D/51H
+         bKwwtr40PBUO5aGrMBQEYBy09zQ4bGfV9s977MFiIklR/zO5u+Td08TqOSXjjIF10HdJ
+         rflBIUGo2PqxH0xPzbfuqDv0lqfUpyfwa3hi2pIDAv6/sGxpKwXYNIWaPV184jdjGgxh
+         D9lXRB32a1xvyCd/TmKETrP1TidHlRzT5Y1v1S0rzz2fL7Cv/QzMvTCdkPGiIGlx4axk
+         SJEBBgrAy9usLsOIkMhNR/TWy6IZ6DcZRRVEqxDa4muqVrM7TC9mR9HFDeexbjW1ZcTh
+         bxNw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=UYau/v0IuRA4nTcnFF2AY73Ay9/AnWjYOmBfsDpkoik=;
+        b=tsr6egOeaWDHu9ywyPKUk1axMoJKXbmTd81dSFzfMYYUd5BEmJzs5QgEvzV4/urK63
+         vlQaZQZO6e5XuYN2nzkXLq6NHomNTBtRFLPE5eaqRekZcjIOWG5uVW9d4ar8zHK+e/3u
+         Be3/i6ILSVPmwtErYtILRUq7gMpG+akqoqB34xIy6kXgJEV/z61ej2d1TeYUMNHItgED
+         fplqphEA9HbKN9ukh7wLjv8cAUl8tWqLKExz3zfrBy9S3w0tS5Z7UB5367Uu0ARvFwJa
+         kNSRrWiAxZGDxp+QmHR/d/kcWixHswMHdhFeELQrcbF9AK+9wE4EG9Ih6rBa5x4AgPn3
+         ue0A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass (test mode) header.i=@github.com header.s=pf2014 header.b=E+Bp2lTg;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.254.198 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=github.com
+Return-Path: <noreply@github.com>
+Received: from out-15.smtp.github.com (out-15.smtp.github.com. [192.30.254.198])
+        by mx.google.com with ESMTPS id l132si11431391pfd.293.2021.01.29.04.12.55
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Fri, 29 Jan 2021 04:12:56 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply@github.com designates 192.30.254.198 as permitted sender) client-ip=192.30.254.198;
+Authentication-Results: mx.google.com;
+       dkim=pass (test mode) header.i=@github.com header.s=pf2014 header.b=E+Bp2lTg;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.254.198 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=github.com
+Received: from github-highworker-97ce8e3.ash1-iad.github.net (github-highworker-97ce8e3.ash1-iad.github.net [10.56.109.37])
+	by smtp.github.com (Postfix) with ESMTP id BF78D7A0049
+	for <mrcloud.med@gmail.com>; Fri, 29 Jan 2021 04:12:55 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2014; t=1611922375;
+	bh=UYau/v0IuRA4nTcnFF2AY73Ay9/AnWjYOmBfsDpkoik=;
+	h=Date:From:To:Subject:From;
+	b=E+Bp2lTgxpEt+H3skxeSx31EOoq66o+EDssQHasxzgmiPPI2FgMH1hJkyaQpkHwt/
+	 3F4Hr13Xo7FbMt93H9jlfmIfdfesmNKm0r95MzgAK7r3eNa2wt3vrbcaQyoK8JCmfr
+	 IdpIkr6KxP4M7mCJ4fpQOb9F8hJAC0CDMZWBn0hk=
+Date: Fri, 29 Jan 2021 04:12:55 -0800
+From: GitHub <noreply@github.com>
+To: mrcloud1 <mrcloud.med@gmail.com>
+Message-ID: <6013fbc77b967_14711a40976e6@github-highworker-97ce8e3.ash1-iad.github.net.mail>
+Subject: [GitHub] Please verify your email address.
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6013fbc77b4bb_14711a4097563";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+X-GitHub-Verify: mrcloud1
+
+
+----==_mimepart_6013fbc77b4bb_14711a4097563
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Almost done, @mrcloud1!=0D
+=0D
+To complete your GitHub sign up, we just need to verify your email addres=
+s: mrcloud.med@gmail.com.=0D
+=0D
+Click the link below to verify your email address:=0D
+https://github.com/users/mrcloud1/emails/148798067/confirm_verification/3=
+72da7b0c25e00524efb907fcd3f2faa8c2e934a=0D
+=0D
+Once verified, you can start using all of GitHub's features to explore, b=
+uild, and share projects.=0D
+=0D
+=0D
+=0D
+You're receiving this email because you recently created a new GitHub acc=
+ount or added a new email address. If this wasn=E2=80=99t you, please ign=
+ore this email.=0D
+=0D
+---=0D
+Sent with <3 by GitHub.=0D
+GitHub, Inc. 88 Colin P Kelly Jr Street=0D
+San Francisco, CA 94107=0D
+
+----==_mimepart_6013fbc77b4bb_14711a4097563
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+    <title>[GitHub] Please verify your email address.</title>
+
+    
+
+    
+
+
+  </head>
+  <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" style='width: 100% !important; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #222222; font-family: "Helvetica", "Arial", sans-serif; font-weight: normal; text-align: left; line-height: 19px; font-size: 14px; background-color: #fafafa; margin: 0; padding: 0;' bgcolor="#fafafa">
+
+    <table class="body" style='border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; color: #222222; font-family: "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; background-color: #fafafa; margin: 0; padding: 10px;' bgcolor="#fafafa">
+      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+        <td class="center" align="center" valign="top" style='word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: center; color: #222222; font-family: "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;'>
+          <center style="width: 100%; min-width: 580px;">
+
+            <table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 580px; margin: 0 auto; padding: 0;">
+              <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                <td style='word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;' align="left" valign="top">
+
+                  <table class="email-header" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; margin-top: 20px; width: 100%; padding: 0;">
+                    <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                      <td class="center" align="center" style='word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: center; color: #222222; font-family: "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;' valign="top">
+                        <center style="width: 100%; min-width: 580px;">
+                          <div class="invertocat-mark" style="margin-top: 20px; margin-bottom: 30px; text-align: center !important;" align="center">
+                            <img class="center" src="https://github.githubassets.com/images/email/global/invertocat-mark.png" width="50" height="48" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: 50px; max-width: 50px; float: none; clear: both; display: block; height: 48px; max-height: 48px; margin: 0 auto;" align="none">
+                          </div>
+                        </center>
+                      </td>
+                      <td class="expander" style='word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;' align="left" valign="top"></td>
+                    </tr>
+                  </table>
+
+                  <table class="wrapper email-body" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; border-radius: 3px !important; box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important; background-color: #ffffff; padding: 0; border: 1px solid #dddddd;" bgcolor="#ffffff">
+                    <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                      <td class="text-pad" style='word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;' align="left" valign="top">
+
+                        <div class="email-content" style="font-size: 14px; font-weight: normal; color: #333333; line-height: 20px; margin: 20px;">
+
+                          
+
+
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Verify email address</title>
+
+
+
+
+
+<table class="body" style='box-sizing: border-box; border-collapse: separate !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #fff; border-spacing: 0; vertical-align: top; text-align: left; height: 100%; color: #222222; font-family: "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 10px;' width="100%" bgcolor="#fff">
+	<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+		<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 14px; vertical-align: top; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; text-align: left; color: #222222; font-weight: normal; line-height: 19px; margin: 0; padding: 0;" valign="top" align="left"></td>
+		<td class="container" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 14px; vertical-align: top; display: block; max-width: 580px; width: 580px; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; text-align: left; color: #222222; font-weight: normal; line-height: 19px; margin: 0 auto; padding: 24px;" width="580" valign="top" align="left">
+			<div class="content" style="box-sizing: border-box; display: block; max-width: 580px; margin: 0 auto;">
+
+
+<span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">To secure your GitHub account, we just need to verify your email address: <a class="plaintext" href="mailto:mrcloud.med@gmail.com" style="color: #2ba6cb; text-decoration: none;">mrcloud.med@gmail.com</a>.</span>
+
+<h1 class="text-normal" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; line-height: 1.25; font-size: 20px; font-weight: 400 !important; color: #586069; word-break: normal; text-align: left; margin: 0 0 30px; padding: 0;" align="left">
+  Almost done, <strong class="text-gray-dark" style="color: #24292e !important;">@mrcloud1</strong>!
+    To complete your GitHub sign up,
+  we just need to verify your email address: <strong class="text-gray-dark" style="color: #24292e !important;">mrcloud.med@gmail.com</strong>.
+</h1>
+
+<table cellpadding="0" cellspacing="0" style="box-sizing: border-box; border-collapse: separate !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; border-spacing: 0; vertical-align: top; text-align: left; margin: 0 0 30px; padding: 0;" width="100%">
+  <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+    <td align="" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 14px; vertical-align: top; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; text-align: left; color: #222222; font-weight: normal; line-height: 19px; margin: 0; padding: 0;" valign="top">
+      <table cellpadding="0" cellspacing="0" style="box-sizing: border-box; border-collapse: separate !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto; border-spacing: 0; vertical-align: top; text-align: left; padding: 0;">
+        <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+          <td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 14px; vertical-align: top; background-color: #0366d6; border-radius: 5px; text-align: center; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; color: #222222; font-weight: normal; line-height: 19px; margin: 0; padding: 0;" valign="top" bgcolor="#0366d6" align="center">
+            <a style="box-sizing: border-box; text-decoration: none; background-color: #0366d6; border-radius: 5px; color: #ffffff; display: inline-block; font-size: 14px; font-weight: bold; cursor: pointer; margin: 0; padding: 10px 20px; border: 1px solid #0366d6;" href="https://github.com/users/mrcloud1/emails/148798067/confirm_verification/372da7b0c25e00524efb907fcd3f2faa8c2e934a?utm_campaign=github-email-verification&amp;utm_content=html&amp;utm_medium=email&amp;utm_source=verification-email">Verify email address</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 14px; font-weight: normal; line-height: 1.5; color: #222222; text-align: left; margin: 0 0 15px; padding: 0;" align="left">
+    Once verified, you can start using all of GitHub's features to explore, build, and share projects.
+</p>
+
+<p class="f6 text-gray" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-weight: normal; line-height: 1.5; color: #586069 !important; font-size: 12px !important; text-align: left; margin: 0 0 15px; padding: 0;" align="left">Button not working? Paste the following link into your browser: <a style="box-sizing: border-box; color: #0366d6; text-decoration: none; word-break: break-all;" href="https://github.com/users/mrcloud1/emails/148798067/confirm_verification/372da7b0c25e00524efb907fcd3f2faa8c2e934a?utm_campaign=github-email-verification&amp;utm_content=html&amp;utm_medium=email&amp;utm_source=verification-email">https://github.com/users/mrcloud1/emails/148798067/confirm_verification/372da7b0c25e00524efb907fcd3f2faa8c2e934a</a></p>
+
+<p class="f6 text-gray" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-weight: normal; line-height: 1.5; color: #586069 !important; font-size: 12px !important; text-align: left; margin: 0 0 15px; padding: 0;" align="left">You&#8217;re receiving this email because you recently created a new GitHub account or added a new email address. If this wasn&#8217;t you, please ignore this email.</p>
+
+
+				<div class="footer" style="box-sizing: border-box; clear: both; width: 100%;">
+					<hr class="footer-hr" style="height: 0; overflow: visible; border-top-color: #e1e4e8; color: #959da5; font-size: 12px; line-height: 18px; background-color: #d9d9d9; margin: 24px 0 30px; border-style: solid none none; border-width: 1px 0 0;">
+		      <div class="footer-links" style="box-sizing: border-box; color: #959da5; font-size: 12px; line-height: 18px;">
+		        <p class="footer-text" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-weight: normal; color: #959da5; font-size: 12px; line-height: 18px; text-align: center; margin: 0 0 15px; padding: 0;" align="center">
+							<a href="https://github.com/settings/emails" style="box-sizing: border-box; color: #959da5; font-size: 12px; line-height: 18px; text-decoration: none;">Email preferences</a> &#183;
+							<a href="https://docs.github.com/articles/github-terms-of-service/" style="box-sizing: border-box; color: #959da5; font-size: 12px; line-height: 18px; text-decoration: none;">Terms</a> &#183;
+							<a href="https://docs.github.com/articles/github-privacy-policy/" style="box-sizing: border-box; color: #959da5; font-size: 12px; line-height: 18px; text-decoration: none;">Privacy</a> &#183;
+							<a href="https://github.com/login" style="box-sizing: border-box; color: #959da5; font-size: 12px; line-height: 18px; text-decoration: none;">Sign into GitHub</a>
+						</p>
+		      </div>
+				</div>
+			</div>
+
+		</td>
+		<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 14px; vertical-align: top; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; text-align: left; color: #222222; font-weight: normal; line-height: 19px; margin: 0; padding: 0;" valign="top" align="left"></td>
+	</tr>
+</table>
+
+
+
+
+
+                        </div>
+
+                      </td>
+                    </tr>
+                  </table>
+
+                  <table class="email-footer" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; margin-bottom: 30px; width: 100%; padding: 0;">
+                    <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                      <td class="center" align="center" style='word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: center; color: #222222; font-family: "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;' valign="top">
+                        <center style="width: 100%; min-width: 580px;">
+                          <div class="wordmark" style="margin-top: 25px; margin-bottom: 25px; text-align: center !important;" align="center">
+                            <img class="center" src="https://github.githubassets.com/images/email/global/wordmark.png" width="102" height="28" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: 102px; max-width: 102px; float: none; clear: both; display: block; height: 28px; max-height: 28px; margin: 0 auto;" align="none">
+                          </div>
+                          <p class="footer-text" style='color: #888888; font-family: "Helvetica", "Arial", sans-serif; font-weight: normal; text-align: center; line-height: 1.5; font-size: 12px; margin: 0 0 10px; padding: 0;' align="center">
+                            Sent with &lt;3 by <strong>GitHub</strong>.<br>
+                            GitHub, Inc. 88 Colin P Kelly Jr Street<br>San Francisco, CA 94107
+                          </p>
+                        </center>
+                      </td>
+                      <td class="expander" style='word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;' align="left" valign="top"></td>
+                    </tr>
+                  </table>
+
+                </td>
+              </tr>
+            </table>
+
+          </center>
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>
+
+----==_mimepart_6013fbc77b4bb_14711a4097563--

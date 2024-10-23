@@ -1,0 +1,933 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:cad2:0:b029:f4:b3fb:84d3 with SMTP id e18csp612253lky;
+        Fri, 14 May 2021 08:18:35 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxA+4xqLxQN5CLNyx9g/Z+aQlB8sLeCLvAzA195lGoJTseydLHI6sIizNLj64n3qdDFeToU
+X-Received: by 2002:a37:a988:: with SMTP id s130mr45602555qke.325.1621005515159;
+        Fri, 14 May 2021 08:18:35 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1621005515; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Y36X4w1dmxI46eGJMnSRYXX5NrY6DIjqjVmu7Ojh1L1RIU4Pj/wbATizmlSWu44sm9
+         roX3AIlyMJgCUsvHl8Ve1L1dGg67pnxL2aaOZZDtYz8Hc63BJSXWhUs5WPTdprQk1XIM
+         /HNtFyQRAD7/91j68qPPU44waW/uVtqzP1HoneLXPaN/u3k6S0yY+ly7kE84y3+bg1Mg
+         vmTY7Clcntae+zKnZHxwbD+ODa1PldeFfd7Cea00yuRj3flqLkM2mPB9bUbMv9zLOznE
+         GfabzW9fsh9nj0GqWzzp/5AAVANc5k+S315rfpqq9BOiqD2Wmr5nU7bHxvmTiNjhZlU6
+         cVYg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:list-unsubscribe-post:list-unsubscribe:feedback-id
+         :sender:content-transfer-encoding:mime-version:date:subject:from:to
+         :dkim-signature:dkim-signature;
+        bh=gd3um195NNF/TU9Lg8+5rva2h1Ks7BoCBICS407GJ6A=;
+        b=KJcIJmv4C4swnTYZ9JMWxflBuzWOIpTRGHkVd93Xbp1QiLFbTM2defqsofkII8LdN/
+         VJd8/V+7s7anVyRupvY3bmdHittyI6SH5iXH2B/PI9DA4DXjPf9RRIMe8N3HLPrDCluJ
+         nXZKKu12YmUp2D/8Z8SXNEG7gkl6zv30FXXfv6xhPDaY5ej9PjQw6CqL+0GUqJqKYpAz
+         nwrbCACsg4IGYHsCI6jWHIyi9FtDVz3EhAaHKFTmQUCqR6P5DHmvR7iRtVA1hbWtM8x0
+         eJ5Q8GELGPQ3AJXKbRdB/d3VcSlzBb3aNwfKhFz4pdAtaf/8ON+pgOQtc3UixlUROAOV
+         naSw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@s1.asa1.acemsc3.com header.s=dk header.b=XXxEoeih;
+       dkim=pass header.i=@acems1.com header.s=dk header.b=4QcLlF6R;
+       spf=pass (google.com: domain of bounce-920364-312-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com designates 192.92.97.74 as permitted sender) smtp.mailfrom="bounce-920364-312-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com"
+Return-Path: <bounce-920364-312-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com>
+Received: from s1.asa1.acemsc3.com (s1.asa1.acemsc3.com. [192.92.97.74])
+        by mx.google.com with ESMTPS id h19si4681166qtn.308.2021.05.14.08.18.34
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 14 May 2021 08:18:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-920364-312-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com designates 192.92.97.74 as permitted sender) client-ip=192.92.97.74;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@s1.asa1.acemsc3.com header.s=dk header.b=XXxEoeih;
+       dkim=pass header.i=@acems1.com header.s=dk header.b=4QcLlF6R;
+       spf=pass (google.com: domain of bounce-920364-312-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com designates 192.92.97.74 as permitted sender) smtp.mailfrom="bounce-920364-312-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=s1.asa1.acemsc3.com;
+ h=To:From:Subject:Date:MIME-Version:Content-Type:Content-Transfer-Encoding:
+ Sender:List-Unsubscribe:Message-ID;
+ i=denverkr.activehosted.com@s1.asa1.acemsc3.com;
+ bh=gd3um195NNF/TU9Lg8+5rva2h1Ks7BoCBICS407GJ6A=;
+ b=XXxEoeihR4SpqstoSDR3WqzMYtx3tkpBsOzGHzn7yL8yafqueW+aiDpeGuiDlnr3xeFooONaP6PT
+   7TV7AtUWWG9ou1vWrdaF5pOmufuVqIcq7tTeFHy7qRPj8hlNutK7zIX9S7L3iWt50i9cPxfsUaq3
+   5Ahlj3bRi2Ul+lWkScA=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=acems1.com;
+ h=To:From:Subject:Date:MIME-Version:Content-Type:Content-Transfer-Encoding:
+ Sender:List-Unsubscribe:Message-ID;
+ bh=gd3um195NNF/TU9Lg8+5rva2h1Ks7BoCBICS407GJ6A=;
+ b=4QcLlF6RK61FDqpyxX4B1jk8Mpde/cE/u8kI9wR3Y0rIdvMs9cbPZk5AhVS74e6bR/ipHZZi5SI2
+   JSV4VbqR0BtbEL4wGqTgoUBvIq3Ahs/kEqa//ZdF+lyqmhBqDHTR2ww70cbmRHzR2AfnyKTjYtDy
+   oVrSe2RNbgSKbcUSOgs=
+Received: by s1.asa1.acemsc3.com id hjqack2p4do0 for <mrcloud.med@gmail.com>; Fri, 14 May 2021 15:18:04 +0000 (envelope-from <bounce-920364-312-363762-mrcloud.med=gmail.com@s1.asa1.acemsc3.com>)
+To: mrcloud.med@gmail.com
+From: "Denver Riddle" <denver@colorgradingcentral.com>
+Subject: Stop believing everything they say about Colorists...
+Date: Fri, 14 May 2021 10:18:04 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift-818525554609e94ac46a1a1.66619710_=_"
+Content-Transfer-Encoding: 7bit
+Sender: <denverkr.activehosted.com@s1.asa1.acemsc3.com>
+X-Sender: <denverkr.activehosted.com@s1.asa1.acemsc3.com>
+X-Report-Abuse: Please report abuse to abuse@activecampaign.com
+X-mid: bXJjbG91ZC5tZWRAZ21haWwuY29tICwgYzMxMiAsIG0zNDggLCBzMjE1MDg0Mg
+Feedback-ID: 920364:activecampaign
+X-250ok-CID: 920364-312
+List-Unsubscribe: <mailto:unsubscribe-5f8cbe28ba5f9070131677bfba9fca7e-312-98e2737d7256ebc4244dca9ee0144d65@s1.asa1.acemsc3.com>,
+ <http://denverkr.activehosted.com/box.php?nl=3&c=312&m=348&s=98e2737d7256ebc4244dca9ee0144d65&funcml=unsub2&luha=1>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Message-ID: <20210514151804.11067.657622146.swift@denverkr.activehosted.com>
+
+
+--_=_swift-818525554609e94ac46a1a1.66619710_=_
+Content-Type: text/plain; charset=utf-8
+
+Hey ,
+
+Has someone ever told you that you can't do something simply because it
+was too technical?
+
+This happened to me my senior year of college.
+
+A professor was covering a section on color correction and he explained
+that the job of the Colorist... 
+
+...was a 'dark art' and that not many people could do what they do.
+
+"So naturally I wondered, could I do it?"
+
+I had just discovered the power of color grading so I knew it could take
+a boring looking image...
+
+...and make it look more cinematic or like something from a movie.
+
+So I at least wanted to give it a shot.
+
+But then I took one look at the video scopes and the color wheels and
+promptly closed the color controls.
+
+If you have ever felt that way, I know how you feel.  
+
+Long story short...
+
+I discovered that I could create stunning looking images myself and it
+completely changed everything for me... 
+
+...by not being afraid and following the correct workflow my images
+helped me land gig after gig.
+
+Well we have developed two different solutions that allow you to follow
+in my same footsteps.
+
+In my last email I mentioned that we've developed our own grading tool
+using a workflow that is both easy for the beginner...
+
+...and powerful for the advanced filmmaker.
+
+And if you're intent on learning the native tools we have support for
+that too with our free grading workshop.
+
+Both options are available for you to try risk free:
+
+ 
+
+CINEMA GRADE 
+Grading Software For 
+Premiere Pro
+
+Grading plugin bypasses
+built-in tools
+
+ 
+
+https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZjaW5lbWFncmFkZS5jb20=&a=89849254&account=denverkr%2Eactivehosted%2Ecom&email=7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=98e2737d7256ebc4244dca9ee0144d65&i=312A348A3A2619 
+
+ 
+
+LEARN MORE  
+
+ 
+
+"How To Color Grade Like A Hollywood Colorist WITHOUT Moving To L.A."
+
+Training workshop for using native 
+built-in tools
+
+ 
+
+https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZ3d3cuY29sb3JncmFkaW5nY2VudHJhbC5jb20lMkZjb2xvci1jb3JyZWN0aW9uLXByZW1pZXJlLXBybyUyRiUyM2xwLXBvbS1ibG9jay0xMQ==&a=89849254&account=denverkr%2Eactivehosted%2Ecom&email=7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=98e2737d7256ebc4244dca9ee0144d65&i=312A348A3A2620
+
+ 
+
+REGISTER SEAT
+
+ 
+
+If you have any questions about the differences between the two
+solutions just hit the reply and I'll do my best to answer within 24
+hours.
+
+Are you ready to level up your filmmaking?
+
+We are here for you.
+
+Cheers,
+Denver Riddle
+
+P.S. Color grading isn't too difficult and you can create stunning
+looking imagery. 
+
+https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZjZ2NwdWJsaWMuczMtdXMtd2VzdC0yLmFtYXpvbmF3cy5jb20lMkZkZW52ZXJfaG9sbGFuZF9hdmF0YXIucG5n&a=89849254&account=denverkr%2Eactivehosted%2Ecom&email=7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=98e2737d7256ebc4244dca9ee0144d65&i=312A348A3A2621 
+
+Denver Riddle
+Founder of Color Grading Central
+denver@colorgradingcentral.com
+
+https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZ3d3cueW91dHViZS5jb20lMkZjaGFubmVsJTJGVUNBWVZkMGZYbVJKRmtCQWFRSlJ2Y3V3JTNGc3ViX2NvbmZpcm1hdGlvbiUzRDE=&a=89849254&account=denverkr%2Eactivehosted%2Ecom&email=7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=98e2737d7256ebc4244dca9ee0144d65&i=312A348A3A2622
+
+ 
+
+https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZ3d3cuaW5zdGFncmFtLmNvbSUyRmNvbG9yZ3JhZGluZyUyRg==&a=89849254&account=denverkr%2Eactivehosted%2Ecom&email=7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=98e2737d7256ebc4244dca9ee0144d65&i=312A348A3A2623 
+
+ 
+
+https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZ3d3cuZmFjZWJvb2suY29tJTJGQ29sb3ItR3JhZGluZy1DZW50cmFsLTExNDIwNTM0MjAwNzk1OSUyRg==&a=89849254&account=denverkr%2Eactivehosted%2Ecom&email=7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=98e2737d7256ebc4244dca9ee0144d65&i=312A348A3A2624 
+
+Sent to: mrcloud.med@gmail.com
+
+Color Grading Central LLC, PO Box 478, Huntsville, UT 84317, United States
+
+Don't want future emails? 
+
+Unsubscribe 
+_________________
+
+Sent to mrcloud.med@gmail.com
+
+Unsubscribe:
+http://denverkr.activehosted.com/proc.php?nl=3&amp;c=312&amp;m=348&amp;s=98e2737d7256ebc4244dca9ee0144d65&amp;act=unsub
+
+Color Grading Central LLC, PO Box 478, Huntsville, UT 84317, United States
+--_=_swift-818525554609e94ac46a1a1.66619710_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html>=0A<head><!--[if !mso]><meta http-equiv=3D"X-UA-Compat=
+ible" content=3D"IE=3Dedge"><!--<![endif]--><meta http-equiv=3D"Content-Typ=
+e" content=3D"text/html; charset=3Dutf-8"><meta http-equiv=3D"Content-Langu=
+age" content=3D"en-us"><meta name=3D"format-detection" content=3D"telephone=
+=3Dno"><meta name=3D"format-detection" content=3D"date=3Dno"><meta name=3D"=
+format-detection" content=3D"address=3Dno"><meta name=3D"format-detection" =
+content=3D"email=3Dno"><title>Preview</title><style data-ac-keep=3D"true"> =
+.ExternalClass { width: 100%; background: inherit; background-color: inheri=
+t; } .ExternalClass p, .ExternalClass ul, .ExternalClass ol { Margin: 0; } =
+.undoreset div p, .undoreset p { margin-bottom: 20px; } div[class^=3D"aolma=
+il_divbody"] { overflow: auto; } [owa] #ac-footer { padding: 20px 0px !impo=
+rtant; background: inherit; background-color: inherit; } </style><style dat=
+a-ac-keep=3D"true">=0A@media only screen and (max-width: 600px) { /*-------=
+------------------------------------------------------------------*\ Abando=
+ned Cart widget \*---------------------------------------------------------=
+---------------*/ .td_abandoned-cart img {display: block;padding-right: 0 !=
+important;padding-bottom: 0 !important;width: 100% !important;max-width: 10=
+0% !important;height: auto !important;} body { padding: 0!important; font-s=
+ize:1em!important; } * { -webkit-box-sizing: border-box; -moz-box-sizing: b=
+order-box; box-sizing: border-box; } *[class].divbody {-webkit-text-size-ad=
+just:none !important; width:auto !important;} *[class].td_picture img {widt=
+h:auto !important;} *[class].td_text { line-height: 110%; } *[class].td_but=
+ton { width: auto; } /* Collapse all block elements */ :not(.body) table { =
+display: block!important; float:none!important; border-collapse:collapse !i=
+mportant; width:100% !important; min-width:100% !important; clear:both!impo=
+rtant; } :not(.body) thead,=0A:not(.body) tbody, :not(.body) tr { display:b=
+lock!important; float:none!important; width:100% !important; } :not(.body) =
+th, :not(.body) td, :not(.body) p { display:block!important; float:none!imp=
+ortant; width:100% !important; clear:both!important; } /* Remove browser de=
+fault styling for elements */ ul, ol { margin-left: 20px; margin-bottom: 10=
+px; margin-top: 10px; -webkit-margin-before: 0; -webkit-margin-after: 0; -w=
+ebkit-padding-start: 0; } /* Set default height for spacer once collapse */=
+ *[class].spacer { height: auto!important; } a[href^=3Ddate]{ color:inherit=
+ !important; text-decoration:none !important;} a[href^=3Dtelephone]{ color:=
+inherit !important; text-decoration:none !important;} a[href^=3Daddress]{ c=
+olor:inherit !important; text-decoration:none !important;} a[href^=3Demail]=
+{ color:inherit !important; text-decoration:none !important;} /* Default ta=
+ble cell height */ td[height=3D"14"]{height:14px!important;font-size:14px!i=
+mportant;line-height:14px!important;}=0Atd[height=3D"12"]{height:12px!impor=
+tant;font-size:12px!important;line-height:12px!important;}=0Atd[height=3D"0=
+"]{height:0px!important;font-size:0px!important;line-height:0px!important;}=
+=0Atd[height=3D"11"]{height:11px!important;font-size:11px!important;line-he=
+ight:11px!important;} /*---------------------------------------------------=
+----------------------*\ Product Widget \*---------------------------------=
+----------------------------------------*/ .td_product > div { float: none =
+!important; width: 100% !important; margin-bottom: 20px !important; } .td_p=
+roduct > div img { width: 75% !important; } /* Default social icons */ *[cl=
+ass].ac-social-icon-16 {width:16px !important; height:16px !important;} *[c=
+lass].ac-social-icon-24 {width:24px !important; height:24px !important;} *[=
+class].ac-social-icon-28 {width:28px !important; height:28px !important;} *=
+[class].__ac_social_icons { margin-right: 0px !important; } }=0A</style><st=
+yle data-ac-keep=3D"true"> @media only screen and (max-width: 320px) { #lay=
+out-row4456 img { width: 100% !important; height: auto !important; max-widt=
+h: 75px !important; } #layout-row4463 img { width: 100% !important; height:=
+ auto !important; max-width: 320px !important; } #layout-row4470 img { widt=
+h: 100% !important; height: auto !important; max-width: 320px !important; }=
+ div.divbody { padding: 20px !important; } .td_rss .rss-item img.iphone_lar=
+ge_image { width: auto !important; } u + .body { display: table !important;=
+ width: 100vw !important; min-width: 100vw !important; } u + .body table { =
+display: table !important; width: 100% !important; min-width: 100% !importa=
+nt; } u + .body td { display: block !important; width: 100% !important; min=
+-width: 100% !important; } u + .body img { display: inline-block !important=
+; margin: auto !important; width: auto !important; vertical-align: bottom !=
+important; } u + .body center { display: block !important; margin: auto=0A!=
+important; width: 100% !important; min-width: 100% !important; text-align: =
+center !important; } u + .body table._ac_social_table, u + .body table._ac_=
+social_table td, u + .body table._ac_social_table div, u + .body table._ac_=
+social_table a { display: inline-block !important; margin: auto !important;=
+ width: auto !important; min-width: auto !important; text-align: center !im=
+portant; } u + .body table._ac_social_table img { display: inline-block !im=
+portant; margin: auto !important; width: 32px !important; min-width: 32px !=
+important; max-width: 32px !important; }=0A}=0A@media only screen and (max-=
+width: 375px) { #layout-row4456 img { width: 100% !important; height: auto =
+!important; max-width: 75px !important; } #layout-row4463 img { width: 100%=
+ !important; height: auto !important; max-width: 375px !important; } #layou=
+t-row4470 img { width: 100% !important; height: auto !important; max-width:=
+ 375px !important; } div.divbody { padding: 20px !important; } .td_rss .rss=
+-item img.iphone_large_image { width: auto !important; } u + .body { displa=
+y: table !important; width: 100vw !important; min-width: 100vw !important; =
+} u + .body table { display: table !important; width: 100% !important; min-=
+width: 100% !important; } u + .body td { display: block !important; width: =
+100% !important; min-width: 100% !important; } u + .body img { display: inl=
+ine-block !important; margin: auto !important; width: auto !important; vert=
+ical-align: bottom !important; } u + .body center { display: block !importa=
+nt; margin: auto !important; width: 100% !important;=0Amin-width: 100% !imp=
+ortant; text-align: center !important; } u + .body table._ac_social_table, =
+u + .body table._ac_social_table td, u + .body table._ac_social_table div, =
+u + .body table._ac_social_table a { display: inline-block !important; marg=
+in: auto !important; width: auto !important; min-width: auto !important; te=
+xt-align: center !important; } u + .body table._ac_social_table img { displ=
+ay: inline-block !important; margin: auto !important; width: 32px !importan=
+t; min-width: 32px !important; max-width: 32px !important; }=0A}=0A@media o=
+nly screen and (max-width: 414px) { #layout-row4456 img { width: 100% !impo=
+rtant; height: auto !important; max-width: 75px !important; } #layout-row44=
+63 img { width: 100% !important; height: auto !important; max-width: 414px =
+!important; } #layout-row4470 img { width: 100% !important; height: auto !i=
+mportant; max-width: 414px !important; } div.divbody { padding: 20px !impor=
+tant; } .td_rss .rss-item img.iphone_large_image { width: auto !important; =
+} u + .body { display: table !important; width: 100vw !important; min-width=
+: 100vw !important; } u + .body table { display: table !important; width: 1=
+00% !important; min-width: 100% !important; } u + .body td { display: block=
+ !important; width: 100% !important; min-width: 100% !important; } u + .bod=
+y img { display: inline-block !important; margin: auto !important; width: a=
+uto !important; vertical-align: bottom !important; } u + .body center { dis=
+play: block !important; margin: auto !important; width: 100% !important;=0A=
+min-width: 100% !important; text-align: center !important; } u + .body tabl=
+e._ac_social_table, u + .body table._ac_social_table td, u + .body table._a=
+c_social_table div, u + .body table._ac_social_table a { display: inline-bl=
+ock !important; margin: auto !important; width: auto !important; min-width:=
+ auto !important; text-align: center !important; } u + .body table._ac_soci=
+al_table img { display: inline-block !important; margin: auto !important; w=
+idth: 32px !important; min-width: 32px !important; max-width: 32px !importa=
+nt; }=0A}=0A@media only screen and (max-width: 667px) { #layout-row4456 img=
+ { width: 100% !important; height: auto !important; max-width: 75px !import=
+ant; } #layout-row4463 img { width: 100% !important; height: auto !importan=
+t; max-width: 447px !important; } #layout-row4470 img { width: 100% !import=
+ant; height: auto !important; max-width: 667px !important; } div.divbody { =
+padding: 20px !important; } .td_rss .rss-item img.iphone_large_image { widt=
+h: auto !important; } u + .body { display: table !important; width: 100vw !=
+important; min-width: 100vw !important; } u + .body table { display: table =
+!important; width: 100% !important; min-width: 100% !important; } u + .body=
+ td { display: block !important; width: 100% !important; min-width: 100% !i=
+mportant; } u + .body img { display: inline-block !important; margin: auto =
+!important; width: auto !important; vertical-align: bottom !important; } u =
++ .body center { display: block !important; margin: auto !important; width:=
+ 100% !important;=0Amin-width: 100% !important; text-align: center !importa=
+nt; } u + .body table._ac_social_table, u + .body table._ac_social_table td=
+, u + .body table._ac_social_table div, u + .body table._ac_social_table a =
+{ display: inline-block !important; margin: auto !important; width: auto !i=
+mportant; min-width: auto !important; text-align: center !important; } u + =
+.body table._ac_social_table img { display: inline-block !important; margin=
+: auto !important; width: 32px !important; min-width: 32px !important; max-=
+width: 32px !important; }=0A} </style><!--[if !mso]><!-- webfonts --><!--<!=
+[endif]--><!--[if lt mso 12]> <![endif]--></head><body id=3D"ac-designer" c=
+lass=3D"body" style=3D"font-family: Arial; line-height: 1.1; margin: 0px; b=
+ackground-color: #ffffff; width: 100%; text-align: center;"><div class=3D"d=
+ivbody" style=3D"margin: 0px; outline: none; padding: 0px; color: #000000; =
+font-family: arial; line-height: 1.1; width: 100%; background-color: #fffff=
+f; background: #ffffff; text-align: center;"><table class=3D"template-table=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" align=3D"=
+left" style=3D"font-size: 14px; min-width: auto; mso-table-lspace: 0pt; mso=
+-table-rspace: 0pt; background-color: #ffffff; background: #ffffff;"><tr><t=
+d align=3D"center" valign=3D"top" width=3D"100%"><table class=3D"template-t=
+able" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600" bgcolo=
+r=3D"#ffffff" style=3D"font-size: 14px; min-width: auto; mso-table-lspace: =
+0pt; mso-table-rspace: 0pt; max-width: 600px;"><tr><td=0Aid=3D"layout_table=
+_5352e3523ebc878bc7ff673803edf1ee03e7e78c" valign=3D"top" align=3D"center" =
+width=3D"600" style=3D""><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" class=3D"layout layout-table root-table" width=3D"600" style=3D"font=
+-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;=
+"><tr style=3D""><td id=3D"layout-row-margin4452" valign=3D"top" style=3D"p=
+adding: 0 0 0 20px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt; border-collapse: initial !important;"><tr id=
+=3D"layout-row4452" class=3D"layout layout-row widget _widget_text style445=
+2" style=3D"margin: 0; padding: 0;"><td id=3D"layout-row-padding4452" valig=
+n=3D"top" style=3D"padding: 0 0px 20px 0px;"><table width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-wi=
+dth: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td id=3D"tex=
+t_div3686" class=3D"td_text td_block" valign=3D"top"=0Aalign=3D"left" width=
+=3D"580" style=3D"line-height: 150%; margin: 0; outline: none; padding: 0; =
+color: inherit; font-size: 12px; font-weight: inherit; line-height: 1.5; te=
+xt-decoration: inherit; font-family: Arial; mso-line-height-rule: exactly;"=
+> <div style=3D"line-height: 150%; margin: 0; outline: none; padding: 0; li=
+ne-height: 1.5; mso-line-height-rule: exactly;" class=3D"" data-line-height=
+=3D"1.5"> <p class=3D"" style=3D"margin: 0; outline: none; padding: 0; colo=
+r: inherit; font-size: inherit; font-weight: inherit; line-height: inherit;=
+ text-decoration: inherit;"></p>=0A<div style=3D"margin: 0; outline: none; =
+padding: 0; font-size: 22px; font-family: Helvetica, Arial, sans-serif; dis=
+play: inline;" class=3D""></div>=0A<p style=3D"margin: 0; outline: none; pa=
+dding: 0; color: #222222; font-size: 22px; font-weight: 400; line-height: i=
+nherit; text-decoration: none; font-style: normal;" class=3D""><span style=
+=3D"color: inherit; font-size: inherit; font-weight: inherit; line-height: =
+inherit; text-decoration: inherit; font-family: Helvetica, Arial, sans-seri=
+f;" class=3D""><br class=3D"">Hey ,</span></p>=0A<p style=3D"margin: 0; out=
+line: none; padding: 0; color: #222222; font-size: 22px; font-weight: 400; =
+line-height: inherit; text-decoration: none; font-style: normal;" class=3D"=
+"><br style=3D"font-family: Helvetica, Arial, sans-serif;color: #222222; te=
+xt-decoration: none; text-align: inherit;" class=3D""></p>=0A<p style=3D"ma=
+rgin: 0; outline: none; padding: 0; color: inherit; font-size: 14px; font-w=
+eight: inherit; line-height: inherit; text-decoration: inherit;" class=3D""=
+></p>=0A <span style=3D"color: inherit; font-size: 22px; font-weight: inher=
+it; line-height: inherit; text-decoration: inherit; font-family: Helvetica,=
+ Arial, sans-serif;" class=3D""> Has someone ever told you that you can't d=
+o something simply because it was too technical?<br class=3D""><br class=3D=
+"">This happened to me my senior year of college.<br class=3D""><br class=
+=3D""> A professor was covering a section on color correction and he explai=
+ned that the job of the Colorist... <br class=3D""><br class=3D"">...was a =
+'dark art' and that not many people could do what they do.<br class=3D""><b=
+r class=3D""><span style=3D"color: inherit; font-size: inherit; font-weight=
+: bold; line-height: inherit; text-decoration: inherit;" class=3D"">"So nat=
+urally I wondered, could <span style=3D"color: inherit; font-size: inherit;=
+ font-weight: inherit; line-height: inherit; text-decoration: underline;" c=
+lass=3D"">I do it?</span>"</span><br class=3D""><br class=3D""> I had just =
+discovered the power of color grading so I knew=0Ait could take a boring lo=
+oking image...<br class=3D""><br class=3D"">...and make it look more cinema=
+tic or like something from a movie.<br class=3D""><br class=3D""> So I at l=
+east wanted to give it a shot.<br class=3D""><br class=3D""> But then I too=
+k one look at the video scopes and the color wheels and promptly closed the=
+ color controls.<br><br class=3D""> If you have ever felt that way, I know =
+how you feel.=C2=A0 <br class=3D""><br class=3D"">Long story short...<br><b=
+r>I discovered that I could create stunning looking images myself and it co=
+mpletely changed everything for me... <br class=3D""><br class=3D"">...by n=
+ot being afraid and following the correct workflow my images helped me land=
+ gig after gig.<br class=3D""><br class=3D""> Well we have developed two di=
+fferent solutions that allow you to follow in my same footsteps.<br class=
+=3D""><br class=3D"">In my last email I mentioned that we've developed our =
+own grading tool using a workflow that is both easy for the beginner...<br =
+class=3D""><br=0Aclass=3D"">...and powerful for the advanced filmmaker.<br =
+class=3D""><br class=3D"">And if you're intent on learning the native tools=
+ we have support for that too with our free grading workshop.<br class=3D""=
+><br class=3D"">Both options are available for you to try risk free:<br></s=
+pan><p class=3D"" style=3D"margin: 0; outline: none; padding: 0; color: inh=
+erit; font-size: inherit; font-weight: inherit; line-height: inherit; text-=
+decoration: inherit;"></p>=0A </div>=0A<!--[if (gte mso 12)&(lte mso 15) ]>=
+=0A<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_div3686, #t=
+ext_div3686 div { line-height: 150% !important; };=0A</style>=0A<![endif]--=
+></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr =
+style=3D""><td id=3D"layout-row-margin4465" valign=3D"top" style=3D""><tabl=
+e width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"=
+font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: =
+0pt;"><tr id=3D"layout-row4465" class=3D"layout layout-row widget _widget_s=
+pacer "><td id=3D"layout-row-padding4465" valign=3D"top"><table width=3D"10=
+0%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14=
+px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td=
+ valign=3D"top" height=3D"30"><div class=3D"spacer" style=3D"margin: 0; out=
+line: none; padding: 0; height: 30px;"><table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" width=3D"100%" style=3D"font-size: 14px; min-width: 100=
+%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td class=3D"spacer-b=
+ody" valign=3D"top" height=3D"30" width=3D"600">=C2=A0</td>=0A</tr>=0A</tab=
+le>=0A</div>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=
+=0A</tr>=0A<tr style=3D""><td id=3D"layout-row-margin4460" valign=3D"top" s=
+tyle=3D"padding: 0 0 0 20px;"><table width=3D"100%" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: initial !important=
+;"><tr id=3D"layout-row4460" class=3D"layout layout-row widget _widget_text=
+ style4460" style=3D"margin: 0; padding: 0;"><td id=3D"layout-row-padding44=
+60" valign=3D"top" style=3D"padding: 0 0px 0px 0px;"><table width=3D"100%" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; =
+min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td id=
+=3D"text_div3692" class=3D"td_text td_block" valign=3D"top" align=3D"left" =
+width=3D"580" style=3D"line-height: 150%; margin: 0; outline: none; padding=
+: 0; color: inherit; font-size: 12px; font-weight: inherit; line-height: 1.=
+5; text-decoration: inherit; font-family: Arial; mso-line-height-rule: exac=
+tly;"> <div style=3D"line-height: 150%; margin: 0; outline: none;=0Apadding=
+: 0; font-size: 22px; line-height: 1.5; mso-line-height-rule: exactly;" dat=
+a-line-height=3D"1.5"> <div style=3D"margin: 0; outline: none; padding: 0; =
+text-align: center;" class=3D""><span style=3D"color: inherit; font-size: i=
+nherit; font-weight: 700; line-height: inherit; text-decoration: inherit; f=
+ont-family: Helvetica, Arial, sans-serif;">CINEMA GRADE <br>Grading Softwar=
+e For <br>Premiere Pro</span></div>=0A </div>=0A<!--[if (gte mso 12)&(lte m=
+so 15) ]>=0A<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_di=
+v3692, #text_div3692 div { line-height: 150% !important; };=0A</style>=0A<!=
+[endif]--></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</t=
+r>=0A<tr style=3D""><td id=3D"layout-row-margin4461" valign=3D"top" style=
+=3D"padding: 5px 5px 5px 20px;"><table width=3D"100%" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-=
+table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: initial !importa=
+nt;"><tr id=3D"layout-row4461" class=3D"layout layout-row widget _widget_te=
+xt style4461" style=3D"margin: 0; padding: 0;"><td id=3D"layout-row-padding=
+4461" valign=3D"top" style=3D"padding: 0px;"><table width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-wi=
+dth: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td id=3D"tex=
+t_div3693" class=3D"td_text td_block" valign=3D"top" align=3D"left" width=
+=3D"575" style=3D"line-height: 150%; margin: 0; outline: none; padding: 0; =
+color: inherit; font-size: 12px; font-weight: inherit; line-height: 1.5; te=
+xt-decoration: inherit; font-family: Arial; mso-line-height-rule: exactly;"=
+> <div style=3D"line-height: 150%; margin: 0; outline: none; padding:=0A0; =
+font-size: 18px; line-height: 1.5; mso-line-height-rule: exactly;" data-lin=
+e-height=3D"1.5"> <div style=3D"margin: 0; outline: none; padding: 0;"> <di=
+v style=3D"margin: 0; outline: none; padding: 0;"> <div style=3D"margin: 0;=
+ outline: none; padding: 0; text-align: center;"><span style=3D"color: inhe=
+rit; font-size: inherit; font-weight: inherit; line-height: inherit; text-d=
+ecoration: inherit; font-family: Helvetica, Arial, sans-serif;" class=3D"">=
+Grading plugin bypasses<br>built-in tools</span></div>=0A </div>=0A </div>=
+=0A </div>=0A<!--[if (gte mso 12)&(lte mso 15) ]>=0A<style data-ac-keep=3D"=
+true" data-ac-inline=3D"false"> #text_div3693, #text_div3693 div { line-hei=
+ght: 150% !important; };=0A</style>=0A<![endif]--></td>=0A</tr>=0A</table>=
+=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr style=3D""><td id=3D"layo=
+ut-row-margin4462" valign=3D"top" style=3D"padding: 0;"><table width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14p=
+x; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-co=
+llapse: initial !important;"><tr id=3D"layout-row4462" class=3D"layout layo=
+ut-row widget _widget_spacer style4462" style=3D""><td id=3D"layout-row-pad=
+ding4462" valign=3D"top" style=3D"padding: 0;"><table width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-wi=
+dth: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td valign=3D=
+"top" height=3D"15"><div class=3D"spacer" style=3D"margin: 0; outline: none=
+; padding: 0; height: 15px;"><table cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" width=3D"100%" style=3D"font-size: 14px; min-width: 100%; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td class=3D"spacer-body" valig=
+n=3D"top" height=3D"15" width=3D"600">=C2=A0</td>=0A</tr>=0A</table>=0A</di=
+v>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A=
+<tr style=3D""><td id=3D"layout-row-margin4463" valign=3D"top" style=3D"pad=
+ding: 0;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt; border-collapse: initial !important;"><tr id=3D"layout=
+-row4463" class=3D"layout layout-row widget _widget_picture style4463" alig=
+n=3D"center" style=3D""><td id=3D"layout-row-padding4463" valign=3D"top" st=
+yle=3D"padding: 0;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace=
+: 0pt; mso-table-rspace: 0pt;"><tr><td class=3D"image-td" align=3D"center" =
+valign=3D"top" width=3D"600"><a href=3D"https://denverkr.lt.acemlnc.com/Pro=
+d/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZjaW5lbWFncmFkZS5jb20=3D&a=
+=3D89849254&account=3Ddenverkr%2Eactivehosted%2Ecom&email=3D7oDyJ1Tgrg6nk35=
+k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=3D98e2737d7256ebc4244dca9ee0144d65&i=
+=3D312A348A3A2619" style=3D"margin: 0; outline: none; padding: 0; color: #0=
+45fb4; display: block; min-width: 100%;"><img=0Asrc=3D"https://denverkr.img=
+us11.com/public//062d3c93c71679ff0127b758791e4f3b.png?r=3D902518680" alt=3D=
+"" width=3D"89" style=3D"border: none; display: block; outline: none; width=
+: 89px; opacity: 1; max-width: 100%;"></a></td>=0A</tr>=0A</table>=0A</td>=
+=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr style=3D""><td id=3D"layout-row-m=
+argin4473" valign=3D"top" style=3D"padding: 0;"><table width=3D"100%" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-w=
+idth: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: =
+initial !important;"><tr id=3D"layout-row4473" class=3D"layout layout-row w=
+idget _widget_spacer style4473" style=3D""><td id=3D"layout-row-padding4473=
+" valign=3D"top" style=3D"padding: 0;"><table width=3D"100%" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100=
+%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td valign=3D"top" he=
+ight=3D"15"><div class=3D"spacer" style=3D"margin: 0; outline: none; paddin=
+g: 0; height: 15px;"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0=
+" width=3D"100%" style=3D"font-size: 14px; min-width: 100%; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt;"><tr><td class=3D"spacer-body" valign=3D"top=
+" height=3D"15" width=3D"600">=C2=A0</td>=0A</tr>=0A</table>=0A</div>=0A</t=
+d>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr styl=
+e=3D""><td id=3D"layout-row-margin4464" valign=3D"top" style=3D"padding: 5p=
+x 5px 5px 20px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0=
+pt; mso-table-rspace: 0pt; border-collapse: initial !important;"><tr id=3D"=
+layout-row4464" class=3D"layout layout-row widget _widget_button style4464"=
+ style=3D""><td id=3D"layout-row-padding4464" valign=3D"top" style=3D"paddi=
+ng: 5px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt;"><tr><td class=3D"td_button td_block customizable" val=
+ign=3D"top" align=3D"left" width=3D"565"> <div class=3D"button-wrapper" sty=
+le=3D"margin: 0; outline: none; padding: 0; text-align: center;">=0A<!--[if=
+ mso]> <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"ur=
+n:schemas-microsoft-com:office:word" href=3D"https://denverkr.lt.acemlnc.co=
+m/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZjaW5lbWFncmFkZS5jb20=
+=3D&a=3D89849254&account=3Ddenverkr%2Eactivehosted%2Ecom&email=3D7oDyJ1Tgrg=
+6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=3D98e2737d7256ebc4244dca9ee0144d=
+65&i=3D312A348A3A2619" style=3D"v-text-anchor:middle; width:191px; height:6=
+8px; " arcsize=3D"10%" strokecolor=3D"#B5B5B5" strokeweight=3D"1pt" fillcol=
+or=3D"#07c874" o:button=3D"true" o:allowincell=3D"true" o:allowoverlap=3D"f=
+alse" > <v:textbox inset=3D"2px,2px,2px,2px"> <center style=3D"color:#fffff=
+f;font-family:Helvetica, Arial, sans-serif; font-size:22px; line-height: 1.=
+1;">LEARN MORE</center> </v:textbox> </v:roundrect>=0A<![endif]--> <a href=
+=3D"https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=3DaHR0cHM=
+lM0ElMkYlMkZjaW5lbWFncmFkZS5jb20=3D&a=3D89849254&account=3Ddenverkr%2Eactiv=
+ehosted%2Ecom&email=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=
+=3D98e2737d7256ebc4244dca9ee0144d65&i=3D312A348A3A2619" style=3D"margin: 0;=
+ outline: none; padding: 12px; color: #ffffff; background-color: #07c874; b=
+order: 1px solid #B5B5B5; border-radius: 3px; font-family: Helvetica, Arial=
+, sans-serif; font-size: 22px; display: inline-block; line-height: 1.1; tex=
+t-align: center; text-decoration: none; mso-hide: all;"> <span style=3D"col=
+or:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:22px;"> LEARN=
+ MORE </span> </a> </div>=0A=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<=
+/table>=0A</td>=0A</tr>=0A<tr style=3D""><td id=3D"layout-row-margin4466" v=
+align=3D"top" style=3D"padding: 0;"><table width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; =
+mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: initial !imp=
+ortant;"><tr id=3D"layout-row4466" class=3D"layout layout-row widget _widge=
+t_spacer style4466" style=3D""><td id=3D"layout-row-padding4466" valign=3D"=
+top" style=3D"padding: 0;"><table width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td valign=3D"top" height=3D"40=
+"><div class=3D"spacer" style=3D"margin: 0; outline: none; padding: 0; heig=
+ht: 40px;"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D=
+"100%" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt;"><tr><td class=3D"spacer-body" valign=3D"top" height=
+=3D"40" width=3D"600">=C2=A0</td>=0A</tr>=0A</table>=0A</div>=0A</td>=0A</t=
+r>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr style=3D""><=
+td id=3D"layout-row-margin4467" valign=3D"top" style=3D"padding: 0 0 0 20px=
+;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; border-collapse: initial !important;"><tr id=3D"layout-row4467=
+" class=3D"layout layout-row widget _widget_text style4467" style=3D"margin=
+: 0; padding: 0;"><td id=3D"layout-row-padding4467" valign=3D"top" style=3D=
+"padding: 0 0px 0px 0px;"><table width=3D"100%" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-=
+lspace: 0pt; mso-table-rspace: 0pt;"><tr><td id=3D"text_div3699" class=3D"t=
+d_text td_block" valign=3D"top" align=3D"left" width=3D"580" style=3D"line-=
+height: 150%; margin: 0; outline: none; padding: 0; color: inherit; font-si=
+ze: 12px; font-weight: inherit; line-height: 1.5; text-decoration: inherit;=
+ font-family: Arial; mso-line-height-rule: exactly;"> <div style=3D"line-he=
+ight: 150%; margin: 0; outline: none;=0Apadding: 0; font-size: 22px; line-h=
+eight: 1.5; mso-line-height-rule: exactly;" data-line-height=3D"1.5"> <div =
+style=3D"margin: 0; outline: none; padding: 0; text-align: center;" class=
+=3D""><span style=3D"color: inherit; font-size: inherit; font-weight: 700; =
+line-height: inherit; text-decoration: inherit; font-family: Helvetica, Ari=
+al, sans-serif;" class=3D"">"How To Color Grade Like A Hollywood Colorist W=
+ITHOUT Moving To L.A."</span></div>=0A </div>=0A<!--[if (gte mso 12)&(lte m=
+so 15) ]>=0A<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_di=
+v3699, #text_div3699 div { line-height: 150% !important; };=0A</style>=0A<!=
+[endif]--></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</t=
+r>=0A<tr style=3D""><td id=3D"layout-row-margin4468" valign=3D"top" style=
+=3D"padding: 5px 5px 5px 20px;"><table width=3D"100%" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-=
+table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: initial !importa=
+nt;"><tr id=3D"layout-row4468" class=3D"layout layout-row widget _widget_te=
+xt style4468" style=3D"margin: 0; padding: 0;"><td id=3D"layout-row-padding=
+4468" valign=3D"top" style=3D"padding: 0px;"><table width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-wi=
+dth: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td id=3D"tex=
+t_div3700" class=3D"td_text td_block" valign=3D"top" align=3D"left" width=
+=3D"575" style=3D"line-height: 150%; margin: 0; outline: none; padding: 0; =
+color: inherit; font-size: 12px; font-weight: inherit; line-height: 1.5; te=
+xt-decoration: inherit; font-family: Arial; mso-line-height-rule: exactly;"=
+> <div style=3D"line-height: 150%; margin: 0; outline: none; padding:=0A0; =
+font-size: 18px; line-height: 1.5; mso-line-height-rule: exactly;" data-lin=
+e-height=3D"1.5"> <div style=3D"margin: 0; outline: none; padding: 0;"> <di=
+v style=3D"margin: 0; outline: none; padding: 0;"> <div style=3D"margin: 0;=
+ outline: none; padding: 0;"> <div style=3D"margin: 0; outline: none; paddi=
+ng: 0; text-align: center;"><span style=3D"color: inherit; font-size: inher=
+it; font-weight: inherit; line-height: inherit; text-decoration: inherit; f=
+ont-family: Helvetica, Arial, sans-serif;" class=3D"">Training workshop for=
+ using native <br>built-in tools</span></div>=0A </div>=0A </div>=0A </div>=
+=0A </div>=0A<!--[if (gte mso 12)&(lte mso 15) ]>=0A<style data-ac-keep=3D"=
+true" data-ac-inline=3D"false"> #text_div3700, #text_div3700 div { line-hei=
+ght: 150% !important; };=0A</style>=0A<![endif]--></td>=0A</tr>=0A</table>=
+=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr style=3D""><td id=3D"layo=
+ut-row-margin4469" valign=3D"top" style=3D"padding: 0;"><table width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14p=
+x; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-co=
+llapse: initial !important;"><tr id=3D"layout-row4469" class=3D"layout layo=
+ut-row widget _widget_spacer style4469" style=3D""><td id=3D"layout-row-pad=
+ding4469" valign=3D"top" style=3D"padding: 0;"><table width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-wi=
+dth: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td valign=3D=
+"top" height=3D"15"><div class=3D"spacer" style=3D"margin: 0; outline: none=
+; padding: 0; height: 15px;"><table cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" width=3D"100%" style=3D"font-size: 14px; min-width: 100%; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td class=3D"spacer-body" valig=
+n=3D"top" height=3D"15" width=3D"600">=C2=A0</td>=0A</tr>=0A</table>=0A</di=
+v>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A=
+<tr style=3D""><td id=3D"layout-row-margin4470" valign=3D"top" style=3D"pad=
+ding: 0 0px 0 20px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt; border-collapse: initial !important;"><tr id=
+=3D"layout-row4470" class=3D"layout layout-row widget _widget_picture style=
+4470" align=3D"center" style=3D""><td id=3D"layout-row-padding4470" valign=
+=3D"top" style=3D"padding: 0 0px 0 0px;"><table width=3D"100%" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 1=
+00%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td class=3D"image-=
+td" align=3D"center" valign=3D"top" width=3D"580"><a href=3D"https://denver=
+kr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuY=
+29sb3JncmFkaW5nY2VudHJhbC5jb20lMkZjb2xvci1jb3JyZWN0aW9uLXByZW1pZXJlLXBybyUy=
+RiUyM2xwLXBvbS1ibG9jay0xMQ=3D=3D&a=3D89849254&account=3Ddenverkr%2Eactiveho=
+sted%2Ecom&email=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=3D9=
+8e2737d7256ebc4244dca9ee0144d65&i=3D312A348A3A2620" style=3D"margin: 0; out=
+line:=0Anone; padding: 0; color: #045fb4; display: block; min-width: 100%;"=
+><img src=3D"https://denverkr.imgus11.com/public//dec5cbe08f67533498f1cf13b=
+faf3523.png?r=3D794046730" alt=3D"" width=3D"101" style=3D"border: none; di=
+splay: block; outline: none; width: 101px; opacity: 1; max-width: 100%;"></=
+a></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr=
+ style=3D""><td id=3D"layout-row-margin4472" valign=3D"top" style=3D"paddin=
+g: 0;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt; border-collapse: initial !important;"><tr id=3D"layout-row=
+4472" class=3D"layout layout-row widget _widget_spacer style4472" style=3D"=
+"><td id=3D"layout-row-padding4472" valign=3D"top" style=3D"padding: 0;"><t=
+able width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspa=
+ce: 0pt;"><tr><td valign=3D"top" height=3D"15"><div class=3D"spacer" style=
+=3D"margin: 0; outline: none; padding: 0; height: 15px;"><table cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" style=3D"font-size: 14=
+px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td=
+ class=3D"spacer-body" valign=3D"top" height=3D"15" width=3D"600">=C2=A0</t=
+d>=0A</tr>=0A</table>=0A</div>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=
+=0A</table>=0A</td>=0A</tr>=0A<tr style=3D""><td id=3D"layout-row-margin447=
+1" valign=3D"top" style=3D"padding: 5px 5px 5px 20px;"><table width=3D"100%=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px=
+; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-col=
+lapse: initial !important;"><tr id=3D"layout-row4471" class=3D"layout layou=
+t-row widget _widget_button style4471" style=3D""><td id=3D"layout-row-padd=
+ing4471" valign=3D"top" style=3D"padding: 5px;"><table width=3D"100%" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-w=
+idth: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td class=3D=
+"td_button td_block customizable" valign=3D"top" align=3D"left" width=3D"56=
+5"> <div class=3D"button-wrapper" style=3D"margin: 0; outline: none; paddin=
+g: 0; text-align: center;">=0A<!--[if mso]> <v:roundrect xmlns:v=3D"urn:sch=
+emas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" h=
+ref=3D"https://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=3DaHR0=
+cHMlM0ElMkYlMkZ3d3cuY29sb3JncmFkaW5nY2VudHJhbC5jb20lMkZjb2xvci1jb3JyZWN0aW9=
+uLXByZW1pZXJlLXBybyUyRiUyM2xwLXBvbS1ibG9jay0xMQ=3D=3D&a=3D89849254&account=
+=3Ddenverkr%2Eactivehosted%2Ecom&email=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J=
+%2FgQB9Uu3XAY%3D&s=3D98e2737d7256ebc4244dca9ee0144d65&i=3D312A348A3A2620" s=
+tyle=3D"v-text-anchor:middle; width:221px; height:68px; " arcsize=3D"10%" s=
+trokecolor=3D"#B5B5B5" strokeweight=3D"1pt" fillcolor=3D"#07c874" o:button=
+=3D"true" o:allowincell=3D"true" o:allowoverlap=3D"false" > <v:textbox inse=
+t=3D"2px,2px,2px,2px"> <center style=3D"color:#ffffff;font-family:Helvetica=
+, Arial, sans-serif; font-size:22px; line-height: 1.1;">REGISTER SEAT</cent=
+er> </v:textbox> </v:roundrect>=0A<![endif]--> <a href=3D"https://denverkr.=
+lt.acemlnc.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuY29s=
+b3JncmFkaW5nY2VudHJhbC5jb20lMkZjb2xvci1jb3JyZWN0aW9uLXByZW1pZXJlLXBybyUyRiU=
+yM2xwLXBvbS1ibG9jay0xMQ=3D=3D&a=3D89849254&account=3Ddenverkr%2Eactivehoste=
+d%2Ecom&email=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=3D98e2=
+737d7256ebc4244dca9ee0144d65&i=3D312A348A3A2620" style=3D"margin: 0; outlin=
+e: none; padding: 12px; color: #ffffff; background-color: #07c874; border: =
+1px solid #B5B5B5; border-radius: 3px; font-family: Helvetica, Arial, sans-=
+serif; font-size: 22px; display: inline-block; line-height: 1.1; text-align=
+: center; text-decoration: none; mso-hide: all;"> <span style=3D"color:#fff=
+fff;font-family:Helvetica, Arial, sans-serif;font-size:22px;"> REGISTER SEA=
+T </span> </a> </div>=0A=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</tab=
+le>=0A</td>=0A</tr>=0A<tr style=3D""><td id=3D"layout-row-margin4474" valig=
+n=3D"top" style=3D""><table width=3D"100%" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt;"><tr id=3D"layout-row4474" class=3D"layout l=
+ayout-row widget _widget_spacer "><td id=3D"layout-row-padding4474" valign=
+=3D"top"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt;"><tr><td valign=3D"top" height=3D"30"><div class=3D"sp=
+acer" style=3D"margin: 0; outline: none; padding: 0; height: 30px;"><table =
+cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" style=3D"fo=
+nt-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t;"><tr><td class=3D"spacer-body" valign=3D"top" height=3D"30" width=3D"600=
+">=C2=A0</td>=0A</tr>=0A</table>=0A</div>=0A</td>=0A</tr>=0A</table>=0A</td=
+>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr style=3D""><td id=3D"layout-row-=
+margin4459" valign=3D"top" style=3D"padding: 20px 0px 0px 20px;"><table wid=
+th=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-=
+size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; =
+border-collapse: initial !important;"><tr id=3D"layout-row4459" class=3D"la=
+yout layout-row widget _widget_text style4459" style=3D"margin: 0; padding:=
+ 0;"><td id=3D"layout-row-padding4459" valign=3D"top" style=3D"padding: 0px=
+ 0px 40px 0px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0p=
+t; mso-table-rspace: 0pt;"><tr><td id=3D"text_div3691" class=3D"td_text td_=
+block" valign=3D"top" align=3D"left" width=3D"580" style=3D"line-height: 15=
+0%; margin: 0; outline: none; padding: 0; color: inherit; font-size: 12px; =
+font-weight: inherit; line-height: 1.5; text-decoration: inherit; font-fami=
+ly: Arial; mso-line-height-rule: exactly;"> <div style=3D"line-height: 150%=
+; margin: 0; outline:=0Anone; padding: 0; font-size: 22px; line-height: 1.5=
+; mso-line-height-rule: exactly;" data-line-height=3D"1.5"> <div style=3D"m=
+argin: 0; outline: none; padding: 0;"> <div style=3D"margin: 0; outline: no=
+ne; padding: 0;"><span class=3D"" style=3D"color: inherit; font-size: inher=
+it; font-weight: inherit; line-height: inherit; text-decoration: inherit; f=
+ont-family: Helvetica, Arial, sans-serif;"><div style=3D"margin: 0; outline=
+: none; padding: 0; color: #000000; font-style: normal; font-weight: normal=
+; text-align: start;"></div>=0AIf you have any questions about the differen=
+ces between the two solutions just hit the reply and I'll do my best to ans=
+wer within 24 hours.<br><br> Are you ready to level up your filmmaking?<br>=
+<br><span style=3D"color: #000000; font-size: 22px; font-weight: 400; line-=
+height: inherit; text-decoration: inherit; font-family: Helvetica, Arial, s=
+ans-serif; font-style: normal;">We are here for </span><span style=3D"color=
+: #000000; font-size: 22px; font-weight: 400; line-height: inherit; text-de=
+coration: inherit; font-family: Helvetica, Arial, sans-serif; font-style: n=
+ormal;">you</span><span style=3D"color: #000000; font-size: 22px; font-weig=
+ht: 400; line-height: inherit; text-decoration: inherit; font-family: Helve=
+tica, Arial, sans-serif; font-style: normal;">.</span><br><br> Cheers,<br> =
+Denver Riddle<br><br> P.S. Color grading isn't too difficult and you can cr=
+eate stunning looking imagery. </span><br></div>=0A </div>=0A </div>=0A<!--=
+[if (gte mso 12)&(lte mso 15) ]>=0A<style data-ac-keep=3D"true" data-ac-inl=
+ine=3D"false"> #text_div3691, #text_div3691 div { line-height: 150% !import=
+ant; };=0A</style>=0A<![endif]--></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=
+=0A</table>=0A</td>=0A</tr>=0A<tr id=3D"layout-row4457" class=3D"layout lay=
+out-row clear-this " style=3D""><td id=3D"layout-row-padding4457" valign=3D=
+"top" style=3D""><table width=3D"100%" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0=
+pt; mso-table-rspace: 0pt;"><tr><td id=3D"layout_table_86b87b9aeb451b8ca16d=
+af7e90ec9b6f6e9caa39" valign=3D"top" width=3D"101"><table cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" class=3D"layout layout-table " width=3D"101=
+" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-tab=
+le-rspace: 0pt;"><tr><td id=3D"layout-row-margin4456" valign=3D"top" style=
+=3D"padding: 0 20px 6px 0px;"><table width=3D"100%" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: initial !important=
+;"><tr id=3D"layout-row4456" class=3D"layout layout-row widget _widget_pict=
+ure style4456" align=3D"left" style=3D""><td id=3D"layout-row-padding4456" =
+valign=3D"top"=0Astyle=3D"padding: 0 0 0 20px;"><table width=3D"100%" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-w=
+idth: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td class=3D=
+"image-td" align=3D"left" valign=3D"top" width=3D"61"><a href=3D"https://de=
+nverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZjZ=
+2NwdWJsaWMuczMtdXMtd2VzdC0yLmFtYXpvbmF3cy5jb20lMkZkZW52ZXJfaG9sbGFuZF9hdmF0=
+YXIucG5n&a=3D89849254&account=3Ddenverkr%2Eactivehosted%2Ecom&email=3D7oDyJ=
+1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=3D98e2737d7256ebc4244dca9ee=
+0144d65&i=3D312A348A3A2621" style=3D"margin: 0; outline: none; padding: 0; =
+color: #045fb4; display: block; min-width: 100%;"><img src=3D"https://denve=
+rkr.imgus11.com/public//695f092d6294790aef504709636924b3.png?r=3D1036940422=
+" alt=3D"Denver Avatar" width=3D"61" style=3D"border: none; display: block;=
+ outline: none; width: 61px; opacity: 1; max-width: 100%;"></a></td>=0A</tr=
+>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=
+=0A<td id=3D"layout_table_fa054db3b08f518fd7034fd436211e9e6e458b40" valign=
+=3D"top" width=3D"499"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" class=3D"layout layout-table " width=3D"499" style=3D"font-size: 14px; =
+min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr id=3D"l=
+ayout-row4455" class=3D"layout layout-row clear-this "><td id=3D"layout-row=
+-padding4455" valign=3D"top"><table width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td id=3D"layout_table_5943af9d=
+dba0550f81215a11051f841423e0acda" valign=3D"top" width=3D"274"><table cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"layout layout-table " =
+width=3D"274" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: =
+0pt; mso-table-rspace: 0pt;"><tr><td id=3D"layout-row-margin4453" valign=3D=
+"top" style=3D"padding: 0 0 10px 0;"><table width=3D"100%" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%;=
+=0Amso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: initial !=
+important;"><tr id=3D"layout-row4453" class=3D"layout layout-row widget _wi=
+dget_text style4453" style=3D"margin: 0; padding: 0;"><td id=3D"layout-row-=
+padding4453" valign=3D"top" style=3D"padding: 0;"><table width=3D"100%" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min=
+-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td id=3D"=
+text_div3687" class=3D"td_text td_block" valign=3D"top" align=3D"left" widt=
+h=3D"274" style=3D"line-height: 140%; margin: 0; outline: none; padding: 0;=
+ color: inherit; font-size: 12px; font-weight: inherit; line-height: 1.4; t=
+ext-decoration: inherit; font-family: Arial; mso-line-height-rule: exactly;=
+"> <div style=3D"line-height: 140%; margin: 0; outline: none; padding: 0; l=
+ine-height: 1.4; mso-line-height-rule: exactly; font-size: 12px;" class=3D"=
+" data-line-height=3D"1.4"><span class=3D"" style=3D"color: inherit; font-s=
+ize: 12px; font-weight: inherit; line-height:=0Ainherit; text-decoration: i=
+nherit;"><span style=3D"color: inherit; font-size: inherit; font-weight: 70=
+0; line-height: inherit; text-decoration: inherit;" class=3D"">Denver Riddl=
+e<br class=3D""></span>Founder of Color Grading Central<br class=3D"">denve=
+r@colorgradingcentral.com</span></div>=0A<!--[if (gte mso 12)&(lte mso 15) =
+]>=0A<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_div3687, =
+#text_div3687 div { line-height: 140% !important; };=0A</style>=0A<![endif]=
+--></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<t=
+r><td id=3D"layout-row-margin4458" valign=3D"top" style=3D"padding: 0px;"><=
+table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspa=
+ce: 0pt; border-collapse: initial !important;"><tr id=3D"layout-row4458" cl=
+ass=3D"layout layout-row widget _widget_social style4458" style=3D""><td id=
+=3D"layout-row-padding4458" valign=3D"top" style=3D"padding: 0px 0px 20px 0=
+px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-tabl=
+e-rspace: 0pt;"><tr><td><table width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt;"><tr><td width=3D"274" align=3D"left"> <center style=
+=3D"margin: 0; outline: none; padding: 0; font-size: 0px;"> <table class=3D=
+"_ac_social_table" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" style=
+=3D"font-size: 0; min-width: auto!important; mso-table-lspace: 0pt;=0Amso-t=
+able-rspace: 0pt; margin: auto!important; display: inline-block!important; =
+text-align: left!important;"><tr><td align=3D"center" valign=3D"middle" wid=
+th=3D"34" style=3D"display:inline-block!important;font-size:0;width:34px!im=
+portant;"><div class=3D"__ac_social_icons" style=3D"margin: 0; outline: non=
+e; padding: 0;"><a href=3D"https://denverkr.lt.acemlnc.com/Prod/link-tracke=
+r?redirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cueW91dHViZS5jb20lMkZjaGFubmVsJTJGVUN=
+BWVZkMGZYbVJKRmtCQWFRSlJ2Y3V3JTNGc3ViX2NvbmZpcm1hdGlvbiUzRDE=3D&a=3D8984925=
+4&account=3Ddenverkr%2Eactivehosted%2Ecom&email=3D7oDyJ1Tgrg6nk35k8qGBXL35h=
+O7C%2FF3J%2FgQB9Uu3XAY%3D&s=3D98e2737d7256ebc4244dca9ee0144d65&i=3D312A348A=
+3A2622" id=3D"youtube" class=3D"__ac_social_icon_link" style=3D"margin: 0; =
+outline: none; padding: 0; color: #045fb4;"><img src=3D"https://denverkr.im=
+g-us6.com/_social_/flat-color-square-youtube.png" border=3D"0" width=3D"34"=
+ style=3D"border: none;"></a></div>=0A</td>=0A<td width=3D"10" style=3D"dis=
+play:inline-block!important;font-size:0;width:10px!important;">=C2=A0</td>=
+=0A<td align=3D"center" valign=3D"middle" width=3D"34" style=3D"display:inl=
+ine-block!important;font-size:0;width:34px!important;"><div class=3D"__ac_s=
+ocial_icons" style=3D"margin: 0; outline: none; padding: 0;"><a href=3D"htt=
+ps://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMk=
+YlMkZ3d3cuaW5zdGFncmFtLmNvbSUyRmNvbG9yZ3JhZGluZyUyRg=3D=3D&a=3D89849254&acc=
+ount=3Ddenverkr%2Eactivehosted%2Ecom&email=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2=
+FF3J%2FgQB9Uu3XAY%3D&s=3D98e2737d7256ebc4244dca9ee0144d65&i=3D312A348A3A262=
+3" id=3D"instagram" class=3D"__ac_social_icon_link" style=3D"margin: 0; out=
+line: none; padding: 0; color: #045fb4;"><img src=3D"https://denverkr.img-u=
+s6.com/_social_/flat-color-square-instagram.png" border=3D"0" width=3D"34" =
+style=3D"border: none;"></a></div>=0A</td>=0A<td width=3D"10" style=3D"disp=
+lay:inline-block!important;font-size:0;width:10px!important;">=C2=A0</td>=
+=0A<td align=3D"center" valign=3D"middle" width=3D"34" style=3D"display:inl=
+ine-block!important;font-size:0;width:34px!important;"><div class=3D"__ac_s=
+ocial_icons" style=3D"margin: 0; outline: none; padding: 0;"><a href=3D"htt=
+ps://denverkr.lt.acemlnc.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMk=
+YlMkZ3d3cuZmFjZWJvb2suY29tJTJGQ29sb3ItR3JhZGluZy1DZW50cmFsLTExNDIwNTM0MjAwN=
+zk1OSUyRg=3D=3D&a=3D89849254&account=3Ddenverkr%2Eactivehosted%2Ecom&email=
+=3D7oDyJ1Tgrg6nk35k8qGBXL35hO7C%2FF3J%2FgQB9Uu3XAY%3D&s=3D98e2737d7256ebc42=
+44dca9ee0144d65&i=3D312A348A3A2624" id=3D"facebook" class=3D"__ac_social_ic=
+on_link" style=3D"margin: 0; outline: none; padding: 0; color: #045fb4;"><i=
+mg src=3D"https://denverkr.img-us6.com/_social_/flat-color-square-facebook.=
+png" border=3D"0" width=3D"34" style=3D"border: none;"></a></div>=0A</td>=
+=0A</tr>=0A</table>=0A</center> </td>=0A </tr>=0A</table>=0A</td>=0A</tr>=
+=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=
+=0A<td id=3D"layout_table_197cda9dcee69c1c608328878839fdc08a629060" valign=
+=3D"top" width=3D"225"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" class=3D"layout layout-table " width=3D"225" style=3D"font-size: 14px; =
+min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td id=
+=3D"layout-row-margin4454" valign=3D"top" style=3D"padding: 0;"><table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-s=
+ize: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; b=
+order-collapse: initial !important;"><tr id=3D"layout-row4454" class=3D"lay=
+out layout-row widget _widget_text style4454" style=3D"margin: 0; padding: =
+0;"><td id=3D"layout-row-padding4454" valign=3D"top" style=3D"padding: 0 0 =
+20px 0;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt;"><tr><td id=3D"text_div3688" class=3D"td_text td_block=
+" valign=3D"top" align=3D"left" width=3D"225" style=3D"line-height: 140%;=
+=0Amargin: 0; outline: none; padding: 0; color: inherit; font-size: 12px; f=
+ont-weight: inherit; line-height: 1.4; text-decoration: inherit; font-famil=
+y: Arial; mso-line-height-rule: exactly;"> <div data-line-height=3D"1.4" st=
+yle=3D"line-height: 140%; margin: 0; outline: none; padding: 0; line-height=
+: 1.4; mso-line-height-rule: exactly; font-size: 11px;"> <span class=3D"" s=
+tyle=3D"color: inherit; font-size: 11px; font-weight: inherit; line-height:=
+ inherit; text-decoration: inherit;"> </span><div style=3D"margin: 0; outli=
+ne: none; padding: 0; text-align: right;"><span style=3D"color: #555555; fo=
+nt-size: 12px; font-weight: inherit; line-height: inherit; text-decoration:=
+ inherit; text-align: inherit;" class=3D"">Sent to:=C2=A0mrcloud.med@gmail.=
+com</span></div>=0A<div style=3D"margin: 0; outline: none; padding: 0; text=
+-align: right;"><span style=3D"color: #555555; font-size: 12px; font-weight=
+: inherit; line-height: inherit; text-decoration: inherit; text-align: inhe=
+rit;" class=3D"">Color Grading Central LLC, PO Box 478, Huntsville, UT 8431=
+7, United States</span></div>=0A<div style=3D"margin: 0; outline: none; pad=
+ding: 0; text-align: right;"><span style=3D"color: #555555; font-size: 12px=
+; font-weight: inherit; line-height: inherit; text-decoration: inherit;" cl=
+ass=3D""><div style=3D"margin: 0; outline: none; padding: 0; text-align: in=
+herit; display: inline;">Don't want future emails?=C2=A0</div>=0A<a href=3D=
+"http://denverkr.activehosted.com/proc.php?nl=3D3&c=3D312&m=3D348&s=3D98e27=
+37d7256ebc4244dca9ee0144d65&act=3Dunsub" style=3D"margin: 0; outline: none;=
+ padding: 0; color: #555555; text-decoration: underline; text-align: inheri=
+t;" target=3D"_blank"><span style=3D"color: #555555; font-size: inherit; fo=
+nt-weight: inherit; line-height: inherit; text-decoration: inherit;">Unsubs=
+cribe</span></a></span><br style=3D"text-align: inherit; color: #333333;"><=
+/div>=0A </div>=0A<!--[if (gte mso 12)&(lte mso 15) ]>=0A<style data-ac-kee=
+p=3D"true" data-ac-inline=3D"false"> #text_div3688, #text_div3688 div { lin=
+e-height: 140% !important; };=0A</style>=0A<![endif]--></td>=0A</tr>=0A</ta=
+ble>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=
+=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=
+=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=
+=0A</div>=0A<img src=3D"https://denverkr.lt.acemlnc.com/Prod/link-tracker?n=
+l=3D3&c=3D312&m=3D348&s=3D98e2737d7256ebc4244dca9ee0144d65&l=3Dopen&account=
+=3Ddenverkr.activehosted.com" border=3D"0" width=3D"1" height=3D"1" style=
+=3D"display:block;width:1px!important;min-width:1px!important;max-width:1px=
+!important;height:1px!important;border:0;overflow:hidden;" /><br clear=3D"a=
+ll" /></body>=0A</html>
+--_=_swift-818525554609e94ac46a1a1.66619710_=_--
+

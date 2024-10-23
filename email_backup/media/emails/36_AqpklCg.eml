@@ -1,0 +1,522 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:24:b029:bb:c18e:4504 with SMTP id h4csp444484lkm;
+        Wed, 27 Jan 2021 13:56:46 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJwjpzrJBwx8PVWPDL3gYoX0jp1wvj6xQP2ryBXDU8Rtrr9YCTR+qsPhgXOWpyHlKMdf6U3g
+X-Received: by 2002:a17:903:228e:b029:de:2bee:150d with SMTP id b14-20020a170903228eb02900de2bee150dmr13581858plh.18.1611784605628;
+        Wed, 27 Jan 2021 13:56:45 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1611784605; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ztYpecodzgZaqVSrnufBHCooLtDUBQkBnPNlvlO4TAASijyxrOKmYvPbBvcf7vFqiT
+         EnbrpcUwdZA+3lNgbikNGIUbaIfbtl2q3zbDljU3S30nELTUUkFbvx5ZabrY6w2SqwvI
+         A4Kv8WFOCN3/PvT1Ljjot3qffh6wSlFadOFFW5dWKJpnin60XD2J+hCeM5esa0YpKJfW
+         h3nJ9dpoQ+4LtseHoEtW+i2QgovfX583cnbkHM/yiofo7QipuvQd9OY5S6w4htIuqGg9
+         XEljLZnsJxQXb9PET4W8okow2xEgGfcKIJhEqLsb9fsY5yQdtmLp/cSytN7ODDuw/m6X
+         CAKQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-id:list-unsubscribe:feedback-id:from:subject:reply-to
+         :mime-version:date:message-id:to:dkim-signature;
+        bh=xu4UZElyLkajuiDkAI85xZNBcd0HIRAWVBj33WEVE9M=;
+        b=j5A6n4/EWrnHd7Y0YMUDAZMqs875v8DITgsvEuumcz2bqkijeU5nJnIHXRvHA0pl2Y
+         AM0uXa8M6WRGtR+uXOBAMZez1EKTikkrnCFKuwB+VJl+D1YRUK/z9rgncEtXAdauBhUX
+         9crehv8u4mURVPD5SThaC9K6RqdMdJMLDWBfD7vYiWXwB2WMtbMw0sw6IipCMsNI9yeC
+         Ce0NShXVIzI2Y+x2044q0wJ3RXeL8R5Qj2exqu4mFzO5IXMRt39mb33ce2+zXUtjNcCf
+         uC7IAuXPNH9hoDA/cn4MiN1GXknspXIw3rKkLWBMAaO1gLojy+CUx1nbset1UnybX8Xk
+         r/IQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.plex.tv header.s=scph0420 header.b=poTKenZC;
+       spf=pass (google.com: domain of msprvs1=18661xfypkjza=bounces-282520@bounce.plex.tv designates 156.70.3.98 as permitted sender) smtp.mailfrom="msprvs1=18661xfypKJzA=bounces-282520@bounce.plex.tv";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=plex.tv
+Return-Path: <msprvs1=18661xfypKJzA=bounces-282520@bounce.plex.tv>
+Received: from mta-70-3-98.sparkpostmail.com (mta-70-3-98.sparkpostmail.com. [156.70.3.98])
+        by mx.google.com with ESMTPS id s145si3937579pfc.215.2021.01.27.13.56.45
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 27 Jan 2021 13:56:45 -0800 (PST)
+Received-SPF: pass (google.com: domain of msprvs1=18661xfypkjza=bounces-282520@bounce.plex.tv designates 156.70.3.98 as permitted sender) client-ip=156.70.3.98;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.plex.tv header.s=scph0420 header.b=poTKenZC;
+       spf=pass (google.com: domain of msprvs1=18661xfypkjza=bounces-282520@bounce.plex.tv designates 156.70.3.98 as permitted sender) smtp.mailfrom="msprvs1=18661xfypKJzA=bounces-282520@bounce.plex.tv";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=plex.tv
+X-MSFBL: TfZBLtl8dMMvUWxQhLO/KfhNwfGIVRAXYaRHl3pj1uY=|eyJzdWJhY2NvdW50X2l
+	kIjoiMCIsImN1c3RvbWVyX2lkIjoiMjgyNTIwIiwibWVzc2FnZV9pZCI6IjYwMTE
+	5Y2UxMTE2MGRjZDg0NDJjIiwiciI6Im1yY2xvdWQubWVkQGdtYWlsLmNvbSIsInR
+	lbmFudF9pZCI6InNwYyJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.plex.tv;
+	s=scph0420; t=1611784604; i=@mail.plex.tv;
+	bh=xu4UZElyLkajuiDkAI85xZNBcd0HIRAWVBj33WEVE9M=;
+	h=To:Message-ID:Date:Content-Type:Subject:From;
+	b=poTKenZCmsAapkLdLetJ8wKVtpwUhFtOsbk/niz7Q4YVoNx5Z9JuR9X/CZrwSpCFk
+	 R+5XAt0QwCeHE2Sf92iFTC/hFxyqDYb+tRPtR39nlsW++zCZqvdPrs8MnJ92mcgsCI
+	 ErhEdwtTs2TL1HrokYVftBNTOu9R7Ygl2zNCnnqs=
+To: mrcloud.med@gmail.com
+Message-ID: <44.C2.30280.C91E1106@ak.mta1vrest.cc.prd.sparkpost>
+Date: Wed, 27 Jan 2021 21:56:44 +0000
+Content-Type: multipart/alternative; boundary="_----P5QFFfCdcmdBF2B9spOF2g===_73/C2-30280-C91E1106"
+MIME-Version: 1.0
+Reply-To: hello@mail.plex.tv
+Subject: Introducing Plex Arcade: play free for 7 days
+X-Campaign-ID: 1943489
+From: "Plex" <hello@mail.plex.tv>
+X-Message-ID: 8a2839b38afc4448b5c9ac1b9c15db50
+X-Feedback-ID: 2667895:1943489:30772:iterable
+Feedback-ID: 2667895:1943489:30772:iterable
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:OI08E6JlmB8-FFRNBdp-TxJMLDN1OaJJ-X9psIfxsYM~|eyAicmNwdF90byI6ICJtcmNsb3VkLm1lZEBnbWFpbC5jb20iLCAidGVuYW50X2lkIjogInNwYyIsICJjdXN0b21lcl9pZCI6ICIyODI1MjAiLCAibWVzc2FnZV9pZCI6ICI2MDExOWNlMTExNjBkY2Q4NDQyYyIsICJzdWJhY2NvdW50X2lkIjogIjAiIH0~>
+List-Id: <spc.282520.0.sparkpostmail.com>
+
+--_----P5QFFfCdcmdBF2B9spOF2g===_73/C2-30280-C91E1106
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Plex + Atari =3D your new favorite pastime =0A=0A=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=0A=0A=0A=
+ =0A<https://www.plex.tv/=3Futm_source=3DPlex&utm_medium=3Demail&utm_conten=
+t=3Dplex_logo_header&utm_campaign=3DPlex_Arcade_Launch_January_26_2021_Free=
+>=0A=0A =0A<https://www.plex.tv/arcade/=3F&utm_source=3DPlex&utm_medium=3De=
+mail&utm_content=3Dhero_image&utm_campaign=3DPlex_Arcade_Launch_January_26_=
+2021_Free>=0A=0A Now you can have your very own arcade, right in the comfor=
+t of your own Plex. =0APlex Labs has partnered with Atari to give you the p=
+ower to stream your =0Afavorite retro games plus your own game ROMs and emu=
+lators on your favorite =0Adevices.* =0A=0ATry Free for 7 Days =0A<https://=
+www.plex.tv/arcade/=3F&utm_source=3DPlex&utm_medium=3Demail&utm_content=3Dp=
+lex_arcade_button&utm_campaign=3DPlex_Arcade_Launch_January_26_2021_Free>=
+=0A (From $2.99/mo after free trial.) =0A=0A =0A<https://www.plex.tv/blog/g=
+ame-on-a-plex-blog-story/=3F&utm_source=3DPlex&utm_medium=3Demail&utm_conte=
+nt=3Ddevices_hero&utm_campaign=3DPlex_Arcade_Launch_January_26_2021_Free>=
+=0A =0A<https://www.plex.tv/blog/game-on-a-plex-blog-story/=3F&utm_source=
+=3DPlex&utm_medium=3Demail&utm_content=3Datari_logo&utm_campaign=3DPlex_Arc=
+ade_Launch_January_26_2021_Free>=0A The world is your console. =0A To play,=
+ use virtually any Bluetooth enabled game controller or the onscreen =0Acon=
+trols on your mobile device, and your screen of choice. But that=E2=80=99s =
+not all, =0Ahead to the blog to read more. =0A=0AGet the Scoop =0A<https://=
+www.plex.tv/blog/game-on-a-plex-blog-story/=3F&utm_source=3DPlex&utm_medium=
+=3Demail&utm_content=3Dplex_arcade_blog_button&utm_campaign=3DPlex_Arcade_L=
+aunch_January_26_2021_Free>=0A *Plex Media Server required for Arcade acces=
+s. For FAQs and the full list of =0Asupported devices, check outPlex Arcade=
+ support articles =0A<https://support.plex.tv/articles/categories/features/=
+arcade/=3F&utm_source=3DPlex&utm_medium=3Demail&utm_content=3Dplex_arcade_s=
+upport_article_inline&utm_campaign=3DPlex_Arcade_Launch_January_26_2021_Fre=
+e>=0A. Price may vary depending on location and currency. =0A =0A<https://w=
+ww.plex.tv/=3Futm_source=3DPlex&utm_medium=3Demail&utm_content=3Dplex_logo_=
+footer&utm_campaign=3DPlex_Arcade_Launch_January_26_2021_Free>=0A=0A =0A<ht=
+tps://twitter.com/plex=3Futm_source=3DPlex&utm_medium=3Demail&utm_content=
+=3Dtwitter&utm_campaign=3DPlex_Arcade_Launch_January_26_2021_Free>=0A =0A<h=
+ttps://www.facebook.com/plexapp=3Futm_source=3DPlex&utm_medium=3Demail&utm_=
+content=3Dfacebook&utm_campaign=3DPlex_Arcade_Launch_January_26_2021_Free>=
+=0A =0A<https://www.instagram.com/plex.tv/=3Futm_source=3DPlex&utm_medium=
+=3Demail&utm_content=3Dinstagram&utm_campaign=3DPlex_Arcade_Launch_January_=
+26_2021_Free>=0A =0A<https://www.youtube.com/user/plextvapp=3Futm_source=3D=
+Plex&utm_medium=3Demail&utm_content=3Dyou_tube&utm_campaign=3DPlex_Arcade_L=
+aunch_January_26_2021_Free>=0A =0A<https://www.linkedin.com/company/plex-in=
+c=3Futm_source=3DPlex&utm_medium=3Demail&utm_content=3Dlinkedin&utm_campaig=
+n=3DPlex_Arcade_Launch_January_26_2021_Free>=0A =C2=A9 2021 Atari Interacti=
+ve, Inc. Atari and the Atari logo are registered =0Atrademarks owned by Ata=
+ri Interactive, Inc. =0A You have received this email because you're a valu=
+ed Plex customer. If you no =0Alonger wish to receive these extremely cool =
+emails, pleaseunsubscribe =0A<https://links.plex.tv/e/eh=3F_t=3D3bef3c50f13=
+f4320a9e31b8be79c6ad2&_m=3D8a2839b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8elR=
+HeEi-6p1xh3B13q-a6lprUL840hKfR5OE3odMUgSTtMuAtqlftu8Y7Cw3D5guEpTQs0Jx7Ghp-7=
+Qd7TyznID1GmacXwa3tmKSqU6cteepjK-cO4RZUYmUakSQNpbWElPkujuG_f4422A8kCcRWgoru=
+LguPlGsx-piPwilbsttgueJ1t6p1pkJfqKT7bSGAyeroVWsDVE7jpXIWcR2s8fK9tash_s-0Z7d=
+LSJ8QRImLqTszFfqFp4iwsAhS3u0OIHWOQrnlhOsbn7GWxeFrCgFYMkmvcn5bd1CVliy1-qxb53=
+aPmfPNt7Fx>=0A.=0A=0APlex GmbH, Hansmatt 32, 6370 Stans, Switzerland=0ACopy=
+right =C2=A9 2021 Plex, Inc. All rights reserved.=0A=0AView Online =0A<http=
+s://links.plex.tv/e/evib=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D8a283=
+9b38afc4448b5c9ac1b9c15db50&_e=3Dw8EOchFWsRcnb1-8-MMdS-rPJH6h5FgQphiFVkb_9Q=
+imYPGVAZ9E6NBWylY8QbNYBgfFlCbeiZ8L8YrZLa84Jd-ZRQ4BU-Osw3N6f87l_vsky0_pp7rUY=
+olBU-uMvuzv>
+--_----P5QFFfCdcmdBF2B9spOF2g===_73/C2-30280-C91E1106
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns=3D"http://www.w3=
+.org/1999/xhtml"> <head> <meta http-equiv=3D"Content-Type" content=3D"text=
+/html; charset=3DUTF-8"> <meta name=3D"viewport" content=3D"width=3Ddevice-=
+width; initial-scale=3D1.0; maximum-scale=3D1.0; user-scalable=3Dno;"> <met=
+a http-equiv=3D"X-UA-Compatible" content=3D"IE=3D9; IE=3D8; IE=3D7; IE=3DED=
+GE"> <style type=3D"text/css">@media screen{@font-face{font-family:'plexein=
+a-bold';src:url('https://assets.plex.tv/email/assets/fonts/plexeina-bold-we=
+bfont.woff2') format('woff2'),url('https://assets.plex.tv/email/assets/font=
+s/plexeina-bold-webfont.woff') format('woff');font-weight:normal;font-style=
+:normal}@font-face{font-family:'plexeina-regular';src:url('https://assets.p=
+lex.tv/email/assets/fonts/plexeina-regular-webfont.woff2') format('woff2'),=
+url('https://assets.plex.tv/email/assets/fonts/plexeina-regular-webfont.wof=
+f') format('woff');font-weight:normal;font-style:normal}}#outlook a{padding=
+:0}body{width:100%!important;min-width:100%!important;margin:0;padding:0;-w=
+ebkit-text;size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothin=
+g:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility}=
+.ReadMsgBody{width:100%}.ExternalClass{width:100%}.backgroundTable{margin:=
+0 auto;padding:0;width:100%;!important}table td{border-collapse:collapse}.E=
+xternalClass *{line-height:115%}b,strong{font-family:'plexeina-bold',Helvet=
+ica,Arial,sans-serif;font-weight:normal}@-ms-viewport{width:device-width}@m=
+edia screen and (max-device-width:600px),screen and (max-width:600px){*[cla=
+ss=3D"100p"]{width:100%!important;height:auto!important}*[class=3D"30p"]{wi=
+dth:100%!important;height:auto!important;display:block}*[class=3D"70p"]{wid=
+th:100%!important;height:auto!important;display:block}*[class=3D"mobile-tex=
+t-center"]{text-align:center!important}.width31{width:31%!important;height:=
+auto!important}.width31 img{width:100%!important;height:auto!important}.wid=
+th3{width:3%!important;height:auto!important}}@media(prefers-color-scheme:d=
+ark){body,table{background-color:#000!important;color:#fff!important}td{col=
+or:#fff!important}}[data-ogsc] body,[data-ogsc] table{background-color:#000=
+!important;color:#fff!important}[data-ogsc] td{color:#fff!important}</style=
+> <!--[if gte mso 9]><style type=3D"text/css">#outlookholder{width:600px}</=
+style><![endif]--> </head> <body align=3D"center" bgcolor=3D"#E0E3E6" style=
+=3D"undefined: -webkit-text; size-adjust: 100%; -ms-text-size-adjust: 100%;=
+ -webkit-font-smoothing: antialiased; font-smoothing: antialiased; text-ren=
+dering: optimizeLegibility; margin: 0; padding: 0; width: 100% !important; =
+min-width: 100% !important;">=0D=0A<div style=3D"color:transparent;visibili=
+ty:hidden;opacity:0;font-size:0px;border:0;max-height:1px;width:1px;margin:=
+0px;padding:0px;border-width:0px!important;display:none!important;line-heig=
+ht:0px!important;"><img border=3D"0" width=3D"1" height=3D"1" src=3D"http:/=
+/sp.plex.tv/q/Fu2XstQdeMThbw0lygFFrA~~/AARPmAA~/RgRh9GacPVcDc3BjQgpgEZzhEWD=
+c2EQsUhVtcmNsb3VkLm1lZEBnbWFpbC5jb21YBAAAAAA~"/></div>=0D=0A<span style=3D"=
+color:transparent;visibility:hidden;display:none;opacity:0;height:0;width:0=
+;font-size:0;">Plex + Atari =3D your new favorite pastime</span><img src=3D=
+"https://links.plex.tv/e/eo=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&amp;_m=
+=3D8a2839b38afc4448b5c9ac1b9c15db50&amp;_e=3Dw8EOchFWsRcnb1-8-MMdS-rPJH6h5F=
+gQphiFVkb_9Qi3Ac9AjSU0EMr601r8y_WPjr9Z5uDd1U4kwz68gqHJCdMJrrT_QaqFNlsDPc-W6=
+qOJBJLL27I_LboHkuV1lVgkEv-5DoDw6vm1XWQqnETZJrZFGU9Zi7umTEv3pdo6fiI%3D" styl=
+e=3D"border:0;width:1px;height:1px;border-width:0px!important;display:none!=
+important;line-height:0!important;" width=3D"1" height=3D"1"/> <table cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0" bgcolor=3D"#E0E3E6" width=3D"10=
+0%" style=3D"background-color: #E0E3E6; width: 100%;" class=3D"100p"> <tr> =
+<td align=3D"center" style=3D"border-collapse: collapse; margin-top: 0px; b=
+ackground-color: #E0E3E6;" bgcolor=3D"#E0E3E6"> <!-- start HIDDEN_PREVIEW_T=
+EXT --><!--[if !mso]><! --> <div style=3D"display:none !important; display:=
+none; overflow:hidden; float:left; width:0px; max-height:0px; max-width:0px=
+; line-height:0px; visibility:hidden;">=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;</div> <!--<![endif]-=
+-><!-- end HIDDEN_PREVIEW_TEXT --> <!--[if gte mso 9]><table id=3D"outlookh=
+older" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"><t=
+r><td><![endif]--> <!--[if (IE)]><table border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" width=3D"600" align=3D"center"><tr><td><![endif]--> <table ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600" style=3D"width=
+: 600px;" class=3D"100p"> <tr> <td align=3D"center" style=3D"border-collaps=
+e: collapse;"> <table align=3D"center" width=3D"100%" cellpadding=3D"0" cel=
+lspacing=3D"0" border=3D"0"> <tr> <td align=3D"center" bgcolor=3D"#000000" =
+style=3D"border-collapse: collapse; background: #000000; padding: 20px 25px=
+ 25px;"> <table align=3D"center" width=3D"100%" cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0"> <tr> <td align=3D"center" style=3D"border-collapse: =
+collapse;"> <a href=3D"https://links.plex.tv/a/click=3F_t=3D3bef3c50f13f432=
+0a9e31b8be79c6ad2&_m=3D8a2839b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8elRHeEi=
+-6p1xh3G83ETbV4DyJtd3XwtZ4r4S4ALhYUvXKfRk_E_5pAMhBtouuzN7lYHCz0bqYM2alBIV2X=
+dKTsmXwqnDoVXlbgz6ywRR9DVrZG8Mj35cNief-GLiRxk1JsBw7QsGavXDGAnjpVZ9iPxJfsQBf=
+Upzu4vfQ7KXXtQDOWF8SoGsGxsNU9KX55cAhfRKYwDT_arX1ACOCvkLRdCczclvC-L6ZE1vgvDO=
+PwPJw7DpbZxjsbLJCapBBYF7iRMq_LqT6A9EgOSbvpyvsFIGSwtGgmV_R5DXLM4lkR0e8xaxZE3=
+cR7Y10vtLdmWwh701kz92y6WjL3UTB9POOYZiqV_v8XWLDL0aDKnu2bcNQaUD-MSD6k00ljJBxV=
+nqA9F3zjY64nAT58fGFHvnTt1kWwMwKUM8wiJ4%3D" target=3D"_blank"><img src=3D"ht=
+tps://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-=
+46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/plex-logo.png" widt=
+h=3D"70" style=3D"display: block;" border=3D"0" alt=3D"Plex"></a> </td> </t=
+r> </table> </td> </tr> </table> <table align=3D"center" width=3D"100%" cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"center" bg=
+color=3D"#000000" style=3D"border-collapse: collapse; background: #000000 !=
+important;"> <table align=3D"center" width=3D"100%" cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0"> <tr> <td align=3D"center" style=3D"border-collap=
+se: collapse;"> <a href=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50f13=
+f4320a9e31b8be79c6ad2&_m=3D8a2839b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8elR=
+HeEi-6p1xh3BGyH8VL3prvZ4i8G2bDTmAS-8gem9VV_c0Y1XHNZuBZX_v8e9JcsPTBS5Fpgrm_E=
+SobJaF1e4WAobE9y4B9UgL28M3tKrGQ6ygFGJqmEaeG2wVK39HbME80O25CwQ0wR4-U6Sd_NGgm=
+9WkcbVwV_6-hUQu8yH0Mk8mfAZGGVo2QBpzmhByENQcpHfxFFZQxnC0WDRFGn-JmggiLoKZpnO-=
+6BD58cOdEIoMLU9zQPFlbt-wNiE5SxXBxlPx5vRGoucQkpg9GuLUCqxov9Ipf1pONf9RsC8Uc7G=
+veXVzNVodYgPfgqQ1f2EzAn6oW-5tmX2kVofBDNXz1fX8vNc740gl9oht-8zeGYvA8FmWm8a42x=
+ngXA9s4-sbY-fsCb7jxZDGpeY876CzlBHZDqBrqJhE%3D" target=3D"_blank"><img src=
+=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713=
+-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/plex-arcade-h=
+ero.png" alt=3D"Welcome to Plex Arcade" width=3D"600" style=3D"display: blo=
+ck;" border=3D"0" class=3D"100p"></a> </td> </tr> </table> </td> </tr> </ta=
+ble> <table align=3D"center" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0"> <tr> <td align=3D"center" bgcolor=3D"#000000" style=3D=
+"border-collapse: collapse; background: #000000;"> <table align=3D"center" =
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"> <tr> <td a=
+lign=3D"center" style=3D"border-collapse: collapse; padding: 15px 30px 0px;=
+ font-family: 'plexeina-regular', Helvetica, Arial, sans-serif; color: #FFF=
+FFF; font-size: 18px; line-height: 28px;"> Now you can have your very own a=
+rcade, right in the comfort of your own Plex. Plex Labs has partnered with =
+Atari to give you the power to stream your favorite retro games plus your o=
+wn game ROMs and emulators on your favorite devices.* </td> </tr> <tr> <td =
+align=3D"center" style=3D"border-collapse: collapse;"> <table align=3D"cent=
+er" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"> <tr> <=
+td align=3D"center" valign=3D"top" style=3D"border-collapse: collapse; padd=
+ing-top: 20px;"> <div><!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-micr=
+osoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"ht=
+tps://links.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D8a=
+2839b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8elRHeEi-6p1xh3BGyH8VL3prvZ4i8G2b=
+DTmAS-8gem9VV_c0Y1XHNZuBZX_v8e9JcsPTBS5Fpgrm_ESobJaF1e4WAobE9y4B9UgK13tK-NR=
+RBzKmZhxobZSQ3B3_SH0SMXQKAm1UhkNL8Fp5y4B7xzNCQreicXmC8vNq7RikLKI-SMZ6Wv45cW=
+TPDaSGsc2i42arRNUndB1MVPG04evexQB90lNXgBG1u5GcQWjDUJcA4ZBJZhSY4wY1niqpT8l1Z=
+so9JA-etIbjurkymtKfitlLemiJp6_kKycU_00K9QEZ9w7mHIShaO-deNxLpm3OrmGenv0X-Zea=
+sqLTx1jv4LvkSdjv5QKnTsrUPcSTIeM3jct1lkUbmluyzgqoS9uLGV3o-MI_XZbVjdUxdz8kf6x=
+Ar0qN0HM3n_fw%3D" target=3D"_blank" style=3D"height:46px;v-text-anchor:midd=
+le;width:280px;" arcsize=3D"250%" strokecolor=3D"#E5A00D" fillcolor=3D"#E5A=
+00D"> <w:anchorlock/> <center style=3D"color:#FFFFFF;font-family:sans-serif=
+;font-size:16px;font-weight:bold;">Try Free for 7 Days</center></v:roundrec=
+t><![endif]--><a clicktracking=3D"off" href=3D"https://links.plex.tv/u/clic=
+k=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D8a2839b38afc4448b5c9ac1b9c15=
+db50&_e=3DnaZ3QG8elRHeEi-6p1xh3BGyH8VL3prvZ4i8G2bDTmAS-8gem9VV_c0Y1XHNZuBZX=
+_v8e9JcsPTBS5Fpgrm_ESobJaF1e4WAobE9y4B9UgK13tK-NRRBzKmZhxobZSQ3B3_SH0SMXQKA=
+m1UhkNL8Fp5y4B7xzNCQreicXmC8vNq7RikLKI-SMZ6Wv45cWTPDaSGsc2i42arRNUndB1MVPEZ=
+7gpTwTH6wyLFkLmgfTEtRQZfbYnCbPT9XgmFZ6HZfXAV49WKn5EvzqKeVMK__8UVIM-t3TsmMGY=
+z62O6LdE6KGmg9FG_2WQiMYKd34vrwVCmFY9Yu_Qujdz5rXTU75HihpR9QNKxB27r2B-gSiI0UB=
+CH8ZneBNBXQS8VnEY9FXMp9Mb2leH2aFC55T7HacBv3_FXUm5juZKoScwW5chY%3D" target=
+=3D"_blank" style=3D"background-color: #e5a00d; border-radius: 1000px; colo=
+r: #ffffff; display: inline-block; font-family: 'plexeina-bold', Helvetica,=
+ Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 46px; t=
+ext-align: center; text-decoration: none; width: 280px; -webkit-text-size-a=
+djust: none; mso-hide: all;" rel=3D"noopener noreferrer">Try Free for 7 Day=
+s</a></div> </td> </tr> </table> </td> </tr> <tr> <td align=3D"center" styl=
+e=3D"border-collapse: collapse; padding: 15px 30px 0px; font-family: 'plexe=
+ina-regular', Helvetica, Arial, sans-serif; color: #FFFFFF; font-size: 14px=
+; line-height: 28px;"> (From $2.99/mo after free trial.) </td> </tr> </tabl=
+e> </td> </tr> </table> <table align=3D"center" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0"> <tr> <td align=3D"center" bgcolor=3D=
+"#000000" style=3D"border-collapse: collapse; background: #000000; padding-=
+bottom: 40px;"> <table align=3D"center" width=3D"100%" cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0"> <tr> <td align=3D"center" style=3D"border-col=
+lapse: collapse;"> <a href=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50=
+f13f4320a9e31b8be79c6ad2&_m=3D8a2839b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8=
+elRHeEi-6p1xh3IFhNkS8ppKn-cp9nsTYhqIiLF4Puc6-V9ho6UMXHSyWuOpJB0bIRtSKyanOFp=
+IwRefo_8ZR6hGnYuwDjN8Udt2beGCMCF1YwIeUDaTs79VW9bpAH24sK4ntvSF5VZYZLtzX4h5Ks=
+Ri33HPVA4zCetTG4v7qdOhct2-0qkj_APlJWrKvpQtokZpkB624rxaxBqjLM1xDfLiKkHpfVAQV=
+tVjfs-71Qumpk42-Z-hiipwRAZglt_TCOouAp1ibhz2OrN_QG1kYF2ZpquDTbSY_0Hz6dS_-soW=
+uz5-iw-KLnc9x8LrUh9w0EB7hZ47MPYqLxHhPcTnCvdDnFu37RpcN990PykjyX6VvYjtwDX8IkT=
+il5PY-KXBtN_zqx44rCUXVhjasGrkr7P7yK-Ba4-mzpHVY_VgrCuVqDQV-KqHQXqjE" target=
+=3D"_blank"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/=
+Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be7=
+9c6ad2/hero-plex-arcade-devices.png" alt width=3D"600" style=3D"display: bl=
+ock;" border=3D"0" class=3D"100p"></a> </td> </tr> <tr> <td align=3D"center=
+" style=3D"border-collapse: collapse; padding-top: 20px;"> <a href=3D"https=
+://links.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D8a283=
+9b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8elRHeEi-6p1xh3IFhNkS8ppKn-cp9nsTYhq=
+IiLF4Puc6-V9ho6UMXHSyWuOpJB0bIRtSKyanOFpIwRefo_8ZR6hGnYuwDjN8Udt2beGCMCF1Yw=
+IeUDaTs79VWGrQuohrdN05HUy9Xmh912RJKU4iK3FZgd9zuMyd-5m4DM31HW5zYwnM62h6kkrXj=
+97lvQFiosk0KR2KqPekcKLEKcu4oWPNvrSieSDuiCO0-_2L_aegeQnkTKX36y5iivN7Su-LNnQQ=
+phu_BflF2SUGHbo5anilJow2ANJaG0Qlm9Wy4dNmWPG6wZjVKMPywYi2nOq9DqBjgTZGhfiynbU=
+zoZpTrCPfb8r4tzlc4yBpL0U7EOi0lbMfgmHFxAZ16sEZGp6YjkanvhofuY6ZE4r1eE-THuTBE7=
+iBSJ0rYVnAUViZoUK9UZwz81XffwSWj" target=3D"_blank"><img src=3D"https://d15k=
+2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-46bb-bd7e-=
+c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/atari-logo-trademark.png" alt=
+ width=3D"80" style=3D"display: block;" border=3D"0"></a> </td> </tr> <tr> =
+<td align=3D"center" valign=3D"top" style=3D"border-collapse: collapse; pad=
+ding: 15px 30px 0px 30px; font-size: 30px; line-height: 34px; font-family: =
+'plexeina-bold', Helvetica, Arial, sans-serif; color: #FFFFFF;" class=3D"ti=
+tle"> The world is your console. </td> </tr> <tr> <td align=3D"center" styl=
+e=3D"border-collapse: collapse; padding: 15px 30px 0px; font-family: 'plexe=
+ina-regular', Helvetica, Arial, sans-serif; color: #FFFFFF; font-size: 18px=
+; line-height: 28px;"> To play, use virtually any Bluetooth enabled game co=
+ntroller or the onscreen controls on your mobile device, and your screen of=
+ choice. But that=E2=80=99s not all, head to the blog to read more. </td> <=
+/tr> <tr> <td align=3D"center" style=3D"border-collapse: collapse;"> <table=
+ align=3D"center" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0"> <tr> <td align=3D"center" valign=3D"top" style=3D"border-collapse: =
+collapse; padding-top: 20px;"> <div><!--[if mso]><v:roundrect xmlns:v=3D"ur=
+n:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:wo=
+rd" href=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be7=
+9c6ad2&_m=3D8a2839b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8elRHeEi-6p1xh3IFhN=
+kS8ppKn-cp9nsTYhqIiLF4Puc6-V9ho6UMXHSyWuOpJB0bIRtSKyanOFpIwRefo_8ZR6hGnYuwD=
+jN8Udt2beGCMCF1YwIeUDaTs79VWU-eb2z8HBVe7nzeUh7SXKNmvYYL4P4QcFDTbrtwXe4ElLfM=
+VLuej9sGOMIrUycau_vTtE3BGNcIzwyXY6KmX5fX6nYbhco2fx-NML-2-49r6MTqjprYXY2mJZz=
+wEQLf9fp8lrRs7KKzLuocQWloL2gqczrNhndCR7fa6Wewnm5RiiUOJdSOFkKUdo2udRknKUYJ-x=
+Jn4yt2hGA79typ4fiA3GbYFciF6Pe4IZQI12IUy72jHQx5DsV8V_wKlH3iSDnlL-yxVhzt0k3Mo=
+p_PJgk_RKj1SMO7PIAsZk4aWT21Ou-3e5pD2UOnXNoXd3tk8snwH1o48er40jFjQ2bZjfA%3D%3=
+D" target=3D"_blank" style=3D"height:46px;v-text-anchor:middle;width:280px;=
+" arcsize=3D"250%" strokecolor=3D"#E5A00D" fillcolor=3D"#E5A00D"> <w:anchor=
+lock/> <center style=3D"color:#FFFFFF;font-family:sans-serif;font-size:16px=
+;font-weight:bold;">Discover the Lore</center></v:roundrect><![endif]--><a =
+clicktracking=3D"off" href=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50=
+f13f4320a9e31b8be79c6ad2&_m=3D8a2839b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8=
+elRHeEi-6p1xh3IFhNkS8ppKn-cp9nsTYhqIiLF4Puc6-V9ho6UMXHSyWuOpJB0bIRtSKyanOFp=
+IwRefo_8ZR6hGnYuwDjN8Udt2beGCMCF1YwIeUDaTs79VWU-eb2z8HBVe7nzeUh7SXKNmvYYL4P=
+4QcFDTbrtwXe4ElLfMVLuej9sGOMIrUycau_vTtE3BGNcIzwyXY6KmX5fX6nYbhco2fx-NML-2-=
+49r6MTqjprYXY2mJZzwEQLf9JeySuZYhylj-MSmps2KmcutQKq1BcWi0lM-ryUeRZ55jZwwZMaZ=
+cWTVQuDfFSR_n4Lhd8dDZjX4Th8kCfDIfyHv1Z5Z9jSrBCpnWnY5p3sZuM8ZGFxF8-lD4ht_VIJ=
+9-sACGj1bxqmgyzdNYkevEZChD4E6dOKd_c9Cj-U5EDu9i9doBHvYR1oquQ9DrSiCiQQX5gGzWg=
+3t0iOG5fXcGRw%3D%3D" target=3D"_blank" style=3D"background-color: #e5a00d; =
+border-radius: 1000px; color: #ffffff; display: inline-block; font-family: =
+'plexeina-bold', Helvetica, Arial, sans-serif; font-size: 16px; font-weight=
+: 400; line-height: 46px; text-align: center; text-decoration: none; width:=
+ 280px; -webkit-text-size-adjust: none; mso-hide: all;" rel=3D"noopener nor=
+eferrer">Get the Scoop</a></div> </td> </tr> </table> </td> </tr> <tr> <td =
+align=3D"center" style=3D"border-collapse: collapse; padding: 40px 30px 0px=
+; font-family: 'plexeina-regular', Helvetica, Arial, sans-serif; color: #FF=
+FFFF; font-size: 14px; line-height: 24px;"> *Plex Media Server required for=
+ Arcade access. For FAQs and the full list of supported devices, check out =
+<a target=3D"_blank" style=3D"color: #e5a00d; text-decoration: underline;" =
+href=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6a=
+d2&_m=3D8a2839b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8elRHeEi-6p1xh3AHlEn2s3=
+U-w29wzKgL6yG8Mv3xG_32U9yx5d-IsrJwaO_Y8d1_FOk6WK9vBe_cnBOy4tdGJOT8DhZs4-WMa=
+uXCsOGjG7gqc8Y6lz4XkbW5StHei6uqwfFZVfFsHPoAC4EsWdHpq6iP4v0R8eLLm7GeIju-EPBD=
+St4Li-IeeMiV7qol_fAgQQYQiL13oq3-_qJalsSKVZI8xUAiyL4BiqtRISECzEQD50Wc55gatxX=
+Gw0ZtzrgIA0KOF7VvvAW24nFQ04auidiTMtSloN9Z_KQSPzPOeS6FFjJpDqtGcRJg50UfAqDSnn=
+w91ese2_10iFqaLZFj3ApQhGzM9th_j6pN701xGNOQOPaknRLR3Or_0uoG64C7gmNxK3wUpsqCq=
+jkyu_wThyrD1Tptd8Lc8xBDyofT3-LP9YSH4ZlphVdeyrvyM9p--4P7u1QdC1s6A1tubvoU3d6v=
+0ZGebgJUgABY%3D">Plex Arcade support articles</a>. Price may vary depending=
+ on location and currency. </td> </tr> </table> </td> </tr> </table> <table=
+ align=3D"center" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"background-color: #000000; padding: 40px; width: 100%;"> <t=
+r> <td align=3D"center" valign=3D"top" class=3D"header" style=3D"border-col=
+lapse: collapse;"> <a href=3D"https://links.plex.tv/a/click=3F_t=3D3bef3c50=
+f13f4320a9e31b8be79c6ad2&_m=3D8a2839b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8=
+elRHeEi-6p1xh3G83ETbV4DyJtd3XwtZ4r4S4ALhYUvXKfRk_E_5pAMhBtouuzN7lYHCz0bqYM2=
+alBIV2XdKTsmXwqnDoVXlbgz5_4mvuouAnsvA1eUzoGqMw7nzh4GZ2miSQI51CZlR-dr0kz9E7z=
+jdwWmU3_EhsodoDSyGB-Ue16HcgdD600YbEFtvaVyUzDYUPoYR1zgBtLfxFuQyhIXZQiwQrIOQC=
+M9LHEhedKJfzK5j7fv0GBDIs6RPdHrJAH3JVlH70w1NjWr7zugDg7isLXUZrBOJPN4onnZYJJiq=
+JltiHgHUPjOa6SDTgDsX1j1z-KTg0gaDgTeuB8drJXu5BXSXK9FjOFmbrDwjq1YaOsKn1-UMEeH=
+cVDiSIUWutLCra0JgU3qV_krS7nS550bAVNTiWsJkYhDM%3D" target=3D"_blank"><img sr=
+c=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d571=
+3-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/plex-logo.pn=
+g" width=3D"70" style=3D"display: block;" border=3D"0" alt=3D"Plex"></a> </=
+td> </tr> <tr> <td align=3D"center" valign=3D"top" style=3D"border-collapse=
+: collapse; padding-top: 30px;"> <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"270" style=3D"width: 230px;"> <tr> <td align=3D"cent=
+er" valign=3D"top" width=3D"46" style=3D"border-collapse: collapse;"> <a hr=
+ef=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2=
+&_m=3D8a2839b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8elRHeEi-6p1xh3HsSQXw27qG=
+0plavbRMajpxNf75zqLoHAoC1uGdFrqM7qcwwtjSvuTN6uckyzdRURB3sAVeVsalJ7IYJs6YaYf=
+fshN_gylXN06bp-C2zpsdSzG1pyUeXxD2G2FWq_HORn91PEus9YOk_KRbwr1bx_xpy7xLsQljzu=
+JgVJnJrQBEj-WGPAVDVZSp8xFpsFZVdEwNcKQbpdU9cVU6_VeD9FH3q_Ior4i0Ini3e5Xn7LeTt=
+sPlgBuzLCqxfBAW96dDNblMeDK6ZuxB-2x2cE8bbLS7HKCmb3twCwv9WMa_S0JZfXktu02nz6O7=
+SLU-4jE_1HcJAXhtxI0recMSJ86JjUXdkKQ4L2dhrsjSgGm60ual8iqhBr3kdhqYXirAP9tb13Q=
+%3D%3D" target=3D"_blank"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net=
+/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f=
+4320a9e31b8be79c6ad2/icon-twitter.png" width=3D"23" height=3D"23" style=3D"=
+display: block;" border=3D"0" alt=3D"Twitter"></a> </td> <td align=3D"cente=
+r" valign=3D"top" width=3D"46" style=3D"border-collapse: collapse;"> <a hre=
+f=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&=
+_m=3D8a2839b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8elRHeEi-6p1xh3GPYnfN7w2RE=
+4jsoulal956QAcVIfTQ42nCFcvOSFFujk3-zyvGkpP0fNRjYYB1y9CZV0EQYiKr9Tfc76tBz9VZ=
+VzdU92yw4tyOebwCeOqwtM2isE58daEkylKo2OPNxKlShhH0LFDdxneGJHzBHtMsqw5ltmYuDrt=
+8p3ni-zc9QCpY_m4N97z_aTJejNwLXbqHphiuKA14rF-YVPN0XicvcGLTxNme5tjnQBEe-YgpCf=
+OH5FxujjrybKDF3fLfUiyyAqXW7LDfuPcqUUPQnhapzx8lW5vXqzjEAqhA5RluSiFaLdgo9Q0hI=
+YS4EHSpzY4-Zzl5Ta-hLsiEc-ZNyvQP_FlfnTcr5h0oRRoIl5XBRuXSF5q8pMIetkgRparYSYgk=
+3o3Hyg98-cBuyvgmZuNM%3D" target=3D"_blank"><img src=3D"https://d15k2d11r6t6=
+rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6=
+dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/icon-facebook.png" width=3D"23" heigh=
+t=3D"23" style=3D"display: block;" border=3D"0" alt=3D"Facebook"></a> </td>=
+ <td align=3D"center" valign=3D"top" width=3D"46" style=3D"border-collapse:=
+ collapse;"> <a href=3D"https://links.plex.tv/u/click=3F_t=3D3bef3c50f13f43=
+20a9e31b8be79c6ad2&_m=3D8a2839b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8elRHeE=
+i-6p1xh3KzxRJ87O-NKXLQqfynPMPfI5fyxrV1QzVPSU6p6Maq4PDSMZbHm_TahVzgVzRIqxx6b=
+kDgVYc5u5Ms9q0fbA3JKTo6OFYHCjX3Lzc-nL1Ll_PQyj3Ya-ioS30R7rHy69je9ADYtV_Hz1-w=
+dGeJde5_KB5233rTuHXeu_JbV_hyZj9xeFGTgyZ1zxV_11mN3agCYGxZiiQE_C74z_ldf2etY7A=
+3R4Q8ekBEa-f2do8L6WoC-auSSQuQ6LUsB1NxOJXnw5_LxicPoY2ZvFRqevcdHaPA5N6pQubcNv=
+zhEaZw0CqIaRfLeY64qdcrRFqg2r-jeYihIcHRqwZtaJq_lwcoGi5ihD5MLQOavvp-8B9hWyH1R=
+Sj3S7b37-6slh1Vs8gvQpMidaQp6Aihv2-CHLQE%3D" target=3D"_blank"><img src=3D"h=
+ttps://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a=
+-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6ad2/icon-instagram.png=
+" width=3D"23" height=3D"23" style=3D"display: block;" border=3D"0" alt=3D"=
+Instagram"></a> </td> <td align=3D"center" valign=3D"top" width=3D"46" styl=
+e=3D"border-collapse: collapse;"> <a href=3D"https://links.plex.tv/u/click=
+=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D8a2839b38afc4448b5c9ac1b9c15d=
+b50&_e=3DnaZ3QG8elRHeEi-6p1xh3H8FrJHJYfKj33oauy4MLH_OOEmRbpSE_Nq6gdw12PvulO=
+dzO0-V1xt9VgB7Ud18S41fjZkxwGja1GEuRp0Oo_NTns9adraLb4zoe-Aw1TY9WYpgsBa7YUnCZ=
+BzwZNcyZMavsZfT9VBznImy10CKPjLhqCWVBaPV6wRDy1Dnsgkxcww6Ws5Rs0KwgqFrHFdgFms3=
+weJeJ1g8J9PmaGeCWcFKKrOyiTa2zSsHyArvoX9LogW9g0_W38wQPpF3bNzXh_UKFfuSypV8BM0=
+6Vth2DUqQN8RfmY9cuRlGjDQ8VAw9cmq_q6H_C20JCrV9i57amipxpLAI_STzin1D0wxU2k71L3=
+wKnlpIGlegJcSFruLkH_1uZB-Dcs4faXvam31Y-UsFM1fSqSs6hx6N9w_jUHc%3D" target=3D=
+"_blank"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Int=
+egrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13f4320a9e31b8be79c6=
+ad2/icon-youtube.png" width=3D"23" height=3D"23" style=3D"display: block;" =
+border=3D"0" alt=3D"You Tube"></a> </td> <td align=3D"center" valign=3D"top=
+" width=3D"46" style=3D"border-collapse: collapse;"> <a href=3D"https://lin=
+ks.plex.tv/u/click=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D8a2839b38af=
+c4448b5c9ac1b9c15db50&_e=3DnaZ3QG8elRHeEi-6p1xh3GQ0rmjYxGWCfyik6bmeXNLA5tmQ=
+vEVRatKmCcWZYYAcISPYlMWJmgjxqc_3CVK2cCQiPwt-4VeSW1B-i8UmnjojeEO9C3gv0MrwSK9=
+52o4CteBLYhy4rl2tiP4m_5WPv6h1_wEGoptZ3sF0jtuF2zCgf-PeQWXVFrKzqjedDp8y-kY4er=
+YV8NBt2hY2Vv5SypJ9rm6kBalZlC3bRWJEcZchh45fhf4nawP1kmaLI71wp3ln5_1_Nms0kUzBI=
+TWdN1_6CyQTHJxN5LmX5R-GAaEn556NeZFef9GD1iprNCBfsVq7mE2c-MuXQHBUg628oAsZhMwh=
+K8TbH5g6vGs3leZ4AFafWW8Fx-uVEp8TIiBj8Jl3cEHOSgm7ZDImF6iI8j7VXm-o8mOhMDitapY=
+LDWc%3D" target=3D"_blank"><img src=3D"https://d15k2d11r6t6rl.cloudfront.ne=
+t/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/3bef3c50f13=
+f4320a9e31b8be79c6ad2/icon-linkedin.png" width=3D"23" height=3D"23" style=
+=3D"display: block;" border=3D"0" alt=3D"LinkedIn"></a> </td> </tr> </table=
+> </td> </tr> <tr> <td align=3D"center" valign=3D"top" style=3D"border-coll=
+apse: collapse; font-size: 13px; line-height: 20px; font-family: 'plexeina-=
+regular', Helvetica, Arial, sans-serif; color: #949596; font-weight: 400; p=
+adding-top: 20px;"> &copy; 2021 Atari Interactive, Inc. Atari and the Atari=
+ logo are registered trademarks owned by Atari Interactive, Inc. </td> </tr=
+> <tr> <td align=3D"center" valign=3D"top" style=3D"border-collapse: collap=
+se; font-size: 13px; line-height: 20px; font-family: 'plexeina-regular', He=
+lvetica, Arial, sans-serif; color: #949596; font-weight: 400; padding-top: =
+20px;"> You have received this email because you're a valued Plex customer.=
+ If you no longer wish to receive these extremely cool emails, please <a ta=
+rget=3D"_blank" style=3D"color: #D4D4D5; text-decoration: none;" href=3D"ht=
+tps://links.plex.tv/e/eh=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D8a283=
+9b38afc4448b5c9ac1b9c15db50&_e=3DnaZ3QG8elRHeEi-6p1xh3B13q-a6lprUL840hKfR5O=
+E3odMUgSTtMuAtqlftu8Y7Cw3D5guEpTQs0Jx7Ghp-7Qd7TyznID1GmacXwa3tmKSqU6cteepjK=
+-cO4RZUYmUakSQNpbWElPkujuG_f4422A8kCcRWgoruLguPlGsx-piPwilbsttgueJ1t6p1pkJf=
+qKT7bSGAyeroVWsDVE7jpXIWcR2s8fK9tash_s-0Z7dLSJ8QRImLqTszFfqFp4iwsAhS3u0OIHW=
+OQrnlhOsbn7GWxeFrCgFYMkmvcn5bd1CVliy1-qxb53aPmfPNt7Fx">unsubscribe</a>.<br>=
+<br>Plex GmbH, Hansmatt 32, 6370 Stans, Switzerland<br>Copyright &copy; 202=
+1 Plex, Inc. All rights reserved.<br><br><a target=3D"_blank" style=3D"colo=
+r: #D4D4D5; text-decoration: underline;" href=3D"https://links.plex.tv/e/ev=
+ib=3F_t=3D3bef3c50f13f4320a9e31b8be79c6ad2&_m=3D8a2839b38afc4448b5c9ac1b9c1=
+5db50&_e=3Dw8EOchFWsRcnb1-8-MMdS-rPJH6h5FgQphiFVkb_9QimYPGVAZ9E6NBWylY8QbNY=
+BgfFlCbeiZ8L8YrZLa84Jd-ZRQ4BU-Osw3N6f87l_vsky0_pp7rUYolBU-uMvuzv">View Onli=
+ne</a> </td> </tr> </table> </td> </tr> </table> <!--[if mso]></td></tr></t=
+able><![endif]--> <!--[if (IE)]></td></tr></table><![endif]--> </td> </tr> =
+</table> =0D=0A<img border=3D"0" width=3D"1" height=3D"1" alt=3D"" src=3D"h=
+ttp://sp.plex.tv/q/yCBmdC3Pw7E5zw5cuIFnkw~~/AARPmAA~/RgRh9GacPlcDc3BjQgpgEZ=
+zhEWDc2EQsUhVtcmNsb3VkLm1lZEBnbWFpbC5jb21YBAAAAAA~">=0D=0A</body> </html>
+--_----P5QFFfCdcmdBF2B9spOF2g===_73/C2-30280-C91E1106--
+

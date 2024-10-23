@@ -1,0 +1,47 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:c3c4:0:b029:be:51e1:283e with SMTP id b4csp4322943lkq;
+        Tue, 16 Feb 2021 04:41:46 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJxfXY0Edbn5SvfqfTCccLIWvEz3sAcA07NtlV39JWZhi8UZGif6gEmXlmyk+o8kQEO526fG
+X-Received: by 2002:a05:6512:22d5:: with SMTP id g21mr11827736lfu.222.1613479306802;
+        Tue, 16 Feb 2021 04:41:46 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1613479306; cv=none;
+        d=google.com; s=arc-20160816;
+        b=VK9JMWmvtWQb/jJwU6IyZUj71ENx9ipQH+BpMHl0lQNV3F0xR3ZNvnZJkhCbFvQFFN
+         /rj2jOKq+lVVt/px1kjhCKwSq/c6u86t0m2kxpwt1vBK56DnOvJyNGk7bWHL5eD0vG3i
+         Nh9MycjUoSxm2R8yAOzN5hPl/xwg8f9A109/csalwEbzJOST2wEge1bOUG9lqDSiayYk
+         dXraLzBT1MjVEvGBEDzyjxir8fgn4BO50dfCbSzH8KBEFlrEJYnG0EWmorJy0v2D4MwT
+         7iSDukmB3oWbyFKIEcWAO0cj1265gTMZydMjM3Ils/QWnYLFLTlgNPKLnrLvj4NbseRp
+         Ef9A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:from:subject:to;
+        bh=oz5vdwr9ndd/uiB2RKHhX5vfg8TG//ovjIiwQqMVegQ=;
+        b=cp0/3K4z94Gdy5W9iKU+Jg2BttTxUSKhLMvUoxGnhVvUGd8WRlBtOXTTNo2wfi9DZJ
+         h7TJEN55huMVQuR3D/1Xj/JU+k8+aWecJH43P9gyfhRsMiTYuWAcCDsO1TIxFHxdXFEP
+         xyfEBMQ+AUpCpDq1Yfsc45Z7uo9pu97phalgbA+5Y87BZLXvXogtS6D7yoI4CCfxNVOK
+         vTMuSejRPCHLGmIE4O7kyOAPPioVZ8YsTQeS5h6qCIT69o+uyFWoobcED955Bo1UbeJK
+         yYECw7JxJ0uENY8FnhLDZJEjc5FoxrNaR6rc12U49mGHBw4Khzv1hdYo1PrTI3QAHA3y
+         mZHw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of noreply@demons-lair.info designates 62.210.200.105 as permitted sender) smtp.mailfrom=noreply@demons-lair.info
+Return-Path: <noreply@demons-lair.info>
+Received: from PAR-266666 (62-210-200-105.rev.poneytelecom.eu. [62.210.200.105])
+        by mx.google.com with ESMTPS id m128si118951wmf.53.2021.02.16.04.41.45
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 16 Feb 2021 04:41:46 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply@demons-lair.info designates 62.210.200.105 as permitted sender) client-ip=62.210.200.105;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of noreply@demons-lair.info designates 62.210.200.105 as permitted sender) smtp.mailfrom=noreply@demons-lair.info
+Received: by PAR-266666 (Postfix, from userid 112)
+	id 834F76CC1433; Tue, 16 Feb 2021 13:41:40 +0100 (CET)
+To: Multiple recipients <noreply@demons-lair.info>
+Subject: Hi
+X-PHP-Originating-Script: 0:admin.massemail.php
+From: noreply@demons-lair.info
+Message-Id: <20210216124140.834F76CC1433@PAR-266666>
+Date: Tue, 16 Feb 2021 13:41:40 +0100 (CET)
+
+Hi everyone, I hope you are safe and well? As a relevantly new tracker we are on the lookout for uploaders. There basically no rules for uploading (keep it clean) We do not expect you to sit all day uploading but do expect a few uploads a week but the more the better, and preferably have a seedbox, no experience needed as training can be given. If you have the material and intrested then give a staff member a shout
+
+Stay safe and take care
+Regards
+Tester

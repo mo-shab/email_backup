@@ -1,0 +1,684 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:da56:0:b029:111:496c:77c4 with SMTP id k22csp192163lkc;
+        Wed, 30 Jun 2021 01:58:06 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxRGzmUwZbS5NBHbC1B3WNmZhTlvWAA7e8eHYXfmGfV1cW21GoqvoZw98lnwLG7TBNRKOb0
+X-Received: by 2002:a63:da04:: with SMTP id c4mr33000859pgh.348.1625043485716;
+        Wed, 30 Jun 2021 01:58:05 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1625043485; cv=none;
+        d=google.com; s=arc-20160816;
+        b=djpEnKPfcW7xXKDAHGbe/6e1OFnvTW4uXp0csDyP0qEwatnGabRdsApkXqFwcNKAFj
+         X7tgvzfNl6NPIs/TQa8bvwcPRZjPMgGh3j5/UxDrl8kEeEhah6ATw1R9Pd02DqS+EROQ
+         4+kyz0Jk4qFV+BJ0R00Z/L8+//u+d+EWCOCg/AXvu10yS7ex3dX87BDvXiSdt/j3OeBn
+         7WDSgD+BpkvPZv9TK+XMogp+a5hNlDIejvUZQiwXZIzC17ixQLw7Aufq/tpr+H/Q74DE
+         8/7w3OMZlfF6f2gl3M70bo0r98S5rJym7wJm8zI6Quqga1MX+YpzoMdVG0syoprol2YH
+         HjPA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:subject:mime-version:errors-to:reply-to:from:to
+         :dkim-signature;
+        bh=DlUoAxOsXW1Af2EBIjl1w1b47svivBjzf7WXTU9pKHI=;
+        b=qzJHw5pGFysvjTWgkilAKFA28PHgtpuUA2p1s4goRdZTWrVSh4FpXlbEu8Uk7OaOjm
+         Vi+GMO405tGo5hnFs6ov6MJiMklBNbV9bo1Esgd+tFvn1pzKf4jKjg9Mqy+xxhTeccFi
+         ZBRUUGTcAggiCH/ckRc32ZnRdVYChVp6oUxIrColVfRJkoRm+mblcCqy5Tp3hR/0kw7Z
+         9yb3lFzyB3ZrgbGcCFJEc+UaC5EYsTgLFUy/xLar561IZkxV6IbbbW6eXggbqMFL+Ujj
+         p5DCIKgAooJWgLcf6gtLP6QmrU3ScMsHtYSwKoTQdhVbc2UOvh88bvqCF59om2Qjs+pq
+         J5+w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@steampowered.com header.s=smtp header.b=tYlPMKEw;
+       spf=pass (google.com: domain of noreply@steampowered.com designates 208.64.202.52 as permitted sender) smtp.mailfrom=noreply@steampowered.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=steampowered.com
+Return-Path: <noreply@steampowered.com>
+Received: from smtp-10-tuk1.steampowered.com (smtp-10-tuk1.steampowered.com. [208.64.202.52])
+        by mx.google.com with ESMTPS id h10si25625248pls.78.2021.06.30.01.58.05
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 30 Jun 2021 01:58:05 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@steampowered.com designates 208.64.202.52 as permitted sender) client-ip=208.64.202.52;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@steampowered.com header.s=smtp header.b=tYlPMKEw;
+       spf=pass (google.com: domain of noreply@steampowered.com designates 208.64.202.52 as permitted sender) smtp.mailfrom=noreply@steampowered.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=steampowered.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=steampowered.com; s=smtp; h=Date:Message-Id:Content-Type:Subject:
+	MIME-Version:Reply-To:From:To:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=DlUoAxOsXW1Af2EBIjl1w1b47svivBjzf7WXTU9pKHI=; b=tYlPMKEwMK76F8/7L7cH3A4WS0
+	7pp1xUGx0BHHH3r2vTCbAJ0SN1O00OtAnqTyhF1wtvxZ9/b5rCJ7171k5ELET27ic8iAMpKzgjiMY
+	hPln8ekjfa3VQEsOp+9Sia2lz0P/IqKohPW6fkBWms4wtbKLM6U54lSmm94hkzLCHHwA=;
+Received: from [208.64.200.221] (helo=valvesoftware.com)
+	by smtp-10-tuk1.steampowered.com with smtp (Exim 4.93)
+	(envelope-from <noreply@steampowered.com>)
+	id 1lyW2n-007u4B-1y
+	for mrcloud.med@gmail.com; Wed, 30 Jun 2021 01:58:05 -0700
+To: mrcloud.med@gmail.com
+From: Steam <noreply@steampowered.com>
+Reply-To: <noreply@steampowered.com>
+Errors-To: <noreply@steampowered.com>
+X-Steam-Message-Type: CRecommendationEmailCampaign
+MIME-Version: 1.0
+Subject: C'est parti pour les soldes =?UTF-8?B?ZCfDqXTDqSBTdGVhbcKgISBWb2ljaSBx?=
+ =?UTF-8?B?dWVscXVlcyBvZmZyZXMgcmVjb21tYW5kw6llcyBwb3VyIHZvdXMu?=
+Content-Type: multipart/alternative;
+ boundary="np60dc321d0e077"
+Message-Id: <E1lyW2n-007u4B-1y@smtp-10-tuk1.steampowered.com>
+Date: Wed, 30 Jun 2021 01:58:05 -0700
+
+This is a multi-part message in MIME format.
+--np60dc321d0e077
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Bonjour mrcloud.med !
+C'EST PARTI POUR LES SOLDES D'ÉTÉ
+
+<https://store.steampowered.com/>
+
+
+
+Fall Guys: Ultimate Knockout - 40% de réduction !
+<https://store.steampowered.com/app/1097150/Fall_Guys_Ultimate_Knockout/>
+
+
+Age of Empires II: Definitive Edition - 33% de réduction !
+<https://store.steampowered.com/app/813780/Age_of_Empires_II_Definitive_Edition/>
+
+
+PLAYERUNKNOWN'S BATTLEGROUNDS - 50% de réduction !
+<https://store.steampowered.com/app/578080/PLAYERUNKNOWNS_BATTLEGROUNDS/>
+
+
+The Sims™ 4 - 88% de réduction !
+<https://store.steampowered.com/app/1222670/The_Sims_4/>
+
+
+Age of Empires III: Definitive Edition - 25% de réduction !
+<https://store.steampowered.com/app/933110/Age_of_Empires_III_Definitive_Edition/>
+
+
+
+Vous recevez cet e-mail car les produits ci-dessus vous sont recommandés.<https://store.steampowered.com/recommender>
+Si, à l'avenir, vous préférez ne pas recevoir d'e-mails à propos de votre
+liste de souhaits, vous pouvez modifier vos préférences de communication par
+e-mail en cliquant sur le lien suivant :https://store.steampowered.com/account/emailoptout?token=fa6ccddfd73df390d813f2fcfba3d1c27f7cb05ea90dc519fad51a59da43a5c70408a2cbb02dacc8208ccdee0ddc122e
+
+
+© Valve Corporation<br>PO Box 1688 Bellevue, WA 98009 USA
+Tous droits réservés. Toutes les marques commerciales sont la propriété de
+leurs détenteurs respectifs, aux États-Unis et dans d'autres pays.
+
+
+
+
+--np60dc321d0e077
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="date=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="x-apple-disable-message-reformatting" />
+        		<title>#email_summer_generic_Recommendation_Sale_AllSubject</title>
+        
+
+    <style type="text/css" media="screen">
+        @font-face {
+            font-family: 'Motiva Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Motiva Sans'), url(https://store.cloudflare.steamstatic.com/public/shared/fonts/MotivaSans-Light.ttf) format('woff');
+        }
+
+        @font-face {
+            font-family: 'Motiva Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Motiva Sans'), url(https://store.cloudflare.steamstatic.com//public/shared/fonts/MotivaSans-Regular.ttf) format('woff');
+        }
+
+        @font-face {
+            font-family: 'Motiva Sans';
+            font-style: normal;
+            font-weight: bold;
+            src: local('Motiva Sans'), url(https://store.cloudflare.steamstatic.com//public/shared/fonts/MotivaSans-Bold.ttf) format('woff');
+        }
+    </style>
+
+    <style type="text/css" media="screen">
+        [style*='Motiva Sans'] {
+            font-family: Motiva Sans, Helvetica, Arial, sans-serif !important;
+        }
+
+        body { padding:0 !important; margin:0 auto !important; display:block !important; min-width:100% !important; width:100% !important; background:#FFFFFF; -webkit-text-size-adjust:none }
+        a { color:#000001; text-decoration:none }
+        p { padding:0 !important; margin:0 !important }
+        img { margin: 0 !important; -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
+
+        .btn-18 a { display: block; padding: 13px 10px; text-decoration: none; }
+
+        .l-white a { color: #EEEEEE; }
+        table {
+            border-collapse:collapse;
+            mso-table-lspace:0pt;
+            mso-table-rspace:0pt;
+        }
+        img, a img{
+            border:0;
+            height:auto;
+            outline:none;
+            text-decoration:none;
+        }
+        #outlook a {
+            padding:0;
+        }
+        .ReadMsgBody {
+            width:100%;
+        }
+        .ExternalClass {
+            width:100%;
+        }
+        div,p,a,li,td,blockquote {
+            mso-line-height-rule:exactly;
+        }
+        a[href^=tel],a[href^=sms] {
+            color:inherit;
+            cursor:default;
+            text-decoration:none;
+        }
+        .ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass div,.ExternalClass span,.ExternalClass font {
+            line-height:100%;
+        }
+        a[x-apple-data-detectors] {
+            color:inherit !important;
+            text-decoration:none !important;
+            font-size:inherit !important;
+            font-family:inherit !important;
+            font-weight:inherit !important;
+            line-height:inherit !important;
+        }
+
+        /* Mobile styles */
+        @media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
+            .mpt-40 { padding-top: 40px !important; }
+
+            .mpx-20 { padding-left: 20px !important; padding-right: 20px !important; }
+
+            .mfz-28 { font-size: 28px !important; }
+
+            .mpr-0 { padding-right: 0px !important; }
+
+            .mfz-16 { font-size: 16px !important; }
+
+            .mfz-24 { font-size: 24px !important; }
+
+            .mpb-30 { padding-bottom: 30px !important; }
+
+            .mpb-40 { padding-bottom: 40px !important; }
+
+            .mpb-10 { padding-bottom: 10px !important; }
+
+            .mpb-50 { padding-bottom: 50px !important; }
+
+            .mfz-14 { font-size: 14px !important; }
+
+            .mlh-18 { line-height: 18px !important; }
+
+            .mpb-25 { padding-bottom: 25px !important; }
+
+            .mpb-20 { padding-bottom: 20px !important; }
+
+            u + .body .gwfw { width:100% !important; width:100vw !important; }
+
+            .td,
+            .m-shell { width: 100% !important; min-width: 100% !important; }
+
+            .mt-left { text-align: left !important; }
+            .mt-center { text-align: center !important; }
+            .mt-right { text-align: right !important; }
+
+            .me-left { margin-right: auto !important; }
+            .me-center { margin: 0 auto !important; }
+            .me-right { margin-left: auto !important; }
+
+            .mh-auto { height: auto !important; }
+            .mw-auto { width: auto !important; }
+
+            .fluid-img img { width: 100% !important; max-width: 100% !important; height: auto !important; }
+
+            .column,
+            .column-dir,
+            .column-top,
+            .column-dir-top { float: left !important; width: 100% !important; display: block !important; }
+
+            .kmMobileStretch { float: left !important; width: 100% !important; display: block !important; padding-left: 0 !important; padding-right: 0 !important; }
+
+            .m-hide { display: none !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; min-height: 0 !important; }
+            .m-block { display: block !important; }
+
+            .mw-15 { width: 15px !important; }
+
+            .mw-2p { width: 2% !important; }
+            .mw-32p { width: 32% !important; }
+            .mw-49p { width: 49% !important; }
+            .mw-50p { width: 50% !important; }
+            .mw-100p { width: 100% !important; }
+        }
+    </style>
+</head>
+<body class="body" style="padding:0 !important; margin:0 auto !important; display:block !important; min-width:100% !important; width:100% !important; background:#FFFFFF; -webkit-text-size-adjust:none;">
+<center>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 0; padding: 0; width: 100%; height: 100%;" bgcolor="#FFFFFF" class="gwfw">
+        <tr>
+            <td style="margin: 0; padding: 0; width: 100%; height: 100%;" align="center" valign="top">
+                <table width="780" border="0" cellspacing="0" cellpadding="0" class="m-shell">
+                    <tr>
+                        <td class="td" bgcolor="#1d1812" style="width:780px; min-width:780px; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                    <td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
+                                        Jusqu'au 8 juil. 6:00pm +01, explorez les promotions des soldes d'été.                                    </td>
+                                </tr>
+                                
+                                                                <tr>
+                                    <td class="pt-80 px-85 mpt-40 mpx-20" style="padding-top: 80px; padding-left: 85px; padding-right: 85px;">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td class="img pb-25" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 25px;">
+                                                    <a href="https://store.steampowered.com/?snr=1_620_4_1407_2750&ser=2_3_" target="_blank"><img src="https://cdn.cloudflare.steamstatic.com/store/email/general/logo.png" width="88" height="88" border="0" alt="Steam" /></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title-36 pb-30 c-grey6 fw-b" style="font-size:36px; line-height:42px; font-family:'Motiva Sans', Helvetica, Arial, sans-serif; text-align:left; padding-bottom: 30px; color:#bfbfbf; font-weight:bold;">Bonjour mrcloud.med !</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td class="title-36 lh-100p c-white mfz-28 pb-10 pr-100 mpr-0" style="font-size:36px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; font-weight:normal; min-width:auto !important; line-height:100%; color:#eeeeee; padding-bottom: 10px; padding-right: 100px;">
+                                                    <strong>C'EST PARTI POUR LES SOLDES D'ÉTÉ</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-18 lh-130p c-purple mfz-16 pb-35" style="font-size:18px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; line-height:130%; color:#dedee1; padding-bottom: 35px;">
+                                                                                                                                                                                                                                                        Explorez les soldes d'été Steam et économisez sur des milliers de titres, y compris sur ces jeux que nous avons sélectionnés spécialement pour vous. Fin de l'offre : 8 juil. 6:00pm +01.                                                                                                                                                                                                                                        
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                
+                                                                <tr>
+                                    <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 37px;">
+                                                                                <a href="https://store.steampowered.com/?snr=1_620_4_1407_2751&ser=2_3_" target="_blank"><img src="https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/email/email_banner_loc_fr.jpg?t=1" width="780" height="246" border="0" alt="Bannière d'évènement" /></a>
+                                    </td>
+                                </tr>
+                                
+                                                                      
+                                <tr>
+                                    <td class="px-30 pb-90 mpb-50" align="center" style="padding-left: 30px; padding-right: 30px; padding-bottom: 30px;">
+                                        <table width="325" border="0" cellspacing="0" cellpadding="0" class="mw-100p">
+                                            <tr>
+                                                <td>
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-radius: 5px; background: #e1cda4;">
+                                                        <tr>
+                                                            <td class="btn-18 l-white mfz-14 mlh-18" style="font-size:18px; line-height:22px; mso-padding-alt:13px 10px; color: #222222; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:center; min-width:auto !important;">
+                                                                <a href="https://store.steampowered.com/?snr=1_620_4_1407_2752&ser=2_3_" target="_blank" class="link c-white" style="display: block; padding: 13px 10px; text-decoration:none; color: #222222;">
+                                                                    <span class="link c-white" style="text-decoration:none;  color: #222222;">Parcourir les soldes</span>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                  
+	                                                            <tr>
+                                    <td class="pt-55 px-85 mpt-40 mpx-20" style="padding-top: 55px; padding-left: 85px; padding-right: 85px;">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                        <tr>
+                                                <td class="title-30 lh-130p c-white mfz-24 pb-55 pr-100 mpr-0 mpb-30" style="font-size:24px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; font-weight:normal; min-width:auto !important; line-height:130%; color:#EEEEEE; padding-bottom: 25px; padding-right: 50px;">
+                                                    <strong>
+                                                                                                                                                                                                                                                        FAITES DES AFFAIRES SUR VOS 5 RECOMMANDATIONS PRÉFÉRÉES !                                                                                                                                                                                                                                        </strong>
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+	<td class="pb-60 mpb-40" style="padding-bottom: 60px;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;">
+            <tr>
+                <td class="pb-20" style="padding-top: 8px; padding-bottom: 20px; font-size: 16pt; font-family:Motiva Sans, Helvetica, Arial, sans-serif; overflow:hidden; text-overflow:ellipsis; text-align:left; color:#eeeeee;">
+                    Fall Guys: Ultimate Knockout                </td>
+            </tr>
+			<tr>
+				<td class="fluid-img pb-10" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 10px;">
+					<a href="https://store.steampowered.com/app/1097150/Fall_Guys_Ultimate_Knockout/?snr=1_620_4_1407_45&ser=2_3_" target="_blank"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1097150/capsule_616x353.jpg?t=1621939955" width="610" height="348" border="0" title="Fall Guys: Ultimate Knockout" alt="Fall Guys: Ultimate Knockout" /></a>
+				</td>
+			</tr>
+			<tr>
+				<td class="pb-20" style="padding-bottom: 20px;">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" dir="rtl" style="direction:rtl;">
+						<tr>
+							<th class="column-dir-top" width="220" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr; vertical-align:top;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td align="right">
+											<table border="0" cellspacing="0" cellpadding="0" class="me-left">
+												<tr>
+																											<td class="text-14 c-green py-1 px-8" bgcolor="#4c6b22" style="font-size:14px; line-height:18px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; color:#A4D007; padding-top: 1px; padding-bottom: 1px; padding-left: 8px; padding-right: 8px;">
+															-40%
+														</td>
+														<td class="text-14 c-blue py-1 px-8" bgcolor="#222032" style="font-size:14px; line-height:18px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; color:#243e52; padding-top: 1px; padding-bottom: 1px; padding-left: 8px; padding-right: 8px;">
+															<span style="text-decoration: line-through;">$19.99</span>&nbsp; <span class="c-white" style="color:#EEEEEE;">$11.99 USD</span>
+														</td>
+																									</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+
+							</th>
+							<th class="column mpb-10" width="25" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;"></th>
+							<th class="column-dir-top" width="365" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr; vertical-align:top;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td class="text-14 lh-140p c-blue" style="font-size:14px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; line-height:140%; color:#243e52;">
+																								<strong>
+														PROMOTION SPÉCIALE ! L'offre prend fin le  8 juil. 6:00pm +01													</strong>
+																																	</td>
+									</tr>
+								</table>
+							</th>
+						</tr>
+					</table>
+				</td>
+			</tr>
+							<tr>
+					<td class="text-18 lh-140p c-lgrey mfz-16 pr-10 mpr-0" style="font-size:18px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; line-height:140%; color:#dedee1; padding-right: 10px;">
+						Fall Guys est un party-game massivement multijoueur réunissant jusqu'à 60 joueurs en ligne.					</td>
+				</tr>
+					</table>
+	</td>
+</tr>
+<tr>
+	<td class="pb-20 mpb-10" style="padding-bottom: 20px;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+					<th class="column-top" width="300" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+            <tr>
+                <td width="300" style="padding-top: 8px; padding-bottom: 20px; font-size: 14pt; font-family:Motiva Sans, Helvetica, Arial, sans-serif; overflow:hidden; text-overflow:ellipsis; text-align:left; color:#eeeeee;">
+                    Age of Empires II: Definitive Edition                </td>
+            </tr>
+			<tr>
+            <td class="fluid-img pb-6" width="300" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 6px;">
+											<a href="https://store.steampowered.com/app/813780/Age_of_Empires_II_Definitive_Edition/?snr=1_620_4_1407_45_1&ser=2_3_" target="_blank"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/813780/capsule_616x353.jpg?t=1619472514" width="300" border="0" title="Age of Empires II: Definitive Edition" alt="Age of Empires II: Definitive Edition" /></a>
+									</td>
+			</tr>
+			<tr>
+				<td class="pb-33 mpb-30" align="right" style="padding-bottom: 33px;">
+					<table border="0" cellspacing="0" cellpadding="0" class="me-left">
+						<tr>
+															<td class="text-14 c-green py-1 px-8" bgcolor="#4c6b22" style="font-size:14px; line-height:18px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; color:#A4D007; padding-top: 1px; padding-bottom: 1px; padding-left: 8px; padding-right: 8px;">
+									-33%
+								</td>
+								<td class="text-14 c-blue py-1 px-8" bgcolor="#222032" style="font-size:14px; line-height:18px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; color:#243e52; padding-top: 1px; padding-bottom: 1px; padding-left: 8px; padding-right: 8px;">
+									<span style="text-decoration: line-through;">$19.99</span>&nbsp; <span class="c-white" style="color:#EEEEEE;">$13.39 USD</span>
+								</td>
+													</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</th>
+
+				<th class="column" width="10" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;"></th>
+					<th class="column-top" width="300" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+            <tr>
+                <td width="300" style="padding-top: 8px; padding-bottom: 20px; font-size: 14pt; font-family:Motiva Sans, Helvetica, Arial, sans-serif; overflow:hidden; text-overflow:ellipsis; text-align:left; color:#eeeeee;">
+                    PLAYERUNKNOWN'S BATTLEGROUNDS                </td>
+            </tr>
+			<tr>
+            <td class="fluid-img pb-6" width="300" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 6px;">
+											<a href="https://store.steampowered.com/app/578080/PLAYERUNKNOWNS_BATTLEGROUNDS/?snr=1_620_4_1407_45_2&ser=2_3_" target="_blank"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/578080/capsule_616x353.jpg?t=1622701353" width="300" border="0" title="PLAYERUNKNOWN'S BATTLEGROUNDS" alt="PLAYERUNKNOWN'S BATTLEGROUNDS" /></a>
+									</td>
+			</tr>
+			<tr>
+				<td class="pb-33 mpb-30" align="right" style="padding-bottom: 33px;">
+					<table border="0" cellspacing="0" cellpadding="0" class="me-left">
+						<tr>
+															<td class="text-14 c-green py-1 px-8" bgcolor="#4c6b22" style="font-size:14px; line-height:18px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; color:#A4D007; padding-top: 1px; padding-bottom: 1px; padding-left: 8px; padding-right: 8px;">
+									-50%
+								</td>
+								<td class="text-14 c-blue py-1 px-8" bgcolor="#222032" style="font-size:14px; line-height:18px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; color:#243e52; padding-top: 1px; padding-bottom: 1px; padding-left: 8px; padding-right: 8px;">
+									<span style="text-decoration: line-through;">$29.99</span>&nbsp; <span class="c-white" style="color:#EEEEEE;">$14.99 USD</span>
+								</td>
+													</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</th>
+
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="pb-20 mpb-10" style="padding-bottom: 20px;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+					<th class="column-top" width="300" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+            <tr>
+                <td width="300" style="padding-top: 8px; padding-bottom: 20px; font-size: 14pt; font-family:Motiva Sans, Helvetica, Arial, sans-serif; overflow:hidden; text-overflow:ellipsis; text-align:left; color:#eeeeee;">
+                    The Sims™ 4                </td>
+            </tr>
+			<tr>
+            <td class="fluid-img pb-6" width="300" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 6px;">
+											<a href="https://store.steampowered.com/app/1222670/The_Sims_4/?snr=1_620_4_1407_45_3&ser=2_3_" target="_blank"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1222670/capsule_616x353_french.jpg?t=1623337270" width="300" border="0" title="The Sims™ 4" alt="The Sims™ 4" /></a>
+									</td>
+			</tr>
+			<tr>
+				<td class="pb-33 mpb-30" align="right" style="padding-bottom: 33px;">
+					<table border="0" cellspacing="0" cellpadding="0" class="me-left">
+						<tr>
+															<td class="text-14 c-green py-1 px-8" bgcolor="#4c6b22" style="font-size:14px; line-height:18px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; color:#A4D007; padding-top: 1px; padding-bottom: 1px; padding-left: 8px; padding-right: 8px;">
+									-88%
+								</td>
+								<td class="text-14 c-blue py-1 px-8" bgcolor="#222032" style="font-size:14px; line-height:18px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; color:#243e52; padding-top: 1px; padding-bottom: 1px; padding-left: 8px; padding-right: 8px;">
+									<span style="text-decoration: line-through;">$39.99</span>&nbsp; <span class="c-white" style="color:#EEEEEE;">$4.79 USD</span>
+								</td>
+													</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</th>
+
+				<th class="column" width="10" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;"></th>
+					<th class="column-top" width="300" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+            <tr>
+                <td width="300" style="padding-top: 8px; padding-bottom: 20px; font-size: 14pt; font-family:Motiva Sans, Helvetica, Arial, sans-serif; overflow:hidden; text-overflow:ellipsis; text-align:left; color:#eeeeee;">
+                    Age of Empires III: Definitive Edition                </td>
+            </tr>
+			<tr>
+            <td class="fluid-img pb-6" width="300" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 6px;">
+											<a href="https://store.steampowered.com/app/933110/Age_of_Empires_III_Definitive_Edition/?snr=1_620_4_1407_45_4&ser=2_3_" target="_blank"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/933110/capsule_616x353.jpg?t=1624381249" width="300" border="0" title="Age of Empires III: Definitive Edition" alt="Age of Empires III: Definitive Edition" /></a>
+									</td>
+			</tr>
+			<tr>
+				<td class="pb-33 mpb-30" align="right" style="padding-bottom: 33px;">
+					<table border="0" cellspacing="0" cellpadding="0" class="me-left">
+						<tr>
+															<td class="text-14 c-green py-1 px-8" bgcolor="#4c6b22" style="font-size:14px; line-height:18px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; color:#A4D007; padding-top: 1px; padding-bottom: 1px; padding-left: 8px; padding-right: 8px;">
+									-25%
+								</td>
+								<td class="text-14 c-blue py-1 px-8" bgcolor="#222032" style="font-size:14px; line-height:18px; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; color:#243e52; padding-top: 1px; padding-bottom: 1px; padding-left: 8px; padding-right: 8px;">
+									<span style="text-decoration: line-through;">$19.99</span>&nbsp; <span class="c-white" style="color:#EEEEEE;">$14.99 USD</span>
+								</td>
+													</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</th>
+
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+    <td class="px-30 pb-90 mpb-50" align="center" style="padding-left: 30px; padding-right: 30px; padding-bottom: 90px;">
+        <table width="325" border="0" cellspacing="0" cellpadding="0" class="mw-100p">
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-radius: 5px; background: #e1cda4;">
+                        <tr>
+                            <td class="btn-18 l-white mfz-14 mlh-18" style="font-size:18px; line-height:22px; mso-padding-alt:13px 10px; color: #222222; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:center; min-width:auto !important;">
+                                <a href="https://store.steampowered.com/?snr=1_620_4_1407_2753&ser=2_3_" target="_blank" class="link c-white" style="display: block; padding: 13px 10px; text-decoration:none; color: #222222;">
+                                    <span class="link c-white" style="text-decoration:none; text-transform:none; color:#222222;">Acheter</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+                                        </table>
+                                    </td>
+                                </tr>
+	                            
+                                                                
+                                
+                                								                                
+	                            
+								                                <tr>
+                                    <td class="pt-60 px-85 mpt-40 mpx-20" bgcolor="#FFFFFF" style="padding-top: 60px; padding-left: 85px; padding-right: 85px;">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td class="text-18 lh-140p mfz-16 pb-40" style="font-size:18px; color:#000001; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; line-height:140%; padding-bottom: 40px;">
+                                                    Les tarifications spéciales et promotions peuvent faire l'objet de modifications. Veuillez consulter la page du magasin Steam pour plus d'informations.                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-18 lh-140p mfz-16 pb-40" style="font-size:18px; color:#000001; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; line-height:140%; padding-bottom: 40px;">
+                                                                                                                                                                                                                                        Vous recevez cet e-mail car les produits ci-dessus vous sont recommandés.                                                                                                                                                                                                                        </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <th class="column-top" width="225" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                                            <a href="https://store.steampowered.com/?snr=1_620_4_1407_2755&ser=2_3_" target="_blank"><img src="https://cdn.cloudflare.steamstatic.com/store/email/general/logo_footer.jpg" width="165" height="50" border="0" alt="Steam" /></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                            <th class="column mpb-20" width="30" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;"></th>
+                                                            <th class="column-top" width="355" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td class="text-12 pb-14" style="font-size:12px; line-height:16px; color:#000001; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; padding-bottom: 14px;">
+                                                                            <strong>Préférences de communication par e-mail</strong>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-14 pb-12" style="font-size:14px; line-height:18px; color:#000001; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; padding-bottom: 12px;">
+                                                                            Définissez vos préférences de communication afin que nous puissions vous envoyer les e-mails importants.                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-12 pb-48" style="font-size:12px; line-height:16px; color:#000001; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; padding-bottom: 48px;">
+                                                                            <strong>
+                                                                                <a href="https://store.steampowered.com/account/emailoptout?token=fa6ccddfd73df390d813f2fcfba3d1c27f7cb05ea90dc519fad51a59da43a5c70408a2cbb02dacc8208ccdee0ddc122e&snr=1_620_4_1407&ser=2_3_" target="_blank" class="link-u" style="color:#000001; text-decoration:underline;">
+																					<span class="link-u" style="color:#000001; text-decoration:underline;">Se désabonner</span>
+																				</a> |
+																				<a href="https://store.steampowered.com/account/emailoptout?token=fa6ccddfd73df390d813f2fcfba3d1c27f7cb05ea90dc519fad51a59da43a5c70408a2cbb02dacc8208ccdee0ddc122e&snr=1_620_4_1407&ser=2_3_" target="_blank" class="link-u" style="color:#000001; text-decoration:underline;">
+																					<span class="link-u" style="color:#000001; text-decoration:underline;">Mettre à jour mes préférences</span>
+																				</a>
+                                                                            </strong>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="column-top" width="225" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                                            <a href="http://www.valvesoftware.com?snr=1_620_4_1407&ser=2_3_" target="_blank"><img src="https://cdn.cloudflare.steamstatic.com/store/email/general/logo_valve.jpg" width="165" height="48" border="0" alt="Valve" /></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                            <th class="column mpb-20" width="30" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;"></th>
+                                                            <th class="column-top" width="355" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td class="text-12 pb-14" style="font-size:12px; line-height:16px; color:#000001; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; padding-bottom: 14px;">
+                                                                            <strong>© Valve Corporation<br>PO Box 1688 Bellevue, WA 98009 USA</strong>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-12 pb-18" style="font-size:12px; line-height:16px; color:#000001; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important; padding-bottom: 18px;">
+                                                                            Tous droits réservés. Toutes les marques commerciales sont la propriété de leurs détenteurs respectifs, aux États-Unis et dans d'autres pays.                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pb-48" align="left" style="padding-bottom: 48px;">
+                                                                            <table border="0" cellspacing="0" cellpadding="0">
+                                                                                <tr>
+                                                                                    <td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                                                        <a href="https://twitter.com/steam" target="_blank"><img src="https://cdn.cloudflare.steamstatic.com/store/email/general/ico_twitter.png" width="33" height="28" border="0" alt="@steam" /></a>
+                                                                                    </td>
+                                                                                    <td width="15"></td>
+                                                                                    <td class="text-12" style="font-size:12px; line-height:16px; color:#000001; font-family:Motiva Sans, Helvetica, Arial, sans-serif; text-align:left; min-width:auto !important;">
+                                                                                        <a href="https://twitter.com/steam" target="_blank" class="link" style="color:#000001; text-decoration:none;"><span class="link" style="color:#000001; text-decoration:none;"><strong>Suivez-nous sur Twitter</strong></span></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+			<img src="https://store.steampowered.com/emi/2/3/QU0AAAAAAAA/l-beWEsPI2vu4XVbPvWsYg.gif?snr=1_620_4_1407&ser=2_3_" width="1" height="1">
+				<center style="color: #000000; font-size: 11px; margin-bottom: 4px;">
+			Ce message ne s'affiche pas correctement ?			<a href="https://store.steampowered.com/email/RecommendationEmailCampaign?sparams=eJxtUclOwzAQ_Zeco9ZLnIUTfAAnrpWqycyERiS25TigCvHvjKsKgcTF9rxl_Mb-rBbYPV445Wvk6qFSVV0lhmWV8-sSRlgEiCnQjtnDWiQvmWEVdNtjDCnzCvMi8L183AodwwcnpgOGX8ptzsV_yTluD6fj6XjhJR7-0d-bbuzznlEsujVONbbpXUnDaQse7mnWhEvY6bAyCRdiDnvO4Y29cBO0iEQTdZYmOyjqtZ3MhNMIljSabupwVI5BKHR6mICcBjcQNBYcdqpRPRgcR2UIEHujeunHrIhQG8MlzAJXTn-zOHt7RJllZU-Q5-DPW9gTFs3sMyfAPL_z-UfDSRwQ40xbmVYNnXaqlrRdr2oni2xyoWk7VQ_Wal2-CcPuc7qK4fmp2PEGzFQ6GGV124q9-voGliqccw"
+			   style="font-family:'Motiva Sans', Helvetica, Arial, sans-serif; color: #000000; font-size: 11px; margin-bottom: 4px;">
+				Cliquez ici			</a>
+		</center>
+	
+</center>
+</body>
+</html>
+
+--np60dc321d0e077--

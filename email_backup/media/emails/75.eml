@@ -1,0 +1,372 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp2568773lkb;
+        Sat, 10 Apr 2021 17:10:19 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwAddmzaWcyTD81GgSctIipNzkuz9Su3Q3lcK7M5+BlpPPFeXaUoNoOY3s7Sg8WkerYLmsn
+X-Received: by 2002:a37:b8c6:: with SMTP id i189mr20168282qkf.456.1618099819392;
+        Sat, 10 Apr 2021 17:10:19 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1618099819; cv=none;
+        d=google.com; s=arc-20160816;
+        b=KsVqPFUht+KyoPx7w+FhhBd5kBSWi0O855G71aRYAOiT40PMiYiGi5XfDFLsskgBTl
+         peOHE2ILKyV+7kwnUbzA5aLiGVbXxuy8IwIpHrFdFjZhOJjD9FbyLVhqpyqMTGL0lhoS
+         JjHRMJjpGjXc7WekVQ6JzN7zUnsOOe8aObOhrzsQ1v8PsjzdKWZIMfDP8Jps4FhR5uXs
+         coLD4Y/rStpunoGoi6hgGJEVL6L0cjojKa64Fru+NTaNkHPaXu6l74nAQTWOhlpMHKli
+         w1C9d9alSp/HMwSr2cGy9ZNkh9CpS8a7KKHcKjogAcaXmk/oUsvhvTD9Zrq61QOwQiJo
+         A+3w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:emailprovider:feedback-id
+         :message-id:reply-to:from:date:subject:to:dkim-signature;
+        bh=i1c4gQ4l6T2wiGOcqcLPpUPItIq8IkB8+Gpegj3GqH8=;
+        b=fpS/lSxtLOYXuagZ7u51yTsvOYXGMufUKyZIQQ3uxlMf3frc15tO/mart7Af8n2QVY
+         t5HQWdcST6FIsrC2E1g7iLPrukBhMKth1gzpBWb99ibGoa5FW9NmyGoawnfAGeks4lpu
+         GoPejLIAjcr9BSTZGuDbEi0+FfCjbq+rT7JpbyJLNMvEsqNL0YIl3DDTSBiMNdjn7ww4
+         Zj28czjGDjOZh8cAmDIXUqP1yksoA96WJkTK2y1HWjKNBf6t42JdZPjt+Rc+4XVojay4
+         7ikXdL6AsiE+eZ3PMMGgmeWClDOgO5cwqaGJIrT6u0j4PUZfvg9jxyIoqM00NofF72Cl
+         lG8A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@jotform.com header.s=mail header.b=kKpaUQYV;
+       spf=pass (google.com: domain of returns@jotform.com designates 152.160.253.219 as permitted sender) smtp.mailfrom=returns@jotform.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=jotform.com
+Return-Path: <returns@jotform.com>
+Received: from pool2-298.formresponse.com (pool2-298.formresponse.com. [152.160.253.219])
+        by mx.google.com with ESMTPS id t6si4819135qtq.190.2021.04.10.17.10.18
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 10 Apr 2021 17:10:19 -0700 (PDT)
+Received-SPF: pass (google.com: domain of returns@jotform.com designates 152.160.253.219 as permitted sender) client-ip=152.160.253.219;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@jotform.com header.s=mail header.b=kKpaUQYV;
+       spf=pass (google.com: domain of returns@jotform.com designates 152.160.253.219 as permitted sender) smtp.mailfrom=returns@jotform.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=jotform.com
+Received: from geu-workers-rs82 (pool2-298.formresponse.com [152.160.253.219])
+	by pool2-298.formresponse.com (Postfix) with ESMTP id 54051656075C
+	for <mrcloud.med@gmail.com>; Sat, 10 Apr 2021 20:10:18 -0400 (EDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=jotform.com; s=mail;
+	t=1618099818; bh=OvexCfBsjsLm8cQSCuFCAJs/kb8eAQnjMVKhwYKTRAA=;
+	h=To:Subject:Date:From:Reply-To:From;
+	b=kKpaUQYVs3eyABuV97Mo52EZM8+CbWDFs4fIdD4UftqHTW1/dqaDw4b64nicaXKYn
+	 fDpzX9NXpZArHpAXi6uDjZiiI2k+Iq+es/BOSDRrg7nQ6U395pRC+sdZsr8njbAQ2Z
+	 FYMGjieJTuvV77uvUFDMg3ftC4Oieau4t3CQfw14=
+Received: by geu-workers-rs82 (Postfix, from userid 1100)
+	id D809DBBD94; Sat, 10 Apr 2021 20:10:17 -0400 (EDT)
+To: mrcloud.med@gmail.com
+Subject: We have received your response for Candidature HD-F
+Date: Sat, 10 Apr 2021 20:10:17 -0400
+From: =?UTF-8?B?Sm90Rm9ybQ==?= <noreply@jotform.com>
+Reply-To: candidaturehdf@tutanota.com
+Message-ID: <06295abb7cafca885cd9c635576a9e43@localhost.localdomain>
+X-Priority: 3
+X-Related: JotForm User Emails
+Feedback-ID: 90423702245348:autorespond:jotform
+EmailProvider: true
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+"http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><meta http-equiv="Content-Type" content="text/html;
+charset=utf-8"><style>
+                    .forward-text-show {
+                        display: block !important;
+                        color: #222222 !important;
+                        text-align: center!important; 
+                        font-size: 11px!important;
+                    }
+                    .forward-link-show {
+                        display : inline !important;
+                        color: #2160d2 !important;
+                        text-decoration: underline !important;
+                        cursor: none !important;
+                    }
+                </style></head><body style="margin: 0 !important; padding: 0
+!important;">
+<table border="0" width="100%" cellspacing="0" cellpadding="0"
+bgcolor="#f7f9fc">
+<tbody>
+<tr>
+<td height="30"> </td>
+</tr>
+<tr>
+<td align="center">
+<table style="min-width: 500px; width: 500px;" border="0" width="500"
+cellspacing="0" cellpadding="0" bgcolor="#eeeeee">
+<tbody>
+<tr>
+<td bgcolor="#EEEEEE" width="4"> </td>
+<td bgcolor="#EEEEEE" width="30" height="36"><img style="display: block;"
+src="https://cdn.jotfor.ms/assets/img/builder/email_logo_small.png" alt=""></td>
+<td style="font-size: 16px; vertical-align: middle; color: #f9922b; padding-top:
+2px; line-height: 20px;" align="left" bgcolor="#EEEEEE"><strong><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span
+style="vertical-align: inherit;"><span style="vertical-align:
+inherit;">Candidature HD-F</span></span></span></span></strong></td>
+</tr>
+</tbody>
+</table>
+<table style="min-width: 500px; width: 500px;" border="0" width="500"
+cellspacing="0" cellpadding="0" bgcolor="#eeeeee">
+<tbody>
+<tr>
+<td bgcolor="#EEEEEE" width="4"> </td>
+<td align="center" bgcolor="#FFFFFF">
+<table id="emailFieldsTable" class="mceNonEditable" border="0" width="100%"
+cellspacing="0" cellpadding="5">
+<tbody id="emailFieldsTableBody"><tr id="row_14" class="questionRow"><td
+id="question_14" class="questionColumn" style="padding: 5px !important;"
+valign="top" bgcolor="white" width="170">Pseudo désiré</td><td id="value_14"
+class="valueColumn" style="padding: 5px !important;" bgcolor="white"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span
+style="vertical-align: inherit;"><span style="vertical-align:
+inherit;">mrcloud</span></span></span></span></td></tr><tr id="row_13"
+class="questionRow"><td id="question_13" class="questionColumn" style="padding:
+5px !important;" valign="top" bgcolor="#f3f3f3" width="170"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;">Adresse
+mail valide (gmail, protonmail, tutanota)
+uniquement</span></span></span></span></td><td id="value_13" class="valueColumn"
+style="padding: 5px !important;" bgcolor="#f3f3f3"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;"><span style="vertical-align:
+inherit;"><span style="vertical-align:
+inherit;">mrcloud.med@gmail.com</span></span></span></span></td></tr><tr
+id="row_12" class="questionRow"><td id="question_12" class="questionColumn"
+style="padding: 5px !important;" valign="top" bgcolor="white"
+width="170">Écrans Lien vers vos</td><td id="value_12" class="valueColumn"
+style="padding: 5px !important;" bgcolor="white"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;"><span style="vertical-align:
+inherit;"><span style="vertical-align:
+inherit;">https://i.imgur.com/0MVlqKf.png<br>
+https://i.imgur.com/AeM5zz1.png<br>
+https://i.imgur.com/OxTHGr3.png</span></span></span></span></td></tr><tr
+id="row_3" class="questionRow"><td id="question_3" class="questionColumn"
+style="padding: 5px !important;" valign="top" bgcolor="#f3f3f3"
+width="170">Décrivez votre parcours dans le p2p (site public, privé,
+généraliste, spécialisé ?) Que téléchargez vous principalement (Film,
+Série, Musique, Logiciel, Ebook,....) Quel format à votre préférence
+?</td><td id="value_3" class="valueColumn" style="padding: 5px !important;"
+bgcolor="#f3f3f3"><span style="vertical-align: inherit;"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span
+style="vertical-align: inherit;">J'ai commencé dans les tracker privé sur
+Torrentleech, j'ai rejoins leur staff, maintenant je suis chanop,<br>
+je télécharge principalement des films et
+séries</span></span></span></span></td></tr><tr id="row_4"
+class="questionRow"><td id="question_4" class="questionColumn" style="padding:
+5px !important;" valign="top" bgcolor="white" width="170">Que pensez-vous
+pouvoir apporter à HD-F? (la réponse "du partage" n'est pas
+suffisante)</td><td id="value_4" class="valueColumn" style="padding: 5px
+!important;" bgcolor="white"><span style="vertical-align: inherit;"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span
+style="vertical-align: inherit;">j'ai une seedbox, je'ai la fibre, j'upload des
+musiques ou des séries d'animes.</span></span></span></span></td></tr><tr
+id="row_6" class="questionRow"><td id="question_6" class="questionColumn"
+style="padding: 5px !important;" valign="top" bgcolor="#f3f3f3"
+width="170">Pouvez-vous uploader des FULL BR et / ou Remux?</td><td id="value_6"
+class="valueColumn" style="padding: 5px !important;" bgcolor="#f3f3f3"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;">OUI /
+yes</span></span></span></span></td></tr><tr id="row_7" class="questionRow"><td
+id="question_7" class="questionColumn" style="padding: 5px !important;"
+valign="top" bgcolor="white" width="170"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;">Pouvez-vous uploader des
+séries par saison complète? </span><span style="vertical-align: inherit;">(Aux
+formats FULL BR, Remux, Rip 1080p / 720p, WEB-DL) pas de mHD ou WEBRip ni de
+format SD</span></span></span></span></td><td id="value_7" class="valueColumn"
+style="padding: 5px !important;" bgcolor="white"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;">OUI /
+yes</span></span></span></span></td></tr><tr id="row_8" class="questionRow"><td
+id="question_8" class="questionColumn" style="padding: 5px !important;"
+valign="top" bgcolor="#f3f3f3" width="170"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;">Faites-vous partie d'une
+équipe reconnue?</span></span></span></span></td><td id="value_8"
+class="valueColumn" style="padding: 5px !important;" bgcolor="#f3f3f3"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;">NON /
+no</span></span></span></span></td></tr><tr id="row_15" class="questionRow"><td
+id="question_15" class="questionColumn" style="padding: 5px !important;"
+valign="top" bgcolor="white" width="170"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;">Êtes-vous rippeur, remuxer,
+encodeur, client?</span></span></span></span></td><td id="value_15"
+class="valueColumn" style="padding: 5px !important;" bgcolor="white"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span
+style="vertical-align: inherit;"><span style="vertical-align:
+inherit;">Non</span></span></span></span></td></tr><tr id="row_10"
+class="questionRow"><td id="question_10" class="questionColumn" style="padding:
+5px !important;" valign="top" bgcolor="#f3f3f3" width="170"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span
+style="vertical-align: inherit;"><span style="vertical-align:
+inherit;">Avez-vous un (e) seedbox, serveur
+dédié?</span></span></span></span></td><td id="value_10" class="valueColumn"
+style="padding: 5px !important;" bgcolor="#f3f3f3"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;">OUI /
+yes</span></span></span></span></td></tr></tbody>
+</table>
+</td>
+<td bgcolor="#EEEEEE" width="4"> </td>
+</tr>
+<tr>
+<td style="font-size: 4px;" bgcolor="#EEEEEE" height="4"> </td>
+<td style="font-size: 4px;" bgcolor="#EEEEEE"> </td>
+<td style="font-size: 4px;" bgcolor="#EEEEEE"> </td>
+</tr>
+</tbody>
+</table>
+<table id="autoresponder-footer" border="0" width="500" cellspacing="0"
+cellpadding="0">
+<tbody>
+<tr>
+<td style="font-size: 6px;" bgcolor="#f7f9fc" height="6"> </td>
+<td style="font-size: 6px;" bgcolor="#f7f9fc"> </td>
+</tr>
+<tr style="font-size: 14px;">
+<td style="text-align: left;"><a style="text-decoration: none; color: #535353;"
+href="https://www.jotform.com/?utm_source=emailfooter&amp;utm_medium=email&amp;utm_term=90423702245348&amp;utm_content=email_footer_text&amp;utm_campaign=autoresponder_email_footer_new_cf_old"
+target="_blank" rel="noopener noreferrer"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;"><span style="vertical-align:
+inherit;"><span style="vertical-align: inherit;">Créez maintenant votre propre
+JotForm - </span></span></span></span><span style="color: #ababab;"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;">c'est
+gratuit!</span></span></span></span></span></a></td>
+<td style="text-align: right;"><a style="border: 0; text-decoration: none;
+color: #fff; display: inline-block; font-size: 16px; line-height: 36px; width:
+160px; text-align: center; background-color: #5fc74d;"
+href="https://www.jotform.com/?utm_source=emailfooter&amp;utm_medium=email&amp;utm_term=90423702245348&amp;utm_content=email_footer_banner&amp;utm_campaign=autoresponder_email_footer_new_cf_old"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span
+style="vertical-align: inherit;"><span style="vertical-align: inherit;">Créer
+un JotForm</span></span></span></span></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="30"> </td>
+</tr>
+</tbody>
+</table>
+</body></html>
+

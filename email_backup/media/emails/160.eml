@@ -1,0 +1,319 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:22e6:b029:f9:2098:e3d8 with SMTP id b6csp4114296lkv;
+        Tue, 1 Jun 2021 11:34:13 -0700 (PDT)
+X-Received: by 2002:a63:ed17:: with SMTP id d23mr28896038pgi.107.1622572453188;
+        Tue, 01 Jun 2021 11:34:13 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1622572453; cv=none;
+        d=google.com; s=arc-20160816;
+        b=KqNWCTiYdbAwxHwnjJybTKreL6tRH0KR3gw6O69Kjqddtm/Brh4zFXs7GicQuHApeu
+         Fc9JJr2EB3pmB8Fcn3nguEe6zMHytSguJ/1ogUxRjSGUCA5vdNnsv+eDskxPw35w7ZyU
+         ub+SPOxgA6YwJgqDm9Vp5E1GgS3R4gJ5TwGCbPF/xHPcHgi7L33DKQRZLDFiA2q+OX8c
+         kRvyY+kaLORCC+lZDBxYpsNi2sHY0mHT6NuyiV3C9OUR7ei6dckfhmhY6BONNMM20bBU
+         VfqSXN4t7mMDDelRDLHsVHDW8pIN27OgnCZhokkQNAiZgI8kfu2raKp81RBQB2y1ra3b
+         BHhQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:date:mime-version:dkim-signature;
+        bh=cqJhsVEwwzvDcSrnIRmzRf5+DZcCpVKP6xnJMXqJCc0=;
+        b=P+dXnVsN7AO9ItqcBRtEfI9fItLnxwQzkz8vpZ0G09WC+mq/A8zrM/WNtZmmyIIuTn
+         h+NN2Tlwyhj2pNMPwMJJWtOvZJP1z7mllVqE73EEvaRrR/waZQYxEuoh+QD9m+WJS37C
+         DFJeRIeb/v1EOOYd548mhky3HMw8radsPTxageFYlOq6eo9qSZ6AAVsJfr+Si9vcNAv6
+         ua/lHLE0+0jOPy51SQaXSD50Dz5u6u4VAJ3a1CRwCXq+VpK9IKJLnx2mybi6yVhyj5bx
+         Nn4al4OQri5fs+KutDmRjbaOWKPD5cOiGbShzYg/lpLUFB5QiLwWma/IyZtF2eMefssU
+         YJcw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@youtube.com header.s=20161025 header.b=NA0DF4qC;
+       spf=pass (google.com: domain of 3ph22ybalc4ujllx3w21-wx0nyu77x323kn.lxvv0lux3m.vnmpvjru.lxv@youtube-subscriptions.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3pH22YBALC4Ujllx3w21-wx0nyu77x323kn.lxvv0lux3m.vnmpvjru.lxv@youtube-subscriptions.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=youtube.com
+Return-Path: <3pH22YBALC4Ujllx3w21-wx0nyu77x323kn.lxvv0lux3m.vnmpvjru.lxv@youtube-subscriptions.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id p5sor389629pjo.40.2021.06.01.11.34.12
+        for <mrcloud.med@gmail.com>
+        (Google Transport Security);
+        Tue, 01 Jun 2021 11:34:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3ph22ybalc4ujllx3w21-wx0nyu77x323kn.lxvv0lux3m.vnmpvjru.lxv@youtube-subscriptions.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@youtube.com header.s=20161025 header.b=NA0DF4qC;
+       spf=pass (google.com: domain of 3ph22ybalc4ujllx3w21-wx0nyu77x323kn.lxvv0lux3m.vnmpvjru.lxv@youtube-subscriptions.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3pH22YBALC4Ujllx3w21-wx0nyu77x323kn.lxvv0lux3m.vnmpvjru.lxv@youtube-subscriptions.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=youtube.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=youtube.com; s=20161025;
+        h=mime-version:date:message-id:subject:from:to;
+        bh=cqJhsVEwwzvDcSrnIRmzRf5+DZcCpVKP6xnJMXqJCc0=;
+        b=NA0DF4qCmZQiC5i1tzXCsWTHvwAkyGjoI52alLQCSxXTuRe/TdwkuvNQ7Yn8yaYUqU
+         3ll584297rjuIPsshDx1fTp+ygY5BAYCPHQRxIVEiSyhtNxsoIIgTX5wia2ZFhC9D95n
+         wR4J0lQhpX7fde1GigkthRlWBDyFFpuPkUb2gmGXfzTN/ywah9S0ynKxpMrY/8mb+Moc
+         UMBBH9t8wtyrLCCSg2FKu4USFIc7aRyrEY4UJczIMqo8mJrqvxqQUn9omsOo9ZDUTOE2
+         2fr4e+XIArgGsvTrSWt7piAQ/LlPN0tATqwZHQUeMd/bGwV2lkJxDfVjRFLnmv8DtZ7F
+         MypQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to;
+        bh=cqJhsVEwwzvDcSrnIRmzRf5+DZcCpVKP6xnJMXqJCc0=;
+        b=iLmCdeiT+DsSKrd4w0zWeE65hoE0qVMdCVpxkt19QJ9N43ZfqR4NNZDF3WlfxXOPMK
+         F3bGev97KM8Aumb69pku9JPLssHarLOVRrnt+lsG6sFwUGKz4OUB8nQugVy1Xy4n1aw8
+         Ca32axo00xCXHtm4CJsyb++ukbiUHFYz7GEzp4VkerJpBx2BFJfAmFAlG7E3PxGZLluW
+         EEI0mO8W2uKKAK1svTs96kygjE0iJKAoxQ1/8lOOiGpecMr7xEdXdC5/EEKw7LCaOKis
+         kXoB78RJxAqyt/oI3gkGhyLyeRpSHfhkeIa5+Mi9PhFkqPIkNGnfCkQ3Ainlx87zH1p/
+         53Fg==
+X-Gm-Message-State: AOAM530q3+YWn0khXaJ2aOiq2dTpa4ZvW6CJeRJkhxIsHS1xIsYqCfQB
+	dn4GU9DZkG5E+cGuHYpP0Qg6fBz+yZs=
+X-Google-Smtp-Source: ABdhPJxUOnCVA93Gf81hJUjSOnW2S6VvbnNrUd6Uh3b8lCHE9ljCPly3NDGe4Gzfymm+GWvxgiKNgVRJZgBnfpTQKutf++Q=
+MIME-Version: 1.0
+X-Received: by 2002:a17:90a:e7c8:: with SMTP id kb8mr25352550pjb.60.1622572452624;
+ Tue, 01 Jun 2021 11:34:12 -0700 (PDT)
+Date: Tue, 01 Jun 2021 11:34:12 -0700
+X-Feedback-Id: :::YouTube
+X-No-Auto-Attachment: 1
+Message-ID: <000000000000a93af005c3b896ba@google.com>
+Subject: [Copyright claim] Your video has been blocked: "Tom&Jerry Classic Vol 5"
+From: YouTube <accounts-noreply@youtube.com>
+To: mrcloud med <mrcloud.med@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000a93acb05c3b896b7"
+
+--000000000000a93acb05c3b896b7
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+SGkgbXJjbG91ZCBtZWQsDQoNCkEgY29weXJpZ2h0IG93bmVyIHVzaW5nIENvbnRlbnQgSUQgaGFz
+IGNsYWltZWQgc29tZSBtYXRlcmlhbCBpbiB5b3VyIHZpZGVvLg0KDQpBcyBhIHJlc3VsdCwgeW91
+ciB2aWRlbyBoYXMgYmVlbiBibG9ja2VkLCBhbmQgY2FuIG5vIGxvbmdlciBiZSBwbGF5ZWQgb24g
+IA0KWW91VHViZS4NCg0KVGhpcyBpcyBub3QgYSBjb3B5cmlnaHQgc3RyaWtlLiBUaGlzIGNsYWlt
+IGRvZXMgbm90IGFmZmVjdCB5b3VyIGFjY291bnQgIA0Kc3RhdHVzLg0KDQpWaWRlbyB0aXRsZTog
+VG9tJkplcnJ5IENsYXNzaWMgVm9sIDUNCkNvcHlyaWdodGVkIGNvbnRlbnQ6IFRPTSBBTkQgSkVS
+UlkgMyBob3VycyBEVkQNCkNsYWltZWQgYnk6IFdCVFYNCg0KDQpXaHkgdGhpcyBjYW4gaGFwcGVu
+DQpZb3VyIHZpZGVvIG1pZ2h0IGNvbnRhaW4gY29weXJpZ2h0ZWQgY29udGVudC4NCkNvcHlyaWdo
+dCBvd25lcnMgY2FuIGNob29zZSB0byBibG9jayBZb3VUdWJlIHZpZGVvcyB0aGF0IGNvbnRhaW4g
+dGhlaXIgIA0KY29udGVudC4NCg0KSWYgdGhpcyBjb3B5cmlnaHQgY2xhaW0gaXMgdmFsaWQNCllv
+dSBkb27igJl0IG5lZWQgdG8gdGFrZSBhbnkgYWN0aW9uIG9yIGRlbGV0ZSB5b3VyIHZpZGVvLg0K
+DQpIb3cgdG8gdW5ibG9jayB5b3VyIHZpZGVvDQpJZiBzb21ldGhpbmcgd2VudCB3cm9uZyBhbmQg
+dGhlIGNvcHlyaWdodCBvd25lciBvciBvdXIgc3lzdGVtIG1hZGUgYSAgDQptaXN0YWtlLCB3ZSBo
+YXZlIGEgZGlzcHV0ZSBwcm9jZXNzLiBQbGVhc2Ugb25seSB1c2UgaXQgaWYgeW914oCZcmUgY29u
+ZmlkZW50ICANCnlvdSBoYXZlIHRoZSByaWdodHMgdG8gdXNlIGFsbCB0aGUgY29udGVudCBpbiB5
+b3VyIHZpZGVvLg0KWW91IGNhbiBhbHNvIHJlbW92ZSB0aGUgY2xhaW1lZCBjb250ZW50IHVzaW5n
+IFN0dWRpbydzIGVkaXRpbmcgdG9vbHMuDQoNClZpZXcgb3B0aW9uczogaHR0cHM6Ly9zdHVkaW8u
+eW91dHViZS5jb20vdmlkZW8vYnZRT0dkLWZaaVkvZWRpdD9kPXZjDQoNCi0gVGhlIFlvdVR1YmUg
+VGVhbQ0KDQo=
+--000000000000a93acb05c3b896b7
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+  <html lang=3D"en">
+
+  <head>
+    <title>
+      [Copyright claim] Your video has been blocked: "Tom&Jerry Classic Vol=
+ 5"
+    </title>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+  </head>
+
+  <body>
+    <table width=3D"620" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" a=
+lign=3D"center"><tr><td bgcolor=3D"#F0F0F0">
+      <table width=3D"578" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ align=3D"center">
+        <tr>
+          <td height=3D"16"></td>
+        </tr>
+        <tr>
+          <td>
+            <img src=3D"https://www.gstatic.com/youtube/img/branding/youtub=
+elogo/2x/youtubelogo_60.png" style=3D"height: 30px;">
+          </td>
+        </tr>
+        <tr>
+          <td height=3D"16"></td>
+        </tr>
+
+        <tr>
+          <td align=3D"left" bgcolor=3D"#FFFFFF">
+            <div style=3D"border-style:solid; border-width:1px; border-colo=
+r:#CCCCCC;">
+              <table width=3D"578" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" align=3D"center">
+                <tr>
+                  <td height=3D"22" colspan=3D"3"></td>
+                </tr>
+
+                <tr>
+                  <td width=3D"40"></td>
+                  <td width=3D"498">
+                    <div style=3D"
+  font-family:arial,Arial,sans-serif;
+">
+                      <p>
+Hi mrcloud med,
+</p>
+
+  <p>
+A copyright owner using Content ID has claimed some material in your video.
+  </p>
+
+<p>
+As a result, your video has been blocked, and can no longer be played on Yo=
+uTube.
+</p>
+
+<p>
+This is not a copyright strike. This claim does not affect your account sta=
+tus.
+</p>
+
+<p style=3D'margin-left: 35px;'>
+<b>Video title:</b> Tom&Jerry Classic Vol 5
+  <br>
+<b>Copyrighted content:</b> TOM AND JERRY 3 hours DVD
+  <br>
+<b>Claimed by:</b> WBTV
+</p>
+
+
+<p>
+  <b>Why this can happen</b>
+  <ul>
+    <li>Your video might contain copyrighted content.</li>
+    <li>Copyright owners can choose to block YouTube videos that contain th=
+eir content.</li>
+  </ul>
+</p>
+
+<div>
+  <p>
+    <strong>If this copyright claim is valid</strong>
+  </p>
+  <ul>
+    <li>You don=E2=80=99t need to take any action or delete your video.</li=
+>
+  </ul>
+</div>
+
+<div>
+  <p>
+    <strong>How to unblock your video</strong>
+  </p>
+  <ul>
+    <li>If something went wrong and the copyright owner or our system made =
+a mistake, we have a dispute process. Please only use it if you=E2=80=99re =
+confident you have the rights to use all the content in your video. <a href=
+=3D"//support.google.com/youtube/answer/2797454?hl=3Den">Learn more</a></li=
+>
+    <li>You can also remove the claimed content using Studio's editing tool=
+s.</li>
+  </ul>
+</div>
+
+<p>
+      <a href=3D"https://studio.youtube.com/video/bvQOGd-fZiY/edit?d=3Dvc">
+    <button type=3D"button" style=3D"display: inline-block; height: 28px; b=
+order: solid 1px #D8D8D8; padding: 5px 10px; outline: 0; background-color: =
+#2793e6; font-weight: bold; font-size: 11px; color: #FFFFFF; text-decoratio=
+n: none; white-space: nowrap; word-wrap: normal; line-height: normal; verti=
+cal-align: middle; cursor: pointer; *overflow: visible; -moz-border-radius:=
+ 2px; -webkit-border-radius: 2px; border-radius: 2px; -moz-box-shadow: 0 1p=
+x 0 rgba(0,0,0,0.05); -ms-box-shadow: 0 1px 0 rgba(0,0,0,0.05); -webkit-box=
+-shadow: 0 1px 0 rgba(0,0,0,0.05); box-shadow: 0 1px 0 rgba(0,0,0,0.05); bo=
+rder-color: #1b7fcc;" onmouseover=3D"this.style.backgroundColor=3D'#3f76b7'=
+;" onmouseout=3D"this.style.backgroundColor=3D'#2793e6';">View options</but=
+ton>
+  </a>
+
+
+</p>
+
+  <div>
+    <b>Need copyright-safe songs?</b><br />
+When choosing music for your next video, you can avoid copyright-related is=
+sues by picking a song from the <a href=3D"https://www.youtube.com/attribut=
+ion_link?a=3DXGyqbdKerTt73vlt&amp;u=3D/audiolibrary">YouTube Audio Library<=
+/a>. We're adding new tracks all the time!
+  </div>
+
+
+<p>
+- The YouTube Team
+
+</p>
+
+  <img class=3D"open_tracking_img" src=3D"https://www.youtube.com/attributi=
+on_link?a=3DXGyqbdKerTt73vlt&amp;u=3D/gen_204%3Fa%3Dem-copyright-cyc-ww-blo=
+ck" width=3D"1" height=3D"1">
+
+
+                    </div>
+                  </td>
+                  <td width=3D"40"></td>
+                </tr>
+
+                <tr>
+                  <td height=3D"22" colspan=3D"3"></td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td height=3D"16"></td>
+        </tr>
+        <tr>
+          <td align=3D"center">
+            <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=
+=3D"center">
+              <tr>
+                <td width=3D"40"></td>
+                <td width=3D"498">
+                  <div style=3D"
+  font-family:arial,Arial,sans-serif; font-size:11px; color:#999999; line-h=
+eight:14px;
+">
+                     =20
+  <a href=3D"http://support.google.com/youtube/?hl=3Den" style=3D"text-deco=
+ration:none; color:#1C62B9;">Help center</a>
+    =E2=80=A2 <a href=3D"https://www.youtube.com/attribution_link?noapp=3D1=
+&amp;a=3DXGyqbdKerTt73vlt&amp;u=3D/account_notifications%3Ffeature%3Dem-" s=
+tyle=3D"text-decoration:none; color:#1C62B9;">Email options</a>
+
+
+                  </div>
+                </td>
+                <td width=3D"40"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td height=3D"16"></td>
+        </tr>
+        <tr>
+          <td align=3D"left">
+            <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=
+=3D"center">
+              <tr>
+                <td width=3D"40"></td>
+                <td width=3D"498">
+                  <div style=3D"
+  font-family:arial,Arial,sans-serif; font-size:11px; color:#999999; line-h=
+eight:13px;
+">
+                    &copy;2021 YouTube, LLC 901 Cherry Ave, San Bruno, CA 9=
+4066, USA
+                  </div>
+                </td>
+                <td width=3D"40"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height=3D"22"></td>
+        </tr>
+      </table>
+    </td></tr></table>
+    <img class=3D"open_tracking_img" src=3D"https://www.youtube.com/attribu=
+tion_link?a=3DXGyqbdKerTt73vlt&amp;u=3D/gen_204" width=3D"1" height=3D"1">
+  </body>
+  </html>
+
+--000000000000a93acb05c3b896b7--

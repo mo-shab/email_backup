@@ -1,0 +1,226 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:d908:0:b029:fc:9c37:7144 with SMTP id u8csp1282240lkc;
+        Sat, 12 Jun 2021 06:23:29 -0700 (PDT)
+X-Received: by 2002:a2e:8557:: with SMTP id u23mr6681426ljj.472.1623504209424;
+        Sat, 12 Jun 2021 06:23:29 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1623504209; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ZIlkPKDJtj19mmnb6F76ADsnVNA5muq4YX/UeEV8x60obkdJwekJJwkO1a8GBSfXEN
+         AKBftB8ZR1ah4eqEYNrsZ8G3wsS3O9seLUA4T82QQBMihQds6Jp1Gi+irUVMGfSazfMk
+         0r2WOP8brgKdLH5sNb0YwHfvJUTP3bzFXxonxjVN8M9dZswAphQ55yj5wL/kld82is26
+         CCY7+qMataoSWfstO5lW7Wm0FVipV3aGuQt2aWeI40DEpfuv8YbqfMX128ESoWk8KE0r
+         /hjkTB0aNA/SDcWimT0XFz5fgc5u4ltbHwLvSG8PE0JiuLO/tbi4JNMN0cW1oQZ6hTDC
+         kMpA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=in-reply-to:references:subject:from:date:message-id:auto-submitted
+         :to:dkim-signature;
+        bh=QmioFkVpOEii1LRDEMo9PcNT2C8ReYaOGt3EdQHCFC0=;
+        b=uwLij3vUcpc+oRlCGmi7lWj/zNKFDFx4VDl3z2bvzdmiO7jh2KR5vcxUv67hxvu138
+         vTMurwECMFzXh+tGwdrWExSf6b/uiHdO8qkO8b6k0QyCnBPj+3upy9onyYOhdna2O2Qw
+         c888639PxG8FuCZN8Mna1h1UJ/Cc2uqpJ+fg/Y8j+mqSEB1VlS2wgNy7IrEdV/CQleD0
+         U6O4rva17ZZLr1O23IPKA68eKZt63qBu5rEd7HOIpZ4F+3hbC1DVJ3iMElkW7U3+PrMc
+         qjKzCX8bsMom7+gTvAJ1SelA1TfQfIxAKG7ELpKDkK5xFVe9hWJYsvOYOKpZmH7pLUpa
+         HDDQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@googlemail.com header.s=20161025 header.b=P2SA0BPh;
+       spf=pass (google.com: best guess record for domain of postmaster@mail-sor-f69.google.com designates 209.85.220.69 as permitted sender) smtp.helo=mail-sor-f69.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=googlemail.com
+Return-Path: <>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id w13sor1954614lfa.188.2021.06.12.06.23.29
+        for <mrcloud.med@gmail.com>
+        (Google Transport Security);
+        Sat, 12 Jun 2021 06:23:29 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of postmaster@mail-sor-f69.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlemail.com header.s=20161025 header.b=P2SA0BPh;
+       spf=pass (google.com: best guess record for domain of postmaster@mail-sor-f69.google.com designates 209.85.220.69 as permitted sender) smtp.helo=mail-sor-f69.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=googlemail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20161025;
+        h=to:auto-submitted:message-id:date:from:subject:references
+         :in-reply-to;
+        bh=QmioFkVpOEii1LRDEMo9PcNT2C8ReYaOGt3EdQHCFC0=;
+        b=P2SA0BPhodPsmxGGvEgbo0UmaL7ATYdGHXZG57C71y3scI09jCbaaTqiPEbf1aqmTj
+         dgv7nh8Fcf4VOL80cQv7ZWtytgVp7sJKhrIW5wr6xwwseRxetfztn1yMAE28DHC1vGBK
+         0mrC4+NsGN3BYs3OVmmzku6qdz7evc2cCzblgkb20+dWXJMmnsDskex50y6s7wVPAS5S
+         ezo/2ip1tUUYS2YoxWLE5JZvbMw80ex9P3y4cUOPYcrEoIkmMimgOit6W5kXsOrXNj/k
+         YE9htJs2o7jf00cunCcoFD1aEOd6hUCLafKf/KuNiHMjWkuFS2xc2KaiKHWnZDWmPHvA
+         sN2w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:to:auto-submitted:message-id:date:from:subject
+         :references:in-reply-to;
+        bh=QmioFkVpOEii1LRDEMo9PcNT2C8ReYaOGt3EdQHCFC0=;
+        b=PB4flNQ+wDhyLp82X3wv9WAR4hdSXMKIIeZw6foDo1CRInkwmxBYBedokDmUmuNvoa
+         VgL6PpjffPsE1UOsu65AciMasn0h4Mc81UxQKshIU26ar/TjOplnoCAjz8BJorx9Q5Ig
+         1e4ERTAvt9jnZEaHSnNzfG9NP3416xaHiERy368Pjgb/EGX+IeR3KJB3JkZwBy1LD3dB
+         PNJMj0Vm8uQ1xqgDVGkhMAD2TzleG9EeL4NP5Xx6MuiDEhAiHAtOLh/fviFc0L0mJ737
+         9vsGFNqi1VZXaKhHMkLHDdRA0MNFchQ1W+40HIKCdJCR0HE0I3K/A+XwNR4d8+cFCGc3
+         csHg==
+X-Gm-Message-State: AOAM5322iSar+ifHiLP1G+rDjiK6yLjqNfOPafAA8bKms92iTPee9By9
+	7lw/iE0SSProZoA053B493uGROno5mCCkruyLnJ6bg==
+X-Google-Smtp-Source: ABdhPJwQUcqcgqMOcswF/diBFnPkhcsoBC4n2o0IDf+BCqdTpbksHn76CX5LxExJWYLPftgYZVkHBuvrEBYc7Ud4zHUjDwFIl1LdsRk=
+X-Received: by 2002:a05:6512:2101:: with SMTP id q1mr2336524lfr.647.1623504209261;
+        Sat, 12 Jun 2021 06:23:29 -0700 (PDT)
+Content-Type: multipart/report; boundary="000000000000af29a705c491876d"; report-type=delivery-status
+To: mrcloud.med@gmail.com
+Received: by 2002:a05:6512:2101:: with SMTP id q1mr780794lfr.647; Sat, 12 Jun
+ 2021 06:23:29 -0700 (PDT)
+Return-Path: <>
+Auto-Submitted: auto-replied
+Message-ID: <60c4b551.1c69fb81.e2d3.43dd.GMR@mx.google.com>
+Date: Sat, 12 Jun 2021 06:23:29 -0700 (PDT)
+From: Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+Subject: Delivery Status Notification (Failure)
+References: <CAHQY9xZg753yCy=xQT5QTndu=6Z5Hfcjv+2=NV3Cf+O-9SCX3w@mail.gmail.com>
+In-Reply-To: <CAHQY9xZg753yCy=xQT5QTndu=6Z5Hfcjv+2=NV3Cf+O-9SCX3w@mail.gmail.com>
+X-Failed-Recipients: zaouid.farida@hotmail.com
+
+--000000000000af29a705c491876d
+Content-Type: multipart/related; boundary="000000000000af324305c491876e"
+
+--000000000000af324305c491876e
+Content-Type: multipart/alternative; boundary="000000000000af324905c491876f"
+
+--000000000000af324905c491876f
+Content-Type: text/plain; charset="UTF-8"
+
+
+** Address not found **
+
+Your message wasn't delivered to zaouid.farida@hotmail.com because the address couldn't be found, or is unable to receive mail.
+
+
+
+The response from the remote server was:
+550 5.5.0 Requested action not taken: mailbox unavailable (S2017062302). [VE1EUR01FT051.eop-EUR01.prod.protection.outlook.com]
+
+--000000000000af324905c491876f
+Content-Type: text/html; charset="UTF-8"
+
+
+<html>
+<head>
+<style>
+* {
+font-family:Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<table cellpadding="0" cellspacing="0" class="email-wrapper" style="padding-top:32px;background-color:#ffffff;"><tbody>
+<tr><td>
+<table cellpadding=0 cellspacing=0><tbody>
+<tr><td style="max-width:560px;padding:24px 24px 32px;background-color:#fafafa;border:1px solid #e0e0e0;border-radius:2px">
+<img style="padding:0 24px 16px 0;float:left" width=72 height=72 alt="Error Icon" src="cid:icon.png">
+<table style="min-width:272px;padding-top:8px"><tbody>
+<tr><td><h2 style="font-size:20px;color:#212121;font-weight:bold;margin:0">
+Address not found
+</h2></td></tr>
+<tr><td style="padding-top:20px;color:#757575;font-size:16px;font-weight:normal;text-align:left">
+Your message wasn't delivered to <a style='color:#212121;text-decoration:none'><b>zaouid.farida@hotmail.com</b></a> because the address couldn't be found, or is unable to receive mail.
+</td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+</td></tr>
+<tr style="border:none;background-color:#fff;font-size:12.8px;width:90%">
+<td align="left" style="padding:48px 10px">
+The response from the remote server was:<br/>
+<p style="font-family:monospace">
+550 5.5.0 Requested action not taken: mailbox unavailable (S2017062302). [VE1EUR01FT051.eop-EUR01.prod.protection.outlook.com]
+</p>
+</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+--000000000000af324905c491876f--
+--000000000000af324305c491876e
+Content-Type: image/png; name="icon.png"
+Content-Disposition: attachment; filename="icon.png"
+Content-Transfer-Encoding: base64
+Content-ID: <icon.png>
+
+iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAYAAADnRuK4AAAACXBIWXMAABYlAAAWJQFJUiTwAAAA
+GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABTdJREFUeNrsnD9sFEcUh5+PRMqZ
+yA0SPhAUQAQFUkyTgiBASARo6QApqVIkfdxGFJFSgGhJAUIiBaQB0ZIOKVCkwUgURjIg2fxL4kS+
+YDvkbC/388bi8N16Z4/d7J/5PsniuD3fyePP772ZeTsDQRAYQL/UGAJAIEAgQCBAIAAEAgQCBAIE
+AkAgyJT3Mv+Eq7vYK8mTE+MDRCAghQECAeRQA5V2ZOpmg5vDx3NPzRbmGRMEcmTrEbNNB8zWfRD+
+f/Efs2e3zCZvMjaksBg27TfbcuSNPEKP9ZyuAQKtHX2O9ncNgWC57umMPKvRNb0GEKgnLoUyxTQC
+rcns0/6uIRAs8/hGf9cQCJZpTpjdO2f25/03z+mxntM1eLtsZAgiUtX4JcaBCAQIBAgECARQ8CJa
+G5jab4J4pm4WZmO3OALVh802fIwcLkyPkcKAGggAgQCBAIEAgQCBABAIEAjKA/1AnahhbO5FdOOY
+VsrrDbPBYcYKgf5D2wLaV3p+22xh1u17tO3S+DTcvxvagUDeivPgx/a/95J/73w7Sj26Hn4pKo2M
+ehuV/KyBJM6d0f7k6RKx/R63vvL2tmf/ItDdM2ZTP6f7nkp9Y2fDx1v9akmpIU+KSCLVUghUQfSL
+zVKeTklbLxGoctw/nzC5rw8L5KRNbkpnKq6pgSqEClzNnFzY+XnYWrt6VpVk1vbwWvg+RKCKMOUw
+Q1LEOXA+/MX3mpJvGDHb265xtnzmFoUK1HaKQGlMtePYM+q2KKjXuaS1NJYIEKgI8jhEgqHt4cqy
+Ky53j3hyHz2bqSLp2o2LbJ7MxKovkGqXteoWpaOk96O9/yF/dF7NwlS36AuIQIBA5celQK4PIxBE
+4LLzrtoLgaALdSy6CJRkWQCBPGLsTHznomZ9nszUECgJ2ml3WWHe+QVFNPSQx6UdZNtxr9pbEShN
+eTTz8mQXHoHSlke7+Z+c9m6VGoHSkEfs/trLW3wQKApN1V3lGfnGu2Z6BFoLtYCs3GWBPAiUCLVh
+/HoaeRCoT9R873KLM/IgUBfapnCpe5AHgXry4pf412ihEHkQqCdxd5VqrcezhUIESsJMTJ+Pdthp
+Z0WgyNlXXPHc2Mc4IVAELl2Gnh8mhUDvCkfbIVAkcbf/aOoO3fMKhqAD3frTa4quwpn0hUDOkQhI
+YYBAgECAQAAU0QlYObl+5Ug8NcprZkZxjUCxRPVA6zmtEXHCBykskrhjgHXN09PoEcgFl4M4H11j
+nBAoApcj6ZoPGScEAgTKApcDoTw5sgWB+sGlz1n90IBAPdE6j1o21PfcC11jLagL1oFWRyGlKU3p
+OxcSJQ7NZAjkhHp/uG2HFAYIBAgECASAQIBAgECAQAAIBOkxEARBtp9wdVfAMOfIifEBIhCQwgCB
+ABAI0oV2jhxZ+nfBatuPZfgBCy0Eqqo8c01b+uu51XZvzOgDWoHNTGR+pCwpLEd5svuAZXlO2uEr
+PyEQ8hRWHgRCHmqg0sjTnLalv6crJQ8C/U8stqNO0I4+VZOHFIY8COS1PGL2ybd5yUMKK7s8zYmL
+dujyd3n+nESgcsvzZd4/KwIhDwIhT35QA6UyE1qyxZnfvJMHgdKS549JC1qvvJOHFIY8CFR5eV5O
+XimqPAhUdHnmfx+zgxdOFXkoqIGKKs/cswnb/8Oeog8HEai48nxUhiFBIORBIOShBioskkbySCLk
+IQIhDwIhj28p7FApR6b1qlEbHGpkO/rr6215vi/zH1r2x7tApSGFAQIBAgECAQIBIBAgECAQIBBA
+LK8FGADCTxYrr+EVJgAAAABJRU5ErkJggg==
+--000000000000af324305c491876e--
+--000000000000af29a705c491876d
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; googlemail.com
+Arrival-Date: Sat, 12 Jun 2021 06:23:28 -0700 (PDT)
+X-Original-Message-ID: <CAHQY9xZg753yCy=xQT5QTndu=6Z5Hfcjv+2=NV3Cf+O-9SCX3w@mail.gmail.com>
+
+Final-Recipient: rfc822; zaouid.farida@hotmail.com
+Action: failed
+Status: 5.5.0
+Remote-MTA: dns; hotmail-com.olc.protection.outlook.com. (104.47.1.33, the
+ server for the domain hotmail.com.)
+Diagnostic-Code: smtp; 550 5.5.0 Requested action not taken: mailbox unavailable (S2017062302). [VE1EUR01FT051.eop-EUR01.prod.protection.outlook.com]
+Last-Attempt-Date: Sat, 12 Jun 2021 06:23:29 -0700 (PDT)
+
+--000000000000af29a705c491876d
+Content-Type: message/rfc822
+
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=eR93HWuqpFGlWbmR5Lnqa+NZx3Dl/SVX9RfRL4sh4Zo=;
+        b=gwvQgxvY5sIgFd/rYpyfNEe43rXGJbI9UB1i5kIG51TdKczEYqrGzSmTq3zY6hKsUX
+         j+AYj0BkHVj96mxGtGM5NmURfAoxLk3K0QXxPgg2zdKxefDCsW1hjDFCB+cThPvSU9rM
+         qL9egCOPlJJX+h68D0xNK6qOQGja59LqMvL+vofS5QTyiB6KnyaRb9drmW/CI21FgvVu
+         MIwoKmbmGLWAU2PmHXWRLeD5LQ5Ec5corf5diiBnK8eBtM9z8aKH1Qzig7n/VzQq4iCr
+         yDBBjKF7nmkafgZrKN+jl0puByyOK7kUCauOlNMYMg23jMLa2+1n70OGAofsovaD6ino
+         bjmw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=eR93HWuqpFGlWbmR5Lnqa+NZx3Dl/SVX9RfRL4sh4Zo=;
+        b=dGesDZKWN8zFd9smqnMi+PSy4V8nbPGCtYCOM19+C08a7XaBUTPiRs24QlseeQf3yb
+         j1/k+I03Dm/SbCKhKzzc3JnINkkwGGLWpVFtNDa8PG9RkTeB104S20/bNBmrnoyGTnPB
+         MAhWjeIzoEZOh1IWItpWTkN8PxBWJG+Qj8GxHjFWY45oyDY3EayniK/Fa9Lc+MvcoD77
+         jXWnf5mooOmxjleg8960D1jj8lMVHwsnE6r3zzXvI17ToqY4O0CCcPaNuW6ubs12S0sC
+         mM9Rig6g3IeUacjtQGSU182Npi/N2d3AEAClDTjetHw3AIIB/5sy6xAlg/7L8LlB6PfY
+         jyYg==
+X-Gm-Message-State: AOAM531Jgey8tr1Q0IA3/vsAzk1oHuJ2QpTNyZoxBGFLAk25qya5XEfW
+	IT701fAvUofXRfYJRGiEVd5vpoUz9S2rpyazn5jHlChX
+X-Google-Smtp-Source: ABdhPJzQnZXYR63Z2GXgXg//CM9GwfL1t8l7BMr/lpQhTFeR0vJa68AzXyQl7zGG/MGgW2SB7ntDFRa08md5IxRcIbA=
+X-Received: by 2002:a05:6512:2101:: with SMTP id q1mr2336502lfr.647.1623504208572;
+ Sat, 12 Jun 2021 06:23:28 -0700 (PDT)
+MIME-Version: 1.0
+From: mrcloud med <mrcloud.med@gmail.com>
+Date: Sat, 12 Jun 2021 15:23:16 +0200
+Message-ID: <CAHQY9xZg753yCy=xQT5QTndu=6Z5Hfcjv+2=NV3Cf+O-9SCX3w@mail.gmail.com>
+Subject: 
+To: zaouid.farida@hotmail.com
+Content-Type: multipart/mixed; boundary="000000000000a4cf2e05c4918727"
+
+----- Message truncated -----
+--000000000000af29a705c491876d--

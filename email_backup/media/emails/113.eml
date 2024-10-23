@@ -1,0 +1,104 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:cad2:0:b029:f4:b3fb:84d3 with SMTP id e18csp1756207lky;
+        Sat, 8 May 2021 18:19:39 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzPLjf5hgGc20CAk9up6+LlSGNRskYXM1YUDBytfKVmzI8Yo6qZ9BkJu/A1Hx+liA1rNr59
+X-Received: by 2002:a17:907:2095:: with SMTP id pv21mr17785200ejb.77.1620523178878;
+        Sat, 08 May 2021 18:19:38 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1620523178; cv=none;
+        d=google.com; s=arc-20160816;
+        b=W8lDRS1zopgXGU688TTi2YwmgUOrXhdY0hg0YVpp7dgdh6dKp8KdN4Cq7+hS3udCzA
+         jg3lQ/TvC5l6nS7znjBEJSENKUxQHIsCTE4tpU5VP1ngJU0G4RPO7T0gDBDsleAGPfO6
+         1joKxOSYu2AYybAsrQUbj5Wv0ctDqPZLc695g3ViPZDYhifImvrJi2B2p8xISJJy5PeN
+         0gRg6vEI/7gg2KwAJ9slLj6bo75U79QG57ne0StccQYJIjxGImsNxrfSK9XzyeEFMb2n
+         fbZFvCwCF0Aw9L3JWxsTSnlC9HrlKWLSfO6shVkWdAAtox4qTBvZNsXHepMCQ2lX0aj0
+         sQug==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:date:message-id:from:subject:to;
+        bh=7+8zuFF3LU1M9ueuEKR3LHQz/BTjktRd6JYPWlGfnvg=;
+        b=o59fl25mXNRU+daPgfo7CCKNOsBFkl/pCWPEb6cgufSWN2++ixBJNSWaz2CzgnQU+p
+         t4cIjumPCq1/89KFLl/p9Jh3rGETzTf6uGsEhqa1YFFgUlnUJ7XJ5mttrU4C5WKg/KsV
+         h7mdb78TeFGlxSwGD3e9R2j49Da005jrZ6T+zOuoH77hefWog0Niqu9cB+49+Yiw9leH
+         VQhivWFwSnOYpXPNcGybZ1JYDHEWZnqCJM6n84Qh9se0g8FQ9tzG/E90aNjkBDWsIsOL
+         lOBpw2wEs7nN5gDqR6H+ESvwgIKRJyOvJnSh7mJZejj3n0cUmycBVxeDEBMQaEOgaHX+
+         VSFw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of admin@mydigitallife.net designates 213.202.225.71 as permitted sender) smtp.mailfrom=admin@mydigitallife.net
+Return-Path: <admin@mydigitallife.net>
+Received: from prod.mydigitallife.net ([213.202.225.71])
+        by mx.google.com with ESMTPS id pg16si8605105ejb.269.2021.05.08.18.19.38
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sat, 08 May 2021 18:19:38 -0700 (PDT)
+Received-SPF: pass (google.com: domain of admin@mydigitallife.net designates 213.202.225.71 as permitted sender) client-ip=213.202.225.71;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of admin@mydigitallife.net designates 213.202.225.71 as permitted sender) smtp.mailfrom=admin@mydigitallife.net
+Received: by prod.mydigitallife.net (Postfix, from userid 1004)
+	id 2D299FA157; Sat,  8 May 2021 21:19:38 -0400 (EDT)
+To: "mrcloud.med" <mrcloud.med@gmail.com>
+Subject: My Digital Life Forums Account Confirmation Required
+X-PHP-Originating-Script: 1004:Sendmail.php
+From: My Digital Life Forums <admin@mydigitallife.net>
+X-To-Validate: efee3eae+mrcloud.med@gmail.com
+Message-Id: <a9f8d3b5cddbbe883d52107e30e70d89bb0e85ff@forums.mydigitallife.net>
+Date: Sun, 09 May 2021 01:19:38 +0000
+Content-Type: multipart/alternative;
+ boundary="=_2896b204c113d06d21db8fffcf4968a0"
+MIME-Version: 1.0
+
+--=_2896b204c113d06d21db8fffcf4968a0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+mrcloud.med,=0A=0AIn order to complete your registration or reactivate y=
+our account at My Digital Life Forums, you need to confirm your email ad=
+dress by following the link below.=0A=0Ahttps://forums.mydigitallife.net=
+/account-confirmation/1462801/email?c=3DYaq9fwcVoMN7VyNt=0A=0AThanks for=
+ registering,=0AMy Digital Life Forums
+
+--=_2896b204c113d06d21db8fffcf4968a0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html lang=3D"en-US" dir=3D"LTR">=0A<head>=0A=09<meta charset=3D"UTF-8"=
+ />=0A=09<base href=3D"https://forums.mydigitallife.net/" />=0A=09<title=
+>My Digital Life Forums Account Confirmation Required</title>=0A</head>=
+=0A<body dir=3D"LTR" text=3D"#141414" bgcolor=3D"#F0F0F0" link=3D"#17609=
+3" alink=3D"#176093" vlink=3D"#176093" style=3D"padding: 10px">=0A=0A=09=
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" dir=3D"LTR" styl=
+e=3D"=0A=09=09background-color: #F0F7FC;=0A=09=09border: 1px solid #A5CA=
+E4;=0A=09=09border-radius: 5px;=0A=09=09direction: LTR;">=0A=09<tr>=0A=
+=09=09<td style=3D"=0A=09=09=09background-color: #D7EDFC;=0A=09=09=09pad=
+ding: 5px 10px;=0A=09=09=09border-bottom: 1px solid #A5CAE4;=0A=09=09=09=
+border-top-left-radius: 4px;=0A=09=09=09border-top-right-radius: 4px;=0A=
+=09=09=09font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;=0A=
+=09=09=09font-size: 11px;=0A=09=09=09line-height: 1.231;">=0A=09=09=09<a=
+ href=3D"https://forums.mydigitallife.net/" style=3D"color: #176093; tex=
+t-decoration:none">My Digital Life Forums</a>=0A=09=09</td>=0A=09</tr>=
+=0A=09<tr>=0A=09=09<td style=3D"=0A=09=09=09background-color: #FCFCFF;=
+=0A=09=09=09padding: 1em;=0A=09=09=09color: #141414;=0A=09=09=09font-fam=
+ily: 'Trebuchet MS', Helvetica, Arial, sans-serif;=0A=09=09=09font-size:=
+ 13px;=0A=09=09=09line-height: 1.231;">=0A=09=09=09<p style=3D"margin-to=
+p: 0">mrcloud.med, in order to complete your registration or reactivate=
+ your account at <a href=3D"https://forums.mydigitallife.net/" style=3D"=
+color: #176093; text-decoration: none">My Digital Life Forums</a>, you n=
+eed to confirm your email address by following the link below.</p>=0A=0A=
+<h2 style=3D"font-size: 14pt; font-weight: normal; margin: 10px 0 4px"><=
+a href=3D"https://forums.mydigitallife.net/account-confirmation/1462801/=
+email?c=3DYaq9fwcVoMN7VyNt" style=3D"color: #176093; text-decoration: no=
+ne">Confirm Account</a></h2>=0A<div style=3D"color: #176093; font-size:=
+ 11px; margin: 4px 0 10px"><a href=3D"https://forums.mydigitallife.net/a=
+ccount-confirmation/1462801/email?c=3DYaq9fwcVoMN7VyNt" style=3D"color:=
+ #176093; text-decoration: none">https://forums.mydigitallife.net/accoun=
+t-confirmation/1462801/email?c=3DYaq9fwcVoMN7VyNt</a></div>=0A=0A<p>Than=
+ks for registering.<br />=0AMy Digital Life Forums</p>=0A=09=09</td>=0A=
+=09</tr>=0A=09<tr>=0A=09=09<td style=3D"=0A=09=09=09background-color: #F=
+0F7FC;=0A=09=09=09padding: 5px 10px;=0A=09=09=09border-top: 1px solid #D=
+7EDFC;=0A=09=09=09border-bottom-left-radius: 4px;=0A=09=09=09border-bott=
+om-right-radius: 4px;=0A=09=09=09text-align: right;=0A=09=09=09font-fami=
+ly: 'Trebuchet MS', Helvetica, Arial, sans-serif;=0A=09=09=09font-size:=
+ 11px;=0A=09=09=09line-height: 1.231;">=0A=09=09=09<a href=3D"https://fo=
+rums.mydigitallife.net/" style=3D"color: #176093; text-decoration: none"=
+>https://forums.mydigitallife.net/</a>=0A=09=09</td>=0A=09</tr>=0A=09</t=
+able>=09=0A=0A</body>=0A</html>
+
+--=_2896b204c113d06d21db8fffcf4968a0--

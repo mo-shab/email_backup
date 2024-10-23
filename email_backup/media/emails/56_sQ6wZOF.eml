@@ -1,0 +1,71 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:304:b029:c0:ca65:b0d6 with SMTP id gk4csp5226175lkb;
+        Wed, 3 Mar 2021 02:57:27 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJzG29h7aASPb4ncCN/EPTEr13Op1pezrHyVe/8SxC8jkaOr2r8VM8ZeuV+BRhNLPtO1oKE9
+X-Received: by 2002:a37:4d03:: with SMTP id a3mr22983760qkb.299.1614769047654;
+        Wed, 03 Mar 2021 02:57:27 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1614769047; cv=none;
+        d=google.com; s=arc-20160816;
+        b=KARjCa8R3tOLK/BxpkTQW/TqJS3oEJZTgIuKSfVwmhjBTex7fYQfGo2AtN8RxrCBGZ
+         Wet2ebjXOw7sIj+/8VxIus7fi2t71E2Ezo4GJ0L15UDNz8rAaIdATW3tlI+wVdAGzHbn
+         I2G87UlAFsikbBMBO/iYIFMlRjl+GZP2WdiL+tA8WHF10AEKs3Fo3TrUXZBAkrIkUGkX
+         2GqDg4wynP2pNUqnI72eWEM6rEbdOqUZInEJLhRIi57eOkQtcULTVSFWNawCtld+yGFn
+         ZAoIKw90Ja0cV6VyepWPEFoPy145Uy1EUijNhKvIkXsc9mcH7haEr7HLP3acWfpe7RSl
+         fRyg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:date:message-id:from:subject:to:dkim-signature;
+        bh=R6fhWIntXo2J1BU6whhLL9epFi3W4RifdzFBLBuyRL0=;
+        b=ViWl4l5gupBbggVSvh6K6FhFQdIJQIiYVK+8N89njkC8RfWnwTx6bkBXfLpMlhuid/
+         u+dZm70x4MYmcjxgZMMdZO5yzp9kx6dPWgohtuVvRhHVEiulkxXErISkAPghoDj1jZwo
+         xPUUSpRvCvWsVIXjE/4q0FIUvmVAUK7ZBO2JMaMrzpAokxu6g11ZUXEMMYaReTsrzdIO
+         uUOJE+P0Kb7iLWkGnYWkwCNk8jRZs0qa/QC20n2JdZcIg1vO2Q4HLNbBqaFokgIu3dYF
+         IVp0hDb42dPpRk48ePIlLFiPQYa0J68n3vD1ePV4B/j9TXfvvsFO6rdECfJ/zyN6BHB5
+         F/dA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=PQqkZQGp;
+       spf=pass (google.com: domain of 01000177f7bc465c-c5c83397-2928-45f5-a92f-9f027f26887b-000000@amazonses.com designates 54.240.11.93 as permitted sender) smtp.mailfrom=01000177f7bc465c-c5c83397-2928-45f5-a92f-9f027f26887b-000000@amazonses.com
+Return-Path: <01000177f7bc465c-c5c83397-2928-45f5-a92f-9f027f26887b-000000@amazonses.com>
+Received: from a11-93.smtp-out.amazonses.com (a11-93.smtp-out.amazonses.com. [54.240.11.93])
+        by mx.google.com with ESMTPS id f33si11382941qtd.179.2021.03.03.02.57.27
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Wed, 03 Mar 2021 02:57:27 -0800 (PST)
+Received-SPF: pass (google.com: domain of 01000177f7bc465c-c5c83397-2928-45f5-a92f-9f027f26887b-000000@amazonses.com designates 54.240.11.93 as permitted sender) client-ip=54.240.11.93;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=PQqkZQGp;
+       spf=pass (google.com: domain of 01000177f7bc465c-c5c83397-2928-45f5-a92f-9f027f26887b-000000@amazonses.com designates 54.240.11.93 as permitted sender) smtp.mailfrom=01000177f7bc465c-c5c83397-2928-45f5-a92f-9f027f26887b-000000@amazonses.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1614769047;
+	h=To:Subject:From:Message-Id:Date:Feedback-ID;
+	bh=R6fhWIntXo2J1BU6whhLL9epFi3W4RifdzFBLBuyRL0=;
+	b=PQqkZQGpTngabuQVriP/o43j0W+mry5SVF9Q9wKABGR6VGVEnXbsmeAn9ZyEBuCF
+	pQ+V422kFpJ1eK0zdO9F8trZB2+awYlfT4fq5fSJMs0xE9rBePABsG8dY0ghti4eaEP
+	JbBqqpVTrb3LRgFDDwL8A386OtCSeaudVgaFs1kU=
+To: mrcloud.med@gmail.com
+Subject: Scenetime password reset confirmation
+From: administrator@scenetime.com
+Message-ID: <01000177f7bc465c-c5c83397-2928-45f5-a92f-9f027f26887b-000000@email.amazonses.com>
+Date: Wed, 3 Mar 2021 10:57:27 +0000
+X-SES-Outgoing: 2021.03.03-54.240.11.93
+Feedback-ID: 1.us-east-1.eVflHRo7jLfDosgjKsnCAnV/8lL7ks7PPu5fZAiHRts=:AmazonSES
+
+Someone, hopefully you, requested that the password for the account
+associated with this email address (mrcloud.med@gmail.com) be reset.
+
+To complete your request, please follow this link:
+
+https://www.scenetime.com/recover.php?token=04beb003d95c202439884ffb8de2085a
+
+Alternately, you may go to https://www.scenetime.com/recover.php and enter the following password reset code:
+
+04beb003d95c202439884ffb8de2085a
+
+After you do this, your password will be reset and emailed back to you.
+
+If you did not do this ignore this email. Please do not reply.
+
+Thanks,
+The Scenetime Team
+
+--
+SceneTime - Always On Time!

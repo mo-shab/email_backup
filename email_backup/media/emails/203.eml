@@ -1,0 +1,221 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:1cc:b029:116:74a9:312d with SMTP id v12csp2315385lka;
+        Mon, 12 Jul 2021 22:40:55 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJx4Fu05ydGKaI5mlB166UOhVZAlTE/1tponYggshDDA8uSHNnNVXhU0u+WBUrbXieJ2naVX
+X-Received: by 2002:a1c:1bd4:: with SMTP id b203mr18594928wmb.171.1626154855400;
+        Mon, 12 Jul 2021 22:40:55 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1626154855; cv=none;
+        d=google.com; s=arc-20160816;
+        b=sRy5wdMMXdmXBS+UBFTBQHmdX9wDl7CBjZtftoa9cJ9oDkgmt4WVsPNVDnBaY3v19+
+         aRO1hFkqyvikKONqtr0cMSjjqoYKjSK965Nx2havBZIuZRPZXk1FVLDIZtiewR6i5rGf
+         q6KTsUjO0XYqu+6KuQXtGsU7zpnWO6CQf5DC0Ssp9Da6FZMTj3u+O5Wiy6LZQOAL80F3
+         OYzDrT2M+Ek+KMt2jJ7mzQxuWY4cG4z8Dg9Vlws6nOK6hrpCfbqi0IuafZRJJebCpITT
+         UfYXAU1CthdS+N3PDjj9UM0+Z+VuZGFk33cm4XEYlSQsc+eLoyR9O0KfZ4g4odo8ZJBd
+         G9DQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:to:reply-to:from:date
+         :message-id:dkim-signature;
+        bh=fY/3TXxcSrNbd2MhcU441rLmazXuVdZ6B5Rx/Ak3Yi0=;
+        b=XwMW5sVFfZKZlG024hV8KSrBuxSDcpWMISwHys2fnHZU0/tmk4ceJTxGN3fvz/OCBT
+         LTWPtkf/FNKH0bUAdgedR5GdXTp3rWqYf7hzAm2zqUol8Akly8J1M1iZtflG11Lk+qvu
+         8doQqTzVsRo8/0PTp5gjAbQB6XK5Ja1F7tGChdxWWFoVwRQu/Qab130ZbksQXjcUMen8
+         uT0a0sz77hlThDUeJRF+Et2tLTI9ftGAH4IaTsqYiyljFkp1v0w/RNAKr5Lj5DIl47zB
+         4MuPTLhOsywSRNuIQjK/xc9hD8nEyp9yFu3GE7s6017oBjRW1UfQX6Mr0jmnDGnZU4ro
+         2BPQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@info.lydec.co.ma header.s=s1024 header.b=X2t6pJw1;
+       spf=pass (google.com: domain of lydec@info.lydec.co.ma designates 41.137.3.14 as permitted sender) smtp.mailfrom=lydec@info.lydec.co.ma
+Return-Path: <lydec@info.lydec.co.ma>
+Received: from mail.info.lydec.co.ma (mail.info.lydec.co.ma. [41.137.3.14])
+        by mx.google.com with ESMTP id m3si18252114wrr.79.2021.07.12.22.40.55
+        for <mrcloud.med@gmail.com>;
+        Mon, 12 Jul 2021 22:40:55 -0700 (PDT)
+Received-SPF: pass (google.com: domain of lydec@info.lydec.co.ma designates 41.137.3.14 as permitted sender) client-ip=41.137.3.14;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@info.lydec.co.ma header.s=s1024 header.b=X2t6pJw1;
+       spf=pass (google.com: domain of lydec@info.lydec.co.ma designates 41.137.3.14 as permitted sender) smtp.mailfrom=lydec@info.lydec.co.ma
+Received: from www.info.lydec.co.ma (localhost [127.0.0.1])
+	by mail.info.lydec.co.ma (8.14.4/8.14.4) with ESMTP id 16D6eSl4032427
+	for <mrcloud.med@gmail.com>; Tue, 13 Jul 2021 06:40:28 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=info.lydec.co.ma;
+ i=@info.lydec.co.ma; q=dns/txt; s=s1024; t=1626158427; h=From : To :
+ Subject; bh=NIrCx43nBypnGHT0/9OPC/fgPZoxsHd9Ut+2rkCfMF0=; b=X2t6pJw1mbUI+CSVHTzzrD4t+wjFKybZM+6Y/Nz5/pSeeX27PCZbJ4yEsYrjEnP6xHX2miecOnnADc3vB03lIOUtw6LZd7S0GXjoLPD4s+pQ+4Kam+FkQDtjYc12zB3uWtLpDJMiFMZUfUVcArkpOY3oCm4LRlnjhemQ5rpVsIo=
+Received: by mail.info.lydec.co.ma for <mrcloud.med@gmail.com>; Tue, 13 Jul 2021 06:37:57 GMT
+Message-ID: <20210713072219-1.1.5qgb.34w7g.0.ch1n0bza43@openemm.invalid>
+Date: Tue, 13 Jul 2021 06:37:57 GMT
+From: "LYDEC" <lydec@info.lydec.co.ma>
+Reply-To: "Response - Lydec" <lydec@info.lydec.co.ma>
+To: <mrcloud.med@gmail.com>
+Subject: =?UTF-8?Q?Votre_derni=C3=A8re_rel=C3=A8ve_d=E2=80=99Eau?=
+X-Mailer: ATRAIT Mailing
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="-==AGNITASOUTER164240059B2904152B=="
+List-Unsubscribe: http://www.info.lydec.co.ma:8080/unsubscribe.html?mrcloud.med%40gmail.com
+
+This is a multi-part message in MIME format.
+
+---==AGNITASOUTER164240059B2904152B==
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Cher(e) client(e) TOURABI ZAHRA,
+
+Dans le cadre de l=E2=80=99engagement de Lydec de vous transmettre le rel=
+ev=C3=A9 mensuel de vos consommations, vous trouverez ci-dessous le derni=
+er relev=C3=A9 de vos consommations :
+
+
+Fluide	N=C2=B0 Contrat	Date de lecture	Index lu	P=C3=A9riode de consommat=
+ion	Volume consomm=C3=A9	Montant de la facture TTC
+Eau	M115211	29-06-2021	 1385	 202108	 0	16.09
+
+
+
+Vous pouvez t=C3=A9l=C3=A9charger votre avis de facture =C3=A9lectronique=
+ en cliquant sur le lien.
+
+Pour consulter vos 12 derniers relev=C3=A9s de consommations, cliquer sur=
+ ce lien.
+
+Pour plus d=E2=80=99informations, le Centre de Relation Client=C3=A8le de=
+ Lydec est =C3=A0 votre disposition,
+ 7j/7 et 24h/24, au 05 22 31 20 20.  =20
+=20
+Comment s=E2=80=99effectue le relev=C3=A9 de votre compteur ?
+
+Chaque mois, un agent releveur passe =C3=A0 votre domicile afin de lire v=
+os compteurs et d=E2=80=99enregistrer vos =20
+consommations d=E2=80=99eau et d=E2=80=99=C3=A9lectricit=C3=A9. Cette op=C3=
+=A9ration se fait au moyen d=E2=80=99un PDA (Personal Digital=20
+Assistant), un appareil qui traite en temps r=C3=A9el les informations sa=
+isies et qui signale tout =C3=A9cart sensible=20
+par rapport =C3=A0 l=E2=80=99historique de vos consommations.
+
+Si votre compteur est inaccessible, le releveur vous laisse une =E2=80=9C=
+carte d=E2=80=99auto-rel=C3=A8ve=E2=80=9D qu=E2=80=99il vous suffit de=20
+compl=C3=A9ter et de d=C3=A9poser =C3=A0 votre agence Lydec. Vous pouvez =
+aussi nous communiquer votre index (relev=C3=A9=20
+des consommations) en contactant le Centre de Relation Client=C3=A8le au =
+05 22 31 20 20 ou en envoyant un=20
+mail =C3=A0 l=E2=80=99adresse : contact@lydec.co.ma.
+Apr=C3=A8s trois factures successives =C3=A9tablies sur la base d=E2=80=99=
+un =E2=80=9Cauto rel=C3=A8ve=E2=80=9D ou de l=E2=80=99index communiqu=C3=A9=
+ par le=20
+client, Lydec doit obligatoirement effectuer un relev=C3=A9 de vos consom=
+mations. Vous devrez alors =C3=AAtre=20
+pr=C3=A9sent au prochain passage du releveur.
+Afin de vous =C3=A9viter d=E2=80=99=C3=AAtre pr=C3=A9sent =C3=A0 chaque r=
+el=C3=A8ve et de faciliter le travail des releveurs, il est  pr=C3=A9f=C3=
+=A9rable=20
+d=E2=80=99installer vos compteurs =C3=A0 l=E2=80=99ext=C3=A9rieur de votr=
+e habitation et de nous assurer ainsi leur accessibilit=C3=A9 =C3=A0 tout=
+=20
+moment.
+---==AGNITASOUTER164240059B2904152B==
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html dir=3D"ltr"><head><title></title></head><body><span style=3D"font-s=
+ize: 12px;"><span style=3D"font-family: Arial;"> <p style=3D"margin-botto=
+m: 0.0001pt; line-height: normal; text-align: justify;" class=3D"MsoNorma=
+l"><span style=3D"font-size: 12px;">Cher(e) client(e)&nbsp;</span>TOURABI=
+ ZAHRA<span style=3D"font-size: 12px;">,</span></p></span></span><p style=
+=3D"margin-bottom: 0.0001pt; line-height: normal; text-align: justify;" c=
+lass=3D"MsoNormal"><span style=3D"font-size: 12px;">Dans le cadre de l&rs=
+quo;engagement de Lydec de vous transmettre le relev&eacute; mensuel de v=
+os consommations, vous trouverez ci-dessous le dernier relev&eacute; de v=
+os consommations :</span></p><table width=3D"620" height=3D"59" cellspaci=
+ng=3D"1" cellpadding=3D"1" border=3D"1" align=3D"left"><caption><span sty=
+le=3D"font-size: 12px;"><br /></span></caption> <tbody> <tr>  <td style=3D=
+"text-align: center;"><span style=3D"font-size: 12px;"><span style=3D"col=
+or: rgb(51, 102, 255);"><span style=3D"color: rgb(51, 102, 255);"><span s=
+tyle=3D"line-height: 115%; color: rgb(0, 112, 192);">Fluide</span> </span=
+></span></span></td>  <td style=3D"text-align: center;"><span style=3D"fo=
+nt-size: 12px;"><span style=3D"color: rgb(51, 102, 255);">  <span style=3D=
+"color: rgb(51, 102, 255);">  <span style=3D"line-height: 115%; color: rg=
+b(0, 112, 192);">N&deg; Contrat</span> </span></span></span></td>  <td st=
+yle=3D"text-align: center;"><span style=3D"font-size: 12px;"><span style=3D=
+"line-height: 115%; color: rgb(0, 112, 192);">Date de lecture</span></spa=
+n></td>  <td style=3D"text-align: center;"><span style=3D"font-size: 12px=
+;"><span style=3D"line-height: 115%; color: rgb(0, 112, 192);">Index lu</=
+span></span></td>  <td style=3D"text-align: center;"><span style=3D"font-=
+size: 12px;"><span style=3D"line-height: 115%; color: rgb(0, 112, 192);">=
+P&eacute;riode de consommation</span></span></td>  <td style=3D"text-alig=
+n: center;"><span style=3D"font-size: 12px;"><span style=3D"line-height: =
+115%; color: rgb(0, 112, 192);">Volume consomm&eacute;</span></span></td>=
+  <td style=3D"text-align: center;"><span style=3D"font-size: 12px;"><spa=
+n style=3D"line-height: 115%; color: rgb(0, 112, 192);">Montant de la fac=
+ture TTC</span></span></td> </tr> <tr>  <td style=3D"text-align: center;"=
+><span style=3D"font-size: 12px;">Eau</span></td>  <td style=3D"text-alig=
+n: center;"><span style=3D"font-size: 12px;">M115211</span></td>  <td sty=
+le=3D"text-align: center;"><span style=3D"font-size: 12px;">29-06-2021</s=
+pan></td>  <td style=3D"text-align: center;"><span style=3D"font-size: 12=
+px;">&nbsp;1385</span></td>  <td style=3D"text-align: center;"><span styl=
+e=3D"font-size: 12px;">&nbsp;202108</span></td>  <td style=3D"text-align:=
+ center;"><span style=3D"font-size: 12px;">&nbsp;0</span></td>  <td style=
+=3D"text-align: center;"><span style=3D"font-size: 12px;">16.09</span></t=
+d> </tr> </tbody> </table><br /><div style=3D"text-align: left;"><br /><s=
+pan style=3D"font-size: 12px;"><br /><br /><br /><br type=3D"_moz" /> 	  =
+</span></div><div><div><table width=3D"621" height=3D"205" cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0"> <tbody> <tr><td colspan=3D"2"><table =
+width=3D"625" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr=
+><td colspan=3D"2"><span style=3D"font-size: 12px;"><br />Vous pouvez t&e=
+acute;l&eacute;charger votre avis de facture &eacute;lectronique en cliqu=
+ant sur le&nbsp;</span><a href=3D"https://cz-frontal.lydec.ma/?id=3D15488=
+52770715887206&numFacture=3D1449655196" style=3D"text-align: justify;"><s=
+pan style=3D"font-size: 12px;">lien</span></a><span style=3D"font-size: 1=
+2px;"><span style=3D"text-align: justify;">.<br /></span><br />Pour consu=
+lter vos <strong><span style=3D"color: rgb(0, 112, 192);">12 derniers rel=
+ev&eacute;s de consommations</span>,</strong> cliquer sur ce </span><a hr=
+ef=3D"https://client.lydec.ma/Conso-portlet/portlet_action/consommations_=
+portlet/action?do=3D3&token=3De8hmFZAQ4bVKx/0vfJyevZnOi+JdpPx/SOsVG2LUsxA=
+jr0hCmQ8fzn7sbmCpHUU5"><span style=3D"font-size: 12px;">lien</span></a><s=
+pan style=3D"font-size: 12px;">. 	  </span></td></tr></tbody></table></td=
+></tr><tr><td><div style=3D"text-align: left;"><span style=3D"font-size: =
+12px;"><span style=3D"line-height: 115%;"><br /></span> Pour plus d&rsquo=
+;informations, le Centre de Relation Client&egrave;le de Lydec est &agrav=
+e; votre disposition,<br />&nbsp;7j/7 et 24h/24, au 05 22 31 20 20.&nbsp;=
+&nbsp; <br /></span></div></td><td><span style=3D"font-size: 12px;"><img =
+width=3D"115" height=3D"94" align=3D"right" alt=3D"" src=3D"http://mail.i=
+nfo.lydec.co.ma:8080/image?ci=3D1&mi=3D94&name=3DCRC.jpg" /></span></td><=
+/tr> <tr><td colspan=3D"2"><span style=3D"font-size: 12px;">&nbsp;<img wi=
+dth=3D"606" height=3D"68" src=3D"http://mail.info.lydec.co.ma:8080/image?=
+ci=3D1&mi=3D87&name=3DBasBe.JPG" alt=3D"" /><br /><b><span style=3D"color=
+: rgb(247, 150, 70);">Comment s&rsquo;effectue le relev&eacute; de votre =
+compteur ?</span></b></span></td></tr> </tbody> </table><div style=3D"tex=
+t-align: left;"><span style=3D"font-size: 12px;"><br /></span><div style=3D=
+"text-align: left;"><div style=3D"text-align: justify;"><span style=3D"fo=
+nt-size: 12px;">Chaque  mois, un agent releveur  passe &agrave; votre dom=
+icile afin de lire vos  compteurs et d&rsquo;enregistrer vos&nbsp; <br />=
+ consommations d&rsquo;eau et d&rsquo;&eacute;lectricit&eacute;.  Cette o=
+p&eacute;ration se fait au moyen  d&rsquo;un PDA (Personal Digital <br />=
+Assistant),  un appareil qui traite en temps  r&eacute;el les information=
+s saisies et qui  signale tout &eacute;cart sensible <br />par  rapport &=
+agrave; l&rsquo;historique de vos  consommations.<br /><br />Si votre com=
+pteur  est inaccessible, le releveur  vous laisse une &ldquo;carte d&rsqu=
+o;auto-rel&egrave;ve&rdquo;  qu&rsquo;il vous suffit de <br />compl&eacut=
+e;ter et  de d&eacute;poser &agrave; votre agence Lydec. Vous  pouvez aus=
+si nous communiquer  votre index (relev&eacute; <br />des consommations) =
+en  contactant le Centre de  Relation Client&egrave;le au 05 22 31 20 20 =
+ou en  envoyant un <br />mail &agrave; l&rsquo;adresse  : </span><a href=3D=
+"mailto:contact@lydec.co.ma"><span style=3D"font-size: 12px;">contact@lyd=
+ec.co.ma</span></a><span style=3D"font-size: 12px;">.<br />Apr&egrave;s t=
+rois  factures successives &eacute;tablies  sur la base d&rsquo;un &ldquo=
+;auto rel&egrave;ve&rdquo; ou de  l&rsquo;index communiqu&eacute; par le =
+<br />client,  Lydec doit obligatoirement effectuer  un relev&eacute; de =
+vos consommations.  Vous devrez alors &ecirc;tre <br />pr&eacute;sent au =
+ prochain passage du releveur.</span></div><p class=3D"MsoNormal" style=3D=
+"margin-bottom:0cm;margin-bottom:.0001pt;text-align:justify;line-height:n=
+ormal;mso-layout-grid-align:none;text-autospace:none"><span style=3D"font=
+-size: 12px;"><i style=3D"mso-bidi-font-style:normal"><span style=3D"colo=
+r: rgb(247, 150, 70);">Afin de vous &eacute;viter d&rsquo;&ecirc;tre pr&e=
+acute;sent &agrave; chaque rel&egrave;ve et de faciliter   le travail des=
+ releveurs, il est&nbsp; pr&eacute;f&eacute;rable <br />d&rsquo;installer=
+ vos compteurs  &agrave;  l&rsquo;ext&eacute;rieur de votre habitation et=
+ de nous assurer ainsi leur   accessibilit&eacute; &agrave; tout <br />mo=
+ment.</span></i></span></p></div></div></div></div><div><span style=3D"fo=
+nt-size: 12px;"><span style=3D"font-family: Arial;">  </span></span></div=
+></body></html>
+---==AGNITASOUTER164240059B2904152B==--
+

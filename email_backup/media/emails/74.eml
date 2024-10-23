@@ -1,0 +1,98 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp1773682lkb;
+        Fri, 9 Apr 2021 14:15:40 -0700 (PDT)
+X-Received: by 2002:a17:906:4147:: with SMTP id l7mr18329692ejk.17.1618002940756;
+        Fri, 09 Apr 2021 14:15:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1618002940; cv=none;
+        d=google.com; s=arc-20160816;
+        b=uce5RvBIwldTmWnw9+DXTcSnaeu6oGdGwrTGLfS7ErtTjvZMZRmD6WqYfDbSfZJ0EK
+         MLEPR6sFHTNoDqhab+52y7EXLI1KGEwZLStl505YLLX4ocMkmMSoiD6I40c4p7Lk/dIW
+         +IS/3gT1sis5zkK0UVipM/NnYN7fC+cYx/29AvRwdaBN7UvhLgOzB2qogyDkCQoQdKy6
+         q9NicyUKx8cLpR/fe8n1t41M5ZtJhvc+woSGIyoDchcHgPIIT8ZLevpRL4nOaz8+vhQ5
+         mhS6m37ZtWWG8xypHCpk0Kh7V50TDKW7IFBMetHrJw59G4gDuoF6i8MD4GGNeuD6HLxj
+         zfpg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:message-id:subject:reply-to
+         :from:to:date:dkim-signature;
+        bh=jVc3cnOU1HJadhd8C6SRqECW/B+UTtZuTVFnSln5IAQ=;
+        b=bwU3zfIRWmei6q2bP4sEEjeDuTE+NRk6027dZgV2Ce/H4U/KQrcSEKRqLLdrBmjQ/7
+         Ynnb31+6qPq6qO6AZKDFLGe8P4a7vmtYxS22rhj4uHI7quXmAcjhH9hpcql5v27PmTc9
+         R1iZH+KwzxC8JFTzSK6Z4Dkx8NUyLmkKCGW6Cu9XzJAD8HCdonV37GVLISDwq0sEu/B4
+         2m88tkqADRm8dQr3AgrOmcKcBdChcghikVlQh95HtuYNCQWs90Ws0petnDFMkS3rBrSf
+         i5da3EvPvVrSJX9SpcT8bDHGCOGjRzyEak/mI3jjINBZiZDhZpODTd8+yPSfYxIbfHHK
+         ef5g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=YEWHKNzU;
+       spf=pass (google.com: domain of swarmazonforum@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=swarmazonforum@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <swarmazonforum@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id zc10sor2186791ejb.80.2021.04.09.14.15.40
+        for <mrcloud.med@gmail.com>
+        (Google Transport Security);
+        Fri, 09 Apr 2021 14:15:40 -0700 (PDT)
+Received-SPF: pass (google.com: domain of swarmazonforum@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=YEWHKNzU;
+       spf=pass (google.com: domain of swarmazonforum@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=swarmazonforum@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=date:to:from:reply-to:subject:message-id:mime-version
+         :content-transfer-encoding;
+        bh=jVc3cnOU1HJadhd8C6SRqECW/B+UTtZuTVFnSln5IAQ=;
+        b=YEWHKNzUfbBQU+MCMhu40jMuyuqwbfDip733BAZi78xOAFgJHomXyOb20oc2n/dSjh
+         H84GLX8GvhMhcvi+Ao31KhylrPlBBhSiS9DMJSXzozOKv6wRxhbqCxwxpdUOnDF4yBbC
+         zlB5DB/R7CkPtqpAcUYxs7H3d8lb1JC1kvzTmALNLkE7f7FLaaSMgVzP3zvsWKQIpCtj
+         0BzjgattEJSVdzFh/jlCefRzdxbDV0jsbOHjnawmV71ANLouF5kuO52X3Yq22omBWA5/
+         UPXX7io0SAknSONCXBsFr/iYRbvNtkvHlgTt4XVmNY4FW1S9d9Bn/CIj+E2ho4ZTQna1
+         i0KA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:date:to:from:reply-to:subject:message-id
+         :mime-version:content-transfer-encoding;
+        bh=jVc3cnOU1HJadhd8C6SRqECW/B+UTtZuTVFnSln5IAQ=;
+        b=olBa2Qddes9YlXYFXeTTIWp1xAk/LZOnrQS2/e5gb1akYRhONhy0eRZIIBI4CcHtZ+
+         dx0BMTSoB2ZxE7Q8OPsfNgiArXrZZ8DXJiuooFrLEOnxNeHyPOs5aBkwOrQ6pzsgtSox
+         N0pNmsVPRMTMZvTtBU1bxxTkt/sQ0Ipma36Lf9HKDtKWnRDwuys8UYj5hGsbAQ1ufZxN
+         /wS1Dlqu0NOC3bf2BS+xR9XcYEgk1F3lxU5tCnPyiuYbNflUcg54BicdeX6Vg6ttb2D8
+         qxOpEvFRY4XVU0/YMWzjjKV5swPio7V+bIujXrQYaXuS225cyFU+R+zsnFpcn+WIuMjq
+         7t8w==
+X-Gm-Message-State: AOAM530TSHeY8ZZLikKTo5BJf3GaKduN5rYJHcyzJKYhXggStd7+qKOK
+	V/8A089IU1tiZUXCZzv1HTqms7Hl9PQ=
+X-Google-Smtp-Source: ABdhPJy5XOHZiPUp2nMuqIa1nt5Wp/3q3v6zh1dyfaVvuDqABeo87qdAXkrn4sbQLsew+tdln3hc3g==
+X-Received: by 2002:a17:906:860c:: with SMTP id o12mr16270063ejx.259.1618002940310;
+        Fri, 09 Apr 2021 14:15:40 -0700 (PDT)
+Return-Path: <swarmazonforum@gmail.com>
+Received: from swarmazon.club ([185.220.205.238])
+        by smtp.gmail.com with ESMTPSA id sd21sm1734963ejb.98.2021.04.09.14.15.39
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 09 Apr 2021 14:15:40 -0700 (PDT)
+Date: Fri, 9 Apr 2021 21:15:39 +0000
+To: mrcloud.med@gmail.com
+From: Swarmazon Invite <swarmazonforum@gmail.com>
+Reply-To: Reply to Swarmazon Invite <swarmazonforum@gmail.com>
+Subject: You are invited to join us!
+Message-ID: <BS4O5HWnednkamjOvZcDBXehcrdbPStoAFR4QkSE@swarmazon.club>
+X-Mailer: PHPMailer 6.1.7 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b1_BS4O5HWnednkamjOvZcDBXehcrdbPStoAFR4QkSE"
+Content-Transfer-Encoding: 8bit
+
+This is a multi-part message in MIME format.
+
+--b1_BS4O5HWnednkamjOvZcDBXehcrdbPStoAFR4QkSE
+Content-Type: text/plain; charset=us-ascii
+
+This is a project membership invite that has been generated by another active member for you.Account ActivationSent by: sitebot
+
+--b1_BS4O5HWnednkamjOvZcDBXehcrdbPStoAFR4QkSE
+Content-Type: text/html; charset=us-ascii
+
+<b>This is a project membership invite that has been generated by another active member for you.</b><br><br><a href=https://swarmazon.club/en/account/register_invite.php?id=76&token=$2y$10$eSwSF5s7V40Vxzojp0j6WO32aanBQmUgp4GCA8wNq.o4oivfnl4yG><img src='https://swarmazon.club/images/swarmazon-small.jpg'><br><b>Account Activation</b></a><br><br><b>Sent by: sitebot
+
+
+--b1_BS4O5HWnednkamjOvZcDBXehcrdbPStoAFR4QkSE--
+

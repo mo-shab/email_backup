@@ -1,0 +1,84 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a9a:7ad1:0:b029:b6:48f8:3fed with SMTP id i17csp209866lkn;
+        Tue, 5 Jan 2021 12:49:36 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJyHgCvkIJdl9QFH73dbSO0rXHdJcNVB9Y95OsJT8yyCQQ/oWHuIdGV9cf741meF6az4qB5s
+X-Received: by 2002:a63:ce58:: with SMTP id r24mr1038133pgi.192.1609879776433;
+        Tue, 05 Jan 2021 12:49:36 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1609879776; cv=none;
+        d=google.com; s=arc-20160816;
+        b=wWdUg76PsRpRrI9ZEB/oJ4pYboBKbrt7TfPOv2O3E1fxjGrFYHbLs6xr+hlJvyD6lu
+         FzaalzzEdvqSDigd+eBigxZZ8pZZdtQKQ4TsgdWpZE+iiUnD4lFYL1lppFe4wIakda9/
+         zapM7taaEslhRsc0OtvwJ6ashfsru+Mxz2C2AEzJUcNW81JkWQmqbos4Bq9DY34ork1Y
+         +QsUGaJ39MRwDcZg4thHBieINXqW9Gwr2dAkbx3Boa381QmHgySMLy9IaI/BxfElHxWp
+         LFLHDsDa00+qE9YqPCLkG8jYrzka8Adg2Xe2pRzqmjQm876BXTRayM4XNz+OCBBeHQY9
+         MaIg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:date:message-id:content-transfer-encoding:mime-version
+         :subject:to:from:dkim-signature;
+        bh=LXw9toePm08sUqLO6Z0/mkgZjpPH8F0CITBSrW1G4+A=;
+        b=ZlTaM4UtNiJhBAo9TrWiRlv36/v6wAENTnS+vueDouwY/0hPj5taHX43eHoSm4qhW5
+         nbS9ZDXaFc39xsX4zEcoAO4NxsV3vme2PxB6Fj1yko5SJfOhM6b8EHWws3fmtwAp1vzE
+         +iY8kdDZp/iPgsb/fAOEGl43VCosyZQXd1IxR/O2BX8fCUi9S32C8EFKzcgOmBCTZjq5
+         r1fUFpk0kIoYI5gExBy0fllWetX1K+NGbHxRuM5VpFHbmsa6CNdQQM4iVD2YwXHS47tM
+         spuTKdH1xoQ0ypRfn5/xukzIQ3gHGTtIEFsGGzvrebK6EtZ6YI+fx+lxi3y5jE5TXw+3
+         8hww==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@amazonses.com header.s=hsbnp7p3ensaochzwyq5wwmceodymuwv header.b=Kkf0hdI1;
+       spf=pass (google.com: domain of 01010176d44feac1-96f6935f-1959-4848-ac85-bacae1aa073b-000000@us-west-2.amazonses.com designates 54.240.27.24 as permitted sender) smtp.mailfrom=01010176d44feac1-96f6935f-1959-4848-ac85-bacae1aa073b-000000@us-west-2.amazonses.com
+Return-Path: <01010176d44feac1-96f6935f-1959-4848-ac85-bacae1aa073b-000000@us-west-2.amazonses.com>
+Received: from a27-24.smtp-out.us-west-2.amazonses.com (a27-24.smtp-out.us-west-2.amazonses.com. [54.240.27.24])
+        by mx.google.com with ESMTPS id r2si96423pls.206.2021.01.05.12.49.36
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Tue, 05 Jan 2021 12:49:36 -0800 (PST)
+Received-SPF: pass (google.com: domain of 01010176d44feac1-96f6935f-1959-4848-ac85-bacae1aa073b-000000@us-west-2.amazonses.com designates 54.240.27.24 as permitted sender) client-ip=54.240.27.24;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@amazonses.com header.s=hsbnp7p3ensaochzwyq5wwmceodymuwv header.b=Kkf0hdI1;
+       spf=pass (google.com: domain of 01010176d44feac1-96f6935f-1959-4848-ac85-bacae1aa073b-000000@us-west-2.amazonses.com designates 54.240.27.24 as permitted sender) smtp.mailfrom=01010176d44feac1-96f6935f-1959-4848-ac85-bacae1aa073b-000000@us-west-2.amazonses.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1609879776;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=3Woy+OxnTARN+ih5JjQf+rpQwW7RcNmiZKcPzFFs0EM=;
+	b=Kkf0hdI1yqihy9muyEBMXUM2gap9+nQEMCB7CXAStt38tgdOgoz92/cu8gRp5ezM
+	WHv3NcX0ZrtlNFDepYC3eYGhyitKNMG0bOl7+tj0nwEQZkA05X6hS/SCsGHFL58wiJm
+	tFzAt0bv5zQcP5R2PfL3IR/paN35osH6wwWGDRRk=
+From: HelloTalk Team <service@hellotalk.com>
+To: mrcloud.med@gmail.com
+Subject: Please verify your HelloTalk registered email address
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <01010176d44feac1-96f6935f-1959-4848-ac85-bacae1aa073b-000000@us-west-2.amazonses.com>
+Date: Tue, 5 Jan 2021 20:49:35 +0000
+X-SES-Outgoing: 2021.01.05-54.240.27.24
+Feedback-ID: 1.us-west-2.qitA99BPOKbkpGB5Jp+1erHBSxnD4/62O87gklbNa8k=:AmazonSES
+
+<h3>Dear Mohammed</h3>
+=09=09=09=09=09=09=09=09Please verify your email address by clicking the li=
+nk below:<br>
+=09=09=09=09=09=09=09=09<br>
+=09=09=09=09=09=09=09=09<a  href=3D'https://www.hellotalk.com/verifyEmail?i=
+d=3D3572655047&ver=3Dz9Wcn6ermJOdxpZ1ndCXodBgxp%2Bj' target=3D'_blank'>
+=09=09=09=09=09=09=09=09<span style=3D'margin-left:10px;background:#359EF0;=
+color:#fff;padding:8px 20px;font-size:16px;display:inline-block;'>
+=09=09=09=09=09=09=09=09Verify Email</span></a>
+=09=09=09=09=09=09=09=09<br><br>
+=09=09=09=09=09=09=09=09Button not working? Try copying and pasting the lin=
+k below into your browser: <br>
+=09=09=09=09=09=09=09=09https://www.hellotalk.com/verifyEmail?id=3D35726550=
+47&ver=3Dz9Wcn6ermJOdxpZ1ndCXodBgxp%2Bj<br><br>
+=09=09=09=09=09=09=09=09Happy language learning.<br>
+=09=09=09=09=09=09=09=09<hr>
+=09=09=09=09=09=09=09=09<img style=3D'float: left;' src=3D'http://www.hello=
+talk.com/hthome/public/img/pc_app_logo.png'/>
+=09=09=09=09=09=09=09=09<div style=3D'margin-top: 50px;float: left;'> =E3=
+=80=80=E3=80=80
+=09=09=09=09=09=09=09=09<a href=3D'https://www.facebook.com/Hellotalk' targ=
+et=3D'_blank'>
+=09=09=09=09=09=09=09=09<img src=3D'http://www.hellotalk.com/hthome/public/=
+img/facebook.gif' width=3D'20'></a> =E3=80=80=E3=80=80
+=09=09=09=09=09=09=09=09<a href=3D'https://twitter.com/HelloTalkApp' target=
+=3D'_blank'>
+=09=09=09=09=09=09=09=09<img src=3D'http://www.hellotalk.com/hthome/public/=
+img/twitter.gif' width=3D'20'></a>
+=09=09=09=09=09=09=09=09</div>

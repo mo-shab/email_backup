@@ -1,0 +1,274 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:22e6:b029:f9:2098:e3d8 with SMTP id b6csp3698226lkv;
+        Tue, 1 Jun 2021 03:14:23 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxvrTqlBGfciNRyxtobiGf/Oj07QYozkaQfQm3sLWNVdAtp8o6Igdwfq07GNsAKQez+iOn+
+X-Received: by 2002:a05:600c:2146:: with SMTP id v6mr3925912wml.131.1622542463474;
+        Tue, 01 Jun 2021 03:14:23 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1622542463; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fWv6bFeKydGz3mA8evwyq340RXw7R1o3APfmBsPURma5Yadrg36pvWb480mhljeU+0
+         aNp7YX9HItI3pWFOPgDykWaQcKPYvjYAbZHV+LEaTlBWkmL5FR1MfPjP1oP2VjSwKMBb
+         Ssdz60QMhVgikQsuwWNBoVJjwsyaKR2XfMd65xhXmxIrG/pGbVZmUZpQGkOIi2IhXif+
+         PeUJ3eryqlw9z2nXNS/TD28kolbsxZZCcYDxhN0+CF3HVhPbD5ZAbhIB5LffdZO2tipC
+         /gntgXCQEGWUUsH0ebUHz0rQOdy3/gn5BnpAqwS9i1Oyrbi1dLukF77fJAKi/dMNO8uR
+         MAeg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:to:from:subject:date:message-id;
+        bh=j8OmbTbTZEtktMFV3Z1Z6VXcHw78gRR8nDlqW/PtIgE=;
+        b=UY4b9qT8EB8ah8Gz/DXnzjPx1p2YD9VD3d77uprcoIYLl8zCWJbLFkL6Uprf6oCKE5
+         mYNhlPA4qxz5onH/3rMSyco90R949rqUvE1zKoP4EHnEaTsg90F2zc92NvXfc5SDFxGp
+         6IAo5GxYGyOxoCq/gqaUv3cLT9sXdWIcXd4VYJ5PMJy/WoD0g/pdZNHF+rEllCYPoTno
+         R5NO9dAzBZXwrfW8uUsybIL4VoWddpLkjQXa1hL4QFMPPGrXv1Jyw5z3HMoX2XOvJH5d
+         ZcH+fsgA8HnUW8qkjc5LQYWwRTwg80V3oCK7gp/oNd4Z2s1Yc4COfY8iqjCaUl4eRNXY
+         t9LA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=softfail (google.com: domain of transitioning ryuko@animeworld.cx does not designate 5.9.155.194 as permitted sender) smtp.mailfrom=ryuko@animeworld.cx
+Return-Path: <ryuko@animeworld.cx>
+Received: from srv01-de.thoss-it.de (srv01-de.thoss-it.de. [5.9.155.194])
+        by mx.google.com with ESMTPS id i12si7558072wmd.200.2021.06.01.03.14.22
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Tue, 01 Jun 2021 03:14:23 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning ryuko@animeworld.cx does not designate 5.9.155.194 as permitted sender) client-ip=5.9.155.194;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning ryuko@animeworld.cx does not designate 5.9.155.194 as permitted sender) smtp.mailfrom=ryuko@animeworld.cx
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by srv01-de.thoss-it.de (Postfix) with ESMTP id B57BB2FC01EA
+	for <mrcloud.med@gmail.com>; Tue,  1 Jun 2021 12:14:22 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at srv01-de.thoss-it.de
+Received: from srv01-de.thoss-it.de ([127.0.0.1])
+	by localhost (srv01-de.thoss-it.de [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id F3WmlhpUotRt for <mrcloud.med@gmail.com>;
+	Tue,  1 Jun 2021 12:14:21 +0200 (CEST)
+Received: from [127.0.0.1] (2a00-1dc0-3116--2.static.as43289.net [IPv6:2a00:1dc0:3116::2])
+	by srv01-de.thoss-it.de (Postfix) with ESMTPSA id EA5472FC01D1
+	for <mrcloud.med@gmail.com>; Tue,  1 Jun 2021 12:14:20 +0200 (CEST)
+Message-ID: <1915daaa44910af8e824942ac48a5662@swift.generated>
+Date: Tue, 01 Jun 2021 12:14:20 +0200
+Subject: Activation Required AnimeWorld
+From: "ryuko@animeworld.cx" <ryuko@animeworld.cx>
+To: mrcloud.med@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1622542460_8d211acd0c4e1165ddb478f18dec6c06_=_"
+
+
+--_=_swift_1622542460_8d211acd0c4e1165ddb478f18dec6c06_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+[AnimeWorld](http://animeworld.cx)
+
+# Hallo! Vielen Dank, dass f=C3=
+=BCr das Registrieren auf AnimeWorld !
+**Um die Kontoaktivierung abzuschl=
+ie=C3=9Fen, klicke auf die Schaltfl=C3=A4che unten**
+Nutzerkonto aktivier=
+en: http://animeworld.cx/activate/9eb58a29cc61dbe978ecd1cb079331fe2219d494a=
+ee32af0503703b701ee77dc
+Wenn die Schaltfl=C3=A4che oben nicht funktionier=
+t, kopiere den Link und f=C3=BCgen diesen in die Adressleiste deines Browse=
+rs ein
+http://animeworld.cx/activate/9eb58a29cc61dbe978ecd1cb079331fe2219=
+d494aee32af0503703b701ee77dc
+
+=C2=A9 2021 AnimeWorld. All rights reserv=
+ed.
+
+
+--_=_swift_1622542460_8d211acd0c4e1165ddb478f18dec6c06_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.=
+w3.org/1999/xhtml">
+<head>
+    <meta name=3D"viewport" content=3D"width=
+=3Ddevice-width, initial-scale=3D1.0">
+    <meta http-equiv=3D"Content-Ty=
+pe" content=3D"text/html; charset=3DUTF-8">
+</head>
+<body style=3D"font=
+-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; background-=
+color: #f2f4f6; color: #74787e; height: 100%; line-height: 1.4; margin: 0; =
+width: 100% !important; -webkit-text-size-adjust: none;">
+    <style nonc=
+e=3D"M2JjOWI2OWRkYjhiNDI0Mw=3D=3D">
+        @media  only screen and (max-=
+width: 600px) {
+            .inner-body {
+                width: 100% !=
+important;
+            }
+
+            .footer {
+                wid=
+th: 100% !important;
+            }
+        }
+
+        @media  only =
+screen and (max-width: 500px) {
+            .button {
+                w=
+idth: 100% !important;
+            }
+        }
+    </style>
+
+    =
+<table class=3D"wrapper" style=3D"font-family: Avenir, Helvetica, sans-seri=
+f; box-sizing: border-box; background-color: #f5f8fa; margin: 0; padding: 0=
+; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -prema=
+iler-width: 100%;">
+        <tr>
+            <td class=3D"text-center" =
+style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box=
+;">
+                <table class=3D"content" style=3D"font-family: Avenir=
+, Helvetica, sans-serif; box-sizing: border-box; margin: 0; padding: 0; wid=
+th: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-=
+width: 100%;">
+                    <tr>
+    <td class=3D"header" style=
+=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; pad=
+ding: 25px 0; text-align: center;">
+        <a href=3D"http://animeworld.=
+cx" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border=
+-box; color: #bbbfc3; font-size: 19px; font-weight: bold; text-decoration: =
+none; text-shadow: 0 1px 0 rgb(255, 255, 255);">
+            AnimeWorld=
+
+        </a>
+    </td>
+</tr>
+
+                    <!-- Email Bod=
+y -->
+                    <tr>
+                        <td class=3D"bod=
+y" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-=
+box; background-color: #ffffff; border-bottom: 1px solid #edeff2; border-to=
+p: 1px solid #edeff2; margin: 0; padding: 0; width: 100%; -premailer-cellpa=
+dding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;">
+          =
+                  <table class=3D"inner-body" width=3D"570" style=3D"font-f=
+amily: Avenir, Helvetica, sans-serif; box-sizing: border-box; background-co=
+lor: #ffffff; margin: 0 auto; padding: 0; width: 570px; -premailer-cellpadd=
+ing: 0; -premailer-cellspacing: 0; -premailer-width: 570px;">
+           =
+                     <!-- Body content -->
+                              =
+  <tr>
+                                    <td class=3D"content-cell" sty=
+le=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; p=
+adding: 35px;">
+                                        <h1 style=3D"font=
+-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2f3=
+133; font-size: 19px; font-weight: bold; margin-top: 0; text-align: left;">=
+Hallo! Vielen Dank, dass f=C3=BCr das Registrieren auf AnimeWorld !</h1>
+=
+<p style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-=
+box; color: #74787e; font-size: 16px; line-height: 1.5em; margin-top: 0; te=
+xt-align: left;"><strong style=3D"font-family: Avenir, Helvetica, sans-seri=
+f; box-sizing: border-box;">Um die Kontoaktivierung abzuschlie=C3=9Fen, kli=
+cke auf die Schaltfl=C3=A4che unten</strong></p>
+<table class=3D"text-cen=
+ter" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: borde=
+r-box;">
+    <tr>
+        <td class=3D"text-center" style=3D"font-famil=
+y: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+            <=
+table style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bord=
+er-box;">
+                <tr>
+                    <td class=3D"text-ce=
+nter" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bord=
+er-box;">
+                        <table style=3D"font-family: Avenir, He=
+lvetica, sans-serif; box-sizing: border-box;">
+                          =
+  <tr>
+                                <td style=3D"font-family: Avenir, =
+Helvetica, sans-serif; box-sizing: border-box;">
+                        =
+            <a href=3D"http://animeworld.cx/activate/9eb58a29cc61dbe978ecd1=
+cb079331fe2219d494aee32af0503703b701ee77dc" class=3D"button button-blue" ta=
+rget=3D"_blank" style=3D"font-family: Avenir, Helvetica, sans-serif; box-si=
+zing: border-box; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0=
+.16); color: #ffffff; display: inline-block; text-decoration: none; -webkit=
+-text-size-adjust: none; background-color: #3097d1; border-top: 10px solid =
+#3097d1; border-right: 18px solid #3097d1; border-bottom: 10px solid #3097d=
+1; border-left: 18px solid #3097d1;">Nutzerkonto aktivieren</a>
+         =
+                       </td>
+                            </tr>
+        =
+                </table>
+                    </td>
+                </tr=
+>
+            </table>
+        </td>
+    </tr>
+</table>
+<p style=
+=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; col=
+or: #74787e; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align=
+: left;">Wenn die Schaltfl=C3=A4che oben nicht funktioniert, kopiere den Li=
+nk und f=C3=BCgen diesen in die Adressleiste deines Browsers ein</p>
+<p s=
+tyle=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;=
+ color: #74787e; font-size: 16px; line-height: 1.5em; margin-top: 0; text-a=
+lign: left; word-wrap: break-word; overflow-wrap: break-word; word-break: b=
+reak-word;">http://animeworld.cx/activate/9eb58a29cc61dbe978ecd1cb079331fe2=
+219d494aee32af0503703b701ee77dc</p>
+
+
+                               =
+        =20
+                                    </td>
+                   =
+             </tr>
+                            </table>
+               =
+         </td>
+                    </tr>
+
+                    <tr>
+=
+    <td style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bo=
+rder-box;">
+        <table class=3D"footer" style=3D"font-family: Avenir,=
+ Helvetica, sans-serif; box-sizing: border-box; margin: 0 auto; padding: 0;=
+ text-align: center; width: 570px; -premailer-cellpadding: 0; -premailer-ce=
+llspacing: 0; -premailer-width: 570px;">
+            <tr>
+             =
+   <td class=3D"content-cell" style=3D"font-family: Avenir, Helvetica, sans=
+-serif; box-sizing: border-box; padding: 35px;">
+                    <p s=
+tyle=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;=
+ line-height: 1.5em; margin-top: 0; color: #aeaeae; font-size: 12px; text-a=
+lign: center;">=C2=A9 2021 AnimeWorld. All rights reserved.</p>
+
+      =
+          </td>
+            </tr>
+        </table>
+    </td>
+</tr>=
+
+                </table>
+            </td>
+        </tr>
+    </tab=
+le>
+</body>
+</html>
+
+--_=_swift_1622542460_8d211acd0c4e1165ddb478f18dec6c06_=_--
+

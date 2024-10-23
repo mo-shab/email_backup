@@ -1,0 +1,87 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp5805980lkb;
+        Wed, 14 Apr 2021 11:41:46 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwMs6JD82axUqaGKIrjvZcZeSEZQEO51jQO1wmivpvpcnQF/gPxZTYcfuwgLVP9KrWYQ4IG
+X-Received: by 2002:a05:6000:24f:: with SMTP id m15mr21266297wrz.226.1618425705953;
+        Wed, 14 Apr 2021 11:41:45 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1618425705; cv=none;
+        d=google.com; s=arc-20160816;
+        b=RNP+t5S+LlqdaF07X+gJgKWJ5JNNnUULVzwyW4qLvymtl6LrfXIcl2yg9l8wBQ2SLF
+         lOI9obZjREsmZH2fdxFIRVc3kogAoi8Ig+CWdQCM/pjp/a97KYTwvzUNVy1Kfjb9RUDa
+         vrBlxxQtRSFHYlQHB+0/heGTnRn+Te7/4Sxn0WYXY/nTS42sAcfn9oR1DcW1SnlDtN5c
+         1v2AyikIde2SCbBsEPteeFGy4UyYmPgyZm5YBgD/2rhN0nXS7CINflr1Yo/ErNJi0db5
+         OxMn9fSkRXi9+f31cr7C+QWnPNUY2alX5+CwLyBf/j3fgIcDjhG/5e5aJdFVhbYzr2L1
+         lN5w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:mime-version:content-transfer-encoding:reply-to:from:to
+         :subject:to:message-id;
+        bh=LCOisiWb2nzqYAqdcgZkXNe8s3mJoMQQCHr53zk1eTU=;
+        b=oJBEiuWJjMAeFlGwprazgAmBdMATtY79oyr+HgSu22mEoHaEU7vfcfiEFITMoXFRwx
+         PmeQr42OgpXM/XVB4Ykeeckd+gVJv927b7GXOLVO9gKlS3dsO3CU7MlN5hBZUaS9VkgJ
+         5IdZL4ebM3en5u4nqCLqOQlk/T3H890R1Lj6ahOiDtIsBmYnn3X1HHTwDyf5MKTWyATR
+         N8d2Of0C7RmZESoKESaCqtGsYnj/BUhGukp/VJ5iGYLI4crC00AViXzR9UAvRbmtLD74
+         UUEO/81jkY4ylwQNM5cGUoEtnRbwNt5uchLK3cgHYZhLOsbYqLBNrwzQ99Qs0L30Yx4v
+         sGZA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of noreply@hqanime4arab.com designates 37.187.22.114 as permitted sender) smtp.mailfrom=noreply@hqanime4arab.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hqanime4arab.com
+Return-Path: <noreply@hqanime4arab.com>
+Received: from tracker.hqanime4arab.com (ns345656.ip-37-187-22.eu. [37.187.22.114])
+        by mx.google.com with ESMTPS id o191si337553wme.118.2021.04.14.11.41.45
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 14 Apr 2021 11:41:45 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@hqanime4arab.com designates 37.187.22.114 as permitted sender) client-ip=37.187.22.114;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of noreply@hqanime4arab.com designates 37.187.22.114 as permitted sender) smtp.mailfrom=noreply@hqanime4arab.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hqanime4arab.com
+Message-ID: <60773769.1c69fb81.4485d.b257SMTPIN_ADDED_BROKEN@mx.google.com>
+X-Google-Original-Message-ID: <GjwoKgUKIZ03vAiwuMUskRyoIoYW6StC thesystem@hqanime4arab.com>
+Received: by tracker.hqanime4arab.com (Postfix, from userid 10000)
+	id 76543640971; Thu, 15 Apr 2021 03:41:45 +0900 (JST)
+To: mrcloud.med@gmail.com
+Subject: hqanime4arab Torrents Account Confirmation Required?
+X-PHP-Originating-Script: 10000:functions_global.php
+To: mrcloud <mrcloud.med@gmail.com>
+From: hqanime4arab Torrents <noreply@hqanime4arab.com>
+Reply-To: hqanime4arab Torrents <noreply@hqanime4arab.com>
+X-Mailer: PHP v5.6.40
+Content-Transfer-Encoding: 8bit
+X-Sender: TSUE PHP-Mailer
+MIME-Version: 1.0
+Content-type: text/html; charset=utf-8
+Date: Thu, 15 Apr 2021 03:41:45 +0900 (JST)
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<base href="https://hqanime4arab.com/" />
+	<title>hqanime4arab Torrents Account Confirmation Required?</title>
+</head>
+<body style="font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.231;
+	background: #FFFFFF; color: #000000; margin: 5px">
+
+	<div style="background-color: #F0F7FC; border: 1px solid #E47600; border-radius: 5px">
+	
+		<a href="https://hqanime4arab.com" style="color: #FFFFFF; text-decoration: none; font-size: 11px; 
+			display: block; background-color: #E47600; border-bottom: 1px solid #E47600; padding: 5px 10px; margin: 0;
+			border-top-left-radius: 4px; border-top-right-radius: 4px">hqanime4arab Torrents</a>
+			
+		<div style="background-color: #FCFCFF; color: #141414; padding: 1em">
+			mrcloud,<br />
+<br />
+In order to complete your registration at <b>hqanime4arab Torrents</b>, you need confirm your account by following the page below.<br />
+<br />
+<b><a href="https://hqanime4arab.com/?p=confirmaccount&hash=rBtnh9X8GCztOQ5W&memberid=282">https://hqanime4arab.com/?p=confirmaccount&hash=rBtnh9X8GCztOQ5W&memberid=282</a></b><br />
+<br />
+Kind regards,<br />
+<b>hqanime4arab Torrents</b>
+		</div>
+			
+		<a href="https://hqanime4arab.com" style="color: #FFFFFF; text-decoration: none; font-size: 11px;
+			display: block; background-color: #FAB060; border-top: 1px solid #E47600; padding: 5px 10px; margin: 0; text-align: right">https://hqanime4arab.com</a>
+			
+	</div>		
+
+</body>
+</html>

@@ -1,0 +1,590 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:22e6:b029:f9:2098:e3d8 with SMTP id b6csp249406lkv;
+        Sat, 22 May 2021 01:23:00 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxkKr9iylH66ilhPgqGe8OoSkwWYBX6fLDHmkUEIrrRIuHQB3b1HLGYTTKnvoUY+sqsBm0K
+X-Received: by 2002:a62:1651:0:b029:2e1:fc01:62ee with SMTP id 78-20020a6216510000b02902e1fc0162eemr12555973pfw.12.1621671779777;
+        Sat, 22 May 2021 01:22:59 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1621671779; cv=none;
+        d=google.com; s=arc-20160816;
+        b=YR0sdNuYn10UxbObKtYZ/8/JF44kK98aYrqR39MivHzOegxuC8W49iOkOcwArhbaDF
+         +Z+AU7du9q2b1zl2/6tCkHRKpHX8x969i8iNGNaQ5Mk8uMKAOTUj5ubqbhHbEc5ZEP4M
+         ouPjQu4Nmyu8zPwoUPXbY89FzTmE06qwl2i8usPkwxbudauUsWUwzuJDldjO0r7xwFzY
+         UVl/nq223E+Sq+Big21yiOP2Aw+fDArsibR4YHo/Kow0ZwMtU1ONYKWsn5q4ay5OXO6j
+         8QLxuO38VHgB3oCFZoYvFjqiEEG5Z5FPg3STx2eoq+Ilt77W6AYb24cLuHQ+30UVBJmM
+         5tWw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from
+         :date:dkim-signature:dkim-signature;
+        bh=1jLixGIcKgG/x44nGIX7SWKd0cTVBHrnZK3kCLUApkY=;
+        b=YfWfkAoMzIZgHGdaoscIu6Jw2dJP2Yq1BtjTLe30v9GP/g9eTkCcxkne6J2zojUNjx
+         IqgdcyRds7SR+21f7eByzxaVKAG6b3H/MrY6VTntRLXqwsHCecqdzzfitwrvfWXRaSFr
+         bZPAVcO7Ph1R3jraL6NHFDu4aJZSglRLUwcftuMT25+9Gbiu13LsOAeHwOmJQLuyT82L
+         HuDqJeC7BNuDHufl9NzpPPEwGnkbD2AI2okdn24fct5tgyPThla6viSo8yalULimrPYE
+         +nYmPuwVzxC4m+7bVEoftYt/G5tjcuFgO8BU5PSv/XS5nlaESc3wMRCy22yq6OCiS/oF
+         x2zw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@m.lastpass.com header.s=lmi header.b=QcB3INvd;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=Ms8NL2NP;
+       spf=pass (google.com: domain of 677-xnu-203.0.3557030.0.0.18047.9.471439387-6@em-sj-77.mktomail.com designates 199.15.215.104 as permitted sender) smtp.mailfrom=677-XNU-203.0.3557030.0.0.18047.9.471439387-6@em-sj-77.mktomail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=lastpass.com
+Return-Path: <677-XNU-203.0.3557030.0.0.18047.9.471439387-6@em-sj-77.mktomail.com>
+Received: from caribou.mktdns.com (caribou.mktdns.com. [199.15.215.104])
+        by mx.google.com with ESMTPS id t15si8892060plg.285.2021.05.22.01.22.59
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 22 May 2021 01:22:59 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 677-xnu-203.0.3557030.0.0.18047.9.471439387-6@em-sj-77.mktomail.com designates 199.15.215.104 as permitted sender) client-ip=199.15.215.104;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@m.lastpass.com header.s=lmi header.b=QcB3INvd;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=Ms8NL2NP;
+       spf=pass (google.com: domain of 677-xnu-203.0.3557030.0.0.18047.9.471439387-6@em-sj-77.mktomail.com designates 199.15.215.104 as permitted sender) smtp.mailfrom=677-XNU-203.0.3557030.0.0.18047.9.471439387-6@em-sj-77.mktomail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=lastpass.com
+X-MSFBL: dcWQiV5TaU2xFCtPPRJEqKGf1RQ8iQSswY2kqvnwpZA=|eyJ1IjoiNjc3LVhOVS0
+	yMDM6MDoxNDI2Mzo3MjcxMjoyNTQzMjM6MTgwNDc6OTozNTU3MDMwOjQ3MTQzOTM
+	4Ny02IiwiciI6Im1yY2xvdWQubWVkQGdtYWlsLmNvbSIsImciOiJiZy1zamQtMTQ
+	iLCJiIjoiZHZwLTE5OS0xNS0yMTUtMTA0In0=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1621671719;
+	s=lmi; d=m.lastpass.com; i=@m.lastpass.com;
+	h=Content-Type:MIME-Version:Subject:To:From:Date;
+	bh=1jLixGIcKgG/x44nGIX7SWKd0cTVBHrnZK3kCLUApkY=;
+	b=QcB3INvdvFk6R/QDrvfvI3ddAFjH4apYbd8H+3n7WbbvKe5d3yxCeDNY2+/h6ZT7
+	6aAxM3vrdJ5LOEUP072D8IGtr8JUJpx15adVo8V8/5XkX23Q+e88S8nflg2NgW353Fx
+	+2wM8ToeMg1614EYFMQTXc6NdWKlB/+NIYYMPaNs=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1621671719;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Content-Type:MIME-Version:Subject:To:From:Date;
+	bh=1jLixGIcKgG/x44nGIX7SWKd0cTVBHrnZK3kCLUApkY=;
+	b=Ms8NL2NP9fnNXpi7EwoApbIZBn9+KdzlQcGQHkp7K7HXFmQ0qjconfDcgH4zTh9Z
+	mdW6m6hmB9PpjMVCI2S3vdr9YUX7OcEgW6IYhVqeC7ooReDu5IY8EUnNk7bvSLwVI6b
+	yS0o6rLoRrJEYcI+r+q5ORkMy6B+wbrquHkLBHMk=
+Date: Sat, 22 May 2021 03:21:59 -0500 (CDT)
+From: LastPass <replies@m.lastpass.com>
+Reply-To: replies@m.lastpass.com
+To: mrcloud.med@gmail.com
+Message-ID: <32362072.149688210.1621671719084@sjmktmail-batch1g.marketo.org>
+Subject: Why do we reuse passwords?
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_149688208_1802805968.1621671719084"
+X-Binding: bg-sjd-14
+List-Unsubscribe: <mailto:GVMGQMTIG42W6OCENJJHOMKYM5XFITRSO5RGI6SXKF3VC2CSI5IHSQLRGN2XS52WOVUTAPI=.3557030.18047.9@unsub-sj.mktomail.com>
+X-PVIQ: mkto-677XNU203-000001-000003-557030
+X-MarketoID: 677-XNU-203:0:14263:72712:254323:18047:9:3557030:471439387-6
+X-Mailfrom: 677-XNU-203.0.3557030.0.0.18047.9.471439387-6@em-sj-77.mktomail.com
+X-MktArchive: false
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_149688208_1802805968.1621671719084
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Why do we reuse passwords?
+
+
+Why do 61% of us still use the same password for multiple accounts? We aske=
+d 2,000 people about their password habits and here's what we found <https:=
+//go.logmeininc.com/dc/GEuTBx0tyjJUUVMSjgntYSgQ5Gl4LMKDobgdeCyCaOAH2LTjqj-8=
+A9WBZRqGBvQYztUsNgYdmGNeVd8DZ9tQTQXjemF1Tgqm0o8i-RKBY-mjrz0tSWtVLqlat5DkCoE=
+mUxG0PmXY5NqIuG1id4TDRReGv415rNATVZvK2n-MqRJpQQm8JFl6wZqx1SL86-Gl_myDPyCD79=
+Qs1F-GPmMxS61pkv-kPXehq9kVmr84YV3kpqASW1cRJW4QwefkBydlMafNCy5YBb2Ar3gzws9eU=
+2m3CRmDHfrM0IvB_bz4z7nyEU4Z0TJ166a36deMY1LqX09jbf6d6yB132hqh0FHseCEFWnNxEMv=
+vaYip-5FyGA3O83HINxDN3ZalzfmAoLyG67AhneCo3idvOBpMSwqiMRNRz0zFLGMFyqHeZZcOS0=
+=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biYzViV6PMFb-D3FeHPF3=
+kDYirlcLE9n3DA5WoT6k=3D>:
+SEE THE INFOGRAPHIC <https://go.logmeininc.com/dc/GEuTBx0tyjJUUVMSjgntYSgQ5=
+Gl4LMKDobgdeCyCaOAH2LTjqj-8A9WBZRqGBvQYztUsNgYdmGNeVd8DZ9tQTQXjemF1Tgqm0o8i=
+-RKBY-mjrz0tSWtVLqlat5DkCoEmUxG0PmXY5NqIuG1id4TDRReGv415rNATVZvK2n-MqRJpQQm=
+8JFl6wZqx1SL86-Gl_myDPyCD79Qs1F-GPmMxS61pkv-kPXehq9kVmr84YV3kpqASW1cRJW4Qwe=
+fkBydlMafNCy5YBb2Ar3gzws9eU2m3CRmDHfrM0IvB_bz4z7nyEU4Z0TJ166a36deMY1LqX09jb=
+f6d6yB132hqh0FHseCEFWnNxEMvvaYip-5FyGA3O83HINxDN3ZalzfmAoLyG67AhneCo3idvOBp=
+MSwqiMRNRz0zFLGMFyqHeZZcOS0=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yI=
+XZrkW6biYzViV6PMFb-D3FeHPF3kDYirlcLE9n3DA5WoT6k=3D>
+Login  <https://go.logmeininc.com/dc/RZGPQs3iX5wgu2di1q_ypEQu_lydpSkwUVCXOE=
+0EO2ZvWj1Sy7_39UjC1fdfe4XhFajU9qGa_67FQViSKyuuApI_Fg8qv8o24YE5dHqxUdCNcUnJR=
+ehy-0wfINK6-IKXHXq9gaiPH3sDKHVZIrcx8VRlQTipyWTbtqUt0C2jjTH1cDVidGLIZUDUAjvg=
+JFyqIFz6_Q4C9zdUppnvqLrQC3aP9bNRcqbYnLhyb__-7h2Jo59hL96QwuQuI9T20TsDTCwTpt9=
+73gGLWRzTgWbhFZQ3PWh6fcX6SkMQ9XyJ4HNds1bizCovZQORFP3WowWsIq1dtW07YgmURf2Gp4=
+3BTQ=3D=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biYzViV6PMFb-D=
+3FeHPF3kDYirlcLE9n3DA5WoT6k=3D>
+Buy <https://go.logmeininc.com/dc/RZGPQs3iX5wgu2di1q_ypEZVsVEDMf7JA_XrG1-Ew=
+RaT2q-ejpSHVgHJZC-ozV1JjfbuzrLe3WMahU4g82ykSHzg-WJev5vO6NTRiBYdpa-JXFxngDJa=
+4ZVRYSJ3CkWpv5wEVhrrg7sctJasZ4LvGxqZUpXfIJRMRUBfQX0rNuxCsUvPQBE62euZYeCVp2g=
+cE_Icn2QBf60Ip62TZN4XSkZYwTQzxx2ExWOx9HbsAonx5rCcu2CtLvOGJbcAGcFXwirHUJ3log=
+BRVN3FQQKUCZMrUZDmLCvo7cxi09NQM9hSS9z73MYaqu9SAOnkmQb0_MJGs7wM54SfTS-s4bJRD=
+A=3D=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biYzViV6PMFb-D3Fe=
+HPF3kDYirlcLE9n3DA5WoT6k=3D>
+Guide  <https://go.logmeininc.com/dc/IXa7a3qCNsfykCKMTv6sTOMYS4jGxB4oL89F_Q=
+tvVuGdi4K-WGWBj2D2EY8hIa7MwIWUpzwmzQ-2VUfbFVwNNKMfM0IpoCschceSPz-Qpv2-O3MXE=
+Lxr7h89dTHyV2NlzuYyUJtvVaU5oIXsb9Yxkwbt876iKhUZS2IxbFJUt0aGT89vAXBQV_IKUD22=
+IuadnGFO819dkHzjD6Uvda3ulB1w0QPbKmGVuhc0g6SYG0DABXso0cd5bs6WEuRfkqq66bOk_ud=
+04Mw-qeWg0CXToeEL2uzHZMoNEgv2S0WuwOz6ekouOnUq_8qn4ESrHzZL_Sdi524b-C5evs0Eo5=
+DKzGfKaBl0pcIB3oUPPW6eFbY=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZ=
+rkW6biYzViV6PMFb-D3FeHPF3kDYirlcLE9n3DA5WoT6k=3D>
+This email was sent to: mrcloud.med@gmail.com <https://go.logmeininc.com/dc=
+/O6nOFMVoi3PyRnvbfDBVtNk7_7G6cvnlE8TOZkI__BI=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd=
+9tyOfcx120ks8c3yIXZrkW6biYzViV6PMFb-D3FeHPF3kDYirlcLE9n3DA5WoT6k=3D>
+ =C2=A9 LogMeIn Ireland Unlimited Company, The Reflector, 10 Hanover Quay, =
+Dublin 2, Ireland
+ <https://go.logmeininc.com/Njc3LVhOVS0yMDMAAAF9MiNgqB2xhRGeI8gzEpc01fCt4jN=
+tQwEMT2vsRcSk35hyj65aD9t-uxdlDxpRkxKOf4g5EH4=3D>
+ Unsubscribe <https://lastpass.com/unsubscribe.php>     |   View in browser=
+ <[[https://lp.logmeininc.com/index.php/email/emailWebview?mkt_tok=3DNjc3LV=
+hOVS0yMDMAAAF9MiNgqBlRbhbKFu3WemSqBPkEeyNhoYohnjQQM1Xo4iGGdDyKFhbDw2D1-Eo81=
+OVkZAKpghCa-59goaWOUAel1Rz5GJS1OvtdhUm4J0GSbPciB_3F1A&md_id=3D18047]]>  |  =
+ Privacy policy <https://go.logmeininc.com/Njc3LVhOVS0yMDMAAAF9MiNgqENAI8Ri=
+ZPqNC8QDV0aw6vD1DzeLhFCuF31u0R8eMbG3toHUB5tJOPT0hVMxs-hAYPw=3D>
+=20
+ Log in to your account <https://go.logmeininc.com/Njc3LVhOVS0yMDMAAAF9MiNg=
+qAcnNWPp4_U8yXMWiCNWXTyv4alLbp-TVxFgN3yGwlJErdb8KCJEieDdUNliebkkDp8=3D>  | =
+  LastPass support <https://go.logmeininc.com/Njc3LVhOVS0yMDMAAAF9MiNgqDpzV=
+lAqmRkGBBp_B6h0rlb0Md673e5PG0NGwpwB5vBtBS_KD0wlFoE_wGzlxVidcis=3D>
+ Your security is our top priority. Never share your master password with a=
+nyone - including us!
+ For more information, click here <https://go.logmeininc.com/Njc3LVhOVS0yMD=
+MAAAF9MiNgqDG3IWdx2CAoeADunv6vj9oJjra_JRkpo5n7oMtCMQ0rJtlUnGjy3J9OJPD3-AxpL=
+iI=3D>.
+
+<>
+
+------=_Part_149688208_1802805968.1621671719084
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>=20
+<title>Psychology of Passwords</title>=20
+<link rel=3D"Shortcut Icon" type=3D"image/x-icon" href=3D"https://lp.logmei=
+ninc.com/rs/677-XNU-203/images/Lastpass.ico">=20
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0, maximum-scale=3D1.0,">                                      =20
+<link href=3D"http://fonts.googleapis.com/css?family=3DLato:300,400,700,900=
+" rel=3D"stylesheet" type=3D"text/css">=20
+<style type=3D"text/css">
+        .appleLinksWhite a {color: #ffffff !important; text-decoration: non=
+e;} =20
+        .appleLinksBlack a {color: #000000 !important; text-decoration: non=
+e;}=20
+        .appleLinksGrey a {color: #5e656b !important; text-decoration: none=
+;}
+        table { display: table; }
+        /*body .button a:hover { background-color: #B6000B !important; }*/
+        .button:hover { background-color: #B6000B !important; }
+        a.hover:hover { color: #6ABAE5 !important; }
+       =20
+        @media only screen and (max-width: 550px) {
+            table { width: 100% !important; }
+            table.button { width: 100% !important; display: table; }
+            td.logo img { max-width: 175px !important }
+            .centerImg { width: 100%; }
+            td.text { text-align: left; }
+        }
+    </style>=20
+<!--[if mso]|(IE)>
+        <style type=3D"text/css">
+            body, table, td, h1, h2, h3, h4, h5, span {font-family: Lato, A=
+rial, Helvetica, sans-serif !important; mso-line-height-rule:exactly;}
+        </style>
+    <![endif]-->=20
+</head>=20
+<body style=3D"font-family: Arial, Helvetica, sans-serif; font-size: 14px; =
+margin: 0; padding: 0; color: #5e656b;"><style type=3D"text/css">div#emailP=
+reHeader{ display: none !important; }</style><div id=3D"emailPreHeader" sty=
+le=3D"mso-hide:all; visibility:hidden; opacity:0; color:transparent; mso-li=
+ne-height-rule:exactly; line-height:0; font-size:0px; overflow:hidden; bord=
+er-width:0; display:none !important;">The truth behind password reuse<div s=
+tyle=3D"display: none; max-height: 0px; overflow: hidden;">&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;</div></div>=
+=20
+<table style=3D"width: 100%; border-collapse: collapse; background-color: #=
+F7F9FA; background-image: url(); font-family: Arial, Helvetica, sans-serif;=
+ font-size: 14px; margin: 0; padding: 0; color: #5e656b;" cellpadding=3D"0"=
+ cellspacing=3D"0">=20
+<tbody>
+<tr>=20
+<td class=3D"mktoContainer" id=3D"container" align=3D"center" style=3D"word=
+-break: break-word;">
+<table style=3D"width: 500px; border-collapse: collapse; border-spacing: 0;=
+ margin: 0 auto; position: relative; background-color: #F7F9FA;" class=3D"m=
+ktoModule" id=3D"centerImageb888ce93-e9d6-42a1-bdd8-0133c0aca46d">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" style=3D"padding: 30px;" class=3D"centerImg">=20
+<div class=3D"mktoImg" id=3D"centerImgb888ce93-e9d6-42a1-bdd8-0133c0aca46d"=
+ mktolockimgsize=3D"false">=20
+<a href=3D
+"https://go.logmeininc.com/dc/GEuTBx0tyjJUUVMSjgntYSgQ5Gl4LMKDobgdeCyCaOAH2=
+LTjqj-8A9WBZRqGBvQYztUsNgYdmGNeVd8DZ9tQTQXjemF1Tgqm0o8i-RKBY-mL2sw1SwxiWSui=
+tu-AM46qoWr8lj0gFKr6vyYEd-9ZauJjAnDZrl4-CIo8BFxZ97bsIbRQZ7-DjVhCOPR5jaS3_ks=
+T7g3coq3RvNDQ2IXWtBx8XvuvhKmEoBcoYbvK1KzFFu5APNaQUBNl9ycHlfjbBOO9tb-8HDq4Iw=
+_WMhvo74GC8UIpIgtIZDmXED0mJjPWxRiNsiQHgMlezvn5cDPgKgtMGtdAC5DoGSpux2Aa79Z_P=
+d43995x9lniNU5hOIJ36MT_Jof_dSwwyvTUHAhhnSTxs2NyYgPjhIuyEklmysuEMQBVr9Lqjjp9=
+OiaAz_o=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biYzViV6PMFb-D=
+3FeHPF3kDYirlcLE9n3DA5WoT6k=3D" target=3D"_blank"
+><img border=3D"0" src=3D"http://lp.logmeininc.com/rs/677-XNU-203/images/Lo=
+go_LastPass_Color2.png" width=3D"180" height=3D"50" alt=3D"LastPass" style=
+=3D"font-family: Helvetica, Arial, sans-serif; color: #5e656b; font-size: 1=
+6px; border: 0;"></a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table style=3D"width: 500px; border-collapse: collapse; border-spacing: 0;=
+ margin: 0 auto; position: relative; padding: 0;  background-color: #FFFFFF=
+; background-image: url();" class=3D"mktoModule" id=3D"bodyText29c88a0d-a58=
+4-44bc-9ea8-d95d9846fad887d5a783-401b-4602-b06f-5399a9cde7e8" cellpadding=
+=3D"0" cellspacing=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"mktoText" id=3D"trBodyText29c88a0d-a584-44bc-9ea8-d95d9846fad8=
+87d5a783-401b-4602-b06f-5399a9cde7e8">=20
+<table style=3D"width: 100%; border-collapse: collapse;">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding: 30px 30px 0px 30px;" align=3D"center">=20
+<table style=3D"border-collapse: collapse; border-spacing: 0; color: #5E656=
+B;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left" style=3D"font-size: 26px; line-height: 30px; color: #1F2=
+A34;">Why do we reuse passwords?</td>=20
+</tr>=20
+<tr>=20
+<td style=3D"padding: 30px 0 0 0; display: block; font-size: 16px; line-hei=
+ght: 24px;" class=3D"text">Why do 61% of us still use the same password for=
+ multiple accounts? We asked 2,000 people about their password habits and <=
+a href=3D
+"https://go.logmeininc.com/dc/GEuTBx0tyjJUUVMSjgntYSgQ5Gl4LMKDobgdeCyCaOAH2=
+LTjqj-8A9WBZRqGBvQYztUsNgYdmGNeVd8DZ9tQTQXjemF1Tgqm0o8i-RKBY-mjrz0tSWtVLqla=
+t5DkCoEmUxG0PmXY5NqIuG1id4TDRReGv415rNATVZvK2n-MqRJpQQm8JFl6wZqx1SL86-Gl_my=
+DPyCD79Qs1F-GPmMxS61pkv-kPXehq9kVmr84YV3kpqASW1cRJW4QwefkBydlMafNCy5YBb2Ar3=
+gzws9eU2m3CRmDHfrM0IvB_bz4z7nyEU4Z0TJ166a36deMY1LqX09jbf6d6yB132hqh0FHseCEF=
+WnNxEMvvaYip-5FyGA3O83HINxDN3ZalzfmAoLyG67AhneCo3idvOBpMSwqiMRNRz0zFLGMFyqH=
+eZZcOS0=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biYzViV6PMFb-D=
+3FeHPF3kDYirlcLE9n3DA5WoT6k=3D" style=3D"color: #3498DB; line-height: 24px;=
+" target=3D"_blank" id=3D"BodyLink_HeresWhatWeFound_PsychOfPasswordsInfogra=
+phic"
+>here's what we found</a>:</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table style=3D"width: 500px; border-collapse: collapse; border-spacing: 0;=
+ margin: 0 auto; position: relative; background-color: #FFFFFF;" class=3D"m=
+ktoModule" id=3D"centerImage7b6b604d-33da-4f05-8bca-c66ac20182f5">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" style=3D"padding: 30px 30px 0px 30px;" class=3D"center=
+Img">=20
+<div class=3D"mktoImg" id=3D"centerImg7b6b604d-33da-4f05-8bca-c66ac20182f5"=
+ mktolockimgsize=3D"false">=20
+<a href=3D
+"https://go.logmeininc.com/dc/GEuTBx0tyjJUUVMSjgntYSgQ5Gl4LMKDobgdeCyCaOAH2=
+LTjqj-8A9WBZRqGBvQYztUsNgYdmGNeVd8DZ9tQTQXjemF1Tgqm0o8i-RKBY-mjrz0tSWtVLqla=
+t5DkCoEmUxG0PmXY5NqIuG1id4TDRReGv415rNATVZvK2n-MqRJpQQm8JFl6wZqx1SL86-Gl_my=
+DPyCD79Qs1F-GPmMxS61pkv-kPXehq9kVmr84YV3kpqASW1cRJW4QwefkBydlMafNCy5YBb2Ar3=
+gzws9eU2m3CRmDHfrM0IvB_bz4z7nyEU4Z0TJ166a36deMY1LqX09jbf6d6yB132hqh0FHseCEF=
+WnNxEMvvaYip-5FyGA3O83HINxDN3ZalzfmAoLyG67AhneCo3idvOBpMSwqiMRNRz0zFLGMFyqH=
+eZZcOS0=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biYzViV6PMFb-D=
+3FeHPF3kDYirlcLE9n3DA5WoT6k=3D" target=3D"_blank"
+><img border=3D"0" src=3D"http://lp.logmeininc.com/rs/677-XNU-203/images/Sc=
+reenshot_LastPass_B2C_PsychOfPasswords.jpeg" width=3D"355" height=3D"159" a=
+lt=3D"Psychology of Passwords" style=3D"font-family: Helvetica, Arial, sans=
+-serif; color: #5e656b; font-size: 16px; border: 0;"></a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table style=3D"display: table; width: 500px; border-collapse: collapse; bo=
+rder-spacing: 0; margin: 0 auto; position: relative; padding: 0; background=
+-color: #FFFFFF; background-image: url();" class=3D"mktoModule" id=3D"butto=
+n5b4af624-29ba-45b7-a5be-344c56284e93" cellpadding=3D"0" cellspacing=3D"0">=
+=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding: 40px 30px 40px 30px;" class=3D"mktoText" id=3D"trButt=
+on5b4af624-29ba-45b7-a5be-344c56284e93">=20
+<center>=20
+<table class=3D"button" style=3D"border-radius: 30px; background-color: #D3=
+2D27;">=20
+<tbody>=20
+<tr>=20
+<td style=3D"text-align: center;">=20
+<!--[if (gte mso 9)|(IE)]>
+      <table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" style=3D"=
+border-spacing:0">
+      <tr>
+      <td style=3D"padding:0;mso-padding-alt:15px 30px ; background-color: =
+#D32D27">
+      <![endif]--> <a class=3D"" style=3D"display: block; color: #FFFFFF; f=
+ont-size: 16px; text-decoration: none; font-weight: normal; text-transform:=
+ uppercase; padding: 15px 30px;" href=3D
+"https://go.logmeininc.com/dc/GEuTBx0tyjJUUVMSjgntYSgQ5Gl4LMKDobgdeCyCaOAH2=
+LTjqj-8A9WBZRqGBvQYztUsNgYdmGNeVd8DZ9tQTQXjemF1Tgqm0o8i-RKBY-mjrz0tSWtVLqla=
+t5DkCoEmUxG0PmXY5NqIuG1id4TDRReGv415rNATVZvK2n-MqRJpQQm8JFl6wZqx1SL86-Gl_my=
+DPyCD79Qs1F-GPmMxS61pkv-kPXehq9kVmr84YV3kpqASW1cRJW4QwefkBydlMafNCy5YBb2Ar3=
+gzws9eU2m3CRmDHfrM0IvB_bz4z7nyEU4Z0TJ166a36deMY1LqX09jbf6d6yB132hqh0FHseCEF=
+WnNxEMvvaYip-5FyGA3O83HINxDN3ZalzfmAoLyG67AhneCo3idvOBpMSwqiMRNRz0zFLGMFyqH=
+eZZcOS0=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biYzViV6PMFb-D=
+3FeHPF3kDYirlcLE9n3DA5WoT6k=3D" target=3D"_blank" id=3D"Button1_SeeTheInfog=
+raphic"
+>SEE THE INFOGRAPHIC</a>=20
+<!--[if (gte mso 9)|(IE)]>
+      </td>
+      </tr>
+      </table>
+      <![endif]--></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</center></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table style=3D"width: 500px; border-collapse: collapse; border-spacing: 0;=
+ margin: 0 auto; position: relative; padding: 0;  background-color: #FFFFFF=
+; background-image: url();" class=3D"mktoModule" id=3D"bodyText37c517a3-b57=
+1-468d-914a-6aaff0890487" cellpadding=3D"0" cellspacing=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"mktoText" id=3D"trBodyText37c517a3-b571-468d-914a-6aaff0890487=
+">=20
+<table style=3D"width: 100%; border-collapse: collapse;">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding: 0px 15px 25px 15px;" align=3D"center">=20
+<div style=3D"border-top-width: 1px; border-top-style: solid; border-top-co=
+lor: #c3c5d8; max-width: 500px;">
+ &nbsp;=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table style=3D"width: 500px; border-collapse: collapse; border-spacing: 0;=
+ margin: 0 auto; position: relative; padding: 0; background-color: #FFFFFF;=
+ background-image: url();" class=3D"mktoModule" id=3D"icons37973037-de3f-49=
+85-8c91-80412c467cfb" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">=
+=20
+<tbody>=20
+<tr>=20
+<td>=20
+<table align=3D"center" style=3D"width: 100%; border-collapse: collapse; co=
+lor: #5E656B; font-size: 12px">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center">=20
+<div src=3D"" class=3D"mktoImg" id=3D"icon137973037-de3f-4985-8c91-80412c46=
+7cfb" border=3D"0" mktolockimgsize=3D"false">=20
+<a href=3D
+"https://go.logmeininc.com/dc/RZGPQs3iX5wgu2di1q_ypEQu_lydpSkwUVCXOE0EO2ZvW=
+j1Sy7_39UjC1fdfe4XhFajU9qGa_67FQViSKyuuApI_Fg8qv8o24YE5dHqxUdCNcUnJRehy-0wf=
+INK6-IKXHXq9gaiPH3sDKHVZIrcx8VRlQTipyWTbtqUt0C2jjTH1cDVidGLIZUDUAjvgJFyqIFz=
+6_Q4C9zdUppnvqLrQC3aP9bNRcqbYnLhyb__-7h2Jo59hL96QwuQuI9T20TsDTCwTpt973gGLWR=
+zTgWbhFZQ3PWh6fcX6SkMQ9XyJ4HNds1bizCovZQORFP3WowWsIq1dtW07YgmURf2Gp43BTQ=3D=
+=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biYzViV6PMFb-D3FeHPF3=
+kDYirlcLE9n3DA5WoT6k=3D" target=3D"_blank"
+><img width=3D"50" height=3D"50" src=3D"http://lp.logmeininc.com/rs/677-XNU=
+-203/images/Icon_LastPass_50x50_Login_Trial.png" alt=3D"Login" style=3D"fon=
+t-family: Helvetica, Arial, sans-serif; color: #5e656b; font-size: 12px; bo=
+rder: 0;"></a>=20
+</div> </td>=20
+<td align=3D"center">=20
+<div src=3D"" class=3D"mktoImg" id=3D"icon237973037-de3f-4985-8c91-80412c46=
+7cfb" border=3D"0" mktolockimgsize=3D"false">=20
+<a href=3D
+"https://go.logmeininc.com/dc/RZGPQs3iX5wgu2di1q_ypEZVsVEDMf7JA_XrG1-EwRaT2=
+q-ejpSHVgHJZC-ozV1JjfbuzrLe3WMahU4g82ykSHzg-WJev5vO6NTRiBYdpa-JXFxngDJa4ZVR=
+YSJ3CkWpv5wEVhrrg7sctJasZ4LvGxqZUpXfIJRMRUBfQX0rNuxCsUvPQBE62euZYeCVp2gcE_I=
+cn2QBf60Ip62TZN4XSkZYwTQzxx2ExWOx9HbsAonx5rCcu2CtLvOGJbcAGcFXwirHUJ3logBRVN=
+3FQQKUCZMrUZDmLCvo7cxi09NQM9hSS9z73MYaqu9SAOnkmQb0_MJGs7wM54SfTS-s4bJRDA=3D=
+=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biYzViV6PMFb-D3FeHPF3=
+kDYirlcLE9n3DA5WoT6k=3D" target=3D"_blank"
+><img width=3D"50" height=3D"50" src=3D"http://lp.logmeininc.com/rs/677-XNU=
+-203/images/Icon_LastPass_50x50_Buy_Trial.png" alt=3D"Buy" style=3D"font-fa=
+mily: Helvetica, Arial, sans-serif; color: #5e656b; font-size: 12px; border=
+: 0;"></a>=20
+</div> </td>=20
+<td align=3D"center">=20
+<div src=3D"" class=3D"mktoImg" id=3D"icon337973037-de3f-4985-8c91-80412c46=
+7cfb" border=3D"0" mktolockimgsize=3D"false">=20
+<a href=3D
+"https://go.logmeininc.com/dc/IXa7a3qCNsfykCKMTv6sTOMYS4jGxB4oL89F_QtvVuGdi=
+4K-WGWBj2D2EY8hIa7MwIWUpzwmzQ-2VUfbFVwNNKMfM0IpoCschceSPz-Qpv2-O3MXELxr7h89=
+dTHyV2NlzuYyUJtvVaU5oIXsb9Yxkwbt876iKhUZS2IxbFJUt0aGT89vAXBQV_IKUD22IuadnGF=
+O819dkHzjD6Uvda3ulB1w0QPbKmGVuhc0g6SYG0DABXso0cd5bs6WEuRfkqq66bOk_ud04Mw-qe=
+Wg0CXToeEL2uzHZMoNEgv2S0WuwOz6ekouOnUq_8qn4ESrHzZL_Sdi524b-C5evs0Eo5DKzGfKa=
+Bl0pcIB3oUPPW6eFbY=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biY=
+zViV6PMFb-D3FeHPF3kDYirlcLE9n3DA5WoT6k=3D" target=3D"_blank"
+><img width=3D"50" height=3D"50" src=3D"http://lp.logmeininc.com/rs/677-XNU=
+-203/images/Icon_LastPass_50x50_Guide_Trial.png" alt=3D"Guide" style=3D"fon=
+t-family: Helvetica, Arial, sans-serif; color: #5e656b; font-size: 12px; bo=
+rder: 0;"></a>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" class=3D"mktoText" id=3D"icontext137973037-de3f-4985-8=
+c91-80412c467cfb"><p><a href=3D
+"https://go.logmeininc.com/dc/RZGPQs3iX5wgu2di1q_ypEQu_lydpSkwUVCXOE0EO2ZvW=
+j1Sy7_39UjC1fdfe4XhFajU9qGa_67FQViSKyuuApI_Fg8qv8o24YE5dHqxUdCNcUnJRehy-0wf=
+INK6-IKXHXq9gaiPH3sDKHVZIrcx8VRlQTipyWTbtqUt0C2jjTH1cDVidGLIZUDUAjvgJFyqIFz=
+6_Q4C9zdUppnvqLrQC3aP9bNRcqbYnLhyb__-7h2Jo59hL96QwuQuI9T20TsDTCwTpt973gGLWR=
+zTgWbhFZQ3PWh6fcX6SkMQ9XyJ4HNds1bizCovZQORFP3WowWsIq1dtW07YgmURf2Gp43BTQ=3D=
+=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biYzViV6PMFb-D3FeHPF3=
+kDYirlcLE9n3DA5WoT6k=3D" style=3D"font-family: Helvetica, Arial, sans-serif=
+; color: #5E656B; line-height: 40px; font-size: 12px; text-decoration: none=
+; font-weight: bold;" target=3D"_blank" id=3D"Bottom_LoginText"
+>Login </a></p></td>=20
+<td align=3D"center" class=3D"mktoText" id=3D"icontext237973037-de3f-4985-8=
+c91-80412c467cfb"><p><a href=3D
+"https://go.logmeininc.com/dc/RZGPQs3iX5wgu2di1q_ypEZVsVEDMf7JA_XrG1-EwRaT2=
+q-ejpSHVgHJZC-ozV1JjfbuzrLe3WMahU4g82ykSHzg-WJev5vO6NTRiBYdpa-JXFxngDJa4ZVR=
+YSJ3CkWpv5wEVhrrg7sctJasZ4LvGxqZUpXfIJRMRUBfQX0rNuxCsUvPQBE62euZYeCVp2gcE_I=
+cn2QBf60Ip62TZN4XSkZYwTQzxx2ExWOx9HbsAonx5rCcu2CtLvOGJbcAGcFXwirHUJ3logBRVN=
+3FQQKUCZMrUZDmLCvo7cxi09NQM9hSS9z73MYaqu9SAOnkmQb0_MJGs7wM54SfTS-s4bJRDA=3D=
+=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biYzViV6PMFb-D3FeHPF3=
+kDYirlcLE9n3DA5WoT6k=3D" style=3D"font-family: Helvetica, Arial, sans-serif=
+; color: #5E656B; line-height: 40px; font-size: 12px; text-decoration: none=
+; font-weight: bold;" target=3D"_blank" id=3D"Bottom_BuyText"
+>Buy</a></p></td>=20
+<td align=3D"center" class=3D"mktoText" id=3D"icontext337973037-de3f-4985-8=
+c91-80412c467cfb"><p><a href=3D
+"https://go.logmeininc.com/dc/IXa7a3qCNsfykCKMTv6sTOMYS4jGxB4oL89F_QtvVuGdi=
+4K-WGWBj2D2EY8hIa7MwIWUpzwmzQ-2VUfbFVwNNKMfM0IpoCschceSPz-Qpv2-O3MXELxr7h89=
+dTHyV2NlzuYyUJtvVaU5oIXsb9Yxkwbt876iKhUZS2IxbFJUt0aGT89vAXBQV_IKUD22IuadnGF=
+O819dkHzjD6Uvda3ulB1w0QPbKmGVuhc0g6SYG0DABXso0cd5bs6WEuRfkqq66bOk_ud04Mw-qe=
+Wg0CXToeEL2uzHZMoNEgv2S0WuwOz6ekouOnUq_8qn4ESrHzZL_Sdi524b-C5evs0Eo5DKzGfKa=
+Bl0pcIB3oUPPW6eFbY=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biY=
+zViV6PMFb-D3FeHPF3kDYirlcLE9n3DA5WoT6k=3D" style=3D"font-family: Helvetica,=
+ Arial, sans-serif; color: #5E656B; line-height: 40px; font-size: 12px; tex=
+t-decoration: none; font-weight: bold;" target=3D"_blank" id=3D"Bottom_Guid=
+eText"
+>Guide </a></p></td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table style=3D"width: 500px; border-collapse: collapse; border-spacing: 0;=
+ margin: 0 auto; position: relative; background-color: #FFFFFF; background-=
+image: url();" class=3D"mktoModule" id=3D"spacer2005ff89-98c1-432d-a419-c59=
+6e21d90af3261346f-9dc0-4010-abf8-2c540afca729">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding: 10px;" class=3D"mktoText" id=3D"trSpacer2005ff89-98c1=
+-432d-a419-c596e21d90af3261346f-9dc0-4010-abf8-2c540afca729">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table style=3D"width: 500px; border-collapse: collapse; border-spacing: 0;=
+ margin: 0 auto; position: relative; background-color: #F7F9FA; background-=
+image: url();" class=3D"mktoModule" id=3D"spacer19c0dbe9-b02e-4e0b-999c-52c=
+6fabf44ae">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding: 20px;" class=3D"mktoText" id=3D"trSpacer19c0dbe9-b02e=
+-4e0b-999c-52c6fabf44ae">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+<tr>=20
+<td class=3D"mktoText" id=3D"footer" style=3D"padding: 40px; background-col=
+or:#434E6B;">
+<table align=3D"center" style=3D"width: 500px; border-collapse: collapse; c=
+olor: #ffffff; font-size: 11px; line-height: 18px;">
+<tbody>
+<tr>
+<td class=3D"footer" align=3D"center" style=3D"font-size: 11px; line-height=
+: 18px; font-family: Lato, Arial, Helvetica, sans-serif; color: #ffffff;">T=
+his email was sent to: <a style=3D"color: #ffffff; text-decoration: none;" =
+href=3D
+"https://go.logmeininc.com/dc/O6nOFMVoi3PyRnvbfDBVtNk7_7G6cvnlE8TOZkI__BI=
+=3D/Njc3LVhOVS0yMDMAAAF9MiNgqJd9tyOfcx120ks8c3yIXZrkW6biYzViV6PMFb-D3FeHPF3=
+kDYirlcLE9n3DA5WoT6k=3D"
+>mrcloud.med@gmail.com</a><br /> &copy; <span class=3D"appleLinksWhite"><a =
+href=3D
+"https://go.logmeininc.com/Njc3LVhOVS0yMDMAAAF9MiNgqO0z6qza5xQ99_XFCipX4m3d=
+07i2boK174Ebc16nIkWuRyM-sTsIuHeNNo6mr9gFUtk=3D" style=3D"color: #ffffff; te=
+xt-decoration: none;" target=3D"_blank"=20
+id=3D"Footer_LMI"
+>LogMeIn Ireland Unlimited Company, The Reflector, 10 Hanover Quay, Dublin =
+2, Ireland
+</a></span><br /> <a href=3D
+"https://lastpass.com/unsubscribe.php" style=3D"color: #ffffff; text-decora=
+tion: none;" footer_unsubscribe=3D"" target=3D"_blank" class=3D"mktNoTrack"
+>Unsubscribe</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=3D"https://lp.logmeininc.c=
+om/index.php/email/emailWebview?mkt_tok=3DNjc3LVhOVS0yMDMAAAF9MiNgqBlRbhbKF=
+u3WemSqBPkEeyNhoYohnjQQM1Xo4iGGdDyKFhbDw2D1-Eo81OVkZAKpghCa-59goaWOUAel1Rz5=
+GJS1OvtdhUm4J0GSbPciB_3F1A&md_id=3D18047" style=3D"color: #ffffff; text-dec=
+oration: none;" target=3D"_blank" id=3D"Footer_BrowserView">View in browser=
+</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=3D
+"https://go.logmeininc.com/Njc3LVhOVS0yMDMAAAF9MiNgqE3gHUX7mkNK5Z8msWFajdci=
+tQCYaTV3qxuJdOYAqL3lZ9veP663EDjdWhGy1aZWyZU=3D"=20
+style=3D"color: #ffffff; text-decoration: none;" target=3D"_blank" id=3D"Fo=
+oter_Privacy"
+>Privacy policy</a><br /> <br /> <a href=3D
+"https://go.logmeininc.com/Njc3LVhOVS0yMDMAAAF9MiNgqBs9-ugEZ_cEHTfgyy1Maf6K=
+4BFDFfLetOODWDGbrYJNWJDJ-OOTHvMHxZDHda2Z-00=3D" style=3D"color: #ffffff; te=
+xt-decoration: none;" target=3D"_blank" id=3D"Footer_Login"
+>Log in to your account</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=3D
+"https://go.logmeininc.com/Njc3LVhOVS0yMDMAAAF9MiNgqBQ874_PzKnfMPifnW9BW-6W=
+_beFRUiACNawkdwMQeTJqMCjUJgQPMS1Gl1DcLAo29k=3D" style=3D"color: #ffffff; te=
+xt-decoration: none;"=20
+target=3D"_blank" id=3D"Footer_Support"
+>LastPass support</a><br /> Your security is our top priority.
+ Never share your master password with anyone - including us!<br /> For mor=
+e information, <a href=3D
+"https://go.logmeininc.com/Njc3LVhOVS0yMDMAAAF9MiNgqALAX5X7ix2hgdaKhEbWECOt=
+-8vKENw0qJWvFr1GGR6Ia8JYTIqVuNLRzSArarP0RjY=3D" style=3D"color: #ffffff; te=
+xt-decoration: none;" target=3D"_blank" id=3D"Footer_Security"
+>click here</a>.</td>
+</tr>
+</tbody>
+</table>
+</td>=20
+</tr>=20
+</tbody>
+</table> =20
+
+<img src=3D"https://go.logmeininc.com/trk?t=3D1&mid=3DNjc3LVhOVS0yMDM6MDoxN=
+DI2Mzo3MjcxMjoyNTQzMjM6MTgwNDc6OTozNTU3MDMwOjQ3MTQzOTM4Ny02Om1yY2xvdWQubWVk=
+QGdtYWlsLmNvbQ%3D%3D" width=3D"1" height=3D"1" style=3D"display:none !impor=
+tant;" alt=3D"" />
+
+&nbsp;
+</body>
+</html>
+------=_Part_149688208_1802805968.1621671719084--

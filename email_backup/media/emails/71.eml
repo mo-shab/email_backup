@@ -1,0 +1,62 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:264c:b029:c3:278e:30dc with SMTP id bi12csp3482747lkb;
+        Mon, 29 Mar 2021 06:23:48 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxNdLbu6mPu0k2yAa7YLk7DRLe51nerAqRNW9hgcjak19EJ8DTB0+veN5OP2zUu5UYn98Ek
+X-Received: by 2002:ac2:442b:: with SMTP id w11mr16466527lfl.579.1617024228344;
+        Mon, 29 Mar 2021 06:23:48 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1617024228; cv=none;
+        d=google.com; s=arc-20160816;
+        b=EJKs5LhApXlOgeG6bH9vR1GH72a0VLCpjNt+gV+g518d4p9D3MumVyl7lQKadQMxlg
+         fdtv0paoVOh9aznpidfo37kTmHLHS5CMrqoeJrRS0MYfDj1HNRETG5O5HoTvCNhuT47x
+         9SweHg1kPh+yewfzuft8VMsfL9ohjXVrkISwdQCLxyIBiN4f2h/ldzV/KSHHI3leV9/i
+         8Q5CUI54EcUcfyEfNbqx35uo/UPXjTBTXuXMiIwdO6xQdvzJS6C+IJTRoQCm52LlYoZb
+         Oexh9mmTOOMzYm0ZVddN7xrVusM0QevNjUnJKyc7VSq5SGismlQCExicTzyYzsXHxf7l
+         AKEA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:date:reply-to:from:to:message-id:dkim-signature;
+        bh=yKp8f/qjwZWdQ1Dla9exH+ASn+r+g9/4V/1MhXg9JqY=;
+        b=e9ttF3OiBxSlZNTw0fnznauIDZC8O+6wRWTFyUyA7NJ/zKkRAf48Z9e/wXHfRqT+v8
+         w22qTxzrZkokBWTtp6VfkwH08NkwBcR5kPcFGZsScO7xTmHNPqFoU/yUAzFI53LmlU2C
+         vYZ4hBPca8ZjPlwaT7m6hWUm0MkaEF4IwkLQDXF/ScFBpvAJFD6MiJxf5zOinTmTMUqt
+         3bbTOdzEwSlYchVT8VMgY5np1Mj9Ktq1bzKCwRaMQK13BxI6+ZT+nXx1KIHCgxvLAkSV
+         7ArjFfOxI1go5cI2fsRtpZKGsrLbM1rpzrGBzn3JGwbg8C0SnlyV/2p+XvxBwtzU8GAB
+         TVJw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=fail header.i=@theaudioscene.net header.s=hmail header.b=b5QjWfVP;
+       spf=pass (google.com: domain of notifications@theaudioscene.net designates 51.161.86.19 as permitted sender) smtp.mailfrom=notifications@theaudioscene.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=theaudioscene.net
+Return-Path: <notifications@theaudioscene.net>
+Received: from mail.systes.ca (mail.systes.ca. [51.161.86.19])
+        by mx.google.com with ESMTPS id h19si17117748lfm.445.2021.03.29.06.23.46
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 29 Mar 2021 06:23:47 -0700 (PDT)
+Received-SPF: pass (google.com: domain of notifications@theaudioscene.net designates 51.161.86.19 as permitted sender) client-ip=51.161.86.19;
+Authentication-Results: mx.google.com;
+       dkim=fail header.i=@theaudioscene.net header.s=hmail header.b=b5QjWfVP;
+       spf=pass (google.com: domain of notifications@theaudioscene.net designates 51.161.86.19 as permitted sender) smtp.mailfrom=notifications@theaudioscene.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=theaudioscene.net
+dkim-signature: v=1; a=rsa-sha256; d=theaudioscene.net; s=hmail;
+	c=relaxed/relaxed; q=dns/txt; h=From:Reply-To:Subject:Date:Message-ID:To:Content-Type;
+	bh=yKp8f/qjwZWdQ1Dla9exH+ASn+r+g9/4V/1MhXg9JqY=;
+	b=b5QjWfVPmumgeKX0TbQ9f6F2ZrGy6Qzr57KyO1AM+AxtGyDFJgAJ/NDL9hSyNJCKPHiYQpfCQd90XFHa2pA1R6l/IncCvpaWhKvjA4A7FzghehFbBZ2d+TJltIsstLrF2dn326xl2NA1s/rnP7BAKL4MYduyiNkmjjeVHipGnFw=
+Received: from mail.systes.ca (webbox.systes.ca [51.161.86.19])
+	by mail.systes.ca with ESMTPA
+	; Mon, 29 Mar 2021 09:23:45 -0400
+Return-Path: notifications@theaudioscene.net
+Content-Type: text/plain; charset=us-ascii
+Message-ID: <6c011299ac7abd7cb50f33babc6a070e@theaudioscene.net>
+To: mrcloud.med@gmail.com
+From: TheAudioScene <notifications@theaudioscene.net>
+Reply-To: notifications@theaudioscene.net
+Date: Mon, 29 Mar 2021 09:23:18 -0400
+Subject: TheAudioScene.net Registration Confirmation
+
+Hey mrcloud, Here is your login for reference
+URL: https://theaudioscene.net
+Login: mrcloud
+Pass: Shab1991
+Below is your activation link. Click/Copy the url into your browser to activate your account
+URL: https://theaudioscene.net/authentication/activation.php
+Code: 9fccd486a7aebaa7544c02f5f545a7b147eab737
+

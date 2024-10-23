@@ -1,0 +1,57 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:22e6:b029:f9:2098:e3d8 with SMTP id b6csp178178lkv;
+        Thu, 3 Jun 2021 04:02:52 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJy4Oua+pOwDkWOf/MHny2LtbDWSxb676sVXnc6hiOCe+DBFRX9IzrIpvlY3qzO7LmaRwYqk
+X-Received: by 2002:a05:600c:47d7:: with SMTP id l23mr21648123wmo.49.1622718172659;
+        Thu, 03 Jun 2021 04:02:52 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1622718172; cv=none;
+        d=google.com; s=arc-20160816;
+        b=nuv0ETEFhjY4O/D3+9dX2OEq4WpnYAI+iHp0OCKTP+774tc741N50O6hvrrfIyKIgF
+         FfL5Ay48PR64kqMGg3zdvCykABLq3c8oXZO4upIbEi9TwXg19hK0+3Kin+5DEBKZ8Hkb
+         19+3v9yhwE4lrtAx/lin3zuoNbPoFcizM+U4FNYoCmCRqvkqD0y3wnDIZd/q08BX3xfr
+         GRoI9soGQFwaPxL6l9zqitJqGnq9aiBTU3+bB3DQM8kpAJNSYWTHcERnAwI1WoPc4Bnh
+         oWImh1YMgI1kPRgl4J8DlHSEhDIx7+Y4jn2jr8LRw8czB7/JZVVaitC63OQoFHstgNtK
+         ZH1Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:from:content-transfer-encoding:mime-version:subject:message-id
+         :to;
+        bh=dkIrILgd9TcYE6t+MkMgNYyCSRc5hiM/DBXXm43Wt2M=;
+        b=GIykGCAchr3WIGiExvs5pxg4o7EzZ/OcLvvk6Yq2BpXHWQz6//rkKds44KIWi2WjAV
+         kzWb1i2UFtoJSvN7rGtPajTC3C8qeB+kU2JNpLcQIgGYxvx1loqelujo6keBNvVrN3+W
+         nF3k3IXjRkrzKjHQM8o+XQZqr2NOKkUPto3bH74xiaUvj2UibQCnulONa0n24KreA/Pd
+         F1TC1ENnnBXfy4kUM8cAItahfH2fL9YKNd8XT8I+0nabkSPhydBYeYp6wrzKMOrB4RLD
+         0hqqNAtgUwC/Yvx49XMkpHGT012vgHSVBn2uBbtAkYkwl1nUY34dZuVds/FROavq9IsP
+         zNaQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of webmaster@lydec.co.ma designates 194.204.254.80 as permitted sender) smtp.mailfrom=webmaster@lydec.co.ma
+Return-Path: <webmaster@lydec.co.ma>
+Received: from mx.ext.lydec.co.ma (mx.ext.lydec.co.ma. [194.204.254.80])
+        by mx.google.com with ESMTPS id o124si5762213wme.97.2021.06.03.04.02.52
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 03 Jun 2021 04:02:52 -0700 (PDT)
+Received-SPF: pass (google.com: domain of webmaster@lydec.co.ma designates 194.204.254.80 as permitted sender) client-ip=194.204.254.80;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of webmaster@lydec.co.ma designates 194.204.254.80 as permitted sender) smtp.mailfrom=webmaster@lydec.co.ma
+To: <mrcloud.med@gmail.com>
+Message-ID: <-927849832.4004.1622718278012.JavaMail.webmaster@lydec.co.ma>
+Subject: =?UTF-8?Q?Inscription_=C3=A0_l'agence_en_ligne_de_Lydec?=
+MIME-Version: 1.0
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+From: <webmaster@lydec.co.ma>
+Date: Thu, 3 Jun 2021 12:02:46 +0100
+X-TM-AS-GCONF: 00
+X-TM-AS-Product-Ver: IMSVA-9.1.0.2034-8.6.0.1017-26196.007
+X-TM-AS-User-Approved-Sender: Yes
+X-TMASE-Version: IMSVA-9.1.0.2034-8.6.1017-26196.007
+X-TMASE-Result: 10-4.870700-10.000000
+X-TMASE-MatchedRID: nG+EewXavWNWW77qETJZVq1J5FWoJmrtHs+WrjYEjZR+nTgKGm08MXA3
+	v6Ii19K2LrAE05vlTVrhOcVOAUGWxnKchgNGPlG84LhPNn/fAtx7igv5gemLD35oaKcvilHwq2E
+	j9GqE5JfISsMCis4frMpNTgKfPUUDqSSzXdx2dBq02MfkEfDp8u7RQS4+NcfHn3a7kI8+RG/c4y
+	RzhFvTw5H0YXYnbGozOX/V8P8ail0x5AClW1CVjb7FgYEJDFLovByr4McLxUlfH0qXJGooh+wkl
+	WuiV2Y2aZshM9K7RPUI11DV7f8OKC4ShF2nIONwh+NeM16Ef42uz/JdRetP7Z5mwMmMO3zAcWLW
+	VR0+ebn2K5nA/9pwNL2hiDXgWNbBdDd+IIDQzLRr35UZczmI7Q==
+X-TMASE-SNAP-Result: 1.821001.0001-0-1-12:0,22:0,33:0,34:0-0
+
+<font size="2" face="Arial, Helvetica, sans-serif">Cher client ,<p>Votre inscription a bien &eacute;t&eacute; effectu&eacute;e.</p><p> Pour activer votre compte, nous vous prions de bien vouloir cliquer sur le lien suivant :<a href="https://client.lydec.ma/site/fr/web/guest/confirmation-inscription?p_p_id=inscription_WAR_inscriptionportlet&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&p_p_col_id=column-3&p_p_col_count=1&_inscription_WAR_inscriptionportlet__spage=%2Fportlet_action%2Finscription_portlet%2Faction%3Fc%3DYMIe0sW6PNj83tbJ2ZGVZqLi%26action%3D4&_inscription_WAR_inscriptionportlet_c=YMIe0sW6PNj83tbJ2ZGVZqLi&_inscription_WAR_inscriptionportlet_action=4">Lien d'activation</a></p><p>Une fois sur cette page, veuillez saisir votre mot de passe. </p><p>Pour plus d'informations, notre support technique est &agrave; votre disposition &agrave; l'adresse suivante <u>contact@lydec.co.ma</u></p></font>

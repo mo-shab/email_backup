@@ -1,0 +1,75 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:cb45:0:b029:11e:b57c:dd52 with SMTP id h5csp1782248lkt;
+        Wed, 28 Jul 2021 15:07:46 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwQKJPAobjV+Lvu058JOrqgMidCFUitlMuOIXk76iPoaTleej8KSdk4KgEG4VYUVCUaQY+5
+X-Received: by 2002:a1c:2602:: with SMTP id m2mr1602085wmm.38.1627510066541;
+        Wed, 28 Jul 2021 15:07:46 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1627510066; cv=none;
+        d=google.com; s=arc-20160816;
+        b=AbJG+E18KzalZEzIrskrCq9wSIH+5gkDiu7mbMHmoM59h7SWpQ6BuLd/qhqJ1mIyLH
+         uAbpMN+qBzxr26WQqrSoPCQvv8Zt2dhaV3J+HQcKJYcLGI+RuiJuRZpctUlB9RAb8amn
+         71ckcjDLgde8B97gg9b4WyMe649V84KW5ZePCfBGcCR8yNMJyQUI0Nn83I0zjDccUlU7
+         R6dgBMM8kxtyOByXlV6VRIoPxs7FY4w9ufNQ49YHZ0mI553fZKraVKii55HZob8A9Qxy
+         vaETp9BnWt1/6gq31Dd26LKw/uJk5brJCcsa68BkiePfgio5aOtRk9MocZKwrcHzgjtJ
+         2hZw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:content-transfer-encoding:mime-version:reply-to:from:subject
+         :to:dkim-signature:dkim-filter:message-id;
+        bh=a3k7C3eqn7l39ilqsYYfoxhFvQWAnzc/3rsFKPsX+9s=;
+        b=kPqEznFNeKIXVl7hWQM550hkx4y0pzqsk69WZG3C8ZnmGnCRWJRp0Jzq8her2yDSB7
+         H87y+QVZaEIa+RacCHRIdvRySzD4Ig/B+58AOQEzIWkEDrqQ/mjxxBsDV2+9c9rmpxAw
+         OTgjV68jMHMAj4hYYSAgiB2BDCk3Nf0cblfQng36OwczgSZALahCXezwM/x9V9PEmtXB
+         Rxs4kyxSxaFUaTWMeatz/pQFNtvwfEw32jFkBP5dJKnSf1Ur7KIYWoyZIsgRvQWMEwbs
+         HXPYcdDKPmYWyRyu7hWtsol0cUik2EAO4hxjf6YLorUUKDlHereQ2RrQLsosYXB6XQU7
+         X0Pw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ztracker.cc header.s=mail header.b=YDhLCi2z;
+       spf=pass (google.com: domain of webmaster@ztracker.cc designates 92.204.54.74 as permitted sender) smtp.mailfrom=webmaster@ztracker.cc
+Return-Path: <webmaster@ztracker.cc>
+Received: from astra7318.startdedicated.com (astra7318.startdedicated.com. [92.204.54.74])
+        by mx.google.com with UTF8SMTPS id 15si939782wrb.419.2021.07.28.15.07.46
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 28 Jul 2021 15:07:46 -0700 (PDT)
+Received-SPF: pass (google.com: domain of webmaster@ztracker.cc designates 92.204.54.74 as permitted sender) client-ip=92.204.54.74;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ztracker.cc header.s=mail header.b=YDhLCi2z;
+       spf=pass (google.com: domain of webmaster@ztracker.cc designates 92.204.54.74 as permitted sender) smtp.mailfrom=webmaster@ztracker.cc
+Message-ID: <6101d532.1c69fb81.db1ee.4e36SMTPIN_ADDED_BROKEN@mx.google.com>
+X-Google-Original-Message-ID: <e1aa3410a61fde87e0af1bde08a3ddc1 thesystem@ztracker.cc>
+Received: by astra7318.startdedicated.com (Postfix, from userid 1002)
+	id C75C91D21D08; Wed, 28 Jul 2021 22:07:45 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 astra7318.startdedicated.com C75C91D21D08
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ztracker.cc; s=mail;
+	t=1627510065; bh=PzA0sNNCt+ySQTWYO0/XWrwKJ14KVDVXt76vfeZNVC4=;
+	h=To:Subject:From:Reply-To:Date:From;
+	b=YDhLCi2zoxFdCWTY1EtM/Bz5Twrw0TXj4PTTBqgeXBuXDEzXH1D3HZ+Rb+s639sfV
+	 CrZjhDcXbtllQdLx03llbY85C385MLWPE2nqn5HfrSrkpiQo1XKxBPbFere5mYXzfP
+	 xZgLS+cIsiINUJMWWtYbFEEmomHdtWwjlKhByh/qW51hxV8xXiRPcx5Xzld1Bhiq8Y
+	 rf8MMDhDbnFO7qQh2zLsOWe/8VIT2GYusJs65B+y8E3K4+FyRnIbzatSp3ssS6GxlA
+	 nX1iTwEtCdZ46MaN4vQZTWruQnsrl+XBFCtdNoNTXoe/qBl3rGbJ6U0fN59NNs9a4Z
+	 zX04q3gkLBS5w==
+To: mrcloud.med@gmail.com
+Subject: Ztracker.cc - Inaktív fiók Account Inactive!
+X-PHP-Originating-Script: 1002:ts_functions.php
+From: Ztracker.cc <contact@ztracker.cc>
+Reply-To: Ztracker.cc <contact@ztracker.cc>
+X-Mailer: PHP v7.1.33-25+0~20210112.45+debian9~1.gbp1a89bf
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Content-type: text/html; charset=iso-8859-2
+X-Sender: PHP
+Date: Wed, 28 Jul 2021 22:07:45 +0000 (UTC)
+
+<p>Kedves <b><font color=red>mrcloud</font></b>,</p>
+									<p>Régebben regisztráltál az oldalunkra: <b>Ztracker.cc</b>, de több, mint <b>30 napja </b> nem léptél be.</p>
+									<p>Elfeledkeztél rólunk?</p>
+									<p>Örömmel látnánk újra!</p>
+									<p>Ha nem jelentkezel be az oldalra <b>15  napon belül</b>, akkor <b><font color=red>törölve</font></b> lesz a fiókod.</p>
+									<p><b><font color=red>Bejelentkezni</font></b> a felhasználói neveddel  és jelszavaddal tudsz.: <a href="http://ztracker.cc">http://ztracker.cc</a></p>
+									<p>Ha elfelejtetted volna a jelszavad, kérj <b><font color=red>jelszóemlékeztetõt</font></b>: <a href="http://ztracker.cc/recover.php">http://ztracker.cc/recover.php</a></p>
+									<p>Üdvözlettel</p>
+									<p>Ztracker.cc csapata</p>
+									<p><a href="http://ztracker.cc">http://ztracker.cc</a></p>
+									<p>nbsp;</p>
+									<p><b>NE VÁLASZOLJ ERRE AZ EMAILRE!!</b></p>

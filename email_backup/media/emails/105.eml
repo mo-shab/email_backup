@@ -1,0 +1,102 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:cad2:0:b029:f4:b3fb:84d3 with SMTP id e18csp717336lky;
+        Tue, 4 May 2021 04:27:13 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzRqghS89IkQGrn4ep5M3ZwsJHYdU7OGM1ktE4ZmBl/Sr7sQ1Mncz2f5mPnW+58F1rbDtav
+X-Received: by 2002:a05:6a00:80e:b029:28e:9497:2473 with SMTP id m14-20020a056a00080eb029028e94972473mr10587867pfk.62.1620127633479;
+        Tue, 04 May 2021 04:27:13 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1620127633; cv=none;
+        d=google.com; s=arc-20160816;
+        b=upIFhx9o2B66AR5sTxt7yWKalOzHjwB8vofDHbCY3bPq/zVz8wkUV7cayJn22l3hFn
+         dFdIs74BMY47o/QhsmPPn/osCvGAxS2ssug4f49GIUFMKz0796ogT3xaEcm5/i5G5uBK
+         JmgdgNHNfNLRppE/4yZrY8V66a9ZLGDiqNPzJjzpVNHuGQUp9nwhKQjgxX+H43zc5bTf
+         ghZOoEYc0zky6F1paYxOnGGgB9cQFPft8kfwKYnRWIBvRJmbNE90otLW9HVVFU/JrMKj
+         jDxgFh6kBaMSsR3rPBlX/gdX/5eKmmcpQFDWoTwXSupTnjwmlHU2vVOZrgrDOLffiEC+
+         Y1VQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:mime-version:from:date
+         :content-transfer-encoding:dkim-signature:dkim-signature;
+        bh=4FOkEheiJ6xANKQVCnO7dqSswgwfmtKIAC50N7eiLA8=;
+        b=Uy/u6mpZ8A9QGZzgyfP+h+LB6vRk3n2JNwfH6vyGz6pSfEjwuKj3bCjFk25lAZtwKn
+         fsnVYhZJ0zxvngM1NkInh3CNLYz24WZtzx4LqWCQpXP55nSqLtD6YJAyGmWeCWbPJEGO
+         Cm38jnGOJsWHxS8Fibt3np2MTbUh1V55bwfrjJ2Ec72szcoCZ0wkUbkPE7HmpJvUJ4xP
+         jZBhJh69AM5NWcoLpFF95faevJk8Vu82t7uP7v+6NrX9mPckQGkIKanafF/LWwLDyyW9
+         pBTiVkTVeh5A2XZ4r3QwJJEdKFgEcsLt70PDSkEFSu1utXr6zvrwbvoaxe4g1XrMmBEU
+         DVrw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@feralhosting.com header.s=s1 header.b=pY9JYCbc;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=PdNE4HQ3;
+       spf=pass (google.com: domain of bounces+1887226-047e-mrcloud.med=gmail.com@sendgrid.feralhosting.com designates 167.89.48.158 as permitted sender) smtp.mailfrom="bounces+1887226-047e-mrcloud.med=gmail.com@sendgrid.feralhosting.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=feralhosting.com
+Return-Path: <bounces+1887226-047e-mrcloud.med=gmail.com@sendgrid.feralhosting.com>
+Received: from o1.email-out.feralhosting.com (o1.email-out.feralhosting.com. [167.89.48.158])
+        by mx.google.com with ESMTPS id p24si17242235pjo.68.2021.05.04.04.27.13
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 04 May 2021 04:27:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+1887226-047e-mrcloud.med=gmail.com@sendgrid.feralhosting.com designates 167.89.48.158 as permitted sender) client-ip=167.89.48.158;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@feralhosting.com header.s=s1 header.b=pY9JYCbc;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=PdNE4HQ3;
+       spf=pass (google.com: domain of bounces+1887226-047e-mrcloud.med=gmail.com@sendgrid.feralhosting.com designates 167.89.48.158 as permitted sender) smtp.mailfrom="bounces+1887226-047e-mrcloud.med=gmail.com@sendgrid.feralhosting.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=feralhosting.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=feralhosting.com;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	x-feedback-id:to;
+	s=s1; bh=4FOkEheiJ6xANKQVCnO7dqSswgwfmtKIAC50N7eiLA8=;
+	b=pY9JYCbckDbX8+/2RnRhp2398xaC/wWxKChE8l9GqrNtefUaYT/8G5MPtY14h7Z3e1kC
+	PgysCHyE5Vi3qScBOoK1SFfA1sTX9K8xtcsupXkjZ382luiOXN69DfMZ7lYGKeODu9Hqfw
+	NHFeWhQWb/j5BWOJ6VGBxa04bBlVX6Tg8=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	x-feedback-id:to;
+	s=smtpapi; bh=4FOkEheiJ6xANKQVCnO7dqSswgwfmtKIAC50N7eiLA8=;
+	b=PdNE4HQ3GB5e/ASn4c2eJkVdmMnpJ5IBESNIt2ef0U51c8PMCQrOgl4BiVlBwPhWYQlC
+	AWOSlVPlnKaZ2OM0+78CkO5K/UKfgHp1XPULVtAwD64OsZfWrBwIZmOWbzUF72iDHBrO0H
+	VJkOA073AM812+1bB6nReI1ZC0qLr73pQ=
+Received: by filterdrecv-5d58f8bcff-9n7jw with SMTP id filterdrecv-5d58f8bcff-9n7jw-1-60912F90-4A
+        2021-05-04 11:27:12.806422073 +0000 UTC m=+483046.746285533
+Received: from MTg4NzIyNg (unknown)
+	by geopod-ismtpd-1-0 (SG) with HTTP
+	id 4jcpgGHiSeK5TZ1QkD_cTA
+	Tue, 04 May 2021 11:27:12.590 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Tue, 04 May 2021 11:27:12 +0000 (UTC)
+From: Feral Hosting <you-may-reply@feralhosting.com>
+Mime-Version: 1.0
+Message-ID: <4jcpgGHiSeK5TZ1QkD_cTA@geopod-ismtpd-1-0>
+Subject: Welcome to the New Service mailing list
+X-Feedback-ID: 1887226:SG
+X-SG-EID: 
+ =?us-ascii?Q?EY8gmU1U5CXS1ds=2Ftaop1VjS3Kod0fjSOjCrDjkezl+1W4Gi+hvQs=2F3TMWbo6M?=
+ =?us-ascii?Q?RcmbffpEYINy7N+cdKu3yHeY5PPNj=2FSpFftx66c?=
+ =?us-ascii?Q?ocmmkapiXH18U9dDsdXeffdYe=2FJ4m37N=2FwAHDTb?=
+ =?us-ascii?Q?9P=2FItfo2A=2FwvnNoLgIhZo9liymY4Z6A37Dz+ZLv?=
+ =?us-ascii?Q?PfNZlUvOkFD0gOBVjAMl8r=2Fh50IKRlWm0A3Fy=2Fs?=
+ =?us-ascii?Q?MnnfjbhlM6RvmQP2ZTrFEEQYJgxNO6hjDCiicW9?=
+ =?us-ascii?Q?Bmw8KeWDV0II2y+qR6NZw=3D=3D?=
+To: mrcloud.med@gmail.com
+X-Entity-ID: DWDrdtgR7JFykxJClhAC3Q==
+
+Hello,<br>
+<br>
+Welcome to the New Service mailing list.<br>
+<br>
+You will receive an e-mail whenever we make changes to our services or refi=
+ll stock if sold out. E-mails are likely to be very infrequent.
+<br>
+<br>
+Thank you,<br>
+www.feralhosting.com<br>
+<br>
+PS You may <a href=3D"https://www.feralhosting.com/emails/mrcloud.med@gmail=
+.com/lists">unsubscribe if you wish</a>.
+<img src=3D"http://email.feralhosting.com/wf/open?upn=3DCwU1znFXc593ac7MkXz=
+1gzwEG8dOHeUtvyRTdmN1sxbNaITFsF-2FVK44xkmp-2FqDL6-2FO3YO4pAjxSWC86K4iOiVm3c=
+sWkjqzognPeY1x-2FRpUL2IlQ515TDi1pQdo9t4arjxZHbO5QfXalS6sLuyeKIPQ4xIn5xSgidI=
+Dgygtm4NQUXlS9aYwLfiSIlp-2FEk6gyjRVMIt5DORSV-2FEFwujB0tTfC-2F8oZc1QPCaRC7yR=
+gnhDg-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1p=
+x !important;width:1px !important;border-width:0 !important;margin-top:0 !i=
+mportant;margin-bottom:0 !important;margin-right:0 !important;margin-left:0=
+ !important;padding-top:0 !important;padding-bottom:0 !important;padding-ri=
+ght:0 !important;padding-left:0 !important;"/>

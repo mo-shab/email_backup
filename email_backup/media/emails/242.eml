@@ -1,0 +1,204 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:cb45:0:b029:11e:b57c:dd52 with SMTP id h5csp2209953lkt;
+        Mon, 2 Aug 2021 15:56:32 -0700 (PDT)
+X-Received: by 2002:a37:8183:: with SMTP id c125mr17470775qkd.134.1627944992212;
+        Mon, 02 Aug 2021 15:56:32 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1627944992; cv=none;
+        d=google.com; s=arc-20160816;
+        b=WHeNnpYAStv1BGW+mo1/RTuYTwe0/4iHydjaDIknZCZvDrCzEEyxSz8pppnP+Ny+2A
+         GK10vgBLNoDEFdQwpu+5pwtu1L59Bq9XWRKxOmF1YMiUhWrK10afYA+LtaEHEwMLNy8u
+         tFa3FdVgIDMSmj00Si0t0rapOUnU6uNTbyttzGsvN58JuvDy85WWtI1rtvJREifF0prm
+         S433S/mxEuHEKH1hp9ez2Y5J51MbxXPmDPGXsQc2oG1t/cGcSa3sFm1vIMujt9rAwokN
+         PSagPTk0bQxVJLini3nfQVwyE1rEL+iisrfM7lL2688rqE3xVJ2YjsuAsVKMzZftt0hH
+         3RZQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:date:mime-version:dkim-signature;
+        bh=VcIhf8jYchHuSzmFtavGMh92+yxLEVFuKeJ7a3FfzAo=;
+        b=Nt1kzv41HH0mCtwwA5H+nTaD2HKQoUzwk9ZOOM3fmpxNxICAoowVGdRAaqbUjgAPIs
+         MbZPyFxiB0D+HPScNuNgsAXFS685cnUa8jteLcxKcA6o8WRoKTdtddX3ON1d0umLUQq4
+         8+vN1YQjdTvNB7nWPL+dVwJJ3vV5v2fxXJL1xNvrnpF3Br68RjT7Rfvqf3O3Gc+SuEwc
+         a8NDlmz1L74a8u9su9eVC0SUnvK5HzIeKWT3k3jZ3Eedk62LQj7xOQwCGmBm2rmNOjj5
+         wbzohMZy6FeBsDsnGzo8fWlEVzIMnN3fhtvW0XqVpxSOe6AtSzQek7gPZBhCZMz8ONP+
+         eFCQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=VtpeWkeX;
+       spf=pass (google.com: domain of 3h3giyrakc0ahktgdcug-pqtgrn0iqqing.eqootenqwf.ogfiockn.eqo@chime-notifications.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3H3gIYRAKC0Ahktgdcug-pqtgrn0iqqing.eqootenqwf.ogfiockn.eqo@chime-notifications.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Return-Path: <3H3gIYRAKC0Ahktgdcug-pqtgrn0iqqing.eqootenqwf.ogfiockn.eqo@chime-notifications.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id ec5sor5509213qvb.28.2021.08.02.15.56.31
+        for <mrcloud.med@gmail.com>
+        (Google Transport Security);
+        Mon, 02 Aug 2021 15:56:32 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3h3giyrakc0ahktgdcug-pqtgrn0iqqing.eqootenqwf.ogfiockn.eqo@chime-notifications.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=VtpeWkeX;
+       spf=pass (google.com: domain of 3h3giyrakc0ahktgdcug-pqtgrn0iqqing.eqootenqwf.ogfiockn.eqo@chime-notifications.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3H3gIYRAKC0Ahktgdcug-pqtgrn0iqqing.eqootenqwf.ogfiockn.eqo@chime-notifications.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20161025;
+        h=mime-version:date:message-id:subject:from:to;
+        bh=VcIhf8jYchHuSzmFtavGMh92+yxLEVFuKeJ7a3FfzAo=;
+        b=VtpeWkeX158VUH6th/cdZQ7JPWWedZWBz6yuoPPb5JFsr9UvThLCqQ33B7zRJuTdYA
+         UevD0LQ1XPjXVY8Xo0g3Hkg41nDbh0HHKuNFE/jNKrI3d1DUCnSFiuIPzElc5AgOLvBx
+         OTdQXJGz1ZdqCFvE5kaLwO6xPr6WfCy0Hy4JQE74qJABgdiqgF1L//zLw6nZZ8zot/FC
+         B0euXuLuoVwl4rvwXt0joyzbDN+CIfpZ1YBreMIAB5OOsOTxllC/OmeEAoWWgg4t93X7
+         C509Ns05rbjTksZgWaqoRwreB+ChF0+L8XbroDYv7Iqt7oWVv7cKKYfJOZiHbTyq+xPW
+         VIQw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to;
+        bh=VcIhf8jYchHuSzmFtavGMh92+yxLEVFuKeJ7a3FfzAo=;
+        b=pGTr96p6I99BCRwLVXDLMbKt32tDSwQcbUYbT4ZSYYicb3DVbD+UqfDy0QBH/+BG7r
+         nHKrwe4qUFV97QPgQubY86TxKqndq2EMrAwQUoEsG+Rx/QtpLhulAJSPdRSv4TBgkBLB
+         3V2TX4xwtnan+lREgAdlqTIdEFtcgjAp6AWrFOnpdOoyWz4phmXgxqczLbTBZWvasZUZ
+         2l8dakNPUDOTsa+VAgb96vjUse8u+kTadVOaViqledrJk8X25sz6x+qKH2qk698O5Vp1
+         i8XYSr1wLzzqCOEdI7mRcJdXZNO8hdMUCD+WH8JiEqTSIbCtjZKb1huV4ddXPfYSSu2Z
+         Yyjg==
+X-Gm-Message-State: AOAM530SCVfJ0trC2Dg0kg0sY8kTx8fTtmTAIViYeWxEBQSh1GgaRrXf
+	ueGow58vEkBh7VjwMuQOlvxvuvAnOrQR/4+S1oRVEEEyOp7LxOyuSwnGSxTKUr/8GW38Bjled7c
+	4fIlso94rfNKHlp7FUdqd
+X-Google-Smtp-Source: ABdhPJwBLZaeYXEChYEOHEY/NYWi/qGiXS2t+Uo2rhHQLyMKouic5LDW3rcxww7AiE6dOpeIMoBf2U9QZLVGzDl6Bb0k
+MIME-Version: 1.0
+X-Received: by 2002:a05:6214:948:: with SMTP id dn8mr18788881qvb.30.1627944991459;
+ Mon, 02 Aug 2021 15:56:31 -0700 (PDT)
+Date: Mon, 02 Aug 2021 15:56:31 -0700
+X-Notifications: f9e507ba6d600000
+X-Notifications-Bounce-Info: ATpamXlnFPATG8mafLsEqdzI2S3ZGWg47byufI5Vi90LHl-UO88n2-fxbaKqkPTpZTyoNgxlV7sj6zWaQO98s_DLloat4Ymv1YgKEhHs2EQv8Y2r3-EuPQeAsKqtS8gLsxo9Nc1uzVcqvkTcR_zRRUiyDRg7NzKEPeXJUNKfuNRfkNAc8uFYgwNjAwNjA0MDQxNTM1NTk2OTMzMg
+Message-ID: <umUj-vz3LkfOh-3rUL8d9w@notifications.google.com>
+Subject: [Firebase] Client access to your Cloud Firestore database has expired
+From: firebase-noreply@google.com
+To: mrcloud.med@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000ee5e3305c89b7a60"
+
+--000000000000ee5e3305c89b7a60
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+
+Firebase branding logo
+
+
+
+JavaScript
+
+[Firebase] Client access to your Cloud Firestore database expired 45 day(s)  
+ago
+
+
+
+You chose to start developing in Test Mode, which left your Cloud Firestore  
+database completely open to the Internet. Because your app was vulnerable  
+to attackers, your Firestore security rules were configured to stop  
+allowing requests after the first 30 days.
+
+Starting 45 day(s) ago, all client requests to your Firestore database have  
+been denied and will continue to be denied until security rules are  
+updated. Analysis is run daily; if you've modified your rules in the last  
+24 hours those changes may not be accounted for.
+
+
+Expired Rules
+
+
+JavaScript
+
+
+Database
+
+(default)
+
+
+View the docsEdit rules
+
+
+If you have questions or feel you've received this message in error, please  
+contact Firebase support
+
+Thanks for using Firebase!
+
+
+This email is notifying you about important service information regarding  
+your Firebase project
+
+
+Manage your Alert settings
+
+
+Google LLC
+1600 Amphitheatre Pkwy
+Mountain View, CA, 94043 USA
+
+
+
+
+--000000000000ee5e3305c89b7a60
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body style=3D"background-color: #fafafa;"><div id=3D"email" style=3D=
+"font-family: roboto, sans-serif; border: 1px solid #e0e0e0; background-col=
+or: white; max-width: 600px; margin: 0 auto;"><div style=3D"background-colo=
+r: white; padding: 24px 0;"><img style=3D"margin: auto; display: block; hei=
+ght: 40px; max-height: 40px; min-height: 40px;" src=3D"https://www.gstatic.=
+com/mobilesdk/190425_mobilesdk/firebase_lockup.png" alt=3D"Firebase brandin=
+g logo"></div> <table style=3D"width: 100%; background-color: #039be5;" cel=
+lpadding=3D"0" cellspacing=3D"0"><tr><td style=3D"padding: 24px;"><div styl=
+e=3D"font-size: 13px; line-height: 16px; color: #b3e1f7;">JavaScript</div><=
+div style=3D"font-size: 20px; line-height: 24px; color: white;">[Firebase] =
+Client access to your Cloud Firestore database expired 45 day(s) ago</div><=
+/td><td style=3D"padding: 24px; text-align: right;"><img style=3D"height: 2=
+4px; width: 24px;" src=3D"https://www.gstatic.com/mobilesdk/180621_mobilesd=
+k/firebase_database_white_24@2x.png" alt=3D""></td><tr></table><div style=
+=3D"margin-bottom: 24px; padding: 24px 24px 0 24px;"><div style=3D"font-wei=
+ght: 400; font-size: 14px; line-height: 20px; color: #212121;"><div>You cho=
+se to start developing in Test Mode, which left your Cloud Firestore databa=
+se completely open to the Internet. Because your app was vulnerable to atta=
+ckers, your Firestore security rules were configured to stop allowing reque=
+sts after the first 30 days.</div><div style=3D"padding: 24px 0 0 0;"><b>St=
+arting 45 day(s) ago</b>, all client requests to your Firestore database ha=
+ve been denied and will continue to be denied until security rules are upda=
+ted. Analysis is run daily; if you've modified your rules in the last 24 ho=
+urs those changes may not be accounted for.</div></div></div><div style=3D"=
+background-color: #e0e0e0; height: 1px; width: 100%;"></div><div style=3D"m=
+argin-bottom: 24px; padding: 24px 24px 0 24px;"><div style=3D"margin-bottom=
+: 16px;"><div style=3D"font-family: roboto, sans-serif; font-weight: 500; f=
+ont-size: 12px; line-height: 16px; color: #757575; text-transform: uppercas=
+e;">Expired Rules</div></div><div style=3D"font-weight: 500; font-size: 20p=
+x; line-height: 24px; color: #212121; margin-bottom: 16px;">JavaScript</div=
+><div style=3D"margin-bottom: 16px;"><div style=3D"margin-bottom: 16px;"><d=
+iv style=3D"font-weight: 400; font-size: 14px; line-height: 20px; color: #7=
+57575;">Database</div><div style=3D"font-weight: 400; font-size: 14px; line=
+-height: 20px; color: #212121;">(default)</div></div></div><div style=3D"pa=
+dding: 24px 0 0 0; line-height: 16px; text-align: right;"><div style=3D"mar=
+gin: 0 0 16px 0;"><span style=3D"margin: 0 0 0 8px;"><a href=3D"https://fir=
+ebase.google.com/docs/firestore/security/rules-conditions" style=3D"font-si=
+ze: 14px; font-weight: 500; letter-spacing: 0.25px; text-decoration: none; =
+text-transform: none; display: inline-block; border-radius: 8px; padding: 9=
+px 19px; border: 1px solid #e0e0e0; color: #039be5;">View the docs</a></spa=
+n><span style=3D"margin: 0 0 0 8px;"><a href=3D"https://console.firebase.go=
+ogle.com/project/javascript-7bb76/firestore/rules" style=3D"font-size: 14px=
+; font-weight: 500; letter-spacing: 0.25px; text-decoration: none; text-tra=
+nsform: none; display: inline-block; border-radius: 8px; padding: 10px 20px=
+; background-color: #039be5; color: #fff;">Edit rules</a></span></div></div=
+></div><div style=3D"background-color: #e0e0e0; height: 1px; width: 100%;">=
+</div><div style=3D"margin-bottom: 24px; padding: 24px 24px 0 24px;"><div s=
+tyle=3D"font-size: 14px; line-height: 20px; color: #212121; font-weight: 40=
+0;"><div>If you have questions or feel you've received this message in erro=
+r, please contact <a style=3D"text-decoration: none; color: #039be5;" href=
+=3D"https://firebase.google.com/support/">Firebase support</a></div><div st=
+yle=3D"margin-top: 24px;">Thanks for using Firebase!</div></div></div><div =
+style=3D"background-color: #eceff1; padding: 24px; font-size: 12px; line-he=
+ight: 16px;"><div style=3D"color: #757575; text-align: center;">This email =
+is notifying you about important service information regarding your Firebas=
+e project</div><div style=3D"margin-top: 20px;"><div style=3D"color: #75757=
+5; text-align: center;">Manage your <a href=3D"https://console.firebase.goo=
+gle.com/subscriptions/project/javascript-7bb76" style=3D"text-decoration: n=
+one; color: #039be5;">Alert settings</a></div></div></div><div style=3D"bac=
+kground-color: #78909c; padding: 24px;"><table style=3D"width: 100%;" cellp=
+adding=3D"0" cellspacing=3D"0"><tr><td><img style=3D"height: 24px; max-heig=
+ht: 24px; min-height: 24px;" src=3D"https://www.gstatic.com/images/branding=
+/googlelogo/2x/googlelogo_light_color_74x24dp.png" alt=3D""></td><td><div s=
+tyle=3D"font-size: 10px; line-height: 14px; font-weight: 400; text-align:ri=
+ght;"><a style=3D"color: #d6dde1; text-decoration: none;">Google LLC<br>160=
+0 Amphitheatre Pkwy<br>Mountain View, CA, 94043 USA</a></div></td></tr></ta=
+ble></div></div></body></html>
+--000000000000ee5e3305c89b7a60--

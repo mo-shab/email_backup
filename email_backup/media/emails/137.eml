@@ -1,0 +1,107 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:2894:b029:f7:3642:9e90 with SMTP id e20csp1778408lkc;
+        Mon, 17 May 2021 06:21:30 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJyNk3SxcH5mOcPFA1jzsXohx0ipn3LWpZcmbfPrGvvtFckhp6EfRi7l0jjWu/Gpdku+qtf6
+X-Received: by 2002:a05:6402:1c07:: with SMTP id ck7mr72697024edb.149.1621257689920;
+        Mon, 17 May 2021 06:21:29 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1621257689; cv=none;
+        d=google.com; s=arc-20160816;
+        b=IJTrntokJ7FV7+9vMY5gHQ0AbYSvSb0hKqRNTqYN0XwyEpnJ5wLuTeXIKzwGhJEOfS
+         FgIpjiXmWCFjb1RpfQUn33gwqCXqzXcjjE+s8aCzgn78iHvTNG7xF5frCDh2wEpud3D2
+         L3qdn6QNlX7YVrf9JMjUcwvq5xsJxhB0ReNNhYwXIE+hzsWPWge+OsfMtsAHlJIGc0Ht
+         5ehuOfP6mEYyg4B1/T7jXh/yWfpA5nw6w+FC3qRzL/TRapkWveHPrOgOZoWSm5WvBooe
+         h1Ltk1eqHNA6tD/T5Zr/Ovs51PzVCs0shcO61W+FnofxVmOW2vni33jFaGa1XmQvDfDa
+         gbBA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:content-transfer-encoding:reply-to:to:subject:from;
+        bh=VeTB+oufjwmvzkXEhvsCya046YtQgxD6yeSMGY2b+j4=;
+        b=kWjG5/w8VuF01dXQs9iaAZTxArIHi2Z+SsrG46KEd/KqBm8W6NbYCKykYZC+GII+VL
+         /IaLSrj2e0rlPervkf02lKwGVAriXe25uGYQBNEKEblToJvZtQ/VwHX5Z5a9J0rS/x71
+         loZt3BIRZNhYw8aKgFjlaHOiKLqyyd3OpRG3Khh8npoxuhEqZ5W1y1uHrY9Gkr0Rjvog
+         wdG+7oAzFDFREomzLPf9GCR+/51b1cO2CA99HEwEHlzcQkc3HqPAO8Se6BV7nhtDbZBi
+         kq7WcFDgGa0h3V0FQrcTnm643E+2CouFiBydqSgrPWgO8gmd5D+ngUFTnqzqu9nwAWv9
+         cdDQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of noreply@avito.ma designates 18.203.180.56 as permitted sender) smtp.mailfrom=noreply@avito.ma;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=avito.ma
+Return-Path: <noreply@avito.ma>
+Received: from www.avito.ma (email.avito.ma. [18.203.180.56])
+        by mx.google.com with ESMTP id y22si14853333eda.511.2021.05.17.06.21.29
+        for <mrcloud.med@gmail.com>;
+        Mon, 17 May 2021 06:21:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@avito.ma designates 18.203.180.56 as permitted sender) client-ip=18.203.180.56;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of noreply@avito.ma designates 18.203.180.56 as permitted sender) smtp.mailfrom=noreply@avito.ma;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=avito.ma
+Received: from trans.avito.ma (trans-2 [10.0.100.27])
+	by www.avito.ma (Postfix) with ESMTP id 968CB646BA
+	for <mrcloud.med@gmail.com>; Mon, 17 May 2021 14:21:29 +0100 (WEST)
+Received: by trans.avito.ma (Postfix, from userid 503)
+	id 948CA636CE; Mon, 17 May 2021 14:21:29 +0100 (WEST)
+From: =?UTF-8?Q?avito.ma?= <noreply@avito.ma>
+Subject: =?UTF-8?Q?Annonce_refus=C3=A9e=3A_"Canon_600_D"?=
+To: <mrcloud.med@gmail.com>
+Reply-To: support@avito.ma
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <20210517132129.948CA636CE@trans.avito.ma>
+Date: Mon, 17 May 2021 14:21:29 +0100 (WEST)
+
+Bonjour Shab tech ,
+Nous sommes d=C3=A9sol=C3=A9s mais l'annonce "Canon 600 D" que vous avez =
+ins=C3=A9r=C3=A9e sur Avito.ma ne respecte pas nos r=C3=A8gles de diffusi=
+on.
+	
+
+Motif du refus:
+
+
+ - - Vous avez d=C3=A9j=C3=A0 une annonce identique existante publi=C3=A9=
+e, 
+d=C3=A9sactiv=C3=A9e ou refus=C3=A9e sur Avito.   
+ 
+Cliquez sur ce lien pour vous connecter =C3=A0 votre compte 
+https://www.avito.ma/account/login, puis soit :    
+1- Modifiez l'annonce originale existante dans vos annonces 
+    refus=C3=A9es    
+2- R=C3=A9activez l'annonce originale existante dans vos annonces 
+    d=C3=A9sactiv=C3=A9es    
+3- Renouvelez l'annonce originale existante     
+    Pour rappel, il n=E2=80=99est pas possible de publier:       
+   - Une annonce identique =C3=A0 une annonce active, d=C3=A9sactiv=C3=A9=
+e ou 
+      refus=C3=A9e    
+   - Une m=C3=AAme annonce sous diff=C3=A9rentes cat=C3=A9gories ou r=C3=
+=A9gions
+ 
+
+Rendez-vous sur  https://www2.avito.ma/ai?ca=3D90&id=3DR59915057_1
+pour modifier cette annonce. Utilisez la m=C3=AAme adresse e-mail que
+celle utilis=C3=A9e pr=C3=A9c=C3=A9demment.|
+
+
+Lorsque vous aurez d=C3=A9pos=C3=A9 votre annonce modifi=C3=A9e, elle ser=
+a =C3=A0 nouveau v=C3=A9rifi=C3=A9e. Si elle est approuv=C3=A9e, elle ser=
+a publi=C3=A9e.
+
+Vous trouverez notre r=C3=A8glement et notre service clients sur
+https://www.avito.ma/customer_service.htm
+
+Pour plus de questions contactez notre service client en r=C3=A9pondant =
+=C3=A0 ce message.
+
+Merci de votre confiance et =C3=A0 tr=C3=A8s bient=C3=B4t sur notre site,=
+
+
+---------------------------------------------------------------------
+Avito.ma, num=C3=A9ro 1 de la petite annonce au Maroc
+NB : Toute annonce publi=C3=A9e doit =C3=AAtre conforme au R=C3=A8glement=
+ de notre site Avito.ma. 
+
+T=C3=A9l=C3=A9chargeable sur votre smartphone ici :
+
+Android : https://play.google.com/store/apps/details?id=3Dse.scmv.morocco=
+
+IPhone, iPad : https://itunes.apple.com/fr/app/avito.ma/id740544172
+
+

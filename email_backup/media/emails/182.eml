@@ -1,0 +1,70 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:aa6:d908:0:b029:fc:9c37:7144 with SMTP id u8csp895766lkc;
+        Thu, 17 Jun 2021 16:07:42 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJweQo9t5+cE9x5hUpTbo1C4UfECQtA3RVYr/nSeeiMPtZzMzoadZ6UEV2v/gfO1gZVC3Zmk
+X-Received: by 2002:a5d:64e4:: with SMTP id g4mr8885630wri.290.1623971262835;
+        Thu, 17 Jun 2021 16:07:42 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1623971262; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0/C7lXQV0OZncgUGfFEuYzqgoy/PV4fUoc4vSoTI5uvNzX3BaTGEIGor9t/q/5+TSv
+         Iqy/bNBjIdoJUs3tIQ8UdhIalJzlvU2DoMJXY+3vL9PvQluC5jg6WRviLoas91sku3FC
+         cTyQzTGdJV4ozY7rMa1Z86wtrDNQG84Ic/Y6lyrqUpMue09OOeef+sJ49F4edYojV5k1
+         if4OQzmzm9UIGmZSq93DzqpSoHNz+Rh0R398rC5oWJgkpKtSWott/H2jNGe0QjRyDJgP
+         rRbR+fxxFc+bv2cvR4+4O9QKpYa087hExKeodAgUuZtyLJI6huPqJOob6jT9XDBxyV2C
+         WxrQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:mime-version:content-transfer-encoding:reply-to:from:to
+         :subject:to:message-id;
+        bh=AIBjPsQ+3eebJOAJ+bYGczXL28h/gIGBlpBVDcaSt08=;
+        b=t6kU2NQg5xunycLzNKmU8diVLKXhTyyPnCGvKUt36KCJOZk3Rv0Y3WdXlYKpqK2Cyk
+         8VRYGp9FkQTJPqJIv7bh/4xMThtJJkvWoCxwPhRIfxUcdp4MO3MUvZYOEOGQTrEO42v4
+         IVlQ+ulo4kGc2+RAGHIYN3jpyYndQ+2t3DA+WpmYwhjci9rimsjUIAUoxgBJhZUFL5VK
+         N3tpek/tPUMJ93ESx+MuieFzeAShqAl15Afb6wNjDEwvr5YW2I0BzHIPzTTSQ98l/+Qb
+         Vk2MMChcvms8/SE6n0CeT8ZK6K3jd9TyHaox/lCaShcu9Sgg3DmVoljJsXtynHMlu/yc
+         0bgA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of noreply@hqanime4arab.com designates 37.187.22.114 as permitted sender) smtp.mailfrom=noreply@hqanime4arab.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hqanime4arab.com
+Return-Path: <noreply@hqanime4arab.com>
+Received: from tracker.hqanime4arab.com (ns345656.ip-37-187-22.eu. [37.187.22.114])
+        by mx.google.com with ESMTPS id q6si3136150wrz.356.2021.06.17.16.07.42
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 17 Jun 2021 16:07:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@hqanime4arab.com designates 37.187.22.114 as permitted sender) client-ip=37.187.22.114;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of noreply@hqanime4arab.com designates 37.187.22.114 as permitted sender) smtp.mailfrom=noreply@hqanime4arab.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hqanime4arab.com
+Message-ID: <60cbd5be.1c69fb81.d8d2b.2db8SMTPIN_ADDED_BROKEN@mx.google.com>
+X-Google-Original-Message-ID: <ANYkfwMcMtvZVLuPcKIEO6sXnQMJEqJS thesystem@hqanime4arab.com>
+Received: by tracker.hqanime4arab.com (Postfix, from userid 10000)
+	id 4281364097E; Fri, 18 Jun 2021 08:07:42 +0900 (JST)
+To: mrcloud.med@gmail.com
+Subject: mrcloud! We miss you at hqanime4arab Torrents!
+X-PHP-Originating-Script: 10000:functions_global.php
+To: mrcloud <mrcloud.med@gmail.com>
+From: hqanime4arab Torrents <noreply@hqanime4arab.com>
+Reply-To: hqanime4arab Torrents <noreply@hqanime4arab.com>
+X-Mailer: PHP v5.6.40
+Content-Transfer-Encoding: 8bit
+X-Sender: TSUE PHP-Mailer
+MIME-Version: 1.0
+Content-type: text/html; charset=utf-8
+Date: Fri, 18 Jun 2021 08:07:42 +0900 (JST)
+
+mrcloud,<br />
+<br />
+لقد لاحظنا عدم نشاطك وتفاعلك وفي نفس الوقت عدم دخولك لموقعنا لبعض الوقت الآن ، ونحن نفتقدك بكل أمانة وصراحة<br />
+<br />
+ هل يمكننا إغرائك وإقناعك بالعودة ودخول الموقع؟<br />
+<br />
+إذا كنت لا تتذكر او نسيت كلمة المرور الخاصة بك ، فيمكنك طلبها هنا<br />
+<br />
+<a href="https://hqanime4arab.com/?p=home&pid=1&dialog=forgot-password">https://hqanime4arab.com/?p=home&pid=1&dialog=forgot-password</a><br />
+<br />
+نأمل أن نراكم قريبا في موقعنا<br />
+<br />
+أطيب التحيات<br />
+<br />
+hqanime4arab Torrents<br />
+https://hqanime4arab.com

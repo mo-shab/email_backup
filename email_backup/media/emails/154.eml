@@ -1,0 +1,104 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:22e6:b029:f9:2098:e3d8 with SMTP id b6csp776879lkv;
+        Thu, 27 May 2021 09:32:18 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxKb296JZxza9KR2wgVEPJEsslhVM6gFFtsdnMjuRl+RjyWgzVs0fI/K59+2nTCLLndM0hP
+X-Received: by 2002:ac2:5289:: with SMTP id q9mr2873978lfm.141.1622133138839;
+        Thu, 27 May 2021 09:32:18 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1622133138; cv=none;
+        d=google.com; s=arc-20160816;
+        b=TgI4VI1g2vikFqLbcNI0x4JgmjKn3tjTYs2M/5doqLD9cUOEhV2lYinh6LWyGvUhmE
+         yebCKnIO1Zm6FpDmaJY4hf8w0B3mM++DAmuCXhiE8egUdTaY6w7hD89b5KPp7fP3KlhY
+         +Ka9/OqKelQTorVCgo+1XShGaxQkC3g3wTb1w/XsUbOpOUjG+JNiPM9sUKeXtJ3pbfdg
+         ZOYjNscEJJfq5M/mk3PQXfPh7IJ1N3GXMy6zqcxI6+HZFtX6kYILXxOGdDECnbvdI7K/
+         fIdych2J8GaqXhtni/Ki09vF8bCdaNJsgWjnLO/vbp1aD4LuDDiBs9FBNA2KENb1Sptn
+         7ing==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:from:mime-version:subject:message-id:to:mime-version
+         :ironport-sdr;
+        bh=kwRfuro5Eg6wrvJdf7PAyG/IgqKC+ccT1UEsWpcEt9g=;
+        b=M109buYE1PqDg3CJ+V5kENiwBBhBf845nmP80wVj+kGmFG047624Qn73P8OvtHRKSX
+         gfQb8UgNdb4tVIyrVFL21kn9LEOodQckd45Mjg2Ck9WTlmJXgnXbTDSeWBeyIORpuq+Q
+         cwDtreTW6OCf5G5trMGkAS3es+pv9FvoWe/wyUyI6wrzGDLpBW8Fg2ISQe/lUhzqkS9g
+         TAPWCWEEOgAJb4GQN3wSgULnJUS8jDFlsmYskwkWYc/Pky+gYZZ6YMfrszh4EaqY+ibL
+         2DxjhZFV4+S3iK3kG2IkZFCPR+aNX8BJKHT2g1AZUnienafatNbdhTP+ii5T0XVGtZub
+         byDA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of webmaster@lydec.co.ma designates 194.204.254.66 as permitted sender) smtp.mailfrom=webmaster@lydec.co.ma
+Return-Path: <webmaster@lydec.co.ma>
+Received: from mail.lydec.co.ma (mail.seoer.co.ma. [194.204.254.66])
+        by mx.google.com with ESMTP id k11si3793391lfm.63.2021.05.27.09.32.18
+        for <mrcloud.med@gmail.com>;
+        Thu, 27 May 2021 09:32:18 -0700 (PDT)
+Received-SPF: pass (google.com: domain of webmaster@lydec.co.ma designates 194.204.254.66 as permitted sender) client-ip=194.204.254.66;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of webmaster@lydec.co.ma designates 194.204.254.66 as permitted sender) smtp.mailfrom=webmaster@lydec.co.ma
+IronPort-SDR: PI/RYbLBESG5VgrU8zfsFb+eNPqEkCG/cpXU7ALKrEnSkN/AlHRZhb314dKD1Hu4hDXGCd7AxI
+ 6clRfmPTuz8Q==
+X-IronPort-AV: E=Sophos;i="5.81,217,1610406000"; 
+   d="scan'208";a="26461300"
+Content-Type: multipart/mixed; boundary="===============4136221563869718876=="
+MIME-Version: 1.0
+Received: from was7node5 ([192.168.11.17])
+          by ntsiege1.lydec.wnet (Lotus Domino Release 8.5.3)
+          with ESMTP id 2021052717250715-13376 ;
+          Thu, 27 May 2021 17:25:07 +0000 
+To: mrcloud.med@gmail.com
+Message-ID: <-1012450298.2830.1622132983065.JavaMail.webmaster@lydec.co.ma>
+Subject: =?UTF-8?Q?Inscription_=C3=A0_l'agence_en_ligne_de_Lydec?=
+MIME-Version: 1.0
+X-MIMETrack: Itemize by SMTP Server on NTSIEGE1/MOR/LDE/SLE(Release 8.5.3|September 15, 2011) at
+ 27/05/2021 17:25:07,
+	Serialize by Router on NTSIEGE1/MOR/LDE/SLE(Release 8.5.3|September 15, 2011) at
+ 27/05/2021 17:26:23,
+	Serialize complete at 27/05/2021 17:26:23
+From: webmaster@lydec.co.ma
+Date: Thu, 27 May 2021 17:25:07 +0000
+
+--===============4136221563869718876==
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset=us-ascii
+
+<font size="2" face="Arial, Helvetica, sans-serif">Cher client ,<p>Votre inscription a bien &eacute;t&eacute; effectu&eacute;e.</p><p> Pour activer votre compte, nous vous prions de bien vouloir cliquer sur le lien suivant :<a href="https://client.lydec.ma/site/fr/web/guest/confirmation-inscription?p_p_id=inscription_WAR_inscriptionportlet&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&p_p_col_id=column-3&p_p_col_count=1&_inscription_WAR_inscriptionportlet__spage=%2Fportlet_action%2Finscription_portlet%2Faction%3Fc%3DmMKJEJylT3ZjhQQcVR9SHtAF%26action%3D4&_inscription_WAR_inscriptionportlet_c=mMKJEJylT3ZjhQQcVR9SHtAF&_inscription_WAR_inscriptionportlet_action=4">Lien d'activation</a></p><p>Une fois sur cette page, veuillez saisir votre mot de passe. </p><p>Pour plus d'informations, notre support technique est &agrave; votre disposition &agrave; l'adresse suivante <u>contact@lydec.co.ma</u></p></font>
+
+--===============4136221563869718876==
+Content-Type: multipart/alternative; boundary="===============2332328618977473693=="
+MIME-Version: 1.0
+Content-Disposition: inline
+
+--===============2332328618977473693==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+Ce message et toutes les pi=C3=A8ces jointes (ci-apr=C3=A8s le "message") s=
+ont =C3=A9tablis =C3=A0 l'intention exclusive de ses destinataires et sont =
+confidentiels. Si vous recevez ce message par erreur, merci de le d=C3=A9tr=
+uire et d'en avertir imm=C3=A9diatement l'exp=C3=A9diteur. Toute utilisatio=
+n de ce message non conforme =C3=A0 sa destination, toute diffusion ou tout=
+e publication, totale ou partielle, est interdite, sauf autorisation expres=
+se. L'internet ne permettant pas d'assurer l'int=C3=A9grit=C3=A9 de ce mess=
+age, LYDEC d=C3=A9cline toute responsabilit=C3=A9 au titre de ce message, d=
+ans l'hypoth=C3=A8se o=C3=B9 il aurait =C3=A9t=C3=A9 modifi=C3=A9.
+
+Pensez =C3=A0 notre environnement, n'imprimez ce message que si n=C3=A9cess=
+aire.
+
+--===============2332328618977473693==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+<p>Ce message et toutes les pi=C3=A8ces jointes (ci-apr=C3=A8s le "message"=
+) sont =C3=A9tablis =C3=A0 l'intention exclusive de ses destinataires et so=
+nt confidentiels. Si vous recevez ce message par erreur, merci de le d=C3=
+=A9truire et d'en avertir imm=C3=A9diatement l'exp=C3=A9diteur. Toute utili=
+sation de ce message non conforme =C3=A0 sa destination, toute diffusion ou=
+ toute publication, totale ou partielle, est interdite, sauf autorisation e=
+xpresse. L'internet ne permettant pas d'assurer l'int=C3=A9grit=C3=A9 de ce=
+ message, LYDEC d=C3=A9cline toute responsabilit=C3=A9 au titre de ce messa=
+ge, dans l'hypoth=C3=A8se o=C3=B9 il aurait =C3=A9t=C3=A9 modifi=C3=A9.</p>
+
+<p>Pensez =C3=A0 notre environnement, n'imprimez ce message que si n=C3=A9c=
+essaire.</p>
+--===============2332328618977473693==--
+--===============4136221563869718876==--

@@ -1,0 +1,136 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:1cc:b029:116:74a9:312d with SMTP id v12csp3681075lka;
+        Sun, 18 Jul 2021 12:38:13 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJz+R8o4YzRTKZuXe90gh0J87Ptvti0uFJuETMTMC+Jc1BOqLMlbwtTdyOU6i1eLck9yYkxn
+X-Received: by 2002:a05:600c:8a9:: with SMTP id l41mr22840142wmp.161.1626637093214;
+        Sun, 18 Jul 2021 12:38:13 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1626637093; cv=none;
+        d=google.com; s=arc-20160816;
+        b=S6hQdlydxbvnXsvTdSyrLQs4Wu2OgBxdge+3c675ayBB+bVUjRkS26GeNB4fTePvyB
+         XLiX6ZLxmW2lswCrmRUjq22WwuWPikMUcxz2WPBpbYmhJXRdWRWp9kkXwaWojnCbwjiV
+         bd4P+rClBAVcV6/Ntsvn9Ks8iQJmtw4le8fHMxlAjgStdRGTnEIpoSDhrB+XaDxJyY+S
+         rQVTiObbvIkj72lQZ/W1wJc/fKIf1Ur70ipNu+S54hQLlyCWw2wUswUNo0lkbO+2QhYf
+         X/kMEueYEOG81IYzRq9A4+6kMrtLMH4Ap2iwwGN9vQ4YejTjI7QS0YvZZBM0zIaZ1ncE
+         vmWA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=SJq8YSfJxrmeXATtZ2EeIXaGO/PeMPeTyqlmJJ4V+pA=;
+        b=DJAqOfdzNUgEaUvlfXP06D5K4/hQXtvn0+p/5I4QdmASp4oh+3iEgixqOGltVW3EXO
+         T4jGbfNFGvV8U5gdTNQ5nqzG6l6KeT9V4UrJHfjHIvovU/j5YZmJa1C9mxUfMEED23T1
+         G2VhjyuuqyaGqWpk6xHkxsCLh/hckbheHKEW/qwzFqTNwMZqxtf4n7lnG8tsEPpy4niP
+         0WlCwoYKCg5iGLJvMOUPO1wln4+3wahGhLNdFOm+50yCYhDG5fYYAS7ZN5rMuZ0kyxa0
+         to7Uf7ZOAKkYEJzwep8ovL3HxmEgGAmTgDhRMOyUAdHcuQfYAFsn+KYTln7X1fzdUV12
+         wN4w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@samsung-mail.com header.s=201906 header.b=RbMc9hLf;
+       spf=pass (google.com: domain of sa.noreply@samsung-mail.com designates 3.121.164.99 as permitted sender) smtp.mailfrom=SA.noreply@samsung-mail.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=samsung-mail.com
+Return-Path: <SA.noreply@samsung-mail.com>
+Received: from smtp.samsungdevops.io (samsung-mail.com. [3.121.164.99])
+        by mx.google.com with ESMTPS id l9si7342847wmg.202.2021.07.18.12.38.12
+        for <mrcloud.med@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 18 Jul 2021 12:38:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sa.noreply@samsung-mail.com designates 3.121.164.99 as permitted sender) client-ip=3.121.164.99;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@samsung-mail.com header.s=201906 header.b=RbMc9hLf;
+       spf=pass (google.com: domain of sa.noreply@samsung-mail.com designates 3.121.164.99 as permitted sender) smtp.mailfrom=SA.noreply@samsung-mail.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=samsung-mail.com
+Received: from ip-10-10-80-17.eu-central-1.compute.internal (localhost [127.0.0.1])
+	by smtp.samsungdevops.io (Postfix) with ESMTP id D875985D77
+	for <mrcloud.med@gmail.com>; Sun, 18 Jul 2021 19:38:12 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=samsung-mail.com;
+	s=201906; t=1626637092;
+	bh=R5ynJYU402OGfmvFvfE2eBzkWpkydgjxxDMMlEzqo8g=;
+	h=Date:From:To:Subject:From;
+	b=RbMc9hLf+UMKXqiBSJbcuVPIMzGbmDCedzCwyoIGFknzYuahe/jvArgkmpml6uFgI
+	 Y8PxOjLPqKHjtn8MIY3Imh2gv/fLgoi/BVzUZTfBsf87WJCKb2dS/dKOeA5AMyGXFD
+	 TLRM0ik/rC4uYFKhiPZIfmkGjBfBi5/pxgxr2vYY=
+Date: Sun, 18 Jul 2021 19:38:12 +0000 (UTC)
+From: Compte Samsung <SA.noreply@samsung-mail.com>
+To: mrcloud med <mrcloud.med@gmail.com>
+Message-ID: <1879679974.13124840.1626637092885@ip-10-10-80-17.eu-central-1.compute.internal>
+Subject: =?UTF-8?Q?V=C3=A9rifiez_votre_compte_Samsung?=
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html>
+<head>
+  <meta charset=3D"utf-8">
+  <title>V=C3=A9rifiez votre compte Samsung</title>
+</head>
+
+<body style=3D"margin: 0; padding: 0;">
+<div dir=3D"ltr" lang=3D"en" style=3D"max-width: 100&#37;; width:600px; mar=
+gin: 0 auto; box-sizing: border-box; font-family: Arial, Helvetica, &#39;sa=
+ns-serif&#39;; font-weight: normal; font-size:16px; line-height: 22px; colo=
+r: #252525; word-wrap: break-word; word-break: break-word;text-align: left;=
+">
+
+
+  <div title=3D"logo" style=3D"padding: 25px 24px 24px 24px; box-sizing: bo=
+rder-box;"><img src=3D"https://us.account.samsung.com/accounts/v1/resources=
+/one-ui/images/layout/txt_logo_fr.png" alt=3D"Samsung Account" style=3D"hei=
+ght: 11px;" border=3D"0"></div>
+  <div title=3D"email" style=3D"padding: 24px 40px 24px 40px; margin: 0;">
+    <div title=3D"title" style=3D"font-size: 24px; line-height: 1.17; color=
+: #252525; margin:0 0 40px 0; padding: 0;">V=C3=A9rifiez votre compte Samsu=
+ng</div>
+    <div title=3D"content" style=3D"font-size: 16px; line-height: 22px; col=
+or: #252525;">
+      <!&ndash;&ndash; Dear Customer, &ndash;&ndash;> Dear Customer,<br>
+      <br>
+      <!&ndash;&ndash; You have registered Test@samsung.com as your Samsung=
+ Account ID. &ndash;&ndash;> Vous avez enregistr=C3=A9 mrcloud.med@gmail.co=
+m en tant que votre ID de compte Samsung.<br>
+      <!&ndash;&ndash; To verify your email address, enter the 6-digit PIN =
+below when prompted. &ndash;&ndash;> Pour v=C3=A9rifier votre adresse e-mai=
+l, saisissez le code de v=C3=A9rification ci-dessous.<br>
+      <p style=3D"margin: 40px 0 8px 0; padding: 0; text-align: center; col=
+or: #8f8f8f; font-size: 14px;"><!&ndash;&ndash; Your PIN :&ndash;&ndash;> C=
+ode PIN</p>
+      <p id=3D"pin" style=3D"margin: 0 0 40px 0; padding: 0; text-align: ce=
+nter; color: #252525; font-size: 30px; letter-spacing: 0.83; font-family: A=
+rial, Helvetica, &#39;sans-serif&#39;; font-weight: normal;  word-wrap: bre=
+ak-word; word-break: break-word;">236969</p>     =20
+      <p style=3D"margin: 0 0 40px 0; padding: 0; font-size: 16px; color: #=
+252525; font-family: Arial, Helvetica, &#39;sans-serif&#39;; font-weight: n=
+ormal;  word-wrap: break-word; word-break: break-word;"><!&ndash;&ndash;You=
+r Samsung Account team&ndash;&ndash;> Votre =C3=A9quipe Compte Samsung</p>
+      <p style=3D"margin: 0 0 24px 0; padding: 0; color: #252525; font-fami=
+ly: Arial, Helvetica, &#39;sans-serif&#39;; font-weight: normal;  word-wrap=
+: break-word; word-break: break-word; font-size: 12px; line-height: 16px; c=
+olor: #909090;">
+        <!&ndash;&ndash;Note : Do not reply to this email. Contact us with =
+any queries by visiting our website at:&ndash;&ndash;> Note: Do not reply t=
+o this email. Contact us with any queries by visiting our website at:<br>
+        <a href=3D"https://help.content.samsung.com/csweb/faq/searchFaq.do"=
+ target=3D"_blank" style=3D"color: #0072de; text-decoration: underline; fon=
+t-size: 12px; font-family: Arial, Helvetica, &#39;sans-serif&#39;; font-wei=
+ght: normal;  word-wrap: break-word; word-break: break-word;"><!&ndash;&nda=
+sh;Go to Samsung Account customer center&ndash;&ndash;> Acc=C3=A9dez au ser=
+vice client du compte Samsung</a>
+      </p>
+      <div title=3D"footer" style=3D"margin: 0; padding: 40px 0 0 0; box-si=
+zing: border-box;">
+        <div title=3D"footer-logo" style=3D"margin: 0 0 2px 0; padding: 0;"=
+><img src=3D"https://us.account.samsung.com/accounts/v1/resources/one-ui/im=
+ages/layout/txt_foo_logo_fr.png" alt=3D"Samsung Account" border=3D"0" style=
+=3D"height: 12px;"></div>
+        <div title=3D"copyright" style=3D"margin: 0; padding: 0; font-size:=
+10px; opacity:0.6; font-weight: 300; line-height: 12px; color: #252525; fon=
+t-family: Arial, Helvetica, &#39;sans-serif&#39;; font-weight: normal;  wor=
+d-wrap: break-word; word-break: break-word;">
+          Copyright =C2=A9 1995-2021 Samsung. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

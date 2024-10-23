@@ -1,0 +1,369 @@
+Delivered-To: mrcloud.med@gmail.com
+Received: by 2002:a05:6520:2894:b029:f7:3642:9e90 with SMTP id e20csp1765705lkc;
+        Mon, 17 May 2021 06:06:17 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJx//cg6PFE/sn8cTvnDhHIPWhRS+JXonyiEz556xTFJwuvSc999EjYrH6pyB9pur2g72Kx1
+X-Received: by 2002:a05:6402:3594:: with SMTP id y20mr3380822edc.63.1621256776813;
+        Mon, 17 May 2021 06:06:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1621256776; cv=none;
+        d=google.com; s=arc-20160816;
+        b=P7oQdtdp7qdXx1IuOhYIy8vLua8cmdTin/Cuhe5O9jnX+kPosS8JhOKZayxoI0dsI4
+         5WrMnC8x3u3h6xHJinBpUjz+MnEHycAMrIGailiqw9f7omi/BQGZ9NbiBOsxSNdSTni6
+         ywgRWOsoS88TCa10rPkRpkB9bUge7u7aRp34hOfbb85jIciwqtf0vYL6T0bhAo0xThed
+         6EfSrsoOAPUaghp/C6uv2rb6V/IaDXxzGxqT5sCXPX96fJzdgblPBDSQrnwE/XVkoaKJ
+         6taShcTFVZx9U2mG5VJVOy4fbYqac2OWksRCRg6Z5ukHOPW+ev2CVTzUd3dbi4rK7Uve
+         3Nzw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=from:date:message-id:mime-version:to:subject;
+        bh=CUruevc0ZCKF/Udc+X/bSgHlsVHOMgEymdkjbc6S6ds=;
+        b=mhxXNbx2ux14AjWoRMl/QG2ZtpsQxQhbfxx3NRR0mjKnPVBSyeyANCog/Zc07Y7o8B
+         hhg42r+O1faE6z2f5f3FQyc3JUe2WqvKKYhxYv88nvtWGGcsOVFRNMJwM5PFdXLHC+6L
+         dYbEcdA9OmdwWMDgG0yhbci3+0LFcPjfeSl7WiTwb497OEoVncdWAGIEDtEyrfXaVuvO
+         d2df5IWGPDNcF2SoovT2mAyks1Lf7lTi9jBtf1l1n2I0r7fnRVy1eOzsS7qfn1QD2wuS
+         /dZtzgiX3xp37pJ5qmm47YzR9goLfmaG7zkgaSZ0BpRA0FQSY/dUIsA2VxcNFlmiUw3G
+         QvHA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of noreply@avito.ma designates 18.203.180.56 as permitted sender) smtp.mailfrom=noreply@avito.ma;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=avito.ma
+Return-Path: <noreply@avito.ma>
+Received: from www.avito.ma (email.avito.ma. [18.203.180.56])
+        by mx.google.com with ESMTP id d2si14023467ejr.606.2021.05.17.06.06.16
+        for <mrcloud.med@gmail.com>;
+        Mon, 17 May 2021 06:06:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@avito.ma designates 18.203.180.56 as permitted sender) client-ip=18.203.180.56;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of noreply@avito.ma designates 18.203.180.56 as permitted sender) smtp.mailfrom=noreply@avito.ma;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=avito.ma
+Received: from trans.avito.ma (trans-2 [10.0.100.27])
+	by www.avito.ma (Postfix) with ESMTP id 5A08064723
+	for <mrcloud.med@gmail.com>; Mon, 17 May 2021 14:06:16 +0100 (WEST)
+Received: by trans.avito.ma (Postfix, from userid 503)
+	id 52C8D636D0; Mon, 17 May 2021 14:06:16 +0100 (WEST)
+Subject: Bonjour Shab tech, votre annonce
+  Canon 600D
+  a été publiée
+To: <mrcloud.med@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Message-Id: <20210517130616.52C8D636D0@trans.avito.ma>
+Date: Mon, 17 May 2021 14:06:16 +0100 (WEST)
+From: noreply@avito.ma
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+      <style type="text/css" id="media-query">
+body {
+  margin: 0;
+  padding: 0; }
+
+@media only screen and (min-width: 670px) {
+  .block-grid {
+    width: 650px !important; }
+  .block-grid .col {
+    vertical-align: top; }
+    .block-grid .col.num12 {
+      width: 650px !important; }
+  .block-grid.mixed-two-up .col.num4 {
+    width: 216px !important; }
+  .block-grid.mixed-two-up .col.num8 {
+    width: 432px !important; }
+  .block-grid.two-up .col {
+    width: 325px !important; }
+  .block-grid.three-up .col {
+    width: 216px !important; }
+  .block-grid.two-up .col {
+    width: 162px !important; }
+  .block-grid.five-up .col {
+    width: 130px !important; }
+  .block-grid.six-up .col {
+    width: 108px !important; }
+  .block-grid.seven-up .col {
+    width: 92px !important; }
+  .block-grid.eight-up .col {
+    width: 81px !important; }
+  .block-grid.nine-up .col {
+    width: 72px !important; }
+  .block-grid.ten-up .col {
+    width: 65px !important; }
+  .block-grid.eleven-up .col {
+    width: 59px !important; }
+  .block-grid.twelve-up .col {
+    width: 54px !important; } }
+
+@media (max-width: 670px) {
+  .block-grid, .col {
+    min-width: 320px !important;
+    max-width: 100% !important;
+    display: block !important; }
+  .block-grid {
+    width: calc(100% - 40px) !important; }
+  .col {
+    width: 100% !important; }
+    .col > div {
+      margin: 0 auto; }
+ 
+ }
+
+    @media (max-width: 520px) {
+      .block-grid {
+        min-width: 320px!important;
+        max-width: 100%!important;
+        width: 100%!important;
+        display: block!important;
+      }
+
+      .col {
+        min-width: 320px!important;
+        max-width: 100%!important;
+        width: 100%!important;
+        display: block!important;
+      }
+
+        .col > div {
+          margin: 0 auto;
+        }
+
+    }
+  </style>
+      <table class="nl-container" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #F5F5F5;width: 100%" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="vertical-align: top">
+            <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
+              <div style="background-color:transparent;">
+                <div style="Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;" class="block-grid ">
+                  <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
+                    <div class="col num12" style="min-width: 320px;max-width: 650px;display: table-cell;vertical-align: top;">
+                      <div style="background-color: transparent; width: 100% !important;">
+                        <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%" class="divider " style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                            <tbody>
+                              <tr style="vertical-align: top">
+                                <td class="divider_inner" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;padding-right: 10px;padding-left: 10px;padding-top: 10px;padding-bottom: 10px;min-width: 100%;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                                  <table class="divider_content" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 0px solid transparent;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                                    <tbody>
+                                      <tr style="vertical-align: top">
+                                        <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                                          <span></span>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="background-color:transparent;">
+                <div style="Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;" class="block-grid ">
+                  <div style="border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;">
+                    <div class="col num12" style="min-width: 320px;max-width: 650px;display: table-cell;vertical-align: top;">
+                      <div style="background-color: transparent; width: 100% !important;">
+                        <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;">
+                          <div align="center" class="img-container center fixedwidth " >
+                            <div style="line-height:10px;font-size:1px">&nbsp;</div>
+                            <img class="center fixedwidth" align="center" border="0"  src="https://www.avito.ma/img/mail_avito_logo.png" alt="logo avito" title="logo avito" style="display: block; height: auto; margin: 0 auto; width: 100% !important; max-width: 195px;" width="195" height="46">
+                              <div style="line-height:10px;font-size:1px">&nbsp;</div>
+                            </div>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="divider " style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                              <tbody>
+                                <tr style="vertical-align: top">
+                                  <td class="divider_inner" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;padding-right: 0px;padding-left: 0px;padding-top: 0px;padding-bottom: 0px;min-width: 100%;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                                    <table class="divider_content" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 1px solid #D6D6D6;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                                      <tbody>
+                                        <tr style="vertical-align: top">
+                                          <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                                            <span></span>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="background-color:transparent;">
+                  <div style="Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #0088E1;" class="block-grid ">
+                    <div style="border-collapse: collapse;display: table;width: 100%;background-color:#0088E1;">
+                      <div class="col num12" style="min-width: 320px;max-width: 650px;display: table-cell;vertical-align: top;">
+                        <div style="background-color: transparent; width: 100% !important;">
+                          <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
+                            <div class="">
+                              <div style="color:#555555;line-height:120%;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                                <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;text-align:left;">
+                                  <p style="margin: 0;font-size: 14px;line-height: 17px;text-align: center">
+                                    <span style="font-size: 15px;line-height: 21px;color: rgb(255, 255, 255);">
+                                      <strong>Félicitations, votre annonce a été acceptée et publiée!
+                                      </strong>
+                                    </span>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="background-color:transparent;">
+                  <div style="Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;" class="block-grid ">
+                    <div style="border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;">
+                      <div class="col num12" style="min-width: 320px;max-width: 650px;display: table-cell;vertical-align: top;">
+                        <div style="background-color: transparent; width: 100% !important;">
+                          <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:10px; padding-right: 0px; padding-left: 0px;">
+                            <div align="center" class="img-container center fullwidthOnMobile fixedwidth " style="padding-right: 0px;padding-left: 0px;padding-top: 10px;">
+                              <img class="center fixedwidth" align="center" border="0" src="https://www.avito.ma/img/mail_accepted_creative.png" alt="Félicitations, votre annonce a été acceptée et publiée!" title="Félicitations, votre annonce a été acceptée et publiée!" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 227.5px" width="227.5">
+                              </div>
+                              <div class="">
+                                <div style="color:#555555;line-height:120%;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                                  <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;text-align:left;">
+                                    <p style="margin: 0;font-size: 14px;line-height: 17px;text-align: center">
+                                      <span style="font-size: 14px;line-height: 19px;">
+                                        <strong>Votre annonce restera en ligne pendant trois mois.
+                                        </strong>
+                                      </span>
+                                    </p>
+                                    <div style="padding:10px 40px;">
+                                      <div style="background-color:#fff3cd !important;border-color: #ffeeba;padding:8px;border: 1px solid transparent;
+    border-radius: .5rem;">
+                                        <img  style="float: left;vertical-align: middle;" width="26" src="https://www.avito.ma/img/mail_bulb_icon.png" alt="Pensez à supprimer votre annonce quand le service ou le bien sera vendu. Cliquez sur le lien "Gérer votre annonce" sur la page de l'annonce et rentrez votre mot de passe." title="Pensez à supprimer votre annonce quand le service ou le bien sera vendu. Cliquez sur le lien "Gérer votre annonce" sur la page de l'annonce et rentrez votre mot de passe.">
+                                          <p style="margin: 0;font-size: 11px;line-height: 17px;text-align: center;">
+                                            Pensez à supprimer votre annonce quand le service ou le bien sera vendu. Cliquez sur le lien "Gérer votre annonce" sur la page de l'annonce et rentrez votre mot de passe.
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="">
+                                  <div style="color:#555555;line-height:120%;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                                    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;text-align:left;">
+                                      <p style="margin: 0;font-size: 14px;line-height: 17px;text-align: center">
+                                        <span style="font-size: 14px;line-height: 19px;">
+                                          <strong> Vendez plus vite avec nos packs                                          </strong>
+                                        </span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div >
+                      <div style="Margin: 0 auto !important;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;" class="block-grid two-up ">
+                        <div style="display: table;width: 100%;">
+                          <div class="col num6" style="display: table-cell;background-color:white;">
+                            <div style="background-color: white;/* width: 100% !important; */">
+                              <div style="/* border-top: 1px solid #0088E1; *//* border-bottom: 0px solid #0088E1; */padding-top:0px;padding-bottom:0px;padding-right: 0px;padding-left: 0px;">
+                                <div style="color:#555555;line-height:120%;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 44px;">
+                                  <div align="center" class="img-container center fullwidthOnMobile fixedwidth " style="margin-top:10px; margin-bottom:10px;">
+                                    <img class="center fixedwidth" align="center" border="0" src="https://www.avito.ma/img/mail_bump.png" alt="Renouvellement" title="Renouvellement"style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 133.5px">
+                                    </div>
+                                    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;text-align:center;">
+                                      <span style="margin: 0;font-size: 14px;line-height: 17px;text-align: center;color: #1976d2;">
+                                        <strong>Renouvellement
+                                        </strong>
+                                      </span>
+                                      <br>
+                                        <br>
+                                          <p style="margin: 0;font-size: 13px;line-height: 17px;text-align: center;">Remontez votre annonce en première position chaque jour
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col num6" style="display: table-cell;background-color:white;">
+                                  <div style="background-color: white; width: 100% !important;">
+                                    <div style="padding-top:0px;padding-bottom:0px;padding-right: 0px;padding-left: 0px;">
+                                      <div style="color:#555555;line-height:120%;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                                        <div align="center" class="img-container center fullwidthOnMobile fixedwidth " style="margin-top:10px; margin-bottom:10px;">
+                                          <img class="center fixedwidth" align="center" border="0" src="https://www.avito.ma/img/mail_new_bump.png" alt="Renouvellement + Annonce Star" title="Renouvellement + Annonce Star" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 133.5px">
+                                          </div>
+                                          <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;text-align:center;">
+                                            <span style="margin: 0;font-size: 14px;line-height: 17px;text-align: center;color: #1976d2;">
+                                              <strong>Renouvellement + Annonce Star
+                                              </strong>
+                                            </span>
+                                            <br>
+                                              <br>
+                                                <p style="margin: 0;font-size: 13px;line-height: 17px;text-align: center;">Ajoutez un arrière plan unique à votre annonce en plus du renouvellement
+                                                </p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div align="center" class="button-container center " style="padding-right: 10px; padding-left: 10px; padding-top:10px; padding-bottom:10px;">
+                                      <a style="font-size:16px;line-height:32px;text-decoration:none;color:#ffffff;" href=" 
+  https://www2.avito.ma/payment/vas/choose/ad/45562431 
+">
+                                      <div style="color: #ffffff; background-color: #3AAEE0; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; max-width: 246px; width: 206px;width: auto; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; padding-top: 5px; padding-right: 20px; padding-bottom: 5px; padding-left: 20px; font-family: 'Ubuntu', Tahoma, Verdana, Segoe, sans-serif; text-align: center; mso-border-alt: none;">
+                                        <span >
+                                          Choisir un pack
+                                         
+                                        </span>
+                                      </div>
+                                       </a>
+                                      <div class="">
+                                        <div style="color:#555555;line-height:120%;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                                          <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;text-align:left;">
+                                            <div style="padding:10px 40px;">
+                                              <div style="    background-color: #d4edda;
+    border-color: #c3e6cb;padding:8px;border: 1px solid transparent;
+    border-radius: .5rem;">
+                                                <img src="https://www.avito.ma/img/mail_alert_icon.png" alt="Les options payantes sont un service additionnel non obligatoire qui reste un choix de l’utilisateur qui souhaite accélérer sa vente." title="Les options payantes sont un service additionnel non obligatoire qui reste un choix de l’utilisateur qui souhaite accélérer sa vente." style="float: left;vertical-align: middle;" width="26">
+                                                  <p style="margin: 6px;font-size: 13px;line-height: 17px;text-align: center;">Les options payantes sont un service additionnel non obligatoire qui reste un choix de l’utilisateur qui souhaite accélérer sa vente.
+                                                  </p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div style="/* background-color:transparent; */">
+                                      <div style="Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #F5F5F5;" class="block-grid ">
+                                        <div style="border-collapse: collapse;display: table;width: 100%;background-color:#F5F5F5;">
+                                          <div class="col num12" style="min-width: 320px;max-width: 650px;display: table-cell;vertical-align: top;">
+                                            <div style="background-color: transparent; width: 100% !important;">
+                                              <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
+                                                <div class="">
+                                                  <div style="line-height:120%;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;color:#FFFFFF; padding-right: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 0px;">
+                                                    <div style="font-size:12px;line-height:14px;color:#FFFFFF;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;text-align:left;">
+                                                      <p style="margin: 0;font-size: 14px;line-height: 17px;text-align: center;">
+                                                        <span style="color: rgb(128, 128, 128);font-size: 11px;line-height: 16px;">Merci et à très bientôt.
+                                                        </span>
+                                                        <br>
+                                                          <span style="color: rgb(128, 128, 128);font-size: 11px;line-height: 16px;">L'équipe Avito
+                                                          </span>
+                                                        </p>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
